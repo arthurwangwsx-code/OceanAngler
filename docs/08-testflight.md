@@ -30,3 +30,5 @@ Test notes应明确：早期原型，测试抛竿/张力/收鱼/积分/存档/�
 原始签名日志、描述文件、IPA、设备标识及截图仅存本机忽略目录，不进入公开仓库。设备验收必须说明安装来自TestFlight还是开发侧载；仅发现设备或成功启动同bundle不能证明TestFlight安装链路。
 
 2026-11-24：0.1.0 (2)冻结于2971b11，已通过签名/身份校验、内部专用导出、上传与Apple VALID处理，并核实本人组中的构建分配。指定邮箱arthur.wang.wsx@gmail.com已在该组内，邀请为INVITED，尚未验证实际安装。详见[本次脱敏回执](../reports/testflight-0.1.0-2.json)及[设备复核步骤](09-current-beta-review.md)。候选包最低iOS/iPadOS 17，首鱼/首钓组/首海湾仍待美术与设备验收；旧build1的冻结产物及历史回执保留。
+
+2026-11-24发行更新：0.1.0 (3)冻结05c8cc7，30项Editor、7项无画面PlayMode和11项发布工具检查通过；Unity iOS冻结导出、Xcode签名/身份校验、内部专用IPA、上传及Apple VALID/INTERNAL_ONLY通过，已分配本人授权两账号组，测试说明与反馈邮箱读回一致。指定邮箱仍INVITED，安装/运行NOT_RUN。该包包含build2之后的累计修复；科学/用户美术、当前实际画面、触控、听感、20分钟性能及完整产品仍未通过。见[build 3回执](../reports/testflight-0.1.0-3.json)及[设备复核](12-beta3-review.md)。独立receipt审计仍INCOMPLETE，3.4、4.1–4.3及apply未完成。

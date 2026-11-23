@@ -14,7 +14,7 @@
 | REQ-08 手机/平板与无障碍 | 共享逻辑点UI、左右手/减弱动态，Mac两档点尺寸、触控命中和滚动通过 | PARTIAL | iPhone/iPad实际安全区/旋转/可读性/操作与无障碍体验 |
 | REQ-09 隐私与家长区 | 无广告/账号/分析；家长验证、清档二次确认及取消不丢档的Mac检查通过 | PARTIAL | 实际iOS包SDK/权限与系统网络行为核查；家长体验 |
 | REQ-10 开源流程 | 已公开独立仓库，MIT/OFL及资产登记，首轮CI通过 | PASS（已发布基线） | 每次新提交仍须审查许可、凭据及CI；不能由脚本证明全部资产合法性 |
-| REQ-11 本人TestFlight | 0.1.0 (2)冻结源码2971b11，签名归档/内部导出/上传通过；Apple VALID；本人授权两账号的内部组分配与测试说明读回通过，含用户指定测试邮箱；详见testflight-0.1.0-2.json | PARTIAL | 指定邮箱邀请待接受，TestFlight实际安装启动；按docs/09-current-beta-review.md复核 |
+| REQ-11 本人TestFlight | 0.1.0 (3)冻结源码05c8cc7，签名归档/内部导出/上传、Apple VALID/INTERNAL_ONLY、本人授权两账号组与测试说明读回通过；含指定测试邮箱，见testflight-0.1.0-3.json | PARTIAL | 邀请待接受，TestFlight实际安装启动；按docs/12-beta3-review.md复核 |
 | REQ-12 真机性能与恢复 | 设备可发现，后台自动暂停代码已实现 | NOT_RUN | iPhone/iPad各20分钟帧耗/内存/温升，后台/锁屏/恢复和持久化实际记录 |
 
 工程证据入口：reports/progression-validation.md、reports/mobile-layout.md、reports/runtime-phone-points.json、reports/runtime-tablet-points.json。发布回执以实际Apple查询和脱敏报告为准；本机原始日志、设备标识、密钥及签名产物不公开。
@@ -32,3 +32,5 @@ REQ-06当前水面与岸线：倒影缓存、深度透射、船舱掩模与正�
 2.4/REQ-05后续口部与鳍条：实际保存网格复现前下唇绑定头骨、下颌转轴倾斜且向上转入头部；现拆分上下唇、校正轴/方向与混合权重，补齐朝内的口腔/喉壁/内颊及颌后皮肤。鳍膜逐段UV对应几何鳍条，修复背部UV接缝；三LOD为24164/9664/3624三角面。独立检查实际向下位移/横向漂移、口内射线及35动作姿态贴合通过。首次离屏颜色异常在克隆初始化和等待更新后仍失败，改为按子材质索引PropertyBlock后闭口/张口首次与重复绘制差均为0；原图/失败保留。30项Editor、7项PlayMode、Mac编译、保存源工程及导入资产Editor GPU检查通过；完整周期转台与近景分别审阅。PropertyBlock绕过相关renderer的SRP Batcher，真机成本待验。见[口部与鳍条证据](bluefin-mouth-and-fins.md)。本轮CUA明确确认Mac锁定，未重复启动原生窗口；当前玩家启动/UI、iPhone/iPad、用户/科学和A1–A3仍未通过。旧三档Mac结果属历史源码，TestFlight build 2仍冻结2971b11，不含后续修复。2.4、3.4、4.1–4.3及apply保持未完成。
 
 REQ-07/08图鉴后续：12物种学名、辨识和自然栖息环境接入共享滚动详情，保留个人记录与未发现轮廓；新增视角重置及安全区变化重新排版。12物种各三档卡片宽度、字符/高度和滚动到底检查通过，查看不增加记录或积分。科学人工、当前原生/真机与儿童可读性未验；CUA复查仍锁定，新增原生详情截图路径未运行，未进build 2。见[图鉴证据](journal-species.md)。观察模型/路径/交互、A1–A3、4.1–4.3及apply未完成。
+
+2026-11-24发行更新：0.1.0 (3)冻结05c8cc7，30项Editor、7项无画面PlayMode和11项发布工具检查通过；Unity iOS冻结导出、Xcode签名/身份校验、内部专用IPA、上传及Apple VALID/INTERNAL_ONLY通过，已分配本人授权两账号组，测试说明与反馈邮箱读回一致。指定邮箱仍INVITED，安装/运行NOT_RUN。该包包含build2之后的累计修复；科学/用户美术、当前实际画面、触控、听感、20分钟性能及完整产品仍未通过。见[build 3回执](testflight-0.1.0-3.json)及[设备复核](../docs/12-beta3-review.md)。独立receipt审计仍INCOMPLETE，3.4、4.1–4.3及apply未完成。

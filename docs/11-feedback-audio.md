@@ -22,3 +22,5 @@ Unity通过AudioAssetBuilder实际导入，使用Vorbis、CompressedInMemory和�
 首次底音边界检查失败及最终字体补齐前的检查记录均保留。最终字库包含新说明文字。iOS咬钩触觉沿用原有可关闭的Handheld.Vibrate调用，本轮未改变系统触觉实现，实际震动效果未验。
 
 扬声器/耳机试听、音效与音乐平衡、实际设备触觉、后台/锁屏恢复及20分钟音频性能仍为NOT_RUN。当前TestFlight 0.1.0 (2)不含这项补丁；不能用既有构建验证新增音乐或环境声。
+
+发行更新：上述后续源码已进入0.1.0 (3)/05c8cc7，Apple处理和本人组已核实；[build 3回执](../reports/testflight-0.1.0-3.json)与[设备复核](12-beta3-review.md)另记。科学人工、实际设备画面/听感及完整产品仍未通过。

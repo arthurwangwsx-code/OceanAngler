@@ -35,3 +35,5 @@ ContentCatalog已登记12个候选学名和独立的3个ObservationDefinition条
 首条鱼与完整钓组已有四角图、转台和工作室近景，本轮已提交给用户审阅方向；尚无用户结论，A1–A3出口保持未通过。其余物种的独立源模型继续遵守[美术生产与用户审阅门槛](03-art-pipeline.md)。
 
 目录与入口检查见[species-catalog-checks.json](../reports/species-catalog-checks.json)：27项Editor、7项无画面PlayMode及Mac编译通过；观察ID伪造抛竿与结算均被拒绝。参考结构校验只核对ID/学名/来源登记，不能证明生物学内容正确，也不覆盖观察生物的场景交互。当前TestFlight build 2尚不含这些后续变化。
+
+发行更新：上述后续源码已进入0.1.0 (3)/05c8cc7，Apple处理和本人组已核实；[build 3回执](../reports/testflight-0.1.0-3.json)与[设备复核](12-beta3-review.md)另记。科学人工、实际设备画面/听感及完整产品仍未通过。

@@ -4,7 +4,7 @@
 
 儿童与家庭向的 3D 海洋钓鱼探索游戏。真实比例鱼类、漂亮水下世界、易懂钓具、积分成长、图鉴与放流。正式名称待商标检查。
 
-**当前已具备可试玩的钓鱼/进度闭环。0.1.0 (2)已通过Apple处理并分配至本人授权账号的内部TestFlight组，包含首条鱼、首套钓组和首处海湾候选；[发布回执](reports/testflight-0.1.0-2.json)与实际安装分别记录。后续源码另行保留检查结果；美术、实际触控、真机与完整产品验收未完成。** 首发 iPhone/iPad，最低iOS/iPadOS 17，Unity 6000.3.29f1 + URP 17.3.0 + C# + Blender；离线单人、无广告、无内购、无聊天。
+**当前已具备可试玩的钓鱼/进度闭环。0.1.0 (3)已通过Apple处理并分配至本人授权账号的内部TestFlight组，包含首条鱼、首套钓组、首处海湾候选及放流/任务/音频/水面/图鉴改进；[发布回执](reports/testflight-0.1.0-3.json)与实际安装分别记录。各项实现与检查另行保留证据；美术、实际触控、真机与完整产品验收未完成。** 首发 iPhone/iPad，最低iOS/iPadOS 17，Unity 6000.3.29f1 + URP 17.3.0 + C# + Blender；离线单人、无广告、无内购、无聊天。
 
 | 阅读目的 | 文件 |
 |---|---|
@@ -16,7 +16,7 @@
 | 分阶段任务、投入、风险与质量 | [路线及验收](docs/06-delivery.md) |
 | GitHub 开源流程 | [开源流程](docs/07-open-source.md) |
 | App Store Connect 与本人 TestFlight | [发布流程](docs/08-testflight.md) |
-| 本次候选如何在设备上复核 | [首轮设备检查](docs/09-current-beta-review.md) |
+| 本次候选如何在设备上复核 | [build 3设备检查](docs/12-beta3-review.md) |
 | 当前真实结果 | [完整总账](reports/acceptance-ledger.md)、[移动布局与发行](reports/mobile-layout.md)、[逻辑与Mac运行](reports/progression-validation.md) |
 | 首条独立源模型 | [蓝鳍鲹候选及验收边界](reports/bluefin-art.md)、[源资产重建](art/source/bluefin/README.md) |
 | 第一套完整钓组候选 | [纺车钓组与验证边界](reports/spinning-rig-art.md)、[源资产重建](art/source/spinning-rig/README.md) |
@@ -52,4 +52,4 @@ ASC_ENV_FILE=/path/to/private/asc.env python3 tools/asc.py status
 
 Mac构建入口为`python3 tools/game.py mac`；原生检查为`python3 tools/runtime_smoke.py --label unique-run`，使用隔离存档，须在桌面窗口可用后实际运行并核对图像/回执。Editor离屏诊断为`python3 tools/game.py water-review --label unique-review`，不能据此宣布玩家UI或设备通过。Unity和资产写入串行，每轮用新label保留证据；字体重建见tools/requirements.txt。
 
-TestFlight 0.1.0 (2)冻结于2971b11，含首批鱼/钓组/海湾候选，不含上述后续放流、任务、目录、音频、标题、水面、岸线与口部/鳍条及图鉴详情改进。[发行回执](reports/testflight-0.1.0-2.json)记录Apple处理及本人内部组；实际安装尚待验证。新增构建须按[冻结源码发布流程](docs/08-testflight.md)使用新build号。ASC工具另需PyJWT与cryptography，凭据显式在本机配置，不进入公开仓库。
+TestFlight 0.1.0 (3)冻结于05c8cc7，已包含上述累计修复。[发行回执](reports/testflight-0.1.0-3.json)记录Apple VALID/INTERNAL_ONLY、本人两账号组分配及测试说明；指定邮箱邀请仍待接受，实际安装启动未验。按[build 3设备复核](docs/12-beta3-review.md)继续记录。历史[build 1](reports/testflight-0.1.0-1.json)、[build 2](reports/testflight-0.1.0-2.json)产物与回执保留。新构建须按[冻结源码发布流程](docs/08-testflight.md)使用新build号。ASC工具另需PyJWT与cryptography，凭据显式在本机配置，不进入公开仓库。
