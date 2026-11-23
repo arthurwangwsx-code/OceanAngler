@@ -131,6 +131,28 @@ namespace OceanAngler.Tests
             }
             var five=rows.Single(r=>r.GetComponentsInChildren<Text>()[0].text.EndsWith("海湾新朋友"));
             Assert.That(five.GetComponentsInChildren<Text>()[2].text,Is.EqualTo("进度  4 / 5"));
+
+            Click("设置");yield return null;yield return null;
+            var effects=game.GetComponent<AudioSource>();var ambient=game.transform.Find("OceanAmbience").GetComponent<AudioSource>();var music=game.transform.Find("ExploreMusic").GetComponent<AudioSource>();
+            Assert.That(ambient.clip.name,Is.EqualTo("OceanBed"));Assert.That(music.clip.name,Is.EqualTo("ExploreTheme"));Assert.That(ambient.loop&&music.loop,Is.True);
+            Click("探索音乐    已关闭");yield return null;yield return null;
+            Assert.That(new SaveStore(saveFile,game.Content).Load().data.settings.music,Is.True);Assert.That(music.volume,Is.Zero);
+            Click("出海");yield return null;yield return null;Click("继续探索");yield return null;yield return null;
+            Assert.That(ambient.volume,Is.GreaterThan(0));Assert.That(music.volume,Is.GreaterThan(0));
+            game.Configure(s=>s.sound=false);yield return null;yield return null;
+            Assert.That(effects.volume,Is.Zero);Assert.That(ambient.volume,Is.Zero);Assert.That(music.volume,Is.GreaterThan(0));
+            game.gameObject.SendMessage("OnApplicationPause",true,SendMessageOptions.RequireReceiver);yield return null;
+            Assert.That(game.Session.Paused,Is.True);Assert.That(ambient.volume+music.volume+effects.volume,Is.Zero);
+            game.gameObject.SendMessage("OnApplicationPause",false,SendMessageOptions.RequireReceiver);yield return null;
+            Assert.That(game.Session.Paused,Is.True);Assert.That(music.volume,Is.Zero);
+            game.Configure(s=>{s.sound=true;s.music=false;});game.Pause(false);yield return null;yield return null;
+            Assert.That(ambient.volume,Is.GreaterThan(0));Assert.That(music.volume,Is.Zero);
+            foreach(string name in new[]{"Bite","Discovery","Retry"})
+            {
+                var cue=Resources.FindObjectsOfTypeAll<AudioClip>().Single(c=>c.name==name);var samples=new float[cue.samples];Assert.That(cue.GetData(samples,0),Is.True);
+                Assert.That(samples.Max(Mathf.Abs),Is.GreaterThan(.3f));
+                for(int i=1;i<samples.Length;i++)Assert.That(Mathf.Abs(samples[i]-samples[i-1]),Is.LessThan(.15f),name+" continuous cue waveform");
+            }
         }
     }
 }

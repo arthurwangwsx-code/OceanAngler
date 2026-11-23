@@ -13,7 +13,7 @@ namespace OceanAngler
     }
     [Serializable] public sealed class GameSettings
     {
-        public bool assisted = true, leftHanded, reducedMotion, sound = true, haptics = true;
+        public bool assisted = true, leftHanded, reducedMotion, sound = true, haptics = true, music;
     }
     [Serializable] public sealed class ProgressData
     {

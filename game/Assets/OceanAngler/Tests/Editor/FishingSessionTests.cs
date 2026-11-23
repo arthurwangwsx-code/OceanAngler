@@ -127,8 +127,14 @@ namespace OceanAngler.Tests
         }
         [Test] public void SettingsLoadoutAndRecordsSurviveRestart()
         {
-            var s=Service();s.Settle(Record());s.Settle(Record());s.SelectGear("rod-2");s.Configure(x=>{x.leftHanded=true;x.reducedMotion=true;x.assisted=false;});
-            var p=Service().Data;Assert.IsTrue(p.settings.leftHanded);Assert.IsTrue(p.settings.reducedMotion);Assert.IsFalse(p.settings.assisted);Assert.AreEqual("rod-2",p.rodId);Assert.AreEqual(2,p.catches.Count);
+            var s=Service();s.Settle(Record());s.Settle(Record());s.SelectGear("rod-2");s.Configure(x=>{x.leftHanded=true;x.reducedMotion=true;x.assisted=false;x.music=true;});
+            var p=Service().Data;Assert.IsTrue(p.settings.leftHanded);Assert.IsTrue(p.settings.reducedMotion);Assert.IsFalse(p.settings.assisted);Assert.IsTrue(p.settings.music);Assert.AreEqual("rod-2",p.rodId);Assert.AreEqual(2,p.catches.Count);
+        }
+        [Test] public void MusicDefaultsOffForNewAndLegacySettings()
+        {
+            Assert.That(new GameSettings().music,Is.False);
+            var legacy=JsonUtility.FromJson<GameSettings>("{\"assisted\":true,\"sound\":true,\"haptics\":true,\"leftHanded\":true}");
+            Assert.That(legacy.music,Is.False);Assert.That(legacy.leftHanded&&legacy.sound&&legacy.haptics,Is.True);
         }
         [Test] public void FailedTaskIsNotMarkedCompleteByUnrelatedCatch()
         {

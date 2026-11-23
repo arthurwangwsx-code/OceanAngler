@@ -121,7 +121,7 @@ namespace OceanAngler
                 var b=Button(info,h.name+(unlocked?"":" · "+h.unlockPoints+"分"),20,208+i*52,-40,44,()=>game.SelectHabitat(h.id),h.id==game.Progress.Data.habitatId?Teal:Navy);
                 b.interactable=unlocked && game.Session.Phase==FishingPhase.Ready;
             }
-            Label(info,"已装备\n"+game.Content.Gear(game.Progress.Data.rodId).name+" · "+game.Content.Gear(game.Progress.Data.reelId).name+"\n"+game.Content.Gear(game.Progress.Data.lineId).name+" · "+game.Content.Gear(game.Progress.Data.lureId).name,19,Muted,20,368,-40,80);
+            Label(info,"已装备\n"+game.Content.Gear(game.Progress.Data.rodId).name+" · "+game.Content.Gear(game.Progress.Data.reelId).name+"\n"+game.Content.Gear(game.Progress.Data.lineId).name+" · "+game.Content.Gear(game.Progress.Data.lureId).name,19,Muted,20,368,-40,90);
             if(game.Progress.Data.habitatId=="bay")Button(info,"看看海湾",20,460,-40,44,()=>Navigate("海湾观察"),Navy).GetComponentInChildren<Text>().fontSize=19;
             var controls=Box(pageRoot,"Controls",Panel,new Vector2(left?.02f:.69f,.12f),new Vector2(left?.31f:.98f,.81f),Vector2.zero,Vector2.zero);
             phaseText=Label(controls,"",Mathf.Min(32,Mathf.FloorToInt((Width*.29f-48)/9)),Color.white,24,22,-48,48);
@@ -224,16 +224,17 @@ namespace OceanAngler
         static string GentleResult(CatchRecord record)=>TaskProgress.Gentle(record)?"轻柔控线已达标":"轻柔控线，下次再试";
         void BuildSettings()
         {
-            var panel=PagePanel("Settings",new Vector2(.02f,.12f),new Vector2(.78f,.81f),600);
+            var panel=PagePanel("Settings",new Vector2(.02f,.12f),new Vector2(.78f,.81f),668);
             Label(panel,"按自己的节奏探索",30,Color.white,24,18,-48,46);
             var s=game.Progress.Data.settings;
             Setting(panel,90,"初学辅助",s.assisted,()=>game.Configure(x=>x.assisted=!x.assisted));
             Setting(panel,158,"左手操作",s.leftHanded,()=>game.Configure(x=>x.leftHanded=!x.leftHanded));
             Setting(panel,226,"减弱动态效果",s.reducedMotion,()=>game.Configure(x=>x.reducedMotion=!x.reducedMotion));
-            Setting(panel,294,"声音",s.sound,()=>game.Configure(x=>x.sound=!x.sound));
-            Setting(panel,362,"咬钩触觉提示",s.haptics,()=>game.Configure(x=>x.haptics=!x.haptics));
-            Label(panel,"离线保存 · 无广告 · 无内购\n设置即时保存。首次教学始终提供辅助。",22,Muted,24,430,-48,80);
-            Button(panel,"家长区与隐私",24,520,330,52,()=>{parentAnswer=UnityEngine.Random.Range(4,9)+9;page="家长验证";dirty=true;},Navy);
+            Setting(panel,294,"环境与提示音",s.sound,()=>game.Configure(x=>x.sound=!x.sound));
+            Setting(panel,362,"探索音乐",s.music,()=>game.Configure(x=>x.music=!x.music));
+            Setting(panel,430,"咬钩触觉提示",s.haptics,()=>game.Configure(x=>x.haptics=!x.haptics));
+            Label(panel,"无广告 · 无内购 · 音乐继续后播放\n设置即时保存，首次教学始终辅助。",22,Muted,24,498,-48,80);
+            Button(panel,"家长区与隐私",24,588,330,52,()=>{parentAnswer=UnityEngine.Random.Range(4,9)+9;page="家长验证";dirty=true;},Navy);
         }
         void Setting(RectTransform parent,float y,string title,bool enabled,Action action) => Button(parent,title+"    "+(enabled?"已开启":"已关闭"),24,y,-48,54,action,enabled?new Color(.07f,.32f,.34f):Navy);
         void BuildParentGate()

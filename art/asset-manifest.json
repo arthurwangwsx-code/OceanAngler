@@ -8,7 +8,7 @@
       "license": "SIL Open Font License 1.1",
       "redistribution": true,
       "status": "LICENSE_VERIFIED",
-      "sha256": "97e7986209899f2b191711d85842c05b1d3b4ef9e4cac3652d88a0ff7f3a1224",
+      "sha256": "c0af7c8c0b32103dcb14c11bf7a6cdbe2d2967dec71531c826a52c196cadb2de",
       "path": "game/Assets/OceanAngler/Resources/UIFont.ttf"
     },
     {
@@ -322,6 +322,56 @@
         }
       ],
       "note": "Original continuous terrain, reef, generic coral forms, seagrass, pier and dinghy. Eight static assemblies with three LODs plus a separate water mesh. Studio lighting is an approximation; runtime visual, ecological, user and device acceptance remains open."
+    },
+    {
+      "id": "original-feedback-audio",
+      "author": "OceanAngler contributors",
+      "source": "tools/create_audio.py",
+      "license": "MIT",
+      "redistribution": true,
+      "status": "AUDIO_REVIEW_PENDING",
+      "path": "game/Assets/OceanAngler/Resources/Audio/OceanBed.wav",
+      "sha256": "c3c3bd4254e50a26d27b7c02a26fc2fad35e7487095cbd1c6bfcdef561aa88fc",
+      "artifacts": [
+        {
+          "path": "game/Assets/OceanAngler/Resources/Audio/ExploreTheme.wav",
+          "sha256": "4c4c2f62424aa9adf99ba9aebc05ce11e061202f3c02c479a7597ebd17662d99"
+        }
+      ],
+      "note": "Original deterministic synthetic ocean bed and pentatonic exploration theme. PCM levels, source routing and listening/device acceptance are separate; no external recordings or personal media."
+    },
+    {
+      "id": "integrated-runtime-previews",
+      "status": "PROTOTYPE_REVIEW_PARTIAL",
+      "license": "MIT",
+      "redistribution": true,
+      "provenance": "Unmodified Unity ScreenCapture from this project, isolated Mac native run authored-desktop2; no OS chrome, personal media or device identifiers",
+      "artifacts": [
+        {
+          "path": "art/previews/runtime/fishing.png",
+          "sha256": "dad82b01abbca9cde77541df50c8ae09670d71e4080a395e9c637d02159dc040"
+        },
+        {
+          "path": "art/previews/runtime/reel.png",
+          "sha256": "213c4fe2e972960886386375f319355efaef343348bcbf0abb6b66cfd6c1bfab"
+        },
+        {
+          "path": "art/previews/runtime/surface.png",
+          "sha256": "8c11207d096802932698f7e3c4380ddca44e78927c74915e40884f83e561870e"
+        },
+        {
+          "path": "art/previews/runtime/reef.png",
+          "sha256": "6229c1bb32df6126281d863ff8accb7b9e4cac8a5f4b0c7c4fa7a031f3dd0f31"
+        },
+        {
+          "path": "art/previews/runtime/release.png",
+          "sha256": "ba5100b1b8f77467b9ecf6ca7167ea132644e49d68b01739b1d861932bd675a6"
+        },
+        {
+          "path": "art/previews/runtime/settings.png",
+          "sha256": "9186fbeb4706b5e8efe8b16ee4979c2c78b204aada1a4f244052d5d495a772e3"
+        }
+      ]
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."

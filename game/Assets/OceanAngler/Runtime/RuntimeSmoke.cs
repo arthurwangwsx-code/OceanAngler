@@ -44,7 +44,7 @@ namespace OceanAngler
             Click("看看海湾",true);yield return null;yield return null;CheckLayout("bay-surface");
             Require(ui.InspectingHabitat&&game.Session.Paused,"observation-pauses-fishing");Require(Camera.main.transform.position.y>bay.SeaLevel,"surface-camera-above-water");yield return Snapshot("07-bay-surface");
             Click("潜入水下",true);yield return null;yield return null;CheckLayout("bay-underwater");Require(Camera.main.transform.position.y<bay.SeaLevel,"underwater-camera-below-water");yield return Snapshot("08-bay-underwater");
-            Click("换个角度",true);yield return null;yield return null;Require(Vector3.Distance(Camera.main.transform.position,bay.reefCamera.position)<.01f,"reef-camera-actually-changes");
+            Click("换个角度",true);yield return null;yield return null;Require(Vector3.Distance(Camera.main.transform.position,bay.reefCamera.position)<.01f,"reef-camera-actually-changes");yield return Snapshot("11-bay-reef");
             Click("返回钓鱼",true);yield return null;yield return null;Require(game.Session.Paused,"observation-return-keeps-pause");
             if(ui.Compact){Click("收起准备",true);yield return null;yield return null;}
             Click("继续探索",true);yield return null;yield return null;Require(Vector3.Distance(Camera.main.transform.position,bay.underwaterCamera.position)<.01f,"fishing-camera-restored");
@@ -66,6 +66,7 @@ namespace OceanAngler
             if(spinning!=null){Require(spinning.CrankDegrees>0&&Mathf.Abs(spinning.RotorDegrees-spinning.CrankDegrees*5.2f)<.01f,"rig-crank-rotor-drive");Require(Mathf.Abs(spinning.SpoolStroke)<=.0061f,"rig-spool-stroke-bounded");Require(spinning.MaximumGuideLineError()<.0001f,"rig-loaded-line-through-guides");}
             Click("记录并放流");yield return null;yield return null;
             Require(game.Progress.Data.catches.Count==before+1&&game.Progress.Data.totalPoints>0,"release-and-persist");
+            yield return new WaitForSecondsRealtime(.65f);yield return Snapshot("09-release");
             Click("图鉴",true);yield return null;yield return null;CheckLayout("journal");yield return Snapshot("03-journal");
             Click("钓具",true);yield return null;yield return null;CheckLayout("gear");
             Click("观察入门钓组",true);yield return null;yield return null;CheckLayout("gear-preview");Require(GetComponent<GameUI>().InspectingGear&&game.Session.Paused,"gear-view-pauses-fishing");
@@ -80,6 +81,7 @@ namespace OceanAngler
             Click("任务",true);yield return null;yield return null;CheckLayout("tasks");yield return Snapshot("05-tasks");
             Click("设置",true);yield return null;yield return null;CheckLayout("settings");Click("左手操作");yield return null;yield return null;
             Require(game.Progress.Data.settings.leftHanded,"left-hand-setting");
+            yield return Snapshot("10-settings");
             Click("家长区与隐私",true);yield return null;yield return null;CheckLayout("parent-gate");
             var question=FindObjectsByType<Text>(FindObjectsSortMode.None).First(t=>t.isActiveAndEnabled&&t.text.StartsWith("9 + ")).text;
             var match=System.Text.RegularExpressions.Regex.Match(question,@"9 \+ (\d+)");int answer=9+int.Parse(match.Groups[1].Value);

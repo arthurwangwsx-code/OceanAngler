@@ -20,3 +20,5 @@
 工程证据入口：reports/progression-validation.md、reports/mobile-layout.md、reports/runtime-phone-points.json、reports/runtime-tablet-points.json。发布回执以实际Apple查询和脱敏报告为准；本机原始日志、设备标识、密钥及签名产物不公开。
 
 完整产品目标仍需所有出口通过。规则PASS、CI绿色、上传或可安装任一项，都不能把整体改为PASS。儿童/家长试玩与美术审阅须有真实参与者和观察结果，不能由自动化模拟代填。
+
+2026-11-24最新复查：桌面已可用；1440×900、手机758×372.33点、平板1024×768点三档Mac原生隔离流程均PASS，每档12截图，首次裁切失败及修复保留。此更新取代上表“待桌面解锁”的当前阻碍描述；见[integrated-native-render.md](integrated-native-render.md)。样板仍有鱼身、水面、岩礁和平板鉴赏标题问题，A1–A3未通过。原创环境底音/音乐与独立开关已实现，28项Editor/7项PlayMode及资源检查通过；听感/设备触觉仍NOT_RUN。上述后续源码均未进build 2，Mac或逻辑检查不能记作真机通过。

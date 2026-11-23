@@ -13,6 +13,7 @@ namespace OceanAngler.Editor
         [Serializable] sealed class ReleaseConfig { public string bundleId,appId,teamId,version,build,displayName; }
         public static void Prepare()
         {
+            AudioAssetBuilder.Prepare();
             const string folder = "Assets/OceanAngler/Generated";
             if (!AssetDatabase.IsValidFolder(folder)) AssetDatabase.CreateFolder("Assets/OceanAngler", "Generated");
             var pipeline = AssetDatabase.LoadAssetAtPath<UniversalRenderPipelineAsset>(folder + "/OceanURP.asset");
@@ -83,6 +84,7 @@ namespace OceanAngler.Editor
         }
         public static void ExportMac()
         {
+            AudioAssetBuilder.Validate();
             var output = Environment.GetEnvironmentVariable("OCEAN_MAC_OUTPUT");
             if (string.IsNullOrEmpty(output)) throw new Exception("Mac output required");
             var result = BuildPipeline.BuildPlayer(EditorBuildSettings.scenes.Select(x => x.path).ToArray(), output, BuildTarget.StandaloneOSX, BuildOptions.Development);
@@ -90,6 +92,7 @@ namespace OceanAngler.Editor
         }
         public static void ExportIOS()
         {
+            AudioAssetBuilder.Validate();
             var number = Environment.GetEnvironmentVariable("OCEAN_BUILD_NUMBER");
             if (!int.TryParse(number, out int n) || n < 1) throw new Exception("Positive build number required");
             if(PlayerSettings.iOS.buildNumber!=number)throw new Exception("Build number must match committed release configuration; run prepare first");

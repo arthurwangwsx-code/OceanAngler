@@ -1,0 +1,100 @@
+{
+  "scope": "unreleased-original-audio-and-feedback-routing",
+  "status": "PASS",
+  "sourceBaseCommit": "3b0693003e4e5073fff4ed66ea31e508fb51c394",
+  "testedSourceDigest": "5e0a4644da8df111697c8018467daef5b599cb403dea505cbfa57ea095e4916c",
+  "editorTests": {
+    "total": 28,
+    "passed": 28,
+    "failed": 0,
+    "finishedAt": "2026-11-23 17:50:01Z"
+  },
+  "headlessPlayMode": {
+    "total": 7,
+    "passed": 7,
+    "failed": 0,
+    "runLabel": "audio2",
+    "finishedAt": "2026-11-23 17:58:39Z"
+  },
+  "macCompilation": {
+    "status": "PASS",
+    "measurementId": "c27526df-ad1c-4bbd-bfb9-56a896e3543c",
+    "finishedAt": "2026-11-23T18:08:59.740Z"
+  },
+  "clips": [
+    {
+      "path": "game/Assets/OceanAngler/Resources/Audio/OceanBed.wav",
+      "seconds": 12,
+      "channels": 2,
+      "sampleRate": 22050,
+      "peak": 0.3499755859375,
+      "rms": 0.05735588365388933,
+      "seamDelta": 0.0,
+      "sha256": "c3c3bd4254e50a26d27b7c02a26fc2fad35e7487095cbd1c6bfcdef561aa88fc"
+    },
+    {
+      "path": "game/Assets/OceanAngler/Resources/Audio/ExploreTheme.wav",
+      "seconds": 32,
+      "channels": 2,
+      "sampleRate": 22050,
+      "peak": 0.41998291015625,
+      "rms": 0.06634263282208973,
+      "seamDelta": 0.000152587890625,
+      "sha256": "4c4c2f62424aa9adf99ba9aebc05ce11e061202f3c02c479a7597ebd17662d99"
+    }
+  ],
+  "wavBytes": 3880888,
+  "unityImport": {
+    "loadType": "CompressedInMemory",
+    "compression": "Vorbis",
+    "quality": 0.55,
+    "sampleRate": "preserve 22050 Hz",
+    "generatedMeta": "actual Unity Editor import"
+  },
+  "checks": {
+    "newAndLegacyMusicDefaultOff": "PASS",
+    "musicPreferencePersists": "PASS",
+    "independentSoundAndMusicVolumes": "PASS",
+    "samePhaseMute": "PASS",
+    "simulatedBackgroundStopsSources": "PASS",
+    "resumeRequiresContinue": "PASS",
+    "threeRuntimeCueWaveformsContinuous": "PASS"
+  },
+  "failureHistory": [
+    {
+      "scope": "first ocean-bed PCM generation",
+      "result": "FAIL",
+      "seamDelta": 0.02935791015625,
+      "threshold": 0.02,
+      "fix": "20ms boundary blending; failed WAVs and measurement retained locally"
+    },
+    {
+      "scope": "final font coverage before last copy was included",
+      "result": "FAIL",
+      "missingCharacter": "播",
+      "fix": "regenerated pinned Noto subset; final 590 characters/208380 bytes and coverage check passed"
+    }
+  ],
+  "soundDesign": "original deterministic synthetic ocean bed and pentatonic theme; no third-party recordings or personal media",
+  "listeningAcceptance": "NOT_RUN",
+  "deviceSpeakerAndHeadphoneAcceptance": "NOT_RUN",
+  "actualHapticsAcceptance": "NOT_RUN",
+  "iOSCompilationForTheseChanges": "NOT_RUN",
+  "twentyMinuteAudioPerformance": "NOT_RUN",
+  "overallProductAcceptance": "PARTIAL",
+  "distribution": {
+    "currentBuild": "0.1.0 (2)",
+    "includesTheseChanges": false
+  },
+  "nativeRenderReport": "reports/integrated-native-render.json",
+  "measurementAudit": {
+    "status": "INCOMPLETE",
+    "latestCommandsBoundToActiveAttempt": true,
+    "issues": [
+      "expectation-not-declared",
+      "receipt-missing-or-invalid"
+    ],
+    "stageCompleted": false,
+    "note": "CLI command measurements and retained local logs are not an independently verified or complete product-acceptance audit."
+  }
+}
