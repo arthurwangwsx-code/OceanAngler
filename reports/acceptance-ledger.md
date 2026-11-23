@@ -14,7 +14,7 @@
 | REQ-08 手机/平板与无障碍 | 共享逻辑点UI、左右手/减弱动态，Mac两档点尺寸、触控命中和滚动通过 | PARTIAL | iPhone/iPad实际安全区/旋转/可读性/操作与无障碍体验 |
 | REQ-09 隐私与家长区 | 无广告/账号/分析；家长验证、清档二次确认及取消不丢档的Mac检查通过 | PARTIAL | 实际iOS包SDK/权限与系统网络行为核查；家长体验 |
 | REQ-10 开源流程 | 已公开独立仓库，MIT/OFL及资产登记，首轮CI通过 | PASS（已发布基线） | 每次新提交仍须审查许可、凭据及CI；不能由脚本证明全部资产合法性 |
-| REQ-11 本人TestFlight | 0.1.0 (1)冻结源码b771909签名归档/内部导出/上传通过；Apple VALID/INTERNAL_ONLY/READY_FOR_BETA_TESTING；仅本人一人组读回通过 | PARTIAL | TestFlight实际安装启动 |
+| REQ-11 本人TestFlight | 0.1.0 (1)冻结源码b771909签名归档/内部导出/上传通过；Apple VALID/INTERNAL_ONLY/IN_BETA_TESTING；本人授权两账号组读回通过，含用户指定测试邮箱 | PARTIAL | TestFlight实际安装启动 |
 | REQ-12 真机性能与恢复 | 设备可发现，后台自动暂停代码已实现 | NOT_RUN | iPhone/iPad各20分钟帧耗/内存/温升，后台/锁屏/恢复和持久化实际记录 |
 
 工程证据入口：reports/progression-validation.md、reports/mobile-layout.md、reports/runtime-phone-points.json、reports/runtime-tablet-points.json。发布回执以实际Apple查询和脱敏报告为准；本机原始日志、设备标识、密钥及签名产物不公开。

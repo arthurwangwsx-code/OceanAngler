@@ -6,5 +6,6 @@
   "build": "1",
   "displayName": "海洋小钓手",
   "distribution": "TestFlightInternalOnly",
-  "supportEmail": "arthur.wang.wsx@gmail.com"
+  "supportEmail": "arthur.wang.wsx@gmail.com",
+  "internalTesterEmails": ["arthur.wang.wsx@gmail.com"]
 }

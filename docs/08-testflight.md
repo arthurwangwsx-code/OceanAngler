@@ -6,10 +6,12 @@
 2. 注册独立 bundle，创建 iOS app 记录（名称/SKU/语言/bundle），记录 numeric app ID；[Apple 官方 Apps API说明](https://developer.apple.com/documentation/appstoreconnectapi/apps)明确新App须在网站创建，因此走 App Store Connect UI，不伪造 app ID。
 3. Unity IL2CPP 导出到新 build 目录，固定版本/构建号/源码SHA；构建前测试通过且源码干净。使用已核实 team、已有分发证书和本App独立App Store描述文件进行手动签名；不重建或撤销已有证书。
 4. archive → 签名/entitlements/bundle/version/build校验 → export；ExportOptions 使用 method=app-store-connect 和 testFlightInternalTestingOnly=true，确认 internal-only 后上传。上传结果未知先查状态，禁止盲目重复提交。
-5. Apple processingState=VALID 后查询 buildBetaDetail，补充 beta notes/出口合规。只建立本人内部组，核对 ACCOUNT_HOLDER 对应身份，审计现有组与直接测试者。不创建外部邀请、公开链接或新增非本人测试者。
+5. Apple processingState=VALID 后查询 buildBetaDetail，补充 beta notes/出口合规。只建立本人内部组，核对 ACCOUNT_HOLDER 及用户明确指定的测试账号，审计现有组与直接测试者。不创建外部邀请、公开链接或新增非本人测试者。
 6. 记录 Apple app/build ID、版本、源码 SHA、上传时间、处理状态、本人组；设备 TestFlight 实际安装启动另记，不能由 API 状态推定。
 
 Apple的[分发说明](https://developer.apple.com/documentation/xcode/distributing-your-app-for-beta-testing-and-releases/)将TestFlight Internal Only限制为团队内部测试；本项目还需逐组核查成员，进一步限制为本人。组的isInternalGroup或导出选项本身不能证明成员只有一人。
+
+测试身份与公开支持邮箱分开配置。publication/release.json的internalTesterEmails只接受用户明确指定的本人测试账号；不从supportEmail自动推断。工具核查其已是ASC中具有本App访问权的合格内部用户，缺失时停止，不擅自新增账号或扩大角色/应用权限。本人使用多个账号时保留既有持有人账号并添加明确指定账号，按授权账号集合审计，而非强制只有一条邮箱记录。2026-11-23用户明确指定arthur.wang.wsx@gmail.com用于测试，已核实其为现有可访问本App的ASC账号。内部测试条件见[Apple官方说明](https://developer.apple.com/help/app-store-connect/test-a-beta-version/add-internal-testers/)。
 
 Test notes应明确：早期原型，测试抛竿/张力/收鱼/积分/存档/中断；3D资产尚非最终拟真质量。支持/反馈/隐私邮箱统一 arthur.wang.wsx@gmail.com。
 

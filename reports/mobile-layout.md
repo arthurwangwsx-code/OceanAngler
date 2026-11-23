@@ -20,3 +20,5 @@ Unity首次切换iOS时自动新增静态批处理配置，导出虽成功，源
 源码b7719094902486ebc53856098e53d766aa614288已冻结并成功导出；签名归档与严格签名校验通过。归档App为com.arthur.OceanAngler、0.1.0 (1)，最低iOS17，设备族iPhone/iPad，没有UsageDescription权限键，内含UnityFramework隐私清单。本地内部专用IPA导出通过，90,803,253字节。2026-11-23 13:56:55 UTC，Xcode报告Upload succeeded；这仅证明上传传输完成，Apple处理和本人组以实时查询为准。原始签名和传输日志仅存.local。
 
 2026-11-23 14:00 UTC，Apple读回VALID、INTERNAL_ONLY、READY_FOR_BETA_TESTING；测试说明已保存，OceanAngler Personal为唯一可访问组，公开链接关闭，成员仅核实的ACCOUNT_HOLDER一人。设备安装仍NOT_RUN，已请求本人在TestFlight安装打开后回报；未启用手机镜像首次设置或通知转发。脱敏回执见testflight-0.1.0-1.json。
+
+14:07 UTC按用户补充，加入arthur.wang.wsx@gmail.com。该邮箱已是具有本App访问权的现有ASC账号，无新增角色/账号授权；保留原持有人账号，共两个本人授权账号，唯一内部组和公开链接关闭均读回通过。构建为IN_BETA_TESTING。发行工具改为显式测试账号集合，并新增支持邮箱不自动授权、缺少ASC身份/应用权限拒绝、陌生成员拒绝、重复执行不重复添加等测试，共11项通过；首次新增用例的模拟路径错误已修复并保留失败测量。实际安装仍须另验。

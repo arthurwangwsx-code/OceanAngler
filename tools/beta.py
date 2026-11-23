@@ -128,36 +128,50 @@ def owner_email(client):
     owners=[u for u in items(client,'/v1/users',{'filter[roles]':'ACCOUNT_HOLDER','limit':100}) if 'ACCOUNT_HOLDER' in u['attributes']['roles']]
     if len(owners)!=1 or '@' not in owners[0]['attributes']['username']:raise RuntimeError('Owner identity ambiguous')
     return owners[0]['attributes']
-def audit_access(client,build):
-    email=owner_email(client)['username'].casefold();groups=items(client,'/v1/betaGroups',{'filter[app]':APP_ID,'limit':100});access=0
+def approved_users(client):
+    owner=owner_email(client);approved={owner['username'].casefold():owner};requested=RELEASE.get('internalTesterEmails',[])
+    if not isinstance(requested,list) or any(not isinstance(email,str) or '@' not in email for email in requested):raise RuntimeError('Explicit internal tester list required')
+    if requested:
+        users=items(client,'/v1/users',{'limit':200})
+        for email in requested:
+            matches=[u for u in users if u['attributes']['username'].casefold()==email.casefold()]
+            if len(matches)!=1:raise RuntimeError('Approved tester must already be an unambiguous App Store Connect user')
+            user=matches[0];a=user['attributes']
+            if not set(a.get('roles',[]))&{'ACCOUNT_HOLDER','ADMIN','APP_MANAGER','DEVELOPER','MARKETING'}:raise RuntimeError('Approved user is not eligible for internal testing')
+            if not a.get('allAppsVisible') and not any(app['id']==APP_ID for app in items(client,'/v1/users/'+user['id']+'/visibleApps')):raise RuntimeError('Approved user lacks existing app access; do not expand account permissions')
+            approved[email.casefold()]=a
+    return approved
+def audit_access(client,build,approved=None):
+    allowed=set(approved_users(client) if approved is None else approved);groups=items(client,'/v1/betaGroups',{'filter[app]':APP_ID,'limit':100});access=0
     if build:
         direct=items(client,'/v1/builds/'+build+'/individualTesters',{'limit':200})
-        if any(t['attributes']['email'].casefold()!=email for t in direct):raise RuntimeError('Another direct tester has access')
+        if any(t['attributes']['email'].casefold() not in allowed for t in direct):raise RuntimeError('Unapproved direct tester has access')
     for g in groups:
         a=g['attributes'];relevant=a.get('hasAccessToAllBuilds') or (build and any(b['id']==build for b in items(client,'/v1/betaGroups/'+g['id']+'/builds')))
         if not relevant:continue
         members=items(client,'/v1/betaGroups/'+g['id']+'/betaTesters',{'limit':200})
-        if not a.get('isInternalGroup') or a.get('publicLinkEnabled') or any(t['attributes']['email'].casefold()!=email for t in members):raise RuntimeError('Build is exposed beyond owner-only internal testing')
+        if not a.get('isInternalGroup') or a.get('publicLinkEnabled') or any(t['attributes']['email'].casefold() not in allowed for t in members):raise RuntimeError('Build is exposed beyond approved personal internal accounts')
         access+=1
-    return dict(ownerOnly=True,accessibleGroups=access)
+    return dict(authorizedAccountsOnly=True,approvedAccountCount=len(allowed),accessibleGroups=access)
 def self_only(client,number):
     state=status(client,number)
     if state['processingState']!='VALID' or state.get('internalBuildState') not in ('READY_FOR_BETA_TESTING','IN_BETA_TESTING'):return state
-    owner=owner_email(client);email=owner['username'];audit_access(client,state['buildId']);groups=items(client,'/v1/betaGroups',{'filter[app]':APP_ID,'limit':100});name='OceanAngler Personal'
+    approved=approved_users(client);audit_access(client,state['buildId'],approved);groups=items(client,'/v1/betaGroups',{'filter[app]':APP_ID,'limit':100});name='OceanAngler Personal'
     group=next((g for g in groups if g['attributes']['name']==name),None)
     if group is None:group=client.request('POST','/v1/betaGroups',payload={'data':{'type':'betaGroups','attributes':{'name':name,'isInternalGroup':True,'publicLinkEnabled':False,'hasAccessToAllBuilds':False},'relationships':{'app':{'data':{'type':'apps','id':APP_ID}}}}})['data']
     if not group['attributes']['isInternalGroup'] or group['attributes'].get('publicLinkEnabled'):raise RuntimeError('Group not internal-only')
     path='/v1/betaGroups/'+group['id'];members=items(client,path+'/betaTesters')
-    if any(m['attributes']['email'].casefold()!=email.casefold() for m in members):raise RuntimeError('Personal group has another member')
-    if not members:
+    if any(m['attributes']['email'].casefold() not in approved for m in members):raise RuntimeError('Personal group has an unapproved member')
+    for email,user in approved.items():
+        if any(m['attributes']['email'].casefold()==email for m in members):continue
         testers=items(client,'/v1/betaTesters',{'filter[apps]':APP_ID,'filter[email]':email})
         if len(testers)>1 or any(t['attributes']['email'].casefold()!=email.casefold() for t in testers):raise RuntimeError('Ambiguous tester')
         if testers:client.request('POST',path+'/relationships/betaTesters',payload={'data':[{'type':'betaTesters','id':testers[0]['id']}]})
-        else:client.request('POST','/v1/betaTesters',payload={'data':{'type':'betaTesters','attributes':{'email':email,'firstName':owner.get('firstName'),'lastName':owner.get('lastName')},'relationships':{'betaGroups':{'data':[{'type':'betaGroups','id':group['id']}]}}}})
+        else:client.request('POST','/v1/betaTesters',payload={'data':{'type':'betaTesters','attributes':{'email':email,'firstName':user.get('firstName'),'lastName':user.get('lastName')},'relationships':{'betaGroups':{'data':[{'type':'betaGroups','id':group['id']}]}}}})
     if not any(b['id']==state['buildId'] for b in items(client,path+'/builds')):client.request('POST',path+'/relationships/builds',payload={'data':[{'type':'builds','id':state['buildId']}]})
     members=items(client,path+'/betaTesters');assigned=any(b['id']==state['buildId'] for b in items(client,path+'/builds'))
-    if len(members)!=1 or members[0]['attributes']['email'].casefold()!=email.casefold() or not assigned:raise RuntimeError('Self-only assignment not verified')
-    return dict(state,**audit_access(client,state['buildId']),status='SELF_ONLY_GROUP_READY',groupId=group['id'],testerCount=1,assignedBuild=True)
+    if len(members)!=len(approved) or {m['attributes']['email'].casefold() for m in members}!=set(approved) or not assigned:raise RuntimeError('Personal account assignment not verified')
+    return dict(state,**audit_access(client,state['buildId'],approved),status='SELF_ONLY_GROUP_READY',groupId=group['id'],testerCount=len(members),assignedBuild=True)
 def notes(client,number):
     state=status(client,number)
     if not state['buildId']:return state
