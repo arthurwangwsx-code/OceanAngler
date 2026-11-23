@@ -481,6 +481,16 @@
       "startedAt": "2026-11-23T13:40:25.462Z",
       "executable": "python3",
       "commandDigest": "1b9b750d007c851f920bb86ccb95b6c8d0649e1d11d26d4708a2736b0478955e"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "21c22afe-ee4d-40f7-aa47-d2236ce8f7d5",
+      "startedAt": "2026-11-23T13:41:21.050Z",
+      "executable": "python3",
+      "commandDigest": "e10f73d3859b38117c140aea52eedf095c635c9a14dfac2758dd04482104d394"
     }
   ],
   "runMeasurements": [
@@ -1066,6 +1076,21 @@
       "finishedAt": "2026-11-23T13:40:25.560Z",
       "durationMs": 65.54762500000004,
       "exitCode": 0,
+      "signal": null,
+      "errorCode": null
+    },
+    {
+      "id": "21c22afe-ee4d-40f7-aa47-d2236ce8f7d5",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "e10f73d3859b38117c140aea52eedf095c635c9a14dfac2758dd04482104d394",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-23T13:41:21.050Z",
+      "finishedAt": "2026-11-23T13:42:58.574Z",
+      "durationMs": 97501.66166700001,
+      "exitCode": 1,
       "signal": null,
       "errorCode": null
     }
