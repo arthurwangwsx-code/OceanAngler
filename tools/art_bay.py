@@ -1,5 +1,5 @@
 """原创珊瑚海湾候选：地形、岩礁、三种珊瑚形态、海草、码头及系泊艇。"""
-import bpy,math,json,random
+import bpy,bmesh,math,json,random
 from pathlib import Path
 from mathutils import Vector
 import numpy as np
@@ -72,6 +72,14 @@ def mesh(name,vs,faces,mat,group,uv=None):
    vi=data.loops[li].vertex_index;co=vs[vi];layer.data[li].uv=uv[vi] if uv else (co[0]*.7,co[2]*.7)
  return obj
 
+def weld_solid(obj):
+ # Merge UV-seam/pole vertices before decimation. UVs remain per face corner;
+ # no two-sided material or normal repair conceals incorrectly oriented faces.
+ bm=bmesh.new();bm.from_mesh(obj.data)
+ bmesh.ops.remove_doubles(bm,verts=list(bm.verts),dist=.000001)
+ bm.to_mesh(obj.data);bm.free();obj.data.update()
+ return obj
+
 def tube(name,points,radii,mat,group,sides=8):
  vs=[];uv=[];faces=[];distance=0
  for i,co in enumerate(points):
@@ -120,8 +128,8 @@ for i in range(24):
    p=k/segments*math.tau;rough=1+.13*math.sin(p*3+i)*math.sin(t*4)+.08*math.cos(p*7-t*5+i);r=math.sin(t)*s*rough
    vs.append((a+r*math.cos(p),b+r*math.sin(p)*.78,z+.15+math.cos(t)*s*.66+math.sin(p*4+t*7)*s*.04*math.sin(t)));uv.append((k/segments*2,j/rings*2))
  for j in range(rings):
-  for k in range(segments):q=j*(segments+1)+k;faces.append((q,q+1,q+segments+2,q+segments+1))
- mesh('ErodedLimestone'+str(i),vs,faces,'Limestone','Reef',uv)
+  for k in range(segments):q=j*(segments+1)+k;faces.append((q,q+segments+1,q+segments+2,q+1))
+ weld_solid(mesh('ErodedLimestone'+str(i),vs,faces,'Limestone','Reef',uv))
 
 def branch(start,direction,length,radius,depth):
  end=Vector(start)+Vector(direction).normalized()*length;mid=Vector(start).lerp(end,.5)+Vector((rand.uniform(-.04,.04),rand.uniform(-.04,.04),0))
@@ -147,10 +155,12 @@ for i,(a,b,z,s) in enumerate(rock_positions):
   for j in range(rings+1):
    t=j/rings*math.pi*.55
    for k in range(segments+1):
-    p=k/segments*math.tau;r=s*.38*math.sin(t)*(1+.035*math.sin(p*12+math.sin(t*8)*2));vs.append((a+r*math.cos(p),b+r*math.sin(p),top-.02+s*.29*math.cos(t)+.012*math.sin(p*18+t*9)));uv.append((k/segments,j/rings))
+    p=k/segments*math.tau;r=s*.38*math.sin(t)*(1+.035*math.sin(p*12+math.sin(t*8)*2));vs.append((a+r*math.cos(p),b+r*math.sin(p),top-.02+s*.29*math.cos(t)+.012*math.sin(p*18+t*9)*math.sin(t)));uv.append((k/segments,j/rings))
   for j in range(rings):
-   for k in range(segments):q=j*(segments+1)+k;faces.append((q,q+1,q+segments+2,q+segments+1))
-  mesh('MoundedCoral',vs,faces,'DomeCoral','DomeCoral',uv)
+   for k in range(segments):q=j*(segments+1)+k;faces.append((q,q+segments+1,q+segments+2,q+1))
+  # Closed, buried base; the full solid survives every LOD simplification.
+  faces.append(tuple(rings*(segments+1)+k for k in range(segments,-1,-1)))
+  weld_solid(mesh('MoundedCoral',vs,faces,'DomeCoral','DomeCoral',uv))
 
 # Curved, tapered ribbons rather than cylinders; split clumps leave the play corridor open.
 vs=[];faces=[];uv=[]

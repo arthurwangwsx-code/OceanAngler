@@ -22,4 +22,6 @@ python3 tools/art.py review --asset coral-bay --label bay-review-new
 
 Unity水面使用自有BayWater着色器，接入深度、场景颜色、岸边交界、波纹和视角反光；水下使用雾、少量投射焦散和最多72个软边颗粒。深度/颜色纹理开销、透明叠加和LOD切换仍须实际设备测量。依照[URP 17.3管线配置](https://docs.unity.cn/Packages/com.unity.render-pipelines.universal@17.3/api/UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.html)启用所需纹理，不把配置存在当作效果或性能合格。
 
-游戏仅对bay启用本候选，其余两海域继续明确保留旧样板。观察模式暂停钓鱼，返回后仍需用户点继续；水上/水下各有两个镜头。第一套独立纺车钓组位于另一个开发分支，需独立审阅后集成，当前海湾分支不冒充已包含该钓组。
+游戏仅对bay启用本候选，其余两海域继续明确保留旧样板。观察模式暂停钓鱼，返回后仍需用户点继续；水上/水下各有两个镜头。首鱼、完整纺车钓组与海湾已串行集成至integration/art-candidates，实际截图和完整验收分别记录。
+
+实体修复后的源模型对礁石与丘状珊瑚先焊接几何接缝/极点，再生成三档LOD，保留面角UV；面朝外，丘状珊瑚底部封闭并埋入基岩。独立validator在临时副本检查每个连通实体的流形边及有向体积，不改写被验源文件。旧文件失败和修复后的实际游戏对照见reports/coral-bay-solid-geometry.md；三档封闭/朝向通过不等于成品美术或真机验收通过。

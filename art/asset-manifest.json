@@ -190,15 +190,15 @@
       "acquiredAt": "2026-11-24",
       "status": "ART_REVIEW_PENDING",
       "path": "art/source/coral-bay/CoralBay.blend",
-      "sha256": "0677232a08761f2138bc8515ac8a76256feec9cacb1b8fa0317dbb4679f8b361",
+      "sha256": "2d65bf2e7b983086762bb9f7aa60830049986f094669339269fcbe23ad607949",
       "artifacts": [
         {
           "path": "art/source/coral-bay/CoralBay.blend",
-          "sha256": "0677232a08761f2138bc8515ac8a76256feec9cacb1b8fa0317dbb4679f8b361"
+          "sha256": "2d65bf2e7b983086762bb9f7aa60830049986f094669339269fcbe23ad607949"
         },
         {
           "path": "game/Assets/OceanAngler/Art/CoralBay/CoralBay.fbx",
-          "sha256": "b8aab20d169bae0bffbb6976701b62bbf645b663e01fdb284a1bee1e0cffeabe"
+          "sha256": "70f4099777a64d4b9b233c93e0e86369d3a7c0b8c8c250e28bccbf80789b8cc0"
         },
         {
           "path": "game/Assets/OceanAngler/Art/CoralBay/Bay_BranchCoral.png",
@@ -306,22 +306,23 @@
         },
         {
           "path": "art/previews/coral-bay/pier.png",
-          "sha256": "95b9b9696a935cbf75747aa3e35b1685b4a7bf38557df65d3757c77d0fe9107c"
+          "sha256": "d8620473dae38c63aad57bf592340a0e2383daa68c09f5ba50364398bd9955e8"
         },
         {
           "path": "art/previews/coral-bay/reef.png",
-          "sha256": "45fd8f6468211f87505184ea57f5b039b49a1863c77b76c818d58fd5d63411e8"
+          "sha256": "99b3b5ca76f1ac87a848edc399b4fea0a561569e6ce60f3ce437e1b6fd094512"
         },
         {
           "path": "art/previews/coral-bay/surface.png",
-          "sha256": "d7ec2c3c7b74f51c3bbe4f4325b75c4cf13b79c59ee5ce5067bf5daead219fb8"
+          "sha256": "d45e263157acc2e319c32183532e22d4d8103a37e4b6f8852428573c2076d381"
         },
         {
           "path": "art/previews/coral-bay/underwater.png",
-          "sha256": "a2000a90f12d5cb58760852dd99a1300295fc521351c4912ba988877d3b2873b"
+          "sha256": "b5b1b370ce0682ce40acf0db1a0a56180d744d4063f122ea4b43f727f66ed85d"
         }
       ],
-      "note": "Original continuous terrain, reef, generic coral forms, seagrass, pier and dinghy. Eight static assemblies with three LODs plus a separate water mesh. Studio lighting is an approximation; runtime visual, ecological, user and device acceptance remains open."
+      "note": "Original continuous terrain, reef, generic coral forms, seagrass, pier and dinghy. Eight static assemblies with three LODs plus a separate water mesh. Studio lighting is an approximation; runtime visual, ecological, user and device acceptance remains open.",
+      "modifications": "Reef/mound faces oriented outward; welded UV-seam/pole geometry before decimation; mounds have a buried closed base; source and runtime previews regenerated."
     },
     {
       "id": "original-feedback-audio",
@@ -371,7 +372,38 @@
           "path": "art/previews/runtime/settings.png",
           "sha256": "9186fbeb4706b5e8efe8b16ee4979c2c78b204aada1a4f244052d5d495a772e3"
         }
-      ]
+      ],
+      "author": "OceanAngler contributors",
+      "source": "Unity ScreenCapture of project-authored game, scene and UI",
+      "acquiredAt": "2026-11-24",
+      "sourceRedistribution": true,
+      "canModify": true
+    },
+    {
+      "id": "bay-solid-runtime-previews",
+      "status": "PROTOTYPE_REVIEW_PARTIAL",
+      "license": "MIT",
+      "redistribution": true,
+      "provenance": "Unmodified Unity ScreenCapture from this project, isolated Mac run bay-solid-desktop1 after outward/closed reef and mound correction; no OS chrome, private media or device identifiers",
+      "artifacts": [
+        {
+          "path": "art/previews/runtime-solids/reef.png",
+          "sha256": "8a9493b746916cc1335532126b97cd37244089ec53e364c148e93b57fb7ebb76"
+        },
+        {
+          "path": "art/previews/runtime-solids/underwater.png",
+          "sha256": "dd201c1eda753fc4f6982f17b7247144c4e1aaab3851812d7c57439bebe3880d"
+        },
+        {
+          "path": "art/previews/runtime-solids/surface.png",
+          "sha256": "72ec5fc3bc12414c6a3b6c6522f711a61a6f81013f0a7ea36ed88e1049e94c80"
+        }
+      ],
+      "author": "OceanAngler contributors",
+      "source": "Unity ScreenCapture of project-authored game, scene and UI",
+      "acquiredAt": "2026-11-24",
+      "sourceRedistribution": true,
+      "canModify": true
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."

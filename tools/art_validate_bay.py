@@ -1,5 +1,5 @@
 """独立读取保存的海湾源文件，检查实际几何、LOD、比例和贴图依赖。"""
-import bpy,json,math
+import bpy,bmesh,json,math
 from pathlib import Path
 from mathutils import Vector
 ROOT=Path(__file__).resolve().parents[1];failures=[];checks=[];triangles={}
@@ -14,6 +14,28 @@ for name in manifest['lods']:
  check(all(math.isfinite(c) for layer in obj.data.uv_layers for loop in layer.data for c in loop.uv),'有限平铺UV '+name)
 for group in ['Terrain','Reef','BranchingCoral','PlateCoral','DomeCoral','Seagrass','Pier','Boat']:
  check(all(triangles.get(group+'_LOD'+str(i),0)>triangles.get(group+'_LOD'+str(i+1),0)>0 for i in range(2)),'三档几何递减 '+group)
+# Independent geometry check: weld a private analysis copy, then inspect actual
+# connected solids and oriented volume. Never repair the candidate while validating.
+solid_report={}
+for group,expected in [('Reef',24),('DomeCoral',8)]:
+ for level in range(3):
+  name=group+'_LOD'+str(level);bm=bmesh.new();bm.from_mesh(bpy.data.objects[name].data)
+  bmesh.ops.remove_doubles(bm,verts=list(bm.verts),dist=.000001)
+  bmesh.ops.triangulate(bm,faces=list(bm.faces));remaining=set(bm.faces);volumes=[]
+  while remaining:
+   seed=remaining.pop();pending=[seed];island=[seed]
+   while pending:
+    face=pending.pop()
+    for edge in face.edges:
+     for neighbor in edge.link_faces:
+      if neighbor in remaining:remaining.remove(neighbor);pending.append(neighbor);island.append(neighbor)
+   volumes.append(sum(f.verts[0].co.dot(f.verts[1].co.cross(f.verts[2].co)) for f in island)/6)
+  open_edges=sum(not edge.is_manifold for edge in bm.edges)
+  solid_report[name]=dict(components=len(volumes),nonManifoldEdges=open_edges,minSignedVolume=min(volumes,default=0),inwardComponents=sum(v<=.000001 for v in volumes))
+  check(len(volumes)==expected,'独立实体数量 '+name)
+  check(open_edges==0,'实体无开放或非流形边 '+name)
+  check(len(volumes)>0 and all(v>.000001 for v in volumes),'逐实体朝外正体积 '+name)
+  bm.free()
 for name,co in [('OriginAnchor',(0,0,0)),('NorthAnchor',(0,1,0)),('UpAnchor',(0,0,1))]:
  check((bpy.data.objects[name].matrix_world.translation-Vector(co)).length<.0001,'坐标标尺 '+name)
 terrain=bpy.data.objects['Terrain_LOD0'];heights=[(terrain.matrix_world@v.co).z for v in terrain.data.vertices]
@@ -27,6 +49,6 @@ for name in ['StudioWaterVolume','StudioInfiniteWater']:
 check(sum(v for k,v in triangles.items() if k.endswith('LOD0'))<500000,'首景候选LOD0总面数预算')
 for image in bpy.data.images:
  if image.source=='FILE':check(Path(bpy.path.abspath(image.filepath)).is_file(),'原始贴图可解析 '+image.name)
-report=dict(scope='saved-coral-bay-engineering',status='FAIL' if failures else 'ENGINEERING_CHECKS_PASS',checks=checks,failures=failures,triangles=triangles,visualAcceptance='NOT_ACCEPTED',scientificReview='PENDING',deviceAcceptance='NOT_RUN')
+report=dict(scope='saved-coral-bay-engineering',status='FAIL' if failures else 'ENGINEERING_CHECKS_PASS',checks=checks,failures=failures,triangles=triangles,solids=solid_report,visualAcceptance='NOT_ACCEPTED',scientificReview='PENDING',deviceAcceptance='NOT_RUN')
 out=ROOT/'.local/art/coral-bay/validation.json';out.parent.mkdir(parents=True,exist_ok=True);out.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n');print(json.dumps(report,ensure_ascii=False))
 if failures:raise RuntimeError('Coral Bay source checks failed')
