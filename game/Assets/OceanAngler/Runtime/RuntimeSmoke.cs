@@ -32,6 +32,20 @@ namespace OceanAngler
                 Require(authored.GetComponentsInChildren<SkinnedMeshRenderer>().All(r=>r.sharedMesh!=null&&r.sharedMaterials.All(m=>m!=null&&m.shader.name=="Universal Render Pipeline/Lit")),"authored-renderer-materials");
             }
             CheckLayout("fishing");yield return Snapshot("01-fishing");
+            var bay=FindFirstObjectByType<BayHabitat>();Require(bay!=null,"authored-bay-loaded");
+            var ui=GetComponent<GameUI>();
+            if(ui.Compact)
+            {
+                Click("海域与装备",true);yield return null;yield return null;
+                var preparation=FindObjectsByType<ScrollRect>(FindObjectsSortMode.None).First(s=>s.name=="Preparation");preparation.verticalNormalizedPosition=0;yield return null;yield return null;
+            }
+            Click("看看海湾",true);yield return null;yield return null;CheckLayout("bay-surface");
+            Require(ui.InspectingHabitat&&game.Session.Paused,"observation-pauses-fishing");Require(Camera.main.transform.position.y>bay.SeaLevel,"surface-camera-above-water");yield return Snapshot("07-bay-surface");
+            Click("潜入水下",true);yield return null;yield return null;CheckLayout("bay-underwater");Require(Camera.main.transform.position.y<bay.SeaLevel,"underwater-camera-below-water");yield return Snapshot("08-bay-underwater");
+            Click("换个角度",true);yield return null;yield return null;Require(Vector3.Distance(Camera.main.transform.position,bay.reefCamera.position)<.01f,"reef-camera-actually-changes");
+            Click("返回钓鱼",true);yield return null;yield return null;Require(game.Session.Paused,"observation-return-keeps-pause");
+            if(ui.Compact){Click("收起准备",true);yield return null;yield return null;}
+            Click("继续探索",true);yield return null;yield return null;Require(Vector3.Distance(Camera.main.transform.position,bay.underwaterCamera.position)<.01f,"fishing-camera-restored");
             int before=game.Progress.Data.catches.Count;
             var cast=Find("按住蓄力");Pointer(cast,true);yield return new WaitForSecondsRealtime(.4f);Pointer(cast,false);
             float timeout=Time.realtimeSinceStartup+18;

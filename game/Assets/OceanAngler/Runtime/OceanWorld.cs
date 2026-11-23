@@ -8,6 +8,7 @@ namespace OceanAngler
         string fishId,habitat;
         Transform[] rodSegments;
         Material wood,metal,water;
+        BayHabitat bay;GameObject prototypeEnvironment,gearRoot;Transform environmentParent;
         Camera view;
         float visualTime;
         void Start()
@@ -19,6 +20,7 @@ namespace OceanAngler
         Material Mat(Color color,float smooth,float metallic=0) {var m=SurfaceMaterial.Create();m.color=color;m.SetFloat("_Smoothness",smooth);m.SetFloat("_Metallic",metallic);return m;}
         void MakeEnvironment()
         {
+            prototypeEnvironment=new GameObject("OtherHabitatPrototype");environmentParent=prototypeEnvironment.transform;
             view.transform.position=new Vector3(0,1.25f,-6.5f);view.transform.LookAt(new Vector3(0,.45f,1));view.fieldOfView=42;
             RenderSettings.fog=true;RenderSettings.fogColor=new Color(.04f,.31f,.41f);RenderSettings.fogMode=FogMode.ExponentialSquared;RenderSettings.fogDensity=.028f;RenderSettings.ambientLight=new Color(.2f,.32f,.38f);
             var sand=Mat(new Color(.36f,.34f,.25f),.15f);Box("Sand",new Vector3(0,-1.1f,4),new Vector3(80,.12f,80),sand);
@@ -27,15 +29,19 @@ namespace OceanAngler
             for(int i=0;i<26;i++)
             {
                 float x=(float)random.NextDouble()*32-16,z=5+(float)random.NextDouble()*20;float size=.4f+(float)random.NextDouble()*2;
-                var obj=GameObject.CreatePrimitive(PrimitiveType.Sphere);obj.name="ReefRock";obj.transform.position=new Vector3(x,-.8f,z);obj.transform.localScale=new Vector3(size,size*.65f,size);obj.GetComponent<Renderer>().sharedMaterial=rock;Destroy(obj.GetComponent<Collider>());
+                var obj=GameObject.CreatePrimitive(PrimitiveType.Sphere);obj.name="ReefRock";obj.transform.SetParent(environmentParent,false);obj.transform.position=new Vector3(x,-.8f,z);obj.transform.localScale=new Vector3(size,size*.65f,size);obj.GetComponent<Renderer>().sharedMaterial=rock;Destroy(obj.GetComponent<Collider>());
                 if(i%3==0)for(int j=0;j<5;j++)Cylinder("CoralBranch",new Vector3(x,-.8f,z),new Vector3(x+Mathf.Sin(j*1.2f)*.3f,-.1f+j*.1f,z+Mathf.Cos(j)*.3f),.05f,coral);
             }
             for(int i=0;i<6;i++)Box("PierPlank",new Vector3(-4.2f+i*.4f,1.7f,2),new Vector3(.38f,.15f,9),wood);
             for(int i=0;i<3;i++)Cylinder("PierPost",new Vector3(-4.1f,-1,1+i*3),new Vector3(-4.1f,2,1+i*3),.12f,wood);
             var light=new GameObject("WaterFill").AddComponent<Light>();light.type=LightType.Point;light.color=new Color(.37f,.79f,.86f);light.intensity=2.5f;light.range=15;light.transform.position=new Vector3(0,3,0);
+            light.transform.SetParent(environmentParent,true);environmentParent=null;
+            var prefab=Resources.Load<GameObject>("Models/CoralBay");if(prefab==null)throw new InvalidOperationException("Missing authored Coral Bay prefab");
+            bay=Instantiate(prefab).GetComponent<BayHabitat>();
         }
         void MakeGear()
         {
+            gearRoot=new GameObject("PrototypeGear");environmentParent=gearRoot.transform;
             rodSegments=new Transform[12];var carbon=Mat(new Color(.06f,.11f,.12f),.6f,.3f);
             for(int i=0;i<12;i++)rodSegments[i]=Cylinder("RodSection"+i,Vector3.zero,Vector3.up,.02f,carbon).transform;
             var grip=Mat(new Color(.20f,.15f,.10f),.2f);
@@ -45,12 +51,12 @@ namespace OceanAngler
             Cylinder("ReelHandle",new Vector3(1.78f,-.22f,-1.72f),new Vector3(1.89f,-.4f,-1.72f),.022f,metal);
             Cylinder("HandleGrip",new Vector3(1.89f,-.4f,-1.72f),new Vector3(1.98f,-.4f,-1.72f),.03f,grip);
             var obj=new GameObject("FishingLine");line=obj.AddComponent<LineRenderer>();line.sharedMaterial=Mat(new Color(.8f,.92f,.91f),.3f);line.positionCount=24;line.startWidth=.009f;line.endWidth=.003f;
-            rodTip=new GameObject("RodTip").transform;
+            line.transform.SetParent(environmentParent,false);rodTip=new GameObject("RodTip").transform;rodTip.SetParent(environmentParent,false);environmentParent=null;
         }
         GameObject Box(string name,Vector3 pos,Vector3 scale,Material material)
-        {var o=GameObject.CreatePrimitive(PrimitiveType.Cube);o.name=name;o.transform.position=pos;o.transform.localScale=scale;o.GetComponent<Renderer>().sharedMaterial=material;Destroy(o.GetComponent<Collider>());return o;}
+        {var o=GameObject.CreatePrimitive(PrimitiveType.Cube);o.name=name;if(environmentParent!=null)o.transform.SetParent(environmentParent,false);o.transform.position=pos;o.transform.localScale=scale;o.GetComponent<Renderer>().sharedMaterial=material;Destroy(o.GetComponent<Collider>());return o;}
         GameObject Cylinder(string name,Vector3 from,Vector3 to,float radius,Material material)
-        {var o=GameObject.CreatePrimitive(PrimitiveType.Cylinder);o.name=name;Between(o.transform,from,to,radius);o.GetComponent<Renderer>().sharedMaterial=material;Destroy(o.GetComponent<Collider>());return o;}
+        {var o=GameObject.CreatePrimitive(PrimitiveType.Cylinder);o.name=name;if(environmentParent!=null)o.transform.SetParent(environmentParent,false);Between(o.transform,from,to,radius);o.GetComponent<Renderer>().sharedMaterial=material;Destroy(o.GetComponent<Collider>());return o;}
         static void Between(Transform t,Vector3 a,Vector3 b,float radius) {t.position=(a+b)*.5f;t.up=(b-a).normalized;t.localScale=new Vector3(radius*2,Vector3.Distance(a,b)*.5f,radius*2);}
         void SelectFish(string id)
         {
@@ -65,6 +71,7 @@ namespace OceanAngler
             if(game==null||game.Progress.RequiresRecovery)return;
             var data=game.Progress.Data;string desired=ui.FocusedFish??game.Session.Catch?.fishId??System.Array.Find(game.Content.fish,f=>f.habitatId==data.habitatId).id;
             if(desired!=fishId)SelectFish(desired);
+            fishRoot.gameObject.SetActive(!ui.InspectingHabitat);gearRoot.SetActive(!ui.InspectingHabitat);
             bool reduced=data.settings.reducedMotion;if(!reduced&&!game.Session.Paused)visualTime+=Time.deltaTime;float time=reduced?0:visualTime;
             fish.reducedMotion=reduced;fish.paused=ui.FocusedFish!=null?ui.ModelPaused:game.Session.Paused;fish.speed=game.Session.Phase==FishingPhase.Fighting?1.6f:1;
             bool journal=ui.FocusedFish!=null;
@@ -84,7 +91,10 @@ namespace OceanAngler
             if(habitat!=data.habitatId)
             {
                 habitat=data.habitatId;Color color=habitat=="bay"?new Color(.04f,.34f,.44f):habitat=="channel"?new Color(.035f,.20f,.35f):new Color(.025f,.10f,.22f);RenderSettings.fogColor=color;view.backgroundColor=color;
+                bool authored=habitat=="bay";bay.gameObject.SetActive(authored);prototypeEnvironment.SetActive(!authored);
+                if(!authored){view.transform.position=new Vector3(0,1.25f,-6.5f);view.transform.LookAt(new Vector3(0,.45f,1));view.fieldOfView=42;RenderSettings.fogDensity=.028f;}
             }
+            if(habitat=="bay")bay.Present(view,ui.InspectingHabitat,ui.InspectingHabitat&&ui.HabitatSurfaceView,ui.HabitatAngle,game.Session.Paused,reduced);
         }
         void OnDestroy(){if(wood!=null)Destroy(wood);if(metal!=null)Destroy(metal);if(water!=null)Destroy(water);}
     }

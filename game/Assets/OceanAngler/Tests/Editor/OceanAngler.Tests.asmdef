@@ -1,1 +1,1 @@
-{"name":"OceanAngler.Tests","references":["OceanAngler.Runtime"],"includePlatforms":["Editor"],"optionalUnityReferences":["TestAssemblies"]}
+{"name":"OceanAngler.Tests","references":["OceanAngler.Runtime","Unity.RenderPipelines.Universal.Runtime"],"includePlatforms":["Editor"],"optionalUnityReferences":["TestAssemblies"]}

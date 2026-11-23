@@ -69,7 +69,7 @@ namespace OceanAngler
                 progressText.text = "收鱼进度  " + Mathf.RoundToInt(game.Session.Progress*100) + "%";
                 if (charging && actionText != null) actionText.text = "松手抛竿  " + Mathf.RoundToInt(Mathf.Clamp01((Time.unscaledTime-chargeStart)/1.5f)*100) + "%";
             }
-            if (noticeText != null) noticeText.text = game.Notice ?? (game.RestReminder ? (Compact?"探索一会儿了，和家人休息一下吧。":"已经探索一会儿了，和家人休息一下吧。进度已保存。") : (Compact?"记录后放流 · 随时暂停":"鱼获记录后放流 · 不消耗鱼饵 · 随时可以暂停"));
+            if (noticeText != null) noticeText.text = InspectingHabitat?"观察时暂停钓鱼，返回后点继续。":game.Notice ?? (game.RestReminder ? (Compact?"探索一会儿了，和家人休息一下吧。":"已经探索一会儿了，和家人休息一下吧。进度已保存。") : (Compact?"记录后放流 · 随时暂停":"鱼获记录后放流 · 不消耗鱼饵 · 随时可以暂停"));
         }
         void Rebuild()
         {
@@ -85,6 +85,7 @@ namespace OceanAngler
                 case "图鉴": BuildJournal(); break;
                 case "鱼类详情": BuildCompactInspect(); break;
                 case "钓具": BuildGear(); break;
+                case "海湾观察": BuildHabitatPreview(); break;
                 case "任务": BuildTasks(); break;
                 case "设置": BuildSettings(); break;
                 case "家长验证": BuildParentGate(); break;
@@ -114,7 +115,8 @@ namespace OceanAngler
                 var b=Button(info,h.name+(unlocked?"":" · "+h.unlockPoints+"分"),20,208+i*52,-40,44,()=>game.SelectHabitat(h.id),h.id==game.Progress.Data.habitatId?Teal:Navy);
                 b.interactable=unlocked && game.Session.Phase==FishingPhase.Ready;
             }
-            Label(info,"已装备\n"+game.Content.Gear(game.Progress.Data.rodId).name+" · "+game.Content.Gear(game.Progress.Data.reelId).name+"\n"+game.Content.Gear(game.Progress.Data.lineId).name+" · "+game.Content.Gear(game.Progress.Data.lureId).name,19,Muted,20,380,-40,100);
+            Label(info,"已装备\n"+game.Content.Gear(game.Progress.Data.rodId).name+" · "+game.Content.Gear(game.Progress.Data.reelId).name+"\n"+game.Content.Gear(game.Progress.Data.lineId).name+" · "+game.Content.Gear(game.Progress.Data.lureId).name,19,Muted,20,368,-40,80);
+            if(game.Progress.Data.habitatId=="bay")Button(info,"看看海湾",20,460,-40,44,()=>Navigate("海湾观察"),Navy).GetComponentInChildren<Text>().fontSize=19;
             var controls=Box(pageRoot,"Controls",Panel,new Vector2(left?.02f:.69f,.12f),new Vector2(left?.31f:.98f,.81f),Vector2.zero,Vector2.zero);
             phaseText=Label(controls,"",Mathf.Min(32,Mathf.FloorToInt((Width*.29f-48)/9)),Color.white,24,22,-48,48);
             hintText=Label(controls,"",21,Muted,24,86,-48,116);
