@@ -9,6 +9,7 @@ namespace OceanAngler
         Material wood,water;
         BayHabitat bay;GameObject prototypeEnvironment;Transform environmentParent;
         Camera view;
+        public FishVisual TargetFish=>fish;
         float visualTime;
         CatchRecord releasing;
         float releaseTime;
@@ -115,7 +116,7 @@ namespace OceanAngler
                 bool authored=habitat=="bay";bay.gameObject.SetActive(authored);prototypeEnvironment.SetActive(!authored);
                 if(!authored){view.clearFlags=CameraClearFlags.SolidColor;view.transform.position=new Vector3(0,1.25f,-6.5f);view.transform.LookAt(new Vector3(0,.45f,1));view.fieldOfView=42;RenderSettings.fogDensity=.028f;}
             }
-            if(habitat=="bay")bay.Present(view,ui.InspectingHabitat,ui.InspectingHabitat&&ui.HabitatSurfaceView,ui.HabitatAngle,game.Session.Paused,reduced);
+            if(habitat=="bay")bay.Present(view,ui.InspectingHabitat,ui.InspectingHabitat&&ui.HabitatSurfaceView,ui.HabitatAngle,game.Session.Paused,reduced,ui.FocusedFish==null&&!ui.InspectingGear);
         }
         void OnDestroy(){if(game!=null)game.Released-=BeginRelease;if(wood!=null)Destroy(wood);if(water!=null)Destroy(water);}
     }

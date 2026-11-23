@@ -676,6 +676,47 @@
         }
       ],
       "note": "Current source6 static/bite/36-frame full-cycle turntable and final mouthgpu6 imported-prefab captures. before-bite, wrong-direction-mouth and first-draw images preserve historical defects; correct-first images are current unmodified first draws. All GPU images are isolated diagnostics without player UI; not actual iPhone/iPad evidence. A1-A3 pending."
+    },
+    {
+      "id": "ambient-bluefin-school-previews",
+      "author": "OceanAngler contributors",
+      "source": "game/Assets/OceanAngler/Editor/SchoolRenderReview.cs",
+      "license": "MIT",
+      "redistribution": true,
+      "status": "ART_REVIEW_PENDING",
+      "acquiredAt": "2026-11-24",
+      "provenance": "Raw project-owned Editor Metal RenderTexture captures; no external/OS/private media",
+      "note": "Three scaled instances of the existing bluefin candidate, not three new species. Two sampled poses, three views and a no-school control. Fixed LOD0 fixture; no player/device/performance claims.",
+      "artifacts": [
+        {
+          "path": "art/previews/bay-school/later-reef.png",
+          "sha256": "70b7f3f37efd1d4310c62d02236312b8b4542fbb5f4cbd2ec1507bb66fadb111"
+        },
+        {
+          "path": "art/previews/bay-school/later-surface.png",
+          "sha256": "9996d41ede74c4816a3d89485a6828b36631285454ec88e776d9e53eea04d374"
+        },
+        {
+          "path": "art/previews/bay-school/later-underwater.png",
+          "sha256": "1ef95abaa80c33aa2553b00781e355d43d8eb2ab1549ace265de83708a35f052"
+        },
+        {
+          "path": "art/previews/bay-school/start-reef.png",
+          "sha256": "b0cffca23fff55c38b78f05384654a221da0ec418fb749474f23844d7ae923e9"
+        },
+        {
+          "path": "art/previews/bay-school/start-surface.png",
+          "sha256": "a5b7810c3121cea4b86e5feb6cbdc571265dac2bbe2c5a1ad39b695033a15e21"
+        },
+        {
+          "path": "art/previews/bay-school/start-underwater.png",
+          "sha256": "b3aacfaeff769dfca7cdf192e53e0cfc4dc1df47dfd0014392902aa83f2f82f3"
+        },
+        {
+          "path": "art/previews/bay-school/underwater-no-school.png",
+          "sha256": "9f37acb4c4ecdd37da67bfc0f918f7e70f0e5daf67fe9104404ff1a0155c8027"
+        }
+      ]
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."

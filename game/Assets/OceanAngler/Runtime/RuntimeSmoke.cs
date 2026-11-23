@@ -22,7 +22,7 @@ namespace OceanAngler
             if(game.Session.Paused){Click("继续探索");yield return null;yield return null;}
             var spinning=FindFirstObjectByType<AuthoredSpinningRig>();Require(spinning!=null,"authored-spinning-rig-loaded");
             if(spinning!=null){Require(spinning.guides.Length==9&&spinning.rodBones.Length==10,"rig-guides-and-bend-bones");Require(spinning.GetComponentsInChildren<LODGroup>(true).Length==1,"rig-single-lod-owner");Require(spinning.MaximumGuideLineError()<.0001f,"rig-line-through-guides");}
-            var authored=FindFirstObjectByType<AuthoredFishVisual>();Require(authored!=null,"authored-bluefin-loaded");
+            var authored=GetComponent<OceanWorld>().TargetFish as AuthoredFishVisual;Require(authored!=null,"authored-bluefin-loaded");
             if(authored!=null)
             {
                 var animator=authored.GetComponentInChildren<Animator>();var group=authored.GetComponent<LODGroup>();

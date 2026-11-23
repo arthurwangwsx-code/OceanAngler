@@ -8,9 +8,11 @@ namespace OceanAngler
         public Material sky;public BayPlanarReflection reflection;
         public Light causticLight;public ParticleSystem suspendedParticles;
         public float SeaLevel=4.5f;
+        public BayFishSchool school;
         float waterTime;MaterialPropertyBlock waterProperties;
-        public void Present(Camera camera,bool observing,bool above,int angle,bool paused,bool reduced)
+        public void Present(Camera camera,bool observing,bool above,int angle,bool paused,bool reduced,bool showAmbient=true)
         {
+            if(school!=null)school.Present(Time.deltaTime,paused,reduced,showAmbient);
             if(!paused&&!reduced)waterTime+=Time.deltaTime;
             if(waterProperties==null)waterProperties=new MaterialPropertyBlock();
             waterProperties.SetFloat("_OceanTime",reduced?0:waterTime);

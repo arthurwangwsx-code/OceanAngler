@@ -28,6 +28,7 @@
 | 图鉴物种详情 | [12物种学名、辨识与窄卡片滚动](reports/journal-species.md) |
 | 口部、下颌与鳍条 | [真实下唇变形、内壁和导入资产离屏检查](reports/bluefin-mouth-and-fins.md) |
 | 海湾水面与倒影 | [深度顺序修复、离屏GPU对照及验收边界](reports/water-rendering.md) |
+| 海湾环境鱼群 | [三条现有蓝鳍鲹的游动、空间检查与离屏对照](reports/bay-school.md) |
 | 岸线与沙地 | [连续陆地、沙地材质及同镜头离屏对照](reports/bay-shoreline.md) |
 
 需求合同在 ispec/specs，首批变更在 ispec/changes/product-technical-foundation；planning/backlog.csv 管理任务。仅此目录可写，不修改赛车和枪战项目。
@@ -48,8 +49,8 @@ ASC_ENV_FILE=/path/to/private/asc.env python3 tools/asc.py status
 
 当前开发源码包含保存成功后的转向/放流与空载竿恢复、18任务指引、12候选学名和3个仅观察目录保护，以及原创水下底音/探索音乐及独立保存的开关。初始装备20次确定性模拟、逐次重载、重复记录不加分和全装备解锁已有[逻辑证据](reports/task-journey.json)，不代表儿童首鱼时间、随机遭遇耗时或实际20次UI试玩。观察生物的模型/场景交互尚未实现。
 
-海湾已有独立源地形、码头、小船、岩礁/珊瑚/海草、水上/水下观察、缓存倒影与深度透射。源网格朝向/封闭、鱼体鳃缘/材质及鉴赏标题修复分别保留证据；岸线从孤立沙脊改为连接陆地的缓坡，沙地波纹与颜色分离。蓝鳍鲹新增实际向下张开的下颌、口腔内颊及逐段鳍纹，修复隔离场景首次绘制的子材质颜色异常。最新30项Editor、7项无画面PlayMode及Mac编译通过，源文件工程检查和Editor离屏GPU图分别审阅；当前原生窗口与实际iPhone/iPad画面、触控、听感/触觉及20分钟性能仍未通过。旧版三档Mac流程各12截图属于其历史源码，不能替代新资产的验收。
+海湾已有独立源地形、码头、小船、岩礁/珊瑚/海草、水上/水下观察、缓存倒影与深度透射。源网格朝向/封闭、鱼体鳃缘/材质及鉴赏标题修复分别保留证据；岸线从孤立沙脊改为连接陆地的缓坡，沙地波纹与颜色分离。蓝鳍鲹新增实际向下张开的下颌、口腔内颊及逐段鳍纹，修复隔离场景首次绘制的子材质颜色异常。开发分支又加入三条复用模型的环境鱼群，固定实例、局部聚合/分离，暂停和减弱动态停止；图鉴/钓具鉴赏隐藏，背景鱼不参与结算。最新34项Editor、7项无画面PlayMode及Mac编译通过，源文件工程检查和Editor离屏GPU图分别审阅；当前原生窗口与实际iPhone/iPad画面、触控、听感/触觉及20分钟性能仍未通过。旧版三档Mac流程各12截图属于其历史源码，不能替代新资产的验收。
 
 Mac构建入口为`python3 tools/game.py mac`；原生检查为`python3 tools/runtime_smoke.py --label unique-run`，使用隔离存档，须在桌面窗口可用后实际运行并核对图像/回执。Editor离屏诊断为`python3 tools/game.py water-review --label unique-review`，不能据此宣布玩家UI或设备通过。Unity和资产写入串行，每轮用新label保留证据；字体重建见tools/requirements.txt。
 
-TestFlight 0.1.0 (3)冻结于05c8cc7，已包含上述累计修复。[发行回执](reports/testflight-0.1.0-3.json)记录Apple VALID/INTERNAL_ONLY、本人两账号组分配及测试说明；指定邮箱邀请仍待接受，实际安装启动未验。按[build 3设备复核](docs/12-beta3-review.md)继续记录。历史[build 1](reports/testflight-0.1.0-1.json)、[build 2](reports/testflight-0.1.0-2.json)产物与回执保留。新构建须按[冻结源码发布流程](docs/08-testflight.md)使用新build号。ASC工具另需PyJWT与cryptography，凭据显式在本机配置，不进入公开仓库。
+TestFlight 0.1.0 (3)冻结于05c8cc7，已包含发行前累计修复，不含其后新增的环境鱼群。[发行回执](reports/testflight-0.1.0-3.json)记录Apple VALID/INTERNAL_ONLY、本人两账号组分配及测试说明；指定邮箱邀请仍待接受，实际安装启动未验。按[build 3设备复核](docs/12-beta3-review.md)继续记录。历史[build 1](reports/testflight-0.1.0-1.json)、[build 2](reports/testflight-0.1.0-2.json)产物与回执保留。新构建须按[冻结源码发布流程](docs/08-testflight.md)使用新build号。ASC工具另需PyJWT与cryptography，凭据显式在本机配置，不进入公开仓库。

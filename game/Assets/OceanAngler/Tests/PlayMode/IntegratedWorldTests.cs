@@ -47,8 +47,12 @@ namespace OceanAngler.Tests
             Assert.That(save,Does.Contain("unity-test-saves"));Assert.That(File.Exists(Path.Combine(save,"ocean-progress.json")),Is.False);
             yield return SceneManager.LoadSceneAsync("Bay",LoadSceneMode.Single);scene=SceneManager.GetSceneByName("Bay");yield return null;yield return null;
             game=UnityEngine.Object.FindFirstObjectByType<GameController>();var ui=game.GetComponent<GameUI>();game.Pause(true);yield return null;yield return null;
-            var gear=UnityEngine.Object.FindFirstObjectByType<AuthoredSpinningRig>();var fish=UnityEngine.Object.FindFirstObjectByType<AuthoredFishVisual>();var bay=UnityEngine.Object.FindFirstObjectByType<BayHabitat>();
+            var gear=UnityEngine.Object.FindFirstObjectByType<AuthoredSpinningRig>();var fish=game.GetComponent<OceanWorld>().TargetFish as AuthoredFishVisual;var bay=UnityEngine.Object.FindFirstObjectByType<BayHabitat>();
             Assert.That(gear,Is.Not.Null);Assert.That(fish,Is.Not.Null);Assert.That(bay,Is.Not.Null);Assert.That(GameObject.Find("OtherHabitatPrototype"),Is.Null);
+            var school=bay.school;Assert.That(school.Members.Length,Is.EqualTo(3));var population=school.Members.Select(f=>f.GetInstanceID()).ToArray();
+            Assert.That(school.Members.Contains(fish),Is.False);Assert.That(school.Members.All(f=>f.GetComponentsInChildren<Collider>().All(c=>!c.enabled)),Is.True);
+            var frozenSchool=school.Members.Select(f=>f.transform.localPosition).ToArray();yield return new WaitForSeconds(.15f);
+            CollectionAssert.AreEqual(frozenSchool,school.Members.Select(f=>f.transform.localPosition).ToArray());Assert.That(school.Members.All(f=>f.paused),Is.True);
             var rodRest=gear.rodBones.Last().localRotation;
             if(ui.Compact){Click("海域与装备");yield return null;yield return null;}
             Click("看看海湾");yield return null;yield return null;
@@ -57,6 +61,7 @@ namespace OceanAngler.Tests
             Click("返回钓鱼");yield return null;yield return null;Assert.That(game.Session.Paused,Is.True);Assert.That(gear.gameObject.activeSelf&&fish.gameObject.activeSelf,Is.True);
             Click("钓具");yield return null;yield return null;Click("观察入门钓组");yield return null;yield return null;
             Assert.That(ui.InspectingGear&&game.Session.Paused,Is.True);Assert.That(fish.gameObject.activeSelf,Is.False);Assert.That(gear.gameObject.activeSelf,Is.True);
+            Assert.That(school.gameObject.activeSelf,Is.False);CollectionAssert.AreEqual(population,school.Members.Select(f=>f.GetInstanceID()).ToArray());
             var prior=gear.crank.localRotation;Click("试摇卷线器");yield return new WaitForSeconds(.2f);
             Assert.That(Quaternion.Angle(prior,gear.crank.localRotation),Is.GreaterThan(10));Assert.That(game.Reeling,Is.False);
             Click("出海");yield return null;yield return null;var stopped=gear.crank.localRotation;yield return new WaitForSeconds(.15f);
@@ -64,6 +69,9 @@ namespace OceanAngler.Tests
             Assert.That(Vector3.Distance(Camera.main.transform.position,bay.underwaterCamera.position),Is.LessThan(.001f));
             if(ui.Compact){Click("收起准备");yield return null;yield return null;}
             Click("继续探索");yield return null;yield return null;Assert.That(game.Session.Paused,Is.False);
+            var priorSchool=school.Members.Select(f=>f.transform.localPosition).ToArray();yield return new WaitForSeconds(.2f);
+            Assert.That(school.gameObject.activeSelf,Is.True);Assert.That(Vector3.Distance(priorSchool[0],school.Members[0].transform.localPosition),Is.GreaterThan(.01f));
+            CollectionAssert.AreEqual(population,school.Members.Select(f=>f.GetInstanceID()).ToArray());
             game.Cast(.5f);Assert.That(game.Session.Phase,Is.EqualTo(FishingPhase.Casting));Assert.That(game.Reeling,Is.False);
             for(int i=0;i<600&&game.Session.Phase!=FishingPhase.Bite;i++)game.Session.Tick(1f/30,false);
             Assert.That(game.Session.Phase,Is.EqualTo(FishingPhase.Bite));game.Strike();game.HoldReel(true);Assert.That(game.Reeling,Is.True);yield return null;yield return null;
@@ -101,9 +109,12 @@ namespace OceanAngler.Tests
             game.Cast(.5f);yield return null;yield return null;LandCurrentFish();yield return null;yield return null;
             Click("记录并放流");yield return null;yield return null;Assert.That(released,Is.EqualTo(2));
             game.Cast(.5f);yield return null;yield return null;
-            var current=UnityEngine.Object.FindFirstObjectByType<FishVisual>();Assert.That(current,Is.Not.Null);
+            var current=game.GetComponent<OceanWorld>().TargetFish;Assert.That(current,Is.Not.Null);
             Assert.That(current.semantic,Is.EqualTo("burst"));Assert.That(current.transform.position.z,Is.EqualTo(1.2f).Within(.001f));
-            game.Configure(s=>s.reducedMotion=true);LandCurrentFish();yield return null;yield return null;
+            game.Configure(s=>s.reducedMotion=true);yield return null;yield return null;
+            var reducedSchool=school.Members.Select(f=>f.transform.localPosition).ToArray();yield return new WaitForSeconds(.15f);
+            CollectionAssert.AreEqual(reducedSchool,school.Members.Select(f=>f.transform.localPosition).ToArray());Assert.That(school.Members.All(f=>f.reducedMotion),Is.True);
+            LandCurrentFish();yield return null;yield return null;
             Click("记录并放流");yield return null;yield return null;
             Assert.That(released,Is.EqualTo(3));Assert.That(current.gameObject.activeSelf,Is.False);
             Assert.That(new SaveStore(saveFile,game.Content).Load().data.catches.Count,Is.EqualTo(3));
@@ -113,11 +124,11 @@ namespace OceanAngler.Tests
             Click("记录并放流");yield return null;yield return null;Assert.That(released,Is.EqualTo(4));
             Click("图鉴");yield return null;yield return null;
             Assert.That(game.Session.Paused,Is.True);Assert.That(ui.FocusedFish,Is.Not.Null);
-            var inspected=UnityEngine.Object.FindFirstObjectByType<FishVisual>();Assert.That(inspected.semantic,Is.EqualTo("swim"));
+            var inspected=game.GetComponent<OceanWorld>().TargetFish;Assert.That(inspected.semantic,Is.EqualTo("swim"));
             Click("出海");yield return null;yield return null;Assert.That(inspected.gameObject.activeSelf,Is.False);
             Assert.That(game.Session.Phase,Is.EqualTo(FishingPhase.Ready));Assert.That(game.Session.Paused,Is.True);
             Click("继续探索");game.Cast(.5f);yield return null;yield return null;
-            Assert.That(UnityEngine.Object.FindFirstObjectByType<FishVisual>().semantic,Is.EqualTo("burst"));
+            Assert.That(game.GetComponent<OceanWorld>().TargetFish.semantic,Is.EqualTo("burst"));
             Assert.That(new SaveStore(saveFile,game.Content).Load().data.catches.Count,Is.EqualTo(4));
             Click("任务");yield return null;yield return null;Canvas.ForceUpdateCanvases();
             var rows=UnityEngine.Object.FindObjectsByType<RectTransform>(FindObjectsSortMode.None).Where(t=>t.name=="Task").ToArray();Assert.That(rows.Length,Is.EqualTo(18));

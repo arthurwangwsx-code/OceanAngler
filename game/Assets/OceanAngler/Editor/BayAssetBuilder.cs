@@ -59,6 +59,7 @@ namespace OceanAngler.Editor
                 bay.suspendedParticles=Particles(root.transform);
                 var fill=new GameObject("WaterAmbientFill").AddComponent<Light>();fill.transform.SetParent(root.transform,false);fill.transform.localPosition=new Vector3(0,3,4);fill.type=LightType.Point;fill.range=18;fill.intensity=1.3f;fill.color=new Color(.2f,.45f,.5f);fill.shadows=LightShadows.None;
                 if(!AssetDatabase.IsValidFolder("Assets/OceanAngler/Resources/Models"))AssetDatabase.CreateFolder("Assets/OceanAngler/Resources","Models");
+                BaySchoolBuilder.Configure(bay);
                 PrefabUtility.SaveAsPrefabAsset(root,"Assets/OceanAngler/Resources/Models/CoralBay.prefab");AssetDatabase.SaveAssets();
                 Debug.Log("CORAL_BAY_UNITY_OK groups=8 lods=3 water=separate");
             }

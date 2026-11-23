@@ -6980,6 +6980,7 @@ Transform:
   - {fileID: 8599685329159743544}
   - {fileID: 7641626162618217340}
   - {fileID: 27646915952271551}
+  - {fileID: 9016466609779311840}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5387223022110168325
@@ -7008,6 +7009,7 @@ MonoBehaviour:
   causticLight: {fileID: 1077378701459315524}
   suspendedParticles: {fileID: 2802861070944349449}
   SeaLevel: 4.5
+  school: {fileID: 528600766391213187}
 --- !u!114 &4943548341116759042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8265,6 +8267,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8732289653526387269}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &9126697273019146891
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9016466609779311840}
+  - component: {fileID: 528600766391213187}
+  m_Layer: 0
+  m_Name: AmbientBluefinSchool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9016466609779311840
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9126697273019146891}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8392541698853869764}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &528600766391213187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9126697273019146891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5688a131ba3a146939efc85ba006ba3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: OceanAngler.Runtime::OceanAngler.BayFishSchool
+  fishPrefab: {fileID: 3278582666028077058, guid: c2ee4aaef3d2d4fd8bd59805b69cc95f, type: 3}
+  centres:
+    m_Center: {x: 2, y: 2.3536534, z: 13}
+    m_Extent: {x: 3.5, y: 1.5663466, z: 5}
+  solidCeiling: 0.20730686
 --- !u!1 &9171734385445724687
 GameObject:
   m_ObjectHideFlags: 0
