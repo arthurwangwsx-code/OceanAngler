@@ -109,6 +109,14 @@
       "checkedAt": "2026-11-23T15:31:42.928Z",
       "durationMs": 35.613207999999986,
       "outcome": "accepted"
+    },
+    {
+      "stageId": "apply",
+      "runId": null,
+      "operation": "start",
+      "checkedAt": "2026-11-23T16:25:54.995Z",
+      "durationMs": 35.42029099999996,
+      "outcome": "accepted"
     }
   ],
   "measurementJournal": {
