@@ -9,16 +9,23 @@ namespace OceanAngler
         public override Vector3 HookPosition=>hookAnchor==null?base.HookPosition:hookAnchor.position;
         Animator animator;
         string current;
-        readonly List<Material> materials=new List<Material>();
-        readonly List<Color> colors=new List<Color>();
-        readonly List<float> smoothness=new List<float>();
+        sealed class Binding
+        {public SkinnedMeshRenderer renderer;public int index;public Color color;public float smoothness;public readonly MaterialPropertyBlock block=new MaterialPropertyBlock();}
+        readonly List<Binding> bindings=new List<Binding>();
         bool hidden;
-        void Awake()
+        void Awake(){InitializePresentation();}
+        public void InitializePresentation()
         {
+            if(bindings.Count!=0)return;
             animator=GetComponentInChildren<Animator>();
             foreach(var renderer in GetComponentsInChildren<SkinnedMeshRenderer>(true))
-                foreach(var material in renderer.materials)
-                { materials.Add(material);colors.Add(material.color);smoothness.Add(material.GetFloat("_Smoothness")); }
+            {
+                var shared=renderer.sharedMaterials;
+                for(int i=0;i<shared.Length;i++)
+                {
+                    var binding=new Binding{renderer=renderer,index=i,color=shared[i].color,smoothness=shared[i].GetFloat("_Smoothness")};renderer.GetPropertyBlock(binding.block,i);bindings.Add(binding);Apply(binding,false);
+                }
+            }
         }
         void Update()
         {
@@ -31,9 +38,13 @@ namespace OceanAngler
         public override void SetSilhouette(bool value)
         {
             if(hidden==value)return;hidden=value;
-            for(int i=0;i<materials.Count;i++)
-            {materials[i].color=hidden?new Color(.008f,.022f,.028f):colors[i];materials[i].SetFloat("_Smoothness",hidden?0:smoothness[i]);}
+            foreach(var binding in bindings)Apply(binding,hidden);
         }
-        void OnDestroy(){foreach(var material in materials)if(material!=null)Destroy(material);}
+        static void Apply(Binding binding,bool silhouette)
+        {
+            binding.block.SetColor("_BaseColor",silhouette?new Color(.008f,.022f,.028f):binding.color);binding.block.SetFloat("_Smoothness",silhouette?0:binding.smoothness);binding.renderer.SetPropertyBlock(binding.block,binding.index);
+        }
+        public void ReleasePresentation(){foreach(var binding in bindings)if(binding.renderer!=null)binding.renderer.SetPropertyBlock(null,binding.index);bindings.Clear();hidden=false;}
+        void OnDestroy(){ReleasePresentation();}
     }
 }

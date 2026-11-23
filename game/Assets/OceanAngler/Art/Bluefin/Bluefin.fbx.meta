@@ -27,6 +27,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Bluefin_Oral
+    second: {fileID: 2100000, guid: f9d6cfaf2d0cd4c3ca0fd34c2e1832c2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Bluefin_Skin
     second: {fileID: 2100000, guid: e47981e13c4c14417bbeb2036c1272ab, type: 2}
   materials:

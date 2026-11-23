@@ -26,14 +26,15 @@ namespace OceanAngler.Editor
             skin.SetTexture("_MetallicGlossMap",Texture("Bluefin_MetallicSmoothness"));skin.SetFloat("_Smoothness",1);skin.EnableKeyword("_METALLICSPECGLOSSMAP");
             var fins=CreateMaterial("Bluefin_Fins",Color.white,.50f);fins.SetTexture("_BaseMap",Texture("Bluefin_Fin"));
             var gill=CreateMaterial("Bluefin_Gill",new Color(.10f,.18f,.17f),.42f);
+            var oral=CreateMaterial("Bluefin_Oral",new Color(.065f,.043f,.037f),.22f);
             var iris=CreateMaterial("Bluefin_Iris",new Color(.35f,.43f,.27f),.76f);
             var dark=CreateMaterial("Bluefin_Dark",new Color(.009f,.023f,.029f),.77f);
-            foreach(var material in new[]{skin,fins,gill,iris,dark})EditorUtility.SetDirty(material);
+            foreach(var material in new[]{skin,fins,gill,oral,iris,dark})EditorUtility.SetDirty(material);
             var model=(ModelImporter)AssetImporter.GetAtPath(Folder+"/Bluefin.fbx");
             model.animationType=ModelImporterAnimationType.Generic;model.avatarSetup=ModelImporterAvatarSetup.CreateFromThisModel;
             model.importAnimation=true;model.importVisibility=false;model.importBlendShapes=false;
             model.materialImportMode=ModelImporterMaterialImportMode.ImportStandard;
-            foreach(var material in new[]{skin,fins,gill,iris,dark})model.AddRemap(new AssetImporter.SourceAssetIdentifier(typeof(Material),material.name),material);
+            foreach(var material in new[]{skin,fins,gill,oral,iris,dark})model.AddRemap(new AssetImporter.SourceAssetIdentifier(typeof(Material),material.name),material);
             model.SaveAndReimport();
             var definitions=model.defaultClipAnimations;
             foreach(var clip in definitions)clip.loopTime=clip.name!="release"&&!clip.name.EndsWith("|release");

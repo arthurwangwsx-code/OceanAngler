@@ -50,11 +50,11 @@
       "acquiredAt": "2026-11-23",
       "status": "ART_REVIEW_PENDING",
       "path": "art/source/bluefin/Bluefin.blend",
-      "sha256": "57323eb62ee2aca6283c271fa2dce340b564ab9ff68f5a47dd7a8891b4b49826",
+      "sha256": "30732e8a3a2d3f5597533e1fc3d02d60b58b272a8289ce44934ae9bf0b3d2d06",
       "artifacts": [
         {
           "path": "art/source/bluefin/Bluefin.blend",
-          "sha256": "57323eb62ee2aca6283c271fa2dce340b564ab9ff68f5a47dd7a8891b4b49826"
+          "sha256": "30732e8a3a2d3f5597533e1fc3d02d60b58b272a8289ce44934ae9bf0b3d2d06"
         },
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin_BaseColor.png",
@@ -62,7 +62,7 @@
         },
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin_Fin.png",
-          "sha256": "41e1f50108dd69e51670f0ce4d12a656fcdca9044f81bb8ca3c97c231062dae7"
+          "sha256": "9c071552a49e3c5cb4a1dda5ada7d0761b54f43bb03d76d63bf0b6cc8605824c"
         },
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin_MetallicSmoothness.png",
@@ -78,7 +78,7 @@
         },
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin.fbx",
-          "sha256": "5620036aa67a6f67ae16137ae4c6eb736b69fd57e4c38c1991d814ca71fbe1c0"
+          "sha256": "31690a01436d3d4f5b0c86ef325e7917c104b6531e50fc4c9f43d7303db4d1c2"
         },
         {
           "path": "art/previews/bluefin/bite.png",
@@ -112,11 +112,15 @@
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin_Gill.mat",
           "sha256": "c99fa991fb1cb255780108d9920ebf6ee49f80a915989db5ff56eb8da5c69f27"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin_Oral.mat",
+          "sha256": "a22802b8d76234f2cb189adc8a9770ea6f044f28fcddaec160e9b2166773d158"
         }
       ],
       "note": "Original bluefin trevally mesh, UV, PBR maps, 12-bone rig, seven animation clips and three LODs. Scientific/visual/user/device acceptance remains open. No third-party photographs or models included.",
       "modifiedAt": "2026-11-24",
-      "modifications": "Integrated opercular body volume; body-matched gill-rim weights; softened roughness/normal/fin response; four views, bite pose and turntable regenerated. Human/science/device acceptance pending."
+      "modifications": "Independent moving lower lip; corrected mandibular hinge axis/direction; blended cheek bridge and inward oral/throat/cheek lining; per-strip fin UV and curved rays. Current source/Unity diagnostic views registered as bluefin-anatomy-previews; old bluefin views remain historical. Visual/science/user/device gates open."
     },
     {
       "id": "complete-spinning-rig-candidate",
@@ -575,6 +579,103 @@
           "sha256": "ac1da00b04fd9092b77153e3b3a1a27d2b01c39f1705748197a9d09d1180ffad"
         }
       ]
+    },
+    {
+      "id": "bluefin-anatomy-previews",
+      "author": "OceanAngler contributors",
+      "source": "tools/art_review_bluefin.py; game/Assets/OceanAngler/Editor/FishRenderReview.cs",
+      "license": "MIT",
+      "redistribution": true,
+      "status": "ART_REVIEW_PENDING",
+      "acquiredAt": "2026-11-24",
+      "provenance": "Original project-authored fish, raw Blender Cycles renders and isolated Unity Editor Metal RenderTexture captures. No third-party media or OS screenshots.",
+      "artifacts": [
+        {
+          "path": "art/previews/bluefin-anatomy/before-bite.png",
+          "sha256": "1763a91f09d01986863f69dbc38797b77a4589682d868c9a80f6496c6504e02e"
+        },
+        {
+          "path": "art/previews/bluefin-anatomy/bite-mouth-close.png",
+          "sha256": "8f5637e41d1883c5f646e2848072a84aca0d53e9eb4db2c21e8644d917c7ae8c"
+        },
+        {
+          "path": "art/previews/bluefin-anatomy/bite.png",
+          "sha256": "f32cb6635b907c2589d2d95e8c93ca4ed481638bf0b289a72ddabd0dfbfb4b2a"
+        },
+        {
+          "path": "art/previews/bluefin-anatomy/correct-first-bite.png",
+          "sha256": "59b855592e73f9cc8acdb9b72a6b9a62490d1cc94cb7d84e393447fa21d24363"
+        },
+        {
+          "path": "art/previews/bluefin-anatomy/correct-first-idle.png",
+          "sha256": "e041fe11b4565072018aeb7d9fcc5b78c91cde94997072fb97c8be6f33277a7b"
+        },
+        {
+          "path": "art/previews/bluefin-anatomy/fin-close.png",
+          "sha256": "f34145d63d8a64a6fd9d91284eba39c49577e065cbbb5a16f9c4030e080b3425"
+        },
+        {
+          "path": "art/previews/bluefin-anatomy/first-draw-bite.png",
+          "sha256": "59b855592e73f9cc8acdb9b72a6b9a62490d1cc94cb7d84e393447fa21d24363"
+        },
+        {
+          "path": "art/previews/bluefin-anatomy/first-draw-idle.png",
+          "sha256": "5fb710ff89e8d7b44ae08da1960cca5a29a77c6cb4af6c3ac126025ea17b1ce4"
+        },
+        {
+          "path": "art/previews/bluefin-anatomy/front.png",
+          "sha256": "d1083d835b63b373fd3c7a334db07948991bf35d4a6e9c40bafe2d5d86f4db84"
+        },
+        {
+          "path": "art/previews/bluefin-anatomy/gpu-bite-fin.png",
+          "sha256": "11cdc75b1e5601e5f0cbdf6c55360f12e46bd624ca06ee40cc820c3a451a1990"
+        },
+        {
+          "path": "art/previews/bluefin-anatomy/gpu-bite-mouth.png",
+          "sha256": "6e6ae4ae84d7fb1b6a6b791f7dabdcc23687dc3a7231af833f2b2b7219b6c9f4"
+        },
+        {
+          "path": "art/previews/bluefin-anatomy/gpu-bite-side.png",
+          "sha256": "59b855592e73f9cc8acdb9b72a6b9a62490d1cc94cb7d84e393447fa21d24363"
+        },
+        {
+          "path": "art/previews/bluefin-anatomy/gpu-idle-fin.png",
+          "sha256": "8b4164e29db7902ba9153d7cccc59becdfa994afc1da5860fa5cfc73bfdb8798"
+        },
+        {
+          "path": "art/previews/bluefin-anatomy/gpu-idle-mouth.png",
+          "sha256": "1fd92bd8e272b4c923f32482375d2236f4d2f23eaba115ab40b34db57cd081a9"
+        },
+        {
+          "path": "art/previews/bluefin-anatomy/gpu-idle-side.png",
+          "sha256": "e041fe11b4565072018aeb7d9fcc5b78c91cde94997072fb97c8be6f33277a7b"
+        },
+        {
+          "path": "art/previews/bluefin-anatomy/mouth-close.png",
+          "sha256": "7a1dd34816ccee4c73e01b99da0a07457c3416964f642ea7171a0a7af71f9225"
+        },
+        {
+          "path": "art/previews/bluefin-anatomy/side.png",
+          "sha256": "f1d340527d10422ee88badfc06da6b73a01582b66247e54a9ac721d169ba20c4"
+        },
+        {
+          "path": "art/previews/bluefin-anatomy/three-quarter.png",
+          "sha256": "3d5559a63bb3cdc67751f5d4845df94451bccdc0bdc567173e4a038e1c0c2114"
+        },
+        {
+          "path": "art/previews/bluefin-anatomy/top.png",
+          "sha256": "27d15e79983f4dc66f399eef2f02d4f8c912fd5edb14ed6486712cac0b224cc8"
+        },
+        {
+          "path": "art/previews/bluefin-anatomy/turntable.mp4",
+          "sha256": "085485476345f2b4d5ba27440429e3226da9f42c15a2767f56d757c7671872cd"
+        },
+        {
+          "path": "art/previews/bluefin-anatomy/wrong-direction-mouth.png",
+          "sha256": "57b5abb58a4f742b62a88930e1fcfaa56d90c0251499c92f6e22ab07d3b8e5c8"
+        }
+      ],
+      "note": "Current source6 static/bite/36-frame full-cycle turntable and final mouthgpu6 imported-prefab captures. before-bite, wrong-direction-mouth and first-draw images preserve historical defects; correct-first images are current unmodified first draws. All GPU images are isolated diagnostics without player UI; not actual iPhone/iPad evidence. A1-A3 pending."
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."

@@ -3,17 +3,18 @@
 import argparse, os, subprocess, json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-p=argparse.ArgumentParser();p.add_argument('action',choices=['prepare','tests','ios','mac','bluefin','spinning-rig','coral-bay','water-review']);p.add_argument('--build',type=int);p.add_argument('--label',default='a');p.add_argument('--test-platform',choices=['EditMode','PlayMode'],default='EditMode');a=p.parse_args()
+p=argparse.ArgumentParser();p.add_argument('action',choices=['prepare','tests','ios','mac','bluefin','spinning-rig','coral-bay','water-review','fish-review']);p.add_argument('--build',type=int);p.add_argument('--label',default='a');p.add_argument('--test-platform',choices=['EditMode','PlayMode'],default='EditMode');a=p.parse_args()
 editor=Path(os.environ.get('UNITY_EDITOR','/Applications/Unity/Hub/Editor/6000.3.29f1/Unity.app/Contents/MacOS/Unity'))
 local=ROOT/'.local';local.mkdir(exist_ok=True)
 if not editor.is_file():raise SystemExit('Unity Editor not found')
 env=dict(os.environ);log=local/(a.action+'.log')
-if a.action=='water-review':
+gpu_review=a.action in ('water-review','fish-review')
+if gpu_review:
  if not a.label.isalnum():raise SystemExit('simple review label required')
- folder=local/'water-runs'/a.label
+ folder=local/('water-runs' if a.action=='water-review' else 'fish-runs')/a.label
  if folder.exists():raise SystemExit('Use a fresh review label; evidence is immutable')
- folder.mkdir(parents=True);log=folder/'review.log';env['OCEAN_WATER_REVIEW_OUTPUT']=str(folder)
-cmd=[str(editor),'-batchmode']+([] if a.action=='water-review' else ['-nographics'])+['-projectPath',str(ROOT/'game'),'-logFile',str(log)]
+ folder.mkdir(parents=True);log=folder/'review.log';env['OCEAN_WATER_REVIEW_OUTPUT' if a.action=='water-review' else 'OCEAN_FISH_REVIEW_OUTPUT']=str(folder)
+cmd=[str(editor),'-batchmode']+([] if gpu_review else ['-nographics'])+['-projectPath',str(ROOT/'game'),'-logFile',str(log)]
 if a.action=='tests':
  cmd+=['-runTests','-testPlatform',a.test_platform,'-testResults',str(local/(a.test_platform.lower()+'.xml'))]
  if a.test_platform=='PlayMode':
@@ -22,8 +23,8 @@ if a.action=='tests':
   if save.exists():raise SystemExit('Use a fresh PlayMode label; test saves are isolated and retained')
   save.mkdir(parents=True);cmd+=['--ocean-save-root',str(save)]
 else:
- method='OceanAngler.Editor.WaterRenderReview.Capture' if a.action=='water-review' else 'OceanAngler.Editor.BayAssetBuilder.Prepare' if a.action=='coral-bay' else 'OceanAngler.Editor.SpinningRigAssetBuilder.Prepare' if a.action=='spinning-rig' else 'OceanAngler.Editor.BluefinAssetBuilder.Prepare' if a.action=='bluefin' else 'OceanAngler.Editor.BuildTools.'+('Prepare' if a.action=='prepare' else 'ExportMac' if a.action=='mac' else 'ExportIOS')
- cmd+=['-quit','-executeMethod',method]
+ method='OceanAngler.Editor.FishRenderReview.Capture' if a.action=='fish-review' else 'OceanAngler.Editor.WaterRenderReview.Capture' if a.action=='water-review' else 'OceanAngler.Editor.BayAssetBuilder.Prepare' if a.action=='coral-bay' else 'OceanAngler.Editor.SpinningRigAssetBuilder.Prepare' if a.action=='spinning-rig' else 'OceanAngler.Editor.BluefinAssetBuilder.Prepare' if a.action=='bluefin' else 'OceanAngler.Editor.BuildTools.'+('Prepare' if a.action=='prepare' else 'ExportMac' if a.action=='mac' else 'ExportIOS')
+ cmd+=([] if a.action=='fish-review' else ['-quit'])+['-executeMethod',method]
  if a.action=='mac':
   output=ROOT/'build/OceanAngler.app';output.parent.mkdir(exist_ok=True);env['OCEAN_MAC_OUTPUT']=str(output)
  if a.action=='ios':
@@ -38,7 +39,7 @@ try:fd=os.open(lock,os.O_CREAT|os.O_EXCL|os.O_WRONLY)
 except FileExistsError:raise SystemExit('Unity job already active; verify the running process')
 try:
  os.close(fd);result=subprocess.run(cmd,env=env,cwd=ROOT)
- if a.action=='water-review' and result.returncode==0:
+ if gpu_review and result.returncode==0:
   receipt=folder/'receipt.json'
   if not receipt.is_file() or json.loads(receipt.read_text()).get('status')!='PASS':raise SystemExit('GPU review receipt missing or failed')
  print(json.dumps({'action':a.action,'exitCode':result.returncode,'log':str(log)}));raise SystemExit(result.returncode)

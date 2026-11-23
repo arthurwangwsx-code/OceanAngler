@@ -23,6 +23,8 @@ Ready → Casting → Waiting → BiteWindow → Fighting → Landed → Release
 ## 渲染与性能目标
 URP Forward，受控单主光，当前候选4x MSAA；移动端质量等级仍待真机测量。不默认开启SSAO或大面积多层透明。首海湾仅水上观察启用按视图变化更新的平面倒影，最长边768像素、最多半分辨率；静态镜头复用，水下跳过，退出禁用时释放。水面读取opaque颜色和深度，renderer在AfterOpaques生成深度，早于透明水面。波面与片元细纹分开，远处细纹淡出，水深控制透射衰减；两种水上视图、两种水下视图的Editor离屏证据与实际原生/真机分别验收，见[水面修复记录](../reports/water-rendering.md)。透明鳍、水面overdraw、反射成本与质量分级继续做真机专项检查。
 
+英雄鱼表现采用按renderer子材质索引设置MaterialPropertyBlock，保存源颜色/平滑度，轮廓隐藏恢复和销毁清理不改共享资产、不克隆材质。它修复当前隔离Editor场景首次绘制的颜色异常；首图/重复图差值强制检查，不能以预热后图替换失败首图。相关renderer不使用SRP Batcher，移动端CPU/GPU成本待测，不能由工程检查认定性能达标。见[口部、鳍条与材质记录](../reports/bluefin-mouth-and-fins.md)。
+
 初始预算（非实测结果）：中档 A15 60fps，最低档 30fps；P95 帧耗分别 ≤16.7/33.3ms；峰值内存 <900MB；首场景冷启动 <8s；首包 <500MB。场景可见三角面初始 <500k、draw calls <150、主要阴影 <50m。真机 20 分钟含温升和后台恢复，记录 CPU/GPU、内存、掉帧，不用 Editor fps 代替。
 
 ## 测试与工具
