@@ -11,7 +11,8 @@
       "maxLength": 65,
       "strength": 1,
       "basePoints": 60,
-      "note": "先观察体型、鱼鳍与游动，再选择合适的拟饵。物种知识与分布仍待科学审校。"
+      "note": "先观察体型、鱼鳍与游动，再选择合适的拟饵。物种知识与分布仍待科学审校。",
+      "scientificName": "Caranx melampygus"
     },
     {
       "id": "snapper",
@@ -24,7 +25,8 @@
       "maxLength": 46,
       "strength": 0.85,
       "basePoints": 55,
-      "note": "先观察体型、鱼鳍与游动，再选择合适的拟饵。物种知识与分布仍待科学审校。"
+      "note": "先观察体型、鱼鳍与游动，再选择合适的拟饵。物种知识与分布仍待科学审校。",
+      "scientificName": "Acanthopagrus latus"
     },
     {
       "id": "grouper",
@@ -37,7 +39,8 @@
       "maxLength": 62,
       "strength": 1.1,
       "basePoints": 70,
-      "note": "先观察体型、鱼鳍与游动，再选择合适的拟饵。物种知识与分布仍待科学审校。"
+      "note": "先观察体型、鱼鳍与游动，再选择合适的拟饵。物种知识与分布仍待科学审校。",
+      "scientificName": "Epinephelus akaara"
     },
     {
       "id": "redsnapper",
@@ -50,7 +53,8 @@
       "maxLength": 52,
       "strength": 0.95,
       "basePoints": 65,
-      "note": "先观察体型、鱼鳍与游动，再选择合适的拟饵。物种知识与分布仍待科学审校。"
+      "note": "先观察体型、鱼鳍与游动，再选择合适的拟饵。物种知识与分布仍待科学审校。",
+      "scientificName": "Lutjanus campechanus"
     },
     {
       "id": "mackerel",
@@ -63,7 +67,8 @@
       "maxLength": 48,
       "strength": 1.05,
       "basePoints": 80,
-      "note": "先观察体型、鱼鳍与游动，再选择合适的拟饵。物种知识与分布仍待科学审校。"
+      "note": "先观察体型、鱼鳍与游动，再选择合适的拟饵。物种知识与分布仍待科学审校。",
+      "scientificName": "Scomber scombrus"
     },
     {
       "id": "skipjack",
@@ -76,7 +81,8 @@
       "maxLength": 85,
       "strength": 1.2,
       "basePoints": 90,
-      "note": "先观察体型、鱼鳍与游动，再选择合适的拟饵。物种知识与分布仍待科学审校。"
+      "note": "先观察体型、鱼鳍与游动，再选择合适的拟饵。物种知识与分布仍待科学审校。",
+      "scientificName": "Katsuwonus pelamis"
     },
     {
       "id": "mahi",
@@ -89,7 +95,8 @@
       "maxLength": 115,
       "strength": 1.3,
       "basePoints": 100,
-      "note": "先观察体型、鱼鳍与游动，再选择合适的拟饵。物种知识与分布仍待科学审校。"
+      "note": "先观察体型、鱼鳍与游动，再选择合适的拟饵。物种知识与分布仍待科学审校。",
+      "scientificName": "Coryphaena hippurus"
     },
     {
       "id": "yellowfin",
@@ -102,7 +109,8 @@
       "maxLength": 140,
       "strength": 1.4,
       "basePoints": 110,
-      "note": "先观察体型、鱼鳍与游动，再选择合适的拟饵。物种知识与分布仍待科学审校。"
+      "note": "先观察体型、鱼鳍与游动，再选择合适的拟饵。物种知识与分布仍待科学审校。",
+      "scientificName": "Thunnus albacares"
     },
     {
       "id": "bigeye",
@@ -115,7 +123,8 @@
       "maxLength": 150,
       "strength": 1.5,
       "basePoints": 130,
-      "note": "先观察体型、鱼鳍与游动，再选择合适的拟饵。物种知识与分布仍待科学审校。"
+      "note": "先观察体型、鱼鳍与游动，再选择合适的拟饵。物种知识与分布仍待科学审校。",
+      "scientificName": "Thunnus obesus"
     },
     {
       "id": "alfonsino",
@@ -128,7 +137,8 @@
       "maxLength": 48,
       "strength": 1.15,
       "basePoints": 100,
-      "note": "先观察体型、鱼鳍与游动，再选择合适的拟饵。物种知识与分布仍待科学审校。"
+      "note": "先观察体型、鱼鳍与游动，再选择合适的拟饵。物种知识与分布仍待科学审校。",
+      "scientificName": "Beryx splendens"
     },
     {
       "id": "cod",
@@ -141,7 +151,8 @@
       "maxLength": 100,
       "strength": 1.25,
       "basePoints": 115,
-      "note": "先观察体型、鱼鳍与游动，再选择合适的拟饵。物种知识与分布仍待科学审校。"
+      "note": "先观察体型、鱼鳍与游动，再选择合适的拟饵。物种知识与分布仍待科学审校。",
+      "scientificName": "Gadus macrocephalus"
     },
     {
       "id": "halibut",
@@ -154,7 +165,8 @@
       "maxLength": 140,
       "strength": 1.4,
       "basePoints": 125,
-      "note": "先观察体型、鱼鳍与游动，再选择合适的拟饵。物种知识与分布仍待科学审校。"
+      "note": "先观察体型、鱼鳍与游动，再选择合适的拟饵。物种知识与分布仍待科学审校。",
+      "scientificName": "Hippoglossus hippoglossus"
     }
   ],
   "habitats": [
@@ -465,6 +477,29 @@
       "target": 1800,
       "targetId": "",
       "name": "走进深蓝"
+    }
+  ],
+  "observations": [
+    {
+      "id": "green-turtle",
+      "name": "绿海龟",
+      "scientificName": "Chelonia mydas",
+      "habitatId": "bay",
+      "note": "仅供安静观察，不投饵、不挂钩。"
+    },
+    {
+      "id": "bottlenose-dolphin",
+      "name": "宽吻海豚",
+      "scientificName": "Tursiops truncatus",
+      "habitatId": "channel",
+      "note": "仅供安静观察，不投饵、不挂钩。"
+    },
+    {
+      "id": "whale-shark",
+      "name": "鲸鲨",
+      "scientificName": "Rhincodon typus",
+      "habitatId": "channel",
+      "note": "仅供安静观察，不投饵、不挂钩。"
     }
   ]
 }

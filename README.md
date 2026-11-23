@@ -21,6 +21,7 @@
 | 首条独立源模型 | [蓝鳍鲹候选及验收边界](reports/bluefin-art.md)、[源资产重建](art/source/bluefin/README.md) |
 | 第一套完整钓组候选 | [纺车钓组与验证边界](reports/spinning-rig-art.md)、[源资产重建](art/source/spinning-rig/README.md) |
 | 第一处独立海域候选 | [珊瑚海湾与验证边界](reports/coral-bay-art.md)、[海湾源资产重建](art/source/coral-bay/README.md) |
+| 物种资料和仅观察生物 | [学名、辨识与建模交接](docs/10-species-production.md) |
 
 需求合同在 ispec/specs，首批变更在 ispec/changes/product-technical-foundation；planning/backlog.csv 管理任务。仅此目录可写，不修改赛车和枪战项目。
 
@@ -45,3 +46,5 @@ Mac验证：`python3 tools/game.py mac`，再运行`python3 tools/runtime_smoke.
 build 2之后的开发源码补充了成功保存后的转向与放流游离，并恢复空载竿形；暂停、减弱动态、图鉴中断、快速再抛竿及写盘失败重试另行检查，见[放流表现证据](reports/fish-release-playmode.json)。这项后续源码尚未进入TestFlight，不能用现有build 2验收它的实际画面。
 
 后续源码还补充18项任务的完成指引及轻柔控线结果。26项Editor与7项PlayMode检查通过，包含初始装备20次模拟中完成全部任务、逐次重载、重复记录不加分和装备解锁，以及任务指引的逻辑排版；Mac编译通过。[任务检查](reports/task-journey.json)保留确定性模拟与实际试玩的边界，新任务界面尚未进入build 2。
+
+物种后续源码已有12候选学名、3个独立仅观察条目及可钓目录入口保护；[资料与目录检查](reports/species-catalog-checks.json)记录27项Editor、7项PlayMode与Mac编译通过。15条[科学参考](planning/species-references.json)供后续制作，科学人工审阅仍待完成；观察模型、场景出现和交互尚未实现，相关变化未进build 2。

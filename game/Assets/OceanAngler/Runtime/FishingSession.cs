@@ -19,6 +19,7 @@ namespace OceanAngler
         public void Cast(FishDefinition target, ProgressData data, ContentCatalog catalog, Random random, float power = 0.6f)
         {
             if (Paused || Phase != FishingPhase.Ready) return;
+            target=catalog.Fish(target?.id);
             if (target.habitatId != data.habitatId) throw new ArgumentException("Fish outside selected habitat");
             fish = target; Assisted = data.settings.assisted || !data.tutorialComplete;
             CastPower = Math.Max(0.3f, Math.Min(1, power));

@@ -24,6 +24,19 @@ for path in [r/'README.md',*list((r/'docs').glob('*.md'))]:
   if target.startswith(('https:','http:','#','mailto:')):continue
   check((path.parent/target.split('#')[0]).exists(),'broken link '+str(path.relative_to(r))+' -> '+target)
 a=json.loads((r/'art/asset-manifest.json').read_text());check(len({x['id'] for x in a['assets']})==len(a['assets']),'duplicate asset ID')
+catalog=json.loads((r/'game/Assets/OceanAngler/Resources/ContentCatalog.json').read_text())
+references=json.loads((r/'planning/species-references.json').read_text())['species']
+index={s['catalogId']:s for s in references};check(len(index)==len(references),'duplicate science reference ID')
+check({s['catalogId'] for s in references if s['role']=='catch-candidate'}=={s['id'] for s in catalog['fish']},'catch/science reference identity drift')
+check({s['catalogId'] for s in references if s['role']=='observation-only'}=={s['id'] for s in catalog['observations']},'observation/science reference identity drift')
+check(len(catalog['observations'])==3,'observation count drift')
+names=[s['scientificName'].casefold() for s in catalog['fish']+catalog['observations']]
+check(len(set(names))==len(names),'catch/observation scientific-name overlap')
+for species in catalog['fish']+catalog['observations']:
+ reference=index.get(species['id'],{})
+ check(species['scientificName']==reference.get('scientificName'),'scientific name drift '+species['id'])
+ check(bool(reference.get('sources')) and all(url.startswith('https://') for url in reference.get('sources',[])),'missing science source '+species['id'])
+ check(bool(reference.get('recognition')) and bool(reference.get('modelChecklist')),'incomplete production reference '+species['id'])
 for asset in a['assets']:
  for record in ([asset] if asset.get('path') else [])+asset.get('artifacts',[]):
   path=r/record['path'];check(path.is_file(),'missing registered asset '+record['path'])

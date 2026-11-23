@@ -30,8 +30,22 @@ namespace OceanAngler.Tests
         [Test] public void CompleteCatalogHasStarterLoadoutAndEighteenTasks()
         {
             Assert.AreEqual(12,catalog.fish.Length);Assert.AreEqual(3,catalog.habitats.Length);Assert.AreEqual(18,catalog.tasks.Length);
+            Assert.AreEqual(3,catalog.observations.Length);
             foreach(var pair in new[]{("rod",6),("reel",4),("line",4),("lure",6)})Assert.AreEqual(pair.Item2,catalog.gear.Count(g=>g.category==pair.Item1));
             new ProgressData().Validate(catalog);
+        }
+        [Test] public void ObservationSpeciesCannotBeHookedOrAwardedPoints()
+        {
+            var service=Service();
+            foreach(var observed in catalog.observations)
+            {
+                var session=new FishingSession();var data=new ProgressData{habitatId=observed.habitatId};
+                Assert.Throws<ArgumentException>(()=>session.Cast(new FishDefinition{id=observed.id,habitatId=observed.habitatId},data,catalog,new System.Random(1)));
+                Assert.That(session.Phase,Is.EqualTo(FishingPhase.Ready));Assert.That(session.Catch,Is.Null);
+                var record=Record();record.fishId=observed.id;record.habitatId=observed.habitatId;
+                Assert.Throws<ArgumentException>(()=>service.Settle(record));
+            }
+            Assert.That(Service().Data.totalPoints,Is.Zero);Assert.That(Service().Data.catches,Is.Empty);
         }
         [Test] public void MissedStandardBiteCanRetryWithoutLosingPoints()
         {
