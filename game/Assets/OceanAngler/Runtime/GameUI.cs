@@ -36,6 +36,10 @@ namespace OceanAngler
         public float ModelYaw { get; private set; }
         public float ModelZoom { get; private set; } = 1;
         public bool ModelPaused { get; private set; }
+        public bool InspectingGear=>page=="钓组预览";
+        public bool GearCloseup {get;private set;}
+        public bool GearReelingDemo {get;private set;}
+        public float GearYaw {get;private set;}
         static readonly Color Navy = new Color(.025f,.12f,.19f,.94f), Panel = new Color(.035f,.18f,.25f,.94f), Muted = new Color(.65f,.81f,.82f), Gold = new Color(1,.78f,.35f), Teal = new Color(.17f,.77f,.71f);
         void Start()
         {
@@ -69,7 +73,7 @@ namespace OceanAngler
                 progressText.text = "收鱼进度  " + Mathf.RoundToInt(game.Session.Progress*100) + "%";
                 if (charging && actionText != null) actionText.text = "松手抛竿  " + Mathf.RoundToInt(Mathf.Clamp01((Time.unscaledTime-chargeStart)/1.5f)*100) + "%";
             }
-            if (noticeText != null) noticeText.text = game.Notice ?? (game.RestReminder ? (Compact?"探索一会儿了，和家人休息一下吧。":"已经探索一会儿了，和家人休息一下吧。进度已保存。") : (Compact?"记录后放流 · 随时暂停":"鱼获记录后放流 · 不消耗鱼饵 · 随时可以暂停"));
+            if (noticeText != null) noticeText.text = InspectingGear?"转动钓组，看看收线过程。":game.Notice ?? (game.RestReminder ? (Compact?"探索一会儿了，和家人休息一下吧。":"已经探索一会儿了，和家人休息一下吧。进度已保存。") : (Compact?"记录后放流 · 随时暂停":"鱼获记录后放流 · 不消耗鱼饵 · 随时可以暂停"));
         }
         void Rebuild()
         {
@@ -85,6 +89,7 @@ namespace OceanAngler
                 case "图鉴": BuildJournal(); break;
                 case "鱼类详情": BuildCompactInspect(); break;
                 case "钓具": BuildGear(); break;
+                case "钓组预览": BuildGearPreview(); break;
                 case "任务": BuildTasks(); break;
                 case "设置": BuildSettings(); break;
                 case "家长验证": BuildParentGate(); break;
@@ -98,6 +103,7 @@ namespace OceanAngler
             if (target != "出海") game.Pause(true);
             // 返回钓鱼页仍显示继续界面，避免导航触发自动输入。
             page=target; focusedFish=target=="图鉴"?(selectedFish??game.Content.fish[0].id):null; dirty=true;
+            if(target!="钓组预览")GearReelingDemo=false;
         }
         void BuildFishing()
         {
@@ -187,12 +193,13 @@ namespace OceanAngler
             string[] categories={"rod","reel","line","lure"};string[] labels={"鱼竿","卷线器","鱼线","拟饵"};
             float tabWidth=(Compact?Width-52:Width*.73f-44)/4;
             for(int i=0;i<4;i++){string tab=categories[i];Button(panel,labels[i],22+i*tabWidth,18,tabWidth-10,48,()=>{gearTab=tab;dirty=true;},gearTab==tab?Teal:Navy);}
+            Button(panel,"观察入门钓组",22,78,-44,48,()=>Navigate("钓组预览"),Navy);
             var items=game.Content.gear.Where(g=>g.category==gearTab).ToArray();
             for(int i=0;i<items.Length;i++)
             {
                 var g=items[i];bool unlocked=game.Progress.Data.totalPoints>=g.unlockPoints;
                 bool equipped=new[]{game.Progress.Data.rodId,game.Progress.Data.reelId,game.Progress.Data.lineId,game.Progress.Data.lureId}.Contains(g.id);
-                var b=Button(panel,g.name+(equipped?"  已装备":unlocked?"  装备":"  "+g.unlockPoints+"分解锁")+"\n"+g.description,22,90+i*72,-44,64,()=>game.SelectGear(g.id),equipped?Teal:Navy);
+                var b=Button(panel,g.name+(equipped?"  已装备":unlocked?"  装备":"  "+g.unlockPoints+"分解锁")+"\n"+g.description,22,142+i*72,-44,64,()=>game.SelectGear(g.id),equipped?Teal:Navy);
                 b.interactable=unlocked&&game.Session.Phase==FishingPhase.Ready;b.GetComponentInChildren<Text>().fontSize=19;
             }
             if(!Compact)

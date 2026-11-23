@@ -1,0 +1,142 @@
+{
+  "status": "CANDIDATE",
+  "units": "metres",
+  "length": 2.35,
+  "lods": {
+    "Rod_LOD0": 24844,
+    "Rod_LOD1": 11178,
+    "Rod_LOD2": 4967,
+    "Housing_LOD0": 4118,
+    "Housing_LOD1": 1853,
+    "Housing_LOD2": 823,
+    "Rotor_LOD0": 1950,
+    "Rotor_LOD1": 876,
+    "Rotor_LOD2": 390,
+    "Spool_LOD0": 7472,
+    "Spool_LOD1": 3362,
+    "Spool_LOD2": 1494,
+    "Crank_LOD0": 1156,
+    "Crank_LOD1": 520,
+    "Crank_LOD2": 230,
+    "Lure_LOD0": 3228,
+    "Lure_LOD1": 1452,
+    "Lure_LOD2": 644,
+    "BailWire_LOD0": 652,
+    "BailWire_LOD1": 292,
+    "BailWire_LOD2": 130
+  },
+  "bones": [
+    "Butt",
+    "RodBone0",
+    "RodBone1",
+    "RodBone2",
+    "RodBone3",
+    "RodBone4",
+    "RodBone5",
+    "RodBone6",
+    "RodBone7",
+    "RodBone8",
+    "RodBone9"
+  ],
+  "guides": [
+    {
+      "name": "Guide0",
+      "bone": "RodBone1",
+      "position": [
+        0,
+        -0.053,
+        0.72
+      ],
+      "radius": 0.028
+    },
+    {
+      "name": "Guide1",
+      "bone": "RodBone3",
+      "position": [
+        0,
+        -0.038,
+        1.03
+      ],
+      "radius": 0.022
+    },
+    {
+      "name": "Guide2",
+      "bone": "RodBone4",
+      "position": [
+        0,
+        -0.027,
+        1.31
+      ],
+      "radius": 0.016
+    },
+    {
+      "name": "Guide3",
+      "bone": "RodBone5",
+      "position": [
+        0,
+        -0.02,
+        1.55
+      ],
+      "radius": 0.011
+    },
+    {
+      "name": "Guide4",
+      "bone": "RodBone7",
+      "position": [
+        0,
+        -0.015,
+        1.76
+      ],
+      "radius": 0.0085
+    },
+    {
+      "name": "Guide5",
+      "bone": "RodBone8",
+      "position": [
+        0,
+        -0.012,
+        1.94
+      ],
+      "radius": 0.0065
+    },
+    {
+      "name": "Guide6",
+      "bone": "RodBone9",
+      "position": [
+        0,
+        -0.009,
+        2.1
+      ],
+      "radius": 0.005
+    },
+    {
+      "name": "Guide7",
+      "bone": "RodBone9",
+      "position": [
+        0,
+        -0.007,
+        2.23
+      ],
+      "radius": 0.004
+    },
+    {
+      "name": "Guide8",
+      "bone": "RodBone9",
+      "position": [
+        0,
+        -0.005,
+        2.35
+      ],
+      "radius": 0.003
+    }
+  ],
+  "pivots": [
+    "RotorPivot",
+    "SpoolPivot",
+    "CrankPivot",
+    "BailPivot",
+    "LurePivot"
+  ],
+  "artAcceptance": "NOT_ACCEPTED",
+  "source": "tools/art_spinning_rig.py"
+}

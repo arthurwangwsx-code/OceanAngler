@@ -3,14 +3,14 @@
 import argparse, os, subprocess, json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-p=argparse.ArgumentParser();p.add_argument('action',choices=['prepare','tests','ios','mac','bluefin']);p.add_argument('--build',type=int);p.add_argument('--label',default='a');a=p.parse_args()
+p=argparse.ArgumentParser();p.add_argument('action',choices=['prepare','tests','ios','mac','bluefin','spinning-rig']);p.add_argument('--build',type=int);p.add_argument('--label',default='a');p.add_argument('--test-platform',choices=['EditMode','PlayMode'],default='EditMode');a=p.parse_args()
 editor=Path(os.environ.get('UNITY_EDITOR','/Applications/Unity/Hub/Editor/6000.3.29f1/Unity.app/Contents/MacOS/Unity'))
 local=ROOT/'.local';local.mkdir(exist_ok=True)
 if not editor.is_file():raise SystemExit('Unity Editor not found')
 env=dict(os.environ);cmd=[str(editor),'-batchmode','-nographics','-projectPath',str(ROOT/'game'),'-logFile',str(local/(a.action+'.log'))]
-if a.action=='tests':cmd+=['-runTests','-testPlatform','EditMode','-testResults',str(local/'editmode.xml')]
+if a.action=='tests':cmd+=['-runTests','-testPlatform',a.test_platform,'-testResults',str(local/(a.test_platform.lower()+'.xml'))]
 else:
- method='OceanAngler.Editor.BluefinAssetBuilder.Prepare' if a.action=='bluefin' else 'OceanAngler.Editor.BuildTools.'+('Prepare' if a.action=='prepare' else 'ExportMac' if a.action=='mac' else 'ExportIOS')
+ method='OceanAngler.Editor.SpinningRigAssetBuilder.Prepare' if a.action=='spinning-rig' else 'OceanAngler.Editor.BluefinAssetBuilder.Prepare' if a.action=='bluefin' else 'OceanAngler.Editor.BuildTools.'+('Prepare' if a.action=='prepare' else 'ExportMac' if a.action=='mac' else 'ExportIOS')
  cmd+=['-quit','-executeMethod',method]
  if a.action=='mac':
   output=ROOT/'build/OceanAngler.app';output.parent.mkdir(exist_ok=True);env['OCEAN_MAC_OUTPUT']=str(output)
