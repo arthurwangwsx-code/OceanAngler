@@ -579,6 +579,36 @@
       "startedAt": "2026-11-23T13:57:58.140Z",
       "executable": "python3",
       "commandDigest": "d89602c770c16a35b6c5da9a9da4ae967807390aa462f4349604d0463de12f51"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "d961fdc2-66bc-497f-89d3-2c0ca5fb03b2",
+      "startedAt": "2026-11-23T13:59:43.423Z",
+      "executable": "python3",
+      "commandDigest": "ea9b61d11ad59c13aa489a262817a46a6e9c26f9cb3dd369c027b072a9470ee0"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "5d511c46-c850-4409-9bcf-8410ac4f89e4",
+      "startedAt": "2026-11-23T13:59:57.614Z",
+      "executable": "python3",
+      "commandDigest": "2fe4199980fe639f594b789eca776e01256fde423d48bf8d50cadf0b53366325"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "lint",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "2ef86cad-3dcc-4cb2-9cbd-7a3e5d713963",
+      "startedAt": "2026-11-23T14:02:29.295Z",
+      "executable": "python3",
+      "commandDigest": "d89602c770c16a35b6c5da9a9da4ae967807390aa462f4349604d0463de12f51"
     }
   ],
   "runMeasurements": [
@@ -1298,6 +1328,51 @@
       "startedAt": "2026-11-23T13:57:58.140Z",
       "finishedAt": "2026-11-23T13:57:58.393Z",
       "durationMs": 199.41883300000018,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null
+    },
+    {
+      "id": "d961fdc2-66bc-497f-89d3-2c0ca5fb03b2",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "ea9b61d11ad59c13aa489a262817a46a6e9c26f9cb3dd369c027b072a9470ee0",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-23T13:59:43.423Z",
+      "finishedAt": "2026-11-23T13:59:55.513Z",
+      "durationMs": 12048.921625,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null
+    },
+    {
+      "id": "5d511c46-c850-4409-9bcf-8410ac4f89e4",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "2fe4199980fe639f594b789eca776e01256fde423d48bf8d50cadf0b53366325",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-23T13:59:57.614Z",
+      "finishedAt": "2026-11-23T14:00:33.950Z",
+      "durationMs": 36254.206709,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null
+    },
+    {
+      "id": "2ef86cad-3dcc-4cb2-9cbd-7a3e5d713963",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d89602c770c16a35b6c5da9a9da4ae967807390aa462f4349604d0463de12f51",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-23T14:02:29.295Z",
+      "finishedAt": "2026-11-23T14:02:29.496Z",
+      "durationMs": 170.8386660000001,
       "exitCode": 0,
       "signal": null,
       "errorCode": null

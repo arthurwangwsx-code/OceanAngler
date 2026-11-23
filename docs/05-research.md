@@ -18,7 +18,7 @@ ToyRacer：/Users/ai/Documents/Codex/2026-11-22/3d-1-a-ios-b-3d。
 TacticalFPS：/Users/ai/Documents/Codex/2026-11-23/3d-1-a-cs-b-c。
 已读 AGENTS、README、tooling/README、Packages/manifest 和 App Store Connect 工具源码。可参考模块隔离、每 build 的源码/原生摘要、本人内部组和签名校验；不复制 checkout、不触碰其 WIP、不使用其 app ID。ASC实现借鉴其安全边界；当前tools/asc.py已独立实现并只接受显式环境配置，不发布旧项目工具源码、密钥、测试者或发布产物。
 
-本机核实 Xcode27.2、Unity6000.3.29f1、xcodegen/gh/ispec 存在，Apple 分发身份有效。gh 当前 CLI token 失效，但连接器可返回当前 GitHub 用户；不把连接器身份查询当成创建仓库的写权限。
+本机核实 Xcode27.2、Unity6000.3.29f1、xcodegen/gh/ispec 存在，Apple 分发身份有效。初期gh登录问题已解除；已核实身份并按本项目授权公开OceanAngler仓库。2026-11-23移动布局与发行源码已推送master，CI通过；后续仍逐次核实目标remote和待公开范围，不把身份查询当成任意仓库的写授权。
 
 ## 资源候选原则
 Blender 原创鱼为主；CC0 环境贴图可从 Poly Haven 等官方许可页逐项确认后采用；付费鱼模型只作为成本比较，当前未购买/下载/集成。[Poly Haven 官方资产许可](https://polyhaven.com/license)核实为CC0，仍需对实际采用的具体文件记录来源和哈希。没有将参考网页截图或游戏模型写入仓库。

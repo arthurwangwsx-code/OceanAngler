@@ -11,10 +11,12 @@
 - iOS图标为本项目原创几何绘制；独立App Store描述文件已安装，复用现有分发私钥，未创建/撤销证书。凭据/描述文件仅存.local和系统描述文件目录。
 
 ## 未完成
-Apple处理与本人组、TestFlight实际安装仍须独立验证。真实UIScreen比例、触觉、刘海/旋转、触控可读性、设备20分钟、儿童试玩及成品美术未由以上测试证明。
+TestFlight实际安装仍须独立验证。真实UIScreen比例、触觉、刘海/旋转、触控可读性、设备20分钟、儿童试玩及成品美术未由以上测试证明。
 
 ## 首次iOS导出核查
 Unity首次切换iOS时自动新增静态批处理配置，导出虽成功，源码冻结检查按预期拒绝继续。未将该产物用于归档或上传；保留ios-1-a作为未冻结证据。核对变更只有平台批处理默认值后提交，再使用新目录ios-1-b重新导出。已检查UnityFramework隐私清单和图标目录，未改写Unity提供的API原因声明。
 
 ## 首包归档与上传
 源码b7719094902486ebc53856098e53d766aa614288已冻结并成功导出；签名归档与严格签名校验通过。归档App为com.arthur.OceanAngler、0.1.0 (1)，最低iOS17，设备族iPhone/iPad，没有UsageDescription权限键，内含UnityFramework隐私清单。本地内部专用IPA导出通过，90,803,253字节。2026-11-23 13:56:55 UTC，Xcode报告Upload succeeded；这仅证明上传传输完成，Apple处理和本人组以实时查询为准。原始签名和传输日志仅存.local。
+
+2026-11-23 14:00 UTC，Apple读回VALID、INTERNAL_ONLY、READY_FOR_BETA_TESTING；测试说明已保存，OceanAngler Personal为唯一可访问组，公开链接关闭，成员仅核实的ACCOUNT_HOLDER一人。设备安装仍NOT_RUN，已请求本人在TestFlight安装打开后回报；未启用手机镜像首次设置或通知转发。脱敏回执见testflight-0.1.0-1.json。
