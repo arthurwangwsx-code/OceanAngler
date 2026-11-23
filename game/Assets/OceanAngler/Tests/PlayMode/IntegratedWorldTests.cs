@@ -73,6 +73,9 @@ namespace OceanAngler.Tests
             Assert.That(school.gameObject.activeSelf,Is.True);Assert.That(Vector3.Distance(priorSchool[0],school.Members[0].transform.localPosition),Is.GreaterThan(.01f));
             CollectionAssert.AreEqual(population,school.Members.Select(f=>f.GetInstanceID()).ToArray());
             game.Cast(.5f);Assert.That(game.Session.Phase,Is.EqualTo(FishingPhase.Casting));Assert.That(game.Reeling,Is.False);
+            var activeCatch=game.Session.Catch;int redundantCastSignals=0;Action countCastSignal=()=>redundantCastSignals++;
+            game.Changed+=countCastSignal;game.Cast(1);game.Changed-=countCastSignal;
+            Assert.That(game.Session.Catch,Is.SameAs(activeCatch));Assert.That(game.Session.CastPower,Is.EqualTo(.5f));Assert.That(redundantCastSignals,Is.Zero);
             for(int i=0;i<600&&game.Session.Phase!=FishingPhase.Bite;i++)game.Session.Tick(1f/30,false);
             Assert.That(game.Session.Phase,Is.EqualTo(FishingPhase.Bite));game.Strike();game.HoldReel(true);Assert.That(game.Reeling,Is.True);yield return null;yield return null;
             Click("钓具");yield return null;yield return null;Click("观察入门钓组");yield return null;yield return null;

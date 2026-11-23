@@ -38,3 +38,5 @@ ContentCatalog.json作为首批数据真值，由运行时和测试共享校验�
 首海湾环境表现：BayFishSchool只维护三条现有蓝鳍鲹实例，SchoolMotion以30Hz固定步长组合引导路径、邻近方向/聚合与分离。生成器从导入网格推导净空体积，独立检查全部三LOD；运行时不重复扫描网格。非鉴赏状态复用实例，暂停/减弱动态停住，模型鉴赏隐藏；碰撞器关闭，不进入捕获/积分。OceanWorld.TargetFish提供明确的当前可钓/鉴赏目标。该环境层不代表已完成拟饵感知AI、保护观察生物或多物种生态；额外Animator/蒙皮/PropertyBlock成本待真机，见[鱼群记录](../reports/bay-school.md)。
 
 钓鱼表现：FishingEncounter消费FishingSession.PhaseProgress与暂停后的表现时钟，生成固定抛投/接近/控线路径；没有改变模拟状态或存档。AuthoredSpinningRig在LateUpdate读取活动目标的HookPosition，拟饵鼻端与目标对齐，Bite/Fighting/Landed连接独立于收线输入。初始化和表现步显式、幂等，可由Editor调用同一生产入口。当前路径及有限蒙皮/环境采样仅验证首个蓝鳍鲹候选，不代表感知AI、连续碰撞、所有物种或实际触控，见[阶段表现](../reports/fishing-encounter.md)。
+
+遭遇选择：EncounterSelection是GameController与成长模拟唯一共享选择路径，维持当前海域内等概率和教程固定；观察目录不参加选择，非Ready抛竿在入口返回。1000种子路线通过同一FishingSession、ProgressService/SaveStore及每次重新加载测量，不能以测试自行选定新鱼代替随机遭遇，也不以规则秒数推断真实儿童时间。稀有度/拟饵偏好尚未实现，见[随机成长基线](../reports/encounter-balance.md)。

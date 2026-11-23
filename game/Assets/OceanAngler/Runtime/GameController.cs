@@ -1,6 +1,5 @@
 using System;
 using System.IO;
-using System.Linq;
 using UnityEngine;
 namespace OceanAngler
 {
@@ -35,9 +34,8 @@ namespace OceanAngler
         }
         public void Cast(float power)
         {
-            if (Progress.RequiresRecovery || Session.Paused) return;
-            var pool = Content.fish.Where(f => f.habitatId == Progress.Data.habitatId).ToArray();
-            var target = pool[Progress.Data.tutorialComplete ? random.Next(pool.Length) : 0];
+            if (Progress.RequiresRecovery || Session.Paused || Session.Phase!=FishingPhase.Ready) return;
+            var target = EncounterSelection.Choose(Content,Progress.Data,random);
             Session.Cast(target, Progress.Data, Content, random, power); Notice = null; Changed?.Invoke();
         }
         public void Strike() { Session.Strike(); Changed?.Invoke(); }

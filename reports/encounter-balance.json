@@ -1,0 +1,126 @@
+{
+  "date": "2026-11-24",
+  "sourceBaseCommit": "af6c823667d2709a29af4bfad7f4200f03bf14b5",
+  "testedSourceDigest": "17f9efeceedf356f69258b842949d812e13d8f29b0548da82583bf1f4d312970",
+  "implementation": "IMPLEMENTED_SHARED_SELECTION_AND_REENTRY_GUARD",
+  "overallProductAcceptance": "PARTIAL",
+  "balanceAcceptance": "PARTIAL_PENDING_HUMAN_PLAYTEST",
+  "scope": "Seeded Editor rule simulation with actual production selection, settlement and disk reload; not UI/device/child evidence",
+  "probabilityPolicy": "UNCHANGED_UNIFORM_WITHIN_HABITAT_AFTER_FIXED_TUTORIAL",
+  "seeds": {
+    "first": 0,
+    "last": 999
+  },
+  "maximumCatchesPerJourney": 120,
+  "simulation": {
+    "journeys": 1000,
+    "completed": 1000,
+    "unfinished": 0,
+    "twentyCatchFullCollections": 251,
+    "twentyCatchAllTasks": 251,
+    "firstCatchSeconds": {
+      "minimum": 20.10003662109375,
+      "median": 20.10003662109375,
+      "p95": 20.10003662109375,
+      "maximum": 20.10003662109375
+    },
+    "channelUnlockCatch": {
+      "minimum": 4.0,
+      "median": 6.0,
+      "p95": 7.0,
+      "maximum": 8.0
+    },
+    "slopeUnlockCatch": {
+      "minimum": 8.0,
+      "median": 10.0,
+      "p95": 13.0,
+      "maximum": 16.0
+    },
+    "fullCollectionCatch": {
+      "minimum": 13.0,
+      "median": 24.0,
+      "p95": 37.0,
+      "maximum": 62.0
+    },
+    "allTasksCatch": {
+      "minimum": 20.0,
+      "median": 24.0,
+      "p95": 37.0,
+      "maximum": 62.0
+    },
+    "activeSeconds": {
+      "minimum": 474.23291015625,
+      "median": 586.1995849609375,
+      "p95": 912.7318725585938,
+      "maximum": 1485.165283203125
+    },
+    "policy": "Stay in each habitat until all four species recorded, then move to next unlocked habitat; standard after tutorial, starter equipment, automatic strike and tension below 0.65; no real UI/travel/pause time"
+  },
+  "twentyCatchCompletionRate": 0.251,
+  "editorTests": {
+    "result": "Passed",
+    "total": "41",
+    "passed": "41",
+    "failed": "0",
+    "end-time": "2026-11-23 21:49:17Z"
+  },
+  "editorMeasurement": "bafba1ac-15cd-4bb9-b6f2-054878d01be9",
+  "playModeTests": {
+    "result": "Passed",
+    "total": "8",
+    "passed": "8",
+    "failed": "0",
+    "end-time": "2026-11-23 21:50:28Z"
+  },
+  "playModeMeasurement": "14174253-c6d0-4c70-b551-7afb43be14f6",
+  "macCompilation": {
+    "status": "PASS",
+    "measurement": "45459ee8-4c50-4898-b8ea-3ae2501a0265"
+  },
+  "repeatCastProtection": {
+    "status": "PASS_HEADLESS_SCENE",
+    "unchangedCatch": true,
+    "unchangedCastPower": true,
+    "noChangedEvent": true
+  },
+  "nativeWindow": {
+    "status": "NOT_RUN_CURRENT_SOURCE",
+    "desktop": "BLOCKED_MAC_LOCKED_CONFIRMED_BY_CUA",
+    "newLaunch": false
+  },
+  "testFlight": {
+    "build": "3",
+    "sourceCommit": "05c8cc7cd5abf747e6a174cc154e4f575e35e422",
+    "includesThisChange": false,
+    "installation": "NOT_RUN"
+  },
+  "visualAcceptance": "NOT_REQUALIFIED_THIS_TURN",
+  "childPlaytest": "NOT_RUN",
+  "physicalDevices": "NOT_RUN",
+  "knownOpen": [
+    "Random collection long tail; requires human pacing review",
+    "No rarity/depth/bait species-affinity selection yet",
+    "Uniform sample is not all-seed or iOS deterministic proof",
+    "Three-minute child first fish and twenty actual touch cycles",
+    "Complete 3D assets, protected observation encounters, A1-A3 and 20-minute physical devices"
+  ],
+  "metrics": {
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "binding": "VERIFIED",
+    "independentReceiptAudit": "INCOMPLETE",
+    "verifiedMeasurements": [
+      "bafba1ac-15cd-4bb9-b6f2-054878d01be9",
+      "14174253-c6d0-4c70-b551-7afb43be14f6",
+      "45459ee8-4c50-4898-b8ea-3ae2501a0265",
+      "19c8389f-cb52-47b5-9a56-8b268a86288e",
+      "a5e9e493-52a3-439b-9c45-e5a70c7b2c98",
+      "977a1c8c-abbf-4276-a0de-97291a64e8fd"
+    ]
+  },
+  "sourceChecks": {
+    "status": "PASS",
+    "requirements": 12,
+    "tasks": 14,
+    "publicationFiles": 533
+  }
+}

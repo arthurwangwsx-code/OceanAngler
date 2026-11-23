@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-23T21:42:04.126Z",
+  "generatedAt": "2026-11-23T21:53:21.303Z",
   "source": {
     "change": "product-technical-foundation",
     "cliVersion": "1.0.20",
@@ -26,16 +26,16 @@
     "firstAttemptPassedCount": 1,
     "firstAttemptEvaluatedCount": 1,
     "firstAttemptPassRate": 1,
-    "elapsedMs": 65688399,
-    "observedStepWallMs": 32086845,
+    "elapsedMs": 66365576,
+    "observedStepWallMs": 32764022,
     "unattributedMs": 33601554,
-    "unattributedRate": 0.5115295015791145,
-    "commandMeasurementCount": 431,
-    "commandSucceededCount": 389,
+    "unattributedRate": 0.5063099881782085,
+    "commandMeasurementCount": 437,
+    "commandSucceededCount": 395,
     "commandFailedCount": 42,
-    "commandSuccessRate": 0.9025522041763341,
-    "commandDurationMs": 8735304.039373998,
-    "gateCheckCount": 24,
+    "commandSuccessRate": 0.9038901601830663,
+    "commandDurationMs": 8901679.313206997,
+    "gateCheckCount": 25,
     "repairCount": 0,
     "targetMs": 3600000,
     "targetMet": null,
@@ -52,7 +52,7 @@
     },
     "entryChecks": {
       "status": "complete",
-      "recorded": 24,
+      "recorded": 25,
       "expectedAtLeast": 2
     },
     "runAttribution": {
@@ -62,7 +62,7 @@
     },
     "commandMeasurements": {
       "status": "partial",
-      "recorded": 431
+      "recorded": 437
     },
     "waitingTime": {
       "status": "unavailable"
@@ -78,14 +78,14 @@
   "runs": [],
   "runMetrics": {
     "version": 1,
-    "generatedAt": "2026-11-23T21:42:04.126Z",
+    "generatedAt": "2026-11-23T21:53:21.303Z",
     "runs": [],
     "unattributed": {
       "unboundAttempts": 2,
       "unknownRunAttempts": 0,
-      "unboundCommands": 431,
+      "unboundCommands": 437,
       "unknownRunCommands": 0,
-      "unboundGateChecks": 24,
+      "unboundGateChecks": 25,
       "unknownRunGateChecks": 0,
       "repairsWithoutRunBinding": 0,
       "unknownRunRepairs": 0
@@ -6556,6 +6556,96 @@
       "exitCode": 0,
       "signal": null,
       "errorCode": null
+    },
+    {
+      "id": "bafba1ac-15cd-4bb9-b6f2-054878d01be9",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "5f049fb6c545b54fa0de1247430f9ddcb14c52db16cb99cc14fe3cd0b59d8f44",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-23T21:47:15.639Z",
+      "finishedAt": "2026-11-23T21:49:18.964Z",
+      "durationMs": 123295.866459,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null
+    },
+    {
+      "id": "14174253-c6d0-4c70-b551-7afb43be14f6",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "9c1c3a0632dcd5b3c92277605c084c6ea3bc18cdfb922c3018c2a57482ceafcd",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-23T21:50:07.898Z",
+      "finishedAt": "2026-11-23T21:50:29.410Z",
+      "durationMs": 21480.868042,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null
+    },
+    {
+      "id": "45459ee8-4c50-4898-b8ea-3ae2501a0265",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "6cecf2c346e385e5462c5ecf2228f5f55c1ffae6caa66a187b499bd79e8e7bbd",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-23T21:50:40.365Z",
+      "finishedAt": "2026-11-23T21:51:01.532Z",
+      "durationMs": 21144.526291,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null
+    },
+    {
+      "id": "19c8389f-cb52-47b5-9a56-8b268a86288e",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "1b9b750d007c851f920bb86ccb95b6c8d0649e1d11d26d4708a2736b0478955e",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-23T21:53:19.622Z",
+      "finishedAt": "2026-11-23T21:53:19.838Z",
+      "durationMs": 187.69020800000004,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null
+    },
+    {
+      "id": "a5e9e493-52a3-439b-9c45-e5a70c7b2c98",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d89602c770c16a35b6c5da9a9da4ae967807390aa462f4349604d0463de12f51",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-23T21:53:20.222Z",
+      "finishedAt": "2026-11-23T21:53:20.483Z",
+      "durationMs": 242.75599999999997,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null
+    },
+    {
+      "id": "977a1c8c-abbf-4276-a0de-97291a64e8fd",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d29ec294677fa386dfb5a9b067b7fb4bad93bfd4ddc360865ef72ace8956211f",
+      "category": "lint",
+      "executable": "git",
+      "startedAt": "2026-11-23T21:53:20.873Z",
+      "finishedAt": "2026-11-23T21:53:20.917Z",
+      "durationMs": 23.566832999999974,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null
     }
   ],
   "measurementAudit": {
@@ -6563,8 +6653,8 @@
     "scope": "declared-command-receipts-only",
     "runId": null,
     "complete": false,
-    "registered": 429,
-    "completed": 431,
+    "registered": 435,
+    "completed": 437,
     "unfinishedIds": [],
     "legacyMeasurementIds": [],
     "legacyPolicy": "unverified-format-without-start-records-not-reconstructed",
@@ -8303,6 +8393,30 @@
       {
         "code": "receipt-missing-or-invalid",
         "measurementId": "c3cf4047-1572-4332-81f1-2b55592d279d"
+      },
+      {
+        "code": "receipt-missing-or-invalid",
+        "measurementId": "bafba1ac-15cd-4bb9-b6f2-054878d01be9"
+      },
+      {
+        "code": "receipt-missing-or-invalid",
+        "measurementId": "14174253-c6d0-4c70-b551-7afb43be14f6"
+      },
+      {
+        "code": "receipt-missing-or-invalid",
+        "measurementId": "45459ee8-4c50-4898-b8ea-3ae2501a0265"
+      },
+      {
+        "code": "receipt-missing-or-invalid",
+        "measurementId": "19c8389f-cb52-47b5-9a56-8b268a86288e"
+      },
+      {
+        "code": "receipt-missing-or-invalid",
+        "measurementId": "a5e9e493-52a3-439b-9c45-e5a70c7b2c98"
+      },
+      {
+        "code": "receipt-missing-or-invalid",
+        "measurementId": "977a1c8c-abbf-4276-a0de-97291a64e8fd"
       }
     ],
     "businessAcceptance": "not-evaluated",
@@ -8317,19 +8431,19 @@
   "commands": [
     {
       "category": "test",
-      "count": 120,
-      "succeededCount": 101,
+      "count": 122,
+      "succeededCount": 103,
       "failedCount": 19,
-      "successRate": 0.8416666666666667,
-      "durationMs": 947917.1824530002
+      "successRate": 0.8442622950819673,
+      "durationMs": 1092693.9169540002
     },
     {
       "category": "compile",
-      "count": 149,
-      "succeededCount": 141,
+      "count": 150,
+      "succeededCount": 142,
       "failedCount": 8,
-      "successRate": 0.9463087248322147,
-      "durationMs": 3585131.382669
+      "successRate": 0.9466666666666667,
+      "durationMs": 3606275.90896
     },
     {
       "category": "e2e",
@@ -8341,11 +8455,11 @@
     },
     {
       "category": "lint",
-      "count": 79,
-      "succeededCount": 78,
+      "count": 82,
+      "succeededCount": 81,
       "failedCount": 1,
-      "successRate": 0.9873417721518988,
-      "durationMs": 11782.761166000002
+      "successRate": 0.9878048780487805,
+      "durationMs": 12236.774207000002
     }
   ],
   "gateChecks": [
@@ -8540,6 +8654,14 @@
       "checkedAt": "2026-11-23T21:29:15.243Z",
       "durationMs": 61.85779199999996,
       "outcome": "accepted"
+    },
+    {
+      "stageId": "apply",
+      "runId": null,
+      "operation": "start",
+      "checkedAt": "2026-11-23T21:46:12.300Z",
+      "durationMs": 59.1225,
+      "outcome": "accepted"
     }
   ],
   "timing": {
@@ -8547,8 +8669,8 @@
     "finishedAt": null,
     "status": "in_progress",
     "measurementBasis": "before-first-entry-gate",
-    "elapsedMs": 65688399,
-    "observedStepWallMs": 32086845,
+    "elapsedMs": 66365576,
+    "observedStepWallMs": 32764022,
     "unattributedMs": 33601554,
     "waitingMs": null,
     "retryAttemptMs": 0,
