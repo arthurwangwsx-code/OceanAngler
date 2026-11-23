@@ -43,7 +43,7 @@ LODGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 397625924736798205}
   serializedVersion: 2
-  m_LocalReferencePoint: {x: 0.018541336, y: 0.96022975, z: 16.995838}
+  m_LocalReferencePoint: {x: 0.018541336, y: 1.4813366, z: 16.995838}
   m_Size: 43.86495
   m_FadeMode: 0
   m_AnimateCrossFading: 0
@@ -300,7 +300,7 @@ LODGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 993949632835869233}
   serializedVersion: 2
-  m_LocalReferencePoint: {x: -5.0000014, y: 1.864439, z: 2.4999995}
+  m_LocalReferencePoint: {x: -5.0000014, y: 1.8644376, z: 2.4999995}
   m_Size: 11.400004
   m_FadeMode: 0
   m_AnimateCrossFading: 0
@@ -546,7 +546,7 @@ LODGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1393930539410590305}
   serializedVersion: 2
-  m_LocalReferencePoint: {x: -4.6147118, y: 0.5247958, z: 17.124023}
+  m_LocalReferencePoint: {x: -4.6147118, y: 1.2896633, z: 17.124023}
   m_Size: 27.193256
   m_FadeMode: 0
   m_AnimateCrossFading: 0
@@ -608,7 +608,7 @@ LODGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1429332659169302931}
   serializedVersion: 2
-  m_LocalReferencePoint: {x: -1.7067857, y: -1.3440928, z: 17.208382}
+  m_LocalReferencePoint: {x: -1.7067857, y: -0.57921743, z: 17.208382}
   m_Size: 34.800358
   m_FadeMode: 0
   m_AnimateCrossFading: 0
@@ -760,8 +760,8 @@ LODGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1568905546904346246}
   serializedVersion: 2
-  m_LocalReferencePoint: {x: 0.000061035156, y: 0.622767, z: 89.99979}
-  m_Size: 360.00232
+  m_LocalReferencePoint: {x: 0.000030517578, y: 0.38374233, z: 89.999954}
+  m_Size: 360.00198
   m_FadeMode: 0
   m_AnimateCrossFading: 0
   m_LastLODIsBillboard: 0
@@ -6669,7 +6669,7 @@ LODGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5731448510252705003}
   serializedVersion: 2
-  m_LocalReferencePoint: {x: -3.6103468, y: -0.37392443, z: 18.15709}
+  m_LocalReferencePoint: {x: -3.6103468, y: 0.13110787, z: 18.15709}
   m_Size: 28.473753
   m_FadeMode: 0
   m_AnimateCrossFading: 0

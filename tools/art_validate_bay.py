@@ -2,6 +2,7 @@
 import bpy,bmesh,json,math
 from pathlib import Path
 from mathutils import Vector
+from mathutils.bvhtree import BVHTree
 ROOT=Path(__file__).resolve().parents[1];failures=[];checks=[];triangles={}
 def check(ok,message):(checks if ok else failures).append(message)
 manifest=json.loads((ROOT/'art/source/coral-bay/build-report.json').read_text())
@@ -40,6 +41,23 @@ for name,co in [('OriginAnchor',(0,0,0)),('NorthAnchor',(0,1,0)),('UpAnchor',(0,
  check((bpy.data.objects[name].matrix_world.translation-Vector(co)).length<.0001,'坐标标尺 '+name)
 terrain=bpy.data.objects['Terrain_LOD0'];heights=[(terrain.matrix_world@v.co).z for v in terrain.data.vertices]
 check(max(heights)-min(heights)>6,'海床到岸边存在真实高差')
+# Probe the saved mesh, not the generator's height formula. The western shore
+# must lead onto land rather than form a thin ridge with sea on both sides.
+shore_profiles=[]
+for level in range(3):
+ terrain_lod=bpy.data.objects['Terrain_LOD'+str(level)];bvh=BVHTree.FromObject(terrain_lod,bpy.context.evaluated_depsgraph_get());inverse=terrain_lod.matrix_world.inverted()
+ for along in [-5,8,20,35]:
+  samples=[]
+  for across in range(-65,-7):
+   start=inverse@Vector((across,along,30));end=inverse@Vector((across,along,-50));ray=end-start
+   hit,_,_,_=bvh.ray_cast(start,ray.normalized(),ray.length)
+   samples.append(None if hit is None else float((terrain_lod.matrix_world@hit).z))
+  crossings=sum((a>=4.5)!=(b>=4.5) for a,b in zip(samples,samples[1:]) if a is not None and b is not None)
+  shore_profiles.append(dict(lod=level,along=along,westHeight=samples[0],eastHeight=samples[-1],waterlineCrossings=crossings))
+  label='LOD'+str(level)+' / '+str(along)
+  check(all(v is not None for v in samples),'岸线剖面连续覆盖 '+label)
+  check(samples[0] is not None and samples[0]>4.7 and samples[-1] is not None and samples[-1]<4.0,'西侧陆地连接水下浅滩 '+label)
+  check(crossings==1,'岸线剖面仅穿越一次水位 '+label)
 water=bpy.data.objects['Water_LOD0'];check(all(abs((water.matrix_world@v.co).z-4.5)<.001 for v in water.data.vertices),'水面标高4.5米')
 check(bpy.data.objects['UnderwaterCamera'].location.z<4.5<bpy.data.objects['SurfaceCamera'].location.z,'水上水下镜头分层')
 camera=bpy.context.scene.camera
@@ -49,6 +67,6 @@ for name in ['StudioWaterVolume','StudioInfiniteWater']:
 check(sum(v for k,v in triangles.items() if k.endswith('LOD0'))<500000,'首景候选LOD0总面数预算')
 for image in bpy.data.images:
  if image.source=='FILE':check(Path(bpy.path.abspath(image.filepath)).is_file(),'原始贴图可解析 '+image.name)
-report=dict(scope='saved-coral-bay-engineering',status='FAIL' if failures else 'ENGINEERING_CHECKS_PASS',checks=checks,failures=failures,triangles=triangles,solids=solid_report,visualAcceptance='NOT_ACCEPTED',scientificReview='PENDING',deviceAcceptance='NOT_RUN')
+report=dict(scope='saved-coral-bay-engineering',status='FAIL' if failures else 'ENGINEERING_CHECKS_PASS',checks=checks,failures=failures,triangles=triangles,solids=solid_report,shoreProfiles=shore_profiles,visualAcceptance='NOT_ACCEPTED',scientificReview='PENDING',deviceAcceptance='NOT_RUN')
 out=ROOT/'.local/art/coral-bay/validation.json';out.parent.mkdir(parents=True,exist_ok=True);out.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n');print(json.dumps(report,ensure_ascii=False))
 if failures:raise RuntimeError('Coral Bay source checks failed')

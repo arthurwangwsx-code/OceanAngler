@@ -26,6 +26,7 @@
 | 礁岩破面修复与对照 | [源网格检查和同镜头实际游戏画面](reports/coral-bay-solid-geometry.md) |
 | 鱼体表面与鉴赏标题 | [鳃盖/高光迭代、标题消失回归及实际对照](reports/bluefin-surface-and-ui.md) |
 | 海湾水面与倒影 | [深度顺序修复、离屏GPU对照及验收边界](reports/water-rendering.md) |
+| 岸线与沙地 | [连续陆地、沙地材质及同镜头离屏对照](reports/bay-shoreline.md) |
 
 需求合同在 ispec/specs，首批变更在 ispec/changes/product-technical-foundation；planning/backlog.csv 管理任务。仅此目录可写，不修改赛车和枪战项目。
 
@@ -33,7 +34,7 @@
 python3 tools/validate.py
 python3 tools/game.py prepare
 python3 tools/game.py tests
-python3 tools/game.py ios --build 2 --label unique
+python3 tools/game.py mac
 ASC_ENV_FILE=/path/to/private/asc.env python3 tools/asc.py status
 ```
 
@@ -41,22 +42,12 @@ ASC_ENV_FILE=/path/to/private/asc.env python3 tools/asc.py status
 
 ![蓝鳍鲹源模型工作室预览：候选，尚非最终美术或游戏场景](art/previews/bluefin/three-quarter.png)
 
-[360度源模型转台](art/previews/bluefin/turntable.mp4)。首条蓝鳍鲹和第一套完整纺车钓组已接入本次候选包；另有[钓组工作室近景](art/previews/spinning-rig/reel.png)及[卷线器转台](art/previews/spinning-rig/turntable.mp4)，源文件与5项无画面机构检查通过。新界面及实际画面仍待核验；其余鱼种、钓具和海域仍待成品制作与验收。
+[360度源模型转台](art/previews/bluefin/turntable.mp4)。首条蓝鳍鲹与完整纺车钓组均有独立Blend/FBX、PBR、骨骼/动作和三档LOD；另有[钓组近景](art/previews/spinning-rig/reel.png)和[卷线器转台](art/previews/spinning-rig/turntable.mp4)。这些仍是候选，A1–A3、科学/用户审阅和真机尚未通过；其余11鱼种、其他钓具、两海域及观察生物仍需完整制作。
 
-integration/art-candidates已串行集成蓝鳍鲹、完整纺车钓组和珊瑚海湾，25项Editor及6项无画面PlayMode检查通过，涵盖真实场景内的海湾观察、暂停返回、钓组试摇、恢复抛竿、战斗中导航停止收线及实际机构/蒙皮；Mac原生包编译通过。[集成记录](reports/integrated-art-candidates.md)与源图另行保留。TestFlight 0.1.0 (2)冻结于2971b11；此前(1)的[历史回执](reports/testflight-0.1.0-1.json)保留，新包实际安装与画面待验。
+当前开发源码包含保存成功后的转向/放流与空载竿恢复、18任务指引、12候选学名和3个仅观察目录保护，以及原创水下底音/探索音乐及独立保存的开关。初始装备20次确定性模拟、逐次重载、重复记录不加分和全装备解锁已有[逻辑证据](reports/task-journey.json)，不代表儿童首鱼时间、随机遭遇耗时或实际20次UI试玩。观察生物的模型/场景交互尚未实现。
 
-Mac验证：`python3 tools/game.py mac`，再运行`python3 tools/runtime_smoke.py --label unique-run`。字体重建见tools/requirements.txt；ASC发行工具另需PyJWT与cryptography，并显式配置本机凭据。
+海湾已有独立源地形、码头、小船、岩礁/珊瑚/海草、水上/水下观察、缓存倒影与深度透射。源网格朝向/封闭、鱼体鳃缘/材质及鉴赏标题修复分别保留证据；岸线从孤立沙脊改为连接陆地的缓坡，沙地波纹与颜色分离。最新29项Editor、7项无画面PlayMode及Mac编译通过，源文件工程检查和Editor离屏GPU图分别审阅；当前原生窗口与实际iPhone/iPad画面、触控、听感/触觉及20分钟性能仍未通过。旧版三档Mac流程各12截图属于其历史源码，不能替代新资产的验收。
 
-build 2之后的开发源码补充了成功保存后的转向与放流游离，并恢复空载竿形；暂停、减弱动态、图鉴中断、快速再抛竿及写盘失败重试另行检查，见[放流表现证据](reports/fish-release-playmode.json)。这项后续源码尚未进入TestFlight，不能用现有build 2验收它的实际画面。
+Mac构建入口为`python3 tools/game.py mac`；原生检查为`python3 tools/runtime_smoke.py --label unique-run`，使用隔离存档，须在桌面窗口可用后实际运行并核对图像/回执。Editor离屏诊断为`python3 tools/game.py water-review --label unique-review`，不能据此宣布玩家UI或设备通过。Unity和资产写入串行，每轮用新label保留证据；字体重建见tools/requirements.txt。
 
-后续源码还补充18项任务的完成指引及轻柔控线结果。26项Editor与7项PlayMode检查通过，包含初始装备20次模拟中完成全部任务、逐次重载、重复记录不加分和装备解锁，以及任务指引的逻辑排版；Mac编译通过。[任务检查](reports/task-journey.json)保留确定性模拟与实际试玩的边界，新任务界面尚未进入build 2。
-
-物种后续源码已有12候选学名、3个独立仅观察条目及可钓目录入口保护；[资料与目录检查](reports/species-catalog-checks.json)记录27项Editor、7项PlayMode与Mac编译通过。15条[科学参考](planning/species-references.json)供后续制作，科学人工审阅仍待完成；观察模型、场景出现和交互尚未实现，相关变化未进build 2。
-
-最新开发源码新增原创水下底音和探索音乐，两个开关独立保存，暂停或恢复界面停止播放。28项Editor、7项无画面PlayMode与Mac编译通过。桌面已可用，三档Mac原生流程各12张截图通过自动检查，修复了实测文字裁切；此前“待解锁”不再代表当前状态。[音频证据](reports/audio-feedback.json)与[实际画面审阅](reports/integrated-native-render.md)分别保留。鱼身材质/接缝、水面、礁石和平板鉴赏标题仍需改进，美术结论PARTIAL；设备听感、触觉、20分钟运行和完整产品未验。本轮后续源码未进build 2。
-
-随后已修复礁石朝内及丘状珊瑚破面：焊接源网格后再生成三档LOD，24块礁石/8个丘状珊瑚均朝外封闭；旧文件失败和修复检查保留。Unity导入、28项Editor、Mac编译及新原生流程通过，相同镜头已确认薄壳缺陷消除；[前后对照](reports/coral-bay-solid-geometry.md)使用未修改的游戏截图。水面、鱼体、形态重复及平板标题仍待改进；此修复未进build 2。
-
-鱼体后续改为融入鱼身的鳃盖轮廓，细鳃缘使用相同混合权重，减弱高光；七组动作的实际变形网格贴合检查通过。平板标题缺失已复现为40.5点文字被40点容器截断，容器增加至44点，检查同时验证标题实际生成的字符与顶点。三档Mac流程、28项Editor及7项PlayMode通过，[实际对照与边界](reports/bluefin-surface-and-ui.md)保留首轮失败。美术、科学/用户审阅及真机仍未通过；本轮未进入build 2。
-
-水面后续加入真实平面倒影、深度透射及远处细波纹淡出，船壳共用剖面排除舱内水面。审图发现深度纹理生成过晚，修正至透明水面之前后，左下角亮块消失、海底深度恢复。29项Editor、7项PlayMode、Mac编译及隔离Editor GPU检查通过；新水面的原生窗口检查在首帧前超时，尚无当前源码的UI/真机通过证据。见[水面记录与未经修改的离屏图](reports/water-rendering.md)，不得沿用旧版三档原生结果。沙纹、植被、岸线、其他内容与完整美术仍待制作/审阅；build 2不含这些改进。
+TestFlight 0.1.0 (2)冻结于2971b11，含首批鱼/钓组/海湾候选，不含上述后续放流、任务、目录、音频、标题、水面与岸线改进。[发行回执](reports/testflight-0.1.0-2.json)记录Apple处理及本人内部组；实际安装尚待验证。新增构建须按[冻结源码发布流程](docs/08-testflight.md)使用新build号。ASC工具另需PyJWT与cryptography，凭据显式在本机配置，不进入公开仓库。

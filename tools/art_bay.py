@@ -21,8 +21,8 @@ def texture(name,data,noncolor=False):
  if noncolor:im.colorspace_settings.name='Non-Color'
  im.pixels.foreach_set(rgba.ravel());im.file_format='PNG';im.filepath_raw=str(GAME/(name+'.png'));im.save();return im
 
-def surface(name,color,height,rough):
- base=texture('Bay_'+name,color);gy,gx=np.gradient(height);n=np.stack((-gx*7,-gy*7,np.ones_like(gx)),axis=2);n/=np.linalg.norm(n,axis=2)[:,:,None]
+def surface(name,color,height,rough,normal_scale=7):
+ base=texture('Bay_'+name,color);gy,gx=np.gradient(height);n=np.stack((-gx*normal_scale,-gy*normal_scale,np.ones_like(gx)),axis=2);n/=np.linalg.norm(n,axis=2)[:,:,None]
  normal=texture('Bay_'+name+'_Normal',n*.5+.5,True);r=texture('Bay_'+name+'_Roughness',np.clip(rough+height*.15,0,1),True)
  packed=np.zeros((*height.shape,4));packed[:,:,3]=1-np.clip(rough+height*.15,0,1);texture('Bay_'+name+'_MetallicSmoothness',packed,True)
  return material(name,(1,1,1),rough,base=base,normal=normal,roughmap=r)
@@ -38,8 +38,19 @@ def material(name,color,rough=.65,metal=0,base=None,normal=None,roughmap=None):
  materials[name]=m;return m
 
 y,x=np.mgrid[0:512,0:512]/512
-noise=rng.normal(0,.035,(512,512));ripple=np.sin(y*math.tau*18+np.sin(x*math.tau*3)*.7)*.09
-h=ripple+noise;surface('Sand',np.stack([.62+h*.7,.55+h*.6,.39+h*.4],axis=2),h,.85)
+noise=rng.normal(0,.035,(512,512))
+# Colour carries grains and broad deposits; ripples mostly belong in the normal
+# map. A separate RNG preserves every other asset's existing random sequence.
+sand_rng=np.random.default_rng(91471)
+def sand_noise(cells):
+ grid=sand_rng.random((cells,cells));u=x*cells;v=y*cells;ix=np.floor(u).astype(int);iy=np.floor(v).astype(int);fx=u-ix;fy=v-iy;fx=fx*fx*(3-2*fx);fy=fy*fy*(3-2*fy)
+ return (grid[iy%cells,ix%cells]*(1-fx)+grid[iy%cells,(ix+1)%cells]*fx)*(1-fy)+(grid[(iy+1)%cells,ix%cells]*(1-fx)+grid[(iy+1)%cells,(ix+1)%cells]*fx)*fy
+deposit=sand_noise(4);patch=sand_noise(8);fine=sand_noise(32);grains=sand_rng.normal(0,.006,(512,512))
+phase=y*18+np.sin(x*math.tau*3)*.16+(deposit-.5)*1.8+(patch-.5)*.4
+ripple=np.sin(phase*math.tau)*.018*(.35+.65*deposit)
+h=ripple+(fine-.5)*.004
+tone=(deposit-.5)*.035+(patch-.5)*.012+grains+ripple*.08
+surface('Sand',np.stack([.66+tone,.59+tone*.92,.45+tone*.78],axis=2),h,.91,normal_scale=24)
 h=np.zeros((512,512))
 for frequency,amp in [(3,.12),(7,.07),(19,.035),(61,.018)]:h+=amp*np.sin(x*math.tau*frequency+np.sin(y*math.tau*(frequency+2)))*np.cos(y*math.tau*frequency)
 h+=noise;surface('Limestone',np.stack([.30+h,.34+h*.8,.29+h*.7],axis=2),h,.84)
@@ -106,8 +117,13 @@ def box(name,center,size,mat,group,bevel=.02):
  return o
 
 def seabed(x,y):
- # A shallow sandy corridor with an elevated beach beyond the west margin.
- return -1.25-.018*(y+5)+.16*math.sin(x*.32)*math.cos(y*.24)+.07*math.sin(y*1.7+x*.2)+7.2*math.exp(-((x+25)/5)**2)
+ # An open sandy corridor merges into one continuous western landmass. The
+ # curved cove and broad slope replace the former isolated Gaussian sand ridge.
+ floor=-1.25-.018*(y+5)+.16*math.sin(x*.32)*math.cos(y*.24)+.07*math.sin(y*1.7+x*.2)
+ shore=-18+2*math.sin(y*.045+.6)+1.4*math.sin(y*.12+1.2)-5*math.exp(-((y-14)/13)**2)
+ u=max(0,min(1,(shore-x+10)/22));blend=u*u*(3-2*u)
+ land=6.7+.35*math.sin(y*.08)+.2*math.sin(x*.14)*math.cos(y*.08)
+ return floor*(1-blend)+land*blend
 
 vs=[];uv=[];faces=[]
 xs=[-180,-110,-70,-46]+list(range(-32,33))+[46,70,110,180]

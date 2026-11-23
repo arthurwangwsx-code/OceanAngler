@@ -197,15 +197,15 @@
       "acquiredAt": "2026-11-24",
       "status": "ART_REVIEW_PENDING",
       "path": "art/source/coral-bay/CoralBay.blend",
-      "sha256": "2d65bf2e7b983086762bb9f7aa60830049986f094669339269fcbe23ad607949",
+      "sha256": "8feee230592e3f6954b641081abf674b5387650f25032862c5582e1a7a9afc46",
       "artifacts": [
         {
           "path": "art/source/coral-bay/CoralBay.blend",
-          "sha256": "2d65bf2e7b983086762bb9f7aa60830049986f094669339269fcbe23ad607949"
+          "sha256": "8feee230592e3f6954b641081abf674b5387650f25032862c5582e1a7a9afc46"
         },
         {
           "path": "game/Assets/OceanAngler/Art/CoralBay/CoralBay.fbx",
-          "sha256": "70f4099777a64d4b9b233c93e0e86369d3a7c0b8c8c250e28bccbf80789b8cc0"
+          "sha256": "1a74f965d9bbbdec784f29df7616efd71c19575ef4e25f0ad1041e4bbfa4e7fc"
         },
         {
           "path": "game/Assets/OceanAngler/Art/CoralBay/Bay_BranchCoral.png",
@@ -281,19 +281,19 @@
         },
         {
           "path": "game/Assets/OceanAngler/Art/CoralBay/Bay_Sand.png",
-          "sha256": "8b455f2c5990a8ca1a0e548521e7edffc47d4616622da8108aaccc561268abf8"
+          "sha256": "c846b6d69907b3752f82d866bbdee66c50e49b3aac3067c58556ac9403977ab8"
         },
         {
           "path": "game/Assets/OceanAngler/Art/CoralBay/Bay_Sand_MetallicSmoothness.png",
-          "sha256": "7b73471bda2177704b384218427f4a26a8f30f60592005f3c1a70849470733b7"
+          "sha256": "15211f7cdf130449484b4444b87a7ef5a3b24a2f6a48d54be51259b2d2413696"
         },
         {
           "path": "game/Assets/OceanAngler/Art/CoralBay/Bay_Sand_Normal.png",
-          "sha256": "66868c79661314605950ee1d89ce8fedb5dd041e607cebc85f7ff6fca05c5bf0"
+          "sha256": "b1870422ab72fb49e3dec998947dc44dc8e1d57b4a1d68e4ccff48b6f501b94b"
         },
         {
           "path": "game/Assets/OceanAngler/Art/CoralBay/Bay_Sand_Roughness.png",
-          "sha256": "fcec394c2871aeac55b65b195775951ac3501af6899edccdf903180a28e4ac54"
+          "sha256": "fe52e4b04c050ba60cd1c5bd786179b99d5ddfce3da277c207f3924af9909b01"
         },
         {
           "path": "game/Assets/OceanAngler/Art/CoralBay/Bay_Wood.png",
@@ -328,7 +328,7 @@
           "sha256": "b5b1b370ce0682ce40acf0db1a0a56180d744d4063f122ea4b43f727f66ed85d"
         }
       ],
-      "note": "Original continuous terrain, reef, generic coral forms, seagrass, pier and dinghy. Eight static assemblies with three LODs plus a separate water mesh. Studio lighting is an approximation; runtime visual, ecological, user and device acceptance remains open.",
+      "note": "Original continuous terrain, reef, generic coral forms, seagrass, pier and dinghy. Eight static assemblies with three LODs plus a separate water mesh. Studio lighting is an approximation; runtime visual, ecological, user and device acceptance remains open. Current source has a continuous western shore and separated sand colour/normal detail. Earlier coral-bay previews are historical; current source and GPU views are registered as bay-shoreline-previews. Art/science/device acceptance remains pending.",
       "modifications": "Reef/mound faces oriented outward; welded UV-seam/pole geometry before decimation; mounds have a buried closed base; source and runtime previews regenerated."
     },
     {
@@ -519,6 +519,60 @@
         {
           "path": "game/Assets/OceanAngler/Shaders/BayWater.shader",
           "sha256": "c303192b81a54ec9772311a35aef72210d273b3c66e8d763da5910058423e211"
+        }
+      ]
+    },
+    {
+      "id": "bay-shoreline-previews",
+      "author": "OceanAngler contributors",
+      "source": "Original project scene: current saved Blend Cycles views and Unity Editor offscreen GPU fixture; before images from frozen pre-shoreline fixture",
+      "license": "MIT",
+      "redistribution": true,
+      "sourceRedistribution": true,
+      "canModify": true,
+      "acquiredAt": "2026-11-24",
+      "status": "ART_REVIEW_PENDING",
+      "note": "Unmodified image bytes; source and GPU scopes separated by filenames. No player UI or physical-device acceptance. Earlier coral-bay preview directory remains a historical snapshot.",
+      "artifacts": [
+        {
+          "path": "art/previews/shoreline/before-surface.png",
+          "sha256": "3994b3d4fb2637c6884d0134d56b77cef3092db363be89ca96d386bc7d6c7377"
+        },
+        {
+          "path": "art/previews/shoreline/before-underwater.png",
+          "sha256": "0de91b6ee97e005441d78b32cb0eccacf7d41c6c4c03eb746bad14cbf284beed"
+        },
+        {
+          "path": "art/previews/shoreline/gpu-pier.png",
+          "sha256": "5baef11f0c1085c63f91e6e420988d2344e26483776f31ad1379e603f6539732"
+        },
+        {
+          "path": "art/previews/shoreline/gpu-reef.png",
+          "sha256": "a1306ab275da9abe9871b968f73f5c1c1cc1bce0974210722a8534de5293cf27"
+        },
+        {
+          "path": "art/previews/shoreline/gpu-surface.png",
+          "sha256": "d2191bc08a635846d6d9ed3c678afab1bb3b4c8e2f2c58c7bfcc43f3ea32b0ff"
+        },
+        {
+          "path": "art/previews/shoreline/gpu-underwater.png",
+          "sha256": "775787bf49dca02c06e2f36f69e2fd55ecf8b92aaec3ec0d9eceb1fc9d37cff9"
+        },
+        {
+          "path": "art/previews/shoreline/source-pier.png",
+          "sha256": "a6b3559094749f92f927f39c5d88b5264abddd9804cdb19d42c27c1dfa069ff7"
+        },
+        {
+          "path": "art/previews/shoreline/source-reef.png",
+          "sha256": "706f4deefd6a8c49b4b6fc2bcae166a9a4896d3d12bf959d455c76ddf74fcf24"
+        },
+        {
+          "path": "art/previews/shoreline/source-surface.png",
+          "sha256": "c08fd17434ec75beb8a3b66e1dc0df9ea2a3b9d25dd011de68e3f36ebf32369e"
+        },
+        {
+          "path": "art/previews/shoreline/source-underwater.png",
+          "sha256": "ac1da00b04fd9092b77153e3b3a1a27d2b01c39f1705748197a9d09d1180ffad"
         }
       ]
     }
