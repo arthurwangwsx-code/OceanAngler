@@ -83,4 +83,3 @@ The system SHALL satisfy the P1 contract: 目标真机20分钟性能、后台和
 #### Scenario: REQ-12 acceptance
 - **WHEN** 对应阶段执行验收
 - **THEN** 必须提供以下证据：目标真机20分钟性能、后台和锁屏恢复分别记录，未运行不得写 PASS。
-

@@ -1,0 +1,11 @@
+# >>> ispec managed (do not edit by hand) >>>
+changes/
+cache/
+log/
+.local/
+config.local.json
+# <<< ispec managed <<<
+
+# Preserve requirement changes and evidence in source history.
+!changes/
+!changes/**

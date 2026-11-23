@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "stages": {
+    "proposal": {
+      "status": "pending",
+      "updatedAt": "2026-11-23T03:27:15.817Z"
+    }
+  },
+  "executionStartedAt": "2026-11-23T03:27:15.723Z",
+  "attempts": {
+    "proposal": [
+      {
+        "id": "5b50e2d6-763c-4ce6-b7fa-aea07da6f1ff",
+        "startedAt": "2026-11-23T03:27:15.817Z",
+        "status": "running"
+      }
+    ]
+  },
+  "gateChecks": [
+    {
+      "stageId": "proposal",
+      "runId": null,
+      "operation": "start",
+      "checkedAt": "2026-11-23T03:27:15.829Z",
+      "durationMs": 40432.23195800005,
+      "outcome": "accepted"
+    }
+  ]
+}
