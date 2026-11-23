@@ -176,7 +176,7 @@ def notes(client,number):
     state=status(client,number)
     if not state['buildId']:return state
     description='海洋小钓手私人开发测试。钓鱼、积分、存档、图鉴、装备和任务已接入；3D内容仍为早期候选，儿童试玩、实际手机画面、触控与长时间性能尚未完成验收。'
-    whatsnew='新增蓝鳍鲹、完整入门纺车钓组和珊瑚海湾候选。请测试海域与装备里的看看海湾、水上/水下切换、钓具里的观察入门钓组及试摇卷线器；返回钓鱼应保持暂停，点继续后再恢复。也请测试抛竿、提竿、按住收线/松手降张力、放流和重开后的记录。只有首条鱼、首套钓组及首处海湾有独立源模型；其他鱼种、钓具和海域仍是样板。实际画面和真机性能待验，仅本人内部测试。'
+    whatsnew='本次整合记录成功后的转向放流、18项任务指引、独立音效与探索音乐、海湾倒影和连续岸线，修复鱼体口部/鳍纹、礁石与标题显示。图鉴新增12物种学名、辨识及自然栖息环境、滚动详情与视角重置。请检查首屏颜色、近景口鳍、水上/水下和滚动文字；测试抛竿、张力、记录放流、后台恢复及重开后进度。观察或返回页面后应保持暂停，主动继续才恢复；音乐默认关闭，可在设置开启。仅首鱼、首套钓组和首海湾是独立源模型候选，其余模型/海域仍为样板，观察生物尚未进入场景。当前包的实际手机/iPad画面、触控、听感与20分钟性能未验，科学/美术及儿童试玩未完成；仅本人内部测试。'
     for resource,parent,identifier,relation,field,text in [('betaAppLocalizations','apps',APP_ID,'app','description',description),('betaBuildLocalizations','builds',state['buildId'],'build','whatsNew',whatsnew)]:
         path='/v1/'+parent+'/'+identifier+'/'+resource;existing=items(client,path);match=next((x for x in existing if x['attributes']['locale']=='zh-Hans'),None);attributes={field:text}
         if resource=='betaAppLocalizations':attributes['feedbackEmail']='arthur.wang.wsx@gmail.com'
