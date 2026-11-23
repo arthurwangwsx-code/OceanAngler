@@ -50,35 +50,35 @@
       "acquiredAt": "2026-11-23",
       "status": "ART_REVIEW_PENDING",
       "path": "art/source/bluefin/Bluefin.blend",
-      "sha256": "30732e8a3a2d3f5597533e1fc3d02d60b58b272a8289ce44934ae9bf0b3d2d06",
+      "sha256": "3c7e362e91ad3283ba00998a961c4b566265b70971059b03e7b392718bca47da",
       "artifacts": [
         {
           "path": "art/source/bluefin/Bluefin.blend",
-          "sha256": "30732e8a3a2d3f5597533e1fc3d02d60b58b272a8289ce44934ae9bf0b3d2d06"
+          "sha256": "3c7e362e91ad3283ba00998a961c4b566265b70971059b03e7b392718bca47da"
         },
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin_BaseColor.png",
-          "sha256": "c13e873046dafa938a0de22624298373ba13315a6de860132c550f8968eb483f"
+          "sha256": "37e50f721c81e08091b4ee5a56afa0dbc05aa7007869c6a3ce7d85d8fd97add1"
         },
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin_Fin.png",
-          "sha256": "9c071552a49e3c5cb4a1dda5ada7d0761b54f43bb03d76d63bf0b6cc8605824c"
+          "sha256": "ca13d306992e6f98da2b1cf8cba588cba97480d040c74ddbfaa86992e253ee06"
         },
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin_MetallicSmoothness.png",
-          "sha256": "059c82b4ce4911e84706bc91f3d9c1440a0d79f718c262da49d7cd9639b5c12a"
+          "sha256": "a36fac61f41493501675e1a1cfb171f0cdd718648d0eb3e3ac8c8f56a52d56bc"
         },
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin_Normal.png",
-          "sha256": "00d944237d2f379f16accfb8fd1cf768b3c22ff79dccaab2636c97247dc5d63f"
+          "sha256": "e8f83e511693e6001147c1203f259243dac9a403899f77414b3b2ad2d2c76a19"
         },
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin_Roughness.png",
-          "sha256": "dc3d87296b0f852b6c2128e73486e554b735edaf6cc167281eed527a33cc4191"
+          "sha256": "e84ebdb6581ea835014dfa6085f8636ad48f44fd0544a2f080a108d98cec915c"
         },
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin.fbx",
-          "sha256": "31690a01436d3d4f5b0c86ef325e7917c104b6531e50fc4c9f43d7303db4d1c2"
+          "sha256": "826a442a3c5b99d818f5b3323f55cc34ddc2bfbae117f726740e321072509624"
         },
         {
           "path": "art/previews/bluefin/bite.png",
@@ -120,7 +120,7 @@
       ],
       "note": "Original bluefin trevally mesh, UV, PBR maps, 12-bone rig, seven animation clips and three LODs. Scientific/visual/user/device acceptance remains open. No third-party photographs or models included.",
       "modifiedAt": "2026-11-24",
-      "modifications": "Independent moving lower lip; corrected mandibular hinge axis/direction; blended cheek bridge and inward oral/throat/cheek lining; per-strip fin UV and curved rays. Current source/Unity diagnostic views registered as bluefin-anatomy-previews; old bluefin views remain historical. Visual/science/user/device gates open."
+      "modifications": "Grey-silver/brassy palette, metric-compensated blue-black spots; shared padded blue/pale fin atlas, reduced fin heights/rays and surface-following scutes. Six material slots, seven actions, three LODs. Current previews: bluefin-palette-previews. A1-A3, human/science/device review pending."
     },
     {
       "id": "complete-spinning-rig-candidate",
@@ -760,6 +760,147 @@
         {
           "path": "art/previews/fishing-encounter/07-landed.png",
           "sha256": "8c22ed7d4be58ac1b94593778578f09642a297f1e71500a0b58b89b7d713b0d1"
+        }
+      ]
+    },
+    {
+      "id": "bluefin-palette-previews",
+      "author": "OceanAngler contributors",
+      "source": "tools/art_review_bluefin.py; game/Assets/OceanAngler/Editor/FishRenderReview.cs; game/Assets/OceanAngler/Editor/EncounterRenderReview.cs; game/Assets/OceanAngler/Editor/SchoolRenderReview.cs; FFmpeg",
+      "license": "MIT",
+      "redistribution": true,
+      "status": "ART_REVIEW_PENDING",
+      "acquiredAt": "2026-11-24",
+      "provenance": "Original project model renders only; institutional photographs viewed in browser but not downloaded/redistributed",
+      "note": "Raw Blender/Editor Metal captures without player UI/device qualification. rejected-dark is a rejected material candidate; shadow-before and diagnostic-no-cast-shadow are diagnostic comparisons, not shipping settings. Video is source-review animation, not runtime FPS.",
+      "artifacts": [
+        {
+          "path": "art/previews/bluefin-palette/bay-01-cast.png",
+          "sha256": "1bf862291246221853e4840da46fe897cfeb50494933e13148e56a1df2bdc355"
+        },
+        {
+          "path": "art/previews/bluefin-palette/bay-02-wait-start.png",
+          "sha256": "2dee47b4db82ed4364eddb1e0257d4afff6c3b8d87780672088d119370e25658"
+        },
+        {
+          "path": "art/previews/bluefin-palette/bay-03-approach.png",
+          "sha256": "0da6146a04df96e156b2d9a78cede8f13d8db1706b1707c560b526acb82473f2"
+        },
+        {
+          "path": "art/previews/bluefin-palette/bay-04-bite-close.png",
+          "sha256": "f62e7e363fdb566c1ec5e4fb1b1fd6583801ef8ae4f8a77f74cd7bc7d49f5ecd"
+        },
+        {
+          "path": "art/previews/bluefin-palette/bay-04-bite.png",
+          "sha256": "568fc4a49713496c34e25a95c54ebdd58f624966583b02e069ebfe58930c7d57"
+        },
+        {
+          "path": "art/previews/bluefin-palette/bay-05-fight-start.png",
+          "sha256": "7c49588c3cc764b377048f9c7fe832cb107116ae56bbd16c49e63b31bd0e5f60"
+        },
+        {
+          "path": "art/previews/bluefin-palette/bay-06-fight-middle.png",
+          "sha256": "da17cbb7731e59116a98817344eef97b6a3da845b326e2d2f5b77cd245821dbe"
+        },
+        {
+          "path": "art/previews/bluefin-palette/bay-07-landed.png",
+          "sha256": "697f5a961c6fd0fec5c45fdfc28aa13b84edf2adacddd99be597fb2e0c7a31a7"
+        },
+        {
+          "path": "art/previews/bluefin-palette/bay-inspect-0.png",
+          "sha256": "5142c801d5a245e3793de6c6e3d78b3ec70868b15f705b94561aec3974293a73"
+        },
+        {
+          "path": "art/previews/bluefin-palette/bay-inspect-180.png",
+          "sha256": "087a855814a8036e7f8361e4ea8c49c2ace90a2f3e5542291ac29df0f3ccf17d"
+        },
+        {
+          "path": "art/previews/bluefin-palette/bay-inspect-270.png",
+          "sha256": "2aec75bf220362096107549e2acc072052a15924d8f8d28d6d5b8cb11c985ad2"
+        },
+        {
+          "path": "art/previews/bluefin-palette/bay-inspect-90.png",
+          "sha256": "78b31f4dafc845e4682377d303148097ef8436430a48a54242e010374438e8b2"
+        },
+        {
+          "path": "art/previews/bluefin-palette/diagnostic-no-cast-shadow.png",
+          "sha256": "2c4ead15bdcb170dbe1f2fe09fd678f3b477a33e9a78f1cceeab9a32438de86b"
+        },
+        {
+          "path": "art/previews/bluefin-palette/field-reef.png",
+          "sha256": "7af0a78716c32b257786e0c03f12d0458b77f84180f292e7f0ab830bce518547"
+        },
+        {
+          "path": "art/previews/bluefin-palette/field-surface.png",
+          "sha256": "48361646a4cc1640ffa40af547d86ae1ccd9e1498fc8cfb7f93d39e61dc326a3"
+        },
+        {
+          "path": "art/previews/bluefin-palette/gpu-bite-fin.png",
+          "sha256": "0ce77a399b3a0dde390e8a7138e70ca51a364da6e9dabb5e7aeb1402553327e0"
+        },
+        {
+          "path": "art/previews/bluefin-palette/gpu-bite-mouth.png",
+          "sha256": "364794087af85fe677c9cd04c423368f11f7d826aedb53e25d3a313caafadd7d"
+        },
+        {
+          "path": "art/previews/bluefin-palette/gpu-bite-side.png",
+          "sha256": "b41db781be7ad00477378d19ff6611ec1c6c56868056536dc8f5745c6dc6f1f9"
+        },
+        {
+          "path": "art/previews/bluefin-palette/gpu-idle-fin.png",
+          "sha256": "41b55c646afe315cd03ef81c4557cf480813d5f1a3cd795531e4900dabcd4bd7"
+        },
+        {
+          "path": "art/previews/bluefin-palette/gpu-idle-mouth.png",
+          "sha256": "5754a803b03984e8f72f041fbf4c0b97c686de84521a64e7622a360c1d1061ae"
+        },
+        {
+          "path": "art/previews/bluefin-palette/gpu-idle-side.png",
+          "sha256": "75c86fb90441690502c736892d2b36e82bdb7b5c51a58ad381db0e6bdd384d5a"
+        },
+        {
+          "path": "art/previews/bluefin-palette/gpu-initial-bite-side.png",
+          "sha256": "b41db781be7ad00477378d19ff6611ec1c6c56868056536dc8f5745c6dc6f1f9"
+        },
+        {
+          "path": "art/previews/bluefin-palette/gpu-initial-idle-side.png",
+          "sha256": "75c86fb90441690502c736892d2b36e82bdb7b5c51a58ad381db0e6bdd384d5a"
+        },
+        {
+          "path": "art/previews/bluefin-palette/rejected-dark.png",
+          "sha256": "d6f8ce508b1b5ea0440582fc325245d21a1878b29a55f4ed74ef60458bf0e56c"
+        },
+        {
+          "path": "art/previews/bluefin-palette/shadow-before.png",
+          "sha256": "62b2dcdaafc8246d762278a8ed6be3da6fd4d3d467ba4fa7e60220f1f5d6bff4"
+        },
+        {
+          "path": "art/previews/bluefin-palette/studio-fin-close.png",
+          "sha256": "318f8ac183e72dac199d008caab1858d4e0e4072b57fca299f070eb13f4629ec"
+        },
+        {
+          "path": "art/previews/bluefin-palette/studio-front.png",
+          "sha256": "a66817a7e527305687bf31e4c81b5c9cda3c81d3f6a4b7d7c690c454af9b760b"
+        },
+        {
+          "path": "art/previews/bluefin-palette/studio-mouth-close.png",
+          "sha256": "0ad9efe336bbfba9449573c476509eb37bef3d082981fbc2c217d24ba47b455f"
+        },
+        {
+          "path": "art/previews/bluefin-palette/studio-side.png",
+          "sha256": "f58fbea518038391d3ade43867b5c5865ba94b6f56fb6d0e4e5b5c4b6b553bc4"
+        },
+        {
+          "path": "art/previews/bluefin-palette/studio-three-quarter.png",
+          "sha256": "c4f037b925c8a1f5cc580491da504f87038cfc6c6545389ce7091d0026af8734"
+        },
+        {
+          "path": "art/previews/bluefin-palette/studio-top.png",
+          "sha256": "600fdc217e29ae78fc3ba32bc7c720ba2594361b83798af13f991e87239a2393"
+        },
+        {
+          "path": "art/previews/bluefin-palette/turntable.mp4",
+          "sha256": "a3ce29a90b915e60e1e6e164d1c992cfdcaa9a8d54568ca49dffa71f85325d83"
         }
       ]
     }

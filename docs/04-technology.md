@@ -40,3 +40,5 @@ ContentCatalog.json作为首批数据真值，由运行时和测试共享校验�
 钓鱼表现：FishingEncounter消费FishingSession.PhaseProgress与暂停后的表现时钟，生成固定抛投/接近/控线路径；没有改变模拟状态或存档。AuthoredSpinningRig在LateUpdate读取活动目标的HookPosition，拟饵鼻端与目标对齐，Bite/Fighting/Landed连接独立于收线输入。初始化和表现步显式、幂等，可由Editor调用同一生产入口。当前路径及有限蒙皮/环境采样仅验证首个蓝鳍鲹候选，不代表感知AI、连续碰撞、所有物种或实际触控，见[阶段表现](../reports/fishing-encounter.md)。
 
 遭遇选择：EncounterSelection是GameController与成长模拟唯一共享选择路径，维持当前海域内等概率和教程固定；观察目录不参加选择，非Ready抛竿在入口返回。1000种子路线通过同一FishingSession、ProgressService/SaveStore及每次重新加载测量，不能以测试自行选定新鱼代替随机遭遇，也不以规则秒数推断真实儿童时间。稀有度/拟饵偏好尚未实现，见[随机成长基线](../reports/encounter-balance.md)。
+
+当前主光阴影候选为1024图、单级联、24米、Low软过滤（4次PCF）、深度/法线偏移2/0；保留投射/接收。只升分辨率未解决鱼身阶梯状自阴影，偏移对照后选用现配置，生成场景规范化后仅Sun的Hard→Soft有语义变化。配置在ApplyRenderQuality集中设置；URP 17.3软阴影setter为internal，Editor用实际SerializedObject字段写入，字段变化明确报错。更早远影淡出、软采样、鳍atlas增容和PropertyBlock成本需设备验证，不能以Editor图替代，见[表面与阴影证据](../reports/bluefin-palette.md)。

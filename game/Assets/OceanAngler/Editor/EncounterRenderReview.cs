@@ -15,7 +15,7 @@ namespace OceanAngler.Editor
         [Serializable] sealed class Receipt
         {
             public string status="PASS",scope="isolated Editor Metal phase samples; no player UI, continuous runtime or device qualification",graphics;
-            public int images,width=1440,height=900;public float maximumLineError,maximumLureError,approachDistance;
+            public int images,inspectionImages,diagnosticImages,width=1440,height=900;public float maximumLineError,maximumLureError,approachDistance;
         }
         public static void Capture(){run=CaptureSteps();EditorApplication.update+=Step;}
         static void Step()
@@ -62,7 +62,46 @@ namespace OceanAngler.Editor
                     {
                         var mouth=fish.HookPosition;camera.transform.SetPositionAndRotation(mouth+new Vector3(-.3f,.12f,-1.3f),Quaternion.LookRotation(new Vector3(.3f,-.12f,1.3f)));camera.fieldOfView=42;yield return null;yield return null;
                         RenderPipeline.SubmitRenderRequest(camera,request);Save(target,Path.Combine(folder,"04-bite-close.png"));receipt.images++;
+                        if(Environment.GetEnvironmentVariable("OCEAN_ENCOUNTER_LIGHT_DIAGNOSTICS")=="1")
+                        {
+                            var skins=fish.GetComponentsInChildren<SkinnedMeshRenderer>();var cast=skins.Select(s=>s.shadowCastingMode).ToArray();var receive=skins.Select(s=>s.receiveShadows).ToArray();
+                            foreach(var skin in skins)skin.shadowCastingMode=ShadowCastingMode.Off;yield return null;
+                            RenderPipeline.SubmitRenderRequest(camera,request);Save(target,Path.Combine(folder,"diagnostic-no-cast-shadow.png"));receipt.diagnosticImages++;
+                            for(int i=0;i<skins.Length;i++)skins[i].shadowCastingMode=cast[i];
+                            foreach(var skin in skins)skin.receiveShadows=false;yield return null;
+                            RenderPipeline.SubmitRenderRequest(camera,request);Save(target,Path.Combine(folder,"diagnostic-no-receive-shadow.png"));receipt.diagnosticImages++;
+                            for(int i=0;i<skins.Length;i++)skins[i].receiveShadows=receive[i];
+                            bay.causticLight.enabled=false;yield return null;
+                            RenderPipeline.SubmitRenderRequest(camera,request);Save(target,Path.Combine(folder,"diagnostic-no-caustics.png"));receipt.diagnosticImages++;bay.causticLight.enabled=true;
+                            var blocks=new System.Collections.Generic.List<(SkinnedMeshRenderer,int,MaterialPropertyBlock)>();
+                            foreach(var skin in skins)for(int i=0;i<skin.sharedMaterials.Length;i++)
+                            {
+                                var old=new MaterialPropertyBlock();skin.GetPropertyBlock(old,i);blocks.Add((skin,i,old));var flat=new MaterialPropertyBlock();skin.GetPropertyBlock(flat,i);flat.SetFloat("_BumpScale",0);skin.SetPropertyBlock(flat,i);
+                            }
+                            yield return null;RenderPipeline.SubmitRenderRequest(camera,request);Save(target,Path.Combine(folder,"diagnostic-flat-normal.png"));receipt.diagnosticImages++;
+                            foreach(var item in blocks)item.Item1.SetPropertyBlock(item.Item3,item.Item2);
+                            var pipeline=GraphicsSettings.currentRenderPipeline as UniversalRenderPipelineAsset;
+                            float oldDepth=pipeline.shadowDepthBias,oldNormal=pipeline.shadowNormalBias;int oldResolution=pipeline.mainLightShadowmapResolution;
+                            try
+                            {
+                                foreach(var setting in new[]{(1024,2f,0f),(2048,2f,0f),(2048,4f,0f),(2048,6f,0f),(2048,4f,.5f)})
+                                {
+                                    pipeline.mainLightShadowmapResolution=setting.Item1;pipeline.shadowDepthBias=setting.Item2;pipeline.shadowNormalBias=setting.Item3;yield return null;
+                                    RenderPipeline.SubmitRenderRequest(camera,request);Save(target,Path.Combine(folder,"diagnostic-shadow-"+setting.Item1+"-bias"+setting.Item2+"-normal"+setting.Item3+".png"));receipt.diagnosticImages++;
+                                }
+                            }
+                            finally{pipeline.shadowDepthBias=oldDepth;pipeline.shadowNormalBias=oldNormal;pipeline.mainLightShadowmapResolution=oldResolution;}
+                        }
                     }
+                }
+                // Four rotations at the desktop model-view position. This is
+                // still a scene-only fixture, without the actual journal UI.
+                rig.gameObject.SetActive(false);bay.school.gameObject.SetActive(false);
+                fish.transform.position=new Vector3(2.35f,1.35f,1.2f);clips.Single(c=>c.name=="idle"||c.name.EndsWith("|idle")).SampleAnimation(animator.gameObject,0);
+                for(int angle=0;angle<4;angle++)
+                {
+                    fish.transform.rotation=Quaternion.Euler(0,-25+angle*90,-3);bay.Present(camera,false,false,0,true,false,false);yield return null;yield return null;
+                    RenderPipeline.SubmitRenderRequest(camera,request);Save(target,Path.Combine(folder,"inspect-"+(angle*90)+".png"));receipt.inspectionImages++;
                 }
                 if(receipt.images!=8||receipt.maximumLineError>.00001f||receipt.maximumLureError>.00001f||receipt.approachDistance<4)throw new InvalidOperationException("Encounter anchors/approach failed");
                 File.WriteAllText(Path.Combine(folder,"receipt.json"),JsonUtility.ToJson(receipt,true));Debug.Log("ENCOUNTER_GPU_PASS");

@@ -5,18 +5,18 @@
   "blender": "5.3.0",
   "lods": {
     "Bluefin_LOD0": {
-      "triangles": 24164,
-      "vertices": 12564,
+      "triangles": 24284,
+      "vertices": 12624,
       "uvLayers": 1
     },
     "Bluefin_LOD1": {
-      "triangles": 9664,
-      "vertices": 5305,
+      "triangles": 9712,
+      "vertices": 5330,
       "uvLayers": 1
     },
     "Bluefin_LOD2": {
-      "triangles": 3624,
-      "vertices": 2274,
+      "triangles": 3642,
+      "vertices": 2283,
       "uvLayers": 1
     }
   },
@@ -44,11 +44,11 @@
     "pectoralR"
   ],
   "maps": {
-    "Bluefin_Fin.png": "9c071552a49e3c5cb4a1dda5ada7d0761b54f43bb03d76d63bf0b6cc8605824c",
-    "Bluefin_Roughness.png": "dc3d87296b0f852b6c2128e73486e554b735edaf6cc167281eed527a33cc4191",
-    "Bluefin_MetallicSmoothness.png": "059c82b4ce4911e84706bc91f3d9c1440a0d79f718c262da49d7cd9639b5c12a",
-    "Bluefin_BaseColor.png": "c13e873046dafa938a0de22624298373ba13315a6de860132c550f8968eb483f",
-    "Bluefin_Normal.png": "00d944237d2f379f16accfb8fd1cf768b3c22ff79dccaab2636c97247dc5d63f"
+    "Bluefin_Fin.png": "ca13d306992e6f98da2b1cf8cba588cba97480d040c74ddbfaa86992e253ee06",
+    "Bluefin_Roughness.png": "e84ebdb6581ea835014dfa6085f8636ad48f44fd0544a2f080a108d98cec915c",
+    "Bluefin_MetallicSmoothness.png": "a36fac61f41493501675e1a1cfb171f0cdd718648d0eb3e3ac8c8f56a52d56bc",
+    "Bluefin_BaseColor.png": "37e50f721c81e08091b4ee5a56afa0dbc05aa7007869c6a3ce7d85d8fd97add1",
+    "Bluefin_Normal.png": "e8f83e511693e6001147c1203f259243dac9a403899f77414b3b2ad2d2c76a19"
   },
   "artAcceptance": "NOT_ACCEPTED",
   "note": "Original authoring candidate; scientific, runtime, deformation, LOD and human visual gates remain separate."

@@ -32,7 +32,7 @@ namespace OceanAngler.Editor
             QualitySettings.antiAliasing=4;
             pipeline.msaaSampleCount=4;EditorUtility.SetDirty(pipeline);
             var waterRenderer=AssetDatabase.LoadAssetAtPath<UniversalRendererData>(folder+"/OceanRenderer.asset");waterRenderer.copyDepthMode=CopyDepthMode.AfterOpaques;EditorUtility.SetDirty(waterRenderer);
-            pipeline.shadowDistance=35;pipeline.mainLightShadowmapResolution=1024;
+            ApplyRenderQuality();
             EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Single);
             RenderSettings.ambientLight = new Color(0.35f, 0.55f, 0.65f);
             // Keep the runtime EXP2 fog variant in scene-based shader stripping.
@@ -43,7 +43,7 @@ namespace OceanAngler.Editor
             camera.backgroundColor = new Color(0.1f, 0.45f, 0.65f); camera.clearFlags = CameraClearFlags.SolidColor;
             camera.gameObject.AddComponent<AudioListener>();
             var light = new GameObject("Sun").AddComponent<Light>(); light.type = LightType.Directional; light.intensity = 1.3f;
-            light.shadows=LightShadows.Hard;light.shadowStrength=.7f;
+            light.shadows=LightShadows.Soft;light.shadowStrength=.7f;
             light.transform.rotation = Quaternion.Euler(45, -30, 0);
             var root = new GameObject("OceanGame");
             root.AddComponent<GameController>();
@@ -82,7 +82,13 @@ namespace OceanAngler.Editor
         {
             var pipeline=AssetDatabase.LoadAssetAtPath<UniversalRenderPipelineAsset>("Assets/OceanAngler/Generated/OceanURP.asset");
             if(pipeline==null)throw new InvalidOperationException("Missing canonical URP asset");
-            pipeline.msaaSampleCount=4;EditorUtility.SetDirty(pipeline);
+            pipeline.msaaSampleCount=4;pipeline.shadowDistance=24;pipeline.mainLightShadowmapResolution=1024;
+            pipeline.shadowDepthBias=2;pipeline.shadowNormalBias=0;
+            // URP 17 exposes these setters only internally. Use its actual
+            // serialized Editor fields, rather than modifying package sources.
+            var serialized=new SerializedObject(pipeline);var soft=serialized.FindProperty("m_SoftShadowsSupported");var quality=serialized.FindProperty("m_SoftShadowQuality");
+            if(soft==null||quality==null)throw new InvalidOperationException("URP soft-shadow fields changed");
+            soft.boolValue=true;quality.intValue=(int)SoftShadowQuality.Low;serialized.ApplyModifiedPropertiesWithoutUndo();EditorUtility.SetDirty(pipeline);
         }
         public static void ExportMac()
         {

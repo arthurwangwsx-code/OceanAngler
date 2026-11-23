@@ -19,6 +19,7 @@ namespace OceanAngler.Editor
                 bool normal=file.Contains("_Normal"),linear=normal||file.Contains("_Roughness")||file.Contains("_MetallicSmoothness");
                 importer.textureType=normal?TextureImporterType.NormalMap:TextureImporterType.Default;
                 importer.sRGBTexture=!linear;importer.alphaIsTransparency=false;importer.maxTextureSize=2048;
+                if(file.EndsWith("Bluefin_Fin.png"))importer.wrapMode=TextureWrapMode.Clamp;
                 importer.textureCompression=TextureImporterCompression.CompressedHQ;importer.SaveAndReimport();
             }
             var skin=CreateMaterial("Bluefin_Skin",Color.white,.65f);
@@ -27,7 +28,7 @@ namespace OceanAngler.Editor
             var fins=CreateMaterial("Bluefin_Fins",Color.white,.50f);fins.SetTexture("_BaseMap",Texture("Bluefin_Fin"));
             var gill=CreateMaterial("Bluefin_Gill",new Color(.10f,.18f,.17f),.42f);
             var oral=CreateMaterial("Bluefin_Oral",new Color(.065f,.043f,.037f),.22f);
-            var iris=CreateMaterial("Bluefin_Iris",new Color(.35f,.43f,.27f),.76f);
+            var iris=CreateMaterial("Bluefin_Iris",new Color(.25f,.21f,.07f),.72f);
             var dark=CreateMaterial("Bluefin_Dark",new Color(.009f,.023f,.029f),.77f);
             foreach(var material in new[]{skin,fins,gill,oral,iris,dark})EditorUtility.SetDirty(material);
             var model=(ModelImporter)AssetImporter.GetAtPath(Folder+"/Bluefin.fbx");

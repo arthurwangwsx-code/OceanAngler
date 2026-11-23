@@ -46,9 +46,30 @@ if rig and all(lods):
     for face in data.polygons:
         if data.materials[face.material_index].name!='Bluefin_Fins' or len(face.vertices)!=4:continue
         uv=[data.uv_layers.active.data[i].uv for i in face.loop_indices]
-        if max(p.x for p in uv)-min(p.x for p in uv)>.99 and max(p.y for p in uv)-min(p.y for p in uv)>.1:strips+=1
+        # Each strip occupies one ray interval inside its padded atlas half.
+        if abs(max(p.x for p in uv)-min(p.x for p in uv)-.492)<.001 and max(p.y for p in uv)-min(p.y for p in uv)>.1:strips+=1
     check(strips>=600,'鳍膜条段使用单个鳍条间隔UV')
     report['mouth']={'lowerLipVertices':len(lower_lip),'meanJawWeight':sum(lip_weights)/max(1,len(lip_weights)),'liningDepth':oral_depth,'throatNormalX':throat_normal};report['finUvStripFaces']=strips
+    atlas=bpy.data.images.get('Bluefin_Fin');check(atlas is not None and tuple(atlas.size)==(1024,512),'鳍色分区共用一张1024x512纹理')
+    palette_counts={'blue':0,'pale':0};anatomy_counts={'firstDorsal':0,'paired':0,'secondDorsal':0,'caudal':0}
+    for face in data.polygons:
+        if data.materials[face.material_index].name!='Bluefin_Fins':continue
+        values=[data.uv_layers.active.data[i].uv.x for i in face.loop_indices];blue=max(values)<.5;pale=min(values)>.5
+        check(blue or pale,'鳍面UV不横跨色区边界：'+str(face.index)) if not (blue or pale) else None
+        if blue:palette_counts['blue']+=1
+        if pale:palette_counts['pale']+=1
+        center=face.center;expected=None;region=None
+        if -.56<center.x<-.06 and center.z>.412:region='firstDorsal';expected=pale
+        elif abs(center.y)>.18:region='paired';expected=pale
+        elif 0<center.x<.3 and center.z>.25:region='secondDorsal';expected=blue
+        elif center.x>1.03:region='caudal';expected=blue
+        if region:
+            anatomy_counts[region]+=1
+            if not expected:check(False,'实际几何鳍色区错误：'+region+' face='+str(face.index))
+    check(all(n>0 for n in palette_counts.values()),'实际鳍面使用蓝色与灰铜色两个区域')
+    check(all(n>0 for n in anatomy_counts.values()),'第一背鳍/成对鳍/第二背鳍/尾鳍均有独立几何颜色核验')
+    check(len(data.materials)==6,'鳍色分区保持六个源材质槽')
+    report['finPalette']={'faces':palette_counts,'anatomySamples':anatomy_counts,'materialSlots':len(data.materials)}
     top_spans=[]
     for face in data.polygons:
         if len(face.vertices)==4 and data.materials[face.material_index].name=='Bluefin_Skin' and all(data.vertices[i].co.z>.15 for i in face.vertices):
