@@ -175,8 +175,8 @@ def self_only(client,number):
 def notes(client,number):
     state=status(client,number)
     if not state['buildId']:return state
-    description='海洋小钓手私人开发测试。钓鱼、积分、存档、图鉴、装备和任务已接入；模型与海域仍为样板，儿童试玩、手机触控与长时间真机性能尚未完成验收。'
-    whatsnew='请测试抛竿、提竿、按住收线/松手降张力、放流、重开后的积分与记录、左右手和暂停恢复。含12鱼种数据、3海域入口及18任务；场景和鱼/钓具美术尚非最终质量。仅本人内部测试，不代表完整产品验收。'
+    description='海洋小钓手私人开发测试。钓鱼、积分、存档、图鉴、装备和任务已接入；3D内容仍为早期候选，儿童试玩、实际手机画面、触控与长时间性能尚未完成验收。'
+    whatsnew='新增蓝鳍鲹、完整入门纺车钓组和珊瑚海湾候选。请测试海域与装备里的看看海湾、水上/水下切换、钓具里的观察入门钓组及试摇卷线器；返回钓鱼应保持暂停，点继续后再恢复。也请测试抛竿、提竿、按住收线/松手降张力、放流和重开后的记录。只有首条鱼、首套钓组及首处海湾有独立源模型；其他鱼种、钓具和海域仍是样板。实际画面和真机性能待验，仅本人内部测试。'
     for resource,parent,identifier,relation,field,text in [('betaAppLocalizations','apps',APP_ID,'app','description',description),('betaBuildLocalizations','builds',state['buildId'],'build','whatsNew',whatsnew)]:
         path='/v1/'+parent+'/'+identifier+'/'+resource;existing=items(client,path);match=next((x for x in existing if x['attributes']['locale']=='zh-Hans'),None);attributes={field:text}
         if resource=='betaAppLocalizations':attributes['feedbackEmail']='arthur.wang.wsx@gmail.com'
