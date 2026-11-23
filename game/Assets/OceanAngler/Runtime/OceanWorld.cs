@@ -4,7 +4,7 @@ namespace OceanAngler
 {
     public sealed class OceanWorld : MonoBehaviour
     {
-        GameController game;GameUI ui;Transform fishRoot,rodTip;FishModel fish;LineRenderer line;
+        GameController game;GameUI ui;Transform fishRoot,rodTip;FishVisual fish;LineRenderer line;
         string fishId,habitat;
         Transform[] rodSegments;
         Material wood,metal,water;
@@ -55,7 +55,10 @@ namespace OceanAngler
         void SelectFish(string id)
         {
             if(fishRoot!=null)Destroy(fishRoot.gameObject);
-            fishRoot=new GameObject("Fish-"+id).transform;fish=fishRoot.gameObject.AddComponent<FishModel>();fish.Initialize(game.Content.Fish(id));fishId=id;
+            var authored=id=="trevally"?Resources.Load<GameObject>("Models/Bluefin"):null;
+            if(authored!=null){fishRoot=Instantiate(authored).transform;fish=fishRoot.GetComponent<AuthoredFishVisual>();}
+            else{fishRoot=new GameObject("Fish-"+id).transform;var prototype=fishRoot.gameObject.AddComponent<FishModel>();prototype.Initialize(game.Content.Fish(id));fish=prototype;}
+            fishId=id;
         }
         void Update()
         {
@@ -65,6 +68,7 @@ namespace OceanAngler
             bool reduced=data.settings.reducedMotion;if(!reduced&&!game.Session.Paused)visualTime+=Time.deltaTime;float time=reduced?0:visualTime;
             fish.reducedMotion=reduced;fish.paused=ui.FocusedFish!=null?ui.ModelPaused:game.Session.Paused;fish.speed=game.Session.Phase==FishingPhase.Fighting?1.6f:1;
             bool journal=ui.FocusedFish!=null;
+            fish.semantic=journal?"swim":game.Session.Phase==FishingPhase.Fighting?"hooked":game.Session.Phase==FishingPhase.Bite?"bite":game.Session.Phase==FishingPhase.Casting?"burst":game.Session.Phase==FishingPhase.Landed?"idle":"swim";
             fishRoot.position=journal?new Vector3(ui.CompactViewer?-1.3f:2.35f,ui.CompactViewer?.7f:1.35f,1.2f):new Vector3((ui.Compact?(data.settings.leftHanded?1.3f:-1.3f):0)+Mathf.Sin(time*.3f)*.18f,.30f+Mathf.Sin(time*.5f)*.05f,1.2f);
             fishRoot.localScale=Vector3.one*(journal?ui.ModelZoom:1);
             fishRoot.rotation=Quaternion.Euler(0,journal?-25+ui.ModelYaw:-25+Mathf.Sin(time*.3f)*7,-3);
@@ -75,7 +79,7 @@ namespace OceanAngler
             {
                 float u=(i+1)/12f;Vector3 point=Vector3.Lerp(start,tip,u)+new Vector3(-.35f,-t*.75f,.18f)*u*u;Between(rodSegments[i],prev,point,Mathf.Lerp(.026f,.006f,u));prev=point;
             }
-            rodTip.position=prev;Vector3 endpoint=game.Session.Phase==FishingPhase.Fighting?fishRoot.TransformPoint(new Vector3(-1,0,0)):new Vector3(-.1f,.2f,2);
+            rodTip.position=prev;Vector3 endpoint=game.Session.Phase==FishingPhase.Fighting?fish.HookPosition:new Vector3(-.1f,.2f,2);
             for(int i=0;i<24;i++){float u=i/23f;line.SetPosition(i,Vector3.Lerp(prev,endpoint,u)+Vector3.down*Mathf.Sin(u*Mathf.PI)*(1-t)*.2f);}
             if(habitat!=data.habitatId)
             {

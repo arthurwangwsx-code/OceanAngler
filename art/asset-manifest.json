@@ -38,6 +38,78 @@
       "status": "ORIGINAL_ICON",
       "path": "game/Assets/OceanAngler/Art/AppIcon.png",
       "sha256": "b6ea5b6dc712e2ffad450a050cb306d76ff5d1afc7b36bdaeb82417481fb8c19"
+    },
+    {
+      "id": "hero-bluefin-authored-candidate",
+      "author": "OceanAngler contributors",
+      "source": "tools/art_bluefin.py",
+      "license": "MIT",
+      "redistribution": true,
+      "sourceRedistribution": true,
+      "canModify": true,
+      "acquiredAt": "2026-11-23",
+      "status": "ART_REVIEW_PENDING",
+      "path": "art/source/bluefin/Bluefin.blend",
+      "sha256": "f5d9c3dbfcbec8a04ea3ed5e0bcf52015f354df3c399136fbe3033d3bd213a23",
+      "artifacts": [
+        {
+          "path": "art/source/bluefin/Bluefin.blend",
+          "sha256": "f5d9c3dbfcbec8a04ea3ed5e0bcf52015f354df3c399136fbe3033d3bd213a23"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin_BaseColor.png",
+          "sha256": "c13e873046dafa938a0de22624298373ba13315a6de860132c550f8968eb483f"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin_Fin.png",
+          "sha256": "41e1f50108dd69e51670f0ce4d12a656fcdca9044f81bb8ca3c97c231062dae7"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin_MetallicSmoothness.png",
+          "sha256": "bab39656767a9824493fa68d526c7c7ef703c598d59cd395567e2546d6711d68"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin_Normal.png",
+          "sha256": "00d944237d2f379f16accfb8fd1cf768b3c22ff79dccaab2636c97247dc5d63f"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin_Roughness.png",
+          "sha256": "bbf7d89ccc378b816ffe950830620542fff26b36e8ea92cc49945cec45f8c9bf"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin.fbx",
+          "sha256": "779a26151e1a1bc86ef29e535b5cc94d339edb6df9bcb46490221bd38266f4db"
+        },
+        {
+          "path": "art/previews/bluefin/bite.png",
+          "sha256": "a7a5d1e276174e8a8072a1806cd90ad30cf2c98d3be1a49fc98658ff3b2813a5"
+        },
+        {
+          "path": "art/previews/bluefin/front.png",
+          "sha256": "751dfb5605a1d65845e4b4a963aa207e0e268ac7ca643d19814eae6f24d65ed4"
+        },
+        {
+          "path": "art/previews/bluefin/side.png",
+          "sha256": "b4a1e5544d3c26852f5290a0dd128b9d9894f508d4df8b50f163f74ca822741f"
+        },
+        {
+          "path": "art/previews/bluefin/three-quarter.png",
+          "sha256": "1690e20d74ea1a01a0a059c38fe47d19235dd5f70422d1fd37ef31cb45aa7bb1"
+        },
+        {
+          "path": "art/previews/bluefin/top.png",
+          "sha256": "f2019bd926e8e4f48bc04f5e4eefe057eb221513cae7df9eaa3a90cb00aafb00"
+        },
+        {
+          "path": "art/previews/bluefin/turntable.mp4",
+          "sha256": "80ca34299c375dc45cbfb8a9b2cc117a0076221433a7b1a583a9ef20322e6a2c"
+        },
+        {
+          "path": "art/previews/bluefin/game-phone.png",
+          "sha256": "16977946cac69b9faa52bed61dbd6b83cdfa8368f44f68d8c981633965f4678d"
+        }
+      ],
+      "note": "Original bluefin trevally mesh, UV, PBR maps, 12-bone rig, seven animation clips and three LODs. Scientific/visual/user/device acceptance remains open. No third-party photographs or models included."
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."

@@ -1,0 +1,55 @@
+{
+  "status": "CANDIDATE",
+  "species": "Caranx melampygus",
+  "source": "tools/art_bluefin.py",
+  "blender": "5.3.0",
+  "lods": {
+    "Bluefin_LOD0": {
+      "triangles": 20960,
+      "vertices": 10957,
+      "uvLayers": 1
+    },
+    "Bluefin_LOD1": {
+      "triangles": 8384,
+      "vertices": 4669,
+      "uvLayers": 1
+    },
+    "Bluefin_LOD2": {
+      "triangles": 3143,
+      "vertices": 2041,
+      "uvLayers": 1
+    }
+  },
+  "actions": [
+    "bite",
+    "burst",
+    "hooked",
+    "idle",
+    "release",
+    "swim",
+    "turn"
+  ],
+  "bones": [
+    "root",
+    "head",
+    "spine1",
+    "spine2",
+    "spine3",
+    "peduncle",
+    "tail",
+    "pelvicL",
+    "pelvicR",
+    "jaw",
+    "pectoralL",
+    "pectoralR"
+  ],
+  "maps": {
+    "Bluefin_Fin.png": "41e1f50108dd69e51670f0ce4d12a656fcdca9044f81bb8ca3c97c231062dae7",
+    "Bluefin_Roughness.png": "bbf7d89ccc378b816ffe950830620542fff26b36e8ea92cc49945cec45f8c9bf",
+    "Bluefin_MetallicSmoothness.png": "bab39656767a9824493fa68d526c7c7ef703c598d59cd395567e2546d6711d68",
+    "Bluefin_BaseColor.png": "c13e873046dafa938a0de22624298373ba13315a6de860132c550f8968eb483f",
+    "Bluefin_Normal.png": "00d944237d2f379f16accfb8fd1cf768b3c22ff79dccaab2636c97247dc5d63f"
+  },
+  "artAcceptance": "NOT_ACCEPTED",
+  "note": "Original authoring candidate; scientific, runtime, deformation, LOD and human visual gates remain separate."
+}

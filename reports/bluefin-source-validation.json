@@ -1,0 +1,93 @@
+{
+  "scope": "saved-blend-engineering",
+  "visualAcceptance": "NOT_ACCEPTED",
+  "lods": {
+    "Bluefin_LOD0": {
+      "triangles": 20960,
+      "invalidWeightVertices": 0,
+      "invalidUVLoops": 0
+    },
+    "Bluefin_LOD1": {
+      "triangles": 8384,
+      "invalidWeightVertices": 0,
+      "invalidUVLoops": 0
+    },
+    "Bluefin_LOD2": {
+      "triangles": 3143,
+      "invalidWeightVertices": 0,
+      "invalidUVLoops": 0
+    }
+  },
+  "motion": {
+    "idle": {
+      "tailRotationRange": 0.06613948801532388,
+      "jawRotationRange": 0.004999999888241291
+    },
+    "swim": {
+      "tailRotationRange": 0.0346224419772625,
+      "jawRotationRange": 2.449293581093244e-18
+    },
+    "turn": {
+      "tailRotationRange": 0.20888365246355534,
+      "jawRotationRange": 0.004999999888241291
+    },
+    "burst": {
+      "tailRotationRange": 0.27558119781315327,
+      "jawRotationRange": 0.004999999888241291
+    },
+    "bite": {
+      "tailRotationRange": 0.11023248359560966,
+      "jawRotationRange": 0.3199999928474426
+    },
+    "hooked": {
+      "tailRotationRange": 0.3306974433362484,
+      "jawRotationRange": 0.3199999928474426
+    },
+    "release": {
+      "tailRotationRange": 0.038950249552726746,
+      "jawRotationRange": 2.449293581093244e-18
+    }
+  },
+  "failures": [],
+  "checks": [
+    "可编辑骨骼存在",
+    "三个实际LOD存在",
+    "LOD0面数递减",
+    "LOD0全部顶点权重归一且非空",
+    "LOD0 UV有限且位于贴图范围",
+    "LOD0无非法顶点",
+    "LOD0使用共同骨骼",
+    "LOD1面数递减",
+    "LOD1全部顶点权重归一且非空",
+    "LOD1 UV有限且位于贴图范围",
+    "LOD1无非法顶点",
+    "LOD1使用共同骨骼",
+    "LOD2面数递减",
+    "LOD2全部顶点权重归一且非空",
+    "LOD2 UV有限且位于贴图范围",
+    "LOD2无非法顶点",
+    "LOD2使用共同骨骼",
+    "LOD0在候选面数预算内",
+    "颌/尾/成对鳍均有独立骨骼",
+    "贴图文件存在：Bluefin_BaseColor",
+    "贴图文件存在：Bluefin_Fin",
+    "贴图文件存在：Bluefin_Normal",
+    "贴图文件存在：Bluefin_Roughness",
+    "语义动作存在：idle",
+    "语义动作具有真实尾摆：idle",
+    "语义动作存在：swim",
+    "语义动作具有真实尾摆：swim",
+    "语义动作存在：turn",
+    "语义动作具有真实尾摆：turn",
+    "语义动作存在：burst",
+    "语义动作具有真实尾摆：burst",
+    "语义动作存在：bite",
+    "语义动作具有真实尾摆：bite",
+    "咬钩动作有实际下颌运动",
+    "语义动作存在：hooked",
+    "语义动作具有真实尾摆：hooked",
+    "语义动作存在：release",
+    "语义动作具有真实尾摆：release"
+  ],
+  "status": "ENGINEERING_CHECKS_PASS"
+}

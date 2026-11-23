@@ -1,0 +1,69 @@
+{
+  "status": "PASS",
+  "exitCode": 0,
+  "checks": [
+    "visible-hit-target:继续探索",
+    "authored-bluefin-loaded",
+    "authored-three-lods-single-owner",
+    "authored-seven-motion-states",
+    "authored-hook-at-mouth",
+    "authored-swim-actually-deforms-tail",
+    "authored-renderer-materials",
+    "visible-hit-target:按住蓄力 · 松手抛竿",
+    "cast-to-bite",
+    "visible-hit-target:提竿",
+    "strike-to-fighting",
+    "visible-hit-target:按住收线",
+    "controlled-catch",
+    "visible-hit-target:记录并放流",
+    "release-and-persist",
+    "visible-hit-target:图鉴",
+    "visible-hit-target:钓具",
+    "visible-hit-target:任务",
+    "visible-hit-target:设置",
+    "visible-hit-target:左手操作    已关闭",
+    "left-hand-setting",
+    "visible-hit-target:家长区与隐私",
+    "visible-hit-target:13",
+    "visible-hit-target:查看隐私与字体许可",
+    "visible-hit-target:返回家长区",
+    "visible-hit-target:清除游戏进度",
+    "reset-first-confirm-does-not-delete",
+    "visible-hit-target:取消并返回设置",
+    "cancel-reset-keeps-catches",
+    "visible-hit-target:出海",
+    "navigation-clears-held-input"
+  ],
+  "failures": [],
+  "catches": 1,
+  "points": 180,
+  "screenshots": {
+    "06-left-handed.png": [
+      2048,
+      1536
+    ],
+    "04-gear.png": [
+      2048,
+      1536
+    ],
+    "05-tasks.png": [
+      2048,
+      1536
+    ],
+    "02-catch.png": [
+      2048,
+      1536
+    ],
+    "03-journal.png": [
+      2048,
+      1536
+    ],
+    "01-fishing.png": [
+      2048,
+      1536
+    ]
+  },
+  "pixelsPerPoint": 2.0,
+  "safeWidthPoints": 1024.0,
+  "safeHeightPoints": 768.0
+}

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Run an isolated native UI smoke test and verify its own receipt/screenshots."""
-import argparse,json,plistlib,struct,subprocess
+import argparse,json,plistlib,re,struct,subprocess
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 p=argparse.ArgumentParser();p.add_argument('--label',required=True);p.add_argument('--width',type=int,default=1440);p.add_argument('--height',type=int,default=900);p.add_argument('--point-scale',type=float,default=1);p.add_argument('--safe-insets',default='0,0,0,0');a=p.parse_args()
@@ -18,5 +18,7 @@ images=list((folder/'screens').glob('*.png'));dimensions={}
 for image in images:
  raw=image.read_bytes();assert raw[:8]==b'\x89PNG\r\n\x1a\n';dimensions[image.name]=list(struct.unpack('>II',raw[16:24]))
 summary=dict(status=receipt['status'],exitCode=result.returncode,checks=receipt['checks'],failures=receipt['failures'],catches=receipt['catches'],points=receipt['points'],screenshots=dimensions,pixelsPerPoint=receipt.get('pixelsPerPoint'),safeWidthPoints=receipt.get('safeWidthPoints'),safeHeightPoints=receipt.get('safeHeightPoints'))
+problems=[line for line in (folder/'player.log').read_text(errors='replace').splitlines() if re.search(r'Exception:|is registered with more than one LODGroup|Shader .*not supported|The referenced script .*missing',line)]
+if problems:summary['status']='FAIL';summary['failures']+=['runtime-log:'+line[:180] for line in problems]
 (folder/'summary.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2)+'\n');print(json.dumps(summary,ensure_ascii=False,indent=2))
-raise SystemExit(0 if result.returncode==0 and receipt['status']=='PASS' and len(images)==6 else 1)
+raise SystemExit(0 if result.returncode==0 and summary['status']=='PASS' and len(images)==6 else 1)

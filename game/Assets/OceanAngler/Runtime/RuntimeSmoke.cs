@@ -14,10 +14,23 @@ namespace OceanAngler
         GameController game;string folder;Receipt receipt;bool finished;float began;
         IEnumerator Start()
         {
-            var args=Environment.GetCommandLineArgs();int index=Array.IndexOf(args,"--ocean-smoke");if(index<0||index+1>=args.Length)yield break;
+            var args=Environment.GetCommandLineArgs();int index=Array.IndexOf(args,"--ocean-smoke");if(index<0||index+1>=args.Length){if(Debug.isDebugBuild)Debug.Log("OCEAN_SMOKE_MODE_OFF");yield break;}
             folder=args[index+1];Directory.CreateDirectory(folder);receipt=new Receipt();began=Time.realtimeSinceStartup;game=GetComponent<GameController>();Application.runInBackground=true;
+            Debug.Log("OCEAN_SMOKE_BEGIN");
             yield return new WaitForSecondsRealtime(1);
             if(game.Session.Paused){Click("继续探索");yield return null;yield return null;}
+            var authored=FindFirstObjectByType<AuthoredFishVisual>();Require(authored!=null,"authored-bluefin-loaded");
+            if(authored!=null)
+            {
+                var animator=authored.GetComponentInChildren<Animator>();var group=authored.GetComponent<LODGroup>();
+                Require(group!=null&&group.lodCount==3&&authored.GetComponentsInChildren<LODGroup>(true).Length==1,"authored-three-lods-single-owner");
+                Require(animator!=null&&new[]{"idle","swim","turn","burst","bite","hooked","release"}.All(s=>animator.HasState(0,Animator.StringToHash(s))),"authored-seven-motion-states");
+                Require(authored.transform.InverseTransformPoint(authored.HookPosition).x<-.9f,"authored-hook-at-mouth");
+                var tail=authored.GetComponentsInChildren<Transform>().First(t=>t.name=="tail");var prior=tail.localRotation;
+                yield return new WaitForSecondsRealtime(.37f);
+                Require(Quaternion.Angle(prior,tail.localRotation)>.1f,"authored-swim-actually-deforms-tail");
+                Require(authored.GetComponentsInChildren<SkinnedMeshRenderer>().All(r=>r.sharedMesh!=null&&r.sharedMaterials.All(m=>m!=null&&m.shader.name=="Universal Render Pipeline/Lit")),"authored-renderer-materials");
+            }
             CheckLayout("fishing");yield return Snapshot("01-fishing");
             int before=game.Progress.Data.catches.Count;
             var cast=Find("按住蓄力");Pointer(cast,true);yield return new WaitForSecondsRealtime(.4f);Pointer(cast,false);

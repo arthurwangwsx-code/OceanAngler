@@ -28,6 +28,7 @@ namespace OceanAngler.Editor
                 AssetDatabase.CreateAsset(new Material(Shader.Find("Universal Render Pipeline/Lit")), surfacePath);
             GraphicsSettings.defaultRenderPipeline = pipeline;
             QualitySettings.renderPipeline = pipeline;
+            pipeline.msaaSampleCount=4;EditorUtility.SetDirty(pipeline);
             EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Single);
             RenderSettings.ambientLight = new Color(0.35f, 0.55f, 0.65f);
             var camera = new GameObject("Camera").AddComponent<Camera>();
@@ -69,6 +70,12 @@ namespace OceanAngler.Editor
             if (mat == null) { mat = new Material(Shader.Find("Universal Render Pipeline/Lit")); AssetDatabase.CreateAsset(mat, path); }
             mat.color = color; EditorUtility.SetDirty(mat);
             obj.GetComponent<Renderer>().sharedMaterial = mat;
+        }
+        public static void ApplyRenderQuality()
+        {
+            var pipeline=AssetDatabase.LoadAssetAtPath<UniversalRenderPipelineAsset>("Assets/OceanAngler/Generated/OceanURP.asset");
+            if(pipeline==null)throw new InvalidOperationException("Missing canonical URP asset");
+            pipeline.msaaSampleCount=4;EditorUtility.SetDirty(pipeline);
         }
         public static void ExportMac()
         {

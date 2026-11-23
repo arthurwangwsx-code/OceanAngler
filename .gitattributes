@@ -4,15 +4,19 @@
 *.md text eol=lf
 *.unity text eol=lf
 *.prefab text eol=lf
+*.controller text eol=lf
 *.meta text eol=lf
 *.fbx binary
 *.blend binary
 *.png binary
+*.mp4 binary
 
 # Unity serializes empty YAML values with trailing spaces. Preserve Editor output.
 *.meta whitespace=-blank-at-eol,-blank-at-eof
 *.asset whitespace=-blank-at-eol,-blank-at-eof
 *.unity whitespace=-blank-at-eol,-blank-at-eof
 *.mat whitespace=-blank-at-eol,-blank-at-eof
+*.prefab whitespace=-blank-at-eol,-blank-at-eof
+*.controller whitespace=-blank-at-eol,-blank-at-eof
 # Keep the pinned upstream OFL notice byte-for-byte, including its whitespace.
 **/NotoSansSC-OFL.txt whitespace=-blank-at-eol

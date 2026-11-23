@@ -4,16 +4,14 @@ using UnityEngine;
 namespace OceanAngler
 {
     // 原创解剖样板：连续拓扑、鳍/鳃/口/眼、物种花纹与分段骨骼；仍待生物和美术审校。
-    public sealed class FishModel : MonoBehaviour
+    public sealed class FishModel : FishVisual
     {
         readonly List<Material> ownedMaterials = new List<Material>();
         readonly List<Mesh> ownedMeshes = new List<Mesh>();
         Texture2D texture;
         readonly Dictionary<Material,Color> colors = new Dictionary<Material,Color>();
         Transform[] bones;
-        public bool reducedMotion, paused;
         float animationTime;
-        public float speed = 1;
         public void Initialize(FishDefinition fish)
         {
             string shape=fish.shape; bool deep=shape=="deep",flat=shape=="flat",mahi=shape=="mahi",grouper=shape=="grouper";
@@ -64,7 +62,7 @@ namespace OceanAngler
                 float x=.45f+i*.075f;Fin("Finlet",new[]{new Vector3(x,.17f,0),new Vector3(x+.025f,.24f-i*.012f,0),new Vector3(x+.07f,.13f,0)},fin,bones[3]);
             }
         }
-        public void SetSilhouette(bool hidden) { foreach(var pair in colors)pair.Key.color=hidden?new Color(.015f,.035f,.045f):pair.Value; }
+        public override void SetSilhouette(bool hidden) { foreach(var pair in colors)pair.Key.color=hidden?new Color(.015f,.035f,.045f):pair.Value; }
         void Update()
         {
             if(bones==null)return;if(!paused)animationTime+=Time.deltaTime*speed;float time=animationTime;
