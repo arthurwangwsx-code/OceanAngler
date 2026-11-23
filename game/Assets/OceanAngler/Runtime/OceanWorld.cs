@@ -11,6 +11,7 @@ namespace OceanAngler
         Camera view;
         public FishVisual TargetFish=>fish;
         float visualTime;
+        Vector3 fishHookLocal;
         CatchRecord releasing;
         float releaseTime;
         Vector3 releaseStart,releaseHeading;
@@ -62,6 +63,7 @@ namespace OceanAngler
             if(authored!=null){fishRoot=Instantiate(authored).transform;fish=fishRoot.GetComponent<AuthoredFishVisual>();}
             else{fishRoot=new GameObject("Fish-"+id).transform;var prototype=fishRoot.gameObject.AddComponent<FishModel>();prototype.Initialize(game.Content.Fish(id));fish=prototype;}
             fishId=id;
+            fishHookLocal=fishRoot.InverseTransformPoint(fish.HookPosition);
         }
         void BeginRelease(CatchRecord caught)
         {
@@ -79,6 +81,11 @@ namespace OceanAngler
             fishRoot.localScale=Vector3.one;fish.semantic=releaseTime<.4f?"turn":"release";fish.speed=1;
             if(releaseTime>=ReleaseDuration){releasing=null;fishRoot.gameObject.SetActive(false);}
         }
+        void PoseFishingGear(bool leftHanded)
+        {
+            float hand=leftHanded?-1:1;var start=new Vector3(1.75f*hand,-.30f,-2.0f);var direction=(new Vector3(.70f*hand,2.6f,1.3f)-start).normalized;
+            gear.transform.localScale=Vector3.one;gear.transform.position=start;gear.transform.rotation=Quaternion.LookRotation(Vector3.ProjectOnPlane(Vector3.up,direction).normalized,direction);
+        }
         void Update()
         {
             if(game==null||game.Progress.RequiresRecovery)return;
@@ -92,9 +99,11 @@ namespace OceanAngler
             fish.reducedMotion=reduced;fish.paused=ui.FocusedFish!=null?ui.ModelPaused:game.Session.Paused;fish.speed=game.Session.Phase==FishingPhase.Fighting?1.6f:1;
             bool journal=ui.FocusedFish!=null;
             fish.semantic=journal?"swim":game.Session.Phase==FishingPhase.Fighting?"hooked":game.Session.Phase==FishingPhase.Bite?"bite":game.Session.Phase==FishingPhase.Casting?"burst":game.Session.Phase==FishingPhase.Landed?"idle":"swim";
-            fishRoot.position=journal?new Vector3(ui.CompactViewer?-1.3f:2.35f,ui.CompactViewer?.7f:1.35f,1.2f):new Vector3((ui.Compact?(data.settings.leftHanded?1.3f:-1.3f):0)+Mathf.Sin(time*.3f)*.18f,.30f+Mathf.Sin(time*.5f)*.05f,1.2f);
+            if(!ui.InspectingGear)PoseFishingGear(data.settings.leftHanded);
+            var pose=FishingEncounter.Evaluate(game.Session.Phase,game.Session.PhaseProgress,game.Session.CastPower,fishHookLocal,gear.CastOrigin,ui.Compact?(data.settings.leftHanded?1.3f:-1.3f):0,time,reduced);
+            fishRoot.position=journal?new Vector3(ui.CompactViewer?-1.3f:2.35f,ui.CompactViewer?.7f:1.35f,1.2f):pose.fishPosition;
             fishRoot.localScale=Vector3.one*(journal?ui.ModelZoom:1);
-            fishRoot.rotation=Quaternion.Euler(0,journal?-25+ui.ModelYaw:-25+Mathf.Sin(time*.3f)*7,-3);
+            fishRoot.rotation=journal?Quaternion.Euler(0,-25+ui.ModelYaw,-3):pose.fishRotation;
             if(releasing!=null)PresentRelease(game.Session.Paused);
             bool discovered=game.Progress.Data.catches.Exists(c=>c.fishId==fishId);fish.SetSilhouette(journal&&!discovered);
             float t=game.Session.Tension;
@@ -106,9 +115,9 @@ namespace OceanAngler
             }
             else
             {
-                float hand=data.settings.leftHanded?-1:1;var start=new Vector3(1.75f*hand,-.30f,-2.0f);var direction=(new Vector3(.70f*hand,2.6f,1.3f)-start).normalized;
-                gear.transform.localScale=Vector3.one;gear.transform.position=start;gear.transform.rotation=Quaternion.LookRotation(Vector3.ProjectOnPlane(Vector3.up,direction).normalized,direction);
-                bool hooked=game.Session.Phase==FishingPhase.Fighting;gear.Drive(t,game.Reeling,game.Session.Paused,reduced,game.Session.Phase==FishingPhase.Casting,hooked?fish.HookPosition:new Vector3(-.1f,.2f,2),false,hooked);
+                bool hooked=game.Session.Phase==FishingPhase.Fighting||game.Session.Phase==FishingPhase.Landed;
+                bool attached=hooked||game.Session.Phase==FishingPhase.Bite;
+                gear.Drive(t,game.Reeling,game.Session.Paused,reduced,game.Session.Phase==FishingPhase.Casting,pose.lurePosition,false,hooked,attached?fish:null);
             }
             if(habitat!=data.habitatId)
             {

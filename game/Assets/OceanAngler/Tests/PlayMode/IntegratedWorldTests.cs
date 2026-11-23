@@ -82,6 +82,8 @@ namespace OceanAngler.Tests
 
             // A failed disk commit must not release or reward; the same fish can be retried.
             LandCurrentFish();yield return null;yield return null;
+            Assert.That(Vector3.Distance(gear.fishingLine.GetPosition(gear.fishingLine.positionCount-1),fish.HookPosition),Is.LessThan(.00001f));
+            Assert.That(gear.lure.gameObject.activeSelf,Is.False);
             int released=0;game.Released+=_=>released++;
             string saveFile=Path.Combine(save,"ocean-progress.json");Assert.That(Directory.Exists(saveFile)||File.Exists(saveFile),Is.False);
             Directory.CreateDirectory(saveFile);float heldLoad=game.Session.Tension;
@@ -110,7 +112,7 @@ namespace OceanAngler.Tests
             Click("记录并放流");yield return null;yield return null;Assert.That(released,Is.EqualTo(2));
             game.Cast(.5f);yield return null;yield return null;
             var current=game.GetComponent<OceanWorld>().TargetFish;Assert.That(current,Is.Not.Null);
-            Assert.That(current.semantic,Is.EqualTo("burst"));Assert.That(current.transform.position.z,Is.EqualTo(1.2f).Within(.001f));
+            Assert.That(current.semantic,Is.EqualTo("burst"));Assert.That(current.transform.position.z,Is.GreaterThan(4));
             game.Configure(s=>s.reducedMotion=true);yield return null;yield return null;
             var reducedSchool=school.Members.Select(f=>f.transform.localPosition).ToArray();yield return new WaitForSeconds(.15f);
             CollectionAssert.AreEqual(reducedSchool,school.Members.Select(f=>f.transform.localPosition).ToArray());Assert.That(school.Members.All(f=>f.reducedMotion),Is.True);

@@ -57,6 +57,42 @@ namespace OceanAngler.Tests
         {
             var s=Fighting();s.Paused=true;Advance(s,200,true);s.Strike();Assert.AreEqual(0,s.Progress);Assert.AreEqual(0,s.Tension);
         }
+        [Test] public void EncounterClockUsesPausedSimulationAndConfiguredBiteDelay()
+        {
+            var s=Cast();Advance(s,8);Assert.That(s.PhaseProgress,Is.EqualTo(.5f).Within(.001f));
+            s.Paused=true;Advance(s,20);Assert.That(s.PhaseProgress,Is.EqualTo(.5f).Within(.001f));
+            s.Paused=false;while(s.Phase==FishingPhase.Casting)s.Tick(.05f,false);
+            Advance(s,15);Assert.That(s.Phase,Is.EqualTo(FishingPhase.Waiting));Assert.That(s.PhaseProgress,Is.EqualTo(.25f).Within(.001f));
+            s.Paused=true;Advance(s,100);Assert.That(s.PhaseProgress,Is.EqualTo(.25f).Within(.001f));
+        }
+        [Test] public void EncounterStageBoundariesMeetAndMouthReachesLure()
+        {
+            foreach(float power in new[]{.3f,.6f,1f})foreach(float lane in new[]{-1.3f,0,1.3f})
+            {
+                var hook=new Vector3(-1.1f,.04f,0);var launch=new Vector3(1,1.6f,.3f);
+                FishingEncounter.Pose Pose(FishingPhase phase,float progress)=>FishingEncounter.Evaluate(phase,progress,power,hook,launch,lane,3,false);
+                var cast=Pose(FishingPhase.Casting,1);var wait=Pose(FishingPhase.Waiting,0);var approach=Pose(FishingPhase.Waiting,1);var bite=Pose(FishingPhase.Bite,0);var fight=Pose(FishingPhase.Fighting,0);var end=Pose(FishingPhase.Fighting,1);var landed=Pose(FishingPhase.Landed,1);
+                Assert.That(Vector3.Distance(cast.fishPosition,wait.fishPosition),Is.LessThan(.00001f));Assert.That(Quaternion.Angle(cast.fishRotation,wait.fishRotation),Is.LessThan(.01f));
+                Assert.That(Vector3.Distance(cast.lurePosition,wait.lurePosition),Is.LessThan(.00001f));
+                Assert.That(Vector3.Distance(approach.fishPosition,bite.fishPosition),Is.LessThan(.00001f));Assert.That(Quaternion.Angle(approach.fishRotation,bite.fishRotation),Is.LessThan(.01f));
+                Assert.That(Vector3.Distance(bite.fishPosition+bite.fishRotation*hook,bite.lurePosition),Is.LessThan(.00001f));
+                Assert.That(Vector3.Distance(bite.fishPosition,fight.fishPosition),Is.LessThan(.00001f));
+                Assert.That(Vector3.Distance(end.fishPosition,landed.fishPosition),Is.LessThan(.00001f));Assert.That(Quaternion.Angle(end.fishRotation,landed.fishRotation),Is.LessThan(.01f));
+                Assert.That(Vector3.Distance(Pose(FishingPhase.Casting,0).lurePosition,launch),Is.LessThan(.00001f));
+                Assert.That(Vector3.Distance(wait.fishPosition,approach.fishPosition),Is.GreaterThan(4));
+            }
+        }
+        [Test] public void ReducedEncounterKeepsOneStaticFishPoseWithoutCastArc()
+        {
+            var home=new Vector3(-1.3f,.3f,1.2f);Quaternion? rotation=null;
+            foreach(FishingPhase phase in Enum.GetValues(typeof(FishingPhase)))foreach(float progress in new[]{0f,.25f,.5f,1f})
+            {
+                var pose=FishingEncounter.Evaluate(phase,progress,.6f,Vector3.left,Vector3.up*2,-1.3f,progress*100,true);
+                Assert.That(pose.fishPosition,Is.EqualTo(home));
+                if(rotation.HasValue)Assert.That(Quaternion.Angle(rotation.Value,pose.fishRotation),Is.LessThan(.001f));rotation=pose.fishRotation;
+                Assert.That(Vector3.Distance(pose.lurePosition,new Vector3(-1.4f,.2f,2.16f)),Is.LessThan(.00001f));
+            }
+        }
         [Test] public void StandardOverloadEscapes() { var s=Fighting(true);Advance(s,200,true);Assert.AreEqual(FishingPhase.Escaped,s.Phase); }
         [Test] public void AssistedModeRescuesHeldReelAndLands() { var s=Fighting();Advance(s,1000,true);Assert.AreEqual(FishingPhase.Landed,s.Phase);Assert.Greater(s.Rescues,0); }
         [Test] public void ReleaseInputReducesTension() { var s=Fighting(true);Advance(s,20,true);float prior=s.Tension;Advance(s,10);Assert.Less(s.Tension,prior); }

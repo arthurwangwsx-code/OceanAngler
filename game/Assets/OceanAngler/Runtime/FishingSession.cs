@@ -13,6 +13,8 @@ namespace OceanAngler
         public CatchRecord Catch { get; private set; }
         public bool Assisted { get; private set; }
         public float CastPower { get; private set; }
+        // Presentation reads the same paused/clamped clock as the simulation.
+        public float PhaseProgress => Math.Max(0,Math.Min(1,Phase==FishingPhase.Casting?phaseTime/.8f:Phase==FishingPhase.Waiting?phaseTime/biteDelay:Phase==FishingPhase.Fighting?Progress:Phase==FishingPhase.Landed?1:0));
         public int Rescues { get; private set; }
         float phaseTime, fightTime, overload, unsafeTime, retrieveSpeed = 1, resistance = 1, biteDelay = 3;
         FishDefinition fish;

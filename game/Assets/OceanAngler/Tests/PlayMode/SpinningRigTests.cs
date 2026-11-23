@@ -87,6 +87,28 @@ namespace OceanAngler.Tests
         }
 
         [UnityTest]
+        public IEnumerator LureNoseAndHookedLineFollowActualAnimatedMouth()
+        {
+            rig.Drive(0,false,false,false,false,target);yield return null;yield return null;
+            Assert.That(Vector3.Distance(rig.lureNose.position,target),Is.LessThan(.00001f));
+            var fish=Object.Instantiate(Resources.Load<GameObject>("Models/Bluefin")).GetComponent<AuthoredFishVisual>();
+            try
+            {
+                fish.transform.SetPositionAndRotation(new Vector3(-1,.6f,3),Quaternion.Euler(0,-25,0));fish.semantic="bite";
+                rig.Drive(.2f,false,false,false,false,Vector3.zero,false,false,fish);yield return null;yield return null;
+                for(int i=0;i<8;i++)
+                {
+                    fish.transform.position+=new Vector3(.07f,.02f,-.03f);yield return null;
+                    Assert.That(Vector3.Distance(rig.lureNose.position,fish.HookPosition),Is.LessThan(.00001f));
+                    Assert.That(Vector3.Distance(rig.fishingLine.GetPosition(rig.fishingLine.positionCount-1),fish.HookPosition),Is.LessThan(.00001f));
+                }
+                fish.semantic="idle";rig.Drive(.2f,false,false,false,false,Vector3.zero,false,true,fish);yield return null;yield return null;
+                Assert.That(rig.lure.gameObject.activeSelf,Is.False);
+                Assert.That(Vector3.Distance(rig.fishingLine.GetPosition(rig.fishingLine.positionCount-1),fish.HookPosition),Is.LessThan(.00001f));
+            }
+            finally{Object.Destroy(fish.gameObject);}
+        }
+        [UnityTest]
         public IEnumerator LoadedSkinMovesWithGuideAnchorsAndLineReachesHookTarget()
         {
             var skin=rig.GetComponentsInChildren<SkinnedMeshRenderer>().Single(r=>r.name=="Rod_LOD0");

@@ -36,3 +36,5 @@ Unity .meta 入库，Library/Temp/build/凭据不入库，包版本固定，首�
 ContentCatalog.json作为首批数据真值，由运行时和测试共享校验；暂不额外维护ScriptableObject副本，以避免两套数据漂移。ProgressService先写临时文件并flush/原子替换后才发布内存状态。损坏文件转存，未来版本不静默降级；家长区恢复保留原件。规则测试与Mac运行检验分别记录，规则20次循环不等于真机20次触控验收。
 
 首海湾环境表现：BayFishSchool只维护三条现有蓝鳍鲹实例，SchoolMotion以30Hz固定步长组合引导路径、邻近方向/聚合与分离。生成器从导入网格推导净空体积，独立检查全部三LOD；运行时不重复扫描网格。非鉴赏状态复用实例，暂停/减弱动态停住，模型鉴赏隐藏；碰撞器关闭，不进入捕获/积分。OceanWorld.TargetFish提供明确的当前可钓/鉴赏目标。该环境层不代表已完成拟饵感知AI、保护观察生物或多物种生态；额外Animator/蒙皮/PropertyBlock成本待真机，见[鱼群记录](../reports/bay-school.md)。
+
+钓鱼表现：FishingEncounter消费FishingSession.PhaseProgress与暂停后的表现时钟，生成固定抛投/接近/控线路径；没有改变模拟状态或存档。AuthoredSpinningRig在LateUpdate读取活动目标的HookPosition，拟饵鼻端与目标对齐，Bite/Fighting/Landed连接独立于收线输入。初始化和表现步显式、幂等，可由Editor调用同一生产入口。当前路径及有限蒙皮/环境采样仅验证首个蓝鳍鲹候选，不代表感知AI、连续碰撞、所有物种或实际触控，见[阶段表现](../reports/fishing-encounter.md)。

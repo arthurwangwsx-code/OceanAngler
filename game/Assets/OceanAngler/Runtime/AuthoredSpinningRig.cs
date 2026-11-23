@@ -16,8 +16,12 @@ namespace OceanAngler
         Quaternion rotorRest,crankRest,bailRest,spoolRest,lureRootRotation;
         Vector3 rotorLocalAxis,crankLocalAxis,bailLocalAxis,spoolRestRoot,lureRestRoot,lureAxisRoot;
         float tension,dragAngle;bool reeling,paused,reduced,casting,preview,hideLure;Vector3 endpoint;
-        void Awake()
+        FishVisual attachedFish;
+        public Vector3 CastOrigin=>guides[guides.Length-1].position;
+        void Awake(){InitializeMechanisms();}
+        public void InitializeMechanisms()
         {
+            if(boneRest!=null)return;
             boneRest=new Quaternion[rodBones.Length];bendAxes=new Vector3[rodBones.Length];
             for(int i=0;i<rodBones.Length;i++){boneRest[i]=rodBones[i].localRotation;bendAxes[i]=rodBones[i].InverseTransformDirection(transform.right);}
             rotorRest=rotor.localRotation;crankRest=crank.localRotation;bailRest=bail.localRotation;spoolRest=spool.localRotation;
@@ -27,17 +31,19 @@ namespace OceanAngler
             spoolRestRoot=transform.InverseTransformPoint(spool.position);lureRestRoot=transform.InverseTransformPoint(lure.position);
             lureRootRotation=Quaternion.Inverse(transform.rotation)*lure.rotation;lureAxisRoot=transform.InverseTransformDirection((lureNose.position-lure.position).normalized);
         }
-        public void Drive(float load,bool wind,bool stop,bool reduce,bool openBail,Vector3 target,bool inspection=false,bool hooked=false)
-        {tension=Mathf.Clamp01(load);reeling=wind;paused=stop;reduced=reduce;casting=openBail;endpoint=target;preview=inspection;hideLure=hooked;}
-        void LateUpdate()
+        public void Drive(float load,bool wind,bool stop,bool reduce,bool openBail,Vector3 target,bool inspection=false,bool hooked=false,FishVisual attachment=null)
+        {tension=Mathf.Clamp01(load);reeling=wind;paused=stop;reduced=reduce;casting=openBail;endpoint=target;preview=inspection;hideLure=hooked;attachedFish=attachment;}
+        void LateUpdate(){Present(Time.deltaTime);}
+        public void Present(float deltaTime)
         {
             if(boneRest==null)return;
+            float dt=float.IsNaN(deltaTime)||float.IsInfinity(deltaTime)?0:Mathf.Clamp(deltaTime,0,.1f);
             if(!paused&&!reduced)
             {
-                if(reeling)CrankDegrees+=Time.deltaTime*220;
-                if(!reeling&&tension>.82f)dragAngle+=Time.deltaTime*(tension-.82f)*180;
+                if(reeling)CrankDegrees+=dt*220;
+                if(!reeling&&tension>.82f)dragAngle+=dt*(tension-.82f)*180;
             }
-            if(!paused)BailOpenDegrees=reduced?(casting?82:0):Mathf.MoveTowards(BailOpenDegrees,casting?82:0,Time.deltaTime*360);
+            if(!paused)BailOpenDegrees=reduced?(casting?82:0):Mathf.MoveTowards(BailOpenDegrees,casting?82:0,dt*360);
             RotorDegrees=CrankDegrees*5.2f;SpoolStroke=Mathf.Sin(CrankDegrees*Mathf.Deg2Rad*.75f)*.006f;
             rotor.localRotation=rotorRest*Quaternion.AngleAxis(RotorDegrees,rotorLocalAxis);
             crank.localRotation=crankRest*Quaternion.AngleAxis(CrankDegrees,crankLocalAxis);
@@ -49,7 +55,10 @@ namespace OceanAngler
             if(preview){lure.position=transform.TransformPoint(lureRestRoot);lure.rotation=transform.rotation*lureRootRotation;}
             else
             {
-                lure.position=endpoint;lure.rotation=Quaternion.FromToRotation(transform.TransformDirection(lureAxisRoot),Vector3.left)*transform.rotation*lureRootRotation;
+                // Read the animated mouth after Animator updates, including a landed fish.
+                if(attachedFish!=null)endpoint=attachedFish.HookPosition;
+                lure.rotation=Quaternion.FromToRotation(transform.TransformDirection(lureAxisRoot),Vector3.left)*transform.rotation*lureRootRotation;
+                lure.position+=endpoint-lureNose.position;
             }
             Vector3 target=preview||!hideLure?lureNose.position:endpoint;int span=16;
             fishingLine.positionCount=1+guides.Length+span;fishingLine.SetPosition(0,lineExit.position);

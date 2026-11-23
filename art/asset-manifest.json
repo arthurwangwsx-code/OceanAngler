@@ -717,6 +717,51 @@
           "sha256": "9f37acb4c4ecdd37da67bfc0f918f7e70f0e5daf67fe9104404ff1a0155c8027"
         }
       ]
+    },
+    {
+      "id": "fishing-encounter-previews",
+      "author": "OceanAngler contributors",
+      "source": "game/Assets/OceanAngler/Editor/EncounterRenderReview.cs",
+      "license": "MIT",
+      "redistribution": true,
+      "status": "ART_REVIEW_PENDING",
+      "acquiredAt": "2026-11-24",
+      "provenance": "Raw project-owned Editor Metal RenderTexture captures; no external/OS/private media",
+      "note": "Eight fixed LOD0 phase/animation samples; no player UI, physical-device or production-art acceptance.",
+      "artifacts": [
+        {
+          "path": "art/previews/fishing-encounter/01-cast.png",
+          "sha256": "7d930e2f602b603340a7645739e57f5ba943dd87d5564d5150c6afa4ad375ab0"
+        },
+        {
+          "path": "art/previews/fishing-encounter/02-wait-start.png",
+          "sha256": "5eb22ed5dae6c09a018b81b139b62cbc63992184f36882b3368d69ef4b7d06b8"
+        },
+        {
+          "path": "art/previews/fishing-encounter/03-approach.png",
+          "sha256": "0b1731d8740f99e2c6647f8590825924a9b1ce144e89a433a6dce177e53c6c19"
+        },
+        {
+          "path": "art/previews/fishing-encounter/04-bite-close.png",
+          "sha256": "a34b089655b990b30409a7361d91d214c3dc70e2ef14c6cdf03e79702c44c1cf"
+        },
+        {
+          "path": "art/previews/fishing-encounter/04-bite.png",
+          "sha256": "a9bd98e960f168f4796457c3fea62a06c0caefb2e4a37a65b3ba5921c6d7ccc7"
+        },
+        {
+          "path": "art/previews/fishing-encounter/05-fight-start.png",
+          "sha256": "3f714caeef1d553971aed1135a0cd4b5aa5a8db190cdc86082b73c0d258722f5"
+        },
+        {
+          "path": "art/previews/fishing-encounter/06-fight-middle.png",
+          "sha256": "188945132aab6ecc71524ab4cc4597af5f9ba9be366e2129eaa9c7998d6287c5"
+        },
+        {
+          "path": "art/previews/fishing-encounter/07-landed.png",
+          "sha256": "8c22ed7d4be58ac1b94593778578f09642a297f1e71500a0b58b89b7d713b0d1"
+        }
+      ]
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."

@@ -3,12 +3,12 @@
 import argparse, os, subprocess, json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-p=argparse.ArgumentParser();p.add_argument('action',choices=['prepare','tests','ios','mac','bluefin','spinning-rig','coral-bay','shoal','water-review','fish-review','school-review']);p.add_argument('--build',type=int);p.add_argument('--label',default='a');p.add_argument('--test-platform',choices=['EditMode','PlayMode'],default='EditMode');a=p.parse_args()
+p=argparse.ArgumentParser();p.add_argument('action',choices=['prepare','tests','ios','mac','bluefin','spinning-rig','coral-bay','shoal','water-review','fish-review','school-review','encounter-review']);p.add_argument('--build',type=int);p.add_argument('--label',default='a');p.add_argument('--test-platform',choices=['EditMode','PlayMode'],default='EditMode');a=p.parse_args()
 editor=Path(os.environ.get('UNITY_EDITOR','/Applications/Unity/Hub/Editor/6000.3.29f1/Unity.app/Contents/MacOS/Unity'))
 local=ROOT/'.local';local.mkdir(exist_ok=True)
 if not editor.is_file():raise SystemExit('Unity Editor not found')
 env=dict(os.environ);log=local/(a.action+'.log')
-reviews={'water-review':('water-runs','OCEAN_WATER_REVIEW_OUTPUT','OceanAngler.Editor.WaterRenderReview.Capture'),'fish-review':('fish-runs','OCEAN_FISH_REVIEW_OUTPUT','OceanAngler.Editor.FishRenderReview.Capture'),'school-review':('school-runs','OCEAN_SCHOOL_REVIEW_OUTPUT','OceanAngler.Editor.SchoolRenderReview.Capture')}
+reviews={'water-review':('water-runs','OCEAN_WATER_REVIEW_OUTPUT','OceanAngler.Editor.WaterRenderReview.Capture'),'fish-review':('fish-runs','OCEAN_FISH_REVIEW_OUTPUT','OceanAngler.Editor.FishRenderReview.Capture'),'school-review':('school-runs','OCEAN_SCHOOL_REVIEW_OUTPUT','OceanAngler.Editor.SchoolRenderReview.Capture'),'encounter-review':('encounter-runs','OCEAN_ENCOUNTER_REVIEW_OUTPUT','OceanAngler.Editor.EncounterRenderReview.Capture')}
 gpu_review=a.action in reviews
 if gpu_review:
  if not a.label.isalnum():raise SystemExit('simple review label required')
@@ -25,7 +25,7 @@ if a.action=='tests':
   save.mkdir(parents=True);cmd+=['--ocean-save-root',str(save)]
 else:
  method=reviews[a.action][2] if gpu_review else 'OceanAngler.Editor.BaySchoolBuilder.Prepare' if a.action=='shoal' else 'OceanAngler.Editor.FishRenderReview.Capture' if a.action=='fish-review' else 'OceanAngler.Editor.WaterRenderReview.Capture' if a.action=='water-review' else 'OceanAngler.Editor.BayAssetBuilder.Prepare' if a.action=='coral-bay' else 'OceanAngler.Editor.SpinningRigAssetBuilder.Prepare' if a.action=='spinning-rig' else 'OceanAngler.Editor.BluefinAssetBuilder.Prepare' if a.action=='bluefin' else 'OceanAngler.Editor.BuildTools.'+('Prepare' if a.action=='prepare' else 'ExportMac' if a.action=='mac' else 'ExportIOS')
- cmd+=([] if a.action in ('fish-review','school-review') else ['-quit'])+['-executeMethod',method]
+ cmd+=([] if a.action in ('fish-review','school-review','encounter-review') else ['-quit'])+['-executeMethod',method]
  if a.action=='mac':
   output=ROOT/'build/OceanAngler.app';output.parent.mkdir(exist_ok=True);env['OCEAN_MAC_OUTPUT']=str(output)
  if a.action=='ios':
