@@ -22,7 +22,7 @@
 
 ## 数据与表现边界
 
-ContentCatalog已登记12个候选学名和独立的3个ObservationDefinition条目。观察条目不属于FishDefinition，不能进入随机可钓池；FishingSession抛竿先按可钓目录解析目标ID，未知或观察ID在改变会话前拒绝，鱼获结算同样拒绝。场景中的观察生物模型、动画、出现路径、交互与观察图鉴仍未实现；目录登记不能代替这些工作。
+ContentCatalog已登记12个候选学名和独立的3个ObservationDefinition条目。观察条目不属于FishDefinition，不能进入随机可钓池；FishingSession抛竿先按可钓目录解析目标ID，未知或观察ID在改变会话前拒绝，鱼获结算同样拒绝。后续源码已接入独立保护观察图鉴、主动观察/记录、存档、跨海域入口和后台保护，三种运行时形体仍为A0交互样板，完整源模型/PBR/骨骼动作/LOD与成品场景路径及设备验收仍缺。见[观察闭环证据](../reports/protected-observation.md)；功能候选不计作完整资产。
 
 学名、逐种辨识和自然栖息环境已进入共享可滚动详情，科学人工复核和实际设备画面另验。见[图鉴详情证据](../reports/journal-species.md)。保留既有12个fishId及存档版本，避免历史鱼获失去对应。观察条目在游戏中的海域归属是制作安排，不是现实地理分布。
 
@@ -34,6 +34,8 @@ ContentCatalog已登记12个候选学名和独立的3个ObservationDefinition条
 
 首条鱼与完整钓组已有四角图、转台和工作室近景，本轮已提交给用户审阅方向；尚无用户结论，A1–A3出口保持未通过。其余物种的独立源模型继续遵守[美术生产与用户审阅门槛](03-art-pipeline.md)。
 
-目录与入口检查见[species-catalog-checks.json](../reports/species-catalog-checks.json)：27项Editor、7项无画面PlayMode及Mac编译通过；观察ID伪造抛竿与结算均被拒绝。参考结构校验只核对ID/学名/来源登记，不能证明生物学内容正确，也不覆盖观察生物的场景交互。当前TestFlight build 2尚不含这些后续变化。
+目录与入口检查见[species-catalog-checks.json](../reports/species-catalog-checks.json)：27项Editor、7项无画面PlayMode及Mac编译通过；观察ID伪造抛竿与结算均被拒绝。参考结构校验只核对ID/学名/来源登记，不能证明生物学内容正确，也不覆盖观察生物的场景交互。该历史检查对应时，TestFlight build 2不含这些后续变化；后续版本按发布回执区分。
 
 发行更新：上述后续源码已进入0.1.0 (3)/05c8cc7，Apple处理和本人组已核实；[build 3回执](../reports/testflight-0.1.0-3.json)与[设备复核](12-beta3-review.md)另记。科学人工、实际设备画面/听感及完整产品仍未通过。
+
+保护观察后续源码未进入TestFlight 0.1.0 (4)/ee7ba50；schema 2观察记录的旧包回退限制见[功能与存档说明](14-protected-observation.md)。科学/用户、美术A1–A3及设备验收继续保留。

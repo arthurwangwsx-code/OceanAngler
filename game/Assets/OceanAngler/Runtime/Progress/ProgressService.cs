@@ -28,6 +28,13 @@ namespace OceanAngler
             next.catches.Add(settled); next.totalPoints = checked(next.totalPoints + points); next.tutorialComplete = true;
             Commit(next); return points;
         }
+        public bool Observe(string id)
+        {
+            EnsureReady();var species=catalog.Observation(id);
+            if(species.habitatId!=Data.habitatId||catalog.Habitat(species.habitatId).unlockPoints>Data.totalPoints)throw new InvalidOperationException("Observation habitat unavailable");
+            if(Data.observations.Contains(id))return false;
+            var next=Data.Clone();next.schemaVersion=2;next.observations.Add(id);Commit(next);return true;
+        }
         public void SelectHabitat(string id)
         {
             EnsureReady(); if (catalog.Habitat(id).unlockPoints > Data.totalPoints) throw new InvalidOperationException("Habitat locked");

@@ -51,6 +51,12 @@ namespace OceanAngler
             }
             Changed?.Invoke();
         }
+        public void RecordObservation()
+        {
+            var encounter=GetComponent<OceanWorld>()?.Observations;
+            if(Progress.RequiresRecovery||encounter==null||!encounter.CanRecord||!GetComponent<GameUI>().InspectingObservation)return;
+            Try(()=>{bool first=Progress.Observe(encounter.SpeciesId);Notice=first?"已记入观察图鉴，安静地和它告别吧。":"这位朋友已在观察图鉴中。";},"暂时无法保存观察记录，请重试。");
+        }
         public void ReturnToPreparation() { Session.Cancel(); Pause(false); Notice="本次鱼获已放回海中，已有记录和积分保留。"; Changed?.Invoke(); }
         public void Retry() { Session.Retry(); Reeling = false; Changed?.Invoke(); }
         public void SelectHabitat(string id) { if (Session.Phase == FishingPhase.Ready) Try(() => Progress.SelectHabitat(id)); }
@@ -59,11 +65,11 @@ namespace OceanAngler
         public void ResetProgress() { if (Try(() => Progress.Reset())) { Session.Cancel(); Reeling = false; Notice = "已建立新存档，原始文件已保留。"; } }
         public void DismissRest() { RestReminder = false; activeTime = 0; }
         public void ClearNotice() { Notice = null; }
-        bool Try(Action action)
+        bool Try(Action action,string failureNotice=null)
         {
             try { action(); Changed?.Invoke(); return true; }
             catch (Exception e) when (e is IOException || e is UnauthorizedAccessException || e is InvalidOperationException || e is ArgumentException)
-            { Notice = "暂时无法保存，请重试；本次鱼获还没有丢失。"; Debug.LogWarning("Progress operation failed: " + e.GetType().Name); Changed?.Invoke(); return false; }
+            { Notice = failureNotice ?? "暂时无法保存，请重试；本次鱼获还没有丢失。"; Debug.LogWarning("Progress operation failed: " + e.GetType().Name); Changed?.Invoke(); return false; }
         }
         void OnApplicationFocus(bool focus) { if (!focus) Pause(true); }
         void OnApplicationPause(bool paused) { if (paused) Pause(true); }

@@ -42,8 +42,12 @@ namespace OceanAngler
             if (envelope != null && envelope.version > 1) throw new FutureSaveException();
             if (envelope == null || envelope.version != 1 || string.IsNullOrEmpty(envelope.payload) || envelope.checksum != Hash(envelope.payload)) throw new InvalidOperationException("Invalid envelope");
             var p = JsonUtility.FromJson<ProgressData>(envelope.payload);
-            if (p != null && p.schemaVersion > 1) throw new FutureSaveException();
-            if (p == null) throw new InvalidOperationException("Missing payload"); p.Validate(catalog); return p;
+            if (p != null && p.schemaVersion > 2) throw new FutureSaveException();
+            if (p == null) throw new InvalidOperationException("Missing payload");
+            // Legacy saves omit this additive field. Keep version 1 until an
+            // observation is committed, so old builds cannot erase new records.
+            if(p.schemaVersion==1&&p.observations==null)p.observations=new System.Collections.Generic.List<string>();
+            p.Validate(catalog); return p;
         }
         public void Write(ProgressData p)
         {

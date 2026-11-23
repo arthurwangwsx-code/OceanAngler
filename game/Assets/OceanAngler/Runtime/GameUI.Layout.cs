@@ -12,12 +12,12 @@ namespace OceanAngler
             var header=At(pageRoot,"Header",Navy,0,0,0,Compact?44:80);
             Label(header,"海洋小钓手",Compact?20:30,Color.white,Compact?12:24,Compact?6:14,260,Compact?32:46);
             pointsText=Label(header,game.Progress.RequiresRecovery?"存档需要恢复":"研究积分  "+game.Progress.Data.totalPoints,Compact?17:22,Gold,Compact?-260:-310,Compact?9:22,Compact?145:280,Compact?28:36,true);
-            if(Compact&&!game.Progress.RequiresRecovery)Button(header,(InspectingGear||InspectingHabitat)?"返回":game.Session.Paused?"继续":"暂停",-104,0,100,44,()=>{if(InspectingGear)Navigate("钓具");else if(InspectingHabitat)Navigate("出海");else game.Pause(!game.Session.Paused);},Panel);
+            if(Compact&&!game.Progress.RequiresRecovery)Button(header,(InspectingGear||InspectingHabitat||InspectingObservation)?"返回":game.Session.Paused?"继续":"暂停",-104,0,100,44,()=>{if(InspectingGear)Navigate("钓具");else if(InspectingHabitat)Navigate("出海");else if(InspectingObservation)Navigate("保护观察");else game.Pause(!game.Session.Paused);},Panel);
             var nav=At(pageRoot,"Navigation",Navy,0,Compact?44:82,0,Compact?52:60);
             string[] names={"出海","图鉴","钓具","任务","设置"};float navWidth=Compact?(Width-24)/5:145;
             for(int i=0;i<names.Length;i++)
             {
-                string target=names[i];var b=Button(nav,target,(Compact?12:16)+i*navWidth,Compact?4:7,navWidth-8,Compact?44:46,()=>Navigate(target),page==target||page=="鱼类详情"&&target=="图鉴"||InspectingGear&&target=="钓具"||InspectingHabitat&&target=="出海"?Teal:Panel);b.interactable=!game.Progress.RequiresRecovery;
+                string target=names[i];var b=Button(nav,target,(Compact?12:16)+i*navWidth,Compact?4:7,navWidth-8,Compact?44:46,()=>Navigate(target),page==target||(page=="鱼类详情"||ObservationJournal)&&target=="图鉴"||InspectingGear&&target=="钓具"||InspectingHabitat&&target=="出海"?Teal:Panel);b.interactable=!game.Progress.RequiresRecovery;
                 if(Compact)b.GetComponentInChildren<Text>().fontSize=18;
             }
             var footer=At(pageRoot,"Footer",Navy,0,0,0,Compact?30:58,true);
@@ -105,8 +105,9 @@ namespace OceanAngler
         }
         void BuildCompactJournal()
         {
-            var content=PagePanel("Journal",Vector2.zero,Vector2.one,490);Label(content,"鱼类图鉴  "+game.Progress.Data.catches.Select(c=>c.fishId).Distinct().Count()+" / 12",22,Color.white,22,12,-44,34);
-            BuildFishCards(content,Width-24,2,56);
+            var content=PagePanel("Journal",Vector2.zero,Vector2.one,550);Label(content,"鱼类图鉴  "+game.Progress.Data.catches.Select(c=>c.fishId).Distinct().Count()+" / 12",22,Color.white,22,12,-44,34);
+            ObservationEntry(content,56);
+            BuildFishCards(content,Width-24,2,110);
         }
         void BuildCompactInspect()
         {

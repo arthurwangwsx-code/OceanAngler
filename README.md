@@ -15,6 +15,7 @@
 | 联网研究及旧项目参考 | [参考研究](docs/05-research.md) |
 | 分阶段任务、投入、风险与质量 | [路线及验收](docs/06-delivery.md) |
 | GitHub 开源流程 | [开源流程](docs/07-open-source.md) |
+| 保护观察后续源码与存档边界 | [交互说明](docs/14-protected-observation.md)、[A0工程证据](reports/protected-observation.md) |
 | App Store Connect 与本人 TestFlight | [发布流程](docs/08-testflight.md) |
 | 本次候选如何在设备上复核 | [build 4设备检查](docs/13-beta4-review.md) |
 | 当前真实结果 | [完整总账](reports/acceptance-ledger.md)、[移动布局与发行](reports/mobile-layout.md)、[逻辑与Mac运行](reports/progression-validation.md) |
@@ -50,10 +51,12 @@ ASC_ENV_FILE=/path/to/private/asc.env python3 tools/asc.py status
 
 [360度源模型转台](art/previews/bluefin-anatomy/turntable.mp4)。首条蓝鳍鲹与完整纺车钓组均有独立Blend/FBX、PBR、骨骼/动作和三档LOD；另有[钓组近景](art/previews/spinning-rig/reel.png)和[卷线器转台](art/previews/spinning-rig/turntable.mp4)。这些仍是候选，A1–A3、科学/用户审阅和真机尚未通过；其余11鱼种、其他钓具、两海域及观察生物仍需完整制作。
 
-当前开发源码包含保存成功后的转向/放流与空载竿恢复、18任务指引、12候选学名和3个仅观察目录保护，以及原创水下底音/探索音乐及独立保存的开关。初始装备20次确定性模拟、逐次重载、重复记录不加分和全装备解锁已有[逻辑证据](reports/task-journey.json)，不代表儿童首鱼时间、随机遭遇耗时或实际20次UI试玩。观察生物的模型/场景交互尚未实现。
+当前开发源码包含保存成功后的转向/放流与空载竿恢复、18任务指引、12候选学名和3个仅观察目录保护，以及原创水下底音/探索音乐及独立保存的开关。初始装备20次确定性模拟、逐次重载、重复记录不加分和全装备解锁已有[逻辑证据](reports/task-journey.json)，不代表儿童首鱼时间、随机遭遇耗时或实际20次UI试玩。后续源码已接入独立保护观察交互和图鉴，三种形体仍为A0样板，完整源模型与美术验收未完成。
 
-海湾已有独立源地形、码头、小船、岩礁/珊瑚/海草、水上/水下观察、缓存倒影与深度透射。源网格朝向/封闭、鱼体鳃缘/材质及鉴赏标题修复分别保留证据；岸线从孤立沙脊改为连接陆地的缓坡，沙地波纹与颜色分离。蓝鳍鲹新增实际向下张开的下颌、口腔内颊及逐段鳍纹，修复隔离场景首次绘制的子材质颜色异常。开发分支又加入三条复用模型的环境鱼群，固定实例、局部聚合/分离，暂停和减弱动态停止；图鉴/钓具鉴赏隐藏，背景鱼不参与结算。开发分支还加入抛投、接近、控线收鱼的阶段路径，鱼线保持到收鱼并跟随动画嘴部。蓝鳍鲹又补灰银/灰铜与蓝黑斑、蓝/浅鳍色区及较收敛的鳍比例，校准近景自阴影。最新41项Editor、8项无画面PlayMode及Mac编译通过，源文件工程检查和Editor离屏GPU图分别审阅；当前原生窗口与实际iPhone/iPad画面、触控、听感/触觉及20分钟性能仍未通过。旧版三档Mac流程各12截图属于其历史源码，不能替代新资产的验收。
+海湾已有独立源地形、码头、小船、岩礁/珊瑚/海草、水上/水下观察、缓存倒影与深度透射。源网格朝向/封闭、鱼体鳃缘/材质及鉴赏标题修复分别保留证据；岸线从孤立沙脊改为连接陆地的缓坡，沙地波纹与颜色分离。蓝鳍鲹新增实际向下张开的下颌、口腔内颊及逐段鳍纹，修复隔离场景首次绘制的子材质颜色异常。开发分支又加入三条复用模型的环境鱼群，固定实例、局部聚合/分离，暂停和减弱动态停止；图鉴/钓具鉴赏隐藏，背景鱼不参与结算。开发分支还加入抛投、接近、控线收鱼的阶段路径，鱼线保持到收鱼并跟随动画嘴部。蓝鳍鲹又补灰银/灰铜与蓝黑斑、蓝/浅鳍色区及较收敛的鳍比例，校准近景自阴影。最新46项Editor、9项无画面PlayMode及Mac编译通过，源文件工程检查和Editor离屏GPU图分别审阅；当前原生窗口与实际iPhone/iPad画面、触控、听感/触觉及20分钟性能仍未通过。旧版三档Mac流程各12截图属于其历史源码，不能替代新资产的验收。
 
-Mac构建入口为`python3 tools/game.py mac`；原生检查为`python3 tools/runtime_smoke.py --label unique-run`，使用隔离存档，须在桌面窗口可用后实际运行并核对图像/回执。Editor离屏诊断为`python3 tools/game.py water-review --label unique-review`，不能据此宣布玩家UI或设备通过。Unity和资产写入串行，每轮用新label保留证据；字体重建见tools/requirements.txt。
+Mac构建入口为`python3 tools/game.py mac`；原生检查为`python3 tools/runtime_smoke.py --label uniquerun`，使用隔离存档，须在桌面窗口可用后实际运行并核对图像/回执。Editor离屏诊断为`python3 tools/game.py water-review --label uniquereview`，不能据此宣布玩家UI或设备通过。Unity和资产写入串行，每轮用新label保留证据；字体重建见tools/requirements.txt。
 
 TestFlight 0.1.0 (4)冻结于ee7ba50，包含三条环境鱼、阶段接近/收鱼、共享选择入口、重复抛竿保护及鱼体/阴影更新。[发行回执](reports/testflight-0.1.0-4.json)记录Apple VALID/INTERNAL_ONLY、本人两账号组和测试说明；指定邮箱邀请为INVITED，实际安装启动未验。按[build 4设备复核](docs/13-beta4-review.md)继续记录。历史[build 1](reports/testflight-0.1.0-1.json)、[build 2](reports/testflight-0.1.0-2.json)、[build 3](reports/testflight-0.1.0-3.json)产物与回执保留。新构建按[冻结源码发布流程](docs/08-testflight.md)使用新build号。ASC工具另需PyJWT与cryptography，凭据显式在本机配置，不进入公开仓库。
+
+保护观察后续源码已接入绿海龟、宽吻海豚和鲸鲨的独立观察/图鉴/存档闭环，形体仅为A0样板。首次记录才升级payload为schema 2，旧build 4会拒绝该版本以保护记录，不能以清档解决回退。此变化尚未进入上述TestFlight 0.1.0 (4)，详见[验证与限制](reports/protected-observation.md)。

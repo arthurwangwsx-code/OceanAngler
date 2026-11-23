@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-23T22:55:25.621Z",
+  "generatedAt": "2026-11-23T23:22:33.706Z",
   "source": {
     "change": "product-technical-foundation",
     "cliVersion": "1.0.20",
@@ -26,16 +26,16 @@
     "firstAttemptPassedCount": 1,
     "firstAttemptEvaluatedCount": 1,
     "firstAttemptPassRate": 1,
-    "elapsedMs": 70089894,
-    "observedStepWallMs": 36488340,
+    "elapsedMs": 71717979,
+    "observedStepWallMs": 38116425,
     "unattributedMs": 33601554,
-    "unattributedRate": 0.47940654611348105,
-    "commandMeasurementCount": 484,
-    "commandSucceededCount": 441,
+    "unattributedRate": 0.46852343678005764,
+    "commandMeasurementCount": 499,
+    "commandSucceededCount": 456,
     "commandFailedCount": 43,
-    "commandSuccessRate": 0.9111570247933884,
-    "commandDurationMs": 10072237.241664996,
-    "gateCheckCount": 27,
+    "commandSuccessRate": 0.9138276553106213,
+    "commandDurationMs": 10498048.175457995,
+    "gateCheckCount": 28,
     "repairCount": 0,
     "targetMs": 3600000,
     "targetMet": null,
@@ -52,7 +52,7 @@
     },
     "entryChecks": {
       "status": "complete",
-      "recorded": 27,
+      "recorded": 28,
       "expectedAtLeast": 2
     },
     "runAttribution": {
@@ -62,7 +62,7 @@
     },
     "commandMeasurements": {
       "status": "partial",
-      "recorded": 484
+      "recorded": 499
     },
     "waitingTime": {
       "status": "unavailable"
@@ -78,14 +78,14 @@
   "runs": [],
   "runMetrics": {
     "version": 1,
-    "generatedAt": "2026-11-23T22:55:25.621Z",
+    "generatedAt": "2026-11-23T23:22:33.706Z",
     "runs": [],
     "unattributed": {
       "unboundAttempts": 2,
       "unknownRunAttempts": 0,
-      "unboundCommands": 484,
+      "unboundCommands": 499,
       "unknownRunCommands": 0,
-      "unboundGateChecks": 27,
+      "unboundGateChecks": 28,
       "unknownRunGateChecks": 0,
       "repairsWithoutRunBinding": 0,
       "unknownRunRepairs": 0
@@ -7351,6 +7351,231 @@
       "exitCode": 0,
       "signal": null,
       "errorCode": null
+    },
+    {
+      "id": "fc11e668-ce00-43e1-9a43-39668b7729bc",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "20485823268158eb18699bca73564bd8c7ef88ec0c29af538a816eecf4b00517",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-23T23:03:14.911Z",
+      "finishedAt": "2026-11-23T23:03:26.082Z",
+      "durationMs": 11138.637832999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null
+    },
+    {
+      "id": "10b86713-a2c3-4d13-bf90-08ad19b831fd",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d1551e8281ca318cdb989f8c165e492140123abce8033264e0141bf4686cf564",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-23T23:04:32.059Z",
+      "finishedAt": "2026-11-23T23:04:43.379Z",
+      "durationMs": 11289.673125,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null
+    },
+    {
+      "id": "d56fa256-1ae8-48d4-ac5d-2d037e7a48b5",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "5f049fb6c545b54fa0de1247430f9ddcb14c52db16cb99cc14fe3cd0b59d8f44",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-23T23:06:32.307Z",
+      "finishedAt": "2026-11-23T23:08:26.208Z",
+      "durationMs": 113870.7755,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null
+    },
+    {
+      "id": "bee01e5f-b811-4865-9751-d4722c3ba1ba",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "05affc4328af2b1cfe9f83bc5b5677d8b64028999bfa705751e8432564fb6c9c",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-23T23:08:37.744Z",
+      "finishedAt": "2026-11-23T23:09:04.884Z",
+      "durationMs": 27114.07125,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null
+    },
+    {
+      "id": "331ac575-b3ac-4dd7-b37e-de087178f509",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "f44cbdfb78cb62c13f0696cfa637b073c932cf165a81910cb8d03e9225918dd6",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-23T23:09:52.368Z",
+      "finishedAt": "2026-11-23T23:10:21.976Z",
+      "durationMs": 29581.213792000002,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null
+    },
+    {
+      "id": "3c0aeece-57b1-4ea6-b96a-5febdc0067ef",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "3636f6c15633f11bac12ba3ea2c598391511cc036c0c25db821d1dd9a9d42221",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-23T23:10:34.846Z",
+      "finishedAt": "2026-11-23T23:10:46.079Z",
+      "durationMs": 11218.914917,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null
+    },
+    {
+      "id": "7866ae6b-6409-4d28-8098-d54f40ae8c05",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "dcd09ff02dc0c6f2a29c82668537a0778feaae38c078115d71f7502fcc5d893f",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-23T23:12:33.688Z",
+      "finishedAt": "2026-11-23T23:13:03.229Z",
+      "durationMs": 29520.163167000002,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null
+    },
+    {
+      "id": "1ce6ea53-580a-4700-945b-069bbf57d61a",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "3eed7095bea850c4d080c0cddb56d9d62972cfa0bb0cd29cfa3409b8af026d05",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-23T23:14:21.509Z",
+      "finishedAt": "2026-11-23T23:14:32.345Z",
+      "durationMs": 10798.864167,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null
+    },
+    {
+      "id": "4c294bab-3faa-48f1-9fd7-0fbda79772a0",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "5f049fb6c545b54fa0de1247430f9ddcb14c52db16cb99cc14fe3cd0b59d8f44",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-23T23:14:53.118Z",
+      "finishedAt": "2026-11-23T23:16:49.219Z",
+      "durationMs": 116079.161792,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null
+    },
+    {
+      "id": "f43c8912-9bfb-405a-b35a-f7f2ef9cedc2",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "59fc88667483167c9260d6ec23c943bfaaaa5bd8ec292aceb5ef20cfebbfa2c9",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-23T23:17:39.193Z",
+      "finishedAt": "2026-11-23T23:18:06.503Z",
+      "durationMs": 27285.020583,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null
+    },
+    {
+      "id": "ad25b837-8dfd-489b-a321-8dcee00bfc29",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "49b978df2fc9e37f8144ce2b1c619c61410d0ef52e49d84957662f594cdb1e94",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-23T23:19:12.068Z",
+      "finishedAt": "2026-11-23T23:19:12.420Z",
+      "durationMs": 324.42662499999994,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null
+    },
+    {
+      "id": "743e545c-7670-4ae2-bfef-0498d0777c86",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "6cecf2c346e385e5462c5ecf2228f5f55c1ffae6caa66a187b499bd79e8e7bbd",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-23T23:18:44.400Z",
+      "finishedAt": "2026-11-23T23:19:21.548Z",
+      "durationMs": 37125.129208,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null
+    },
+    {
+      "id": "8276a287-2724-4e87-9adc-45574c42a4d1",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "1b9b750d007c851f920bb86ccb95b6c8d0649e1d11d26d4708a2736b0478955e",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-23T23:21:49.143Z",
+      "finishedAt": "2026-11-23T23:21:49.393Z",
+      "durationMs": 221.57383400000003,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null
+    },
+    {
+      "id": "7989b99e-ccd4-4009-868a-60b2de09b9fe",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d89602c770c16a35b6c5da9a9da4ae967807390aa462f4349604d0463de12f51",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-23T23:21:49.792Z",
+      "finishedAt": "2026-11-23T23:21:50.024Z",
+      "durationMs": 212.54125,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null
+    },
+    {
+      "id": "831baa62-6dba-4202-b676-8dba3522bc7c",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "649f53e7041a0b5c99ff047535ad9586b7fba05cfe2a0f1e912953eca74dd065",
+      "category": "lint",
+      "executable": "git",
+      "startedAt": "2026-11-23T23:21:50.432Z",
+      "finishedAt": "2026-11-23T23:21:50.482Z",
+      "durationMs": 30.766750000000002,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null
     }
   ],
   "measurementAudit": {
@@ -7358,8 +7583,8 @@
     "scope": "declared-command-receipts-only",
     "runId": null,
     "complete": false,
-    "registered": 482,
-    "completed": 484,
+    "registered": 497,
+    "completed": 499,
     "unfinishedIds": [],
     "legacyMeasurementIds": [],
     "legacyPolicy": "unverified-format-without-start-records-not-reconstructed",
@@ -9310,6 +9535,66 @@
       {
         "code": "receipt-missing-or-invalid",
         "measurementId": "51933bca-1c64-4edc-8d99-53055ebf6d68"
+      },
+      {
+        "code": "receipt-missing-or-invalid",
+        "measurementId": "fc11e668-ce00-43e1-9a43-39668b7729bc"
+      },
+      {
+        "code": "receipt-missing-or-invalid",
+        "measurementId": "10b86713-a2c3-4d13-bf90-08ad19b831fd"
+      },
+      {
+        "code": "receipt-missing-or-invalid",
+        "measurementId": "d56fa256-1ae8-48d4-ac5d-2d037e7a48b5"
+      },
+      {
+        "code": "receipt-missing-or-invalid",
+        "measurementId": "bee01e5f-b811-4865-9751-d4722c3ba1ba"
+      },
+      {
+        "code": "receipt-missing-or-invalid",
+        "measurementId": "331ac575-b3ac-4dd7-b37e-de087178f509"
+      },
+      {
+        "code": "receipt-missing-or-invalid",
+        "measurementId": "3c0aeece-57b1-4ea6-b96a-5febdc0067ef"
+      },
+      {
+        "code": "receipt-missing-or-invalid",
+        "measurementId": "7866ae6b-6409-4d28-8098-d54f40ae8c05"
+      },
+      {
+        "code": "receipt-missing-or-invalid",
+        "measurementId": "1ce6ea53-580a-4700-945b-069bbf57d61a"
+      },
+      {
+        "code": "receipt-missing-or-invalid",
+        "measurementId": "4c294bab-3faa-48f1-9fd7-0fbda79772a0"
+      },
+      {
+        "code": "receipt-missing-or-invalid",
+        "measurementId": "f43c8912-9bfb-405a-b35a-f7f2ef9cedc2"
+      },
+      {
+        "code": "receipt-missing-or-invalid",
+        "measurementId": "ad25b837-8dfd-489b-a321-8dcee00bfc29"
+      },
+      {
+        "code": "receipt-missing-or-invalid",
+        "measurementId": "743e545c-7670-4ae2-bfef-0498d0777c86"
+      },
+      {
+        "code": "receipt-missing-or-invalid",
+        "measurementId": "8276a287-2724-4e87-9adc-45574c42a4d1"
+      },
+      {
+        "code": "receipt-missing-or-invalid",
+        "measurementId": "7989b99e-ccd4-4009-868a-60b2de09b9fe"
+      },
+      {
+        "code": "receipt-missing-or-invalid",
+        "measurementId": "831baa62-6dba-4202-b676-8dba3522bc7c"
       }
     ],
     "businessAcceptance": "not-evaluated",
@@ -9324,35 +9609,35 @@
   "commands": [
     {
       "category": "test",
-      "count": 130,
-      "succeededCount": 111,
+      "count": 137,
+      "succeededCount": 118,
       "failedCount": 19,
-      "successRate": 0.8538461538461538,
-      "durationMs": 1358899.3911220003
+      "successRate": 0.8613138686131386,
+      "durationMs": 1702674.2238310005
     },
     {
       "category": "compile",
-      "count": 161,
-      "succeededCount": 153,
+      "count": 164,
+      "succeededCount": 156,
       "failedCount": 8,
-      "successRate": 0.9503105590062112,
-      "durationMs": 3909044.0578779997
+      "successRate": 0.9512195121951219,
+      "durationMs": 3968597.498044
     },
     {
       "category": "e2e",
-      "count": 102,
-      "succeededCount": 87,
+      "count": 104,
+      "succeededCount": 89,
       "failedCount": 15,
-      "successRate": 0.8529411764705882,
-      "durationMs": 4790590.378375
+      "successRate": 0.8557692307692307,
+      "durationMs": 4812608.157459
     },
     {
       "category": "lint",
-      "count": 91,
-      "succeededCount": 90,
+      "count": 94,
+      "succeededCount": 93,
       "failedCount": 1,
-      "successRate": 0.989010989010989,
-      "durationMs": 13703.414290000004
+      "successRate": 0.9893617021276596,
+      "durationMs": 14168.296124000006
     }
   ],
   "gateChecks": [
@@ -9571,6 +9856,14 @@
       "checkedAt": "2026-11-23T22:41:33.834Z",
       "durationMs": 58.490207999999996,
       "outcome": "accepted"
+    },
+    {
+      "stageId": "apply",
+      "runId": null,
+      "operation": "start",
+      "checkedAt": "2026-11-23T22:57:50.056Z",
+      "durationMs": 67.73858299999995,
+      "outcome": "accepted"
     }
   ],
   "timing": {
@@ -9578,8 +9871,8 @@
     "finishedAt": null,
     "status": "in_progress",
     "measurementBasis": "before-first-entry-gate",
-    "elapsedMs": 70089894,
-    "observedStepWallMs": 36488340,
+    "elapsedMs": 71717979,
+    "observedStepWallMs": 38116425,
     "unattributedMs": 33601554,
     "waitingMs": null,
     "retryAttemptMs": 0,

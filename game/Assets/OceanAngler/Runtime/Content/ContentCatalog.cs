@@ -28,7 +28,7 @@ namespace OceanAngler
     }
     [Serializable] public sealed class ObservationDefinition
     {
-        public string id, name, scientificName, habitatId, note;
+        public string id, name, scientificName, habitatId, note, recognition, naturalHabitat;
     }
     [Serializable] public sealed class ContentCatalog
     {
@@ -46,6 +46,7 @@ namespace OceanAngler
         }
         public FishDefinition Fish(string id) => fish.FirstOrDefault(x => x.id == id) ?? throw new ArgumentException("Unknown fish " + id);
         public HabitatDefinition Habitat(string id) => habitats.FirstOrDefault(x => x.id == id) ?? throw new ArgumentException("Unknown habitat " + id);
+        public ObservationDefinition Observation(string id) => observations.FirstOrDefault(x => x.id == id) ?? throw new ArgumentException("Unknown observation " + id);
         public GearDefinition Gear(string id) => gear.FirstOrDefault(x => x.id == id) ?? throw new ArgumentException("Unknown gear " + id);
         public void Validate()
         {
@@ -59,7 +60,7 @@ namespace OceanAngler
             var species=new HashSet<string>(fish.Select(f=>f.scientificName),StringComparer.OrdinalIgnoreCase);
             if(species.Count!=fish.Length)throw new InvalidOperationException("Duplicate catchable species");
             foreach(var o in observations)
-                if(string.IsNullOrWhiteSpace(o.name)||string.IsNullOrWhiteSpace(o.scientificName)||!habitats.Any(h=>h.id==o.habitatId)||!species.Add(o.scientificName))
+                if(string.IsNullOrWhiteSpace(o.name)||string.IsNullOrWhiteSpace(o.scientificName)||string.IsNullOrWhiteSpace(o.recognition)||string.IsNullOrWhiteSpace(o.naturalHabitat)||!habitats.Any(h=>h.id==o.habitatId)||!species.Add(o.scientificName))
                     throw new InvalidOperationException("Invalid observation-only species "+o.id);
             foreach (var category in new[] { "rod", "reel", "line", "lure" })
                 if (!gear.Any(g => g.category == category && g.unlockPoints == 0)) throw new InvalidOperationException("Missing starter gear");

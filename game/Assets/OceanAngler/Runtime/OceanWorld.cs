@@ -10,6 +10,7 @@ namespace OceanAngler
         BayHabitat bay;GameObject prototypeEnvironment;Transform environmentParent;
         Camera view;
         public FishVisual TargetFish=>fish;
+        public ObservationEncounter Observations {get;private set;}
         float visualTime;
         Vector3 fishHookLocal;
         CatchRecord releasing;
@@ -21,6 +22,7 @@ namespace OceanAngler
         {
             game=GetComponent<GameController>();ui=GetComponent<GameUI>();view=Camera.main;
             wood=Mat(new Color(.47f,.28f,.12f),.25f);water=Mat(new Color(.025f,.4f,.53f),.85f);
+            Observations=gameObject.AddComponent<ObservationEncounter>();
             MakeEnvironment();MakeGear();SelectFish(game.Content.fish[0].id);game.Released+=BeginRelease;
         }
         Material Mat(Color color,float smooth,float metallic=0) {var m=SurfaceMaterial.Create();m.color=color;m.SetFloat("_Smoothness",smooth);m.SetFloat("_Metallic",metallic);return m;}
@@ -91,10 +93,10 @@ namespace OceanAngler
             if(game==null||game.Progress.RequiresRecovery)return;
             var data=game.Progress.Data;bool reduced=data.settings.reducedMotion;
             if(game.Session.Phase!=FishingPhase.Ready||habitat!=null&&habitat!=data.habitatId){releasing=null;awaitingNextFish=false;}
-            if(ui.FocusedFish!=null||ui.InspectingGear||ui.InspectingHabitat||reduced)releasing=null;
+            if(ui.FocusedFish!=null||ui.InspectingGear||ui.InspectingHabitat||ui.InspectingObservation||reduced)releasing=null;
             string desired=ui.FocusedFish??releasing?.fishId??game.Session.Catch?.fishId??(awaitingNextFish?fishId:System.Array.Find(game.Content.fish,f=>f.habitatId==data.habitatId).id);
             if(desired!=fishId)SelectFish(desired);
-            fishRoot.gameObject.SetActive(!ui.InspectingGear&&!ui.InspectingHabitat&&(!awaitingNextFish||releasing!=null||ui.FocusedFish!=null));gear.gameObject.SetActive(!ui.InspectingHabitat);
+            fishRoot.gameObject.SetActive(!ui.InspectingGear&&!ui.InspectingHabitat&&!ui.InspectingObservation&&(!awaitingNextFish||releasing!=null||ui.FocusedFish!=null));gear.gameObject.SetActive(!ui.InspectingHabitat&&!ui.InspectingObservation);
             if(!reduced&&!game.Session.Paused)visualTime+=Time.deltaTime;float time=reduced?0:visualTime;
             fish.reducedMotion=reduced;fish.paused=ui.FocusedFish!=null?ui.ModelPaused:game.Session.Paused;fish.speed=game.Session.Phase==FishingPhase.Fighting?1.6f:1;
             bool journal=ui.FocusedFish!=null;
@@ -125,7 +127,8 @@ namespace OceanAngler
                 bool authored=habitat=="bay";bay.gameObject.SetActive(authored);prototypeEnvironment.SetActive(!authored);
                 if(!authored){view.clearFlags=CameraClearFlags.SolidColor;view.transform.position=new Vector3(0,1.25f,-6.5f);view.transform.LookAt(new Vector3(0,.45f,1));view.fieldOfView=42;RenderSettings.fogDensity=.028f;}
             }
-            if(habitat=="bay")bay.Present(view,ui.InspectingHabitat,ui.InspectingHabitat&&ui.HabitatSurfaceView,ui.HabitatAngle,game.Session.Paused,reduced,ui.FocusedFish==null&&!ui.InspectingGear);
+            if(habitat=="bay")bay.Present(view,ui.InspectingHabitat,ui.InspectingHabitat&&ui.HabitatSurfaceView,ui.HabitatAngle,game.Session.Paused,reduced,ui.FocusedFish==null&&!ui.InspectingGear&&!ui.InspectingObservation);
+            Observations.Present(ui.ObservingSpecies,view,ui.Compact,reduced,Time.unscaledDeltaTime);
         }
         void OnDestroy(){if(game!=null)game.Released-=BeginRelease;if(wood!=null)Destroy(wood);if(water!=null)Destroy(water);}
     }

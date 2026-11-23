@@ -22,11 +22,16 @@ namespace OceanAngler
         public string habitatId = "bay", rodId = "rod-1", reelId = "reel-1", lineId = "line-1", lureId = "lure-1";
         public List<CatchRecord> catches = new List<CatchRecord>();
         public GameSettings settings = new GameSettings();
+        public List<string> observations = new List<string>();
         public ProgressData Clone() => JsonUtility.FromJson<ProgressData>(JsonUtility.ToJson(this));
         public void Validate(ContentCatalog catalog)
         {
-            if (schemaVersion != 1) throw new InvalidOperationException("Unsupported save version");
-            if (settings == null || catches == null || totalPoints < 0) throw new InvalidOperationException("Invalid save");
+            if (schemaVersion != 1 && schemaVersion != 2) throw new InvalidOperationException("Unsupported save version");
+            if (settings == null || catches == null || observations == null || totalPoints < 0) throw new InvalidOperationException("Invalid save");
+            if(schemaVersion==1&&observations.Count!=0)throw new InvalidOperationException("Observation records require save version 2");
+            if(observations.Distinct().Count()!=observations.Count)throw new InvalidOperationException("Duplicate observation");
+            foreach(var id in observations)
+                if(catalog.Habitat(catalog.Observation(id).habitatId).unlockPoints>totalPoints)throw new InvalidOperationException("Locked observation");
             long expected = 0; var ids = new HashSet<string>();
             foreach (var c in catches)
             {

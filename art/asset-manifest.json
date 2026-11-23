@@ -8,7 +8,7 @@
       "license": "SIL Open Font License 1.1",
       "redistribution": true,
       "status": "LICENSE_VERIFIED",
-      "sha256": "c61fc65422e37eb2d0cb057f73109603d3524a20654eac8be07b7790a7ccc7db",
+      "sha256": "411e43023de0bf08d341c2a1346cc1a3af60544463a27d1ad9690e932c6b89b1",
       "path": "game/Assets/OceanAngler/Resources/UIFont.ttf"
     },
     {
@@ -901,6 +901,84 @@
         {
           "path": "art/previews/bluefin-palette/turntable.mp4",
           "sha256": "a3ce29a90b915e60e1e6e164d1c992cfdcaa9a8d54568ca49dffa71f85325d83"
+        }
+      ]
+    },
+    {
+      "id": "observation-interaction-a0",
+      "author": "OceanAngler contributors",
+      "source": "Original runtime procedural interaction samples; factual links in docs/14-protected-observation.md; no external photos/models used",
+      "license": "MIT",
+      "redistribution": true,
+      "status": "PROTOTYPE_A0_NOT_ART_ACCEPTED",
+      "path": "game/Assets/OceanAngler/Runtime/ObservationVisual.cs",
+      "sha256": "e9a9278f9b77c37dc28500cf0c726bcfa30c8fce70d9deb13eb0dde1194fda0a",
+      "modifications": "Distinct turtle/dolphin/whale-shark interaction shapes only; no authored Blender/FBX/PBR/rig/LODs; not REQ-05 or A1-A3 acceptance"
+    },
+    {
+      "id": "observation-interaction-a0-previews",
+      "author": "OceanAngler contributors",
+      "source": "Own isolated Editor Metal renders of A0 runtime interaction models; no external images",
+      "license": "MIT",
+      "redistribution": true,
+      "status": "PROTOTYPE_A0_NOT_ART_ACCEPTED",
+      "modifications": "13 final view/first-repeat samples and one rejected initial-color sample; scene-only, no player UI or device acceptance",
+      "artifacts": [
+        {
+          "path": "art/previews/protected-observation/bottlenose-dolphin-side-repeat.png",
+          "sha256": "c80a8280ee136ad8edb37766f7c210113e5876683fc1ca7a4ed0267942c01b2a"
+        },
+        {
+          "path": "art/previews/protected-observation/bottlenose-dolphin-side.png",
+          "sha256": "c80a8280ee136ad8edb37766f7c210113e5876683fc1ca7a4ed0267942c01b2a"
+        },
+        {
+          "path": "art/previews/protected-observation/bottlenose-dolphin-three-quarter.png",
+          "sha256": "efc7f297f664e88f3c1708a9f2c03756db250e904d06f9a695902cd0e37382e3"
+        },
+        {
+          "path": "art/previews/protected-observation/bottlenose-dolphin-top.png",
+          "sha256": "5f819353069a482850f902621c0f24be4919378d51ae4ada06fee28f4158af1a"
+        },
+        {
+          "path": "art/previews/protected-observation/green-turtle-bay.png",
+          "sha256": "ac7e1c3d4823289d86b2354259c9f3d8302035f5070b5362cf6aaa6a2554e710"
+        },
+        {
+          "path": "art/previews/protected-observation/green-turtle-side-repeat.png",
+          "sha256": "10186e1c76bfb19b60de341300d04066ed64cd7c6a8f6f4f56111e01f4592ce6"
+        },
+        {
+          "path": "art/previews/protected-observation/green-turtle-side.png",
+          "sha256": "10186e1c76bfb19b60de341300d04066ed64cd7c6a8f6f4f56111e01f4592ce6"
+        },
+        {
+          "path": "art/previews/protected-observation/green-turtle-three-quarter.png",
+          "sha256": "a8bc1b6922a8181776686848ba7a4eb187e98659d6481420eaee8db6aad42da8"
+        },
+        {
+          "path": "art/previews/protected-observation/green-turtle-top.png",
+          "sha256": "9be2cdd8ecaa781e62f7dfb7fc0e74c4024504385dd4d7d505fb2f9cb3af4c70"
+        },
+        {
+          "path": "art/previews/protected-observation/rejected-first-draw.png",
+          "sha256": "1951f02f951836df8cc315860f102fe1b7d8f7d0d5c088eb7d0bd1193b06b7dc"
+        },
+        {
+          "path": "art/previews/protected-observation/whale-shark-side-repeat.png",
+          "sha256": "1ed562edeeb97de3643bf644ad910411d1bfa098cc60722432f0b762f7e5c421"
+        },
+        {
+          "path": "art/previews/protected-observation/whale-shark-side.png",
+          "sha256": "1ed562edeeb97de3643bf644ad910411d1bfa098cc60722432f0b762f7e5c421"
+        },
+        {
+          "path": "art/previews/protected-observation/whale-shark-three-quarter.png",
+          "sha256": "3923c429aba0f17514fcfcd7ab13a65a51e71c16251e944feb9fcb6fb8bbc3d3"
+        },
+        {
+          "path": "art/previews/protected-observation/whale-shark-top.png",
+          "sha256": "aea1bc4081a0bdf87d80c079918f43c80f0ed006adfb0f7b9ef7ddc0fc214cdd"
         }
       ]
     }

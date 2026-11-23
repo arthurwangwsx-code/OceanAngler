@@ -497,21 +497,27 @@
       "name": "绿海龟",
       "scientificName": "Chelonia mydas",
       "habitatId": "bay",
-      "note": "仅供安静观察，不投饵、不挂钩。"
+      "note": "仅供安静观察，不投饵、不挂钩。",
+      "recognition": "背甲较扁，头部较小，四肢像桨。它需要浮到水面呼吸。",
+      "naturalHabitat": "幼体离开外海后，常到近岸浅水觅食；成体主要吃海草和藻类。"
     },
     {
       "id": "bottlenose-dolphin",
       "name": "宽吻海豚",
       "scientificName": "Tursiops truncatus",
       "habitatId": "channel",
-      "note": "仅供安静观察，不投饵、不挂钩。"
+      "note": "仅供安静观察，不投饵、不挂钩。",
+      "recognition": "短而粗的吻部，灰色背部和较浅的腹部。它是需要呼吸空气的哺乳动物。",
+      "naturalHabitat": "生活在温带和热带的沿岸与外海，包括海湾、河口等环境。"
     },
     {
       "id": "whale-shark",
       "name": "鲸鲨",
       "scientificName": "Rhincodon typus",
       "habitatId": "channel",
-      "note": "仅供安静观察，不投饵、不挂钩。"
+      "note": "仅供安静观察，不投饵、不挂钩。",
+      "recognition": "宽而扁的头部，深色背侧有浅色斑纹，身体两侧有明显隆脊。",
+      "naturalHabitat": "生活在热带及暖温带的大陆架与外海，以滤食方式取食小型动物。"
     }
   ]
 }

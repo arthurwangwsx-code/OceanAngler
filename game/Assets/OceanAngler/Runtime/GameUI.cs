@@ -75,13 +75,15 @@ namespace OceanAngler
                 progressText.text = "收鱼进度  " + Mathf.RoundToInt(game.Session.Progress*100) + "%";
                 if (charging && actionText != null) actionText.text = "松手抛竿  " + Mathf.RoundToInt(Mathf.Clamp01((Time.unscaledTime-chargeStart)/1.5f)*100) + "%";
             }
-            if (noticeText != null) noticeText.text = InspectingGear?"转动钓组，看看收线过程。":InspectingHabitat?"观察时暂停钓鱼，返回后点继续。":game.Notice ?? (game.RestReminder ? (Compact?"探索一会儿了，和家人休息一下吧。":"已经探索一会儿了，和家人休息一下吧。进度已保存。") : (Compact?"记录后放流 · 随时暂停":"鱼获记录后放流 · 不消耗鱼饵 · 随时可以暂停"));
+            UpdateObservationUI();
+            if (noticeText != null) noticeText.text = InspectingObservation?game.Notice??"安静观察，不投饵、不挂钩。":InspectingGear?"转动钓组，看看收线过程。":InspectingHabitat?"观察时暂停钓鱼，返回后点继续。":game.Notice ?? (game.RestReminder ? (Compact?"探索一会儿了，和家人休息一下吧。":"已经探索一会儿了，和家人休息一下吧。进度已保存。") : (Compact?"记录后放流 · 随时暂停":"鱼获记录后放流 · 不消耗鱼饵 · 随时可以暂停"));
         }
         void Rebuild()
         {
             if (pageRoot != null) { pageRoot.gameObject.SetActive(false); Destroy(pageRoot.gameObject); }
             pageRoot = Box(safe,"Page",Color.clear,Vector2.zero,Vector2.one,Vector2.zero,Vector2.zero);
             phaseText = hintText = tensionText = progressText = actionText = null; charging = false;
+            observationRecord=null;observationStatus=observationPlayback=null;
             lastPhase = game.Session.Phase; lastPause = game.Session.Paused;
             BuildChrome();
             if (game.Progress.RequiresRecovery) { BuildRecovery(); return; }
@@ -89,6 +91,8 @@ namespace OceanAngler
             {
                 case "出海": BuildFishing(); break;
                 case "图鉴": BuildJournal(); break;
+                case "保护观察": BuildObservations(); break;
+                case "观察生物": BuildObservationVisit(); break;
                 case "鱼类详情": BuildCompactInspect(); break;
                 case "钓具": BuildGear(); break;
                 case "钓组预览": BuildGearPreview(); break;
@@ -178,9 +182,10 @@ namespace OceanAngler
         void BuildJournal()
         {
             if(Compact){BuildCompactJournal();return;}
-            var panel=PagePanel("Journal",new Vector2(.02f,.12f),new Vector2(.60f,.81f),460);
+            var panel=PagePanel("Journal",new Vector2(.02f,.12f),new Vector2(.60f,.81f),530);
             Label(panel,"鱼类图鉴  "+game.Progress.Data.catches.Select(c=>c.fishId).Distinct().Count()+" / 12",28,Color.white,22,16,-44,46);
-            BuildFishCards(panel,Width*.58f,2,78);
+            ObservationEntry(panel,72);
+            BuildFishCards(panel,Width*.58f,2,126);
             BuildJournalControls(Width*.63f,Height*.52f-50,Width*.35f);
             var detail=Box(pageRoot,"FishDetails",Panel,new Vector2(.63f,.12f),new Vector2(.98f,.48f),Vector2.zero,Vector2.zero);
             BuildFishDetails(detail,game.Content.Fish(selectedFish??game.Content.fish[0].id));
