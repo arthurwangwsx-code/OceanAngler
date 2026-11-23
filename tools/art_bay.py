@@ -187,17 +187,17 @@ for i in range(43):
  for a in [-5.65,-4.35]:tube('DeckBolt',[(a,b,4.852),(a,b,4.861)],.018,'Metal','Pier',6)
 
 # Small open research dinghy with an actual shell, gunwale, interior, benches and tether.
-boat=( -2.5,3.8,4.50);stations=[(-1.8,.03,-.02),(-1.45,.38,-.20),(-.8,.61,-.34),(0,.66,-.38),(.8,.57,-.34),(1.45,.38,-.20),(1.8,.04,-.02)]
+boat_profile=json.loads((OUT/'boat-profile.json').read_text());boat=tuple(boat_profile['origin']);rim=boat_profile['rimHeight'];stations=[(s['z'],s['width'],s['keel']) for s in boat_profile['stations']]
 vs=[];faces=[];uv=[];cross=10
 for j,(b,width,keel) in enumerate(stations):
  for k in range(cross+1):
-  t=-math.pi*.5+k/cross*math.pi;x=math.sin(t)*width;z=keel+(.48-keel)*(abs(math.sin(t))**1.5)
+  t=-math.pi*.5+k/cross*math.pi;x=math.sin(t)*width;z=keel+(rim-keel)*(abs(math.sin(t))**1.5)
   vs.append((boat[0]+x,boat[1]+b,boat[2]+z));uv.append((k/cross,j/(len(stations)-1)))
 for j in range(len(stations)-1):
  for k in range(cross):q=j*(cross+1)+k;faces.append((q,q+1,q+cross+2,q+cross+1))
 hull=mesh('DinghyHull',vs,faces,'BoatHull','Boat',uv);m=hull.modifiers.new('HullThickness','SOLIDIFY');m.thickness=.035;bpy.context.view_layer.objects.active=hull;bpy.ops.object.modifier_apply(modifier=m.name)
 for sign in [-1,1]:
- points=[(boat[0]+sign*w,boat[1]+b,boat[2]+.48) for b,w,k in stations];tube('Gunwale',points,.035,'BoatTrim','Boat',10)
+ points=[(boat[0]+sign*w,boat[1]+b,boat[2]+rim) for b,w,k in stations];tube('Gunwale',points,.035,'BoatTrim','Boat',10)
 for b in [-.7,.65]:box('DinghyBench',(boat[0],boat[1]+b,boat[2]+.26),(1.08,.28,.06),'Wood','Boat',.015)
 box('Floorboard',(boat[0],boat[1],boat[2]-.20),(.55,2.6,.045),'Wood','Boat')
 for b in [-.7,.7]:tube('BenchSupport',[(boat[0]-.4,boat[1]+b,boat[2]-.12),(boat[0]-.4,boat[1]+b,boat[2]+.25)],.022,'Metal','Boat')

@@ -17,8 +17,8 @@ receipt=json.loads((folder/'screens/receipt.json').read_text())
 images=list((folder/'screens').glob('*.png'));dimensions={}
 for image in images:
  raw=image.read_bytes();assert raw[:8]==b'\x89PNG\r\n\x1a\n';dimensions[image.name]=list(struct.unpack('>II',raw[16:24]))
-summary=dict(status=receipt['status'],exitCode=result.returncode,checks=receipt['checks'],failures=receipt['failures'],catches=receipt['catches'],points=receipt['points'],screenshots=dimensions,pixelsPerPoint=receipt.get('pixelsPerPoint'),safeWidthPoints=receipt.get('safeWidthPoints'),safeHeightPoints=receipt.get('safeHeightPoints'),inspectedLabels=receipt.get('inspectedLabels',[]))
+summary=dict(status=receipt['status'],exitCode=result.returncode,checks=receipt['checks'],failures=receipt['failures'],catches=receipt['catches'],points=receipt['points'],screenshots=dimensions,pixelsPerPoint=receipt.get('pixelsPerPoint'),safeWidthPoints=receipt.get('safeWidthPoints'),safeHeightPoints=receipt.get('safeHeightPoints'),inspectedLabels=receipt.get('inspectedLabels',[]),reflectionPasses=receipt.get('reflectionPasses'),reflectionWidth=receipt.get('reflectionWidth'),reflectionHeight=receipt.get('reflectionHeight'),reflectionVariance=receipt.get('reflectionVariance'))
 problems=[line for line in (folder/'player.log').read_text(errors='replace').splitlines() if re.search(r'Exception:|is registered with more than one LODGroup|Shader .*not supported|The referenced script .*missing',line)]
 if problems:summary['status']='FAIL';summary['failures']+=['runtime-log:'+line[:180] for line in problems]
 (folder/'summary.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2)+'\n');print(json.dumps(summary,ensure_ascii=False,indent=2))
-raise SystemExit(0 if result.returncode==0 and summary['status']=='PASS' and len(images)==12 else 1)
+raise SystemExit(0 if result.returncode==0 and summary['status']=='PASS' and len(images)==14 else 1)

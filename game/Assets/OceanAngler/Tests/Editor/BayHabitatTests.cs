@@ -7,13 +7,22 @@ namespace OceanAngler.Tests
 {
     public sealed class BayHabitatTests
     {
-        GameObject instance,cameraObject;BayHabitat bay;Camera camera;
+        GameObject instance,cameraObject;BayHabitat bay;Camera camera;Material priorSky;
         [SetUp] public void SetUp()
         {
-            var prefab=Resources.Load<GameObject>("Models/CoralBay");Assert.That(prefab,Is.Not.Null);
+            priorSky=RenderSettings.skybox;var prefab=Resources.Load<GameObject>("Models/CoralBay");Assert.That(prefab,Is.Not.Null);
             instance=Object.Instantiate(prefab);bay=instance.GetComponent<BayHabitat>();cameraObject=new GameObject("BayTestCamera");camera=cameraObject.AddComponent<Camera>();
         }
-        [TearDown] public void TearDown(){Object.DestroyImmediate(instance);Object.DestroyImmediate(cameraObject);}
+        [TearDown] public void TearDown(){Object.DestroyImmediate(instance);Object.DestroyImmediate(cameraObject);RenderSettings.skybox=priorSky;}
+        [Test] public void ReflectionPreservesWaterPlaneAndReversesSignedHeight()
+        {
+            foreach(float level in new[]{-2f,0f,4.5f})
+            foreach(var p in new[]{new Vector3(-3,7,2),new Vector3(10,-5,-9),new Vector3(1,level,4)})
+            {
+                var mirror=BayPlanarReflection.MirrorMatrix(level);var q=mirror.MultiplyPoint(p);
+                Assert.That(Vector3.Distance(mirror.MultiplyPoint(q),p),Is.LessThan(.0001f));Assert.That(q.y-level,Is.EqualTo(-(p.y-level)).Within(.0001f));Assert.That(new Vector2(q.x,q.z),Is.EqualTo(new Vector2(p.x,p.z)));
+            }
+        }
         [Test] public void ImportedSceneHasDistinctLodOwnersAndSeparateWater()
         {
             var groups=instance.GetComponentsInChildren<LODGroup>();Assert.That(groups.Length,Is.EqualTo(8));
@@ -28,8 +37,10 @@ namespace OceanAngler.Tests
         [Test] public void SurfaceReefAndFishingDestinationsAreReversible()
         {
             bay.Present(camera,true,true,0,true,false);Assert.That(Vector3.Distance(camera.transform.position,bay.surfaceCamera.position),Is.LessThan(.001f));Assert.That(camera.transform.position.y,Is.GreaterThan(bay.SeaLevel));Assert.That(bay.suspendedParticles.gameObject.activeSelf,Is.False);Assert.That(bay.causticLight.enabled,Is.False);
+            Assert.That(camera.clearFlags,Is.EqualTo(CameraClearFlags.Skybox));Assert.That(RenderSettings.skybox,Is.EqualTo(bay.sky));
             bay.Present(camera,true,false,1,true,false);Assert.That(Vector3.Distance(camera.transform.position,bay.reefCamera.position),Is.LessThan(.001f));Assert.That(camera.transform.position.y,Is.LessThan(bay.SeaLevel));Assert.That(bay.causticLight.enabled,Is.True);
             bay.Present(camera,false,false,1,true,false);Assert.That(Vector3.Distance(camera.transform.position,bay.underwaterCamera.position),Is.LessThan(.001f));Assert.That(camera.fieldOfView,Is.EqualTo(42));
+            Assert.That(camera.clearFlags,Is.EqualTo(CameraClearFlags.SolidColor));Assert.That(bay.reflection.Ready,Is.False);
         }
         [Test] public void PauseAndReducedMotionConstrainAmbientEffects()
         {
@@ -50,6 +61,7 @@ namespace OceanAngler.Tests
             }
             Assert.That(System.IO.File.ReadAllBytes(Application.dataPath+"/OceanAngler/Art/CoralBay/Bay_Particle.png")[25],Is.EqualTo(6));
             var pipeline=AssetDatabase.LoadAssetAtPath<UniversalRenderPipelineAsset>("Assets/OceanAngler/Generated/OceanURP.asset");Assert.That(pipeline.supportsCameraOpaqueTexture&&pipeline.supportsCameraDepthTexture,Is.True);Assert.That(bay.causticLight.cookie,Is.Not.Null);
+            var rendererData=AssetDatabase.LoadAssetAtPath<UniversalRendererData>("Assets/OceanAngler/Generated/OceanRenderer.asset");Assert.That(rendererData.copyDepthMode,Is.EqualTo(CopyDepthMode.AfterOpaques),"Transparent water must see the current opaque depth, not a default/stale texture");
         }
     }
 }

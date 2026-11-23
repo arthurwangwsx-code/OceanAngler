@@ -29,7 +29,9 @@ namespace OceanAngler.Editor
                 AssetDatabase.CreateAsset(new Material(Shader.Find("Universal Render Pipeline/Lit")), surfacePath);
             GraphicsSettings.defaultRenderPipeline = pipeline;
             QualitySettings.renderPipeline = pipeline;
+            QualitySettings.antiAliasing=4;
             pipeline.msaaSampleCount=4;EditorUtility.SetDirty(pipeline);
+            var waterRenderer=AssetDatabase.LoadAssetAtPath<UniversalRendererData>(folder+"/OceanRenderer.asset");waterRenderer.copyDepthMode=CopyDepthMode.AfterOpaques;EditorUtility.SetDirty(waterRenderer);
             pipeline.shadowDistance=35;pipeline.mainLightShadowmapResolution=1024;
             EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Single);
             RenderSettings.ambientLight = new Color(0.35f, 0.55f, 0.65f);

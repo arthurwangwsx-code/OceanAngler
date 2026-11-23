@@ -25,6 +25,7 @@
 | 原创音频与实际画面 | [音频控制](docs/11-feedback-audio.md)、[三档原生截图与问题](reports/integrated-native-render.md) |
 | 礁岩破面修复与对照 | [源网格检查和同镜头实际游戏画面](reports/coral-bay-solid-geometry.md) |
 | 鱼体表面与鉴赏标题 | [鳃盖/高光迭代、标题消失回归及实际对照](reports/bluefin-surface-and-ui.md) |
+| 海湾水面与倒影 | [深度顺序修复、离屏GPU对照及验收边界](reports/water-rendering.md) |
 
 需求合同在 ispec/specs，首批变更在 ispec/changes/product-technical-foundation；planning/backlog.csv 管理任务。仅此目录可写，不修改赛车和枪战项目。
 
@@ -57,3 +58,5 @@ build 2之后的开发源码补充了成功保存后的转向与放流游离，�
 随后已修复礁石朝内及丘状珊瑚破面：焊接源网格后再生成三档LOD，24块礁石/8个丘状珊瑚均朝外封闭；旧文件失败和修复检查保留。Unity导入、28项Editor、Mac编译及新原生流程通过，相同镜头已确认薄壳缺陷消除；[前后对照](reports/coral-bay-solid-geometry.md)使用未修改的游戏截图。水面、鱼体、形态重复及平板标题仍待改进；此修复未进build 2。
 
 鱼体后续改为融入鱼身的鳃盖轮廓，细鳃缘使用相同混合权重，减弱高光；七组动作的实际变形网格贴合检查通过。平板标题缺失已复现为40.5点文字被40点容器截断，容器增加至44点，检查同时验证标题实际生成的字符与顶点。三档Mac流程、28项Editor及7项PlayMode通过，[实际对照与边界](reports/bluefin-surface-and-ui.md)保留首轮失败。美术、科学/用户审阅及真机仍未通过；本轮未进入build 2。
+
+水面后续加入真实平面倒影、深度透射及远处细波纹淡出，船壳共用剖面排除舱内水面。审图发现深度纹理生成过晚，修正至透明水面之前后，左下角亮块消失、海底深度恢复。29项Editor、7项PlayMode、Mac编译及隔离Editor GPU检查通过；新水面的原生窗口检查在首帧前超时，尚无当前源码的UI/真机通过证据。见[水面记录与未经修改的离屏图](reports/water-rendering.md)，不得沿用旧版三档原生结果。沙纹、植被、岸线、其他内容与完整美术仍待制作/审阅；build 2不含这些改进。

@@ -11,7 +11,7 @@ namespace OceanAngler
     public sealed class RuntimeSmoke : MonoBehaviour
     {
         [Serializable] sealed class LabelRender { public string page,text;public float requiredHeight,availableHeight;public int visibleCharacters,vertices; }
-        [Serializable] sealed class Receipt { public string status="RUNNING";public List<string> checks=new List<string>();public List<string> failures=new List<string>();public List<LabelRender> inspectedLabels=new List<LabelRender>();public int catches,points;public float pixelsPerPoint, safeWidthPoints, safeHeightPoints; }
+        [Serializable] sealed class Receipt { public string status="RUNNING";public List<string> checks=new List<string>();public List<string> failures=new List<string>();public List<LabelRender> inspectedLabels=new List<LabelRender>();public int catches,points,reflectionPasses,reflectionWidth,reflectionHeight;public float pixelsPerPoint, safeWidthPoints, safeHeightPoints,reflectionVariance; }
         GameController game;string folder;Receipt receipt;bool finished;float began;
         IEnumerator Start()
         {
@@ -44,7 +44,12 @@ namespace OceanAngler
             }
             Click("看看海湾",true);yield return null;yield return null;CheckLayout("bay-surface");
             Require(ui.InspectingHabitat&&game.Session.Paused,"observation-pauses-fishing");Require(Camera.main.transform.position.y>bay.SeaLevel,"surface-camera-above-water");yield return Snapshot("07-bay-surface");
+            Require(bay.reflection.Ready,"real-planar-reflection-ready");CaptureReflection(bay.reflection);
+            int captures=bay.reflection.RenderCount;yield return new WaitForSecondsRealtime(.15f);Require(bay.reflection.RenderCount==captures,"static-view-reuses-reflection");
+            Click("换个角度",true);yield return null;yield return null;CheckLayout("bay-pier");Require(bay.reflection.RenderCount>captures,"new-view-refreshes-reflection");yield return Snapshot("12-bay-pier");
+            Click("换个角度",true);yield return null;yield return null;captures=bay.reflection.RenderCount;
             Click("潜入水下",true);yield return null;yield return null;CheckLayout("bay-underwater");Require(Camera.main.transform.position.y<bay.SeaLevel,"underwater-camera-below-water");yield return Snapshot("08-bay-underwater");
+            Require(!bay.reflection.Ready&&bay.reflection.RenderCount==captures,"underwater-skips-reflection-render");
             Click("换个角度",true);yield return null;yield return null;Require(Vector3.Distance(Camera.main.transform.position,bay.reefCamera.position)<.01f,"reef-camera-actually-changes");yield return Snapshot("11-bay-reef");
             Click("返回钓鱼",true);yield return null;yield return null;Require(game.Session.Paused,"observation-return-keeps-pause");
             if(ui.Compact){Click("收起准备",true);yield return null;yield return null;}
@@ -95,6 +100,7 @@ namespace OceanAngler
             Require(game.Progress.Data.catches.Count==before+1,"cancel-reset-keeps-catches");
             Click("出海",true);yield return null;yield return null;Require(game.Session.Paused&&!game.Reeling,"navigation-clears-held-input");CheckLayout("left-handed");yield return Snapshot("06-left-handed");
             receipt.pixelsPerPoint=DisplayMetrics.PixelsPerPoint;receipt.safeWidthPoints=DisplayMetrics.SafeArea.width/DisplayMetrics.PixelsPerPoint;receipt.safeHeightPoints=DisplayMetrics.SafeArea.height/DisplayMetrics.PixelsPerPoint;
+            receipt.reflectionPasses=bay.reflection.RenderCount;bay.reflection.enabled=false;yield return null;yield return null;Require(bay.reflection.Texture==null,"reflection-dispose-releases-target");
             receipt.catches=game.Progress.Data.catches.Count;receipt.points=game.Progress.Data.totalPoints;receipt.status=receipt.failures.Count==0?"PASS":"FAIL";finished=true;
             File.WriteAllText(Path.Combine(folder,"receipt.json"),JsonUtility.ToJson(receipt,true));Debug.Log("OCEAN_SMOKE_"+receipt.status);Application.Quit(receipt.failures.Count==0?0:1);
         }
@@ -129,6 +135,20 @@ namespace OceanAngler
             else ExecuteEvents.Execute(b.gameObject,data,ExecuteEvents.pointerUpHandler);
         }
         void Require(bool condition,string name){if(condition){if(!receipt.checks.Contains(name))receipt.checks.Add(name);}else if(!receipt.failures.Contains(name))receipt.failures.Add(name);}
+        void CaptureReflection(BayPlanarReflection reflection)
+        {
+            if(reflection.Texture==null)return;
+            var rt=reflection.Texture;receipt.reflectionWidth=rt.width;receipt.reflectionHeight=rt.height;
+            Require(rt.width<=768&&rt.height<=768,"reflection-texture-resolution-capped");
+            var prior=RenderTexture.active;var image=new Texture2D(rt.width,rt.height,TextureFormat.RGB24,false);
+            try
+            {
+                RenderTexture.active=rt;image.ReadPixels(new Rect(0,0,rt.width,rt.height),0,0);image.Apply();var pixels=image.GetPixels();float mean=0,squared=0;
+                foreach(var p in pixels){float value=(p.r+p.g+p.b)/3;mean+=value;squared+=value*value;}mean/=pixels.Length;receipt.reflectionVariance=squared/pixels.Length-mean*mean;
+                Require(receipt.reflectionVariance>.0005f,"reflection-contains-rendered-scene-detail");File.WriteAllBytes(Path.Combine(folder,"00-water-reflection.png"),image.EncodeToPNG());
+            }
+            finally{RenderTexture.active=prior;Destroy(image);}
+        }
         void CheckLayout(string page)
         {
             Canvas.ForceUpdateCanvases();

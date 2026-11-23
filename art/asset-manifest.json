@@ -467,6 +467,60 @@
           "sourceFrame": "01-fishing.png"
         }
       ]
+    },
+    {
+      "id": "bay-water-rendering-candidate",
+      "author": "OceanAngler contributors",
+      "source": "Original BayPlanarReflection, BayWater shader and Unity Editor GPU fixture of project-authored scene",
+      "license": "MIT",
+      "redistribution": true,
+      "sourceRedistribution": true,
+      "canModify": true,
+      "acquiredAt": "2026-11-24",
+      "status": "ART_REVIEW_PENDING",
+      "note": "GPU fixtures are not player-window or physical-device screenshots. Bay_Sky.mat contains original parameter settings referencing Unity built-in Skybox/Procedural; engine shader code is not redistributed.",
+      "artifacts": [
+        {
+          "path": "art/previews/water-gpu/depth-before.png",
+          "sha256": "7e957ab64746225998ec9955fdbacfbd542c36df5543d5bed7fab920cc37f246"
+        },
+        {
+          "path": "art/previews/water-gpu/pier.png",
+          "sha256": "92df24f4cc48dd2a85452024259026eead0bac64ebbd0448b0b7982d66472604"
+        },
+        {
+          "path": "art/previews/water-gpu/reef.png",
+          "sha256": "767a294484c9b847e2e639768829f9b1d149911e298770feb300a85f20bc8e7c"
+        },
+        {
+          "path": "art/previews/water-gpu/reflection.png",
+          "sha256": "5738b61fe4c42fbcd05d3a56310df4887a1a27629dc619af818571fe5d8aa8eb"
+        },
+        {
+          "path": "art/previews/water-gpu/surface.png",
+          "sha256": "3994b3d4fb2637c6884d0134d56b77cef3092db363be89ca96d386bc7d6c7377"
+        },
+        {
+          "path": "art/previews/water-gpu/underwater.png",
+          "sha256": "0de91b6ee97e005441d78b32cb0eccacf7d41c6c4c03eb746bad14cbf284beed"
+        },
+        {
+          "path": "art/source/coral-bay/boat-profile.json",
+          "sha256": "66d0738f0f12a8a1c8065a55c84b821666c8665a2ac3f6a93c9edf8c1ff61f49"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/CoralBay/Bay_Sky.mat",
+          "sha256": "2e375b29068cc70d06c9dfd864c13bcca5e28b88e00eda50e6dfb0a81d019a09"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Runtime/BayPlanarReflection.cs",
+          "sha256": "f6d6115e50d0f688475c0ddba5f17f1602efde6cf3299fdc6098c570969b2aaa"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Shaders/BayWater.shader",
+          "sha256": "c303192b81a54ec9772311a35aef72210d273b3c66e8d763da5910058423e211"
+        }
+      ]
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."

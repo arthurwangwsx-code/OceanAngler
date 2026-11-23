@@ -113,7 +113,7 @@ namespace OceanAngler
             {
                 habitat=data.habitatId;Color color=habitat=="bay"?new Color(.04f,.34f,.44f):habitat=="channel"?new Color(.035f,.20f,.35f):new Color(.025f,.10f,.22f);RenderSettings.fogColor=color;view.backgroundColor=color;
                 bool authored=habitat=="bay";bay.gameObject.SetActive(authored);prototypeEnvironment.SetActive(!authored);
-                if(!authored){view.transform.position=new Vector3(0,1.25f,-6.5f);view.transform.LookAt(new Vector3(0,.45f,1));view.fieldOfView=42;RenderSettings.fogDensity=.028f;}
+                if(!authored){view.clearFlags=CameraClearFlags.SolidColor;view.transform.position=new Vector3(0,1.25f,-6.5f);view.transform.LookAt(new Vector3(0,.45f,1));view.fieldOfView=42;RenderSettings.fogDensity=.028f;}
             }
             if(habitat=="bay")bay.Present(view,ui.InspectingHabitat,ui.InspectingHabitat&&ui.HabitatSurfaceView,ui.HabitatAngle,game.Session.Paused,reduced);
         }

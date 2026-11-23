@@ -5,6 +5,7 @@ namespace OceanAngler
     {
         public Transform underwaterCamera,underwaterTarget,surfaceCamera,surfaceTarget,reefCamera,reefTarget,pierCamera,pierTarget;
         public Renderer waterSurface;
+        public Material sky;public BayPlanarReflection reflection;
         public Light causticLight;public ParticleSystem suspendedParticles;
         public float SeaLevel=4.5f;
         float waterTime;MaterialPropertyBlock waterProperties;
@@ -12,7 +13,7 @@ namespace OceanAngler
         {
             if(!paused&&!reduced)waterTime+=Time.deltaTime;
             if(waterProperties==null)waterProperties=new MaterialPropertyBlock();
-            waterProperties.SetFloat("_OceanTime",reduced?0:waterTime);waterSurface.SetPropertyBlock(waterProperties);
+            waterProperties.SetFloat("_OceanTime",reduced?0:waterTime);
             if(causticLight!=null){causticLight.enabled=!above;causticLight.transform.localRotation=Quaternion.Euler(90,reduced?0:waterTime*1.5f,0);}
             if(suspendedParticles!=null){var main=suspendedParticles.main;main.simulationSpeed=paused||reduced?0:1;suspendedParticles.gameObject.SetActive(!above&&!reduced);}
             var from=above?(angle%2==0?surfaceCamera:pierCamera):(observing&&angle%2!=0?reefCamera:underwaterCamera);
@@ -24,6 +25,13 @@ namespace OceanAngler
             RenderSettings.fogDensity=above?.012f:.035f;
             RenderSettings.fogColor=above?new Color(.53f,.73f,.75f):new Color(.075f,.42f,.49f);
             camera.backgroundColor=RenderSettings.fogColor;
+            camera.clearFlags=above?CameraClearFlags.Skybox:CameraClearFlags.SolidColor;
+            if(above&&sky!=null)RenderSettings.skybox=sky;
+            if(reflection!=null)reflection.Prepare(camera,above,SeaLevel);
+            waterProperties.SetFloat("_HasReflection",reflection!=null&&reflection.Ready?1:0);
+            if(reflection!=null&&reflection.Ready){waterProperties.SetTexture("_PlanarReflection",reflection.Texture);waterProperties.SetMatrix("_ReflectionVP",reflection.ViewProjection);}
+            else waterProperties.SetTexture("_PlanarReflection",Texture2D.blackTexture);
+            waterSurface.SetPropertyBlock(waterProperties);
         }
     }
 }

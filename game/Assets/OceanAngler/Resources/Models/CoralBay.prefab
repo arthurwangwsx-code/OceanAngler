@@ -6943,6 +6943,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8392541698853869764}
   - component: {fileID: 5387223022110168325}
+  - component: {fileID: 4943548341116759042}
   m_Layer: 0
   m_Name: CoralBay
   m_TagString: Untagged
@@ -7002,9 +7003,23 @@ MonoBehaviour:
   pierCamera: {fileID: 4567060054190363116}
   pierTarget: {fileID: 453369597299534827}
   waterSurface: {fileID: 5912761024550070837}
+  sky: {fileID: 2100000, guid: f8ae43bd7d49645e3a1f5afbac62120e, type: 2}
+  reflection: {fileID: 4943548341116759042}
   causticLight: {fileID: 1077378701459315524}
   suspendedParticles: {fileID: 2802861070944349449}
   SeaLevel: 4.5
+--- !u!114 &4943548341116759042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6405811260241579921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf0fe949034fc41fe9d7e1d18ced9c44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: OceanAngler.Runtime::OceanAngler.BayPlanarReflection
 --- !u!1 &6478030422978853707
 GameObject:
   m_ObjectHideFlags: 0
@@ -7231,7 +7246,7 @@ Light:
   serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.44, g: 0.79, b: 0.76, a: 1}
-  m_Intensity: 2
+  m_Intensity: 14
   m_Range: 22
   m_SpotAngle: 110
   m_InnerSpotAngle: 21.80208
@@ -7476,7 +7491,7 @@ GameObject:
   - component: {fileID: 5060862380140176969}
   - component: {fileID: 5222051671172040171}
   - component: {fileID: 5912761024550070837}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Water_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
