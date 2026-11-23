@@ -1,0 +1,21 @@
+# Unity generated
+/game/Library/
+/game/Temp/
+/game/Obj/
+/game/Logs/
+/game/UserSettings/
+/build/
+/.local/
+/.codex/
+/ispec/assets/
+*.csproj
+*.sln
+*.p8
+*.p12
+*.mobileprovision
+.env
+.env.*
+__pycache__/
+.DS_Store
+
+/ispec/config.json

@@ -1,0 +1,25 @@
+{
+  "version": "0.1",
+  "product": "OceanAngler",
+  "stages": {
+    "P0": {
+      "habitats": 1,
+      "fish": 3,
+      "gearSets": 2
+    },
+    "P1": {
+      "habitats": 3,
+      "fish": 12,
+      "observationCreatures": 3,
+      "rods": 6,
+      "reels": 4,
+      "lines": 4,
+      "lures": 6,
+      "tasks": 18
+    },
+    "P2": {
+      "habitats": 5,
+      "fish": 24
+    }
+  }
+}
