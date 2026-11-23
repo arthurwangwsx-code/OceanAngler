@@ -21,3 +21,6 @@ Test notes应明确：早期原型，测试抛竿/张力/收鱼/积分/存档/�
 2026-11-23 已通过网页创建 OceanAngler，App ID为6838308856，bundle为com.arthur.OceanAngler，主要语言简体中文，SKU为OceanAngler-iOS。已用API读回匹配。前述网页连接阻塞已解除；尚未归档上传，后续只操作此App。
 
 工具配置须显式提供ASC_KEY_ID、ASC_ISSUER_ID、ASC_KEY_PATH，或将ASC_ENV_FILE指向自己本机已有的受保护配置。工具不自动读取其他项目的凭据，不将配置或密钥提交仓库。
+
+## 当前项目执行入口
+`tools/beta_signing.py --apply`准备本App描述文件；`tools/beta.py native --apply`冻结已提交源码与Unity导出，再依次archive/export/upload/status/notes/self。每步均核对版本与App，写操作需要--apply。使用publication/release.json的唯一版本/构建号，未知上传必须先查Apple实际状态，不重复上传。签名、归档和IPA校验记录在.local/beta，公开回执另行脱敏。

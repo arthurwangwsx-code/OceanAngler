@@ -10,7 +10,7 @@ namespace OceanAngler
 {
     public sealed class RuntimeSmoke : MonoBehaviour
     {
-        [Serializable] sealed class Receipt { public string status="RUNNING";public List<string> checks=new List<string>();public List<string> failures=new List<string>();public int catches,points; }
+        [Serializable] sealed class Receipt { public string status="RUNNING";public List<string> checks=new List<string>();public List<string> failures=new List<string>();public int catches,points;public float pixelsPerPoint, safeWidthPoints, safeHeightPoints; }
         GameController game;string folder;Receipt receipt;bool finished;float began;
         IEnumerator Start()
         {
@@ -41,14 +41,32 @@ namespace OceanAngler
             Click("任务",true);yield return null;yield return null;CheckLayout("tasks");yield return Snapshot("05-tasks");
             Click("设置",true);yield return null;yield return null;CheckLayout("settings");Click("左手操作");yield return null;yield return null;
             Require(game.Progress.Data.settings.leftHanded,"left-hand-setting");
+            Click("家长区与隐私",true);yield return null;yield return null;CheckLayout("parent-gate");
+            var question=FindObjectsByType<Text>(FindObjectsSortMode.None).First(t=>t.isActiveAndEnabled&&t.text.StartsWith("9 + ")).text;
+            var match=System.Text.RegularExpressions.Regex.Match(question,@"9 \+ (\d+)");int answer=9+int.Parse(match.Groups[1].Value);
+            Click(answer.ToString(),true);yield return null;yield return null;CheckLayout("parents");
+            Click("查看隐私与字体许可",true);yield return null;yield return null;CheckLayout("legal");
+            Click("返回家长区",true);yield return null;yield return null;
+            Click("清除游戏进度",true);yield return null;yield return null;
+            Require(game.Progress.Data.catches.Count==before+1,"reset-first-confirm-does-not-delete");
+            Click("取消并返回设置",true);yield return null;yield return null;
+            Require(game.Progress.Data.catches.Count==before+1,"cancel-reset-keeps-catches");
             Click("出海",true);yield return null;yield return null;Require(game.Session.Paused&&!game.Reeling,"navigation-clears-held-input");CheckLayout("left-handed");yield return Snapshot("06-left-handed");
+            receipt.pixelsPerPoint=DisplayMetrics.PixelsPerPoint;receipt.safeWidthPoints=DisplayMetrics.SafeArea.width/DisplayMetrics.PixelsPerPoint;receipt.safeHeightPoints=DisplayMetrics.SafeArea.height/DisplayMetrics.PixelsPerPoint;
             receipt.catches=game.Progress.Data.catches.Count;receipt.points=game.Progress.Data.totalPoints;receipt.status=receipt.failures.Count==0?"PASS":"FAIL";finished=true;
             File.WriteAllText(Path.Combine(folder,"receipt.json"),JsonUtility.ToJson(receipt,true));Debug.Log("OCEAN_SMOKE_"+receipt.status);Application.Quit(receipt.failures.Count==0?0:1);
         }
         Button Find(string text,bool exact=false)
         {
             var button=FindObjectsByType<Button>(FindObjectsSortMode.None).FirstOrDefault(b=>b.isActiveAndEnabled&&b.interactable&&(exact?b.GetComponentInChildren<Text>()?.text==text:b.GetComponentInChildren<Text>()?.text.StartsWith(text)==true));
-            if(button==null)throw new InvalidOperationException("Missing button "+text);return button;
+            if(button==null)throw new InvalidOperationException("Missing button "+text);
+            var scroll=button.GetComponentInParent<ScrollRect>();
+            if(scroll!=null&&scroll.content.rect.height>scroll.viewport.rect.height)
+            {
+                Canvas.ForceUpdateCanvases();var bounds=RectTransformUtility.CalculateRelativeRectTransformBounds(scroll.content,button.GetComponent<RectTransform>());
+                float max=scroll.content.rect.height-scroll.viewport.rect.height;float offset=Mathf.Clamp(scroll.content.rect.yMax-bounds.center.y-scroll.viewport.rect.height/2,0,max);scroll.verticalNormalizedPosition=1-offset/max;Canvas.ForceUpdateCanvases();
+            }
+            return button;
         }
         void Click(string text,bool exact=false)
         {
@@ -57,21 +75,37 @@ namespace OceanAngler
         }
         void Pointer(Button b,bool down)
         {
-            var point=RectTransformUtility.WorldToScreenPoint(null,b.GetComponent<RectTransform>().position);
+            if(b==null)return;
+            Canvas.ForceUpdateCanvases();var rect=b.GetComponent<RectTransform>();var point=RectTransformUtility.WorldToScreenPoint(null,rect.TransformPoint(rect.rect.center));
             var data=new PointerEventData(EventSystem.current){position=point,button=PointerEventData.InputButton.Left};
-            if(down)ExecuteEvents.Execute(b.gameObject,data,ExecuteEvents.pointerDownHandler);
+            if(down)
+            {
+                var hits=new List<RaycastResult>();EventSystem.current.RaycastAll(data,hits);
+                Require(hits.Count>0&&hits[0].gameObject.GetComponentInParent<Button>()==b,"visible-hit-target:"+b.GetComponentInChildren<Text>().text);
+                ExecuteEvents.Execute(b.gameObject,data,ExecuteEvents.pointerDownHandler);
+            }
             else ExecuteEvents.Execute(b.gameObject,data,ExecuteEvents.pointerUpHandler);
         }
-        void Require(bool condition,string name){if(condition)receipt.checks.Add(name);else receipt.failures.Add(name);}
+        void Require(bool condition,string name){if(condition){if(!receipt.checks.Contains(name))receipt.checks.Add(name);}else if(!receipt.failures.Contains(name))receipt.failures.Add(name);}
         void CheckLayout(string page)
         {
             foreach(var t in FindObjectsByType<Text>(FindObjectsSortMode.None))
-                if(t.isActiveAndEnabled&&t.text.Length>0&&t.GetComponentInParent<ScrollRect>()==null)
-                    if(t.preferredHeight>t.rectTransform.rect.height+1)receipt.failures.Add("clipped-text:"+page+":"+t.text.Replace("\n"," "));
+                if(t.isActiveAndEnabled&&t.text.Length>0)
+                    if(t.fontSize<17)receipt.failures.Add("small-text:"+page+":"+t.text);
+                    else if(t.preferredHeight>t.rectTransform.rect.height+1)receipt.failures.Add("clipped-text:"+page+":"+t.text.Replace("\n"," "));
+        }
+        void CheckTouchTargets(string page)
+        {
+            foreach(var b in FindObjectsByType<Button>(FindObjectsSortMode.None))
+            {
+                if(!b.isActiveAndEnabled)continue;var r=b.GetComponent<RectTransform>();var points=new Vector3[4];r.GetWorldCorners(points);
+                float w=Vector3.Distance(points[0],points[3])/DisplayMetrics.PixelsPerPoint,h=Vector3.Distance(points[0],points[1])/DisplayMetrics.PixelsPerPoint;
+                if(w<43.5f||h<43.5f)receipt.failures.Add("small-target:"+page+":"+b.GetComponentInChildren<Text>()?.text);
+            }
         }
         IEnumerator Snapshot(string name)
         {
-            yield return new WaitForEndOfFrame();var tex=ScreenCapture.CaptureScreenshotAsTexture();File.WriteAllBytes(Path.Combine(folder,name+".png"),tex.EncodeToPNG());Destroy(tex);
+            CheckTouchTargets(name);yield return new WaitForEndOfFrame();var tex=ScreenCapture.CaptureScreenshotAsTexture();File.WriteAllBytes(Path.Combine(folder,name+".png"),tex.EncodeToPNG());Destroy(tex);
         }
         void Update()
         {

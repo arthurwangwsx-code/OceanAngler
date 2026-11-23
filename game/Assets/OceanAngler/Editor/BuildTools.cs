@@ -10,6 +10,7 @@ namespace OceanAngler.Editor
 {
     public static class BuildTools
     {
+        [Serializable] sealed class ReleaseConfig { public string bundleId,appId,teamId,version,build,displayName; }
         public static void Prepare()
         {
             const string folder = "Assets/OceanAngler/Generated";
@@ -45,15 +46,18 @@ namespace OceanAngler.Editor
             root.AddComponent<FeedbackPlayer>();
             EditorSceneManager.SaveScene(EditorSceneManager.GetActiveScene(), folder + "/Bay.unity");
             EditorBuildSettings.scenes = new[] { new EditorBuildSettingsScene(folder + "/Bay.unity", true) };
-            PlayerSettings.companyName = "OceanAngler"; PlayerSettings.productName = "OceanAngler Prototype";
-            PlayerSettings.bundleVersion = "0.1.0";
-            PlayerSettings.SetApplicationIdentifier(UnityEditor.Build.NamedBuildTarget.iOS, "com.arthur.OceanAngler");
-            PlayerSettings.defaultInterfaceOrientation = UIOrientation.LandscapeLeft;
-            PlayerSettings.iOS.targetOSVersionString = "17.0";
-            PlayerSettings.iOS.sdkVersion = iOSSdkVersion.DeviceSDK;
-            PlayerSettings.iOS.appleEnableAutomaticSigning = true;
-            PlayerSettings.iOS.appleDeveloperTeamID = Environment.GetEnvironmentVariable("OCEAN_TEAM_ID") ?? "";
+            var release=JsonUtility.FromJson<ReleaseConfig>(System.IO.File.ReadAllText(System.IO.Path.Combine(System.IO.Directory.GetParent(Application.dataPath).Parent.FullName,"publication/release.json")));
+            PlayerSettings.companyName = "OceanAngler"; PlayerSettings.productName = release.displayName;
+            PlayerSettings.bundleVersion = release.version;PlayerSettings.iOS.buildNumber=release.build;
+            PlayerSettings.SetApplicationIdentifier(UnityEditor.Build.NamedBuildTarget.iOS, release.bundleId);
+            PlayerSettings.defaultInterfaceOrientation = UIOrientation.AutoRotation;
+            PlayerSettings.allowedAutorotateToPortrait=false;PlayerSettings.allowedAutorotateToPortraitUpsideDown=false;PlayerSettings.allowedAutorotateToLandscapeLeft=true;PlayerSettings.allowedAutorotateToLandscapeRight=true;
+            PlayerSettings.iOS.targetOSVersionString = "17.0";PlayerSettings.iOS.targetDevice=iOSTargetDevice.iPhoneAndiPad;
+            PlayerSettings.iOS.sdkVersion = iOSSdkVersion.DeviceSDK;PlayerSettings.iOS.requiresFullScreen=true;
+            PlayerSettings.iOS.appleEnableAutomaticSigning = false;PlayerSettings.iOS.appleDeveloperTeamID=release.teamId;
             PlayerSettings.SetScriptingBackend(UnityEditor.Build.NamedBuildTarget.iOS, ScriptingImplementation.IL2CPP);
+            var icon=AssetDatabase.LoadAssetAtPath<Texture2D>("Assets/OceanAngler/Art/AppIcon.png");
+            PlayerSettings.SetIconsForTargetGroup(BuildTargetGroup.Unknown,new[]{icon},IconKind.Any);
             AssetDatabase.SaveAssets();
             Debug.Log("OCEAN_PREPARE_OK");
         }
@@ -77,7 +81,7 @@ namespace OceanAngler.Editor
         {
             var number = Environment.GetEnvironmentVariable("OCEAN_BUILD_NUMBER");
             if (!int.TryParse(number, out int n) || n < 1) throw new Exception("Positive build number required");
-            PlayerSettings.iOS.buildNumber = number;
+            if(PlayerSettings.iOS.buildNumber!=number)throw new Exception("Build number must match committed release configuration; run prepare first");
             var output = Environment.GetEnvironmentVariable("OCEAN_IOS_OUTPUT");
             if (string.IsNullOrEmpty(output) || System.IO.Directory.Exists(output)) throw new Exception("A new export path is required");
             var result = BuildPipeline.BuildPlayer(EditorBuildSettings.scenes.Select(x => x.path).ToArray(), output, BuildTarget.iOS, BuildOptions.None);

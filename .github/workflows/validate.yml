@@ -16,3 +16,4 @@ jobs:
           python-version: '3.12'
       - run: python3 tools/validate.py
       - run: python3 tools/publication_audit.py
+      - run: python3 -m unittest discover -s tools/tests -v

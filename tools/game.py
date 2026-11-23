@@ -3,7 +3,7 @@
 import argparse, os, subprocess, json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-p=argparse.ArgumentParser();p.add_argument('action',choices=['prepare','tests','ios','mac']);p.add_argument('--build',type=int);a=p.parse_args()
+p=argparse.ArgumentParser();p.add_argument('action',choices=['prepare','tests','ios','mac']);p.add_argument('--build',type=int);p.add_argument('--label',default='a');a=p.parse_args()
 editor=Path(os.environ.get('UNITY_EDITOR','/Applications/Unity/Hub/Editor/6000.3.29f1/Unity.app/Contents/MacOS/Unity'))
 local=ROOT/'.local';local.mkdir(exist_ok=True)
 if not editor.is_file():raise SystemExit('Unity Editor not found')
@@ -14,8 +14,10 @@ else:
  if a.action=='mac':
   output=ROOT/'build/OceanAngler.app';output.parent.mkdir(exist_ok=True);env['OCEAN_MAC_OUTPUT']=str(output)
  if a.action=='ios':
+  cmd+=['-buildTarget','iOS']
   if not a.build or a.build<1:raise SystemExit('positive --build required')
-  output=ROOT/'build'/('ios-'+str(a.build))
+  if not a.label.isalnum():raise SystemExit('simple export label required')
+  output=ROOT/'build'/('ios-'+str(a.build)+'-'+a.label)
   if output.exists():raise SystemExit('export already exists; use a new build number')
   output.parent.mkdir(exist_ok=True);env.update(OCEAN_BUILD_NUMBER=str(a.build),OCEAN_IOS_OUTPUT=str(output))
 lock=local/'unity.lock'

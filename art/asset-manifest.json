@@ -8,7 +8,7 @@
       "license": "SIL Open Font License 1.1",
       "redistribution": true,
       "status": "LICENSE_VERIFIED",
-      "sha256": "fdb28e79ddb0a09e0885f087fe77a38f1a7296482500a7f9b7e95e55a09af777",
+      "sha256": "43f6db14484a6c83a902b135a400e97dae18abf27fdf01dac078dd9ffc447be0",
       "path": "game/Assets/OceanAngler/Resources/UIFont.ttf"
     },
     {
@@ -28,6 +28,16 @@
       "redistribution": true,
       "status": "ART_REVIEW_PENDING",
       "note": "One structural rod/reel/line candidate and reef environment; not a complete production gear or habitat library."
+    },
+    {
+      "id": "icon-oceanangler",
+      "author": "OceanAngler contributors",
+      "source": "tools/create_icon.py",
+      "license": "MIT",
+      "redistribution": true,
+      "status": "ORIGINAL_ICON",
+      "path": "game/Assets/OceanAngler/Art/AppIcon.png",
+      "sha256": "b6ea5b6dc712e2ffad450a050cb306d76ff5d1afc7b36bdaeb82417481fb8c19"
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."
