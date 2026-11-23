@@ -1,0 +1,10 @@
+{
+  "status": "PUBLIC_SOURCE_VERIFIED",
+  "repository": "https://github.com/arthurwangwsx-code/OceanAngler",
+  "defaultBranch": "master",
+  "sourceCommit": "9e39c230940c24303f3667f934dd4619fa22d0d8",
+  "ciRun": "https://github.com/arthurwangwsx-code/OceanAngler/actions/runs/45182671441",
+  "ciConclusion": "success",
+  "publicationAudit": "PASS: 144 tracked files; source and licensed/original candidate assets only",
+  "scope": "Source publication and foundation CI. Does not prove Unity rebuild on another computer, production art, TestFlight or device acceptance."
+}

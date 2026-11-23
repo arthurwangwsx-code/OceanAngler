@@ -1,5 +1,7 @@
 # OceanAngler · 海洋小钓手
 
+[GitHub 开源仓库](https://github.com/arthurwangwsx-code/OceanAngler) · [当前验收](reports/progression-validation.md)
+
 儿童与家庭向的 3D 海洋钓鱼探索游戏。真实比例鱼类、漂亮水下世界、易懂钓具、积分成长、图鉴与放流。正式名称待商标检查。
 
 **当前已具备可试玩的钓鱼/进度闭环，21项规则与存档测试、宽屏和4:3 Mac界面冒烟通过。模型与环境仍是待验收样板；真机和TestFlight分发尚未完成。** 首发 iPhone/iPad，Unity 6000.3.29f1 + URP 17.3.0 + C# + Blender；离线单人、无广告、无内购、无聊天。

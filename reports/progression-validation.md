@@ -26,3 +26,9 @@
 公开摘要见progression-rule-tests.json、runtime-desktop.json与runtime-tablet.json；本地截图/日志在.local/runs。当前apply仍进行中，不归档整个变更。
 
 下一步：高质量英雄鱼和完整钓具、三套海域场景、观察生物、iOS本人TestFlight与实际设备验收；最终好玩/好看需儿童试玩和画面审阅。
+
+## 发布进展与仍需完成的目标
+- GitHub源码现已公开，默认master；首轮CI已通过，见github-publication.json。没有上传私有日志、构建物或其他项目源码。
+- ASC应用6838308856已创建并API核实；TestFlight尚未上传。
+- Mac两比例的布局验证只覆盖运行画面与界面事件。手机的实际字体大小、44点触控目标、手持距离、刘海安全区和儿童可读性仍待专门适配及设备验证，不能由这些截图推断通过。
+- 完整产品仍缺最终拟真美术、三套差异化海域、观察生物、儿童/家长试玩、设备20分钟性能及本人TestFlight安装。保持完整目标继续推进。

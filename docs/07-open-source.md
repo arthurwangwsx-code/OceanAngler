@@ -9,3 +9,6 @@ master 唯一长期基线；named branch 从 master 创建，完成检查及审�
 公开流程使用本项目专门目录；build、.local、密钥、签名、原始设备 ID、付费资产、私有日志全部排除。Git LFS 仅在确实大文件时启用，先核对托管预算。CONTRIBUTING 和 PR模板要求需求ID、验证及资产来源；SECURITY 提供支持邮箱。
 
 2026-11-23 重新核查gh登录已恢复，当前用户为arthurwangwsx-code，具有repo/workflow权限。公开前执行tools/publication_audit.py检查精确跟踪文件；实际远程创建与推送以发布回执为准。
+
+## 已发布
+仓库：https://github.com/arthurwangwsx-code/OceanAngler 。默认master，首个玩法版本9e39c23已推送，基础CI运行45182671441成功。公开前144个跟踪文件审查通过。来源许可与原始OFL notice保留；原始本地测试日志、凭据、Unity缓存及构建包未上传。回执见reports/github-publication.json。不同机器上的完整Unity重建尚未另行验收。
