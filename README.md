@@ -1,10 +1,10 @@
 # OceanAngler · 海洋小钓手
 
-[GitHub 开源仓库](https://github.com/arthurwangwsx-code/OceanAngler) · [当前验收](reports/progression-validation.md)
+[GitHub 开源仓库](https://github.com/arthurwangwsx-code/OceanAngler) · [完整验收总账](reports/acceptance-ledger.md)
 
 儿童与家庭向的 3D 海洋钓鱼探索游戏。真实比例鱼类、漂亮水下世界、易懂钓具、积分成长、图鉴与放流。正式名称待商标检查。
 
-**当前已具备可试玩的钓鱼/进度闭环，21项规则与存档测试、宽屏和4:3 Mac界面冒烟通过。模型与环境仍是待验收样板；真机和TestFlight分发尚未完成。** 首发 iPhone/iPad，Unity 6000.3.29f1 + URP 17.3.0 + C# + Blender；离线单人、无广告、无内购、无聊天。
+**当前已具备可试玩的钓鱼/进度闭环，21项规则与存档测试、Mac运行及手机/平板逻辑点布局检查通过。0.1.0 (1)已签名上传，Apple处理、本人测试权限与实际安装分别核验。模型与环境仍是prototype，真机与完整产品验收未完成。** 首发 iPhone/iPad，Unity 6000.3.29f1 + URP 17.3.0 + C# + Blender；离线单人、无广告、无内购、无聊天。
 
 | 阅读目的 | 文件 |
 |---|---|
@@ -16,7 +16,7 @@
 | 分阶段任务、投入、风险与质量 | [路线及验收](docs/06-delivery.md) |
 | GitHub 开源流程 | [开源流程](docs/07-open-source.md) |
 | App Store Connect 与本人 TestFlight | [发布流程](docs/08-testflight.md) |
-| 当前真实结果 | [本轮验收](reports/progression-validation.md)、[历史基础验收](reports/foundation.md) |
+| 当前真实结果 | [完整总账](reports/acceptance-ledger.md)、[移动布局与发行](reports/mobile-layout.md)、[逻辑与Mac运行](reports/progression-validation.md) |
 
 需求合同在 ispec/specs，首批变更在 ispec/changes/product-technical-foundation；planning/backlog.csv 管理任务。仅此目录可写，不修改赛车和枪战项目。
 

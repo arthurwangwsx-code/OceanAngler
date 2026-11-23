@@ -1,7 +1,7 @@
 id,stage,requirement,title,implementation,dependencies
 F0-01,F0,REQ-10,产品技术与许可发布方案,IMPLEMENTED,
 F0-02,F0,REQ-01,Unity工程与构建入口,IMPLEMENTED,F0-01
-F0-03,F0,REQ-10,GitHub CI及公开准备,IN_PROGRESS,F0-01
+F0-03,F0,REQ-10,GitHub CI及公开准备,IMPLEMENTED,F0-01
 P0-01,P0,REQ-01,捕获状态机与触控循环,IMPLEMENTED,F0-02
 P0-02,P0,REQ-02,张力与辅助平衡,IMPLEMENTED,P0-01
 P0-03,P0,REQ-03,存档幂等与损坏恢复,IMPLEMENTED,P0-01
