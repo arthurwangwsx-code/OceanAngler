@@ -7,7 +7,7 @@ namespace OceanAngler
         {
             float width=Mathf.Min(300,Width*.35f);
             var panel=Box(pageRoot,"GearDetails",Panel,new Vector2(1,0),Vector2.one,new Vector2(-width-12,Compact?36:72),new Vector2(-12,Compact?-102:-156));
-            Label(panel,"入门钓组",Compact?23:28,Color.white,14,8,-28,40);
+            Label(panel,"入门钓组",Compact?23:28,Color.white,14,8,-28,44);
             Label(panel,"鱼线穿过导环，\n摇柄带动收线。",Compact?17:21,Muted,14,52,-28,Compact?54:64);
             Button(panel,GearCloseup?"查看全竿":"近看卷线器",14,Compact?110:122,-28,Compact?44:48,()=>{GearCloseup=!GearCloseup;dirty=true;},Navy).GetComponentInChildren<UnityEngine.UI.Text>().fontSize=Compact?18:22;
             Button(panel,GearReelingDemo?"停止收线演示":"试摇卷线器",14,Compact?162:182,-28,Compact?44:48,()=>{GearReelingDemo=!GearReelingDemo;dirty=true;},Teal).GetComponentInChildren<UnityEngine.UI.Text>().fontSize=Compact?18:22;

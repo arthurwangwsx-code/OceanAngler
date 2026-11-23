@@ -3,6 +3,7 @@ Run: Blender --background art/source/bluefin/Bluefin.blend --python tools/art_va
 """
 import bpy,json,math
 from pathlib import Path
+from mathutils.bvhtree import BVHTree
 ROOT=Path(__file__).resolve().parents[1];failures=[];checks=[]
 def check(condition,text):
     (checks if condition else failures).append(text)
@@ -31,15 +32,24 @@ if rig and all(lods):
     for name in ['idle','swim','turn','burst','bite','hooked','release']:
         action=bpy.data.actions.get(name);check(action is not None,'语义动作存在：'+name)
         if action is None:continue
-        rig.animation_data.action=action;poses=[];jaw=[]
+        rig.animation_data.action=action;poses=[];jaw=[];gill_clearance=[]
         for frame in [1,16,31,46,61]:
             bpy.context.scene.frame_set(frame);bpy.context.view_layer.update()
             poses.append(tuple(rig.pose.bones['tail'].rotation_euler));jaw.append(tuple(rig.pose.bones['jaw'].rotation_euler))
+            evaluated=lods[0].evaluated_get(bpy.context.evaluated_depsgraph_get());deformed=evaluated.to_mesh()
+            try:
+                vertices=[v.co.copy() for v in deformed.vertices]
+                skin=[tuple(p.vertices) for p in deformed.polygons if deformed.materials[p.material_index].name=='Bluefin_Skin']
+                gills={v for p in deformed.polygons if deformed.materials[p.material_index].name=='Bluefin_Gill' for v in p.vertices}
+                tree=BVHTree.FromPolygons(vertices,skin)
+                gill_clearance.append(max((tree.find_nearest(vertices[v])[3] for v in gills),default=float('inf')))
+            finally:evaluated.to_mesh_clear()
         spread=max(sum((a-b)**2 for a,b in zip(p,poses[0]))**.5 for p in poses)
         jaw_spread=max(sum((a-b)**2 for a,b in zip(p,jaw[0]))**.5 for p in jaw)
         check(spread>.001,'语义动作具有真实尾摆：'+name)
         if name=='bite':check(jaw_spread>.1,'咬钩动作有实际下颌运动')
-        report['motion'][name]={'tailRotationRange':spread,'jawRotationRange':jaw_spread}
+        check(all(math.isfinite(d) and d<.006 for d in gill_clearance),'变形后鳃缘紧贴鱼体：'+name)
+        report['motion'][name]={'tailRotationRange':spread,'jawRotationRange':jaw_spread,'maximumGillDistanceToBody':max(gill_clearance)}
 report['status']='FAIL' if failures else 'ENGINEERING_CHECKS_PASS'
 path=ROOT/'.local/art/bluefin/validation.json';path.parent.mkdir(parents=True,exist_ok=True);path.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
 print(json.dumps(report,ensure_ascii=False,indent=2))

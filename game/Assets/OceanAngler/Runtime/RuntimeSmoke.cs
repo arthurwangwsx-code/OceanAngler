@@ -10,7 +10,8 @@ namespace OceanAngler
 {
     public sealed class RuntimeSmoke : MonoBehaviour
     {
-        [Serializable] sealed class Receipt { public string status="RUNNING";public List<string> checks=new List<string>();public List<string> failures=new List<string>();public int catches,points;public float pixelsPerPoint, safeWidthPoints, safeHeightPoints; }
+        [Serializable] sealed class LabelRender { public string page,text;public float requiredHeight,availableHeight;public int visibleCharacters,vertices; }
+        [Serializable] sealed class Receipt { public string status="RUNNING";public List<string> checks=new List<string>();public List<string> failures=new List<string>();public List<LabelRender> inspectedLabels=new List<LabelRender>();public int catches,points;public float pixelsPerPoint, safeWidthPoints, safeHeightPoints; }
         GameController game;string folder;Receipt receipt;bool finished;float began;
         IEnumerator Start()
         {
@@ -130,10 +131,18 @@ namespace OceanAngler
         void Require(bool condition,string name){if(condition){if(!receipt.checks.Contains(name))receipt.checks.Add(name);}else if(!receipt.failures.Contains(name))receipt.failures.Add(name);}
         void CheckLayout(string page)
         {
+            Canvas.ForceUpdateCanvases();
             foreach(var t in FindObjectsByType<Text>(FindObjectsSortMode.None))
                 if(t.isActiveAndEnabled&&t.text.Length>0)
+                {
                     if(t.fontSize<17)receipt.failures.Add("small-text:"+page+":"+t.text);
-                    else if(t.preferredHeight>t.rectTransform.rect.height+1)receipt.failures.Add("clipped-text:"+page+":"+t.text.Replace("\n"," "));
+                    else if(t.preferredHeight>t.rectTransform.rect.height+.01f)receipt.failures.Add("clipped-text:"+page+":"+t.text.Replace("\n"," "));
+                    if((t.transform.parent.name=="GearDetails"||t.transform.parent.name=="HabitatDetails")&&Mathf.Abs(t.rectTransform.anchoredPosition.y+8)<.01f)
+                    {
+                        receipt.inspectedLabels.Add(new LabelRender{page=page,text=t.text,requiredHeight=t.preferredHeight,availableHeight=t.rectTransform.rect.height,visibleCharacters=t.cachedTextGenerator.characterCountVisible,vertices=t.cachedTextGenerator.vertexCount});
+                        Require(t.cachedTextGenerator.characterCountVisible>=t.text.Length&&t.cachedTextGenerator.vertexCount>0,"rendered-inspection-title:"+page);
+                    }
+                }
         }
         void CheckTouchTargets(string page)
         {

@@ -17,6 +17,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Bluefin_Gill
+    second: {fileID: 2100000, guid: 9263f8b92209849f581df8d951b478e4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Bluefin_Iris
     second: {fileID: 2100000, guid: 9c6b28f0b77a443559d7398fbde061af, type: 2}
   - first:

@@ -50,11 +50,11 @@
       "acquiredAt": "2026-11-23",
       "status": "ART_REVIEW_PENDING",
       "path": "art/source/bluefin/Bluefin.blend",
-      "sha256": "f5d9c3dbfcbec8a04ea3ed5e0bcf52015f354df3c399136fbe3033d3bd213a23",
+      "sha256": "57323eb62ee2aca6283c271fa2dce340b564ab9ff68f5a47dd7a8891b4b49826",
       "artifacts": [
         {
           "path": "art/source/bluefin/Bluefin.blend",
-          "sha256": "f5d9c3dbfcbec8a04ea3ed5e0bcf52015f354df3c399136fbe3033d3bd213a23"
+          "sha256": "57323eb62ee2aca6283c271fa2dce340b564ab9ff68f5a47dd7a8891b4b49826"
         },
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin_BaseColor.png",
@@ -66,7 +66,7 @@
         },
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin_MetallicSmoothness.png",
-          "sha256": "bab39656767a9824493fa68d526c7c7ef703c598d59cd395567e2546d6711d68"
+          "sha256": "059c82b4ce4911e84706bc91f3d9c1440a0d79f718c262da49d7cd9639b5c12a"
         },
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin_Normal.png",
@@ -74,42 +74,49 @@
         },
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin_Roughness.png",
-          "sha256": "bbf7d89ccc378b816ffe950830620542fff26b36e8ea92cc49945cec45f8c9bf"
+          "sha256": "dc3d87296b0f852b6c2128e73486e554b735edaf6cc167281eed527a33cc4191"
         },
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin.fbx",
-          "sha256": "779a26151e1a1bc86ef29e535b5cc94d339edb6df9bcb46490221bd38266f4db"
+          "sha256": "5620036aa67a6f67ae16137ae4c6eb736b69fd57e4c38c1991d814ca71fbe1c0"
         },
         {
           "path": "art/previews/bluefin/bite.png",
-          "sha256": "a7a5d1e276174e8a8072a1806cd90ad30cf2c98d3be1a49fc98658ff3b2813a5"
+          "sha256": "1763a91f09d01986863f69dbc38797b77a4589682d868c9a80f6496c6504e02e"
         },
         {
           "path": "art/previews/bluefin/front.png",
-          "sha256": "751dfb5605a1d65845e4b4a963aa207e0e268ac7ca643d19814eae6f24d65ed4"
+          "sha256": "63191ddc4caf6dd730aa5412c16a83579d39df07a3b79d77e494ee1d0c44a9bc"
         },
         {
           "path": "art/previews/bluefin/side.png",
-          "sha256": "b4a1e5544d3c26852f5290a0dd128b9d9894f508d4df8b50f163f74ca822741f"
+          "sha256": "7cdbb97fe70df43bb9f1496db209f1c9ec06e2a127ff046b1c4f2b9a6653a88e"
         },
         {
           "path": "art/previews/bluefin/three-quarter.png",
-          "sha256": "1690e20d74ea1a01a0a059c38fe47d19235dd5f70422d1fd37ef31cb45aa7bb1"
+          "sha256": "adf3e14dac9553659ae86c8f044df97c3daedfdd856cb0c54ab05213da04f3cd"
         },
         {
           "path": "art/previews/bluefin/top.png",
-          "sha256": "f2019bd926e8e4f48bc04f5e4eefe057eb221513cae7df9eaa3a90cb00aafb00"
+          "sha256": "4bfdc06ccd6fceb54acf93b95b2645beb624a4f067ae28c6915c826577b80d44"
         },
         {
           "path": "art/previews/bluefin/turntable.mp4",
-          "sha256": "80ca34299c375dc45cbfb8a9b2cc117a0076221433a7b1a583a9ef20322e6a2c"
+          "sha256": "3153682345e41626e2cd569fe345e60b2c270896600778c7d1e05a750e729351"
         },
         {
           "path": "art/previews/bluefin/game-phone.png",
-          "sha256": "16977946cac69b9faa52bed61dbd6b83cdfa8368f44f68d8c981633965f4678d"
+          "sha256": "16977946cac69b9faa52bed61dbd6b83cdfa8368f44f68d8c981633965f4678d",
+          "scope": "Historical Mac phone-point simulation before surface iteration; not actual iOS device evidence"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin_Gill.mat",
+          "sha256": "c99fa991fb1cb255780108d9920ebf6ee49f80a915989db5ff56eb8da5c69f27"
         }
       ],
-      "note": "Original bluefin trevally mesh, UV, PBR maps, 12-bone rig, seven animation clips and three LODs. Scientific/visual/user/device acceptance remains open. No third-party photographs or models included."
+      "note": "Original bluefin trevally mesh, UV, PBR maps, 12-bone rig, seven animation clips and three LODs. Scientific/visual/user/device acceptance remains open. No third-party photographs or models included.",
+      "modifiedAt": "2026-11-24",
+      "modifications": "Integrated opercular body volume; body-matched gill-rim weights; softened roughness/normal/fin response; four views, bite pose and turntable regenerated. Human/science/device acceptance pending."
     },
     {
       "id": "complete-spinning-rig-candidate",
@@ -404,6 +411,62 @@
       "acquiredAt": "2026-11-24",
       "sourceRedistribution": true,
       "canModify": true
+    },
+    {
+      "id": "bluefin-surface-and-title-runtime-previews",
+      "author": "OceanAngler contributors",
+      "source": "Unity ScreenCapture of this project using isolated native test saves",
+      "license": "MIT",
+      "redistribution": true,
+      "sourceRedistribution": true,
+      "canModify": true,
+      "acquiredAt": "2026-11-24",
+      "status": "PROTOTYPE_REVIEW_PARTIAL",
+      "note": "Unmodified Mac-native screenshots, including explicit before-fix references; no OS chrome, personal media or device identifiers. Phone/tablet are logical-point simulations.",
+      "artifacts": [
+        {
+          "path": "art/previews/runtime-fish/fish-before.png",
+          "sha256": "d3dc5ea9fd3b26ed23a008bd0cfc21cad67777c01c59269d54f129f83fea3ab4",
+          "sourceRun": "bay-solid-desktop1",
+          "sourceFrame": "01-fishing.png"
+        },
+        {
+          "path": "art/previews/runtime-fish/fish-after.png",
+          "sha256": "1264ac7d9cf7b2e786536e1261663bfd368cd110b0a172d9d3c048271f6db1b3",
+          "sourceRun": "fish-skin-desktop2",
+          "sourceFrame": "01-fishing.png"
+        },
+        {
+          "path": "art/previews/runtime-fish/journal.png",
+          "sha256": "c847be746ca0afc73b43b9a85e3e1de329c9bf305ee645d45a837fd5b409cac9",
+          "sourceRun": "fish-skin-desktop2",
+          "sourceFrame": "03-journal.png"
+        },
+        {
+          "path": "art/previews/runtime-fish/tablet-title-before.png",
+          "sha256": "7dfdfd551966f0ddddc9edc4bb111727dfa7ce3bca5d77581c023742891cd876",
+          "sourceRun": "title-before1",
+          "sourceFrame": "04-gear.png"
+        },
+        {
+          "path": "art/previews/runtime-fish/tablet-title-after.png",
+          "sha256": "7f0a50d837e839dc4c3464cd000ee36452c1ce63f72e8a9dda040732a166dbde",
+          "sourceRun": "fish-skin-tablet2",
+          "sourceFrame": "04-gear.png"
+        },
+        {
+          "path": "art/previews/runtime-fish/tablet-bay-after.png",
+          "sha256": "20b934cf291a7d4d517d82552f31d4eed2b0134615aadceb7d09241dc1919520",
+          "sourceRun": "fish-skin-tablet2",
+          "sourceFrame": "07-bay-surface.png"
+        },
+        {
+          "path": "art/previews/runtime-fish/phone-fishing.png",
+          "sha256": "34a500d443b5d865b10f3ca045a1ea2ec8c688dfe1841c81a53f5091f2db3080",
+          "sourceRun": "fish-skin-phone2",
+          "sourceFrame": "01-fishing.png"
+        }
+      ]
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."

@@ -22,17 +22,18 @@ namespace OceanAngler.Editor
                 importer.textureCompression=TextureImporterCompression.CompressedHQ;importer.SaveAndReimport();
             }
             var skin=CreateMaterial("Bluefin_Skin",Color.white,.65f);
-            skin.SetTexture("_BaseMap",Texture("Bluefin_BaseColor"));skin.SetTexture("_BumpMap",Texture("Bluefin_Normal"));skin.SetFloat("_BumpScale",.6f);skin.EnableKeyword("_NORMALMAP");
+            skin.SetTexture("_BaseMap",Texture("Bluefin_BaseColor"));skin.SetTexture("_BumpMap",Texture("Bluefin_Normal"));skin.SetFloat("_BumpScale",.35f);skin.EnableKeyword("_NORMALMAP");
             skin.SetTexture("_MetallicGlossMap",Texture("Bluefin_MetallicSmoothness"));skin.SetFloat("_Smoothness",1);skin.EnableKeyword("_METALLICSPECGLOSSMAP");
-            var fins=CreateMaterial("Bluefin_Fins",Color.white,.66f);fins.SetTexture("_BaseMap",Texture("Bluefin_Fin"));
+            var fins=CreateMaterial("Bluefin_Fins",Color.white,.50f);fins.SetTexture("_BaseMap",Texture("Bluefin_Fin"));
+            var gill=CreateMaterial("Bluefin_Gill",new Color(.10f,.18f,.17f),.42f);
             var iris=CreateMaterial("Bluefin_Iris",new Color(.35f,.43f,.27f),.76f);
             var dark=CreateMaterial("Bluefin_Dark",new Color(.009f,.023f,.029f),.77f);
-            foreach(var material in new[]{skin,fins,iris,dark})EditorUtility.SetDirty(material);
+            foreach(var material in new[]{skin,fins,gill,iris,dark})EditorUtility.SetDirty(material);
             var model=(ModelImporter)AssetImporter.GetAtPath(Folder+"/Bluefin.fbx");
             model.animationType=ModelImporterAnimationType.Generic;model.avatarSetup=ModelImporterAvatarSetup.CreateFromThisModel;
             model.importAnimation=true;model.importVisibility=false;model.importBlendShapes=false;
             model.materialImportMode=ModelImporterMaterialImportMode.ImportStandard;
-            foreach(var material in new[]{skin,fins,iris,dark})model.AddRemap(new AssetImporter.SourceAssetIdentifier(typeof(Material),material.name),material);
+            foreach(var material in new[]{skin,fins,gill,iris,dark})model.AddRemap(new AssetImporter.SourceAssetIdentifier(typeof(Material),material.name),material);
             model.SaveAndReimport();
             var definitions=model.defaultClipAnimations;
             foreach(var clip in definitions)clip.loopTime=clip.name!="release"&&!clip.name.EndsWith("|release");
@@ -82,7 +83,7 @@ namespace OceanAngler.Editor
         {
             string path=Folder+"/"+name+".mat";var material=AssetDatabase.LoadAssetAtPath<Material>(path);
             if(material==null){material=new Material(Shader.Find("Universal Render Pipeline/Lit"));AssetDatabase.CreateAsset(material,path);}
-            material.color=color;material.SetFloat("_Metallic",0);material.SetFloat("_Smoothness",smoothness);return material;
+            material.color=color;material.SetColor("_Color",color);material.SetFloat("_Metallic",0);material.SetFloat("_Smoothness",smoothness);return material;
         }
     }
 }

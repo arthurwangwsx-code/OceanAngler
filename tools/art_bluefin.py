@@ -49,7 +49,7 @@ def make_maps():
         color[y0:y1,x0:x1]=color[y0:y1,x0:x1]*(1-dot[:,:,None])+np.array([.035,.105,.14])*dot[:,:,None]
     gy,gx=np.gradient(relief);normal=np.stack((-gx*95,-gy*95,np.ones_like(gx)),axis=2);normal/=np.linalg.norm(normal,axis=2)[:,:,None]
     base=image('Bluefin_BaseColor',color);normal=image('Bluefin_Normal',normal*.5+.5,True)
-    roughness=np.clip(.26+upper*.10+arc*.025+noise,.15,.45)
+    roughness=np.clip(.42+upper*.08+arc*.025+noise,.35,.60)
     rough=image('Bluefin_Roughness',roughness,True)
     image('Bluefin_MetallicSmoothness',np.dstack((np.zeros((h,w,3)),1-roughness)),True)
     # Fin maps follow root-to-edge UV: ribs are subtle, membranes remain opaque in game.
@@ -68,9 +68,11 @@ def material(name,color,roughness=.3,texture=None):
         t=m.node_tree.nodes.new('ShaderNodeTexImage');t.image=texture;m.node_tree.links.new(t.outputs['Color'],p.inputs['Base Color'])
     return m
 skin=material('Bluefin_Skin',(.5,.65,.65),texture=base)
-p=skin.node_tree.nodes.get('Principled BSDF');t=skin.node_tree.nodes.new('ShaderNodeTexImage');t.image=rough;skin.node_tree.links.new(t.outputs['Color'],p.inputs['Roughness'])
-t=skin.node_tree.nodes.new('ShaderNodeTexImage');t.image=normal;n=skin.node_tree.nodes.new('ShaderNodeNormalMap');n.inputs['Strength'].default_value=.6;skin.node_tree.links.new(t.outputs['Color'],n.inputs['Color']);skin.node_tree.links.new(n.outputs['Normal'],p.inputs['Normal'])
-finmat=material('Bluefin_Fins',(.04,.3,.58),.33,finmap)
+p=skin.node_tree.nodes.get('Principled BSDF');p.inputs['Coat Weight'].default_value=.08;p.inputs['Coat Roughness'].default_value=.32
+t=skin.node_tree.nodes.new('ShaderNodeTexImage');t.image=rough;skin.node_tree.links.new(t.outputs['Color'],p.inputs['Roughness'])
+t=skin.node_tree.nodes.new('ShaderNodeTexImage');t.image=normal;n=skin.node_tree.nodes.new('ShaderNodeNormalMap');n.inputs['Strength'].default_value=.35;skin.node_tree.links.new(t.outputs['Color'],n.inputs['Color']);skin.node_tree.links.new(n.outputs['Normal'],p.inputs['Normal'])
+finmat=material('Bluefin_Fins',(.04,.3,.58),.50,finmap)
+gill=material('Bluefin_Gill',(.10,.18,.17),.58);gill.node_tree.nodes.get('Principled BSDF').inputs['Coat Weight'].default_value=0
 iris=material('Bluefin_Iris',(.35,.43,.27),.24);dark=material('Bluefin_Dark',(.009,.023,.029),.23)
 
 # X longitudinal, Y lateral, Z vertical. Profile is purpose-shaped, not an ellipsoid.
@@ -84,7 +86,8 @@ def section(x):
     return profile[-1][1:]
 def surface(x,angle,offset=0):
     top,bottom,width=section(x);co=math.cos(angle);si=math.sin(angle)
-    return (x,si*(width+offset),co*(top if co>=0 else -bottom)+offset*co)
+    cover=.0035*math.sin((x+.79)/.29*math.pi)**2*si*si if -.79<x<-.50 else 0
+    return (x,si*(width+offset+cover),co*(top if co>=0 else -bottom)+(offset+cover)*co)
 def skin_uv(p):
     top,bottom,width=section(p[0]);z=p[2]/max(.01,top if p[2]>=0 else -bottom);y=p[1]/max(.01,width)
     return (max(0,min(1,(p[0]+1.04)/2)),(math.atan2(y,z)%math.tau)/math.tau)
@@ -200,19 +203,13 @@ for sign,label in [(1,'L'),(-1,'R')]:
     for i in range(7):
         t=i/6;roots.append((-.32+t*.08,.075*sign,-.29));tips.append((-.12+t*.12,sign*(.11+.06*math.sin(t*math.pi)),-.43+.11*t))
     fin('Pelvic_'+label,roots,tips,'pelvic'+label)
-    # Raised opercular seam and a shallow gill cover shell, following the head surface.
+    # Opercular volume is integrated into the body. A fine recessed-looking rim
+    # follows the same longitudinal weights, avoiding a floating rigid cover.
     seam=[]
     for i in range(23):
         angle=.36+(math.pi-.72)*i/22;angle=angle if sign==1 else -angle
-        seam.append(surface(-.55+.055*math.sin(abs(angle)),angle,.0025))
-    tube('OpercularSlit_'+label,seam,.0025,dark,'head',6)
-    vs=[];fs=[]
-    for i in range(11):
-        a=.38+(math.pi-.76)*i/10;a*=sign
-        for j in range(7):x=-.79+.29*j/6;vs.append(surface(x,a,.002+.003*math.sin(j/6*math.pi)))
-    for i in range(10):
-        for j in range(6):a=i*7+j;fs.append((a,a+7,a+8,a+1))
-    mesh('GillCover_'+label,vs,fs,skin,bone='head')
+        seam.append(surface(-.55+.055*math.sin(abs(angle)),angle,.0007))
+    tube('OpercularSlit_'+label,seam,.0012,gill,None,6)
     # Arched anterior lateral line, straight posterior scutes.
     line=[]
     for i in range(47):
