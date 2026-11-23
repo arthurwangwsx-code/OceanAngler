@@ -1,1 +1,34 @@
-{"schemaVersion":1,"assets":[],"note":"No production 3D assets integrated. Prototype meshes are not final models."}
+{
+  "schemaVersion": 1,
+  "assets": [
+    {
+      "id": "font-ocean-ui",
+      "author": "Noto contributors; OceanAngler subset",
+      "source": "https://github.com/google/fonts/tree/a85815a42757630ce188fdad368c2dfc444d4773/ofl/notosanssc",
+      "license": "SIL Open Font License 1.1",
+      "redistribution": true,
+      "status": "LICENSE_VERIFIED",
+      "sha256": "fdb28e79ddb0a09e0885f087fe77a38f1a7296482500a7f9b7e95e55a09af777",
+      "path": "game/Assets/OceanAngler/Resources/UIFont.ttf"
+    },
+    {
+      "id": "fish-anatomy-candidate",
+      "author": "OceanAngler contributors",
+      "source": "game/Assets/OceanAngler/Runtime/FishModel.cs",
+      "license": "MIT",
+      "redistribution": true,
+      "status": "ART_REVIEW_PENDING",
+      "note": "Original generated mesh, skin texture and five-bone swimming; anatomy, LOD, source-model and production quality gates remain open."
+    },
+    {
+      "id": "gear-environment-candidate",
+      "author": "OceanAngler contributors",
+      "source": "game/Assets/OceanAngler/Runtime/OceanWorld.cs",
+      "license": "MIT",
+      "redistribution": true,
+      "status": "ART_REVIEW_PENDING",
+      "note": "One structural rod/reel/line candidate and reef environment; not a complete production gear or habitat library."
+    }
+  ],
+  "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."
+}

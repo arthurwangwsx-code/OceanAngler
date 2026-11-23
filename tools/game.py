@@ -3,14 +3,16 @@
 import argparse, os, subprocess, json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-p=argparse.ArgumentParser();p.add_argument('action',choices=['prepare','tests','ios']);p.add_argument('--build',type=int);a=p.parse_args()
+p=argparse.ArgumentParser();p.add_argument('action',choices=['prepare','tests','ios','mac']);p.add_argument('--build',type=int);a=p.parse_args()
 editor=Path(os.environ.get('UNITY_EDITOR','/Applications/Unity/Hub/Editor/6000.3.29f1/Unity.app/Contents/MacOS/Unity'))
 local=ROOT/'.local';local.mkdir(exist_ok=True)
 if not editor.is_file():raise SystemExit('Unity Editor not found')
 env=dict(os.environ);cmd=[str(editor),'-batchmode','-nographics','-projectPath',str(ROOT/'game'),'-logFile',str(local/(a.action+'.log'))]
 if a.action=='tests':cmd+=['-runTests','-testPlatform','EditMode','-testResults',str(local/'editmode.xml')]
 else:
- cmd+=['-quit','-executeMethod','OceanAngler.Editor.BuildTools.'+('Prepare' if a.action=='prepare' else 'ExportIOS')]
+ cmd+=['-quit','-executeMethod','OceanAngler.Editor.BuildTools.'+('Prepare' if a.action=='prepare' else 'ExportMac' if a.action=='mac' else 'ExportIOS')]
+ if a.action=='mac':
+  output=ROOT/'build/OceanAngler.app';output.parent.mkdir(exist_ok=True);env['OCEAN_MAC_OUTPUT']=str(output)
  if a.action=='ios':
   if not a.build or a.build<1:raise SystemExit('positive --build required')
   output=ROOT/'build'/('ios-'+str(a.build))

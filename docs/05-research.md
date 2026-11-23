@@ -16,7 +16,7 @@ ToyRacer：/Users/ai/Documents/Codex/2026-11-22/3d-1-a-ios-b-3d。
 已读 README 与工具入口：Unity 6000.3.29f1、URP、iPad 模拟器、资源与隐私验收、输入生命周期、构建产物隔离。复用流程经验，不将赛车的驾驶参数/个人设备证据移入钓鱼项目。
 
 TacticalFPS：/Users/ai/Documents/Codex/2026-11-23/3d-1-a-cs-b-c。
-已读 AGENTS、README、tooling/README、Packages/manifest 和 App Store Connect 工具源码。可参考模块隔离、每 build 的源码/原生摘要、本人内部组和签名校验；不复制 checkout、不触碰其 WIP、不使用其 app ID。仅选择性复用用户自有 tools/appstore.py 的凭据解析与ASC客户端，将写入范围固定为新bundle，落在本项目tools/asc.py；不复制其密钥、测试者、App ID或发布产物。
+已读 AGENTS、README、tooling/README、Packages/manifest 和 App Store Connect 工具源码。可参考模块隔离、每 build 的源码/原生摘要、本人内部组和签名校验；不复制 checkout、不触碰其 WIP、不使用其 app ID。ASC实现借鉴其安全边界；当前tools/asc.py已独立实现并只接受显式环境配置，不发布旧项目工具源码、密钥、测试者或发布产物。
 
 本机核实 Xcode27.2、Unity6000.3.29f1、xcodegen/gh/ispec 存在，Apple 分发身份有效。gh 当前 CLI token 失效，但连接器可返回当前 GitHub 用户；不把连接器身份查询当成创建仓库的写权限。
 

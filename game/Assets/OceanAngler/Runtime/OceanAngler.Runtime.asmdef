@@ -1,1 +1,1 @@
-{"name":"OceanAngler.Runtime","rootNamespace":"OceanAngler"}
+{"name":"OceanAngler.Runtime","rootNamespace":"OceanAngler","references":["UnityEngine.UI"]}

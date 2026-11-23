@@ -1,0 +1,93 @@
+{
+  "suite": "Unity EditMode",
+  "total": 21,
+  "passed": 21,
+  "failed": 0,
+  "cases": [
+    {
+      "name": "AssistedModeRescuesHeldReelAndLands",
+      "result": "Passed"
+    },
+    {
+      "name": "BothInvalidCopiesRequireExplicitRecoveryAndRemainIntact",
+      "result": "Passed"
+    },
+    {
+      "name": "CompleteCatalogHasStarterLoadoutAndEighteenReachableTasks",
+      "result": "Passed"
+    },
+    {
+      "name": "FailedDiskCommitDoesNotChangeInMemoryPoints",
+      "result": "Passed"
+    },
+    {
+      "name": "FailedTaskIsNotMarkedCompleteByUnrelatedCatch",
+      "result": "Passed"
+    },
+    {
+      "name": "FirstCatchAlwaysHasAssistance",
+      "result": "Passed"
+    },
+    {
+      "name": "FirstDiscoveryAndRepeatScoreDifferByOneHundred",
+      "result": "Passed"
+    },
+    {
+      "name": "InvalidTimeDoesNotCorruptSimulation",
+      "result": "Passed"
+    },
+    {
+      "name": "LockedGearAndHabitatCannotBeSelected",
+      "result": "Passed"
+    },
+    {
+      "name": "MissedStandardBiteCanRetryWithoutLosingPoints",
+      "result": "Passed"
+    },
+    {
+      "name": "NaNAndInvalidDimensionsCannotBecomeRewards",
+      "result": "Passed"
+    },
+    {
+      "name": "NewerVersionIsNeverSilentlyDowngraded",
+      "result": "Passed"
+    },
+    {
+      "name": "PauseFreezesAndBlocksInput",
+      "result": "Passed"
+    },
+    {
+      "name": "RecoveryCommitDoesNotOverwriteGoodBackupWithCorruption",
+      "result": "Passed"
+    },
+    {
+      "name": "ReleaseInputReducesTension",
+      "result": "Passed"
+    },
+    {
+      "name": "SameCatchCannotAwardAgainAfterRestart",
+      "result": "Passed"
+    },
+    {
+      "name": "SettingsLoadoutAndRecordsSurviveRestart",
+      "result": "Passed"
+    },
+    {
+      "name": "StandardOverloadEscapes",
+      "result": "Passed"
+    },
+    {
+      "name": "TamperedPrimaryRecoversPreviousCompleteBackup",
+      "result": "Passed"
+    },
+    {
+      "name": "TwentyCyclesAcrossUnlocksPersistWithoutDeadEnd",
+      "result": "Passed"
+    },
+    {
+      "name": "WrongHabitatFishRejected",
+      "result": "Passed"
+    }
+  ],
+  "scope": "Rules, actual file I/O and 20 seeded capture cycles. Not child playtesting or physical-device acceptance."
+}

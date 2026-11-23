@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "exitCode": 0,
+  "checks": [
+    "cast-to-bite",
+    "strike-to-fighting",
+    "controlled-catch",
+    "release-and-persist",
+    "left-hand-setting",
+    "navigation-clears-held-input"
+  ],
+  "failures": [],
+  "catches": 1,
+  "points": 245,
+  "screenshots": {
+    "06-left-handed.png": [
+      1440,
+      900
+    ],
+    "04-gear.png": [
+      1440,
+      900
+    ],
+    "05-tasks.png": [
+      1440,
+      900
+    ],
+    "02-catch.png": [
+      1440,
+      900
+    ],
+    "03-journal.png": [
+      1440,
+      900
+    ],
+    "01-fishing.png": [
+      1440,
+      900
+    ]
+  }
+}

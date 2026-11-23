@@ -16,3 +16,8 @@ Test notes应明确：早期原型，测试抛竿/张力/收鱼/积分/存档/�
 本机已查到 Apple Distribution: Arthur Wang 的签名身份；身份可用不证明本项目 profile 或 App 记录已完成。真实连接与构建结果见 reports/foundation.md。
 
 本轮已注册 bundle com.arthur.OceanAngler（Apple resource ID 6A73JBG8G4），API可用但apps查询为空。网页控制两次连接超时，因此尚无App记录及可上传目标。需恢复网页连接或用户在网站新建同bundle的iOS记录后，tools/asc.py status核查numeric ID再继续。建议字段：Name=OceanAngler、Primary Language=Simplified Chinese、SKU=OceanAngler-iOS、平台iOS。
+
+## 当前应用记录
+2026-11-23 已通过网页创建 OceanAngler，App ID为6838308856，bundle为com.arthur.OceanAngler，主要语言简体中文，SKU为OceanAngler-iOS。已用API读回匹配。前述网页连接阻塞已解除；尚未归档上传，后续只操作此App。
+
+工具配置须显式提供ASC_KEY_ID、ASC_ISSUER_ID、ASC_KEY_PATH，或将ASC_ENV_FILE指向自己本机已有的受保护配置。工具不自动读取其他项目的凭据，不将配置或密钥提交仓库。

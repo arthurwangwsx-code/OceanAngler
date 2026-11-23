@@ -29,3 +29,6 @@ URP Forward，烘焙环境、受控单主光、候选 2x MSAA，动态分辨率/
 纯逻辑测试：合法状态迁移、超时、张力边界、分数公式、重复结算、存档恢复、教程种子、非法数据。PlayMode：实际触控流程、镜头、模型实例/动画、场景切换、中断。模拟器验证布局和启动；真机验证触控、Metal、性能、温升、恢复。发布验证 bundle/version/build/source commit/签名/Apple processing/本人组/实际安装分别记录。
 
 Unity .meta 入库，Library/Temp/build/凭据不入库，包版本固定，首次 Editor 导入后提交真实 packages-lock。不复制旧工程，不修改其代码/签名，不复用旧 bundle ID。公开工程和 TestFlight 构建由同一 commit 追踪；用户设备原始日志不进入公开证据。
+
+## 当前实现决策
+ContentCatalog.json作为首批数据真值，由运行时和测试共享校验；暂不额外维护ScriptableObject副本，以避免两套数据漂移。ProgressService先写临时文件并flush/原子替换后才发布内存状态。损坏文件转存，未来版本不静默降级；家长区恢复保留原件。规则测试与Mac运行检验分别记录，规则20次循环不等于真机20次触控验收。

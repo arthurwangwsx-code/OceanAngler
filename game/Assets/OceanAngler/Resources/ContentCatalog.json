@@ -1,0 +1,470 @@
+{
+  "fish": [
+    {
+      "id": "trevally",
+      "name": "蓝鳍鲹",
+      "habitatId": "bay",
+      "shape": "stream",
+      "minWeight": 0.4,
+      "maxWeight": 4,
+      "minLength": 22,
+      "maxLength": 65,
+      "strength": 1,
+      "basePoints": 60,
+      "note": "先观察体型、鱼鳍与游动，再选择合适的拟饵。物种知识与分布仍待科学审校。"
+    },
+    {
+      "id": "snapper",
+      "name": "黄鳍鲷",
+      "habitatId": "bay",
+      "shape": "deep",
+      "minWeight": 0.3,
+      "maxWeight": 2.8,
+      "minLength": 18,
+      "maxLength": 46,
+      "strength": 0.85,
+      "basePoints": 55,
+      "note": "先观察体型、鱼鳍与游动，再选择合适的拟饵。物种知识与分布仍待科学审校。"
+    },
+    {
+      "id": "grouper",
+      "name": "赤点石斑鱼",
+      "habitatId": "bay",
+      "shape": "grouper",
+      "minWeight": 0.5,
+      "maxWeight": 5,
+      "minLength": 25,
+      "maxLength": 62,
+      "strength": 1.1,
+      "basePoints": 70,
+      "note": "先观察体型、鱼鳍与游动，再选择合适的拟饵。物种知识与分布仍待科学审校。"
+    },
+    {
+      "id": "redsnapper",
+      "name": "红笛鲷",
+      "habitatId": "bay",
+      "shape": "deep",
+      "minWeight": 0.4,
+      "maxWeight": 3.5,
+      "minLength": 20,
+      "maxLength": 52,
+      "strength": 0.95,
+      "basePoints": 65,
+      "note": "先观察体型、鱼鳍与游动，再选择合适的拟饵。物种知识与分布仍待科学审校。"
+    },
+    {
+      "id": "mackerel",
+      "name": "大西洋鲭",
+      "habitatId": "channel",
+      "shape": "stream",
+      "minWeight": 0.3,
+      "maxWeight": 1.8,
+      "minLength": 22,
+      "maxLength": 48,
+      "strength": 1.05,
+      "basePoints": 80,
+      "note": "先观察体型、鱼鳍与游动，再选择合适的拟饵。物种知识与分布仍待科学审校。"
+    },
+    {
+      "id": "skipjack",
+      "name": "鲣",
+      "habitatId": "channel",
+      "shape": "tuna",
+      "minWeight": 1,
+      "maxWeight": 9,
+      "minLength": 35,
+      "maxLength": 85,
+      "strength": 1.2,
+      "basePoints": 90,
+      "note": "先观察体型、鱼鳍与游动，再选择合适的拟饵。物种知识与分布仍待科学审校。"
+    },
+    {
+      "id": "mahi",
+      "name": "鬼头刀",
+      "habitatId": "channel",
+      "shape": "mahi",
+      "minWeight": 1,
+      "maxWeight": 12,
+      "minLength": 45,
+      "maxLength": 115,
+      "strength": 1.3,
+      "basePoints": 100,
+      "note": "先观察体型、鱼鳍与游动，再选择合适的拟饵。物种知识与分布仍待科学审校。"
+    },
+    {
+      "id": "yellowfin",
+      "name": "黄鳍金枪鱼",
+      "habitatId": "channel",
+      "shape": "tuna",
+      "minWeight": 2,
+      "maxWeight": 20,
+      "minLength": 50,
+      "maxLength": 140,
+      "strength": 1.4,
+      "basePoints": 110,
+      "note": "先观察体型、鱼鳍与游动，再选择合适的拟饵。物种知识与分布仍待科学审校。"
+    },
+    {
+      "id": "bigeye",
+      "name": "大眼金枪鱼",
+      "habitatId": "slope",
+      "shape": "tuna",
+      "minWeight": 3,
+      "maxWeight": 26,
+      "minLength": 55,
+      "maxLength": 150,
+      "strength": 1.5,
+      "basePoints": 130,
+      "note": "先观察体型、鱼鳍与游动，再选择合适的拟饵。物种知识与分布仍待科学审校。"
+    },
+    {
+      "id": "alfonsino",
+      "name": "金目鲷",
+      "habitatId": "slope",
+      "shape": "deep",
+      "minWeight": 0.3,
+      "maxWeight": 2.5,
+      "minLength": 20,
+      "maxLength": 48,
+      "strength": 1.15,
+      "basePoints": 100,
+      "note": "先观察体型、鱼鳍与游动，再选择合适的拟饵。物种知识与分布仍待科学审校。"
+    },
+    {
+      "id": "cod",
+      "name": "太平洋鳕",
+      "habitatId": "slope",
+      "shape": "grouper",
+      "minWeight": 1,
+      "maxWeight": 12,
+      "minLength": 40,
+      "maxLength": 100,
+      "strength": 1.25,
+      "basePoints": 115,
+      "note": "先观察体型、鱼鳍与游动，再选择合适的拟饵。物种知识与分布仍待科学审校。"
+    },
+    {
+      "id": "halibut",
+      "name": "大西洋庸鲽",
+      "habitatId": "slope",
+      "shape": "flat",
+      "minWeight": 2,
+      "maxWeight": 24,
+      "minLength": 45,
+      "maxLength": 140,
+      "strength": 1.4,
+      "basePoints": 125,
+      "note": "先观察体型、鱼鳍与游动，再选择合适的拟饵。物种知识与分布仍待科学审校。"
+    }
+  ],
+  "habitats": [
+    {
+      "id": "bay",
+      "name": "珊瑚海湾",
+      "description": "从明亮浅海开始，认识身边的海洋朋友。",
+      "unlockPoints": 0
+    },
+    {
+      "id": "channel",
+      "name": "近海航道",
+      "description": "驶向开阔蓝海，寻找快速游动的鱼群。",
+      "unlockPoints": 900
+    },
+    {
+      "id": "slope",
+      "name": "陆坡海域",
+      "description": "跟随研究船探索深蓝水域。",
+      "unlockPoints": 1800
+    }
+  ],
+  "gear": [
+    {
+      "id": "rod-1",
+      "name": "入门轻竿",
+      "category": "rod",
+      "power": 1,
+      "unlockPoints": 0,
+      "description": "提升控鱼稳定性，帮助竿身吸收冲力。"
+    },
+    {
+      "id": "rod-2",
+      "name": "礁区轻竿",
+      "category": "rod",
+      "power": 1.1,
+      "unlockPoints": 300,
+      "description": "提升控鱼稳定性，帮助竿身吸收冲力。"
+    },
+    {
+      "id": "rod-3",
+      "name": "近海中竿",
+      "category": "rod",
+      "power": 1.18,
+      "unlockPoints": 900,
+      "description": "提升控鱼稳定性，帮助竿身吸收冲力。"
+    },
+    {
+      "id": "rod-4",
+      "name": "船钓中重竿",
+      "category": "rod",
+      "power": 1.25,
+      "unlockPoints": 1800,
+      "description": "提升控鱼稳定性，帮助竿身吸收冲力。"
+    },
+    {
+      "id": "rod-5",
+      "name": "远投竿",
+      "category": "rod",
+      "power": 1.15,
+      "unlockPoints": 2200,
+      "description": "提升控鱼稳定性，帮助竿身吸收冲力。"
+    },
+    {
+      "id": "rod-6",
+      "name": "深水竿",
+      "category": "rod",
+      "power": 1.35,
+      "unlockPoints": 3000,
+      "description": "提升控鱼稳定性，帮助竿身吸收冲力。"
+    },
+    {
+      "id": "reel-1",
+      "name": "入门纺车",
+      "category": "reel",
+      "power": 1,
+      "unlockPoints": 0,
+      "description": "改变收线速度，松手仍然可以降低张力。"
+    },
+    {
+      "id": "reel-2",
+      "name": "轻型纺车",
+      "category": "reel",
+      "power": 1.1,
+      "unlockPoints": 300,
+      "description": "改变收线速度，松手仍然可以降低张力。"
+    },
+    {
+      "id": "reel-3",
+      "name": "船钓轮",
+      "category": "reel",
+      "power": 1.2,
+      "unlockPoints": 900,
+      "description": "改变收线速度，松手仍然可以降低张力。"
+    },
+    {
+      "id": "reel-4",
+      "name": "深水辅助轮",
+      "category": "reel",
+      "power": 1.3,
+      "unlockPoints": 1800,
+      "description": "改变收线速度，松手仍然可以降低张力。"
+    },
+    {
+      "id": "line-1",
+      "name": "轻型鱼线",
+      "category": "line",
+      "power": 1,
+      "unlockPoints": 0,
+      "description": "提高安全张力余量，初始鱼线也能完成探索。"
+    },
+    {
+      "id": "line-2",
+      "name": "中型鱼线",
+      "category": "line",
+      "power": 1.12,
+      "unlockPoints": 300,
+      "description": "提高安全张力余量，初始鱼线也能完成探索。"
+    },
+    {
+      "id": "line-3",
+      "name": "重型鱼线",
+      "category": "line",
+      "power": 1.24,
+      "unlockPoints": 900,
+      "description": "提高安全张力余量，初始鱼线也能完成探索。"
+    },
+    {
+      "id": "line-4",
+      "name": "深水鱼线",
+      "category": "line",
+      "power": 1.36,
+      "unlockPoints": 1800,
+      "description": "提高安全张力余量，初始鱼线也能完成探索。"
+    },
+    {
+      "id": "lure-1",
+      "name": "软虫拟饵",
+      "category": "lure",
+      "power": 1,
+      "unlockPoints": 0,
+      "description": "提升鱼群接近速度，无消耗，可重复使用。"
+    },
+    {
+      "id": "lure-2",
+      "name": "鱼形软饵",
+      "category": "lure",
+      "power": 1.05,
+      "unlockPoints": 300,
+      "description": "提升鱼群接近速度，无消耗，可重复使用。"
+    },
+    {
+      "id": "lure-3",
+      "name": "闪光亮片",
+      "category": "lure",
+      "power": 1.08,
+      "unlockPoints": 900,
+      "description": "提升鱼群接近速度，无消耗，可重复使用。"
+    },
+    {
+      "id": "lure-4",
+      "name": "米诺拟饵",
+      "category": "lure",
+      "power": 1.1,
+      "unlockPoints": 1800,
+      "description": "提升鱼群接近速度，无消耗，可重复使用。"
+    },
+    {
+      "id": "lure-5",
+      "name": "金属铁板",
+      "category": "lure",
+      "power": 1.12,
+      "unlockPoints": 2200,
+      "description": "提升鱼群接近速度，无消耗，可重复使用。"
+    },
+    {
+      "id": "lure-6",
+      "name": "深水发光拟饵",
+      "category": "lure",
+      "power": 1.15,
+      "unlockPoints": 3000,
+      "description": "提升鱼群接近速度，无消耗，可重复使用。"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "task-01",
+      "kind": "catches",
+      "target": 1,
+      "targetId": "",
+      "name": "第一次放流"
+    },
+    {
+      "id": "task-02",
+      "kind": "catches",
+      "target": 5,
+      "targetId": "",
+      "name": "海湾新朋友"
+    },
+    {
+      "id": "task-03",
+      "kind": "catches",
+      "target": 10,
+      "targetId": "",
+      "name": "十次相遇"
+    },
+    {
+      "id": "task-04",
+      "kind": "catches",
+      "target": 20,
+      "targetId": "",
+      "name": "耐心小钓手"
+    },
+    {
+      "id": "task-05",
+      "kind": "species",
+      "target": 3,
+      "targetId": "",
+      "name": "发现三种鱼"
+    },
+    {
+      "id": "task-06",
+      "kind": "species",
+      "target": 6,
+      "targetId": "",
+      "name": "六种海洋朋友"
+    },
+    {
+      "id": "task-07",
+      "kind": "species",
+      "target": 9,
+      "targetId": "",
+      "name": "九种新发现"
+    },
+    {
+      "id": "task-08",
+      "kind": "species",
+      "target": 12,
+      "targetId": "",
+      "name": "完整鱼类图鉴"
+    },
+    {
+      "id": "task-09",
+      "kind": "habitat",
+      "target": 4,
+      "targetId": "bay",
+      "name": "海湾观察员"
+    },
+    {
+      "id": "task-10",
+      "kind": "habitat",
+      "target": 4,
+      "targetId": "channel",
+      "name": "航道探索者"
+    },
+    {
+      "id": "task-11",
+      "kind": "habitat",
+      "target": 4,
+      "targetId": "slope",
+      "name": "深水研究员"
+    },
+    {
+      "id": "task-12",
+      "kind": "safe",
+      "target": 1,
+      "targetId": "",
+      "name": "轻柔控线"
+    },
+    {
+      "id": "task-13",
+      "kind": "safe",
+      "target": 5,
+      "targetId": "",
+      "name": "稳稳的手"
+    },
+    {
+      "id": "task-14",
+      "kind": "safe",
+      "target": 10,
+      "targetId": "",
+      "name": "控线小能手"
+    },
+    {
+      "id": "task-15",
+      "kind": "standard",
+      "target": 1,
+      "targetId": "",
+      "name": "标准模式初体验"
+    },
+    {
+      "id": "task-16",
+      "kind": "standard",
+      "target": 5,
+      "targetId": "",
+      "name": "标准模式探索"
+    },
+    {
+      "id": "task-17",
+      "kind": "points",
+      "target": 900,
+      "targetId": "",
+      "name": "驶向近海"
+    },
+    {
+      "id": "task-18",
+      "kind": "points",
+      "target": 1800,
+      "targetId": "",
+      "name": "走进深蓝"
+    }
+  ]
+}

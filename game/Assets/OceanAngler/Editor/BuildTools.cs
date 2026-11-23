@@ -22,6 +22,9 @@ namespace OceanAngler.Editor
                 pipeline = UniversalRenderPipelineAsset.Create(renderer);
                 AssetDatabase.CreateAsset(pipeline, folder + "/OceanURP.asset");
             }
+            const string surfacePath = "Assets/OceanAngler/Resources/Surface.mat";
+            if (AssetDatabase.LoadAssetAtPath<Material>(surfacePath) == null)
+                AssetDatabase.CreateAsset(new Material(Shader.Find("Universal Render Pipeline/Lit")), surfacePath);
             GraphicsSettings.defaultRenderPipeline = pipeline;
             QualitySettings.renderPipeline = pipeline;
             EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Single);
@@ -33,10 +36,13 @@ namespace OceanAngler.Editor
             camera.gameObject.AddComponent<AudioListener>();
             var light = new GameObject("Sun").AddComponent<Light>(); light.type = LightType.Directional; light.intensity = 1.3f;
             light.transform.rotation = Quaternion.Euler(45, -30, 0);
-            Primitive("WaterPrototype", PrimitiveType.Cube, new Vector3(0, -1.1f, 4), new Vector3(30, 0.1f, 30), new Color(0.04f, 0.5f, 0.62f));
-            Primitive("PierPrototype", PrimitiveType.Cube, new Vector3(-3, -0.4f, 0), new Vector3(3, 0.4f, 6), new Color(0.55f, 0.36f, 0.17f));
-            Primitive("PrototypeFish", PrimitiveType.Sphere, new Vector3(0, -0.4f, 3), new Vector3(0.9f, 0.4f, 0.35f), new Color(0.8f, 0.65f, 0.15f));
-            new GameObject("Session").AddComponent<PrototypeView>();
+            var root = new GameObject("OceanGame");
+            root.AddComponent<GameController>();
+            root.AddComponent<GameUI>();
+            root.AddComponent<OceanWorld>();
+            root.AddComponent<PreviewCapture>();
+            root.AddComponent<RuntimeSmoke>();
+            root.AddComponent<FeedbackPlayer>();
             EditorSceneManager.SaveScene(EditorSceneManager.GetActiveScene(), folder + "/Bay.unity");
             EditorBuildSettings.scenes = new[] { new EditorBuildSettingsScene(folder + "/Bay.unity", true) };
             PlayerSettings.companyName = "OceanAngler"; PlayerSettings.productName = "OceanAngler Prototype";
@@ -59,6 +65,13 @@ namespace OceanAngler.Editor
             if (mat == null) { mat = new Material(Shader.Find("Universal Render Pipeline/Lit")); AssetDatabase.CreateAsset(mat, path); }
             mat.color = color; EditorUtility.SetDirty(mat);
             obj.GetComponent<Renderer>().sharedMaterial = mat;
+        }
+        public static void ExportMac()
+        {
+            var output = Environment.GetEnvironmentVariable("OCEAN_MAC_OUTPUT");
+            if (string.IsNullOrEmpty(output)) throw new Exception("Mac output required");
+            var result = BuildPipeline.BuildPlayer(EditorBuildSettings.scenes.Select(x => x.path).ToArray(), output, BuildTarget.StandaloneOSX, BuildOptions.Development);
+            if (result.summary.result != BuildResult.Succeeded) throw new Exception("Mac build failed");
         }
         public static void ExportIOS()
         {

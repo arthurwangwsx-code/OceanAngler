@@ -8,4 +8,4 @@ master 唯一长期基线；named branch 从 master 创建，完成检查及审�
 
 公开流程使用本项目专门目录；build、.local、密钥、签名、原始设备 ID、付费资产、私有日志全部排除。Git LFS 仅在确实大文件时启用，先核对托管预算。CONTRIBUTING 和 PR模板要求需求ID、验证及资产来源；SECURITY 提供支持邮箱。
 
-当前 gh CLI 登录失效，GitHub 连接器仅核实用户 arthurwangwsx-code；远程仓库创建/推送尚未完成。此为真实前置条件，不能将创建本地 Git 算作开源已发布。
+2026-11-23 重新核查gh登录已恢复，当前用户为arthurwangwsx-code，具有repo/workflow权限。公开前执行tools/publication_audit.py检查精确跟踪文件；实际远程创建与推送以发布回执为准。

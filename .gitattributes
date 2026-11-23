@@ -14,3 +14,5 @@
 *.asset whitespace=-blank-at-eol,-blank-at-eof
 *.unity whitespace=-blank-at-eol,-blank-at-eof
 *.mat whitespace=-blank-at-eol,-blank-at-eof
+# Keep the pinned upstream OFL notice byte-for-byte, including its whitespace.
+**/NotoSansSC-OFL.txt whitespace=-blank-at-eol

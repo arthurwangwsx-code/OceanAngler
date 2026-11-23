@@ -1,0 +1,2 @@
+# Optional font subset regeneration only. Runtime build uses the committed font.
+fonttools==4.60.2
