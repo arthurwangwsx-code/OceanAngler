@@ -35,7 +35,7 @@ namespace OceanAngler.Editor
             foreach(var material in new[]{skin,fins,iris,dark})model.AddRemap(new AssetImporter.SourceAssetIdentifier(typeof(Material),material.name),material);
             model.SaveAndReimport();
             var definitions=model.defaultClipAnimations;
-            foreach(var clip in definitions)clip.loopTime=true;
+            foreach(var clip in definitions)clip.loopTime=clip.name!="release"&&!clip.name.EndsWith("|release");
             model.clipAnimations=definitions;model.SaveAndReimport();
             var clips=AssetDatabase.LoadAllAssetsAtPath(Folder+"/Bluefin.fbx").OfType<AnimationClip>().Where(c=>!c.name.StartsWith("__preview__")).ToArray();
             string controllerPath=Folder+"/Bluefin.controller";
@@ -46,7 +46,7 @@ namespace OceanAngler.Editor
             {
                 var clip=clips.SingleOrDefault(c=>c.name==semantic||c.name.EndsWith("|"+semantic));
                 if(clip==null)throw new InvalidOperationException("Missing imported motion "+semantic+"; found "+string.Join(",",clips.Select(c=>c.name)));
-                var settings=AnimationUtility.GetAnimationClipSettings(clip);settings.loopTime=true;AnimationUtility.SetAnimationClipSettings(clip,settings);
+                var settings=AnimationUtility.GetAnimationClipSettings(clip);settings.loopTime=semantic!="release";AnimationUtility.SetAnimationClipSettings(clip,settings);
                 var state=stateMachine.states.Select(s=>s.state).FirstOrDefault(s=>s.name==semantic)??stateMachine.AddState(semantic);
                 state.motion=clip;if(semantic=="swim")stateMachine.defaultState=state;
             }

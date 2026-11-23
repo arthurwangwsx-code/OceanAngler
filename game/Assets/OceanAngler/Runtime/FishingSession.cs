@@ -67,7 +67,7 @@ namespace OceanAngler
             }
         }
         void Enter(FishingPhase next) { Phase = next; phaseTime = 0; }
-        public void FinishRelease() { if (!Paused && Phase == FishingPhase.Landed) { Catch = null; Enter(FishingPhase.Ready); } }
+        public void FinishRelease() { if (!Paused && Phase == FishingPhase.Landed) Cancel(); }
         public void Retry() { if (!Paused && Phase == FishingPhase.Escaped) { Catch = null; Enter(FishingPhase.Ready); } }
         public void Cancel() { Catch = null; Tension = Progress = 0; Enter(FishingPhase.Ready); }
     }

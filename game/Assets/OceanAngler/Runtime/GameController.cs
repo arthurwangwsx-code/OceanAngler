@@ -13,6 +13,7 @@ namespace OceanAngler
         public string Notice { get; private set; }
         public bool RestReminder { get; private set; }
         public event Action Changed;
+        public event Action<CatchRecord> Released;
         readonly System.Random random = new System.Random();
         float accumulator, activeTime;
         void Awake()
@@ -45,7 +46,11 @@ namespace OceanAngler
         public void Release()
         {
             if (Session.Paused || Session.Phase != FishingPhase.Landed) return;
-            if (Try(() => { int points = Progress.Settle(Session.Catch); Notice = "已记录并放流，获得 " + points + " 研究积分"; })) Session.FinishRelease();
+            var caught=Session.Catch;
+            if (Try(() => { int points = Progress.Settle(caught); Notice = "已记录并放流，获得 " + points + " 研究积分"; }))
+            {
+                Reeling=false;Session.FinishRelease();Released?.Invoke(caught);
+            }
             Changed?.Invoke();
         }
         public void ReturnToPreparation() { Session.Cancel(); Pause(false); Notice="本次鱼获已放回海中，已有记录和积分保留。"; Changed?.Invoke(); }

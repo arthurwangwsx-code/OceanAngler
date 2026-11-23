@@ -41,3 +41,5 @@ ASC_ENV_FILE=/path/to/private/asc.env python3 tools/asc.py status
 integration/art-candidates已串行集成蓝鳍鲹、完整纺车钓组和珊瑚海湾，25项Editor及6项无画面PlayMode检查通过，涵盖真实场景内的海湾观察、暂停返回、钓组试摇、恢复抛竿、战斗中导航停止收线及实际机构/蒙皮；Mac原生包编译通过。[集成记录](reports/integrated-art-candidates.md)与源图另行保留。TestFlight 0.1.0 (2)冻结于2971b11；此前(1)的[历史回执](reports/testflight-0.1.0-1.json)保留，新包实际安装与画面待验。
 
 Mac验证：`python3 tools/game.py mac`，再运行`python3 tools/runtime_smoke.py --label unique-run`。字体重建见tools/requirements.txt；ASC发行工具另需PyJWT与cryptography，并显式配置本机凭据。
+
+build 2之后的开发源码补充了成功保存后的转向与放流游离，并恢复空载竿形；暂停、减弱动态、图鉴中断、快速再抛竿及写盘失败重试另行检查，见[放流表现证据](reports/fish-release-playmode.json)。这项后续源码尚未进入TestFlight，不能用现有build 2验收它的实际画面。

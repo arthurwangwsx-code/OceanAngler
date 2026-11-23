@@ -72,6 +72,7 @@ namespace OceanAngler.Tests
                 }
                 Assert.AreEqual(FishingPhase.Landed,s.Phase);maxSeconds=Math.Max(maxSeconds,s.Elapsed);
                 Assert.Greater(service.Settle(s.Catch),0);s.FinishRelease();Assert.AreEqual(FishingPhase.Ready,s.Phase);
+                Assert.AreEqual(0,s.Tension);Assert.AreEqual(0,s.Progress);Assert.IsNull(s.Catch);
                 Assert.AreEqual(i+1,Service().Data.catches.Count);
             }
             Assert.Less(maxSeconds,180);Assert.AreEqual(20,Service().Data.catches.Count);Assert.GreaterOrEqual(Service().Data.totalPoints,1800);
