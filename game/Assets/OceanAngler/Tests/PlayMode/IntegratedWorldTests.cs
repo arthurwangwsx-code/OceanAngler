@@ -132,6 +132,49 @@ namespace OceanAngler.Tests
             var five=rows.Single(r=>r.GetComponentsInChildren<Text>()[0].text.EndsWith("海湾新朋友"));
             Assert.That(five.GetComponentsInChildren<Text>()[2].text,Is.EqualTo("进度  4 / 5"));
 
+            // Actual journal cards select all species without recording catches.
+            // The same detail tree must reflow in a narrow card and reach its last
+            // paragraph by scrolling, independently of the current screen profile.
+            int beforeJournalPoints=game.Progress.Data.totalPoints,beforeJournalCount=game.Progress.Data.catches.Count;
+            var journalChecks=new System.Collections.Generic.List<string>();
+            Click("图鉴");yield return null;yield return null;
+            foreach(var species in game.Content.fish)
+            {
+                if(ui.Compact&&ui.CompactViewer){Click("返回图鉴");yield return null;yield return null;}
+                bool known=game.Progress.Data.catches.Any(c=>c.fishId==species.id);
+                Click((known?"":"未发现 · ")+species.name);yield return null;yield return null;
+                Assert.That(ui.FocusedFish,Is.EqualTo(species.id));Assert.That(game.Session.Paused&&!game.Reeling,Is.True);
+                var detail=UnityEngine.Object.FindObjectsByType<ScrollRect>(FindObjectsSortMode.None).Single(s=>s.content.name=="SpeciesContent");
+                foreach(float width in new[]{240f,310f,500f})
+                {
+                    var panel=detail.GetComponent<RectTransform>();panel.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal,width);panel.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical,230);
+                    Canvas.ForceUpdateCanvases();yield return null;Canvas.ForceUpdateCanvases();
+                    var labels=detail.content.GetComponentsInChildren<Text>();
+                    Assert.That(labels.Single(t=>t.name=="ScientificName").text,Is.EqualTo(species.scientificName));
+                    Assert.That(labels.Single(t=>t.name=="Recognition").text,Does.Contain(species.note));
+                    Assert.That(labels.Single(t=>t.name=="NaturalHabitat").text,Does.Contain(species.naturalHabitat));
+                    Assert.That(labels.Single(t=>t.name=="CatchSummary").text.Contains("尚未记录"),Is.EqualTo(!known));
+                    foreach(var text in labels)
+                    {
+                        Assert.That(text.preferredHeight,Is.LessThanOrEqualTo(text.rectTransform.rect.height+.01f),species.id+"/"+width+"/"+text.name);
+                        var generator=new TextGenerator();Assert.That(generator.Populate(text.text,text.GetGenerationSettings(text.rectTransform.rect.size)),Is.True);
+                        Assert.That(generator.characterCountVisible,Is.GreaterThanOrEqualTo(text.text.Length),species.id+"/"+width+"/"+text.name);
+                    }
+                    Assert.That(detail.content.rect.height,Is.GreaterThan(detail.viewport.rect.height));
+                    detail.verticalNormalizedPosition=0;Canvas.ForceUpdateCanvases();yield return null;
+                    var last=labels.Single(t=>t.name=="ExplorationNote");var corners=new Vector3[4];last.rectTransform.GetWorldCorners(corners);
+                    float lower=detail.viewport.InverseTransformPoint(corners[0]).y,upper=detail.viewport.InverseTransformPoint(corners[1]).y;
+                    Assert.That(lower,Is.GreaterThanOrEqualTo(detail.viewport.rect.yMin-.1f));Assert.That(upper,Is.LessThanOrEqualTo(detail.viewport.rect.yMax+.1f));
+                    journalChecks.Add(species.id+","+width+",PASS");
+                }
+            }
+            Click("旋转");Click("放大");Click("静止");yield return null;yield return null;
+            Assert.That(ui.ModelYaw,Is.Not.Zero);Assert.That(ui.ModelZoom,Is.GreaterThan(1));Assert.That(ui.ModelPaused,Is.True);
+            Click("重置");yield return null;yield return null;
+            Assert.That(ui.ModelYaw,Is.Zero);Assert.That(ui.ModelZoom,Is.EqualTo(1));Assert.That(ui.ModelPaused,Is.False);
+            Assert.That(game.Progress.Data.totalPoints,Is.EqualTo(beforeJournalPoints));Assert.That(game.Progress.Data.catches.Count,Is.EqualTo(beforeJournalCount));
+            File.WriteAllLines(Path.Combine(save,"journal-layout.csv"),journalChecks);
+
             Click("设置");yield return null;yield return null;
             var effects=game.GetComponent<AudioSource>();var ambient=game.transform.Find("OceanAmbience").GetComponent<AudioSource>();var music=game.transform.Find("ExploreMusic").GetComponent<AudioSource>();
             Assert.That(ambient.clip.name,Is.EqualTo("OceanBed"));Assert.That(music.clip.name,Is.EqualTo("ExploreTheme"));Assert.That(ambient.loop&&music.loop,Is.True);

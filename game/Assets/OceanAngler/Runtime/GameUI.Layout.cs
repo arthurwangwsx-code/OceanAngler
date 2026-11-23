@@ -110,16 +110,12 @@ namespace OceanAngler
         }
         void BuildCompactInspect()
         {
-            var target=game.Content.Fish(selectedFish??game.Content.fish[0].id);var records=game.Progress.Data.catches.Where(c=>c.fishId==target.id).ToArray();
+            var target=game.Content.Fish(selectedFish??game.Content.fish[0].id);
             Button(pageRoot,"返回图鉴",12,102,140,44,()=>{page="图鉴";dirty=true;},Navy).GetComponentInChildren<Text>().fontSize=18;
             float width=Mathf.Min(310,Width*.44f);
             var detail=Box(pageRoot,"Details",Panel,new Vector2(1,0),Vector2.one,new Vector2(-width-12,36),new Vector2(-12,-102));
-            Label(detail,target.name,23,Color.white,12,8,-24,36);
-            Label(detail,records.Length==0?"尚未发现，出海寻找它吧。":"已记录 "+records.Length+" 次\n最长 "+records.Max(c=>c.length).ToString("F1")+"厘米\n最重 "+records.Max(c=>c.weight).ToString("F2")+"千克",18,Gold,12,54,-24,90);
-            Label(detail,"先观察鱼鳍和体型，再认识它的生活环境。",17,Muted,12,154,-24,76);
-            string[] names={"旋转","放大","缩小",ModelPaused?"游动":"静止"};Action[] actions={()=>ModelYaw+=30,()=>ModelZoom=Mathf.Min(1.5f,ModelZoom+.15f),()=>ModelZoom=Mathf.Max(.7f,ModelZoom-.15f),()=>{ModelPaused=!ModelPaused;dirty=true;}};
-            float buttonWidth=Mathf.Min(76,(Width-width-48)/4);
-            for(int i=0;i<4;i++)Button(pageRoot,names[i],12+i*(buttonWidth+5),Height-86,buttonWidth,44,actions[i],Navy).GetComponentInChildren<Text>().fontSize=17;
+            BuildFishDetails(detail,target);
+            BuildJournalControls(12,Height-86,Width-width-42);
         }
     }
 }

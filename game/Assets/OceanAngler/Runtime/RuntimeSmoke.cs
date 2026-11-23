@@ -74,6 +74,15 @@ namespace OceanAngler
             Require(game.Progress.Data.catches.Count==before+1&&game.Progress.Data.totalPoints>0,"release-and-persist");
             yield return new WaitForSecondsRealtime(.65f);yield return Snapshot("09-release");
             Click("图鉴",true);yield return null;yield return null;CheckLayout("journal");yield return Snapshot("03-journal");
+            int journalPoints=game.Progress.Data.totalPoints;
+            Click("未发现 · 大西洋庸鲽",true);yield return null;yield return null;CheckLayout("species-details");
+            var details=FindObjectsByType<ScrollRect>(FindObjectsSortMode.None).Single(s=>s.content.name=="SpeciesContent");
+            Require(details.content.GetComponentsInChildren<Text>().Any(t=>t.name=="ScientificName"&&t.text=="Hippoglossus hippoglossus"),"journal-full-scientific-name");
+            yield return Snapshot("13-species-details");
+            details.verticalNormalizedPosition=0;yield return null;yield return null;CheckLayout("species-habitat");
+            var habitatText=details.content.GetComponentsInChildren<Text>().Single(t=>t.name=="NaturalHabitat");Require(habitatText.cachedTextGenerator.vertexCount>0,"journal-habitat-rendered-after-scroll");
+            Require(game.Progress.Data.totalPoints==journalPoints&&game.Progress.Data.catches.Count==before+1,"journal-does-not-award-or-discover");
+            yield return Snapshot("14-species-habitat");
             Click("钓具",true);yield return null;yield return null;CheckLayout("gear");
             Click("观察入门钓组",true);yield return null;yield return null;CheckLayout("gear-preview");Require(GetComponent<GameUI>().InspectingGear&&game.Session.Paused,"gear-view-pauses-fishing");
             Click("近看卷线器",true);yield return null;yield return null;CheckLayout("gear-closeup");

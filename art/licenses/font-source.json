@@ -4,9 +4,9 @@
   "license": "SIL Open Font License 1.1",
   "modified": "Weight 500 subset for application strings; renamed OceanUI",
   "sourceSha256": "a3041811a78c361b1de50f953c805e0244951c21c5bd412f7232ef0d899af0da",
-  "subsetSha256": "c0af7c8c0b32103dcb14c11bf7a6cdbe2d2967dec71531c826a52c196cadb2de",
+  "subsetSha256": "c61fc65422e37eb2d0cb057f73109603d3524a20654eac8be07b7790a7ccc7db",
   "licenseSha256": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9",
   "bundledNoticeResource": "game/Assets/OceanAngler/Resources/Legal/NotoSansSC-OFL.txt",
-  "characters": 590,
-  "bytes": 208380
+  "characters": 688,
+  "bytes": 237900
 }

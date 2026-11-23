@@ -6,7 +6,7 @@ namespace OceanAngler
 {
     [Serializable] public sealed class FishDefinition
     {
-        public string id, name, habitatId, shape, note, scientificName;
+        public string id, name, habitatId, shape, note, scientificName, naturalHabitat;
         public float minWeight, maxWeight, minLength, maxLength, strength;
         public int basePoints;
     }
@@ -54,7 +54,7 @@ namespace OceanAngler
             foreach (var id in fish.Select(x => x.id).Concat(habitats.Select(x => x.id)).Concat(gear.Select(x => x.id)).Concat(tasks.Select(x => x.id)).Concat(observations.Select(x=>x.id)))
                 if (string.IsNullOrWhiteSpace(id) || !ids.Add(id)) throw new InvalidOperationException("Duplicate/missing content ID");
             foreach (var f in fish)
-                if (string.IsNullOrWhiteSpace(f.scientificName) || !habitats.Any(h => h.id == f.habitatId) || f.minWeight <= 0 || f.maxWeight < f.minWeight || f.minLength <= 0 || f.maxLength < f.minLength || f.basePoints <= 0 || f.strength <= 0)
+                if (string.IsNullOrWhiteSpace(f.scientificName) || string.IsNullOrWhiteSpace(f.note) || string.IsNullOrWhiteSpace(f.naturalHabitat) || !habitats.Any(h => h.id == f.habitatId) || f.minWeight <= 0 || f.maxWeight < f.minWeight || f.minLength <= 0 || f.maxLength < f.minLength || f.basePoints <= 0 || f.strength <= 0)
                     throw new InvalidOperationException("Invalid fish " + f.id);
             var species=new HashSet<string>(fish.Select(f=>f.scientificName),StringComparer.OrdinalIgnoreCase);
             if(species.Count!=fish.Length)throw new InvalidOperationException("Duplicate catchable species");

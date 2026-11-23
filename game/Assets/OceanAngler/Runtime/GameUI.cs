@@ -29,6 +29,7 @@ namespace OceanAngler
         string selectedFish;
         bool dirty = true, charging, resetConfirm;
         float chargeStart;
+        Vector2 lastSafeSize;
         FishingPhase lastPhase;
         bool lastPause;
         int parentAnswer;
@@ -59,7 +60,8 @@ namespace OceanAngler
         {
             if (safe == null) return;
             canvas.scaleFactor=DisplayMetrics.PixelsPerPoint;
-            bool compact=Height<600;if(compact!=Compact){Compact=compact;dirty=true;}
+            bool compact=Height<600;if(compact!=Compact){Compact=compact;if(!compact&&page=="鱼类详情")page="图鉴";dirty=true;}
+            var size=new Vector2(Width,Height);if(Vector2.Distance(size,lastSafeSize)>.5f){lastSafeSize=size;dirty=true;}
             var area = DisplayMetrics.SafeArea; safe.anchorMin = new Vector2(area.xMin/Screen.width,area.yMin/Screen.height); safe.anchorMax = new Vector2(area.xMax/Screen.width,area.yMax/Screen.height);
             if (game.Session.Phase != lastPhase || game.Session.Paused != lastPause) dirty = true;
             if (dirty) { dirty = false; Rebuild(); }
@@ -176,18 +178,12 @@ namespace OceanAngler
         void BuildJournal()
         {
             if(Compact){BuildCompactJournal();return;}
-            var panel=Box(pageRoot,"Journal",Panel,new Vector2(.02f,.12f),new Vector2(.60f,.81f),Vector2.zero,Vector2.zero);
+            var panel=PagePanel("Journal",new Vector2(.02f,.12f),new Vector2(.60f,.81f),460);
             Label(panel,"鱼类图鉴  "+game.Progress.Data.catches.Select(c=>c.fishId).Distinct().Count()+" / 12",28,Color.white,22,16,-44,46);
             BuildFishCards(panel,Width*.58f,2,78);
-            Button(pageRoot,"旋转",-490,410,100,44,()=>ModelYaw+=30,Navy);
-            Button(pageRoot,"放大",-380,410,100,44,()=>ModelZoom=Mathf.Min(1.5f,ModelZoom+.15f),Navy);
-            Button(pageRoot,"缩小",-270,410,100,44,()=>ModelZoom=Mathf.Max(.7f,ModelZoom-.15f),Navy);
-            Button(pageRoot,ModelPaused?"游动":"静止",-160,410,100,44,()=>{ModelPaused=!ModelPaused;dirty=true;},Navy);
+            BuildJournalControls(Width*.63f,Height*.52f-50,Width*.35f);
             var detail=Box(pageRoot,"FishDetails",Panel,new Vector2(.63f,.12f),new Vector2(.98f,.48f),Vector2.zero,Vector2.zero);
-            var target=game.Content.Fish(selectedFish??game.Content.fish[0].id);var records=game.Progress.Data.catches.Where(c=>c.fishId==target.id).ToArray();
-            Label(detail,target.name,30,Color.white,24,16,-48,46);
-            Label(detail,records.Length==0?"尚未发现，出海寻找它吧。":"已记录 "+records.Length+" 次\n最长 "+records.Max(c=>c.length).ToString("F1")+"厘米 · 最重 "+records.Max(c=>c.weight).ToString("F2")+"千克",21,Gold,24,74,-48,80);
-            Label(detail,target.note,19,Muted,24,165,-48,120);
+            BuildFishDetails(detail,game.Content.Fish(selectedFish??game.Content.fish[0].id));
         }
         void BuildGear()
         {

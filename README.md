@@ -25,6 +25,7 @@
 | 原创音频与实际画面 | [音频控制](docs/11-feedback-audio.md)、[三档原生截图与问题](reports/integrated-native-render.md) |
 | 礁岩破面修复与对照 | [源网格检查和同镜头实际游戏画面](reports/coral-bay-solid-geometry.md) |
 | 鱼体表面与鉴赏标题 | [鳃盖/高光迭代、标题消失回归及实际对照](reports/bluefin-surface-and-ui.md) |
+| 图鉴物种详情 | [12物种学名、辨识与窄卡片滚动](reports/journal-species.md) |
 | 口部、下颌与鳍条 | [真实下唇变形、内壁和导入资产离屏检查](reports/bluefin-mouth-and-fins.md) |
 | 海湾水面与倒影 | [深度顺序修复、离屏GPU对照及验收边界](reports/water-rendering.md) |
 | 岸线与沙地 | [连续陆地、沙地材质及同镜头离屏对照](reports/bay-shoreline.md) |
@@ -51,4 +52,4 @@ ASC_ENV_FILE=/path/to/private/asc.env python3 tools/asc.py status
 
 Mac构建入口为`python3 tools/game.py mac`；原生检查为`python3 tools/runtime_smoke.py --label unique-run`，使用隔离存档，须在桌面窗口可用后实际运行并核对图像/回执。Editor离屏诊断为`python3 tools/game.py water-review --label unique-review`，不能据此宣布玩家UI或设备通过。Unity和资产写入串行，每轮用新label保留证据；字体重建见tools/requirements.txt。
 
-TestFlight 0.1.0 (2)冻结于2971b11，含首批鱼/钓组/海湾候选，不含上述后续放流、任务、目录、音频、标题、水面、岸线与口部/鳍条改进。[发行回执](reports/testflight-0.1.0-2.json)记录Apple处理及本人内部组；实际安装尚待验证。新增构建须按[冻结源码发布流程](docs/08-testflight.md)使用新build号。ASC工具另需PyJWT与cryptography，凭据显式在本机配置，不进入公开仓库。
+TestFlight 0.1.0 (2)冻结于2971b11，含首批鱼/钓组/海湾候选，不含上述后续放流、任务、目录、音频、标题、水面、岸线与口部/鳍条及图鉴详情改进。[发行回执](reports/testflight-0.1.0-2.json)记录Apple处理及本人内部组；实际安装尚待验证。新增构建须按[冻结源码发布流程](docs/08-testflight.md)使用新build号。ASC工具另需PyJWT与cryptography，凭据显式在本机配置，不进入公开仓库。
