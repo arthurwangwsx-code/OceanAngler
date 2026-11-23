@@ -134,7 +134,7 @@ namespace OceanAngler
             if (game.Session.Phase==FishingPhase.Landed && game.Session.Catch!=null)
             {
                 var c=game.Session.Catch;
-                Label(pageRoot,game.Content.Fish(c.fishId).name+"\n"+c.length.ToString("F1")+"厘米 · "+c.weight.ToString("F2")+"千克",30,Color.white,0,190,0,95,false,TextAnchor.UpperCenter);
+                Label(pageRoot,game.Content.Fish(c.fishId).name+"\n"+c.length.ToString("F1")+"厘米 · "+c.weight.ToString("F2")+"千克\n"+GentleResult(c),30,Color.white,0,190,0,136,false,TextAnchor.UpperCenter);
             }
         }
         void BindFishingInput(Button action)
@@ -210,15 +210,18 @@ namespace OceanAngler
         void BuildTasks()
         {
             float available=Width*.96f-44;int columns=available<600?1:2;float cellWidth=available/columns;
-            var panel=PagePanel("Tasks",new Vector2(.02f,.12f),new Vector2(.98f,.81f),Mathf.Max(600,88+Mathf.Ceil(game.Content.tasks.Length/(float)columns)*51));
+            var panel=PagePanel("Tasks",new Vector2(.02f,.12f),new Vector2(.98f,.81f),Mathf.Max(600,88+Mathf.Ceil(game.Content.tasks.Length/(float)columns)*136));
             Label(panel,"探索手册  ·  "+game.Content.tasks.Count(t=>TaskProgress.Complete(t,game.Progress.Data))+" / 18",28,Color.white,22,14,-44,46);
             for(int i=0;i<game.Content.tasks.Length;i++)
             {
                 var t=game.Content.tasks[i];bool done=TaskProgress.Complete(t,game.Progress.Data);int value=Math.Min(t.target,TaskProgress.Value(t,game.Progress.Data));
-                var row=FixedBox(panel,"Task",done?new Color(.06f,.32f,.32f):Navy,22+(i%columns)*cellWidth,75+(i/columns)*51,cellWidth-18,44);
-                Label(row,(done?"已完成  ":"探索中  ")+t.name+"    "+value+" / "+t.target,21,done?Teal:Color.white,14,5,-28,35);
+                var row=FixedBox(panel,"Task",done?new Color(.06f,.32f,.32f):Navy,22+(i%columns)*cellWidth,75+(i/columns)*136,cellWidth-18,128);
+                Label(row,(done?"已完成  ":"探索中  ")+t.name,cellWidth<340?18:21,done?Teal:Color.white,14,5,-28,32);
+                Label(row,TaskProgress.GoalText(t,game.Content),17,Muted,14,40,-28,52);
+                Label(row,"进度  "+value+" / "+t.target,18,done?Teal:Gold,14,96,-28,28);
             }
         }
+        static string GentleResult(CatchRecord record)=>TaskProgress.Gentle(record)?"轻柔控线已达标":"轻柔控线，下次再试";
         void BuildSettings()
         {
             var panel=PagePanel("Settings",new Vector2(.02f,.12f),new Vector2(.78f,.81f),600);

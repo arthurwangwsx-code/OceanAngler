@@ -81,6 +81,7 @@ namespace OceanAngler.Tests
             Click("记录并放流");yield return null;yield return null;
             Assert.That(game.Session.Phase,Is.EqualTo(FishingPhase.Landed));Assert.That(game.Progress.Data.catches.Count,Is.Zero);Assert.That(released,Is.Zero);
             Assert.That(game.Session.Tension,Is.EqualTo(heldLoad));
+            Assert.That(UnityEngine.Object.FindObjectsByType<Text>(FindObjectsSortMode.None).Any(t=>t.text.Contains("轻柔控线已达标")),Is.True);
             Assert.That(fish.semantic,Is.EqualTo("idle"));Directory.Delete(saveFile);
             Click("记录并放流");yield return null;yield return null;
             Assert.That(game.Session.Phase,Is.EqualTo(FishingPhase.Ready));Assert.That(released,Is.EqualTo(1));Assert.That(game.Reeling,Is.False);
@@ -118,6 +119,18 @@ namespace OceanAngler.Tests
             Click("继续探索");game.Cast(.5f);yield return null;yield return null;
             Assert.That(UnityEngine.Object.FindFirstObjectByType<FishVisual>().semantic,Is.EqualTo("burst"));
             Assert.That(new SaveStore(saveFile,game.Content).Load().data.catches.Count,Is.EqualTo(4));
+            Click("任务");yield return null;yield return null;Canvas.ForceUpdateCanvases();
+            var rows=UnityEngine.Object.FindObjectsByType<RectTransform>(FindObjectsSortMode.None).Where(t=>t.name=="Task").ToArray();Assert.That(rows.Length,Is.EqualTo(18));
+            foreach(var row in rows)
+            {
+                var labels=row.GetComponentsInChildren<Text>();Assert.That(labels.Length,Is.EqualTo(3));
+                Assert.That(labels[1].text.Length,Is.GreaterThan(10));
+                // Exercise the minimum two-column card width with actual bundled font metrics.
+                row.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal,282);Canvas.ForceUpdateCanvases();
+                Assert.That(labels[1].preferredHeight,Is.LessThanOrEqualTo(labels[1].rectTransform.rect.height+.5f),labels[1].text);
+            }
+            var five=rows.Single(r=>r.GetComponentsInChildren<Text>()[0].text.EndsWith("海湾新朋友"));
+            Assert.That(five.GetComponentsInChildren<Text>()[2].text,Is.EqualTo("进度  4 / 5"));
         }
     }
 }

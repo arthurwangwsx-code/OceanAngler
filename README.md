@@ -4,7 +4,7 @@
 
 儿童与家庭向的 3D 海洋钓鱼探索游戏。真实比例鱼类、漂亮水下世界、易懂钓具、积分成长、图鉴与放流。正式名称待商标检查。
 
-**当前已具备可试玩的钓鱼/进度闭环。0.1.0 (2)已通过Apple处理并分配至本人授权账号的内部TestFlight组，包含首条鱼、首套钓组和首处海湾候选；[发布回执](reports/testflight-0.1.0-2.json)与实际安装分别记录。25项Editor及6项无画面PlayMode检查通过；美术、实际触控、真机与完整产品验收未完成。** 首发 iPhone/iPad，最低iOS/iPadOS 17，Unity 6000.3.29f1 + URP 17.3.0 + C# + Blender；离线单人、无广告、无内购、无聊天。
+**当前已具备可试玩的钓鱼/进度闭环。0.1.0 (2)已通过Apple处理并分配至本人授权账号的内部TestFlight组，包含首条鱼、首套钓组和首处海湾候选；[发布回执](reports/testflight-0.1.0-2.json)与实际安装分别记录。后续源码另行保留检查结果；美术、实际触控、真机与完整产品验收未完成。** 首发 iPhone/iPad，最低iOS/iPadOS 17，Unity 6000.3.29f1 + URP 17.3.0 + C# + Blender；离线单人、无广告、无内购、无聊天。
 
 | 阅读目的 | 文件 |
 |---|---|
@@ -43,3 +43,5 @@ integration/art-candidates已串行集成蓝鳍鲹、完整纺车钓组和珊瑚
 Mac验证：`python3 tools/game.py mac`，再运行`python3 tools/runtime_smoke.py --label unique-run`。字体重建见tools/requirements.txt；ASC发行工具另需PyJWT与cryptography，并显式配置本机凭据。
 
 build 2之后的开发源码补充了成功保存后的转向与放流游离，并恢复空载竿形；暂停、减弱动态、图鉴中断、快速再抛竿及写盘失败重试另行检查，见[放流表现证据](reports/fish-release-playmode.json)。这项后续源码尚未进入TestFlight，不能用现有build 2验收它的实际画面。
+
+后续源码还补充18项任务的完成指引及轻柔控线结果。26项Editor与7项PlayMode检查通过，包含初始装备20次模拟中完成全部任务、逐次重载、重复记录不加分和装备解锁，以及任务指引的逻辑排版；Mac编译通过。[任务检查](reports/task-journey.json)保留确定性模拟与实际试玩的边界，新任务界面尚未进入build 2。

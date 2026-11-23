@@ -1,0 +1,54 @@
+{
+  "scope": "unreleased-task-guidance-and-progress-journey",
+  "status": "PASS",
+  "sourceBaseCommit": "3cc43ed9c5f83977474aa2ce2db9029129849e9c",
+  "testedSourceDigest": "12ef636007cdd542026c82b49e26d317144d56a77aafa6ac114755023ad9a0a9",
+  "editorTests": {
+    "total": 26,
+    "passed": 26,
+    "failed": 0,
+    "finishedAt": "2026-11-23 17:20:09Z"
+  },
+  "headlessPlayMode": {
+    "total": 7,
+    "passed": 7,
+    "failed": 0,
+    "runLabel": "tasks1",
+    "finishedAt": "2026-11-23 17:20:37Z"
+  },
+  "macCompilation": "PASS",
+  "progressJourney": {
+    "test": "StarterEquipmentCanCompleteAllEighteenTasksAndUnlockAllGearAfterReloads",
+    "result": "Passed",
+    "cycles": 20,
+    "initialGearOnly": true,
+    "allEighteenTasksCompleted": true,
+    "twelveSpecies": true,
+    "allTwentyGearItemsSelectableWithoutSpendingPoints": true,
+    "reloadAfterEveryCatch": true,
+    "duplicateCatchAwardsZero": true,
+    "targetSelection": "deterministic legal target selection from unlocked habitat pools; not a random-encounter or child-playtime qualification"
+  },
+  "taskScene": {
+    "taskRows": 18,
+    "goalTextPresent": true,
+    "caughtResultShowsGentleStatus": true,
+    "recordedProgressAfterFourReleases": true,
+    "minimumTwoColumnCardWidth": 282,
+    "instructionTextFitsBundledFontMetrics": true,
+    "scope": "headless scene/control events and logical text bounds; not rendered readability or touch"
+  },
+  "font": {
+    "characters": 581,
+    "license": "OFL-1.1"
+  },
+  "distribution": {
+    "currentBuild": "0.1.0 (2)",
+    "includesTheseChanges": false
+  },
+  "visualAcceptance": "NOT_RUN",
+  "touchAcceptance": "NOT_RUN",
+  "deviceAcceptance": "NOT_RUN",
+  "childPlaytest": "NOT_RUN",
+  "overallProductAcceptance": "PARTIAL"
+}

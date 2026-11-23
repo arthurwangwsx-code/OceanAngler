@@ -27,7 +27,7 @@ namespace OceanAngler.Tests
         {
             var f=catalog.Fish(fish);return new CatchRecord { catchId=id??Guid.NewGuid().ToString(),fishId=f.id,habitatId=f.habitatId,weight=(f.minWeight+f.maxWeight)/2,length=(f.minLength+f.maxLength)/2,skillPoints=30,mode="assisted" };
         }
-        [Test] public void CompleteCatalogHasStarterLoadoutAndEighteenReachableTasks()
+        [Test] public void CompleteCatalogHasStarterLoadoutAndEighteenTasks()
         {
             Assert.AreEqual(12,catalog.fish.Length);Assert.AreEqual(3,catalog.habitats.Length);Assert.AreEqual(18,catalog.tasks.Length);
             foreach(var pair in new[]{("rod",6),("reel",4),("line",4),("lure",6)})Assert.AreEqual(pair.Item2,catalog.gear.Count(g=>g.category==pair.Item1));

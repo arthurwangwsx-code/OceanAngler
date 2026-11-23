@@ -73,7 +73,7 @@ namespace OceanAngler
             if(game.Session.Paused)Button(pageRoot,"结束本次 · 返回准备",left?Width-252:12,Height-90,240,48,game.ReturnToPreparation,Navy).GetComponentInChildren<Text>().fontSize=17;
             if(game.Session.Phase==FishingPhase.Landed&&game.Session.Catch!=null)
             {
-                var c=game.Session.Catch;Label(pageRoot,game.Content.Fish(c.fishId).name+"\n"+c.length.ToString("F1")+"厘米 · "+c.weight.ToString("F2")+"千克",19,Color.white,left?Width*.50f:12,160,Width-cardWidth-38,62);
+                var c=game.Session.Catch;Label(pageRoot,game.Content.Fish(c.fishId).name+"\n"+c.length.ToString("F1")+"厘米 · "+c.weight.ToString("F2")+"千克\n"+GentleResult(c),19,Color.white,left?Width*.50f:12,150,Width-cardWidth-38,84);
             }
         }
         Image CompactBar(RectTransform parent,float y,Color color)

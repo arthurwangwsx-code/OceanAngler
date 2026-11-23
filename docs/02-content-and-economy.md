@@ -23,6 +23,11 @@
 
 每条鱼用稳定 fishId；尺寸为有界分布，稀有度影响遇见权重而非现实保护等级。随机种子可注入测试，教程固定。概率与最终解锁时间先跑 1000 次模拟，再用人类试玩调整，不暗中按付费行为调概率。
 
+## 探索手册
+18项任务随记录自动累计，不需要领取、不受日期限制，也不扣研究积分。任务页分别展示名称、完成方法与当前进度：总放流次数、不同鱼种、指定海域、轻柔控线、标准模式及累计积分。轻柔控线按本次技巧奖至少25分判定；收鱼结果先显示是否达标，成功“记录并放流”后才计入任务。首次教学始终辅助，标准模式任务从后续标准鱼获累计。
+
+后续源码已有任务指引和收鱼反馈。初始钓组下20次模拟、每次持久化重载的测试可完成全部18项条件并解锁所有装备，详见[任务检查](../reports/task-journey.json)。它使用已解锁海域里的确定性目标，不能证明实际随机遭遇耗时、完整任务界面或儿童体验合格；这项后续源码尚未进入TestFlight build 2。
+
 ## 数据合同
 FishDefinition: id, displayNameKey, scientificName, habitatIds, depthRange, weightRange, basePoints, baitAffinities, stamina, burstStrength, modelId, conservationReview。
 GearDefinition: id, category, unlockPoints, compatibleIds, stiffness, drag, lineStrength, retrieveSpeed, modelId。
