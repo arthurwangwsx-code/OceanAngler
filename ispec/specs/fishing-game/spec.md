@@ -1,5 +1,10 @@
 # OceanAngler 产品合同
 
+## Purpose
+定义儿童向3D海洋钓鱼产品的长期行为与分阶段验收要求。当前实现和验收状态单独记录，不将需求当作已实现。
+
+## Requirements
+
 ### Requirement: REQ-01 儿童钓鱼完整循环
 The system SHALL satisfy the P0 contract: 能从抛竿完成至放流并再次抛竿，20次无卡死。
 

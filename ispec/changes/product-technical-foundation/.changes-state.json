@@ -2,8 +2,32 @@
   "version": 1,
   "stages": {
     "proposal": {
-      "status": "pending",
-      "updatedAt": "2026-11-23T03:27:15.817Z"
+      "status": "done",
+      "updatedAt": "2026-11-23T03:27:59.271Z",
+      "evidence": {
+        "generatesPath": "10-proposal.md",
+        "generatesExists": true
+      }
+    },
+    "design": {
+      "status": "done",
+      "updatedAt": "2026-11-23T03:28:31.666Z",
+      "evidence": {
+        "generatesPath": "21-design.md",
+        "generatesExists": true
+      }
+    },
+    "specs": {
+      "status": "done",
+      "updatedAt": "2026-11-23T03:28:32.587Z"
+    },
+    "tasks": {
+      "status": "done",
+      "updatedAt": "2026-11-23T03:42:28.569Z",
+      "evidence": {
+        "generatesPath": "30-tasks.md",
+        "generatesExists": true
+      }
     }
   },
   "executionStartedAt": "2026-11-23T03:27:15.723Z",
@@ -12,7 +36,9 @@
       {
         "id": "5b50e2d6-763c-4ce6-b7fa-aea07da6f1ff",
         "startedAt": "2026-11-23T03:27:15.817Z",
-        "status": "running"
+        "status": "done",
+        "finishedAt": "2026-11-23T03:27:59.266Z",
+        "durationMs": 43451
       }
     ]
   },
@@ -23,6 +49,14 @@
       "operation": "start",
       "checkedAt": "2026-11-23T03:27:15.829Z",
       "durationMs": 40432.23195800005,
+      "outcome": "accepted"
+    },
+    {
+      "stageId": "proposal",
+      "runId": null,
+      "operation": "start",
+      "checkedAt": "2026-11-23T03:27:45.284Z",
+      "durationMs": 34.079792,
       "outcome": "accepted"
     }
   ]

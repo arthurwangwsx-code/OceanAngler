@@ -1,24 +1,22 @@
 # 首批验收记录 · 2026-11-23
 
-| 项目 | 结果 | 证据/限制 |
+| 项目 | 最终状态 | 证据与范围 |
 |---|---|---|
-| 产品、技术、美术、路线与发布文档 | IMPLEMENTED / PASS | docs/01–08 |
-| Git唯一目录及master基线 | PASS | 初始提交441065a；feature/product-technical-foundation |
-| iSpec初始化 | PASS | CLI1.0.20，spec-driven；init-check ready；计划校验12需求/14任务PASS |
-| 需求与任务 | IMPLEMENTED | 12需求、14工程任务；不是14项全部完成 |
-| Unity工程 | PARTIAL | 固定6000.3.29f1；两次启动失败：UPM IPC30秒超时，第二次额外出现Licensing初始化超时；未导入完成 |
-| 基础钓鱼逻辑 | 原型实现 / NOT_RUN | 五项Editor规则测试尚待运行 |
-| 模型与水下美术 | PLANNED / NOT_RUN | 仅几何占位，资产清单无成品 |
-| App Store Connect API连接 | PASS | 对com.arthur.OceanAngler精确查询成功，初始无bundle/app |
-| Apple Bundle注册 | PASS | com.arthur.OceanAngler / 6A73JBG8G4，注册后API读回 |
-| Apple App创建 | BLOCKED | API apps为空；官方要求网站创建，CUA连接超时 |
-| Apple网页连接 | BLOCKED | CUA两次连接超时，未改变应用记录 |
-| GitHub开源流程/CI | IMPLEMENTED / PARTIAL | 本地准备；gh token无效，连接器身份查询成功；远程尚未发布 |
-| TestFlight | NOT_RUN | 尚无已归档/上传/Apple处理通过的构建 |
-| 真机/模拟器/实际安装 | NOT_RUN | 未运行；不得从计划或API推定 |
+| 产品、技术、美术、路线、开源与发布方案 | PASS | docs/01–08，本地链接及计划校验通过 |
+| 需求与任务基线 | PASS | 12项需求、14任务；任务不是全部实现 |
+| iSpec工件 | PASS | 四工件正式done；长期规格和变更strict校验2/2通过 |
+| Unity工程导入与场景生成 | PASS | 6000.3.29f1实际导入，Bay.unity、URP、真实包锁和.meta已生成 |
+| 基础规则测试 | PASS | EditMode 5/5：错过咬钩、暂停、超载、控线捕获/重复结算、非法时间 |
+| Python工具与Git检查 | PASS | py_compile、validate.py、diff及分支政策 |
+| 成品鱼模/钓具/水下美术 | PLANNED / NOT_RUN | 仅几何占位，资产清单无成品 |
+| ASC连接及独立Bundle注册 | PASS | com.arthur.OceanAngler / 6A73JBG8G4，API读回确认 |
+| Apple应用记录 | BLOCKED | apps查询为空；官方须网站创建，网页控制两次连接超时 |
+| GitHub开源流程/CI | PARTIAL | 本地许可、资产规则、CI已建立；gh登录失效，尚无远程发布 |
+| TestFlight上传与分发 | NOT_RUN | 尚无归档、上传或Apple处理通过的构建 |
+| 模拟器、真机、安装与视觉 | NOT_RUN | 规则测试不证明视觉、触控、性能或安装 |
 
-原始日志与凭据不进入公开仓库。后续更新此文件保留明确的失败和恢复证据。
+初期两次Unity启动遇到UPM IPC及授权服务超时，第三次恢复并完成导入和规则测试。iSpec早期start超时停止后也已成功重跑。原始日志和XML在.local，不进入公开仓库。
 
-Unity失败时未运行Editor测试、模拟器、iOS导出、归档或上传；未生成伪造package lock。Python源码静态编译和计划/文档本地链接校验通过。具名分支保留未获引擎验收的工程，暂不提升master。
+原型目前只有一条几何鱼、钓鱼规则和临时120积分，没有P0完整存档、三鱼种/两套钓组和正式中文触控UI。局部通过不代表完整游戏或拟真模型完成。
 
-iSpec变更目录已由CLI创建，但工件阶段start命令长时间无返回；本轮停止该超时作业，未把工件生命周期标成完成。产品/技术正文和12项长期需求已独立落盘，阶段工件需恢复CLI后补齐。此状态不影响阅读方案，但不能声称完整iSpec工件验收通过。
+后续完成P0与英雄鱼/完整钓具样板；恢复Apple网页并创建独立App后再归档和本人内部TestFlight。GitHub按公开文件审查清单后续创建远程。
