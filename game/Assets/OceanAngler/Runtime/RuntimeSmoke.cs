@@ -19,6 +19,8 @@ namespace OceanAngler
             Debug.Log("OCEAN_SMOKE_BEGIN");
             yield return new WaitForSecondsRealtime(1);
             if(game.Session.Paused){Click("继续探索");yield return null;yield return null;}
+            var spinning=FindFirstObjectByType<AuthoredSpinningRig>();Require(spinning!=null,"authored-spinning-rig-loaded");
+            if(spinning!=null){Require(spinning.guides.Length==9&&spinning.rodBones.Length==10,"rig-guides-and-bend-bones");Require(spinning.GetComponentsInChildren<LODGroup>(true).Length==1,"rig-single-lod-owner");Require(spinning.MaximumGuideLineError()<.0001f,"rig-line-through-guides");}
             var authored=FindFirstObjectByType<AuthoredFishVisual>();Require(authored!=null,"authored-bluefin-loaded");
             if(authored!=null)
             {
@@ -47,10 +49,20 @@ namespace OceanAngler
             }
             if(held)Pointer(reel,false);yield return null;yield return null;
             Require(game.Session.Phase==FishingPhase.Landed,"controlled-catch");CheckLayout("landed");yield return Snapshot("02-catch");
+            if(spinning!=null){Require(spinning.CrankDegrees>0&&Mathf.Abs(spinning.RotorDegrees-spinning.CrankDegrees*5.2f)<.01f,"rig-crank-rotor-drive");Require(Mathf.Abs(spinning.SpoolStroke)<=.0061f,"rig-spool-stroke-bounded");Require(spinning.MaximumGuideLineError()<.0001f,"rig-loaded-line-through-guides");}
             Click("记录并放流");yield return null;yield return null;
             Require(game.Progress.Data.catches.Count==before+1&&game.Progress.Data.totalPoints>0,"release-and-persist");
             Click("图鉴",true);yield return null;yield return null;CheckLayout("journal");yield return Snapshot("03-journal");
-            Click("钓具",true);yield return null;yield return null;CheckLayout("gear");yield return Snapshot("04-gear");
+            Click("钓具",true);yield return null;yield return null;CheckLayout("gear");
+            Click("观察入门钓组",true);yield return null;yield return null;CheckLayout("gear-preview");Require(GetComponent<GameUI>().InspectingGear&&game.Session.Paused,"gear-view-pauses-fishing");
+            Click("近看卷线器",true);yield return null;yield return null;CheckLayout("gear-closeup");
+            var priorCrankRotation=spinning.crank.localRotation;var priorRotorRotation=spinning.rotor.localRotation;
+            float spoolMin=float.PositiveInfinity,spoolMax=float.NegativeInfinity;Click("试摇卷线器",true);float demoEnd=Time.realtimeSinceStartup+.65f;
+            while(Time.realtimeSinceStartup<demoEnd){float y=spinning.transform.InverseTransformPoint(spinning.spool.position).y;spoolMin=Mathf.Min(spoolMin,y);spoolMax=Mathf.Max(spoolMax,y);yield return null;}
+            Require(Quaternion.Angle(priorCrankRotation,spinning.crank.localRotation)>5&&Quaternion.Angle(priorRotorRotation,spinning.rotor.localRotation)>5,"gear-preview-real-winding");Require(spoolMax-spoolMin>.0002f,"gear-preview-spool-actually-oscillates");yield return Snapshot("04-gear");
+            Click("停止收线演示",true);yield return null;yield return null;var stopped=spinning.crank.localRotation;yield return new WaitForSecondsRealtime(.15f);Require(Quaternion.Angle(spinning.crank.localRotation,stopped)<.01f,"gear-demo-stops-on-release");
+            Click("旋转钓组",true);yield return null;yield return null;Click("查看全竿",true);yield return null;yield return null;yield return Snapshot("07-gear-whole");
+            Click("返回钓具",true);yield return null;yield return null;
             Click("任务",true);yield return null;yield return null;CheckLayout("tasks");yield return Snapshot("05-tasks");
             Click("设置",true);yield return null;yield return null;CheckLayout("settings");Click("左手操作");yield return null;yield return null;
             Require(game.Progress.Data.settings.leftHanded,"left-hand-setting");

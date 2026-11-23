@@ -4,16 +4,15 @@ namespace OceanAngler
 {
     public sealed class OceanWorld : MonoBehaviour
     {
-        GameController game;GameUI ui;Transform fishRoot,rodTip;FishVisual fish;LineRenderer line;
+        GameController game;GameUI ui;Transform fishRoot;FishVisual fish;AuthoredSpinningRig gear;
         string fishId,habitat;
-        Transform[] rodSegments;
-        Material wood,metal,water;
+        Material wood,water;
         Camera view;
         float visualTime;
         void Start()
         {
             game=GetComponent<GameController>();ui=GetComponent<GameUI>();view=Camera.main;
-            wood=Mat(new Color(.47f,.28f,.12f),.25f);metal=Mat(new Color(.17f,.22f,.23f),.7f,.7f);water=Mat(new Color(.025f,.4f,.53f),.85f);
+            wood=Mat(new Color(.47f,.28f,.12f),.25f);water=Mat(new Color(.025f,.4f,.53f),.85f);
             MakeEnvironment();MakeGear();SelectFish(game.Content.fish[0].id);
         }
         Material Mat(Color color,float smooth,float metallic=0) {var m=SurfaceMaterial.Create();m.color=color;m.SetFloat("_Smoothness",smooth);m.SetFloat("_Metallic",metallic);return m;}
@@ -36,16 +35,8 @@ namespace OceanAngler
         }
         void MakeGear()
         {
-            rodSegments=new Transform[12];var carbon=Mat(new Color(.06f,.11f,.12f),.6f,.3f);
-            for(int i=0;i<12;i++)rodSegments[i]=Cylinder("RodSection"+i,Vector3.zero,Vector3.up,.02f,carbon).transform;
-            var grip=Mat(new Color(.20f,.15f,.10f),.2f);
-            Cylinder("CorkGrip",new Vector3(1.8f,-.1f,-1.9f),new Vector3(1.6f,.22f,-1.55f),.065f,grip);
-            Cylinder("ReelSeat",new Vector3(1.68f,.02f,-1.75f),new Vector3(1.65f,-.25f,-1.7f),.025f,metal);
-            Cylinder("Spool",new Vector3(1.57f,-.22f,-1.72f),new Vector3(1.75f,-.22f,-1.72f),.095f,metal);
-            Cylinder("ReelHandle",new Vector3(1.78f,-.22f,-1.72f),new Vector3(1.89f,-.4f,-1.72f),.022f,metal);
-            Cylinder("HandleGrip",new Vector3(1.89f,-.4f,-1.72f),new Vector3(1.98f,-.4f,-1.72f),.03f,grip);
-            var obj=new GameObject("FishingLine");line=obj.AddComponent<LineRenderer>();line.sharedMaterial=Mat(new Color(.8f,.92f,.91f),.3f);line.positionCount=24;line.startWidth=.009f;line.endWidth=.003f;
-            rodTip=new GameObject("RodTip").transform;
+            var prefab=Resources.Load<GameObject>("Models/SpinningRig");if(prefab==null)throw new InvalidOperationException("Missing authored spinning rig prefab");
+            gear=Instantiate(prefab).GetComponent<AuthoredSpinningRig>();
         }
         GameObject Box(string name,Vector3 pos,Vector3 scale,Material material)
         {var o=GameObject.CreatePrimitive(PrimitiveType.Cube);o.name=name;o.transform.position=pos;o.transform.localScale=scale;o.GetComponent<Renderer>().sharedMaterial=material;Destroy(o.GetComponent<Collider>());return o;}
@@ -65,6 +56,7 @@ namespace OceanAngler
             if(game==null||game.Progress.RequiresRecovery)return;
             var data=game.Progress.Data;string desired=ui.FocusedFish??game.Session.Catch?.fishId??System.Array.Find(game.Content.fish,f=>f.habitatId==data.habitatId).id;
             if(desired!=fishId)SelectFish(desired);
+            fishRoot.gameObject.SetActive(!ui.InspectingGear);
             bool reduced=data.settings.reducedMotion;if(!reduced&&!game.Session.Paused)visualTime+=Time.deltaTime;float time=reduced?0:visualTime;
             fish.reducedMotion=reduced;fish.paused=ui.FocusedFish!=null?ui.ModelPaused:game.Session.Paused;fish.speed=game.Session.Phase==FishingPhase.Fighting?1.6f:1;
             bool journal=ui.FocusedFish!=null;
@@ -73,19 +65,24 @@ namespace OceanAngler
             fishRoot.localScale=Vector3.one*(journal?ui.ModelZoom:1);
             fishRoot.rotation=Quaternion.Euler(0,journal?-25+ui.ModelYaw:-25+Mathf.Sin(time*.3f)*7,-3);
             bool discovered=game.Progress.Data.catches.Exists(c=>c.fishId==fishId);fish.SetSilhouette(journal&&!discovered);
-            float t=game.Session.Tension;Vector3 start=new Vector3(1.6f,.22f,-1.55f),tip=new Vector3(.7f,2.6f,1.3f);
-            Vector3 prev=start;
-            for(int i=0;i<12;i++)
+            float t=game.Session.Tension;
+            if(ui.InspectingGear)
             {
-                float u=(i+1)/12f;Vector3 point=Vector3.Lerp(start,tip,u)+new Vector3(-.35f,-t*.75f,.18f)*u*u;Between(rodSegments[i],prev,point,Mathf.Lerp(.026f,.006f,u));prev=point;
+                float scale=ui.GearCloseup?6.5f:1.15f;gear.transform.localScale=Vector3.one*scale;gear.transform.rotation=Quaternion.Euler(ui.GearCloseup?-28:-6,ui.GearYaw,6);
+                var focus=ui.GearCloseup?gear.inspectionCenter:new Vector3(0,1.16f,0);gear.transform.position=new Vector3(-1.3f,.45f,1.2f)-gear.transform.TransformVector(focus);
+                gear.Drive(.45f,ui.GearReelingDemo,false,reduced,false,Vector3.zero,true);
             }
-            rodTip.position=prev;Vector3 endpoint=game.Session.Phase==FishingPhase.Fighting?fish.HookPosition:new Vector3(-.1f,.2f,2);
-            for(int i=0;i<24;i++){float u=i/23f;line.SetPosition(i,Vector3.Lerp(prev,endpoint,u)+Vector3.down*Mathf.Sin(u*Mathf.PI)*(1-t)*.2f);}
+            else
+            {
+                float hand=data.settings.leftHanded?-1:1;var start=new Vector3(1.75f*hand,-.30f,-2.0f);var direction=(new Vector3(.70f*hand,2.6f,1.3f)-start).normalized;
+                gear.transform.localScale=Vector3.one;gear.transform.position=start;gear.transform.rotation=Quaternion.LookRotation(Vector3.ProjectOnPlane(Vector3.up,direction).normalized,direction);
+                bool hooked=game.Session.Phase==FishingPhase.Fighting;gear.Drive(t,game.Reeling,game.Session.Paused,reduced,game.Session.Phase==FishingPhase.Casting,hooked?fish.HookPosition:new Vector3(-.1f,.2f,2),false,hooked);
+            }
             if(habitat!=data.habitatId)
             {
                 habitat=data.habitatId;Color color=habitat=="bay"?new Color(.04f,.34f,.44f):habitat=="channel"?new Color(.035f,.20f,.35f):new Color(.025f,.10f,.22f);RenderSettings.fogColor=color;view.backgroundColor=color;
             }
         }
-        void OnDestroy(){if(wood!=null)Destroy(wood);if(metal!=null)Destroy(metal);if(water!=null)Destroy(water);}
+        void OnDestroy(){if(wood!=null)Destroy(wood);if(water!=null)Destroy(water);}
     }
 }

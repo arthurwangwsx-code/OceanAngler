@@ -1,0 +1,34 @@
+{
+  "scope": "imported-spinning-rig-headless-playmode",
+  "status": "PASS",
+  "total": 5,
+  "passed": 5,
+  "failed": 0,
+  "durationSeconds": 2.0483626,
+  "tests": [
+    {
+      "name": "CastingOpensActualBailAndClosingRestoresIt",
+      "result": "Passed"
+    },
+    {
+      "name": "ImportedAssembliesHaveOneLodOwnerAndRealMechanicalParents",
+      "result": "Passed"
+    },
+    {
+      "name": "LoadedSkinMovesWithGuideAnchorsAndLineReachesHookTarget",
+      "result": "Passed"
+    },
+    {
+      "name": "PauseStopAndReducedMotionFreezeActualMechanisms",
+      "result": "Passed"
+    },
+    {
+      "name": "WindingMovesActualCrankRotorAndOscillatingSpool",
+      "result": "Passed"
+    }
+  ],
+  "runtimeVisualAcceptance": "BLOCKED",
+  "visualBlocker": "Desktop locked during native Metal presentation checks; no new UI screenshot captured.",
+  "deviceAcceptance": "NOT_RUN",
+  "artAcceptance": "NOT_ACCEPTED"
+}

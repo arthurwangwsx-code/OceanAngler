@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Validate scope/traceability, dependency graph and local document links."""
-import csv,json,re,sys
+import csv,hashlib,json,re,sys
 from pathlib import Path
 r=Path(__file__).resolve().parents[1];errors=[]
 def check(ok,why):
@@ -24,6 +24,10 @@ for path in [r/'README.md',*list((r/'docs').glob('*.md'))]:
   if target.startswith(('https:','http:','#','mailto:')):continue
   check((path.parent/target.split('#')[0]).exists(),'broken link '+str(path.relative_to(r))+' -> '+target)
 a=json.loads((r/'art/asset-manifest.json').read_text());check(len({x['id'] for x in a['assets']})==len(a['assets']),'duplicate asset ID')
+for asset in a['assets']:
+ for record in ([asset] if asset.get('path') else [])+asset.get('artifacts',[]):
+  path=r/record['path'];check(path.is_file(),'missing registered asset '+record['path'])
+  if path.is_file():check(hashlib.sha256(path.read_bytes()).hexdigest()==record.get('sha256'),'asset hash mismatch '+record['path'])
 for path in (r/'tools').rglob('*.p8'):
  if '.local' not in path.parts:errors.append('credential in project')
 print(json.dumps(dict(status='FAIL' if errors else 'PASS',requirements=len(reqs),tasks=len(rows),errors=errors),ensure_ascii=False,indent=2));sys.exit(bool(errors))

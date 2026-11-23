@@ -8,7 +8,7 @@
       "license": "SIL Open Font License 1.1",
       "redistribution": true,
       "status": "LICENSE_VERIFIED",
-      "sha256": "43f6db14484a6c83a902b135a400e97dae18abf27fdf01dac078dd9ffc447be0",
+      "sha256": "5a8a84ce9556efe3fb2bfb83c747cd3661bb3dd4d5a0830c52ccd40b84ebe279",
       "path": "game/Assets/OceanAngler/Resources/UIFont.ttf"
     },
     {
@@ -27,7 +27,7 @@
       "license": "MIT",
       "redistribution": true,
       "status": "ART_REVIEW_PENDING",
-      "note": "One structural rod/reel/line candidate and reef environment; not a complete production gear or habitat library."
+      "note": "Original runtime reef environment prototype; not a complete production habitat library. The authored spinning rig candidate is registered separately."
     },
     {
       "id": "icon-oceanangler",
@@ -110,6 +110,74 @@
         }
       ],
       "note": "Original bluefin trevally mesh, UV, PBR maps, 12-bone rig, seven animation clips and three LODs. Scientific/visual/user/device acceptance remains open. No third-party photographs or models included."
+    },
+    {
+      "id": "complete-spinning-rig-candidate",
+      "author": "OceanAngler contributors",
+      "source": "tools/art_spinning_rig.py",
+      "license": "MIT",
+      "redistribution": true,
+      "sourceRedistribution": true,
+      "canModify": true,
+      "acquiredAt": "2026-11-23",
+      "status": "ART_REVIEW_PENDING",
+      "path": "art/source/spinning-rig/SpinningRig.blend",
+      "sha256": "5a4e22f6fedeb7d8883c1c232ca6284bacf02d3ab3154ebf0970c4927e2d680d",
+      "artifacts": [
+        {
+          "path": "art/source/spinning-rig/SpinningRig.blend",
+          "sha256": "5a4e22f6fedeb7d8883c1c232ca6284bacf02d3ab3154ebf0970c4927e2d680d"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/SpinningRig/SpinningRig.fbx",
+          "sha256": "9baae6d5555cdb9c083866c4f077a3b7542b4197f168af2b198efa2f1b829378"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/SpinningRig/Rig_Carbon.png",
+          "sha256": "7fdbf892edd8297ffdb27e467a5f8a4db346573fbf696fd7eb9728d4090f0cf4"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/SpinningRig/Rig_Carbon_Normal.png",
+          "sha256": "3438cfe7b1d24b3841c97a2122e4fdcd2ab0e925ea3906f4f99cf961056d0cd8"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/SpinningRig/Rig_Cork.png",
+          "sha256": "4d09f8022a25bf9c3b17048bfa9e8c395366d7dedd02fe6ff0330bc7c1320f4a"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/SpinningRig/Rig_Cork_Normal.png",
+          "sha256": "8464f2ee2f6bbfd5a1cc62110ace207d889bea155c072377d02d604f20216705"
+        },
+        {
+          "path": "art/previews/spinning-rig/guides.png",
+          "sha256": "f3f3e42945c26a3055a87083c933dd8e165e8c6385ec4f63103c1ea571d67f9a"
+        },
+        {
+          "path": "art/previews/spinning-rig/loaded.png",
+          "sha256": "a086969713b73ffc57fffb1346d595be4a08b51a50e425a31e4556d09ce244b8"
+        },
+        {
+          "path": "art/previews/spinning-rig/lure.png",
+          "sha256": "67243fceb8b9a0931d068372235f138f2391b365b7dd656e50f73030f617883f"
+        },
+        {
+          "path": "art/previews/spinning-rig/reel-back.png",
+          "sha256": "bd259259db3018b62440813c2ba18808777d204ee3e04b488df68f9c069fc793"
+        },
+        {
+          "path": "art/previews/spinning-rig/reel.png",
+          "sha256": "be0ae49d75ae0b3ee310ffb9445d583d62706d93ebad9d50595a2ade27318d6f"
+        },
+        {
+          "path": "art/previews/spinning-rig/turntable.mp4",
+          "sha256": "de294569bab68915419da49636e6c00c03f678284fb672da8528d94195ab061a"
+        },
+        {
+          "path": "art/previews/spinning-rig/whole.png",
+          "sha256": "a5fb4594606b733610c20fa52e1e2216e6558e3cbf7791d6908ecae5d1961b06"
+        }
+      ],
+      "note": "Original 2.35 metre spinning rig: rod, nine guides, cork/carbon PBR maps, housing, rotor, spool, crank, bail and barbless minnow. Editable source and three LODs per functional assembly; studio renders are not runtime or device acceptance. Other gear variants remain incomplete."
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."

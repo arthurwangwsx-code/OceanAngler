@@ -21,4 +21,4 @@ summary=dict(status=receipt['status'],exitCode=result.returncode,checks=receipt[
 problems=[line for line in (folder/'player.log').read_text(errors='replace').splitlines() if re.search(r'Exception:|is registered with more than one LODGroup|Shader .*not supported|The referenced script .*missing',line)]
 if problems:summary['status']='FAIL';summary['failures']+=['runtime-log:'+line[:180] for line in problems]
 (folder/'summary.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2)+'\n');print(json.dumps(summary,ensure_ascii=False,indent=2))
-raise SystemExit(0 if result.returncode==0 and summary['status']=='PASS' and len(images)==6 else 1)
+raise SystemExit(0 if result.returncode==0 and summary['status']=='PASS' and len(images)==7 else 1)
