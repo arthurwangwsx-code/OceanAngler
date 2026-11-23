@@ -32,3 +32,5 @@ Test notes应明确：早期原型，测试抛竿/张力/收鱼/积分/存档/�
 2026-11-24：0.1.0 (2)冻结于2971b11，已通过签名/身份校验、内部专用导出、上传与Apple VALID处理，并核实本人组中的构建分配。指定邮箱arthur.wang.wsx@gmail.com已在该组内，邀请为INVITED，尚未验证实际安装。详见[本次脱敏回执](../reports/testflight-0.1.0-2.json)及[设备复核步骤](09-current-beta-review.md)。候选包最低iOS/iPadOS 17，首鱼/首钓组/首海湾仍待美术与设备验收；旧build1的冻结产物及历史回执保留。
 
 2026-11-24发行更新：0.1.0 (3)冻结05c8cc7，30项Editor、7项无画面PlayMode和11项发布工具检查通过；Unity iOS冻结导出、Xcode签名/身份校验、内部专用IPA、上传及Apple VALID/INTERNAL_ONLY通过，已分配本人授权两账号组，测试说明与反馈邮箱读回一致。指定邮箱仍INVITED，安装/运行NOT_RUN。该包包含build2之后的累计修复；科学/用户美术、当前实际画面、触控、听感、20分钟性能及完整产品仍未通过。见[build 3回执](../reports/testflight-0.1.0-3.json)及[设备复核](12-beta3-review.md)。独立receipt审计仍INCOMPLETE，3.4、4.1–4.3及apply未完成。
+
+2026-11-24发行更新：0.1.0 (4)冻结ee7ba50，41项Editor、8项无画面PlayMode和11项发布工具检查通过，冻结提交CI通过；Unity iOS导出、签名/身份校验、内部专用IPA、归档与IPA静态元数据检查、上传和Apple VALID/INTERNAL_ONLY通过。本人授权两账号组已核实，含arthur.wang.wsx@gmail.com，指定邮箱邀请当前为INVITED，测试说明/反馈邮箱读回一致。包含build 3之后的三条环境鱼、阶段抛投/接近/收鱼、共享遭遇选择与重复抛竿保护，以及蓝鳍鲹鳍色/比例/阴影改进；积分/概率未变。本轮没有新原生玩家窗口或真机证据，实际安装、触控、20分钟性能/恢复、儿童/科学/美术A1–A3及完整产品仍未通过，其他模型/海域及观察交互仍缺。独立receipt审计INCOMPLETE，2.4、3.4、4.1–4.3及apply保持未完成。 见[build 4回执](../reports/testflight-0.1.0-4.json)。

@@ -14,7 +14,7 @@
 | REQ-08 手机/平板与无障碍 | 共享逻辑点UI、左右手/减弱动态，Mac两档点尺寸、触控命中和滚动通过 | PARTIAL | iPhone/iPad实际安全区/旋转/可读性/操作与无障碍体验 |
 | REQ-09 隐私与家长区 | 无广告/账号/分析；家长验证、清档二次确认及取消不丢档的Mac检查通过 | PARTIAL | 实际iOS包SDK/权限与系统网络行为核查；家长体验 |
 | REQ-10 开源流程 | 已公开独立仓库，MIT/OFL及资产登记，首轮CI通过 | PASS（已发布基线） | 每次新提交仍须审查许可、凭据及CI；不能由脚本证明全部资产合法性 |
-| REQ-11 本人TestFlight | 0.1.0 (3)冻结源码05c8cc7，签名归档/内部导出/上传、Apple VALID/INTERNAL_ONLY、本人授权两账号组与测试说明读回通过；含指定测试邮箱，见testflight-0.1.0-3.json | PARTIAL | 邀请待接受，TestFlight实际安装启动；按docs/12-beta3-review.md复核 |
+| REQ-11 本人TestFlight | 0.1.0 (4)冻结源码ee7ba50，签名归档/内部导出、包静态元数据、上传、Apple VALID/INTERNAL_ONLY、本人授权两账号组与测试说明读回通过；含指定测试邮箱，见testflight-0.1.0-4.json | PARTIAL | 指定邮箱邀请仍为INVITED；TestFlight实际安装启动未验，按docs/13-beta4-review.md复核 |
 | REQ-12 真机性能与恢复 | 设备可发现，后台自动暂停代码已实现 | NOT_RUN | iPhone/iPad各20分钟帧耗/内存/温升，后台/锁屏/恢复和持久化实际记录 |
 
 工程证据入口：reports/progression-validation.md、reports/mobile-layout.md、reports/runtime-phone-points.json、reports/runtime-tablet-points.json。发布回执以实际Apple查询和脱敏报告为准；本机原始日志、设备标识、密钥及签名产物不公开。
@@ -42,3 +42,5 @@ REQ-01/02/05钓鱼表现后续：抛投弧线、固定路线接近拟饵及随�
 REQ-01/07随机成长进展：正式控制器与1000次种子模拟共用EncounterSelection，教学后维持海域内等概率，未调整奖励/概率/装备/存档；非Ready重复抛竿不重选或触发事件。初始装备、自动提竿/0.65张力控线、每次生产结算/重新读档，按收齐当前海域再探索的策略，1000条均完成；近海/陆坡解锁中位数6/10次，全任务中位数24次、P95为37次、最长62次，仅25.1%在20次内完成。41项Editor、8项PlayMode、Mac编译通过。此规则/自动控线时间不代表儿童、真实触控、20次实际UI、所有随机序列或设备；CUA仍确认锁定，未新运行窗口。稀有度/水层/拟饵偏好仍待做，长尾需试玩判断。见[随机成长基线](encounter-balance.md)。未进TestFlight build 3，A1–A3/设备与完整产品未完成，apply及4.2等任务继续。
 
 REQ-05/06英雄鱼后续：灰银/灰铜色与蓝黑斑重新校准，蓝/灰铜鳍区共享纹理和六材质槽，收敛鳍高、细化鳍条/侧线/硬鳞。首候选过暗和多组阴影缺陷对照保留；当前1024单级联、24米、Low软过滤/偏移2和0，保留投射/接收，在当前近景/四方向采样未见原块状自阴影。Blend实际三LOD为24284/9712/3642，鳍色按实际几何/UV核验，七动作各五姿态检查通过；41项Editor、8项PlayMode、Mac编译、单鱼/场景/海湾Editor Metal、六工作室图与36帧转台分别验证。首次/重复单鱼绘制差均0。色值/造型为美术选择，科学/用户与A1–A3未验，软过滤与鳍图增容成本待真机。本轮未新运行原生窗口，未进TestFlight build 3。见[鳍色与表面对照](bluefin-palette.md)。其余物种/观察生物、海域、儿童/设备与完整产品未完成，apply及2.4/4.1等任务不勾选。
+
+2026-11-24发行更新：0.1.0 (4)冻结ee7ba50，41项Editor、8项无画面PlayMode和11项发布工具检查通过，冻结提交CI通过；Unity iOS导出、签名/身份校验、内部专用IPA、归档与IPA静态元数据检查、上传和Apple VALID/INTERNAL_ONLY通过。本人授权两账号组已核实，含arthur.wang.wsx@gmail.com，指定邮箱邀请当前为INVITED，测试说明/反馈邮箱读回一致。包含build 3之后的三条环境鱼、阶段抛投/接近/收鱼、共享遭遇选择与重复抛竿保护，以及蓝鳍鲹鳍色/比例/阴影改进；积分/概率未变。本轮没有新原生玩家窗口或真机证据，实际安装、触控、20分钟性能/恢复、儿童/科学/美术A1–A3及完整产品仍未通过，其他模型/海域及观察交互仍缺。独立receipt审计INCOMPLETE，2.4、3.4、4.1–4.3及apply保持未完成。 见[build 4回执](testflight-0.1.0-4.json)及[设备复核](../docs/13-beta4-review.md)。
