@@ -14,7 +14,7 @@
 python3 tools/art.py build --asset spinning-rig --label rig-build-new --no-preview
 python3 tools/art.py validate --asset spinning-rig --label rig-validate-new
 python3 tools/game.py spinning-rig
-python3 tools/game.py tests --test-platform PlayMode
+python3 tools/game.py tests --test-platform PlayMode --label rigtestsnew
 python3 tools/art.py review --asset spinning-rig --label rig-review-new
 python3 tools/art.py review --asset spinning-rig --label rig-turntable-new --turntable
 ```

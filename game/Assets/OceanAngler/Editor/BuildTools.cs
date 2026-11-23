@@ -29,14 +29,18 @@ namespace OceanAngler.Editor
             GraphicsSettings.defaultRenderPipeline = pipeline;
             QualitySettings.renderPipeline = pipeline;
             pipeline.msaaSampleCount=4;EditorUtility.SetDirty(pipeline);
+            pipeline.shadowDistance=35;pipeline.mainLightShadowmapResolution=1024;
             EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Single);
             RenderSettings.ambientLight = new Color(0.35f, 0.55f, 0.65f);
+            // Keep the runtime EXP2 fog variant in scene-based shader stripping.
+            RenderSettings.fog=true;RenderSettings.fogMode=FogMode.ExponentialSquared;RenderSettings.fogDensity=.035f;RenderSettings.fogColor=new Color(.075f,.42f,.49f);
             var camera = new GameObject("Camera").AddComponent<Camera>();
             camera.tag = "MainCamera"; camera.transform.position = new Vector3(0, 3, -7);
             camera.transform.LookAt(new Vector3(0, 0, 2));
             camera.backgroundColor = new Color(0.1f, 0.45f, 0.65f); camera.clearFlags = CameraClearFlags.SolidColor;
             camera.gameObject.AddComponent<AudioListener>();
             var light = new GameObject("Sun").AddComponent<Light>(); light.type = LightType.Directional; light.intensity = 1.3f;
+            light.shadows=LightShadows.Hard;light.shadowStrength=.7f;
             light.transform.rotation = Quaternion.Euler(45, -30, 0);
             var root = new GameObject("OceanGame");
             root.AddComponent<GameController>();

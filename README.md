@@ -19,6 +19,7 @@
 | 当前真实结果 | [完整总账](reports/acceptance-ledger.md)、[移动布局与发行](reports/mobile-layout.md)、[逻辑与Mac运行](reports/progression-validation.md) |
 | 首条独立源模型 | [蓝鳍鲹候选及验收边界](reports/bluefin-art.md)、[源资产重建](art/source/bluefin/README.md) |
 | 第一套完整钓组候选 | [纺车钓组与验证边界](reports/spinning-rig-art.md)、[源资产重建](art/source/spinning-rig/README.md) |
+| 第一处独立海域候选 | [珊瑚海湾与验证边界](reports/coral-bay-art.md)、[海湾源资产重建](art/source/coral-bay/README.md) |
 
 需求合同在 ispec/specs，首批变更在 ispec/changes/product-technical-foundation；planning/backlog.csv 管理任务。仅此目录可写，不修改赛车和枪战项目。
 
@@ -35,5 +36,7 @@ ASC_ENV_FILE=/path/to/private/asc.env python3 tools/asc.py status
 ![蓝鳍鲹源模型工作室预览：候选，尚非最终美术或游戏场景](art/previews/bluefin/three-quarter.png)
 
 [360度源模型转台](art/previews/bluefin/turntable.mp4)。首条蓝鳍鲹已接入本地开发版；第一套完整纺车钓组在开发分支接入，新增[工作室近景](art/previews/spinning-rig/reel.png)及[卷线器转台](art/previews/spinning-rig/turntable.mp4)，其源文件与5项无画面机构检查通过，新界面及画面待桌面解锁后核验。现有TestFlight 0.1.0 (1)仍对应此前冻结源码，不含这两项模型。其余鱼种、钓具和海域仍待成品制作与验收。
+
+integration/art-candidates已串行集成蓝鳍鲹、完整纺车钓组和珊瑚海湾，25项Editor及6项无画面PlayMode检查通过，涵盖真实场景内的海湾观察、暂停返回、钓组试摇、恢复抛竿、战斗中导航停止收线及实际机构/蒙皮；Mac原生包编译通过。[集成记录](reports/integrated-art-candidates.md)与源图另行保留。新界面画面、触控与真机仍待验，当前TestFlight 0.1.0 (1)不含这些资产。
 
 Mac验证：`python3 tools/game.py mac`，再运行`python3 tools/runtime_smoke.py --label unique-run`。字体重建见tools/requirements.txt；ASC发行工具另需PyJWT与cryptography，并显式配置本机凭据。

@@ -1,0 +1,49 @@
+{
+  "scope": "coral-bay-import-and-editor-tests",
+  "status": "PASS",
+  "total": 25,
+  "passed": 25,
+  "failed": 0,
+  "tests": [
+    {
+      "name": "ImportedSceneHasDistinctLodOwnersAndSeparateWater",
+      "result": "Passed"
+    },
+    {
+      "name": "PauseAndReducedMotionConstrainAmbientEffects",
+      "result": "Passed"
+    },
+    {
+      "name": "SurfaceReefAndFishingDestinationsAreReversible",
+      "result": "Passed"
+    },
+    {
+      "name": "WaterInputsAndOriginalPbrMapsAreConfigured",
+      "result": "Passed"
+    }
+  ],
+  "runtimeVisualAcceptance": "NOT_RUN",
+  "visualBlocker": "Native window inspection awaits manual desktop unlock after earlier locked Metal presentation timeouts.",
+  "deviceAcceptance": "NOT_RUN",
+  "artAcceptance": "NOT_ACCEPTED",
+  "sourceLabel": "bay-v10",
+  "macCompilation": "PASS",
+  "sourceArtifacts": [
+    {
+      "path": "art/source/coral-bay/CoralBay.blend",
+      "sha256": "0677232a08761f2138bc8515ac8a76256feec9cacb1b8fa0317dbb4679f8b361"
+    },
+    {
+      "path": "game/Assets/OceanAngler/Art/CoralBay/CoralBay.fbx",
+      "sha256": "b8aab20d169bae0bffbb6976701b62bbf645b663e01fdb284a1bee1e0cffeabe"
+    },
+    {
+      "path": "game/Assets/OceanAngler/Resources/Models/CoralBay.prefab",
+      "sha256": "023f1fa9bcfa71bf6754e8d92f45719f3a58c93cc76efaa6068de8f15dcdaa8e"
+    },
+    {
+      "path": "game/Assets/OceanAngler/Shaders/BayWater.shader",
+      "sha256": "76bd83ee6bb71fa9a3a7714ffceb846066458e12455842872654f778e73febf7"
+    }
+  ]
+}

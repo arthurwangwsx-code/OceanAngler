@@ -8,7 +8,7 @@
       "license": "SIL Open Font License 1.1",
       "redistribution": true,
       "status": "LICENSE_VERIFIED",
-      "sha256": "5a8a84ce9556efe3fb2bfb83c747cd3661bb3dd4d5a0830c52ccd40b84ebe279",
+      "sha256": "98fb4deafa8905817e4ef4a091e8fab6650a5877d62a938cf142be3a9e6bd14a",
       "path": "game/Assets/OceanAngler/Resources/UIFont.ttf"
     },
     {
@@ -178,6 +178,150 @@
         }
       ],
       "note": "Original 2.35 metre spinning rig: rod, nine guides, cork/carbon PBR maps, housing, rotor, spool, crank, bail and barbless minnow. Editable source and three LODs per functional assembly; studio renders are not runtime or device acceptance. Other gear variants remain incomplete."
+    },
+    {
+      "id": "coral-bay-authored-candidate",
+      "author": "OceanAngler contributors",
+      "source": "tools/art_bay.py",
+      "license": "MIT",
+      "redistribution": true,
+      "sourceRedistribution": true,
+      "canModify": true,
+      "acquiredAt": "2026-11-24",
+      "status": "ART_REVIEW_PENDING",
+      "path": "art/source/coral-bay/CoralBay.blend",
+      "sha256": "0677232a08761f2138bc8515ac8a76256feec9cacb1b8fa0317dbb4679f8b361",
+      "artifacts": [
+        {
+          "path": "art/source/coral-bay/CoralBay.blend",
+          "sha256": "0677232a08761f2138bc8515ac8a76256feec9cacb1b8fa0317dbb4679f8b361"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/CoralBay/CoralBay.fbx",
+          "sha256": "b8aab20d169bae0bffbb6976701b62bbf645b663e01fdb284a1bee1e0cffeabe"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/CoralBay/Bay_BranchCoral.png",
+          "sha256": "b567f0fa669edf6d71fea0b8870eb578dcdededc522633c66767a6b43da94bfd"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/CoralBay/Bay_BranchCoral_MetallicSmoothness.png",
+          "sha256": "a3acaaf36164ebfac5ec14ba5b0d9fdf56365f1b22e157cb8efe7f290d846b3b"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/CoralBay/Bay_BranchCoral_Normal.png",
+          "sha256": "546d46a52a604b44598540d87df74a4daadde6e3af6ee2ba16f1176e0d681a09"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/CoralBay/Bay_BranchCoral_Roughness.png",
+          "sha256": "f94d2ffe42710bcba35f6133af035af50abc61f181e7d35554be9b465b8858ea"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/CoralBay/Bay_Caustic.png",
+          "sha256": "aec38a7ddd58366c08b6c8bc2b21bc8572a0a5b94888db919ad4e47dd431ce09"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/CoralBay/Bay_DomeCoral.png",
+          "sha256": "11532f2c084a73ffe43bef8736c84a12878cec1a70ab6e332e69740cd609e63c"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/CoralBay/Bay_DomeCoral_MetallicSmoothness.png",
+          "sha256": "64350cf6553e0ca3d78ae3d8fc1f3ee105076fb401518654b5fb67c19fbee9fe"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/CoralBay/Bay_DomeCoral_Normal.png",
+          "sha256": "546d46a52a604b44598540d87df74a4daadde6e3af6ee2ba16f1176e0d681a09"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/CoralBay/Bay_DomeCoral_Roughness.png",
+          "sha256": "ad45cbdc33579d94de2d6e888c60920ac29ee80603dc8640f64688ac966a8067"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/CoralBay/Bay_Limestone.png",
+          "sha256": "bafd805af4fb0ff51d6f77872994fdb23e836bf7fd59ae726cd78a06039beb52"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/CoralBay/Bay_Limestone_MetallicSmoothness.png",
+          "sha256": "943804e22188dcad0fe849e72158a56878cfb104bc8e105a3acb0ccf9a26027b"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/CoralBay/Bay_Limestone_Normal.png",
+          "sha256": "af976b64d02eae0665dea0c7080a7082d1aba7d2eae44fbe4f9e6fb7a6223ebb"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/CoralBay/Bay_Limestone_Roughness.png",
+          "sha256": "25733d79137b81c5634756ff7c35a559c0c036355a8a2cf5473e19c3986268fa"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/CoralBay/Bay_Particle.png",
+          "sha256": "caedda5f803a9bee67624402d35f126ad572143022deeb7908cc032c3fbe2ee7"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/CoralBay/Bay_PlateCoral.png",
+          "sha256": "8fa07800e9fe4af6d07ac7d93e634a17fa82607a6cae3c004f473576a26a26c1"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/CoralBay/Bay_PlateCoral_MetallicSmoothness.png",
+          "sha256": "c28ef2f4fc7fab4cfa68d32b3b662090750f6e2dc173324a5253287933ee79af"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/CoralBay/Bay_PlateCoral_Normal.png",
+          "sha256": "546d46a52a604b44598540d87df74a4daadde6e3af6ee2ba16f1176e0d681a09"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/CoralBay/Bay_PlateCoral_Roughness.png",
+          "sha256": "f16c9b52982818bef40975d9bceea816a1670c912ef4dcfa87eb89de4fc2c461"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/CoralBay/Bay_Sand.png",
+          "sha256": "8b455f2c5990a8ca1a0e548521e7edffc47d4616622da8108aaccc561268abf8"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/CoralBay/Bay_Sand_MetallicSmoothness.png",
+          "sha256": "7b73471bda2177704b384218427f4a26a8f30f60592005f3c1a70849470733b7"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/CoralBay/Bay_Sand_Normal.png",
+          "sha256": "66868c79661314605950ee1d89ce8fedb5dd041e607cebc85f7ff6fca05c5bf0"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/CoralBay/Bay_Sand_Roughness.png",
+          "sha256": "fcec394c2871aeac55b65b195775951ac3501af6899edccdf903180a28e4ac54"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/CoralBay/Bay_Wood.png",
+          "sha256": "596a6421898e2682bbcdcb2c6d839816a1a39e147a6a40c13e8ccb3aaa79e8d7"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/CoralBay/Bay_Wood_MetallicSmoothness.png",
+          "sha256": "7ed2e3b0beb48eea99e200bd0ef1631af710e64341ded103e62dca6b70019bd8"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/CoralBay/Bay_Wood_Normal.png",
+          "sha256": "ea0d022bc65da4f5e048782637c44052d3a3fff8430c4e6ea05e11a5b991b0d2"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/CoralBay/Bay_Wood_Roughness.png",
+          "sha256": "93ee0ffa3cd86787348c1388b6ddf2045b17e1f327f9dca0463b9a85f994b403"
+        },
+        {
+          "path": "art/previews/coral-bay/pier.png",
+          "sha256": "95b9b9696a935cbf75747aa3e35b1685b4a7bf38557df65d3757c77d0fe9107c"
+        },
+        {
+          "path": "art/previews/coral-bay/reef.png",
+          "sha256": "45fd8f6468211f87505184ea57f5b039b49a1863c77b76c818d58fd5d63411e8"
+        },
+        {
+          "path": "art/previews/coral-bay/surface.png",
+          "sha256": "d7ec2c3c7b74f51c3bbe4f4325b75c4cf13b79c59ee5ce5067bf5daead219fb8"
+        },
+        {
+          "path": "art/previews/coral-bay/underwater.png",
+          "sha256": "a2000a90f12d5cb58760852dd99a1300295fc521351c4912ba988877d3b2873b"
+        }
+      ],
+      "note": "Original continuous terrain, reef, generic coral forms, seagrass, pier and dinghy. Eight static assemblies with three LODs plus a separate water mesh. Studio lighting is an approximation; runtime visual, ecological, user and device acceptance remains open."
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."

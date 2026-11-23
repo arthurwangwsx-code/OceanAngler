@@ -1,0 +1,42 @@
+{
+  "scope": "combined-art-candidates-headless-playmode",
+  "status": "PASS",
+  "total": 6,
+  "passed": 6,
+  "failed": 0,
+  "tests": [
+    {
+      "name": "ObservationGearDemoAndFishingShareOnePausedWorld",
+      "result": "Passed"
+    },
+    {
+      "name": "CastingOpensActualBailAndClosingRestoresIt",
+      "result": "Passed"
+    },
+    {
+      "name": "ImportedAssembliesHaveOneLodOwnerAndRealMechanicalParents",
+      "result": "Passed"
+    },
+    {
+      "name": "LoadedSkinMovesWithGuideAnchorsAndLineReachesHookTarget",
+      "result": "Passed"
+    },
+    {
+      "name": "PauseStopAndReducedMotionFreezeActualMechanisms",
+      "result": "Passed"
+    },
+    {
+      "name": "WindingMovesActualCrankRotorAndOscillatingSpool",
+      "result": "Passed"
+    }
+  ],
+  "saveIsolation": "fresh --ocean-save-root under ignored unity-test-saves",
+  "visualAcceptance": "NOT_RUN",
+  "touchAcceptance": "NOT_RUN",
+  "deviceAcceptance": "NOT_RUN",
+  "overallProductAcceptance": "PARTIAL",
+  "runLabel": "integration2",
+  "macCompilation": "PASS",
+  "editorTests": 25,
+  "heldReelModalReturn": "PASS"
+}

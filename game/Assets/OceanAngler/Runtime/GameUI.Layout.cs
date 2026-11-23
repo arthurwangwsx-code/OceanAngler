@@ -12,12 +12,12 @@ namespace OceanAngler
             var header=At(pageRoot,"Header",Navy,0,0,0,Compact?44:80);
             Label(header,"海洋小钓手",Compact?20:30,Color.white,Compact?12:24,Compact?6:14,260,Compact?32:46);
             pointsText=Label(header,game.Progress.RequiresRecovery?"存档需要恢复":"研究积分  "+game.Progress.Data.totalPoints,Compact?17:22,Gold,Compact?-260:-310,Compact?9:22,Compact?145:280,Compact?28:36,true);
-            if(Compact&&!game.Progress.RequiresRecovery)Button(header,InspectingGear?"返回":game.Session.Paused?"继续":"暂停",-104,0,100,44,()=>{if(InspectingGear)Navigate("钓具");else game.Pause(!game.Session.Paused);},Panel);
+            if(Compact&&!game.Progress.RequiresRecovery)Button(header,(InspectingGear||InspectingHabitat)?"返回":game.Session.Paused?"继续":"暂停",-104,0,100,44,()=>{if(InspectingGear)Navigate("钓具");else if(InspectingHabitat)Navigate("出海");else game.Pause(!game.Session.Paused);},Panel);
             var nav=At(pageRoot,"Navigation",Navy,0,Compact?44:82,0,Compact?52:60);
             string[] names={"出海","图鉴","钓具","任务","设置"};float navWidth=Compact?(Width-24)/5:145;
             for(int i=0;i<names.Length;i++)
             {
-                string target=names[i];var b=Button(nav,target,(Compact?12:16)+i*navWidth,Compact?4:7,navWidth-8,Compact?44:46,()=>Navigate(target),page==target||page=="鱼类详情"&&target=="图鉴"||InspectingGear&&target=="钓具"?Teal:Panel);b.interactable=!game.Progress.RequiresRecovery;
+                string target=names[i];var b=Button(nav,target,(Compact?12:16)+i*navWidth,Compact?4:7,navWidth-8,Compact?44:46,()=>Navigate(target),page==target||page=="鱼类详情"&&target=="图鉴"||InspectingGear&&target=="钓具"||InspectingHabitat&&target=="出海"?Teal:Panel);b.interactable=!game.Progress.RequiresRecovery;
                 if(Compact)b.GetComponentInChildren<Text>().fontSize=18;
             }
             var footer=At(pageRoot,"Footer",Navy,0,0,0,Compact?30:58,true);
@@ -59,7 +59,7 @@ namespace OceanAngler
             {
                 float w=Width-cardWidth-38;
                 var prep=Box(pageRoot,"Preparation",Panel,new Vector2(left?1:0,0),new Vector2(left?1:0,1),new Vector2(left?-w-12:12,36),new Vector2(left?-12:w+12,-152));
-                prep.gameObject.AddComponent<RectMask2D>();var content=new GameObject("PreparationContent",typeof(RectTransform)).GetComponent<RectTransform>();content.SetParent(prep,false);content.anchorMin=new Vector2(0,1);content.anchorMax=new Vector2(1,1);content.pivot=new Vector2(.5f,1);content.sizeDelta=new Vector2(0,330);
+                prep.gameObject.AddComponent<RectMask2D>();var content=new GameObject("PreparationContent",typeof(RectTransform)).GetComponent<RectTransform>();content.SetParent(prep,false);content.anchorMin=new Vector2(0,1);content.anchorMax=new Vector2(1,1);content.pivot=new Vector2(.5f,1);content.sizeDelta=new Vector2(0,366);
                 var scroll=prep.gameObject.AddComponent<ScrollRect>();scroll.viewport=prep;scroll.content=content;scroll.horizontal=false;scroll.movementType=ScrollRect.MovementType.Clamped;
                 Label(content,game.Content.Habitat(game.Progress.Data.habitatId).name,22,Color.white,12,6,-24,34);
                 for(int i=0;i<game.Content.habitats.Length;i++)
@@ -68,6 +68,7 @@ namespace OceanAngler
                     var b=Button(content,h.name+(unlocked?"":" · "+h.unlockPoints+"分"),12,48+i*52,-24,46,()=>game.SelectHabitat(h.id),h.id==game.Progress.Data.habitatId?Teal:Navy);b.GetComponentInChildren<Text>().fontSize=17;b.interactable=unlocked&&game.Session.Phase==FishingPhase.Ready;
                 }
                 Label(content,"已装备\n"+game.Content.Gear(game.Progress.Data.rodId).name+" · "+game.Content.Gear(game.Progress.Data.reelId).name+"\n"+game.Content.Gear(game.Progress.Data.lineId).name+" · "+game.Content.Gear(game.Progress.Data.lureId).name,17,Muted,12,212,-24,86);
+                if(game.Progress.Data.habitatId=="bay")Button(content,"看看海湾",12,306,-24,44,()=>Navigate("海湾观察"),Navy).GetComponentInChildren<Text>().fontSize=18;
             }
             if(game.Session.Paused)Button(pageRoot,"结束本次 · 返回准备",left?Width-252:12,Height-90,240,48,game.ReturnToPreparation,Navy).GetComponentInChildren<Text>().fontSize=17;
             if(game.Session.Phase==FishingPhase.Landed&&game.Session.Catch!=null)
