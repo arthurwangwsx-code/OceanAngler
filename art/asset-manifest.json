@@ -1875,6 +1875,52 @@
           "sha256": "2577d5ea0f50e5a34b5f4d97f899021dd56f2fdf64dde82fc9e52834148febde"
         }
       ]
+    },
+    {
+      "id": "continental-slope-native-previews",
+      "author": "OceanAngler contributors",
+      "source": "Own ARM64 iPhone/iPad Simulator Player, frozen2bed347 appf37cbd4a; initial040a64c phone ROV retained as rejected visual",
+      "license": "MIT",
+      "redistribution": true,
+      "sourceRedistribution": true,
+      "canModify": true,
+      "acquiredAt": "2026-11-24",
+      "status": "SIMULATOR_FLOW_PASS_ART_PARTIAL",
+      "note": "Seven final own Player originals including fresh-process menu, and one rejected phone ROV original;42 final native frames inspected via two private contacts, plus four final play/ROV originals and one fresh-process menu original. Fish still A0. No OS/sidebar, device IDs, personal media or raw device logs.",
+      "artifacts": [
+        {
+          "path": "art/previews/continental-slope/native-phone-canyon.png",
+          "sha256": "707927511980a219240444e3c4fe00bbf3fd7e0d1a7842a65b291ac8b325a5c0"
+        },
+        {
+          "path": "art/previews/continental-slope/native-phone-fighting.png",
+          "sha256": "2b8ba22a227482c26a7225d31dd8faac0c2b33cc22a9527ff9dacc22f471da6d"
+        },
+        {
+          "path": "art/previews/continental-slope/native-phone-relaunch.png",
+          "sha256": "e047cabc97906d57d9988fe9402122db9c7f21275a5f59e6ef32a6e205cafcc5"
+        },
+        {
+          "path": "art/previews/continental-slope/native-phone-rov.png",
+          "sha256": "95e569bc7c171d3a859f675921b4cd81303e7975f21c6099827ebdd57a762ea7"
+        },
+        {
+          "path": "art/previews/continental-slope/native-tablet-canyon.png",
+          "sha256": "a98ffc99d5f7a29d5e05cfed6655ad5da65c66e6f2fbe8d935274f806dedf8ec"
+        },
+        {
+          "path": "art/previews/continental-slope/native-tablet-fighting.png",
+          "sha256": "e202335af315756d47fb3268560363c48308528796e06d3998d34cd113b51971"
+        },
+        {
+          "path": "art/previews/continental-slope/native-tablet-rov.png",
+          "sha256": "b541fad8fe82be85f9ae4a21e6cb81e7b620f568a8f676d223359da0e9f4deb0"
+        },
+        {
+          "path": "art/previews/continental-slope/rejected-native-phone-rov.png",
+          "sha256": "ceef610f5d781f88e89df15b3280cd743281a7063a44520ff02ee5011a6570fa"
+        }
+      ]
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."

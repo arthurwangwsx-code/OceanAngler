@@ -10,6 +10,8 @@
 
 沉浸式界面首版：实际钓鱼仅保留暂停、当前动作和收线仪表，准备/图鉴/设置移到分层页面，结束本次先确认。df6b580最终包在手机/平板各15帧定向流程通过，普通HUD占安全区最高12.034%/4.455%，准备出发按钮固定可见；原五份QA存档字节保留，新进程首页4661分一致。见[实际画面与验收范围](reports/immersive-interface.md)。图标理解、儿童/真实触控及完整美术仍待验，本轮没有更新个人手机/TestFlight。
 
+第三海域候选已接入峡谷、原创岩层/沉积材质、研究潜器和测量艇。鉴赏按说明板宽度调整构图，游玩仍保持两按钮；2bed347新原生包在两端各21帧、一次真实放流及九份原QA主存档保留通过，新进程菜单4622分一致。构图改动有57项Editor/3项定向PlayMode覆盖，最终标题与实际画面由原生流程复核。环境与非英雄鱼仍有明显样板感，完整拟真、美术/科学/用户及真机门槛未过，详见[陆坡证据和原图](reports/continental-slope.md)。此包仅本地模拟器使用，未更新个人手机或TestFlight。
+
 | 阅读目的 | 文件 |
 |---|---|
 | 完整产品、玩法、范围与交互 | [产品方案](docs/01-product.md) |
@@ -31,6 +33,7 @@
 | 首条独立源模型 | [蓝鳍鲹候选及验收边界](reports/bluefin-art.md)、[源资产重建](art/source/bluefin/README.md) |
 | 第一套完整钓组候选 | [纺车钓组与验证边界](reports/spinning-rig-art.md)、[源资产重建](art/source/spinning-rig/README.md) |
 | 第二处海域与共享观察 | [近海航道、切换与验收边界](docs/15-nearshore-channel.md)、[源资产重建](art/source/nearshore-channel/README.md) |
+| 第三处海域与鉴赏构图 | [陆坡制作约束](docs/24-continental-slope.md)、[源资产重建](art/source/continental-slope/README.md)、[双端证据](reports/continental-slope.md) |
 | 后续岛形、土层和近景接缝 | [地形与三轴材质](docs/17-nearshore-terrain.md)、[本轮验证与原图](reports/nearshore-terrain.md) |
 | 第一处独立海域候选 | [珊瑚海湾与验证边界](reports/coral-bay-art.md)、[海湾源资产重建](art/source/coral-bay/README.md) |
 | 物种资料和仅观察生物 | [学名、辨识与建模交接](docs/10-species-production.md) |

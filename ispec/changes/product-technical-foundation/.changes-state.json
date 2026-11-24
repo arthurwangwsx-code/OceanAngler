@@ -8892,6 +8892,94 @@
       "executable": "python3",
       "commandDigest": "30406e3488756a039a5b19378fc8bde22b6214709fdea6d92bb5cb4f13c45731",
       "receiptPath": "measurements/slope-public-checks-20261124b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "033bf018-2b18-463c-a430-0227d218c3bd",
+      "startedAt": "2026-11-24T11:01:11.563Z",
+      "executable": "python3",
+      "commandDigest": "0ca6f3f62fbba7ac269124ac37f907ca4643e9f33fe700445e6f04dc7fe677a8",
+      "receiptPath": "measurements/slope-simulator-build-20261124b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "f2a62ef5-4812-4599-a865-851a578a0b37",
+      "startedAt": "2026-11-24T11:03:50.289Z",
+      "executable": "python3",
+      "commandDigest": "0cb9c27d698cb60a4e42c2415b61d4031ff543d4a3b5579ce2983b7b161ecc4a",
+      "receiptPath": "measurements/slope-native-phone-20261124b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "6bd91f41-d337-4057-a9aa-48f20de4f715",
+      "startedAt": "2026-11-24T11:05:13.499Z",
+      "executable": "python3",
+      "commandDigest": "849453cdaf29c8a571dc0c7a160c0c87635778b28d8d9b73e16899836430b8af",
+      "receiptPath": "measurements/slope-native-tablet-20261124b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "0d1f4234-bcab-4631-89e3-86a03d541a9c",
+      "startedAt": "2026-11-24T11:06:14.718Z",
+      "executable": "python3",
+      "commandDigest": "8ad3200f4572bc622aa25d1ea3721e8c4b19fee9090a1d77421b922546fd1b60",
+      "receiptPath": "measurements/slope-native-independent-20261124b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "cb9255aa-366f-4db6-a64f-07ac18e7a759",
+      "startedAt": "2026-11-24T11:06:51.204Z",
+      "executable": "python3",
+      "commandDigest": "9d766f8f6d095ecd2f50aecb4ccc3cb88bcfe9d81ddd0649e87fe2a95600d3a4",
+      "receiptPath": "measurements/slope-retention-after-20261124b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "ac934033-8b39-45e2-b636-e2a228ab4841",
+      "startedAt": "2026-11-24T11:07:42.887Z",
+      "executable": "python3",
+      "commandDigest": "29a371e1224fc69a5f1818efae9259e76be896570c3e24b1d0a59fbd61223046",
+      "receiptPath": "measurements/slope-relaunch-20261124b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "58194f48-60bc-4249-8eb1-7eb7ce5a60cf",
+      "startedAt": "2026-11-24T11:08:31.617Z",
+      "executable": "python3",
+      "commandDigest": "35c9972ebbb35f68beedcd9cd1ca30ee27c56f88e846790656c260cb0e6c47ec",
+      "receiptPath": "measurements/slope-relaunch-check-20261124b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "lint",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "b95a889d-8c3e-4c14-a208-1dc44f70fe85",
+      "startedAt": "2026-11-24T11:12:53.477Z",
+      "executable": "python3",
+      "commandDigest": "b9dccbe83876f30d8a3fa2c9c6d41d291e2a7971baed42fe956e25048c5bcc49",
+      "receiptPath": "measurements/slope-public-final-20261124b.json"
     }
   ],
   "runMeasurements": [
@@ -21791,6 +21879,158 @@
       "receipt": {
         "path": "measurements/slope-public-checks-20261124b.json",
         "sha256": "16d56a021ca6b213fe5526bdd0982d928d6e695f2ea5fab3a822bf69eaa71ef8"
+      }
+    },
+    {
+      "id": "033bf018-2b18-463c-a430-0227d218c3bd",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "0ca6f3f62fbba7ac269124ac37f907ca4643e9f33fe700445e6f04dc7fe677a8",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T11:01:11.563Z",
+      "finishedAt": "2026-11-24T11:03:44.188Z",
+      "durationMs": 152580.604167,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/slope-simulator-build-20261124b.json",
+        "sha256": "c1084efdf8244f27d503a6600b7dc9b0c629f07c3a6e121749892c41b48849c6"
+      }
+    },
+    {
+      "id": "f2a62ef5-4812-4599-a865-851a578a0b37",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "0cb9c27d698cb60a4e42c2415b61d4031ff543d4a3b5579ce2983b7b161ecc4a",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-24T11:03:50.289Z",
+      "finishedAt": "2026-11-24T11:04:48.700Z",
+      "durationMs": 58379.073625000005,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/slope-native-phone-20261124b.json",
+        "sha256": "ab48c3f61d27dc968bf2b4ad80548ec601904e85fadc5d4cc4dd714ec544b987"
+      }
+    },
+    {
+      "id": "6bd91f41-d337-4057-a9aa-48f20de4f715",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "849453cdaf29c8a571dc0c7a160c0c87635778b28d8d9b73e16899836430b8af",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-24T11:05:13.499Z",
+      "finishedAt": "2026-11-24T11:05:51.548Z",
+      "durationMs": 38026.957417000005,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/slope-native-tablet-20261124b.json",
+        "sha256": "ed91e103c6cf6b33ee61454a459d19f143ff53fb0603a320c38a3b3a5f3c0e61"
+      }
+    },
+    {
+      "id": "0d1f4234-bcab-4631-89e3-86a03d541a9c",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "8ad3200f4572bc622aa25d1ea3721e8c4b19fee9090a1d77421b922546fd1b60",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-24T11:06:14.718Z",
+      "finishedAt": "2026-11-24T11:06:15.124Z",
+      "durationMs": 354.59512500000005,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/slope-native-independent-20261124b.json",
+        "sha256": "e96b3ba96c077ad78df01a13de8b36dcb52bc6d5bef67d6c88c7b6f742857c4e"
+      }
+    },
+    {
+      "id": "cb9255aa-366f-4db6-a64f-07ac18e7a759",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "9d766f8f6d095ecd2f50aecb4ccc3cb88bcfe9d81ddd0649e87fe2a95600d3a4",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-24T11:06:51.204Z",
+      "finishedAt": "2026-11-24T11:06:56.290Z",
+      "durationMs": 5021.496375000001,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/slope-retention-after-20261124b.json",
+        "sha256": "ac249d5e587db7180ed90836462ecfdfc2ec5f64820f0656b81d816aa0800e8d"
+      }
+    },
+    {
+      "id": "ac934033-8b39-45e2-b636-e2a228ab4841",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "29a371e1224fc69a5f1818efae9259e76be896570c3e24b1d0a59fbd61223046",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-24T11:07:42.887Z",
+      "finishedAt": "2026-11-24T11:07:50.626Z",
+      "durationMs": 7698.258875,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/slope-relaunch-20261124b.json",
+        "sha256": "871f8ebed96ee19dc0d72fc58ce9024789ccd428c000681a7ccb85c47208e093"
+      }
+    },
+    {
+      "id": "58194f48-60bc-4249-8eb1-7eb7ce5a60cf",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "35c9972ebbb35f68beedcd9cd1ca30ee27c56f88e846790656c260cb0e6c47ec",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-24T11:08:31.617Z",
+      "finishedAt": "2026-11-24T11:08:33.052Z",
+      "durationMs": 1389.795708,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/slope-relaunch-check-20261124b.json",
+        "sha256": "9cf53335c7010f8b17964650cedba3b2b6524097b0f5f8f7bc82d4b94f888b4c"
+      }
+    },
+    {
+      "id": "b95a889d-8c3e-4c14-a208-1dc44f70fe85",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "b9dccbe83876f30d8a3fa2c9c6d41d291e2a7971baed42fe956e25048c5bcc49",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-24T11:12:53.477Z",
+      "finishedAt": "2026-11-24T11:12:56.207Z",
+      "durationMs": 2673.622375,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/slope-public-final-20261124b.json",
+        "sha256": "845a64ce3518f377f7b87f4eebe1b11e4a759b946c1bcbae4de094020fba5414"
       }
     }
   ]

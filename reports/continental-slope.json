@@ -1,0 +1,1520 @@
+{
+  "requirements": [
+    "REQ-05",
+    "REQ-06",
+    "REQ-08"
+  ],
+  "implementation": "IN_PROGRESS",
+  "wholeProduct": "PARTIAL",
+  "source": {
+    "sourceCommit": "2bed34702dcd9a81dcc09c13d86225e31c514389",
+    "sourceDigest": "de605000ed2a2d017b2ffd0724e7785a91d85a6113910d99f22716d7561a2df0",
+    "projectSettingsSha256": "487dd5cc37a763cb9f23702f91a10b6680094d7b2165050d05327b1376c0d54d"
+  },
+  "sourceEngineering": {
+    "status": "PASS",
+    "label": "slopesource20261124d2",
+    "scope": "saved meshes, topology/UV/dependencies, actual corridor/hover/view ray samples",
+    "lodTriangles": {
+      "Terrain_LOD0": 13330,
+      "Terrain_LOD1": 6664,
+      "Terrain_LOD2": 2666,
+      "Scree_LOD0": 384,
+      "Scree_LOD1": 192,
+      "Scree_LOD2": 128,
+      "ROV_LOD0": 2784,
+      "ROV_LOD1": 1392,
+      "ROV_LOD2": 522,
+      "Boat_LOD0": 1508,
+      "Boat_LOD1": 754,
+      "Boat_LOD2": 290,
+      "Survey_LOD0": 792,
+      "Survey_LOD1": 404,
+      "Survey_LOD2": 240,
+      "Water_LOD0": 512
+    },
+    "artAcceptance": "NOT_ACCEPTED"
+  },
+  "tests": {
+    "initialEditor": {
+      "passed": 56,
+      "failed": 0,
+      "scope": "before final light-value tuning"
+    },
+    "finalFocusedEditor": {
+      "passed": 4,
+      "failed": 0
+    },
+    "initialFocusedPlayMode": {
+      "passed": 3,
+      "failed": 0
+    },
+    "finalFocusedPlayMode": {
+      "passed": 1,
+      "failed": 0
+    },
+    "compositionEditor": {
+      "passed": 57,
+      "failed": 0,
+      "scope": "all Editor tests after projection change; before final generic header string and native header assertion"
+    },
+    "compositionPlayMode": {
+      "passed": 3,
+      "failed": 0,
+      "scope": "focused three-class regression; not full PlayMode"
+    }
+  },
+  "editorGpu": {
+    "status": "PASS",
+    "scope": "isolated Editor GPU water fixture; no player UI/device acceptance",
+    "staticMatchCheck": "PASS",
+    "width": 1440,
+    "height": 900,
+    "reflectionPasses": 2,
+    "validatedMaterials": 47,
+    "initialChangedPixels": 0,
+    "repeatChangedPixels": 0,
+    "samples": 4,
+    "staticDraws": 3,
+    "reflectionVariance": 0.030134150758385658,
+    "waveDifference": 0.008796889334917068,
+    "graphics": "Metal",
+    "buildTarget": "iOS",
+    "colorSpace": "Gamma",
+    "released": true,
+    "representedEachDraw": true,
+    "exactStaticMatch": true,
+    "boatMaterialBlockControl": false,
+    "initialDifference": 0.0,
+    "repeatDifference": 0.0
+  },
+  "studio": {
+    "status": "PARTIAL",
+    "labels": [
+      "slopestudio20261124c",
+      "slopestudio20261124d"
+    ],
+    "scope": "C surface/underwater/boat, D corrected ROV camera; own saved source renders, not Player"
+  },
+  "native": {
+    "status": "PASS_FOCUSED_SIMULATOR_FLOW_ONLY",
+    "scope": "two21-frame flows,1 actual new release per genuine copy, three habitats and catalog-following protected observation; not full progression, OS touch or physical device",
+    "appDigest": "f37cbd4a86de1d8831583bc7ec3f5cfbc6e7b10d31bcf722905258979f6eaa9e",
+    "devices": [
+      {
+        "status": "PASS",
+        "label": "slope20261124phone2",
+        "scope": "native21-frame slope-focused EventSystem flow from genuine progress copy;1 new settled fish, three habitats, whale-shark observation; not full progression, OS touch, art or physical device",
+        "source": {
+          "sourceCommit": "2bed34702dcd9a81dcc09c13d86225e31c514389",
+          "sourceDigest": "de605000ed2a2d017b2ffd0724e7785a91d85a6113910d99f22716d7561a2df0",
+          "projectSettingsSha256": "487dd5cc37a763cb9f23702f91a10b6680094d7b2165050d05327b1376c0d54d"
+        },
+        "appDigest": "f37cbd4a86de1d8831583bc7ec3f5cfbc6e7b10d31bcf722905258979f6eaa9e",
+        "input": {
+          "sourceLabel": "content20261124phone1",
+          "sourceCommit": "0bea41d0df348c0256a33dfbd8701119ff2b1e63",
+          "sourceAppDigest": "a671481c855c163b0a508b275fdcb6d164b03a55ab7ae903df18154618f5e829",
+          "saveSha256": "e0732947026735bab64f2f84354b984788df2a4a7d759a8fbf752e83e14ef339",
+          "sourceCatches": 25,
+          "sourcePoints": 4455,
+          "method": "byte-identical copy of real native UI journey save into new isolated root; no generated records or points"
+        },
+        "originalBytesUnchanged": true,
+        "originalCatchRecordsUnchanged": true,
+        "otherFieldsAndSettingsUnchanged": true,
+        "catchesBefore": 25,
+        "catchesAfter": 26,
+        "pointsBefore": 4455,
+        "pointsAfter": 4622,
+        "newFishId": "halibut",
+        "maxHudRatio": 0.12034111469984055,
+        "views": [
+          {
+            "frame": "00-slope-surface",
+            "habitat": "slope",
+            "camera": {
+              "x": 8.0,
+              "y": 203.99998474121094,
+              "z": -6.999994277954102
+            },
+            "fog": {
+              "r": 0.47999998927116394,
+              "g": 0.6600000262260437,
+              "b": 0.7699999809265137,
+              "a": 1.0
+            },
+            "sun": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "sunIntensity": 1.2999999523162842,
+            "seaLevel": 200.0,
+            "above": true
+          },
+          {
+            "frame": "00-slope-boat",
+            "habitat": "slope",
+            "camera": {
+              "x": -8.0,
+              "y": 202.59999084472656,
+              "z": 5.000006675720215
+            },
+            "fog": {
+              "r": 0.47999998927116394,
+              "g": 0.6600000262260437,
+              "b": 0.7699999809265137,
+              "a": 1.0
+            },
+            "sun": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "sunIntensity": 1.2999999523162842,
+            "seaLevel": 200.0,
+            "above": true
+          },
+          {
+            "frame": "00-slope-underwater",
+            "habitat": "slope",
+            "camera": {
+              "x": -11.499999046325684,
+              "y": -2.0,
+              "z": 15.499999046325684
+            },
+            "fog": {
+              "r": 0.02500000037252903,
+              "g": 0.10000000149011612,
+              "b": 0.20000000298023224,
+              "a": 1.0
+            },
+            "sun": {
+              "r": 0.30000001192092896,
+              "g": 0.5,
+              "b": 0.800000011920929,
+              "a": 1.0
+            },
+            "sunIntensity": 0.16899998486042023,
+            "seaLevel": 200.0,
+            "above": false
+          },
+          {
+            "frame": "00-slope-alternate",
+            "habitat": "slope",
+            "camera": {
+              "x": 0.0,
+              "y": 1.2500001192092896,
+              "z": -6.499999523162842
+            },
+            "fog": {
+              "r": 0.02500000037252903,
+              "g": 0.10000000149011612,
+              "b": 0.20000000298023224,
+              "a": 1.0
+            },
+            "sun": {
+              "r": 0.30000001192092896,
+              "g": 0.5,
+              "b": 0.800000011920929,
+              "a": 1.0
+            },
+            "sunIntensity": 0.16899998486042023,
+            "seaLevel": 200.0,
+            "above": false
+          },
+          {
+            "frame": "04-channel-surface",
+            "habitat": "channel",
+            "camera": {
+              "x": 0.0,
+              "y": 6.399999618530273,
+              "z": -8.999998092651367
+            },
+            "fog": {
+              "r": 0.5099999904632568,
+              "g": 0.699999988079071,
+              "b": 0.7900000214576721,
+              "a": 1.0
+            },
+            "sun": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "sunIntensity": 1.2999999523162842,
+            "seaLevel": 4.5,
+            "above": true
+          },
+          {
+            "frame": "04-channel-boat",
+            "habitat": "channel",
+            "camera": {
+              "x": -0.699999988079071,
+              "y": 6.6999993324279785,
+              "z": 1.9999995231628418
+            },
+            "fog": {
+              "r": 0.5099999904632568,
+              "g": 0.699999988079071,
+              "b": 0.7900000214576721,
+              "a": 1.0
+            },
+            "sun": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "sunIntensity": 1.2999999523162842,
+            "seaLevel": 4.5,
+            "above": true
+          },
+          {
+            "frame": "04-channel-underwater",
+            "habitat": "channel",
+            "camera": {
+              "x": 2.0,
+              "y": -0.20000016689300537,
+              "z": 2.999999761581421
+            },
+            "fog": {
+              "r": 0.04500000178813934,
+              "g": 0.23999999463558197,
+              "b": 0.3499999940395355,
+              "a": 1.0
+            },
+            "sun": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "sunIntensity": 1.2999999523162842,
+            "seaLevel": 4.5,
+            "above": false
+          },
+          {
+            "frame": "04-channel-alternate",
+            "habitat": "channel",
+            "camera": {
+              "x": 0.0,
+              "y": 1.2500001192092896,
+              "z": -6.499999523162842
+            },
+            "fog": {
+              "r": 0.04500000178813934,
+              "g": 0.23999999463558197,
+              "b": 0.3499999940395355,
+              "a": 1.0
+            },
+            "sun": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "sunIntensity": 1.2999999523162842,
+            "seaLevel": 4.5,
+            "above": false
+          },
+          {
+            "frame": "08-bay-surface",
+            "habitat": "bay",
+            "camera": {
+              "x": 1.0,
+              "y": 6.09999942779541,
+              "z": -6.999999523162842
+            },
+            "fog": {
+              "r": 0.5299999713897705,
+              "g": 0.7300000190734863,
+              "b": 0.75,
+              "a": 1.0
+            },
+            "sun": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "sunIntensity": 1.2999999523162842,
+            "seaLevel": 4.5,
+            "above": true
+          },
+          {
+            "frame": "08-bay-boat",
+            "habitat": "bay",
+            "camera": {
+              "x": -0.30000001192092896,
+              "y": 6.699999809265137,
+              "z": 1.0
+            },
+            "fog": {
+              "r": 0.5299999713897705,
+              "g": 0.7300000190734863,
+              "b": 0.75,
+              "a": 1.0
+            },
+            "sun": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "sunIntensity": 1.2999999523162842,
+            "seaLevel": 4.5,
+            "above": true
+          },
+          {
+            "frame": "08-bay-underwater",
+            "habitat": "bay",
+            "camera": {
+              "x": 3.0,
+              "y": 1.100000023841858,
+              "z": 4.0
+            },
+            "fog": {
+              "r": 0.07500000298023224,
+              "g": 0.41999998688697815,
+              "b": 0.49000000953674316,
+              "a": 1.0
+            },
+            "sun": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "sunIntensity": 1.2999999523162842,
+            "seaLevel": 4.5,
+            "above": false
+          },
+          {
+            "frame": "08-bay-alternate",
+            "habitat": "bay",
+            "camera": {
+              "x": 0.0,
+              "y": 1.2500001192092896,
+              "z": -6.499999523162842
+            },
+            "fog": {
+              "r": 0.07500000298023224,
+              "g": 0.41999998688697815,
+              "b": 0.49000000953674316,
+              "a": 1.0
+            },
+            "sun": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "sunIntensity": 1.2999999523162842,
+            "seaLevel": 4.5,
+            "above": false
+          },
+          {
+            "frame": "12-slope-surface",
+            "habitat": "slope",
+            "camera": {
+              "x": 8.0,
+              "y": 203.99998474121094,
+              "z": -6.999994277954102
+            },
+            "fog": {
+              "r": 0.47999998927116394,
+              "g": 0.6600000262260437,
+              "b": 0.7699999809265137,
+              "a": 1.0
+            },
+            "sun": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "sunIntensity": 1.2999999523162842,
+            "seaLevel": 200.0,
+            "above": true
+          },
+          {
+            "frame": "12-slope-boat",
+            "habitat": "slope",
+            "camera": {
+              "x": -8.0,
+              "y": 202.59999084472656,
+              "z": 5.000006675720215
+            },
+            "fog": {
+              "r": 0.47999998927116394,
+              "g": 0.6600000262260437,
+              "b": 0.7699999809265137,
+              "a": 1.0
+            },
+            "sun": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "sunIntensity": 1.2999999523162842,
+            "seaLevel": 200.0,
+            "above": true
+          },
+          {
+            "frame": "12-slope-underwater",
+            "habitat": "slope",
+            "camera": {
+              "x": -11.499999046325684,
+              "y": -2.0,
+              "z": 15.499999046325684
+            },
+            "fog": {
+              "r": 0.02500000037252903,
+              "g": 0.10000000149011612,
+              "b": 0.20000000298023224,
+              "a": 1.0
+            },
+            "sun": {
+              "r": 0.30000001192092896,
+              "g": 0.5,
+              "b": 0.800000011920929,
+              "a": 1.0
+            },
+            "sunIntensity": 0.16899998486042023,
+            "seaLevel": 200.0,
+            "above": false
+          },
+          {
+            "frame": "12-slope-alternate",
+            "habitat": "slope",
+            "camera": {
+              "x": 0.0,
+              "y": 1.2500001192092896,
+              "z": -6.499999523162842
+            },
+            "fog": {
+              "r": 0.02500000037252903,
+              "g": 0.10000000149011612,
+              "b": 0.20000000298023224,
+              "a": 1.0
+            },
+            "sun": {
+              "r": 0.30000001192092896,
+              "g": 0.5,
+              "b": 0.800000011920929,
+              "a": 1.0
+            },
+            "sunIntensity": 0.16899998486042023,
+            "seaLevel": 200.0,
+            "above": false
+          }
+        ],
+        "samples": [
+          {
+            "phase": "Ready",
+            "leftHanded": false,
+            "centralClear": true,
+            "buttons": 2,
+            "occupiedRatio": 0.049358975142240524
+          },
+          {
+            "phase": "Bite",
+            "leftHanded": false,
+            "centralClear": true,
+            "buttons": 2,
+            "occupiedRatio": 0.0890224352478981
+          },
+          {
+            "phase": "Fighting",
+            "leftHanded": false,
+            "centralClear": true,
+            "buttons": 2,
+            "occupiedRatio": 0.12034111469984055
+          }
+        ],
+        "capturedFrames": 21,
+        "checks": [
+          "slope-explicit-isolated-save-root",
+          "slope-valid-unlocked-genuine-progress-copy",
+          "visible-hit-target:海域与装备",
+          "visible-hit-target:珊瑚海湾",
+          "visible-hit-target:陆坡海域",
+          "slope-authored-habitat-slope",
+          "slope-light-roundtrip-slope",
+          "visible-hit-target:看看海域",
+          "slope-surface-original-sun-slope",
+          "slope-generic-preview-title",
+          "rendered-inspection-title:00-slope-surface",
+          "visible-hit-target:换个角度",
+          "rendered-inspection-title:00-slope-boat",
+          "visible-hit-target:潜入水下",
+          "slope-rov-in-front-of-preview-camera",
+          "slope-rov-bounds-clear-of-preview-panel-and-safe-edge",
+          "rendered-inspection-title:00-slope-underwater",
+          "rendered-inspection-title:00-slope-alternate",
+          "visible-hit-target:返回钓鱼",
+          "visible-hit-target:近海航道",
+          "slope-authored-habitat-channel",
+          "slope-light-roundtrip-channel",
+          "slope-scene-sun-color-restored-channel",
+          "visible-hit-target:回到水面",
+          "slope-surface-original-sun-channel",
+          "rendered-inspection-title:04-channel-surface",
+          "rendered-inspection-title:04-channel-boat",
+          "rendered-inspection-title:04-channel-underwater",
+          "rendered-inspection-title:04-channel-alternate",
+          "slope-authored-habitat-bay",
+          "slope-light-roundtrip-bay",
+          "slope-scene-sun-color-restored-bay",
+          "visible-hit-target:看看海湾",
+          "slope-surface-original-sun-bay",
+          "rendered-inspection-title:08-bay-surface",
+          "rendered-inspection-title:08-bay-boat",
+          "rendered-inspection-title:08-bay-underwater",
+          "rendered-inspection-title:08-bay-alternate",
+          "rendered-inspection-title:12-slope-surface",
+          "rendered-inspection-title:12-slope-boat",
+          "rendered-inspection-title:12-slope-underwater",
+          "rendered-inspection-title:12-slope-alternate",
+          "visible-hit-target:开始钓鱼",
+          "slope-play-restores-centered-projection",
+          "immersive-active-play",
+          "immersive-only-pause-and-current-action",
+          "immersive-no-global-chrome-or-panels",
+          "immersive-hud-under-15-percent-and-central-view-clear-Ready",
+          "immersive-meters-only-while-fighting",
+          "visible-hit-target:按住蓄力 · 松手抛竿",
+          "slope-normal-bite",
+          "immersive-hud-under-15-percent-and-central-view-clear-Bite",
+          "visible-hit-target:提竿",
+          "immersive-hud-under-15-percent-and-central-view-clear-Fighting",
+          "visible-hit-target:按住收线",
+          "slope-real-catch-landed",
+          "visible-hit-target:记录并放流",
+          "slope-one-new-native-catch",
+          "visible-hit-target:暂停",
+          "visible-hit-target:图鉴",
+          "visible-hit-target:保护观察  3 / 3",
+          "visible-hit-target:观察鲸鲨",
+          "visible-hit-target:安静观察",
+          "slope-whale-shark-visit-played",
+          "visible-hit-target:出海",
+          "slope-existing-record-prefix-and-restored-habitat-on-disk",
+          "slope-review-preserves-other-progress-and-settings"
+        ],
+        "renderProbe": {
+          "graphics": "Metal",
+          "quality": "Medium",
+          "hdrAfter": true,
+          "halfHdrSamples": 4,
+          "desiredSamples": 4
+        },
+        "afterCopySha256": "e3913747a21f851fbee465ecb7d406d6bbdb7c78702e1f54f6e7d23dc64d0bec"
+      },
+      {
+        "status": "PASS",
+        "label": "slope20261124pad2",
+        "scope": "native21-frame slope-focused EventSystem flow from genuine progress copy;1 new settled fish, three habitats, whale-shark observation; not full progression, OS touch, art or physical device",
+        "source": {
+          "sourceCommit": "2bed34702dcd9a81dcc09c13d86225e31c514389",
+          "sourceDigest": "de605000ed2a2d017b2ffd0724e7785a91d85a6113910d99f22716d7561a2df0",
+          "projectSettingsSha256": "487dd5cc37a763cb9f23702f91a10b6680094d7b2165050d05327b1376c0d54d"
+        },
+        "appDigest": "f37cbd4a86de1d8831583bc7ec3f5cfbc6e7b10d31bcf722905258979f6eaa9e",
+        "input": {
+          "sourceLabel": "content20261124pad1",
+          "sourceCommit": "0bea41d0df348c0256a33dfbd8701119ff2b1e63",
+          "sourceAppDigest": "a671481c855c163b0a508b275fdcb6d164b03a55ab7ae903df18154618f5e829",
+          "saveSha256": "4478f13dfe86006428506b1200d0557d845040120946d158f493bb5fc9b6325f",
+          "sourceCatches": 20,
+          "sourcePoints": 3703,
+          "method": "byte-identical copy of real native UI journey save into new isolated root; no generated records or points"
+        },
+        "originalBytesUnchanged": true,
+        "originalCatchRecordsUnchanged": true,
+        "otherFieldsAndSettingsUnchanged": true,
+        "catchesBefore": 20,
+        "catchesAfter": 21,
+        "pointsBefore": 3703,
+        "pointsAfter": 3817,
+        "newFishId": "cod",
+        "maxHudRatio": 0.04454661160707474,
+        "views": [
+          {
+            "frame": "00-slope-surface",
+            "habitat": "slope",
+            "camera": {
+              "x": 8.0,
+              "y": 203.99998474121094,
+              "z": -6.999994277954102
+            },
+            "fog": {
+              "r": 0.47999998927116394,
+              "g": 0.6600000262260437,
+              "b": 0.7699999809265137,
+              "a": 1.0
+            },
+            "sun": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "sunIntensity": 1.2999999523162842,
+            "seaLevel": 200.0,
+            "above": true
+          },
+          {
+            "frame": "00-slope-boat",
+            "habitat": "slope",
+            "camera": {
+              "x": -8.0,
+              "y": 202.59999084472656,
+              "z": 5.000006675720215
+            },
+            "fog": {
+              "r": 0.47999998927116394,
+              "g": 0.6600000262260437,
+              "b": 0.7699999809265137,
+              "a": 1.0
+            },
+            "sun": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "sunIntensity": 1.2999999523162842,
+            "seaLevel": 200.0,
+            "above": true
+          },
+          {
+            "frame": "00-slope-underwater",
+            "habitat": "slope",
+            "camera": {
+              "x": -11.499999046325684,
+              "y": -2.0,
+              "z": 15.499999046325684
+            },
+            "fog": {
+              "r": 0.02500000037252903,
+              "g": 0.10000000149011612,
+              "b": 0.20000000298023224,
+              "a": 1.0
+            },
+            "sun": {
+              "r": 0.30000001192092896,
+              "g": 0.5,
+              "b": 0.800000011920929,
+              "a": 1.0
+            },
+            "sunIntensity": 0.16899998486042023,
+            "seaLevel": 200.0,
+            "above": false
+          },
+          {
+            "frame": "00-slope-alternate",
+            "habitat": "slope",
+            "camera": {
+              "x": 0.0,
+              "y": 1.2500001192092896,
+              "z": -6.499999523162842
+            },
+            "fog": {
+              "r": 0.02500000037252903,
+              "g": 0.10000000149011612,
+              "b": 0.20000000298023224,
+              "a": 1.0
+            },
+            "sun": {
+              "r": 0.30000001192092896,
+              "g": 0.5,
+              "b": 0.800000011920929,
+              "a": 1.0
+            },
+            "sunIntensity": 0.16899998486042023,
+            "seaLevel": 200.0,
+            "above": false
+          },
+          {
+            "frame": "04-channel-surface",
+            "habitat": "channel",
+            "camera": {
+              "x": 0.0,
+              "y": 6.399999618530273,
+              "z": -8.999998092651367
+            },
+            "fog": {
+              "r": 0.5099999904632568,
+              "g": 0.699999988079071,
+              "b": 0.7900000214576721,
+              "a": 1.0
+            },
+            "sun": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "sunIntensity": 1.2999999523162842,
+            "seaLevel": 4.5,
+            "above": true
+          },
+          {
+            "frame": "04-channel-boat",
+            "habitat": "channel",
+            "camera": {
+              "x": -0.699999988079071,
+              "y": 6.6999993324279785,
+              "z": 1.9999995231628418
+            },
+            "fog": {
+              "r": 0.5099999904632568,
+              "g": 0.699999988079071,
+              "b": 0.7900000214576721,
+              "a": 1.0
+            },
+            "sun": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "sunIntensity": 1.2999999523162842,
+            "seaLevel": 4.5,
+            "above": true
+          },
+          {
+            "frame": "04-channel-underwater",
+            "habitat": "channel",
+            "camera": {
+              "x": 2.0,
+              "y": -0.20000016689300537,
+              "z": 2.999999761581421
+            },
+            "fog": {
+              "r": 0.04500000178813934,
+              "g": 0.23999999463558197,
+              "b": 0.3499999940395355,
+              "a": 1.0
+            },
+            "sun": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "sunIntensity": 1.2999999523162842,
+            "seaLevel": 4.5,
+            "above": false
+          },
+          {
+            "frame": "04-channel-alternate",
+            "habitat": "channel",
+            "camera": {
+              "x": 0.0,
+              "y": 1.2500001192092896,
+              "z": -6.499999523162842
+            },
+            "fog": {
+              "r": 0.04500000178813934,
+              "g": 0.23999999463558197,
+              "b": 0.3499999940395355,
+              "a": 1.0
+            },
+            "sun": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "sunIntensity": 1.2999999523162842,
+            "seaLevel": 4.5,
+            "above": false
+          },
+          {
+            "frame": "08-bay-surface",
+            "habitat": "bay",
+            "camera": {
+              "x": 1.0,
+              "y": 6.09999942779541,
+              "z": -6.999999523162842
+            },
+            "fog": {
+              "r": 0.5299999713897705,
+              "g": 0.7300000190734863,
+              "b": 0.75,
+              "a": 1.0
+            },
+            "sun": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "sunIntensity": 1.2999999523162842,
+            "seaLevel": 4.5,
+            "above": true
+          },
+          {
+            "frame": "08-bay-boat",
+            "habitat": "bay",
+            "camera": {
+              "x": -0.30000001192092896,
+              "y": 6.699999809265137,
+              "z": 1.0
+            },
+            "fog": {
+              "r": 0.5299999713897705,
+              "g": 0.7300000190734863,
+              "b": 0.75,
+              "a": 1.0
+            },
+            "sun": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "sunIntensity": 1.2999999523162842,
+            "seaLevel": 4.5,
+            "above": true
+          },
+          {
+            "frame": "08-bay-underwater",
+            "habitat": "bay",
+            "camera": {
+              "x": 3.0,
+              "y": 1.100000023841858,
+              "z": 4.0
+            },
+            "fog": {
+              "r": 0.07500000298023224,
+              "g": 0.41999998688697815,
+              "b": 0.49000000953674316,
+              "a": 1.0
+            },
+            "sun": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "sunIntensity": 1.2999999523162842,
+            "seaLevel": 4.5,
+            "above": false
+          },
+          {
+            "frame": "08-bay-alternate",
+            "habitat": "bay",
+            "camera": {
+              "x": 0.0,
+              "y": 1.2500001192092896,
+              "z": -6.499999523162842
+            },
+            "fog": {
+              "r": 0.07500000298023224,
+              "g": 0.41999998688697815,
+              "b": 0.49000000953674316,
+              "a": 1.0
+            },
+            "sun": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "sunIntensity": 1.2999999523162842,
+            "seaLevel": 4.5,
+            "above": false
+          },
+          {
+            "frame": "12-slope-surface",
+            "habitat": "slope",
+            "camera": {
+              "x": 8.0,
+              "y": 203.99998474121094,
+              "z": -6.999994277954102
+            },
+            "fog": {
+              "r": 0.47999998927116394,
+              "g": 0.6600000262260437,
+              "b": 0.7699999809265137,
+              "a": 1.0
+            },
+            "sun": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "sunIntensity": 1.2999999523162842,
+            "seaLevel": 200.0,
+            "above": true
+          },
+          {
+            "frame": "12-slope-boat",
+            "habitat": "slope",
+            "camera": {
+              "x": -8.0,
+              "y": 202.59999084472656,
+              "z": 5.000006675720215
+            },
+            "fog": {
+              "r": 0.47999998927116394,
+              "g": 0.6600000262260437,
+              "b": 0.7699999809265137,
+              "a": 1.0
+            },
+            "sun": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "sunIntensity": 1.2999999523162842,
+            "seaLevel": 200.0,
+            "above": true
+          },
+          {
+            "frame": "12-slope-underwater",
+            "habitat": "slope",
+            "camera": {
+              "x": -11.499999046325684,
+              "y": -2.0,
+              "z": 15.499999046325684
+            },
+            "fog": {
+              "r": 0.02500000037252903,
+              "g": 0.10000000149011612,
+              "b": 0.20000000298023224,
+              "a": 1.0
+            },
+            "sun": {
+              "r": 0.30000001192092896,
+              "g": 0.5,
+              "b": 0.800000011920929,
+              "a": 1.0
+            },
+            "sunIntensity": 0.16899998486042023,
+            "seaLevel": 200.0,
+            "above": false
+          },
+          {
+            "frame": "12-slope-alternate",
+            "habitat": "slope",
+            "camera": {
+              "x": 0.0,
+              "y": 1.2500001192092896,
+              "z": -6.499999523162842
+            },
+            "fog": {
+              "r": 0.02500000037252903,
+              "g": 0.10000000149011612,
+              "b": 0.20000000298023224,
+              "a": 1.0
+            },
+            "sun": {
+              "r": 0.30000001192092896,
+              "g": 0.5,
+              "b": 0.800000011920929,
+              "a": 1.0
+            },
+            "sunIntensity": 0.16899998486042023,
+            "seaLevel": 200.0,
+            "above": false
+          }
+        ],
+        "samples": [
+          {
+            "phase": "Ready",
+            "leftHanded": false,
+            "centralClear": true,
+            "buttons": 2,
+            "occupiedRatio": 0.0182711873203516
+          },
+          {
+            "phase": "Bite",
+            "leftHanded": false,
+            "centralClear": true,
+            "buttons": 2,
+            "occupiedRatio": 0.03295338898897171
+          },
+          {
+            "phase": "Fighting",
+            "leftHanded": false,
+            "centralClear": true,
+            "buttons": 2,
+            "occupiedRatio": 0.04454661160707474
+          }
+        ],
+        "capturedFrames": 21,
+        "checks": [
+          "slope-explicit-isolated-save-root",
+          "slope-valid-unlocked-genuine-progress-copy",
+          "visible-hit-target:海域与装备",
+          "visible-hit-target:珊瑚海湾",
+          "visible-hit-target:陆坡海域",
+          "slope-authored-habitat-slope",
+          "slope-light-roundtrip-slope",
+          "visible-hit-target:看看海域",
+          "slope-surface-original-sun-slope",
+          "slope-generic-preview-title",
+          "rendered-inspection-title:00-slope-surface",
+          "visible-hit-target:换个角度",
+          "rendered-inspection-title:00-slope-boat",
+          "visible-hit-target:潜入水下",
+          "slope-rov-in-front-of-preview-camera",
+          "slope-rov-bounds-clear-of-preview-panel-and-safe-edge",
+          "rendered-inspection-title:00-slope-underwater",
+          "rendered-inspection-title:00-slope-alternate",
+          "visible-hit-target:返回钓鱼",
+          "visible-hit-target:近海航道",
+          "slope-authored-habitat-channel",
+          "slope-light-roundtrip-channel",
+          "slope-scene-sun-color-restored-channel",
+          "visible-hit-target:回到水面",
+          "slope-surface-original-sun-channel",
+          "rendered-inspection-title:04-channel-surface",
+          "rendered-inspection-title:04-channel-boat",
+          "rendered-inspection-title:04-channel-underwater",
+          "rendered-inspection-title:04-channel-alternate",
+          "slope-authored-habitat-bay",
+          "slope-light-roundtrip-bay",
+          "slope-scene-sun-color-restored-bay",
+          "visible-hit-target:看看海湾",
+          "slope-surface-original-sun-bay",
+          "rendered-inspection-title:08-bay-surface",
+          "rendered-inspection-title:08-bay-boat",
+          "rendered-inspection-title:08-bay-underwater",
+          "rendered-inspection-title:08-bay-alternate",
+          "rendered-inspection-title:12-slope-surface",
+          "rendered-inspection-title:12-slope-boat",
+          "rendered-inspection-title:12-slope-underwater",
+          "rendered-inspection-title:12-slope-alternate",
+          "visible-hit-target:开始钓鱼",
+          "slope-play-restores-centered-projection",
+          "immersive-active-play",
+          "immersive-only-pause-and-current-action",
+          "immersive-no-global-chrome-or-panels",
+          "immersive-hud-under-15-percent-and-central-view-clear-Ready",
+          "immersive-meters-only-while-fighting",
+          "visible-hit-target:按住蓄力 · 松手抛竿",
+          "slope-normal-bite",
+          "immersive-hud-under-15-percent-and-central-view-clear-Bite",
+          "visible-hit-target:提竿",
+          "immersive-hud-under-15-percent-and-central-view-clear-Fighting",
+          "visible-hit-target:按住收线",
+          "slope-real-catch-landed",
+          "visible-hit-target:记录并放流",
+          "slope-one-new-native-catch",
+          "visible-hit-target:暂停",
+          "visible-hit-target:图鉴",
+          "visible-hit-target:保护观察  3 / 3",
+          "visible-hit-target:观察鲸鲨",
+          "visible-hit-target:安静观察",
+          "slope-whale-shark-visit-played",
+          "visible-hit-target:出海",
+          "slope-existing-record-prefix-and-restored-habitat-on-disk",
+          "slope-review-preserves-other-progress-and-settings"
+        ],
+        "renderProbe": {
+          "graphics": "Metal",
+          "quality": "Medium",
+          "hdrAfter": true,
+          "halfHdrSamples": 4,
+          "desiredSamples": 4
+        },
+        "afterCopySha256": "4c29e2c9aaa20de210b8d0a2533bea32fdf684a59c21cc0fd44d79b25bfb4ff9"
+      }
+    ],
+    "retention": {
+      "status": "PASS",
+      "mainFiles": 9,
+      "method": "current own app mapping and MCM ownership; strict before/after bytes, no restore or replay",
+      "files": [
+        {
+          "device": "phone",
+          "label": "journeyphone20b",
+          "sha256": "dc70f508b5864e6cdc6023b4dc072a82f66ff597514a7a438f2a7e077544d249",
+          "bytes": 5340,
+          "byteIdentical": true
+        },
+        {
+          "device": "phone",
+          "label": "irismanual1",
+          "sha256": "fa0f36bbd8cd270015f5d27e99f32111bdf3b42c4f6eb5b79203abfc64c31520",
+          "bytes": 680,
+          "byteIdentical": true
+        },
+        {
+          "device": "phone",
+          "label": "content20261124phone1",
+          "sha256": "e0732947026735bab64f2f84354b984788df2a4a7d759a8fbf752e83e14ef339",
+          "bytes": 6554,
+          "byteIdentical": true
+        },
+        {
+          "device": "tablet",
+          "label": "journeypad20b",
+          "sha256": "48a974861099ef885791c545c4691f14d69642a733a486144ea80333671d7e3e",
+          "bytes": 5342,
+          "byteIdentical": true
+        },
+        {
+          "device": "tablet",
+          "label": "content20261124pad1",
+          "sha256": "4478f13dfe86006428506b1200d0557d845040120946d158f493bb5fc9b6325f",
+          "bytes": 5333,
+          "byteIdentical": true
+        },
+        {
+          "device": "phone",
+          "label": "immersive20261124phone2",
+          "sha256": "534d51254818bbeb14ed3c9ba9907ad44a1f2b0f5257ef663f334401a64056ed",
+          "bytes": 6797,
+          "byteIdentical": true
+        },
+        {
+          "device": "tablet",
+          "label": "immersive20261124pad2",
+          "sha256": "9582c3b38e8dba9b7218fe2899ad007be00d3aec661ea4f4f80724d700b93497",
+          "bytes": 5578,
+          "byteIdentical": true
+        },
+        {
+          "device": "phone",
+          "label": "slope20261124phone1",
+          "sha256": "4512a416171ee835ab57627b4e5d4e24a909f70dae791471d155e6bd6547099f",
+          "bytes": 6791,
+          "byteIdentical": true
+        },
+        {
+          "device": "tablet",
+          "label": "slope20261124pad1",
+          "sha256": "4783d991a0b008c1a3e6f20b3b863eb63b5ed4b69ed96a25be9d0ae57c33450e",
+          "bytes": 5570,
+          "byteIdentical": true
+        }
+      ]
+    },
+    "visualReview": {
+      "status": "PASS_FOR_COMPOSITION_AND_UI_ONLY",
+      "finalNativeFramesViaContacts": 42,
+      "finalFullSizePlayAndRovFrames": 4,
+      "art": "PARTIAL"
+    },
+    "relaunch": {
+      "status": "FILE_AND_CAPTURE_PASS_REQUIRES_VISUAL_REVIEW",
+      "catches": 26,
+      "points": 4622,
+      "saveBytesUnchanged": true,
+      "saveSha256": "e3913747a21f851fbee465ecb7d406d6bbdb7c78702e1f54f6e7d23dc64d0bec",
+      "frameSha256": "e047cabc97906d57d9988fe9402122db9c7f21275a5f59e6ef32a6e205cafcc5",
+      "qaArguments": [
+        "--ocean-save-root",
+        "--ocean-simulator-probe"
+      ],
+      "automaticFishingFlags": false,
+      "visualReview": "PASS_MENU_SHOWS_4622",
+      "scope": "new process with isolated save and render diagnostic only, no auto-fishing flags; not cold-start performance"
+    }
+  },
+  "measurementIntegrity": {
+    "status": "PASS_NEW_RECEIPT_INTEGRITY_ONLY",
+    "baselineMeasurements": 813,
+    "baselineStarts": 809,
+    "newMeasurements": 45,
+    "totalMeasurements": 858,
+    "totalStarts": 854,
+    "baselineMeasurementObjectsUnchanged": true,
+    "baselineStartsUnchanged": true,
+    "newReceiptsVerified": true,
+    "newStageAndAttemptVerified": true,
+    "overlaps": [
+      {
+        "first": "ee5718be-7431-4229-a03b-961c16dbfc44",
+        "second": "6d16027e-7b9f-45aa-ab5d-3d17f58d1113",
+        "seconds": 3.684
+      }
+    ],
+    "excludedEvidence": "overlapped source D rejected; serial source D2 is final source validation",
+    "wholeAudit": "INCOMPLETE",
+    "formalComplete": false,
+    "formalIssues": 818,
+    "sourceDigestMatchesFrozenNativeApp": true,
+    "masterUnchanged": true,
+    "results": [
+      {
+        "id": "2151c783-29ce-4589-9ca6-3e249033d6d9",
+        "receipt": "measurements/slope-author-20261124a.json",
+        "exitCode": 0
+      },
+      {
+        "id": "6a3c408c-e28e-4913-824c-dc8817ab2b0d",
+        "receipt": "measurements/slope-source-20261124a.json",
+        "exitCode": 1
+      },
+      {
+        "id": "3b071b5d-0bfd-4b37-a528-5b8aa8a05e66",
+        "receipt": "measurements/slope-source-detail-20261124a.json",
+        "exitCode": 1
+      },
+      {
+        "id": "312a2e1d-b446-4c7e-bac2-e987ed21d873",
+        "receipt": "measurements/slope-author-20261124b.json",
+        "exitCode": 0
+      },
+      {
+        "id": "23741e6a-69bd-4588-8b18-7fdaead0bba9",
+        "receipt": "measurements/slope-source-20261124b.json",
+        "exitCode": 0
+      },
+      {
+        "id": "28075f47-1304-4913-9543-504629992e52",
+        "receipt": "measurements/slope-studio-20261124b.json",
+        "exitCode": 0
+      },
+      {
+        "id": "d1b53bef-3485-4598-b7ab-2766fa207101",
+        "receipt": "measurements/slope-author-20261124c.json",
+        "exitCode": 0
+      },
+      {
+        "id": "56ec866f-2dde-46f0-bcaa-fbe4773956f9",
+        "receipt": "measurements/slope-studio-20261124c.json",
+        "exitCode": 0
+      },
+      {
+        "id": "1f2803ab-c221-43ef-8fc8-4308dc9efa29",
+        "receipt": "measurements/slope-camera-red-20261124c.json",
+        "exitCode": 1
+      },
+      {
+        "id": "ee5718be-7431-4229-a03b-961c16dbfc44",
+        "receipt": "measurements/slope-author-20261124d.json",
+        "exitCode": 0
+      },
+      {
+        "id": "6d16027e-7b9f-45aa-ab5d-3d17f58d1113",
+        "receipt": "measurements/slope-source-20261124d.json",
+        "exitCode": 1
+      },
+      {
+        "id": "0203f974-0c2b-4609-ac4d-f2afd96424ba",
+        "receipt": "measurements/slope-source-20261124d2.json",
+        "exitCode": 0
+      },
+      {
+        "id": "a92a8377-4cf7-4141-9858-597b02c7ea06",
+        "receipt": "measurements/slope-studio-20261124d.json",
+        "exitCode": 0
+      },
+      {
+        "id": "acad2694-2b79-43b7-9c36-052a3e03cc59",
+        "receipt": "measurements/slope-import-20261124d.json",
+        "exitCode": 0
+      },
+      {
+        "id": "a11bf8cd-e3ae-4819-8fc8-a8f6b3879823",
+        "receipt": "measurements/slope-editor-20261124d.json",
+        "exitCode": 2
+      },
+      {
+        "id": "3ce73cf1-8e49-4da1-9ff5-527d8bf6af95",
+        "receipt": "measurements/slope-editor-20261124e.json",
+        "exitCode": 0
+      },
+      {
+        "id": "6eecb06c-d3e0-4227-836b-596db7f16dc3",
+        "receipt": "measurements/slope-font-20261124a.json",
+        "exitCode": 0
+      },
+      {
+        "id": "764b3ec6-f664-42b8-8351-3587e6a8d8a4",
+        "receipt": "measurements/slope-all-editor-20261124a.json",
+        "exitCode": 0
+      },
+      {
+        "id": "29c9bbad-8f67-4a9e-8981-892f11177542",
+        "receipt": "measurements/slope-play-20261124a.json",
+        "exitCode": 0
+      },
+      {
+        "id": "8e776851-bc1f-4dac-8e42-d4c2b9e4c9b0",
+        "receipt": "measurements/slope-gpu-20261124a.json",
+        "exitCode": 0
+      },
+      {
+        "id": "fc9f6d00-9ec0-4974-ae86-7ed242fa7fe6",
+        "receipt": "measurements/slope-light-import-20261124b.json",
+        "exitCode": 0
+      },
+      {
+        "id": "46917941-26e4-43a9-9fa0-3eba491a300c",
+        "receipt": "measurements/slope-gpu-20261124b.json",
+        "exitCode": 0
+      },
+      {
+        "id": "7e50e274-03df-4f28-94be-2a720b2c600b",
+        "receipt": "measurements/slope-light-editor-20261124b.json",
+        "exitCode": 0
+      },
+      {
+        "id": "81bd35b1-649e-4310-988b-0e588bc35a5c",
+        "receipt": "measurements/slope-light-play-20261124b.json",
+        "exitCode": 0
+      },
+      {
+        "id": "317d1ec4-642b-4d7e-91b5-db06a4777c19",
+        "receipt": "measurements/slope-font-verify-20261124a.json",
+        "exitCode": 0
+      },
+      {
+        "id": "19e6f939-86c4-4694-a47d-ca4bd28c1f60",
+        "receipt": "measurements/slope-public-checks-20261124a.json",
+        "exitCode": 0
+      },
+      {
+        "id": "c197d751-0b82-4fce-ae60-6d48ab92b5d8",
+        "receipt": "measurements/slope-retention-before-20261124a.json",
+        "exitCode": 0
+      },
+      {
+        "id": "a04b7f6e-4e72-4d77-ad5a-e5359127ef03",
+        "receipt": "measurements/slope-simulator-build-20261124a.json",
+        "exitCode": 0
+      },
+      {
+        "id": "b8cdf56a-e2d1-4f97-9731-d56a6e2ad43f",
+        "receipt": "measurements/slope-native-phone-20261124a.json",
+        "exitCode": 0
+      },
+      {
+        "id": "3e471fb1-c2fd-4cf6-8d0e-0d2c8d24c534",
+        "receipt": "measurements/slope-native-tablet-20261124a.json",
+        "exitCode": 0
+      },
+      {
+        "id": "ba4b6bd2-fa02-47fc-9dec-f0a9f5e15260",
+        "receipt": "measurements/slope-composition-editor-20261124a.json",
+        "exitCode": 0
+      },
+      {
+        "id": "7e2f0dce-aea6-4070-9836-a4d60dddc7f3",
+        "receipt": "measurements/slope-native-independent-20261124a.json",
+        "exitCode": 0
+      },
+      {
+        "id": "a0594515-4b9e-4536-9ddf-354d376e9f2d",
+        "receipt": "measurements/slope-composition-all-editor-20261124b.json",
+        "exitCode": 0
+      },
+      {
+        "id": "6692a78b-cf24-4485-b85c-a3a93b5cff4d",
+        "receipt": "measurements/slope-composition-play-20261124b.json",
+        "exitCode": 0
+      },
+      {
+        "id": "59d1bce8-e14d-4558-908b-5b7d73e97ad5",
+        "receipt": "measurements/slope-composition-gpu-20261124c.json",
+        "exitCode": 0
+      },
+      {
+        "id": "5f552968-cc59-4d21-8444-b2353ef6f9eb",
+        "receipt": "measurements/slope-retention-before-20261124b.json",
+        "exitCode": 0
+      },
+      {
+        "id": "6f50dedb-36e4-4f15-a67e-e25672eebb6e",
+        "receipt": "measurements/slope-public-checks-20261124b.json",
+        "exitCode": 0
+      },
+      {
+        "id": "033bf018-2b18-463c-a430-0227d218c3bd",
+        "receipt": "measurements/slope-simulator-build-20261124b.json",
+        "exitCode": 0
+      },
+      {
+        "id": "f2a62ef5-4812-4599-a865-851a578a0b37",
+        "receipt": "measurements/slope-native-phone-20261124b.json",
+        "exitCode": 0
+      },
+      {
+        "id": "6bd91f41-d337-4057-a9aa-48f20de4f715",
+        "receipt": "measurements/slope-native-tablet-20261124b.json",
+        "exitCode": 0
+      },
+      {
+        "id": "0d1f4234-bcab-4631-89e3-86a03d541a9c",
+        "receipt": "measurements/slope-native-independent-20261124b.json",
+        "exitCode": 0
+      },
+      {
+        "id": "cb9255aa-366f-4db6-a64f-07ac18e7a759",
+        "receipt": "measurements/slope-retention-after-20261124b.json",
+        "exitCode": 0
+      },
+      {
+        "id": "ac934033-8b39-45e2-b636-e2a228ab4841",
+        "receipt": "measurements/slope-relaunch-20261124b.json",
+        "exitCode": 0
+      },
+      {
+        "id": "58194f48-60bc-4249-8eb1-7eb7ce5a60cf",
+        "receipt": "measurements/slope-relaunch-check-20261124b.json",
+        "exitCode": 0
+      },
+      {
+        "id": "b95a889d-8c3e-4c14-a208-1dc44f70fe85",
+        "receipt": "measurements/slope-public-final-20261124b.json",
+        "exitCode": 0
+      }
+    ]
+  },
+  "distribution": {
+    "personalPhoneAction": "NOT_ATTEMPTED",
+    "testFlightAction": "NOT_ATTEMPTED"
+  },
+  "openGates": [
+    "final art A1-A3",
+    "hero fish and rig user review before species production",
+    "all finished species and gear models",
+    "scientific and child review",
+    "OS touch and accessibility",
+    "minimum supported OS",
+    "two real devices twenty minutes",
+    "actual current TestFlight installation"
+  ],
+  "nativeInitial": {
+    "status": "LOGIC_AND_SAVE_PASS_VISUAL_FAIL_ROV_PANEL_OCCLUSION",
+    "source": {
+      "sourceCommit": "040a64c83b87acdb18ca6a03e23d055f5ebd2d49",
+      "sourceDigest": "d8a6a0d98988226aec552554b63b623441066f2ee8ea418e768b680dce0985d6",
+      "projectSettingsSha256": "487dd5cc37a763cb9f23702f91a10b6680094d7b2165050d05327b1376c0d54d"
+    },
+    "appDigest": "76420949957be368282d357c3dbe1ee8fa9206be1a9245904ddce194e8f506a3",
+    "phone": {
+      "catchesBefore": 25,
+      "catchesAfter": 26,
+      "pointsAfter": 4710,
+      "frames": 21
+    },
+    "tablet": {
+      "catchesBefore": 20,
+      "catchesAfter": 21,
+      "pointsAfter": 3910,
+      "frames": 21
+    },
+    "observation": "Whale shark navigation follows unchanged catalog to channel, not slope",
+    "visualFailureDevice": "phone",
+    "visualInspection": "two21-frame contacts plus phone fight/ROV originals; original raw frames retained"
+  },
+  "candidateIntegration": "IMPLEMENTED"
+}
