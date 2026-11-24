@@ -1335,6 +1335,61 @@
           "sha256": "56aa149d82081e7005681d1b8c2311958c814061ece401628d39f3439d07ee6f"
         }
       ]
+    },
+    {
+      "id": "ios-simulator-continuous-journey-evidence",
+      "author": "OceanAngler contributors; Noto font under separately registered OFL",
+      "source": "game/Assets/OceanAngler/Runtime/RuntimeSmoke.cs",
+      "license": "MIT; embedded Noto UI glyphs SIL OFL 1.1",
+      "redistribution": true,
+      "status": "NATIVE_SIMULATOR_EVIDENCE_NOT_ART_ACCEPTANCE",
+      "note": "Selected final native iOS Simulator journey and process-restart frames, plus reviewed pre-fix tablet overlap. Not physical hardware, final art, human touch or child acceptance.",
+      "artifacts": [
+        {
+          "path": "art/previews/continuous-journey/phone/habitat-bay-surface.png",
+          "sha256": "7cbf7ff75b449cc65c5fb9d3804c51ca8f84078c6b1500ceca58dd10a6bab3bb"
+        },
+        {
+          "path": "art/previews/continuous-journey/phone/habitat-channel-underwater.png",
+          "sha256": "b2df6427dfa1983a822f30141788aac84decafd6b947b15cc36e6b2c09727155"
+        },
+        {
+          "path": "art/previews/continuous-journey/phone/observation-whale-shark.png",
+          "sha256": "0f2751396f4b7cbff85ce62b5b4f3c3341a127aa101599c8a5aadc36695ae926"
+        },
+        {
+          "path": "art/previews/continuous-journey/phone/process-restart-main.png",
+          "sha256": "bb46bb0010c7d4bfdbd1c04cc8332b2b9dec4222165bd157885147f470ff6e5c"
+        },
+        {
+          "path": "art/previews/continuous-journey/phone/round-01-landed.png",
+          "sha256": "c241778efb67ea77cb701a5c3b11ff6818f63ba280fc75ea8b1e4d5225180458"
+        },
+        {
+          "path": "art/previews/continuous-journey/tablet/habitat-bay-surface.png",
+          "sha256": "777ca5d13a5e964e85a88cd2ab366a4f7cc4f17d413cf994fa938a5ab3d678a1"
+        },
+        {
+          "path": "art/previews/continuous-journey/tablet/habitat-channel-underwater.png",
+          "sha256": "9e18376998eff61915a796029ee8247442d28bc19bc5ee8c36c63407f403a2eb"
+        },
+        {
+          "path": "art/previews/continuous-journey/tablet/observation-whale-shark.png",
+          "sha256": "8c405a1d8014795afcd105452fbb9131b07305859ff8e90266b4b563953a5a5a"
+        },
+        {
+          "path": "art/previews/continuous-journey/tablet/process-restart-main.png",
+          "sha256": "46b4c7d0068ff34f39bd1ceec166d32cde15af3d29f547bda3b4f8f68d9db8a0"
+        },
+        {
+          "path": "art/previews/continuous-journey/tablet/round-01-landed.png",
+          "sha256": "6885081e836203ad33f143bc50bdb37e59cccb132d2476447374bb6b7a03db9a"
+        },
+        {
+          "path": "art/previews/continuous-journey/tablet-before-observation-exit.png",
+          "sha256": "131d454def1b3847ddcb44794bc45e72cfb6707a501d069e70475300db82db12"
+        }
+      ]
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."

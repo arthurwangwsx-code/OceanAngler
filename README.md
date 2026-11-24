@@ -4,6 +4,8 @@
 
 儿童与家庭向的 3D 海洋钓鱼探索游戏。真实比例鱼类、漂亮水下世界、易懂钓具、积分成长、图鉴与放流。正式名称待商标检查。
 
+最新模拟器验证：发现并修复两处按钮遮挡；52项Editor、12项完整PlayMode、iPhone/iPad各20轮及新进程恢复通过，同一冻结源码和原生包。当前20张长流程、两张重启主界面已逐张审阅，见[连续流程与原图](reports/continuous-journey.md)。程序输入不替代儿童、系统触摸、真机20分钟或拟真美术验收。
+
 **当前已具备可试玩的钓鱼/进度闭环。0.1.0 (5)已通过Apple处理并分配至本人授权账号的内部TestFlight组，新增保护观察与近海航道候选；[发行回执](reports/testflight-0.1.0-5.json)和[iPhone本地更新/启动回执](reports/iphone-local-0.1.0-5.md)分开记录。美术、实际触控、真机20分钟与完整产品验收未完成。** 首发iPhone/iPad，最低iOS/iPadOS 17，Unity 6000.3.29f1 + URP 17.3.0 + C# + Blender；离线单人、无广告、无内购、无聊天。
 
 | 阅读目的 | 文件 |
@@ -73,8 +75,8 @@ TestFlight 0.1.0 (5)冻结于a6bcf8e，在build 4基础上新增保护观察记�
 
 渲染平台校准后续：GPU入口明确选择Mac/iOS，记录实际目标、Gamma/Ultra、太阳/雾/探针及BC7/ASTC格式，分离平台差异与船体区域差异。51项Editor通过；最终iOS配置严格三图PASS，Mac仍PARTIAL，中间成功不覆盖其他失败。船体各槽材质对照只用于默认关闭的Editor实验，运行时未改；无新移动包或原生/真机验收，build 5不变。完整产品与apply未完成，独立receipt审计INCOMPLETE，见[校准证据](reports/render-platform-calibration.md)。
 
-按用户要求继续模拟器验证：后续开发源码已在iOS27.2的iPhone 17 Pro Max和iPad Air 11 M3模拟器实际安装、渲染并各完成一次钓鱼/放流、多页UI程序输入流程，32帧逐张审阅；52项Editor和10项无画面PlayMode通过。修复移动启动原生采样与URP不一致造成的黑屏，以及iOS托管测试参数缺失，保留HDR与4×MSAA。另一次不带QA参数的普通启动客户端180秒超时，不能据此宣布默认启动通过。源摘要/失败和12张代表性自有原图见[模拟器证据](reports/ios-simulator.md)。本轮只验证海湾基础流程，未覆盖新航道/保护观察原生流程、实际20轮UI、系统触摸或真机20分钟，拟真美术和完整产品仍PARTIAL。此模拟器包沿用配置build 5但不是a6bcf8e的TestFlight包；没有新发行或个人手机变更。
+模拟器当前结果：冻结dbaccb4，52项Editor及12项完整PlayMode通过；同一个ARM64原生包在iPhone 17 Pro Max/iPad Air 11 M3的iOS/iPadOS 27.2各完成20轮、三项保护观察、两种退出及新进程恢复，分别3333/3444分。20张长流程和两张重启主界面逐张审阅，11张代表性原图及所有测量摘要见[连续流程证据](reports/continuous-journey.md)。修复了暂停准备页及宽布局观察页两处真实按钮遮挡，失败回执保留。
 
-终态补充：普通启动后续的只读容器查询也超时；仅重启两台项目QA模拟器时，launchd_sim会话绑定失败，实际读回两台均Shutdown。默认启动仍未确认，需恢复模拟器会话后继续；原数据与所有成功/失败证据保留，未重装或清档。
+历史sim4各一次流程及32帧见[旧模拟器记录](reports/ios-simulator.md)；早期黑屏、参数、客户端超时与会话绑定失败均不删除。后续通过Device Hub只启动项目QA模拟器，新包默认无QA参数启动等待后已确认主界面。保留HDR和4×MSAA，未清档或操作其他项目设备。
 
-连续流程后续：新增共用EventSystem长流程，并修复从钓具返回后暂停准备面板底部按钮被“返回准备”盖住的问题。52项Editor、12项PlayMode通过，其中20轮正常控制器/真实UI输入、三海域自然解锁、两档辅助、3项保护观察及场景重建恢复已通过；左右手均实际命中修复后的观察按钮。此为无画面验证，未注入积分或直接推进Session.Tick，零截图不作渲染/儿童/设备资格。三个早期非零运行保留，完整模型、美术与原生20轮仍待验；见[当前长流程记录](reports/continuous-journey.md)。本轮无新个人手机或TestFlight更新。
+模拟器包沿用配置0.1.0 (5)，源码与a6bcf8e冻结的TestFlight/Ad Hoc build 5不同，本轮无新个人手机安装或TestFlight上传。完整鱼模/钓具/海域、美术A1–A3、科学/用户/儿童、完整18任务实玩、系统触摸、最低OS及双真机20分钟仍未完成。独立receipt审计INCOMPLETE，整体及apply继续PARTIAL。
