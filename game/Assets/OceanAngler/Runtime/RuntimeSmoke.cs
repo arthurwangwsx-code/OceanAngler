@@ -248,6 +248,9 @@ namespace OceanAngler
                 var loaded=new SaveStore(saveFile,game.Content).Load();
                 JourneyRequire(!loaded.requiresRecovery&&loaded.data.observations.Contains(species.id)&&loaded.data.totalPoints==points&&loaded.data.catches.Count==20,"journey-observation-persists-without-catch-points-"+species.id);
             }
+            yield return JourneyClick("返回观察图鉴",true);yield return null;yield return null;
+            JourneyRequire(ui.ObservationJournal&&!ui.InspectingObservation,"journey-observation-return-to-journal");
+            yield return JourneyClick("观察鲸鲨",true);yield return null;yield return null;
             yield return JourneyClick("出海",true);yield return null;yield return null;
             JourneyRequire(receipt.completedRounds==20&&receipt.rounds.Any(r=>r.mode=="assisted")&&receipt.rounds.Any(r=>r.mode=="standard"),"journey-20-rounds-both-modes");
             JourneyRequire(game.Progress.Data.observations.Count==3,"journey-three-protected-observations");

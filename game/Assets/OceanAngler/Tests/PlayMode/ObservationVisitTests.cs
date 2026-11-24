@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using NUnit.Framework;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
 using UnityEngine.UI;
@@ -82,6 +83,18 @@ namespace OceanAngler.Tests
                 layoutChecks.Add(species.id+",three-widths,PASS");
             }
             File.WriteAllLines(Path.Combine(archive,"layout.csv"),layoutChecks);
+            // Both exits must be independently reachable; invoking onClick alone
+            // would hide a visit-exit button covering the wide navigation bar.
+            Canvas.ForceUpdateCanvases();
+            foreach(string label in new[]{"出海","图鉴","钓具","任务","设置","返回观察图鉴"})
+            {
+                var button=UnityEngine.Object.FindObjectsByType<Button>(FindObjectsSortMode.None).Single(b=>b.isActiveAndEnabled&&b.interactable&&b.GetComponentInChildren<Text>().text==label);
+                var rect=button.GetComponent<RectTransform>();var pointer=new PointerEventData(EventSystem.current){position=RectTransformUtility.WorldToScreenPoint(null,rect.TransformPoint(rect.rect.center))};
+                var hits=new List<RaycastResult>();EventSystem.current.RaycastAll(pointer,hits);
+                Assert.That(hits.Count>0&&hits[0].gameObject.GetComponentInParent<Button>()==button,Is.True,"Independent observation exit/navigation hit: "+label);
+            }
+            Click("返回观察图鉴");yield return null;yield return null;Assert.That(ui.ObservationJournal&&!ui.InspectingObservation,Is.True);
+            Click("观察鲸鲨");yield return null;yield return null;
             Click("出海");yield return null;yield return null;Assert.That(game.Session.Paused,Is.True);Assert.That(encounter.Visual.gameObject.activeSelf,Is.False);Assert.That(world.TargetFish.gameObject.activeSelf,Is.True);
             Assert.That(UnityEngine.Object.FindObjectsByType<ObservationVisual>(FindObjectsInactive.Include,FindObjectsSortMode.None).Length,Is.EqualTo(1));
         }

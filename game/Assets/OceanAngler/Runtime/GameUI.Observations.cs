@@ -49,7 +49,8 @@ namespace OceanAngler
             var playback=Button(controls,"安静观察",12,4,-24,44,()=>game.GetComponent<OceanWorld>().Observations.Toggle(),Navy);observationPlayback=playback.GetComponentInChildren<Text>();observationPlayback.fontSize=18;
             observationStatus=Label(controls,"",17,Muted,12,50,-24,42);
             observationRecord=Button(controls,"记入观察图鉴",12,98,-24,44,game.RecordObservation,Teal);observationRecord.GetComponentInChildren<Text>().fontSize=18;
-            Button(pageRoot,"返回观察图鉴",12,102,180,44,()=>Navigate("保护观察"),Navy).GetComponentInChildren<Text>().fontSize=18;
+            // Wide navigation ends at 142 points; keep the visit exit below it.
+            Button(pageRoot,"返回观察图鉴",12,Compact?102:150,180,44,()=>Navigate("保护观察"),Navy).GetComponentInChildren<Text>().fontSize=18;
             void Add(string name,string text,int size,Color color){var label=Label(content,text,size,color,0,0,0,80);label.name=name;label.gameObject.AddComponent<LayoutElement>().minHeight=size*1.5f;}
         }
         void UpdateObservationUI()
