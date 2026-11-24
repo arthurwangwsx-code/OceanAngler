@@ -34,3 +34,9 @@ Test notes应明确：早期原型，测试抛竿/张力/收鱼/积分/存档/�
 2026-11-24发行更新：0.1.0 (3)冻结05c8cc7，30项Editor、7项无画面PlayMode和11项发布工具检查通过；Unity iOS冻结导出、Xcode签名/身份校验、内部专用IPA、上传及Apple VALID/INTERNAL_ONLY通过，已分配本人授权两账号组，测试说明与反馈邮箱读回一致。指定邮箱仍INVITED，安装/运行NOT_RUN。该包包含build2之后的累计修复；科学/用户美术、当前实际画面、触控、听感、20分钟性能及完整产品仍未通过。见[build 3回执](../reports/testflight-0.1.0-3.json)及[设备复核](12-beta3-review.md)。独立receipt审计仍INCOMPLETE，3.4、4.1–4.3及apply未完成。
 
 2026-11-24发行更新：0.1.0 (4)冻结ee7ba50，41项Editor、8项无画面PlayMode和11项发布工具检查通过，冻结提交CI通过；Unity iOS导出、签名/身份校验、内部专用IPA、归档与IPA静态元数据检查、上传和Apple VALID/INTERNAL_ONLY通过。本人授权两账号组已核实，含arthur.wang.wsx@gmail.com，指定邮箱邀请当前为INVITED，测试说明/反馈邮箱读回一致。包含build 3之后的三条环境鱼、阶段抛投/接近/收鱼、共享遭遇选择与重复抛竿保护，以及蓝鳍鲹鳍色/比例/阴影改进；积分/概率未变。本轮没有新原生玩家窗口或真机证据，实际安装、触控、20分钟性能/恢复、儿童/科学/美术A1–A3及完整产品仍未通过，其他模型/海域及观察交互仍缺。独立receipt审计INCOMPLETE，2.4、3.4、4.1–4.3及apply保持未完成。 见[build 4回执](../reports/testflight-0.1.0-4.json)。
+
+## 用户要求的当前iPhone安装
+
+2026-11-24用户要求有阶段性可运行进展时安装到当前iPhone。已用冻结build 4归档生成仅当前已注册iPhone可用的本地release-testing（Ad Hoc）包，沿用本项目现有分发私钥，未创建/撤销证书；签名/身份/设备范围及Unity Data一致性检查后，devicectl安装、读回、启动和后续运行进程读回通过。它是本地安装来源，不能替代TestFlight设备安装证据，详见[本地回执](../reports/iphone-local-0.1.0-4.md)。当前主界面视觉/真实触控仍待确认。
+
+单设备描述文件须绑定本App、已有证书和明确目标设备；写请求未知先回查，禁止盲目重发。依据[Apple Profiles说明](https://developer.apple.com/documentation/appstoreconnectapi/profiles/)与[Profile创建属性](https://developer.apple.com/documentation/appstoreconnectapi/profilecreaterequest/data-data.dictionary/attributes-data.dictionary)。原始设备标识、profile、IPA及设备日志只存本机忽略目录。使用devicectl启动时，设备及输出等选项放在bundle参数之前，避免作为应用参数被捕获。出现锁屏/信任/OS授权阻碍应让用户完成，不绕过权限；不卸载应用来解决更新或签名问题，以保护进度。

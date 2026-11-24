@@ -60,3 +60,5 @@ Mac构建入口为`python3 tools/game.py mac`；原生检查为`python3 tools/ru
 TestFlight 0.1.0 (4)冻结于ee7ba50，包含三条环境鱼、阶段接近/收鱼、共享选择入口、重复抛竿保护及鱼体/阴影更新。[发行回执](reports/testflight-0.1.0-4.json)记录Apple VALID/INTERNAL_ONLY、本人两账号组和测试说明；指定邮箱邀请为INVITED，实际安装启动未验。按[build 4设备复核](docs/13-beta4-review.md)继续记录。历史[build 1](reports/testflight-0.1.0-1.json)、[build 2](reports/testflight-0.1.0-2.json)、[build 3](reports/testflight-0.1.0-3.json)产物与回执保留。新构建按[冻结源码发布流程](docs/08-testflight.md)使用新build号。ASC工具另需PyJWT与cryptography，凭据显式在本机配置，不进入公开仓库。
 
 保护观察后续源码已接入绿海龟、宽吻海豚和鲸鲨的独立观察/图鉴/存档闭环，形体仅为A0样板。首次记录才升级payload为schema 2，旧build 4会拒绝该版本以保护记录，不能以清档解决回退。此变化尚未进入上述TestFlight 0.1.0 (4)，详见[验证与限制](reports/protected-observation.md)。
+
+2026-11-24已按要求把冻结0.1.0 (4)以本地单设备测试包装到当前iPhone 17 Pro Max，并确认启动和运行进程；见[安装回执](reports/iphone-local-0.1.0-4.md)。它不等同于TestFlight设备安装，主界面/触控和20分钟仍未验，后续未发布源码不在该包内。
