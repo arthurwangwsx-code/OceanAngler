@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -27,6 +28,9 @@ namespace OceanAngler
         float Height => DisplayMetrics.SafeArea.height/DisplayMetrics.PixelsPerPoint;
         string page = "出海", gearTab = "rod", focusedFish;
         string selectedFish;
+        ScrollRect gearScroll;
+        string renderedGearTab;
+        readonly Dictionary<string,float> gearScrollPositions=new Dictionary<string,float>();
         bool dirty = true, charging, resetConfirm;
         float chargeStart;
         Vector2 lastSafeSize;
@@ -76,10 +80,12 @@ namespace OceanAngler
                 if (charging && actionText != null) actionText.text = "松手抛竿  " + Mathf.RoundToInt(Mathf.Clamp01((Time.unscaledTime-chargeStart)/1.5f)*100) + "%";
             }
             UpdateObservationUI();
-            if (noticeText != null) noticeText.text = InspectingObservation?game.Notice??"安静观察，不投饵、不挂钩。":InspectingGear?"转动钓组，看看收线过程。":InspectingHabitat?"观察时暂停钓鱼，返回后点继续。":game.Notice ?? (game.RestReminder ? (Compact?"探索一会儿了，和家人休息一下吧。":"已经探索一会儿了，和家人休息一下吧。进度已保存。") : (Compact?"记录后放流 · 随时暂停":"鱼获记录后放流 · 不消耗鱼饵 · 随时可以暂停"));
+            if (noticeText != null) noticeText.text = InspectingObservation?game.Notice??"安静观察，不投饵、不挂钩。":InspectingGear?"转动钓组，看看收线过程。":InspectingHabitat?"观察时暂停钓鱼，返回后点继续。":game.Notice ?? (page=="钓具"?"选择已解锁的钓具，研究积分不会扣除。":game.RestReminder ? (Compact?"探索一会儿了，和家人休息一下吧。":"已经探索一会儿了，和家人休息一下吧。进度已保存。") : (Compact?"记录后放流 · 随时暂停":"鱼获记录后放流 · 不消耗鱼饵 · 随时可以暂停"));
         }
         void Rebuild()
         {
+            if(gearScroll!=null)gearScrollPositions[renderedGearTab]=gearScroll.verticalNormalizedPosition;
+            gearScroll=null;
             if (pageRoot != null) { pageRoot.gameObject.SetActive(false); Destroy(pageRoot.gameObject); }
             pageRoot = Box(safe,"Page",Color.clear,Vector2.zero,Vector2.one,Vector2.zero,Vector2.zero);
             phaseText = hintText = tensionText = progressText = actionText = null; charging = false;
@@ -103,10 +109,16 @@ namespace OceanAngler
                 case "家长区": BuildParent(); break;
                 case "隐私许可": BuildLegal(); break;
             }
+            if(gearScroll!=null)
+            {
+                Canvas.ForceUpdateCanvases();gearScroll.StopMovement();
+                gearScroll.verticalNormalizedPosition=gearScrollPositions.TryGetValue(gearTab,out float position)?position:1;
+            }
         }
         void Navigate(string target)
         {
             game.HoldReel(false); charging=false;
+            if(target=="钓具")game.ClearNotice();
             if (target != "出海") game.Pause(true);
             // 返回钓鱼页仍显示继续界面，避免导航触发自动输入。
             page=target; focusedFish=target=="图鉴"?(selectedFish??game.Content.fish[0].id):null; dirty=true;
@@ -193,6 +205,7 @@ namespace OceanAngler
         void BuildGear()
         {
             var panel=PagePanel("Gear",new Vector2(.02f,.12f),new Vector2(.75f,.81f),600);
+            gearScroll=panel.GetComponentInParent<ScrollRect>();renderedGearTab=gearTab;
             string[] categories={"rod","reel","line","lure"};string[] labels={"鱼竿","卷线器","鱼线","拟饵"};
             float tabWidth=(Compact?Width-52:Width*.73f-44)/4;
             for(int i=0;i<4;i++){string tab=categories[i];Button(panel,labels[i],22+i*tabWidth,18,tabWidth-10,48,()=>{gearTab=tab;dirty=true;},gearTab==tab?Teal:Navy);}

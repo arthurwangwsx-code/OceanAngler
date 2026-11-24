@@ -60,7 +60,11 @@ namespace OceanAngler
         public void ReturnToPreparation() { Session.Cancel(); Pause(false); Notice="本次鱼获已放回海中，已有记录和积分保留。"; Changed?.Invoke(); }
         public void Retry() { Session.Retry(); Reeling = false; Changed?.Invoke(); }
         public void SelectHabitat(string id) { if (Session.Phase == FishingPhase.Ready) Try(() => Progress.SelectHabitat(id)); }
-        public void SelectGear(string id) { if (Session.Phase == FishingPhase.Ready) Try(() => Progress.SelectGear(id)); }
+        public void SelectGear(string id)
+        {
+            if(Session.Phase==FishingPhase.Ready)
+                Try(()=>{Progress.SelectGear(id);Notice="已装备"+Content.Gear(id).name+"，研究积分未扣除。";},"暂时无法保存装备，请重试。");
+        }
         public void Configure(Action<GameSettings> action) { Try(() => Progress.Configure(action)); }
         public void ResetProgress() { if (Try(() => Progress.Reset())) { Session.Cancel(); Reeling = false; Notice = "已建立新存档，原始文件已保留。"; } }
         public void DismissRest() { RestReminder = false; activeTime = 0; }

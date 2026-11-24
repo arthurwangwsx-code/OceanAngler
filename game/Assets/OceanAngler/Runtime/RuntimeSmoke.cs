@@ -13,11 +13,13 @@ namespace OceanAngler
         [Serializable] sealed class LabelRender { public string page,text;public float requiredHeight,availableHeight;public int visibleCharacters,vertices; }
         [Serializable] sealed class JourneyRound { public int number,pointsBefore,pointsAfter,skillPoints;public string fishId,habitatId,mode;public float elapsedSeconds; }
         [Serializable] sealed class HitFailure { public string target;public string[] hitTargets;public Vector2 point,screen;public Rect button,viewport;public float scrollPosition,contentHeight;public bool culled,insideViewport; }
-        [Serializable] sealed class Receipt { public string status="RUNNING",scope;public List<string> checks=new List<string>();public List<string> failures=new List<string>();public List<LabelRender> inspectedLabels=new List<LabelRender>();public List<JourneyRound> rounds=new List<JourneyRound>();public List<HitFailure> hitFailures=new List<HitFailure>();public List<TaskCheckpoint> taskCheckpoints=new List<TaskCheckpoint>();public List<TaskResult> tasks=new List<TaskResult>();public List<string> inspectedSpecies=new List<string>(),equippedGear=new List<string>();public int catches,points,reflectionPasses,reflectionWidth,reflectionHeight,requestedRounds,completedRounds,capturedFrames,duplicateReleaseTaps;public bool captureEnabled,completeContent;public float pixelsPerPoint, safeWidthPoints, safeHeightPoints,reflectionVariance,elapsedSeconds; }
-        GameController game;string folder;Receipt receipt;bool finished,journeyMode,journeyQuit,completeContent;float began;
+        [Serializable] sealed class Receipt { public string status="RUNNING",scope;public List<string> checks=new List<string>();public List<string> failures=new List<string>();public List<LabelRender> inspectedLabels=new List<LabelRender>();public List<JourneyRound> rounds=new List<JourneyRound>();public List<HitFailure> hitFailures=new List<HitFailure>();public List<TaskCheckpoint> taskCheckpoints=new List<TaskCheckpoint>();public List<TaskResult> tasks=new List<TaskResult>();public List<GearCheck> gearChecks=new List<GearCheck>();public List<string> modelStatuses=new List<string>();public List<string> inspectedSpecies=new List<string>(),equippedGear=new List<string>();public int catches,points,reflectionPasses,reflectionWidth,reflectionHeight,requestedRounds,completedRounds,capturedFrames,duplicateReleaseTaps;public bool captureEnabled,completeContent,gearEntryHintPresent;public float pixelsPerPoint, safeWidthPoints, safeHeightPoints,reflectionVariance,elapsedSeconds; }
+        GameController game;string folder;Receipt receipt;bool finished,journeyMode,journeyQuit,completeContent,gearReviewMode;float began;
         IEnumerator Start()
         {
-            var args=LaunchArguments.Get();int content=Array.IndexOf(args,"--ocean-content-journey");
+            var args=LaunchArguments.Get();int gearReview=Array.IndexOf(args,"--ocean-gear-review");
+            if(gearReview>=0&&gearReview+1<args.Length){yield return RunGearReview(args[gearReview+1],true,true);yield break;}
+            int content=Array.IndexOf(args,"--ocean-content-journey");
             if(content>=0&&content+1<args.Length){yield return RunJourney20(args[content+1],true,true,true);yield break;}
             int journey=Array.IndexOf(args,"--ocean-journey20");
             if(journey>=0&&journey+1<args.Length){yield return RunJourney20(args[journey+1],true,true);yield break;}
@@ -125,7 +127,7 @@ namespace OceanAngler
         {
             folder=Path.GetFullPath(outputFolder);Directory.CreateDirectory(folder);
             if(File.Exists(Path.Combine(folder,"receipt.json")))throw new InvalidOperationException("Use a new journey output folder");
-            game=GetComponent<GameController>();began=Time.realtimeSinceStartup;finished=false;journeyMode=true;journeyQuit=quitProcess;completeContent=verifyCompleteContent;
+            game=GetComponent<GameController>();began=Time.realtimeSinceStartup;finished=false;journeyMode=true;journeyQuit=quitProcess;completeContent=verifyCompleteContent;gearReviewMode=false;
             receipt=new Receipt{requestedRounds=completeContent?96:20,completeContent=completeContent,captureEnabled=captureFrames,scope=captureFrames?"native Player EventSystem journey; not OS touch or human play":"headless PlayMode EventSystem journey; no rendered-frame/device acceptance"};
             Application.runInBackground=true;
             var stack=new Stack<IEnumerator>();stack.Push(Journey20());
@@ -362,7 +364,7 @@ namespace OceanAngler
         }
         void Update()
         {
-            if(receipt!=null&&!finished&&Time.realtimeSinceStartup-began>(journeyMode?(completeContent?2700:1800):100))
+            if(receipt!=null&&!finished&&Time.realtimeSinceStartup-began>(gearReviewMode?180:journeyMode?(completeContent?2700:1800):100))
             {
                 receipt.failures.Add("Runtime smoke timed out");
                 if(journeyMode)FinishJourney();

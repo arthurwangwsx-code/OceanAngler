@@ -18,6 +18,7 @@ namespace OceanAngler
             var scroll=panel.gameObject.AddComponent<ScrollRect>();scroll.viewport=viewport;scroll.content=content;scroll.horizontal=false;scroll.vertical=true;scroll.movementType=ScrollRect.MovementType.Clamped;
             var records=game.Progress.Data.catches.Where(c=>c.fishId==target.id).ToArray();
             Add("SpeciesName",target.name,Compact?23:28,Color.white);
+            Add("ModelStatus","模型还在制作，先看文字认识它。",17,Gold);
             Add("ScientificName",target.scientificName,19,Muted);
             Add("CatchSummary",records.Length==0?"尚未记录这位朋友。\n出海发现后，模型会亮起来。":"我的记录 · "+records.Length+" 次\n最长 "+records.Max(c=>c.length).ToString("F1")+" 厘米\n最重 "+records.Max(c=>c.weight).ToString("F2")+" 千克",18,Gold);
             Add("Recognition","认识它\n"+target.note,18,Color.white);
