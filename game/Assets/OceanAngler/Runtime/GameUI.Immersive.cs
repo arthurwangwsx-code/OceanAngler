@@ -31,7 +31,7 @@ namespace OceanAngler
         }
         void BuildFishing()
         {
-            bool left=game.Progress.Data.settings.leftHanded;bool fighting=game.Session.Phase==FishingPhase.Fighting;
+            bool left=game.Progress.Data.settings.leftHanded;bool fighting=game.Session.Phase==FishingPhase.Fighting;bool landed=game.Session.Phase==FishingPhase.Landed;
             var pause=HudRegion("PauseHUD",left?Width-78:14,12,64,70);
             IconButton(pause,"暂停",TouchSymbol.Kind.Pause,0,0,64,70,()=>{game.Pause(true);Navigate("出海");},40);
             // Navigate("出海") normally retains pause. Opening the pause control
@@ -42,10 +42,11 @@ namespace OceanAngler
             var symbol=phase==FishingPhase.Ready||phase==FishingPhase.Bite?TouchSymbol.Kind.Rod:phase==FishingPhase.Fighting?TouchSymbol.Kind.Reel:phase==FishingPhase.Landed?TouchSymbol.Kind.Release:phase==FishingPhase.Escaped?TouchSymbol.Kind.Play:TouchSymbol.Kind.Fish;
             var action=IconButton(actionRegion,ActionName(),symbol,0,0,actionWidth,114,MainAction,58);actionText=action.GetComponentInChildren<Text>();BindFishingInput(action);
             action.interactable=phase!=FishingPhase.Casting&&phase!=FishingPhase.Waiting;
-            float hintWidth=Mathf.Min(210,Width-actionWidth-44);
-            var hint=HudRegion("PhaseHUD",left?Width-hintWidth-14:14,Height-(fighting?132:78),hintWidth,66);hintGroup=hint.gameObject;
+            float hintWidth=Mathf.Min(landed?260:210,Width-actionWidth-44);
+            var hint=HudRegion("PhaseHUD",left?Width-hintWidth-14:14,Height-(fighting?132:landed?110:78),hintWidth,landed?98:66);hintGroup=hint.gameObject;
             phaseText=Label(hint,"",20,Color.white,0,0,-1,34);hintText=Label(hint,"",17,Color.white,0,38,-1,28);
-            foreach(var t in new[]{phaseText,hintText}){var shadow=t.gameObject.AddComponent<Outline>();shadow.effectColor=new Color(.01f,.05f,.08f,.95f);shadow.effectDistance=new Vector2(1,-1);}
+            if(landed&&game.Session.Catch!=null)Label(hint,GentleResult(game.Session.Catch),17,Color.white,0,70,-1,28);
+            foreach(var t in hint.GetComponentsInChildren<Text>()){var shadow=t.gameObject.AddComponent<Outline>();shadow.effectColor=new Color(.01f,.05f,.08f,.95f);shadow.effectDistance=new Vector2(1,-1);}
             if(fighting)
             {
                 var meters=HudRegion("FightHUD",left?Width-242:14,Height-62,228,48);
@@ -56,16 +57,16 @@ namespace OceanAngler
                 FixedBox(tension,"WarningNotch",Color.white,115,-4,3,16);
                 var progress=FixedBox(meters,"ProgressTrack",Navy,154,28,74,8);progressFill=Box(progress,"Fill",Gold,Vector2.zero,Vector2.one,Vector2.zero,Vector2.zero).GetComponent<Image>();
             }
-            if(phase==FishingPhase.Landed&&game.Session.Catch!=null)
-            {
-                var c=game.Session.Catch;var result=FixedBox(pageRoot,"CatchResult",new Color(.025f,.12f,.19f,.78f),left?Width-310:14,102,296,112);
-                Label(result,game.Content.Fish(c.fishId).name+"\n"+c.length.ToString("F1")+"厘米 · "+c.weight.ToString("F2")+"千克\n"+GentleResult(c),19,Color.white,12,8,-24,98);
-            }
             if(hintPhase!=phase){hintPhase=phase;hintBegan=Time.unscaledTime;}
         }
         void UpdateImmersiveHint()
         {
             if(hintGroup==null||!Playing)return;
+            if(game.Session.Phase==FishingPhase.Landed&&game.Session.Catch!=null)
+            {
+                var caught=game.Session.Catch;phaseText.text=game.Content.Fish(caught.fishId).name;
+                hintText.text=caught.length.ToString("F1")+"厘米 · "+caught.weight.ToString("F2")+"千克";
+            }
             if(game.Session.Phase==FishingPhase.Ready&&game.Notice!=null&&game.Notice.StartsWith("已记录并放流")&&game.Progress.Data.catches.Count>0)
             {
                 phaseText.text="已记录并放流";

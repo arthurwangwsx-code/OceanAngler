@@ -36,9 +36,13 @@ namespace OceanAngler
             JourneyRequire(buttons.Length==2&&buttons.Any(b=>b.GetComponentInChildren<Text>()?.text=="暂停"),"immersive-only-pause-and-current-action");
             JourneyRequire(!FindObjectsByType<Transform>(FindObjectsSortMode.None).Any(t=>new[]{"Header","Navigation","Footer","Info","Controls","Preparation"}.Contains(t.name)),"immersive-no-global-chrome-or-panels");
             var regions=new List<Rect>();float p=DisplayMetrics.PixelsPerPoint;var safe=DisplayMetrics.SafeArea;
-            foreach(var mark in FindObjectsByType<HudFootprint>(FindObjectsSortMode.None))
+            // Include visible panel backgrounds as well as declared HUD regions.
+            // An unmarked result card must not escape the obstruction budget.
+            var footprints=FindObjectsByType<HudFootprint>(FindObjectsSortMode.None).Select(m=>m.GetComponent<RectTransform>())
+                .Concat(FindObjectsByType<Image>(FindObjectsSortMode.None).Where(i=>i.isActiveAndEnabled&&i.color.a>.01f).Select(i=>i.rectTransform)).Distinct();
+            foreach(var footprint in footprints)
             {
-                var corners=new Vector3[4];mark.GetComponent<RectTransform>().GetWorldCorners(corners);regions.Add(Rect.MinMaxRect((corners[0].x-safe.xMin)/p,(corners[0].y-safe.yMin)/p,(corners[2].x-safe.xMin)/p,(corners[2].y-safe.yMin)/p));
+                var corners=new Vector3[4];footprint.GetWorldCorners(corners);regions.Add(Rect.MinMaxRect((corners[0].x-safe.xMin)/p,(corners[0].y-safe.yMin)/p,(corners[2].x-safe.xMin)/p,(corners[2].y-safe.yMin)/p));
             }
             float w=safe.width/p,h=safe.height/p;var xs=regions.SelectMany(r=>new[]{r.xMin,r.xMax}).Distinct().OrderBy(v=>v).ToArray();float area=0;
             for(int i=1;i<xs.Length;i++)
@@ -100,7 +104,7 @@ namespace OceanAngler
                 JourneyRequire(game.Session.Paused&&!game.Reeling,"immersive-focus-loss-cancels-input");game.gameObject.SendMessage("OnApplicationFocus",true);yield return null;yield return null;JourneyRequire(game.Session.Paused,"immersive-focus-return-awaits-continue");
                 yield return JourneyClick("继续探索",true);yield return null;yield return null;reel=Find("按住收线");bool held=false;deadline=Time.realtimeSinceStartup+90;
                 while(game.Session.Phase==FishingPhase.Fighting&&Time.realtimeSinceStartup<deadline){bool desired=game.Session.Tension<.65f;if(desired!=held){held=desired;Pointer(reel,held);}yield return null;}
-                if(held)Pointer(reel,false);yield return null;yield return null;JourneyRequire(game.Session.Phase==FishingPhase.Landed,"immersive-real-fish-landed");yield return JourneyFrame("landed");
+                if(held)Pointer(reel,false);yield return null;yield return null;JourneyRequire(game.Session.Phase==FishingPhase.Landed,"immersive-real-fish-landed");CheckImmersiveHud();yield return JourneyFrame("landed");
                 yield return JourneyClick("记录并放流",true);yield return null;yield return null;JourneyRequire(game.Progress.Data.catches.Count==original.catches.Count+1,"immersive-one-real-record");
             }
             // Restore only the setting toggled by the UI review, never records.

@@ -55,7 +55,8 @@
     "status": "PASS",
     "passed": 59,
     "failed": 0,
-    "scope": "full current Editor suite; no rendered or device claim"
+    "scope": "full fin-candidate suite before subsequent landing UI correction",
+    "sourceCommit": "4223d8db1c0d649a0ae3ed5f022ea90327813160"
   },
   "native": "NOT_RUN",
   "scope": "first hero only; no new species, points, HUD or save changes",
@@ -665,6 +666,24 @@
     "passed": "3",
     "failed": "0",
     "duration": "33.1199177",
-    "scope": "FishAnimationTests, IntegratedWorldTests and ImmersiveNavigationTests only; no GPU or full progression claim"
+    "scope": "FishAnimationTests, IntegratedWorldTests and ImmersiveNavigationTests only; no GPU or full progression claim",
+    "sourceCommit": "4223d8db1c0d649a0ae3ed5f022ea90327813160"
+  },
+  "firstNative": {
+    "status": "FUNCTIONAL_PASS_VISUAL_PARTIAL",
+    "source": "4223d8db1c0d649a0ae3ed5f022ea90327813160",
+    "appDigest": "e34380d4884a6365ecfc3533d43de07d20cd5194a26b1f40ac78b4915c8836bf",
+    "framesPerDevice": 15,
+    "phonePoints": 228,
+    "tabletPoints": 183,
+    "reason": "old result card overlaps hero dorsal fin; landing excluded from old HUD measurement"
+  },
+  "landingRegression": {
+    "red": "2e1b05ac-419b-4fe1-8618-f3d749aebe02",
+    "redExitCode": 2,
+    "green": "6b8eb39e-5326-4c59-8487-2475f0cb194d",
+    "scope": "include all visible panel backgrounds and Landed in real HUD union and central-clear checks",
+    "greenExitCode": 0,
+    "targetedPlayPassed": 3
   }
 }
