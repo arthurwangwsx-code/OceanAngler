@@ -20,7 +20,7 @@ namespace OceanAngler.Editor
             public float[] ambientProbe;public Vector4 reflectionDecode;public string[] materialTextureFormats;
         }
         [Serializable] sealed class EnvironmentTrace {public List<EnvironmentSample> samples=new List<EnvironmentSample>();}
-        static void RecordEnvironment(EnvironmentTrace trace,string phase,Camera camera,string folder)
+        static void RecordEnvironment(EnvironmentTrace trace,string phase,Camera camera,string folder,GameObject model)
         {
             var pipeline=GraphicsSettings.currentRenderPipeline as UniversalRenderPipelineAsset;
             var sun=RenderSettings.sun;
@@ -28,9 +28,10 @@ namespace OceanAngler.Editor
             var sample=new EnvironmentSample{phase=phase,buildTarget=EditorUserBuildSettings.activeBuildTarget.ToString(),colorSpace=QualitySettings.activeColorSpace.ToString(),qualityIndex=QualitySettings.GetQualityLevel(),quality=QualitySettings.names[QualitySettings.GetQualityLevel()],pipeline=pipeline==null?"none":pipeline.name,pipelineSamples=pipeline==null?0:pipeline.msaaSampleCount,textureLimit=QualitySettings.globalTextureMipmapLimit,lodBias=QualitySettings.lodBias,ambientMode=RenderSettings.ambientMode.ToString(),ambientIntensity=RenderSettings.ambientIntensity,ambient=RenderSettings.ambientLight,sky=RenderSettings.ambientSkyColor,equator=RenderSettings.ambientEquatorColor,ground=RenderSettings.ambientGroundColor,fog=RenderSettings.fogColor,fogDensity=RenderSettings.fogDensity,skyShader=RenderSettings.skybox==null?"none":RenderSettings.skybox.shader.name,sun=sun==null?"none":sun.name,sunColor=sun==null?Color.black:sun.color,sunIntensity=sun==null?0:sun.intensity,sunEuler=sun==null?Vector3.zero:sun.transform.eulerAngles,reflectionMode=RenderSettings.defaultReflectionMode.ToString(),reflectionIntensity=RenderSettings.reflectionIntensity,cameraPosition=camera.transform.position,cameraRotation=camera.transform.rotation,fieldOfView=camera.fieldOfView,ambientProbe=new float[27]};
             var sh=RenderSettings.ambientProbe;for(int rgb=0;rgb<3;rgb++)for(int coefficient=0;coefficient<9;coefficient++)sample.ambientProbe[rgb*9+coefficient]=sh[rgb,coefficient];
             sample.defaultReflectionFormat=ReflectionProbe.defaultTexture==null?"none":ReflectionProbe.defaultTexture.graphicsFormat.ToString();sample.reflectionDecode=ReflectionProbe.defaultTextureHDRDecodeValues;
-            var formats=new List<string>();foreach(string name in new[]{"Channel_Stone","Channel_CoastalSoil"})foreach(string suffix in new[]{"","_Normal","_MetallicSmoothness"})
+            var formats=new List<string>();var seen=new HashSet<string>();
+            foreach(var renderer in model.GetComponentsInChildren<Renderer>(true))foreach(var material in renderer.sharedMaterials)if(material!=null)foreach(var property in material.GetTexturePropertyNames())
             {
-                var texture=AssetDatabase.LoadAssetAtPath<Texture2D>("Assets/OceanAngler/Art/NearshoreChannel/"+name+suffix+".png");if(texture!=null)formats.Add(texture.name+":"+texture.graphicsFormat+":"+texture.width+"x"+texture.height);
+                var texture=material.GetTexture(property) as Texture2D;if(texture==null)continue;string entry=texture.name+":"+texture.graphicsFormat+":"+texture.width+"x"+texture.height;if(seen.Add(entry))formats.Add(entry);
             }
             sample.materialTextureFormats=formats.ToArray();
             trace.samples.Add(sample);File.WriteAllText(Path.Combine(folder,"environment.json"),JsonUtility.ToJson(trace,true));
@@ -38,7 +39,8 @@ namespace OceanAngler.Editor
         [Serializable] sealed class Receipt {public string status="IN_PROGRESS",scope="isolated Editor GPU water fixture; no player UI/device acceptance",staticMatchCheck="NOT_RUN";public int width=1440,height=900,reflectionPasses,validatedMaterials,initialChangedPixels,repeatChangedPixels,samples=4,staticDraws;public float reflectionVariance,waveDifference;public string graphics,buildTarget,colorSpace;public bool released,representedEachDraw=true,exactStaticMatch,boatMaterialBlockControl;public float initialDifference,repeatDifference;}
         public static void Capture()=>CapturePrefab("OCEAN_WATER_REVIEW_OUTPUT","Models/CoralBay",false);
         public static void CaptureChannel()=>CapturePrefab("OCEAN_CHANNEL_REVIEW_OUTPUT","Models/NearshoreChannel",true);
-        static void CapturePrefab(string outputVariable,string resource,bool channel)
+        public static void CaptureSlope()=>CapturePrefab("OCEAN_SLOPE_REVIEW_OUTPUT","Models/ContinentalSlope",false,true);
+        static void CapturePrefab(string outputVariable,string resource,bool channel,bool slope=false)
         {
             string folder=Environment.GetEnvironmentVariable(outputVariable);if(string.IsNullOrEmpty(folder))throw new InvalidOperationException("Review output required");
             if(SystemInfo.graphicsDeviceType==GraphicsDeviceType.Null)throw new InvalidOperationException("A graphics device is required for GPU review");
@@ -46,7 +48,7 @@ namespace OceanAngler.Editor
             EditorSceneManager.OpenScene("Assets/OceanAngler/Generated/Bay.unity");var camera=Camera.main;camera.enabled=false;camera.aspect=1.6f;
             var data=camera.GetComponent<UniversalAdditionalCameraData>()??camera.gameObject.AddComponent<UniversalAdditionalCameraData>();data.requiresColorTexture=true;data.requiresDepthTexture=true;
             RenderSettings.ambientLight=new Color(.2f,.32f,.38f);
-            var fill=new GameObject("ReviewRuntimeWaterFill").AddComponent<Light>();fill.type=LightType.Point;fill.color=new Color(.37f,.79f,.86f);fill.intensity=channel?0:2.5f;fill.range=15;fill.transform.position=new Vector3(0,3,0);
+            var fill=new GameObject("ReviewRuntimeWaterFill").AddComponent<Light>();fill.type=LightType.Point;fill.color=new Color(.37f,.79f,.86f);fill.intensity=channel||slope?0:2.5f;fill.range=15;fill.transform.position=new Vector3(0,3,0);
             var root=UnityEngine.Object.Instantiate(Resources.Load<GameObject>(resource));var bay=root.GetComponent<MarineHabitat>();var reflection=bay.reflection;
             bool boatBlockControl=channel&&Environment.GetEnvironmentVariable("OCEAN_CHANNEL_REVIEW_BOAT_BLOCKS")=="1";
             if(boatBlockControl)foreach(var renderer in root.GetComponentsInChildren<Renderer>(true))if(renderer.name.StartsWith("Boat_LOD",StringComparison.Ordinal))
@@ -59,16 +61,16 @@ namespace OceanAngler.Editor
             try
             {
                 if(!RenderPipeline.SupportsRenderRequest(camera,request))throw new InvalidOperationException("URP render request not supported");
-                var environment=new EnvironmentTrace();RecordEnvironment(environment,"scene-loaded",camera,folder);
-                bay.Present(camera,true,true,0,true,false);RecordEnvironment(environment,"presented",camera,folder);RenderPipeline.SubmitRenderRequest(camera,request);var first=Read(target,Path.Combine(folder,"surface.png"));RecordEnvironment(environment,"first-draw",camera,folder);
-                if(channel)
+                var environment=new EnvironmentTrace();RecordEnvironment(environment,"scene-loaded",camera,folder,root);
+                bay.Present(camera,true,true,0,true,false);RecordEnvironment(environment,"presented",camera,folder,root);RenderPipeline.SubmitRenderRequest(camera,request);var first=Read(target,Path.Combine(folder,"surface.png"));RecordEnvironment(environment,"first-draw",camera,folder,root);
+                if(channel||slope)
                 {
                     receipt.staticDraws=3;
                     receipt.representedEachDraw=Environment.GetEnvironmentVariable("OCEAN_CHANNEL_REVIEW_REPRESENT")!="0";
                     if(receipt.representedEachDraw)bay.Present(camera,true,true,0,true,false);RenderPipeline.SubmitRenderRequest(camera,request);var repeated=Read(target,Path.Combine(folder,"surface-repeat.png"));
-                    RecordEnvironment(environment,"repeat-draw",camera,folder);
+                    RecordEnvironment(environment,"repeat-draw",camera,folder,root);
                     if(receipt.representedEachDraw)bay.Present(camera,true,true,0,true,false);RenderPipeline.SubmitRenderRequest(camera,request);var third=Read(target,Path.Combine(folder,"surface-third.png"));
-                    RecordEnvironment(environment,"third-draw",camera,folder);
+                    RecordEnvironment(environment,"third-draw",camera,folder,root);
                     for(int i=0;i<first.Length;i++)
                     {
                         float initial=Mathf.Max(Mathf.Abs(first[i].r-repeated[i].r),Mathf.Max(Mathf.Abs(first[i].g-repeated[i].g),Mathf.Abs(first[i].b-repeated[i].b)));receipt.initialDifference=Mathf.Max(receipt.initialDifference,initial);if(initial>0)receipt.initialChangedPixels++;
@@ -88,14 +90,19 @@ namespace OceanAngler.Editor
                 RenderPipeline.SubmitRenderRequest(camera,request);var second=Read(target,Path.Combine(folder,"surface-time2.png"));
                 float difference=0;for(int i=0;i<first.Length;i++)difference+=Mathf.Abs(first[i].r-second[i].r)+Mathf.Abs(first[i].g-second[i].g)+Mathf.Abs(first[i].b-second[i].b);receipt.waveDifference=difference/(first.Length*3);
                 bay.Present(camera,true,true,1,true,false);RenderPipeline.SubmitRenderRequest(camera,request);Read(target,Path.Combine(folder,"pier.png"));
-                captures=reflection.RenderCount;bay.Present(camera,true,false,0,true,false);RenderPipeline.SubmitRenderRequest(camera,request);Read(target,Path.Combine(folder,"underwater.png"));
+                captures=reflection.RenderCount;bay.Present(camera,true,false,0,true,false);RecordEnvironment(environment,"underwater",camera,folder,root);RenderPipeline.SubmitRenderRequest(camera,request);Read(target,Path.Combine(folder,"underwater.png"));
                 if(reflection.Ready||reflection.RenderCount!=captures)throw new InvalidOperationException("Underwater reflection request was not skipped");
-                bay.Present(camera,true,false,1,true,false);RenderPipeline.SubmitRenderRequest(camera,request);Read(target,Path.Combine(folder,"reef.png"));receipt.reflectionPasses=reflection.RenderCount;
+                bay.Present(camera,true,false,1,true,false);RecordEnvironment(environment,"reef",camera,folder,root);RenderPipeline.SubmitRenderRequest(camera,request);Read(target,Path.Combine(folder,"reef.png"));receipt.reflectionPasses=reflection.RenderCount;
                 if(channel)
                 {
                     bay.Present(camera,true,true,0,true,false);camera.transform.SetPositionAndRotation(new Vector3(-14,8,58),Quaternion.LookRotation(new Vector3(-10,3,14)));camera.fieldOfView=50;reflection.Prepare(camera,true,bay.SeaLevel);
                     var coastalWater=new MaterialPropertyBlock();bay.waterSurface.GetPropertyBlock(coastalWater);coastalWater.SetTexture("_PlanarReflection",reflection.Texture);coastalWater.SetMatrix("_ReflectionVP",reflection.ViewProjection);bay.waterSurface.SetPropertyBlock(coastalWater);RenderPipeline.SubmitRenderRequest(camera,request);Read(target,Path.Combine(folder,"terrain-close.png"));
                     bay.Present(camera,true,false,0,true,false);camera.transform.SetPositionAndRotation(new Vector3(-14,3,58),Quaternion.LookRotation(new Vector3(-10,-7,14)));camera.fieldOfView=50;RenderPipeline.SubmitRenderRequest(camera,request);Read(target,Path.Combine(folder,"terrain-wet-edge.png"));receipt.reflectionPasses=reflection.RenderCount;
+                }
+                if(slope)
+                {
+                    bay.Present(camera,true,false,1,true,false);camera.transform.SetPositionAndRotation(new Vector3(-7,-1,10),Quaternion.LookRotation(new Vector3(-10,-3,12)));camera.fieldOfView=50;RenderPipeline.SubmitRenderRequest(camera,request);Read(target,Path.Combine(folder,"slope-strata-close.png"));
+                    bay.Present(camera,true,false,0,true,false);camera.transform.SetPositionAndRotation(new Vector3(3,0,16),Quaternion.LookRotation(new Vector3(-8,-6,18)));camera.fieldOfView=55;RenderPipeline.SubmitRenderRequest(camera,request);Read(target,Path.Combine(folder,"slope-channel.png"));
                 }
                 if(receipt.reflectionVariance<.0005f||receipt.waveDifference<.0001f)throw new InvalidOperationException("Rendered water/reflection lacks scene or wave detail");
                 reflection.enabled=false;bay.Present(camera,true,true,0,true,false);receipt.released=reflection.Texture==null;
@@ -104,7 +111,7 @@ namespace OceanAngler.Editor
                 {
                     if(material==null||material.shader==null||!material.shader.isSupported||ShaderUtil.ShaderHasError(material.shader))throw new InvalidOperationException("Rendered habitat has a missing/unsupported/failed shader");receipt.validatedMaterials++;
                 }
-                receipt.status=!channel||receipt.exactStaticMatch?"PASS":"PARTIAL_STATIC_RGB_DIFFERENCE";
+                receipt.status=!(channel||slope)||receipt.exactStaticMatch?"PASS":"PARTIAL_STATIC_RGB_DIFFERENCE";
                 File.WriteAllText(Path.Combine(folder,"receipt.json"),JsonUtility.ToJson(receipt,true));Debug.Log("WATER_GPU_REVIEW_"+receipt.status);
             }
             finally{camera.targetTexture=null;target.Release();UnityEngine.Object.DestroyImmediate(target);UnityEngine.Object.DestroyImmediate(root);UnityEngine.Object.DestroyImmediate(fill.gameObject);}

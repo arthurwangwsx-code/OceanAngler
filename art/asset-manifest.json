@@ -8,7 +8,7 @@
       "license": "SIL Open Font License 1.1",
       "redistribution": true,
       "status": "LICENSE_VERIFIED",
-      "sha256": "10f581a4fb00e3ad1ea9608b9b711b3c6d269945fec825e83ea98e85301bd51b",
+      "sha256": "73a008d8ceef6f82ac502338d90de0c7f4e02ab62d2699fab8950a859805a3a0",
       "path": "game/Assets/OceanAngler/Resources/UIFont.ttf"
     },
     {
@@ -1717,6 +1717,164 @@
         }
       ],
       "note": "All8 included original frames viewed. Initial30 and final30 through4 private contacts;4 initial plus9 final originals, and2 reopening originals viewed. Only own game; no personal photography, device IDs, raw logs or OS/sidebar. Embedded font has registered OFL notice. Models/world are candidates; no finished art, child or physical-touch acceptance."
+    },
+    {
+      "id": "continental-slope-authored-candidate",
+      "author": "OceanAngler contributors",
+      "source": "tools/art_slope.py; own CoralBay hull and materials reused with provenance in build-report.json",
+      "license": "MIT",
+      "redistribution": true,
+      "sourceRedistribution": true,
+      "canModify": true,
+      "acquiredAt": "2026-11-24",
+      "status": "PROTOTYPE_ART_REVIEW_PENDING",
+      "path": "art/source/continental-slope/ContinentalSlope.blend",
+      "sha256": "a971c94b558749d12bdd50cd845d88335e73e914810241460439825d0cce346b",
+      "artifacts": [
+        {
+          "path": "art/source/continental-slope/ContinentalSlope.blend",
+          "sha256": "a971c94b558749d12bdd50cd845d88335e73e914810241460439825d0cce346b"
+        },
+        {
+          "path": "art/source/continental-slope/README.md",
+          "sha256": "309d9b997a97113d5c2444e92d67825699d62b39bca8a016ab8209506fc9bcef"
+        },
+        {
+          "path": "art/source/continental-slope/boat-profile.json",
+          "sha256": "39724179affc6147519f6d2a11cb58f2c0b78f0c3cc50a2ec16de5c195bf58b0"
+        },
+        {
+          "path": "art/source/continental-slope/build-report.json",
+          "sha256": "fb2f0a5fa08632aff8b056d0fc0315dc88f3582c02615f81971ae2b5f2251237"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/ContinentalSlope/ContinentalSlope.fbx",
+          "sha256": "32d95dd8ff06910ceffcf00831ea026400492c158d1e6ad0040ff0533b682621"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/ContinentalSlope/Slope_FrameMetal.mat",
+          "sha256": "28714bda4d23f67fd55eb9e5a1a90940491db84078b4374e6a9a1eca316fbeba"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/ContinentalSlope/Slope_InstrumentWhite.mat",
+          "sha256": "d0c763a229f6c6652ff751f213e603c843ae52053da874b296967f005ca80937"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/ContinentalSlope/Slope_Marker.mat",
+          "sha256": "5ea80115f449761b768ead6d894ac67a18d0e747ae29091da73b34de8faad40b"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/ContinentalSlope/Slope_Optics.mat",
+          "sha256": "0f71ec6427957c06053c4ab9273f0aafa32c7fa1e84e88d5f864a5a01b39bf9f"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/ContinentalSlope/Slope_Rope.mat",
+          "sha256": "71219832b3832a3d58d46b8265dff99eb78e20f98a23b834b8b79ebae8196bb8"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/ContinentalSlope/Slope_Silt.png",
+          "sha256": "234a189a3a6084db4db6b16db341127e85cd05fdba399bc247628b6c0be15818"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/ContinentalSlope/Slope_Silt_MetallicSmoothness.png",
+          "sha256": "30670db1e06c2a57af37c1675bb7baee7c4ad407a156ef92e92445525aea9eba"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/ContinentalSlope/Slope_Silt_Normal.png",
+          "sha256": "82af47c3bfa28715971769ed7067e593ada1045364806adba31b05afefb512c1"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/ContinentalSlope/Slope_Silt_Roughness.png",
+          "sha256": "58bf3a6cdbc763071954ea51db9488c9d92ae6840137324cdd615c7280cf14a5"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/ContinentalSlope/Slope_Strata.png",
+          "sha256": "ebff3ccb8592426229f6c88b15d1e48e96207f90cdb6faec0d041b84a431145c"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/ContinentalSlope/Slope_Strata_MetallicSmoothness.png",
+          "sha256": "4aceb60827e9d00b67da79da277927018389f96012cca152015f95cff6aff094"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/ContinentalSlope/Slope_Strata_Normal.png",
+          "sha256": "0a94dfca8f4bf1cb37078a2d56606f6d7b74ab8fbda2a615b219ce5379629f47"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/ContinentalSlope/Slope_Strata_Roughness.png",
+          "sha256": "14e1a187ec6c550efe162ace2237401c6c02c96f98d21811e57cc9ceaa34f860"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/ContinentalSlope/Slope_SurveyYellow.mat",
+          "sha256": "8b571a642916d45c1a23c942afb1f3b23f759aa3fb6360cc13dc7068c76c3ffd"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/ContinentalSlope/Slope_Terrain.mat",
+          "sha256": "48f3d5148760585203f2a6244c4fc5fc72f0a340d149edc54ab14c15ac373930"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/ContinentalSlope/Slope_Water.mat",
+          "sha256": "e53a67383fda432664b151ade4e1e5e98f9aa307366aeb369059cd1517a9b46a"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Resources/Models/ContinentalSlope.prefab",
+          "sha256": "048260ad88114da303618e337b338487886f9088843c6681f2340806e962935c"
+        }
+      ],
+      "note": "Original canyon, scree, survey ROV and mast/receiver/tether/float. Five assemblies with three LODs, separate sea surface and original Strata/Silt PBR. No external media or new species models. Cycles preview differs from runtime lighting; visual and physical-device acceptance remain separate."
+    },
+    {
+      "id": "continental-slope-previews",
+      "author": "OceanAngler contributors",
+      "source": "Own Cycles saved source C with corrected-camera view D; isolated Editor Metal slope GPU B; rejected source B/C views retained",
+      "license": "MIT",
+      "redistribution": true,
+      "sourceRedistribution": true,
+      "canModify": true,
+      "acquiredAt": "2026-11-24",
+      "status": "PROTOTYPE_REVIEW_PARTIAL",
+      "note": "Original renders; no external media or device data. Dark and occluded images are rejected candidates. Studio lighting and runtime differ. Final art, user and physical-device acceptance not passed.",
+      "artifacts": [
+        {
+          "path": "art/previews/continental-slope/gpu-boat.png",
+          "sha256": "4e237464cf90b2501e2d26820201a3021e589391a3676b1da9e4b89406a76980"
+        },
+        {
+          "path": "art/previews/continental-slope/gpu-rov.png",
+          "sha256": "bd43f93a9b6c145bf66b8e0bc6b15f466c348233be534ee15c5f8fa407f2b03c"
+        },
+        {
+          "path": "art/previews/continental-slope/gpu-surface.png",
+          "sha256": "c91e1f84750e0c9bbe2bb06881c2af5b7ebcad29bf9751105b54b232ecf5e5ac"
+        },
+        {
+          "path": "art/previews/continental-slope/gpu-underwater.png",
+          "sha256": "3ff1c993ffdae54341e33a8ef4f20dd3de3357726f74140a3084d8aed93aaa1b"
+        },
+        {
+          "path": "art/previews/continental-slope/rejected-source-dark.png",
+          "sha256": "e12abbeddc2040c4817c0a98a6b185a6dd12184772276c35e78c30c791009f24"
+        },
+        {
+          "path": "art/previews/continental-slope/rejected-source-occluded-rov.png",
+          "sha256": "542c00b554d284d6edca8875766b80cc6c837be391adc82854f9f67024b52209"
+        },
+        {
+          "path": "art/previews/continental-slope/source-surface.png",
+          "sha256": "1a8ca33eb3bf1913361636bd83fc689bb97ed55fb106906160e3af4d93f3d898"
+        },
+        {
+          "path": "art/previews/continental-slope/source-survey-boat.png",
+          "sha256": "a75385b4373ba1439cb00d2b5cf385f1e3054a94c1aa4cc1a1ff33baf3958dea"
+        },
+        {
+          "path": "art/previews/continental-slope/source-survey-rov.png",
+          "sha256": "ef155b11b949e132ff308e6723eda047712d0bc1f09af6a1e45841ab1383f072"
+        },
+        {
+          "path": "art/previews/continental-slope/source-underwater.png",
+          "sha256": "2577d5ea0f50e5a34b5f4d97f899021dd56f2fdf64dde82fc9e52834148febde"
+        }
+      ]
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."

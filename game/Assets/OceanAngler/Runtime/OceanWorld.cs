@@ -6,8 +6,7 @@ namespace OceanAngler
     {
         GameController game;GameUI ui;Transform fishRoot;FishVisual fish;AuthoredSpinningRig gear;
         string fishId,habitat;
-        Material wood,water,sand,rock,coral;
-        MarineHabitat activeHabitat;GameObject prototypeEnvironment;Transform environmentParent;
+        MarineHabitat activeHabitat;
         Camera view;
         public FishVisual TargetFish=>fish;
         public MarineHabitat ActiveHabitat=>activeHabitat;
@@ -23,53 +22,25 @@ namespace OceanAngler
         {
             game=GetComponent<GameController>();ui=GetComponent<GameUI>();view=Camera.main;
             RenderSettings.ambientLight=new Color(.2f,.32f,.38f);
-            wood=Mat(new Color(.47f,.28f,.12f),.25f);water=Mat(new Color(.025f,.4f,.53f),.85f);
-            sand=Mat(new Color(.36f,.34f,.25f),.15f);rock=Mat(new Color(.19f,.32f,.30f),.2f);coral=Mat(new Color(.55f,.33f,.25f),.15f);
             Observations=gameObject.AddComponent<ObservationEncounter>();
             SwitchHabitat(game.Progress.Data.habitatId);MakeGear();SelectFish(game.Content.fish[0].id);game.Released+=BeginRelease;
         }
-        Material Mat(Color color,float smooth,float metallic=0) {var m=SurfaceMaterial.Create();m.color=color;m.SetFloat("_Smoothness",smooth);m.SetFloat("_Metallic",metallic);return m;}
-        void MakePrototypeEnvironment()
-        {
-            prototypeEnvironment=new GameObject("OtherHabitatPrototype");environmentParent=prototypeEnvironment.transform;
-            view.transform.position=new Vector3(0,1.25f,-6.5f);view.transform.LookAt(new Vector3(0,.45f,1));view.fieldOfView=42;
-            RenderSettings.fog=true;RenderSettings.fogColor=new Color(.025f,.10f,.22f);view.backgroundColor=RenderSettings.fogColor;view.clearFlags=CameraClearFlags.SolidColor;RenderSettings.fogMode=FogMode.ExponentialSquared;RenderSettings.fogDensity=.028f;RenderSettings.ambientLight=new Color(.2f,.32f,.38f);
-            Box("Sand",new Vector3(0,-1.1f,4),new Vector3(80,.12f,80),sand);
-            Box("Surface",new Vector3(0,4.5f,4),new Vector3(80,.05f,80),water);
-            var random=new System.Random(41);
-            for(int i=0;i<26;i++)
-            {
-                float x=(float)random.NextDouble()*32-16,z=5+(float)random.NextDouble()*20;float size=.4f+(float)random.NextDouble()*2;
-                var obj=GameObject.CreatePrimitive(PrimitiveType.Sphere);obj.name="ReefRock";obj.transform.SetParent(environmentParent,false);obj.transform.position=new Vector3(x,-.8f,z);obj.transform.localScale=new Vector3(size,size*.65f,size);obj.GetComponent<Renderer>().sharedMaterial=rock;Destroy(obj.GetComponent<Collider>());
-                if(i%3==0)for(int j=0;j<5;j++)Cylinder("CoralBranch",new Vector3(x,-.8f,z),new Vector3(x+Mathf.Sin(j*1.2f)*.3f,-.1f+j*.1f,z+Mathf.Cos(j)*.3f),.05f,coral);
-            }
-            for(int i=0;i<6;i++)Box("PierPlank",new Vector3(-4.2f+i*.4f,1.7f,2),new Vector3(.38f,.15f,9),wood);
-            for(int i=0;i<3;i++)Cylinder("PierPost",new Vector3(-4.1f,-1,1+i*3),new Vector3(-4.1f,2,1+i*3),.12f,wood);
-            var light=new GameObject("WaterFill").AddComponent<Light>();light.type=LightType.Point;light.color=new Color(.37f,.79f,.86f);light.intensity=2.5f;light.range=15;light.transform.position=new Vector3(0,3,0);
-            light.transform.SetParent(environmentParent,true);environmentParent=null;
-        }
         void SwitchHabitat(string id)
         {
-            if(activeHabitat!=null){activeHabitat.gameObject.SetActive(false);Destroy(activeHabitat.gameObject);activeHabitat=null;}
-            if(prototypeEnvironment!=null){prototypeEnvironment.SetActive(false);Destroy(prototypeEnvironment);prototypeEnvironment=null;}
+            if(activeHabitat!=null){if(activeHabitat.lighting!=null)activeHabitat.lighting.Restore();activeHabitat.gameObject.SetActive(false);Destroy(activeHabitat.gameObject);activeHabitat=null;}
             habitat=id;var resource=MarineHabitat.ResourceFor(id);
             if(resource!=null)
             {
                 var prefab=Resources.Load<GameObject>(resource);if(prefab==null)throw new InvalidOperationException("Missing authored habitat "+id);
                 activeHabitat=Instantiate(prefab).GetComponent<MarineHabitat>();if(activeHabitat==null)throw new InvalidOperationException("Habitat presentation missing "+id);
             }
-            else MakePrototypeEnvironment();
+            else throw new InvalidOperationException("No authored habitat registered for "+id);
         }
         void MakeGear()
         {
             var prefab=Resources.Load<GameObject>("Models/SpinningRig");if(prefab==null)throw new InvalidOperationException("Missing authored spinning rig prefab");
             gear=Instantiate(prefab).GetComponent<AuthoredSpinningRig>();
         }
-        GameObject Box(string name,Vector3 pos,Vector3 scale,Material material)
-        {var o=GameObject.CreatePrimitive(PrimitiveType.Cube);o.name=name;if(environmentParent!=null)o.transform.SetParent(environmentParent,false);o.transform.position=pos;o.transform.localScale=scale;o.GetComponent<Renderer>().sharedMaterial=material;Destroy(o.GetComponent<Collider>());return o;}
-        GameObject Cylinder(string name,Vector3 from,Vector3 to,float radius,Material material)
-        {var o=GameObject.CreatePrimitive(PrimitiveType.Cylinder);o.name=name;if(environmentParent!=null)o.transform.SetParent(environmentParent,false);Between(o.transform,from,to,radius);o.GetComponent<Renderer>().sharedMaterial=material;Destroy(o.GetComponent<Collider>());return o;}
-        static void Between(Transform t,Vector3 a,Vector3 b,float radius) {t.position=(a+b)*.5f;t.up=(b-a).normalized;t.localScale=new Vector3(radius*2,Vector3.Distance(a,b)*.5f,radius*2);}
         void SelectFish(string id)
         {
             if(fishRoot!=null)Destroy(fishRoot.gameObject);
@@ -137,6 +108,6 @@ namespace OceanAngler
             if(activeHabitat!=null)activeHabitat.Present(view,ui.InspectingHabitat,ui.InspectingHabitat&&ui.HabitatSurfaceView,ui.HabitatAngle,game.Session.Paused,reduced,ui.FocusedFish==null&&!ui.InspectingGear&&!ui.InspectingObservation);
             Observations.Present(ui.ObservingSpecies,view,ui.Compact,reduced,Time.unscaledDeltaTime);
         }
-        void OnDestroy(){if(game!=null)game.Released-=BeginRelease;foreach(var material in new[]{wood,water,sand,rock,coral})if(material!=null)Destroy(material);if(activeHabitat!=null)Destroy(activeHabitat.gameObject);if(prototypeEnvironment!=null)Destroy(prototypeEnvironment);}
+        void OnDestroy(){if(game!=null)game.Released-=BeginRelease;if(activeHabitat!=null)Destroy(activeHabitat.gameObject);}
     }
 }

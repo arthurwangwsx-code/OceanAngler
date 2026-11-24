@@ -7,18 +7,21 @@ namespace OceanAngler
         public Renderer waterSurface;
         public Material sky;public BayPlanarReflection reflection;
         public Light causticLight;public ParticleSystem suspendedParticles;
+        public HabitatLighting lighting;
         public float SeaLevel=4.5f;
         public Color underwaterColor=new Color(.075f,.42f,.49f),surfaceColor=new Color(.53f,.73f,.75f);
         public float underwaterDensity=.035f,surfaceDensity=.012f;
-        public static string ResourceFor(string id)=>id=="bay"?"Models/CoralBay":id=="channel"?"Models/NearshoreChannel":null;
+        public static string ResourceFor(string id)=>id=="bay"?"Models/CoralBay":id=="channel"?"Models/NearshoreChannel":id=="slope"?"Models/ContinentalSlope":null;
         protected virtual void PresentAmbient(bool paused,bool reduced,bool visible){}
         float waterTime;MaterialPropertyBlock waterProperties;
         public void Present(Camera camera,bool observing,bool above,int angle,bool paused,bool reduced,bool showAmbient=true)
         {
             PresentAmbient(paused,reduced,showAmbient);
+            if(lighting!=null)lighting.Present(above);
             if(!paused&&!reduced)waterTime+=Time.deltaTime;
             if(waterProperties==null)waterProperties=new MaterialPropertyBlock();
             waterProperties.SetFloat("_OceanTime",reduced?0:waterTime);
+            waterProperties.SetFloat("_SeaLevel",SeaLevel);
             if(causticLight!=null){causticLight.enabled=!above;causticLight.transform.localRotation=Quaternion.Euler(90,reduced?0:waterTime*1.5f,0);}
             if(suspendedParticles!=null){var main=suspendedParticles.main;main.simulationSpeed=paused||reduced?0:1;suspendedParticles.gameObject.SetActive(!above&&!reduced);}
             var from=above?(angle%2==0?surfaceCamera:pierCamera):(observing&&angle%2!=0?reefCamera:underwaterCamera);

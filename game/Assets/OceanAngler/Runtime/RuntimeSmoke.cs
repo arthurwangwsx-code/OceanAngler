@@ -17,7 +17,9 @@ namespace OceanAngler
         GameController game;string folder;Receipt receipt;bool finished,journeyMode,journeyQuit,completeContent,gearReviewMode;float began;
         IEnumerator Start()
         {
-            var args=LaunchArguments.Get();int immersive=Array.IndexOf(args,"--ocean-immersive-review");
+            var args=LaunchArguments.Get();int slope=Array.IndexOf(args,"--ocean-slope-review");
+            if(slope>=0&&slope+1<args.Length){yield return RunSlopeReview(args[slope+1],true,true);yield break;}
+            int immersive=Array.IndexOf(args,"--ocean-immersive-review");
             if(immersive>=0&&immersive+1<args.Length){yield return RunImmersiveReview(args[immersive+1],true,true);yield break;}
             int gearReview=Array.IndexOf(args,"--ocean-gear-review");
             if(gearReview>=0&&gearReview+1<args.Length){yield return RunGearReview(args[gearReview+1],true,true);yield break;}

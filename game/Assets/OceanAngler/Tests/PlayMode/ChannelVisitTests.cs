@@ -24,7 +24,7 @@ namespace OceanAngler.Tests
             if(game!=null)game.Pause(true);if(scene.IsValid()&&scene.isLoaded){var empty=SceneManager.CreateScene("AfterChannelVisit");SceneManager.SetActiveScene(empty);yield return SceneManager.UnloadSceneAsync(scene);}
             if(root!=null)foreach(string suffix in new[]{"",".bak",".tmp"}){string file=Path.Combine(root,"ocean-progress.json")+suffix;if(File.Exists(file))File.Move(file,Path.Combine(archive,"result"+suffix+".json"));if(originals.TryGetValue(file,out var saved))File.Move(saved,file);}
         }
-        [UnityTest] public IEnumerator SharedViewsAndFishingSurviveRepeatedAuthoredAndPrototypeSwitches()
+        [UnityTest] public IEnumerator SharedViewsAndFishingSurviveThreeAuthoredHabitatSwitches()
         {
             var args=Environment.GetCommandLineArgs();int index=Array.IndexOf(args,"--ocean-save-root");Assert.That(index,Is.GreaterThanOrEqualTo(0));root=Path.GetFullPath(args[index+1]);Assert.That(root,Does.Contain("unity-test-saves"));archive=Path.Combine(root,"channel-fixture");Assert.That(Directory.Exists(archive),Is.False);Directory.CreateDirectory(archive);
             foreach(string suffix in new[]{"",".bak",".tmp"}){string file=Path.Combine(root,"ocean-progress.json")+suffix;if(File.Exists(file)){string saved=Path.Combine(archive,"before"+suffix+".json");File.Move(file,saved);originals.Add(file,saved);}}
@@ -47,7 +47,7 @@ namespace OceanAngler.Tests
                 Click("继续探索");game.Cast(.5f);for(int i=0;i<12000&&game.Session.Phase!=FishingPhase.Landed;i++){if(game.Session.Phase==FishingPhase.Bite)game.Strike();game.Session.Tick(1f/30,game.Session.Tension<.65f);}Assert.That(game.Session.Phase,Is.EqualTo(FishingPhase.Landed));yield return null;yield return null;
                 Click("记录并放流");yield return null;yield return null;Assert.That(game.Progress.Data.catches.Count,Is.EqualTo(initial+trip+1));Assert.That(new SaveStore(Path.Combine(root,"ocean-progress.json"),game.Content).Load().data.habitatId,Is.EqualTo("channel"));
                 game.Pause(true);game.SelectHabitat("bay");yield return null;yield return null;Assert.That(world.ActiveHabitat,Is.TypeOf<BayHabitat>());Assert.That(world.ActiveHabitat.GetComponent<BayHabitat>().school.Members.Length,Is.EqualTo(3));
-                game.SelectHabitat("slope");yield return null;yield return null;Assert.That(world.ActiveHabitat,Is.Null);Assert.That(GameObject.Find("OtherHabitatPrototype"),Is.Not.Null);Assert.That(Camera.main.clearFlags,Is.EqualTo(CameraClearFlags.SolidColor));Assert.That(RenderSettings.fogColor,Is.EqualTo(new Color(.025f,.10f,.22f)));
+                game.SelectHabitat("slope");yield return null;yield return null;Assert.That(world.ActiveHabitat,Is.TypeOf<MarineHabitat>());Assert.That(world.ActiveHabitat.SeaLevel,Is.EqualTo(200));Assert.That(world.ActiveHabitat.lighting,Is.Not.Null);Assert.That(GameObject.Find("OtherHabitatPrototype"),Is.Null);Assert.That(Camera.main.clearFlags,Is.EqualTo(CameraClearFlags.SolidColor));Assert.That(RenderSettings.fogColor,Is.EqualTo(new Color(.025f,.10f,.20f)));
                 game.SelectHabitat("bay");yield return null;yield return null;Assert.That(GameObject.Find("OtherHabitatPrototype"),Is.Null);
             }
             Assert.That(UnityEngine.Object.FindObjectsByType<MarineHabitat>(FindObjectsInactive.Include,FindObjectsSortMode.None).Length,Is.EqualTo(1));Assert.That(new SaveStore(Path.Combine(root,"ocean-progress.json"),game.Content).Load().data.catches.Count,Is.EqualTo(initial+3));

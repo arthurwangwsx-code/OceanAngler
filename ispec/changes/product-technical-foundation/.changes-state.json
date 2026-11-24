@@ -381,6 +381,14 @@
       "checkedAt": "2026-11-24T09:12:19.509Z",
       "durationMs": 260.6585000000001,
       "outcome": "accepted"
+    },
+    {
+      "stageId": "apply",
+      "runId": null,
+      "operation": "start",
+      "checkedAt": "2026-11-24T10:02:10.138Z",
+      "durationMs": 115.73850000000004,
+      "outcome": "accepted"
     }
   ],
   "measurementJournal": {
@@ -8477,6 +8485,292 @@
       "startedAt": "2026-11-24T09:56:39.919Z",
       "executable": "python3",
       "commandDigest": "15d002849f55e435df83c61a39ed5029639bcd151a061ca8c7c8cfbf1b613592"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "2151c783-29ce-4589-9ca6-3e249033d6d9",
+      "startedAt": "2026-11-24T10:12:02.212Z",
+      "executable": "python3",
+      "commandDigest": "4bad2707c0b953fe6b5a8eb73c49739d826a69e6d6876c5e9ee599dbb4786759",
+      "receiptPath": "measurements/slope-author-20261124a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "6a3c408c-e28e-4913-824c-dc8817ab2b0d",
+      "startedAt": "2026-11-24T10:13:55.548Z",
+      "executable": "python3",
+      "commandDigest": "aa76a9ea557cac88f1372570947e1822a5da2a223183c40ce2b2bafbd8b8354f",
+      "receiptPath": "measurements/slope-source-20261124a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "3b071b5d-0bfd-4b37-a528-5b8aa8a05e66",
+      "startedAt": "2026-11-24T10:15:55.509Z",
+      "executable": "python3",
+      "commandDigest": "e13d239569877c7217e1b2bd4d162efe05a140779f93e0f9887a73a36cb37535",
+      "receiptPath": "measurements/slope-source-detail-20261124a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "312a2e1d-b446-4c7e-bac2-e987ed21d873",
+      "startedAt": "2026-11-24T10:17:43.682Z",
+      "executable": "python3",
+      "commandDigest": "a9a19ced087a6554abadf8e88e3e129178f89209941f0bc547b8e94ac8d9bd3a",
+      "receiptPath": "measurements/slope-author-20261124b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "23741e6a-69bd-4588-8b18-7fdaead0bba9",
+      "startedAt": "2026-11-24T10:19:17.177Z",
+      "executable": "python3",
+      "commandDigest": "918f95d061c3d860e55bbaeb59733ed949a19a4c0bc949b4958cbc5032343d66",
+      "receiptPath": "measurements/slope-source-20261124b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "28075f47-1304-4913-9543-504629992e52",
+      "startedAt": "2026-11-24T10:22:13.781Z",
+      "executable": "python3",
+      "commandDigest": "c593c1a34418dcf75fd5281e61f8d8f85d4e9f7881104c502e35103fa3c52011",
+      "receiptPath": "measurements/slope-studio-20261124b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "d1b53bef-3485-4598-b7ab-2766fa207101",
+      "startedAt": "2026-11-24T10:27:52.551Z",
+      "executable": "python3",
+      "commandDigest": "76c41401a861fc9df7c54b9fbaea0ab7d732178a4496affbedde8779b03d0474",
+      "receiptPath": "measurements/slope-author-20261124c.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "56ec866f-2dde-46f0-bcaa-fbe4773956f9",
+      "startedAt": "2026-11-24T10:28:06.436Z",
+      "executable": "python3",
+      "commandDigest": "393daa4ad04b46509bac1b17c70ea83343a5a68b156e92a5d0d290949d6a14b6",
+      "receiptPath": "measurements/slope-studio-20261124c.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "1f2803ab-c221-43ef-8fc8-4308dc9efa29",
+      "startedAt": "2026-11-24T10:32:41.070Z",
+      "executable": "python3",
+      "commandDigest": "303615e846720df1c3132858bab8211e1d21c5ba037e29b817ee74f7681670e2",
+      "receiptPath": "measurements/slope-camera-red-20261124c.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "ee5718be-7431-4229-a03b-961c16dbfc44",
+      "startedAt": "2026-11-24T10:32:52.688Z",
+      "executable": "python3",
+      "commandDigest": "3011366bb5991b8c877da7edd916a0553c6e4b2869478190bbf3bfa7452bf2fc",
+      "receiptPath": "measurements/slope-author-20261124d.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "6d16027e-7b9f-45aa-ab5d-3d17f58d1113",
+      "startedAt": "2026-11-24T10:33:19.574Z",
+      "executable": "python3",
+      "commandDigest": "5dd6524417b6c4c4c207761263c426f44b77b65db67272381a7bd2423ad1c2b0",
+      "receiptPath": "measurements/slope-source-20261124d.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "0203f974-0c2b-4609-ac4d-f2afd96424ba",
+      "startedAt": "2026-11-24T10:33:33.752Z",
+      "executable": "python3",
+      "commandDigest": "84d3aec01f68721073bca46f41c8d8d017d57f0465187ab60b4375647a01f95e",
+      "receiptPath": "measurements/slope-source-20261124d2.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "a92a8377-4cf7-4141-9858-597b02c7ea06",
+      "startedAt": "2026-11-24T10:33:42.675Z",
+      "executable": "python3",
+      "commandDigest": "b61cdf24aa8173ae743e2390494e7024135bf0e90b2941eb66561540049c265c",
+      "receiptPath": "measurements/slope-studio-20261124d.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "acad2694-2b79-43b7-9c36-052a3e03cc59",
+      "startedAt": "2026-11-24T10:35:09.545Z",
+      "executable": "python3",
+      "commandDigest": "4c798960e4c7f9e7094691bc6681540c18e3ac2004f6d18c3a0e7179bb806db8",
+      "receiptPath": "measurements/slope-import-20261124d.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "a11bf8cd-e3ae-4819-8fc8-a8f6b3879823",
+      "startedAt": "2026-11-24T10:35:31.885Z",
+      "executable": "python3",
+      "commandDigest": "0e3fee4a2e6892f39e42fe2a8bfa7f8a6980e2375478f5e11c14d6ab4547471c",
+      "receiptPath": "measurements/slope-editor-20261124d.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "3ce73cf1-8e49-4da1-9ff5-527d8bf6af95",
+      "startedAt": "2026-11-24T10:36:17.816Z",
+      "executable": "python3",
+      "commandDigest": "0e3fee4a2e6892f39e42fe2a8bfa7f8a6980e2375478f5e11c14d6ab4547471c",
+      "receiptPath": "measurements/slope-editor-20261124e.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "6eecb06c-d3e0-4227-836b-596db7f16dc3",
+      "startedAt": "2026-11-24T10:36:42.693Z",
+      "executable": "python3",
+      "commandDigest": "20485823268158eb18699bca73564bd8c7ef88ec0c29af538a816eecf4b00517",
+      "receiptPath": "measurements/slope-font-20261124a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "764b3ec6-f664-42b8-8351-3587e6a8d8a4",
+      "startedAt": "2026-11-24T10:37:06.183Z",
+      "executable": "python3",
+      "commandDigest": "5f049fb6c545b54fa0de1247430f9ddcb14c52db16cb99cc14fe3cd0b59d8f44",
+      "receiptPath": "measurements/slope-all-editor-20261124a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "29c9bbad-8f67-4a9e-8981-892f11177542",
+      "startedAt": "2026-11-24T10:39:40.555Z",
+      "executable": "python3",
+      "commandDigest": "39f36950eab0c24993b9edfbfb02d0327a641c5a15dfce30f02b35db0d056b5e",
+      "receiptPath": "measurements/slope-play-20261124a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "8e776851-bc1f-4dac-8e42-d4c2b9e4c9b0",
+      "startedAt": "2026-11-24T10:40:51.593Z",
+      "executable": "python3",
+      "commandDigest": "38c17db7f3b70066881164aff4736c91c01999f8baf400620c32145047c87937",
+      "receiptPath": "measurements/slope-gpu-20261124a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "fc9f6d00-9ec0-4974-ae86-7ed242fa7fe6",
+      "startedAt": "2026-11-24T10:42:15.678Z",
+      "executable": "python3",
+      "commandDigest": "4c798960e4c7f9e7094691bc6681540c18e3ac2004f6d18c3a0e7179bb806db8",
+      "receiptPath": "measurements/slope-light-import-20261124b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "46917941-26e4-43a9-9fa0-3eba491a300c",
+      "startedAt": "2026-11-24T10:42:42.497Z",
+      "executable": "python3",
+      "commandDigest": "92a18ac754ccfb8644e5592494a2e11cd44e33912f260b733bdf18d1ea9f9d78",
+      "receiptPath": "measurements/slope-gpu-20261124b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "7e50e274-03df-4f28-94be-2a720b2c600b",
+      "startedAt": "2026-11-24T10:43:09.436Z",
+      "executable": "python3",
+      "commandDigest": "0e3fee4a2e6892f39e42fe2a8bfa7f8a6980e2375478f5e11c14d6ab4547471c",
+      "receiptPath": "measurements/slope-light-editor-20261124b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "81bd35b1-649e-4310-988b-0e588bc35a5c",
+      "startedAt": "2026-11-24T10:43:33.051Z",
+      "executable": "python3",
+      "commandDigest": "f9a3d53fe84df4e5c5631de00858c9934b932d1fa97891b401d00c8e803ff880",
+      "receiptPath": "measurements/slope-light-play-20261124b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "lint",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "317d1ec4-642b-4d7e-91b5-db06a4777c19",
+      "startedAt": "2026-11-24T10:44:24.827Z",
+      "executable": "python3",
+      "commandDigest": "49b978df2fc9e37f8144ce2b1c619c61410d0ef52e49d84957662f594cdb1e94",
+      "receiptPath": "measurements/slope-font-verify-20261124a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "lint",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "19e6f939-86c4-4694-a47d-ca4bd28c1f60",
+      "startedAt": "2026-11-24T10:44:47.241Z",
+      "executable": "python3",
+      "commandDigest": "30406e3488756a039a5b19378fc8bde22b6214709fdea6d92bb5cb4f13c45731",
+      "receiptPath": "measurements/slope-public-checks-20261124a.json"
     }
   ],
   "runMeasurements": [
@@ -20674,6 +20968,500 @@
       "exitCode": 0,
       "signal": null,
       "errorCode": null
+    },
+    {
+      "id": "2151c783-29ce-4589-9ca6-3e249033d6d9",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "4bad2707c0b953fe6b5a8eb73c49739d826a69e6d6876c5e9ee599dbb4786759",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T10:12:02.212Z",
+      "finishedAt": "2026-11-24T10:12:12.994Z",
+      "durationMs": 10732.823375,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/slope-author-20261124a.json",
+        "sha256": "8d492829425c0628d9a31e224c802d026fe797e96f5d08a81d35f9a76b90d64d"
+      }
+    },
+    {
+      "id": "6a3c408c-e28e-4913-824c-dc8817ab2b0d",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "aa76a9ea557cac88f1372570947e1822a5da2a223183c40ce2b2bafbd8b8354f",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T10:13:55.548Z",
+      "finishedAt": "2026-11-24T10:13:57.916Z",
+      "durationMs": 2329.267084,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/slope-source-20261124a.json",
+        "sha256": "fc1c6ce84687a9cef962cf6fd1b36363c9cac3810a404c488f82f634223ff570"
+      }
+    },
+    {
+      "id": "3b071b5d-0bfd-4b37-a528-5b8aa8a05e66",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "e13d239569877c7217e1b2bd4d162efe05a140779f93e0f9887a73a36cb37535",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T10:15:55.509Z",
+      "finishedAt": "2026-11-24T10:15:59.418Z",
+      "durationMs": 3832.910167,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/slope-source-detail-20261124a.json",
+        "sha256": "2a0757d35e32bcf3dc9898d525cf0c106fd91219db005b28777369401515339d"
+      }
+    },
+    {
+      "id": "312a2e1d-b446-4c7e-bac2-e987ed21d873",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "a9a19ced087a6554abadf8e88e3e129178f89209941f0bc547b8e94ac8d9bd3a",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T10:17:43.682Z",
+      "finishedAt": "2026-11-24T10:17:55.862Z",
+      "durationMs": 12141.403708,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/slope-author-20261124b.json",
+        "sha256": "f10910a8abe40b1b5cce367381694af7a4f045e289915853b3126fb6fffecd24"
+      }
+    },
+    {
+      "id": "23741e6a-69bd-4588-8b18-7fdaead0bba9",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "918f95d061c3d860e55bbaeb59733ed949a19a4c0bc949b4958cbc5032343d66",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T10:19:17.177Z",
+      "finishedAt": "2026-11-24T10:19:20.618Z",
+      "durationMs": 3396.8491669999994,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/slope-source-20261124b.json",
+        "sha256": "322867f8bb6ad28b969c9f6209c5531d5e533b029f2b00e688e67b6657a63164"
+      }
+    },
+    {
+      "id": "28075f47-1304-4913-9543-504629992e52",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "c593c1a34418dcf75fd5281e61f8d8f85d4e9f7881104c502e35103fa3c52011",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-24T10:22:13.781Z",
+      "finishedAt": "2026-11-24T10:24:52.744Z",
+      "durationMs": 158927.10225000003,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/slope-studio-20261124b.json",
+        "sha256": "e228b8a421ab8acbdc1e799b898329f5db292b22cc1374154808500896e982ef"
+      }
+    },
+    {
+      "id": "d1b53bef-3485-4598-b7ab-2766fa207101",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "76c41401a861fc9df7c54b9fbaea0ab7d732178a4496affbedde8779b03d0474",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T10:27:52.551Z",
+      "finishedAt": "2026-11-24T10:28:01.742Z",
+      "durationMs": 9146.135041999998,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/slope-author-20261124c.json",
+        "sha256": "d11aa333971fa07b2108704cda2a22eef977a172fdc87e327e9d3ed82ad9f5bf"
+      }
+    },
+    {
+      "id": "56ec866f-2dde-46f0-bcaa-fbe4773956f9",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "393daa4ad04b46509bac1b17c70ea83343a5a68b156e92a5d0d290949d6a14b6",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-24T10:28:06.436Z",
+      "finishedAt": "2026-11-24T10:32:28.015Z",
+      "durationMs": 261556.03916699998,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/slope-studio-20261124c.json",
+        "sha256": "34724decb5a73f8cf611ab4ce604d43a4edfdb0c3e9179b7d609e2bf8d36e2f5"
+      }
+    },
+    {
+      "id": "1f2803ab-c221-43ef-8fc8-4308dc9efa29",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "303615e846720df1c3132858bab8211e1d21c5ba037e29b817ee74f7681670e2",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T10:32:41.070Z",
+      "finishedAt": "2026-11-24T10:32:44.906Z",
+      "durationMs": 3770.5295,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/slope-camera-red-20261124c.json",
+        "sha256": "a431b36b6cf7ea1886dc9c6b8daf33c181532e184776906b8294ce1ebb95bf30"
+      }
+    },
+    {
+      "id": "ee5718be-7431-4229-a03b-961c16dbfc44",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "3011366bb5991b8c877da7edd916a0553c6e4b2869478190bbf3bfa7452bf2fc",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T10:32:52.688Z",
+      "finishedAt": "2026-11-24T10:33:23.258Z",
+      "durationMs": 30527.480917,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/slope-author-20261124d.json",
+        "sha256": "3fbfbf70aefcab8a669c22a80b9b8481a133df4e030c7a5db92570067b5a14ae"
+      }
+    },
+    {
+      "id": "6d16027e-7b9f-45aa-ab5d-3d17f58d1113",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "5dd6524417b6c4c4c207761263c426f44b77b65db67272381a7bd2423ad1c2b0",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T10:33:19.574Z",
+      "finishedAt": "2026-11-24T10:33:23.474Z",
+      "durationMs": 3815.318666,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/slope-source-20261124d.json",
+        "sha256": "a843d1e243a50b7dc9001489efbfc50c7ecb77b558416ec926e8f4f828c25c41"
+      }
+    },
+    {
+      "id": "0203f974-0c2b-4609-ac4d-f2afd96424ba",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "84d3aec01f68721073bca46f41c8d8d017d57f0465187ab60b4375647a01f95e",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T10:33:33.752Z",
+      "finishedAt": "2026-11-24T10:33:37.075Z",
+      "durationMs": 3288.3340829999997,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/slope-source-20261124d2.json",
+        "sha256": "643ae6a924394f92c4e64a65f014e2b25e3892b114702ca8f8147209cfaa12c0"
+      }
+    },
+    {
+      "id": "a92a8377-4cf7-4141-9858-597b02c7ea06",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "b61cdf24aa8173ae743e2390494e7024135bf0e90b2941eb66561540049c265c",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-24T10:33:42.675Z",
+      "finishedAt": "2026-11-24T10:35:04.203Z",
+      "durationMs": 81488.553458,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/slope-studio-20261124d.json",
+        "sha256": "8c10edbce20b969fb1fc820d585853b5ccef40d1607fb3871324b4f96ef43950"
+      }
+    },
+    {
+      "id": "acad2694-2b79-43b7-9c36-052a3e03cc59",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "4c798960e4c7f9e7094691bc6681540c18e3ac2004f6d18c3a0e7179bb806db8",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T10:35:09.545Z",
+      "finishedAt": "2026-11-24T10:35:23.795Z",
+      "durationMs": 14229.951540999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/slope-import-20261124d.json",
+        "sha256": "944f4264d7968f06b0788f7b56341672d18e966f690079fa2e4de61e03dc4291"
+      }
+    },
+    {
+      "id": "a11bf8cd-e3ae-4819-8fc8-a8f6b3879823",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "0e3fee4a2e6892f39e42fe2a8bfa7f8a6980e2375478f5e11c14d6ab4547471c",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T10:35:31.885Z",
+      "finishedAt": "2026-11-24T10:35:41.099Z",
+      "durationMs": 9187.003541,
+      "exitCode": 2,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/slope-editor-20261124d.json",
+        "sha256": "f9895978bc36f2096727883b11469a6e014ae1d7bfe035dadd281037473bc98f"
+      }
+    },
+    {
+      "id": "3ce73cf1-8e49-4da1-9ff5-527d8bf6af95",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "0e3fee4a2e6892f39e42fe2a8bfa7f8a6980e2375478f5e11c14d6ab4547471c",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T10:36:17.816Z",
+      "finishedAt": "2026-11-24T10:36:34.339Z",
+      "durationMs": 16460.46575,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/slope-editor-20261124e.json",
+        "sha256": "72fd104f91b8804861233990657a8ba6c66e432fdbab3a77620ba5df117d075d"
+      }
+    },
+    {
+      "id": "6eecb06c-d3e0-4227-836b-596db7f16dc3",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "20485823268158eb18699bca73564bd8c7ef88ec0c29af538a816eecf4b00517",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T10:36:42.693Z",
+      "finishedAt": "2026-11-24T10:36:58.774Z",
+      "durationMs": 16058.531749999998,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/slope-font-20261124a.json",
+        "sha256": "2cbc4ec1861b2b0d137d1ee3512f9dabb824317c6901c5d24d3e1d36abc64457"
+      }
+    },
+    {
+      "id": "764b3ec6-f664-42b8-8351-3587e6a8d8a4",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "5f049fb6c545b54fa0de1247430f9ddcb14c52db16cb99cc14fe3cd0b59d8f44",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T10:37:06.183Z",
+      "finishedAt": "2026-11-24T10:39:17.870Z",
+      "durationMs": 131663.741125,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/slope-all-editor-20261124a.json",
+        "sha256": "ff071225ee57a414f05130f4251d6185475300ee98abdd5ece0f99db7d36ff55"
+      }
+    },
+    {
+      "id": "29c9bbad-8f67-4a9e-8981-892f11177542",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "39f36950eab0c24993b9edfbfb02d0327a641c5a15dfce30f02b35db0d056b5e",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T10:39:40.555Z",
+      "finishedAt": "2026-11-24T10:40:39.755Z",
+      "durationMs": 59146.795583,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/slope-play-20261124a.json",
+        "sha256": "91fb82582936800721cd62a5424829c27055053daf38e2243a2a4cceec304ca8"
+      }
+    },
+    {
+      "id": "8e776851-bc1f-4dac-8e42-d4c2b9e4c9b0",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "38c17db7f3b70066881164aff4736c91c01999f8baf400620c32145047c87937",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-24T10:40:51.593Z",
+      "finishedAt": "2026-11-24T10:41:07.759Z",
+      "durationMs": 16132.432499999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/slope-gpu-20261124a.json",
+        "sha256": "3a3d7842a458e64c7e6fa85774c25c1cbd081113bb1de0e1ae1d1a5406fc4d96"
+      }
+    },
+    {
+      "id": "fc9f6d00-9ec0-4974-ae86-7ed242fa7fe6",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "4c798960e4c7f9e7094691bc6681540c18e3ac2004f6d18c3a0e7179bb806db8",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T10:42:15.678Z",
+      "finishedAt": "2026-11-24T10:42:38.159Z",
+      "durationMs": 22443.229583,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/slope-light-import-20261124b.json",
+        "sha256": "325f6d612c945cded62be9b99d3da3e6f73ec42453b84a9303412eed3f7ee4f6"
+      }
+    },
+    {
+      "id": "46917941-26e4-43a9-9fa0-3eba491a300c",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "92a18ac754ccfb8644e5592494a2e11cd44e33912f260b733bdf18d1ea9f9d78",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-24T10:42:42.497Z",
+      "finishedAt": "2026-11-24T10:42:52.590Z",
+      "durationMs": 10067.238333,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/slope-gpu-20261124b.json",
+        "sha256": "8fb5b63605cb8e9cfd5b8d5ba4d005e947c52bba235ec5f8ea13584c3d6fbb64"
+      }
+    },
+    {
+      "id": "7e50e274-03df-4f28-94be-2a720b2c600b",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "0e3fee4a2e6892f39e42fe2a8bfa7f8a6980e2375478f5e11c14d6ab4547471c",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T10:43:09.436Z",
+      "finishedAt": "2026-11-24T10:43:18.371Z",
+      "durationMs": 8912.960458,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/slope-light-editor-20261124b.json",
+        "sha256": "65ffd5ab1c0abfd47dc50406f9246d2f1073cc1599927d69ae7ddb1836578012"
+      }
+    },
+    {
+      "id": "81bd35b1-649e-4310-988b-0e588bc35a5c",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "f9a3d53fe84df4e5c5631de00858c9934b932d1fa97891b401d00c8e803ff880",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T10:43:33.051Z",
+      "finishedAt": "2026-11-24T10:43:44.125Z",
+      "durationMs": 11049.767042000001,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/slope-light-play-20261124b.json",
+        "sha256": "8f86ce787a7e2a060646203341d0362ae8c8162d46a5e00129462c2411ed5132"
+      }
+    },
+    {
+      "id": "317d1ec4-642b-4d7e-91b5-db06a4777c19",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "49b978df2fc9e37f8144ce2b1c619c61410d0ef52e49d84957662f594cdb1e94",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-24T10:44:24.827Z",
+      "finishedAt": "2026-11-24T10:44:25.335Z",
+      "durationMs": 457.5364579999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/slope-font-verify-20261124a.json",
+        "sha256": "885e6187b3a32b98d4c2b52f3eec73b85058a15950eb906e2b890c29836a20f0"
+      }
+    },
+    {
+      "id": "19e6f939-86c4-4694-a47d-ca4bd28c1f60",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "30406e3488756a039a5b19378fc8bde22b6214709fdea6d92bb5cb4f13c45731",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-24T10:44:47.241Z",
+      "finishedAt": "2026-11-24T10:44:48.555Z",
+      "durationMs": 1238.180292,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/slope-public-checks-20261124a.json",
+        "sha256": "72cfd0ace30de9397e12d02928d54a4d86d861123ca82b5f18ff10c6fc4e94a3"
+      }
     }
   ]
 }

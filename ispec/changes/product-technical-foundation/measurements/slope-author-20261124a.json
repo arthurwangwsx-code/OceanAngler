@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "2151c783-29ce-4589-9ca6-3e249033d6d9",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "4bad2707c0b953fe6b5a8eb73c49739d826a69e6d6876c5e9ee599dbb4786759",
+    "category": "compile",
+    "executable": "python3",
+    "startedAt": "2026-11-24T10:12:02.212Z",
+    "finishedAt": "2026-11-24T10:12:12.994Z",
+    "durationMs": 10732.823375,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      "tools/art.py",
+      "build",
+      "--asset",
+      "continental-slope",
+      "--label",
+      "slope20261124a",
+      "--no-preview"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    "tools/art.py",
+    "build",
+    "--asset",
+    "continental-slope",
+    "--label",
+    "slope20261124a",
+    "--no-preview"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T10:12:02.212Z",
+  "finishedAt": "2026-11-24T10:12:12.994Z",
+  "durationMs": 10732.823375
+}

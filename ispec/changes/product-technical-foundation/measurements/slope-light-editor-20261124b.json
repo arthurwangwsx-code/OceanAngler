@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "7e50e274-03df-4f28-94be-2a720b2c600b",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "0e3fee4a2e6892f39e42fe2a8bfa7f8a6980e2375478f5e11c14d6ab4547471c",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-24T10:43:09.436Z",
+    "finishedAt": "2026-11-24T10:43:18.371Z",
+    "durationMs": 8912.960458,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      "tools/game.py",
+      "tests",
+      "--test-filter",
+      "OceanAngler.Tests.SlopeHabitatTests"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    "tools/game.py",
+    "tests",
+    "--test-filter",
+    "OceanAngler.Tests.SlopeHabitatTests"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T10:43:09.436Z",
+  "finishedAt": "2026-11-24T10:43:18.371Z",
+  "durationMs": 8912.960458
+}
