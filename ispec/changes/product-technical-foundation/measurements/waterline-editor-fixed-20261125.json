@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "74c5c167-25bf-4533-bace-8f1e7a67861c",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "b5646af55699266001c04afc409efa86758e40f51b4175f24de4c1afaa87a5b6",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-24T22:50:29.040Z",
+    "finishedAt": "2026-11-24T22:50:41.967Z",
+    "durationMs": 12879.538333,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      "tools/game.py",
+      "tests",
+      "--test-platform",
+      "EditMode",
+      "--test-filter",
+      "WaterlinePresentationTests;EncounterGeometryTests",
+      "--label",
+      "waterlineeditor20261125b"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    "tools/game.py",
+    "tests",
+    "--test-platform",
+    "EditMode",
+    "--test-filter",
+    "WaterlinePresentationTests;EncounterGeometryTests",
+    "--label",
+    "waterlineeditor20261125b"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T22:50:29.040Z",
+  "finishedAt": "2026-11-24T22:50:41.967Z",
+  "durationMs": 12879.538333
+}

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-24T22:39:43.773Z",
+  "generatedAt": "2026-11-24T23:28:12.672Z",
   "source": {
     "change": "product-technical-foundation",
     "cliVersion": "1.0.20",
@@ -26,16 +26,16 @@
     "firstAttemptPassedCount": 1,
     "firstAttemptEvaluatedCount": 1,
     "firstAttemptPassRate": 1,
-    "elapsedMs": 155547918,
-    "observedStepWallMs": 121946364,
+    "elapsedMs": 158456880,
+    "observedStepWallMs": 124855326,
     "unattributedMs": 33601554,
-    "unattributedRate": 0.21602059630267761,
-    "commandMeasurementCount": 1220,
-    "commandSucceededCount": 1088,
-    "commandFailedCount": 132,
-    "commandSuccessRate": 0.8918032786885246,
-    "commandDurationMs": 46052216.36449702,
-    "gateCheckCount": 55,
+    "unattributedRate": 0.2120548757491628,
+    "commandMeasurementCount": 1254,
+    "commandSucceededCount": 1114,
+    "commandFailedCount": 140,
+    "commandSuccessRate": 0.8883572567783095,
+    "commandDurationMs": 46836748.98533203,
+    "gateCheckCount": 56,
     "repairCount": 0,
     "targetMs": 3600000,
     "targetMet": null,
@@ -52,7 +52,7 @@
     },
     "entryChecks": {
       "status": "complete",
-      "recorded": 55,
+      "recorded": 56,
       "expectedAtLeast": 2
     },
     "runAttribution": {
@@ -62,7 +62,7 @@
     },
     "commandMeasurements": {
       "status": "partial",
-      "recorded": 1220
+      "recorded": 1254
     },
     "waitingTime": {
       "status": "unavailable"
@@ -78,14 +78,14 @@
   "runs": [],
   "runMetrics": {
     "version": 1,
-    "generatedAt": "2026-11-24T22:39:43.773Z",
+    "generatedAt": "2026-11-24T23:28:12.672Z",
     "runs": [],
     "unattributed": {
       "unboundAttempts": 2,
       "unknownRunAttempts": 0,
-      "unboundCommands": 1220,
+      "unboundCommands": 1254,
       "unknownRunCommands": 0,
-      "unboundGateChecks": 55,
+      "unboundGateChecks": 56,
       "unknownRunGateChecks": 0,
       "repairsWithoutRunBinding": 0,
       "unknownRunRepairs": 0
@@ -20019,6 +20019,652 @@
         "path": "measurements/fish-motion-final-record-integrity-20261125.json",
         "sha256": "f6117a0d377d0732d85dda87bfa8e1da55767429335a04b34d05fce41912213c"
       }
+    },
+    {
+      "id": "d4d7a3be-a8d0-4b33-81e0-31b952e64d0d",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "2e97c29b9d1d08df8b1146325dc5872838f81bb0f1f998b69afd83c29362a01c",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T22:47:50.738Z",
+      "finishedAt": "2026-11-24T22:48:08.608Z",
+      "durationMs": 17800.177292,
+      "exitCode": 2,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/waterline-editor-first-20261125.json",
+        "sha256": "ccaafe2c43a264b948b059ae7f01acb1f4f1ad01db418bbacd39b78b5ba82ef9"
+      }
+    },
+    {
+      "id": "74c5c167-25bf-4533-bace-8f1e7a67861c",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "b5646af55699266001c04afc409efa86758e40f51b4175f24de4c1afaa87a5b6",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T22:50:29.040Z",
+      "finishedAt": "2026-11-24T22:50:41.967Z",
+      "durationMs": 12879.538333,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/waterline-editor-fixed-20261125.json",
+        "sha256": "020916b71e904a1493860466f585d464b814844b7485d26861221fa0ffb4360d"
+      }
+    },
+    {
+      "id": "4a52add5-cd5d-426a-add0-e4a1dfb2d903",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "e28e5779ad03375e16c8f92b6a26ff9a3b5be34884fc170f8da8b85f85a2b4e8",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T22:51:36.236Z",
+      "finishedAt": "2026-11-24T22:52:21.368Z",
+      "durationMs": 45112.286625,
+      "exitCode": 2,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/waterline-playmode-first-20261125.json",
+        "sha256": "1b0f0a33a9b0980cd3d79cb67b94e2569c2a3ec5c9ed8a96774d5bfef4aa0e16"
+      }
+    },
+    {
+      "id": "da9dca9e-7be6-4779-87c4-58a3033c065f",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "65b4573f8e44827baa3c218dada50cab58b09f4ee4b7b78955fc26d9e13f5aad",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T22:53:48.972Z",
+      "finishedAt": "2026-11-24T22:54:30.996Z",
+      "durationMs": 41976.401999999995,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/waterline-playmode-second-20261125.json",
+        "sha256": "bab9f4d9643645805083b8bebc8182fd47b06a5bbd78f343da8840b1703787e3"
+      }
+    },
+    {
+      "id": "8440265e-b644-4941-928d-99e61e8133a5",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "c6aed07ab499f1a2e42c972ca15174aff12ccafcc37051207a7b74bab9dc68a5",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T22:54:58.270Z",
+      "finishedAt": "2026-11-24T22:55:07.272Z",
+      "durationMs": 8969.609292000001,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/waterline-gpu-first-20261125.json",
+        "sha256": "8005fd96c93aa37c6b0c6dc7d4aea8f804ada7550366a72a06be693b2a455720"
+      }
+    },
+    {
+      "id": "cc619dbd-7b17-4916-807b-bcf94b2d992e",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "1b3c355255adb55341e05ff168fd62a2659c2e70a0cefb5b23823fbdfe94289f",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T22:55:52.592Z",
+      "finishedAt": "2026-11-24T22:56:17.736Z",
+      "durationMs": 25058.624167,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/waterline-gpu-second-20261125.json",
+        "sha256": "e380a5af2a64c5a774b81525438473f7458971befab59f519c1bc8e19d2513fa"
+      }
+    },
+    {
+      "id": "cce9736b-2455-421e-8111-ab348f49b188",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "bdcc0f4ebed69114f72cfee5892ca8e622fe00d20ddb6830ead2079e069f0478",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T22:57:14.034Z",
+      "finishedAt": "2026-11-24T22:57:24.853Z",
+      "durationMs": 10792.958833,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/waterline-editor-final-20261125.json",
+        "sha256": "19f3f4f96b29f1a968efe56a3d750d16d621aa4885aa8fff06a6976441a35a41"
+      }
+    },
+    {
+      "id": "02e55f0b-afed-4a2d-82dc-8790bf763b98",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "4d92318542078c0b57a5a2674cdf21112ea9ca0e176e5bc2364db2a7f625a657",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T22:57:44.968Z",
+      "finishedAt": "2026-11-24T22:57:56.162Z",
+      "durationMs": 11159.526,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/waterline-gpu-framed-20261125.json",
+        "sha256": "d234fac00e93747391275cbc52615c0ac1443c67e2c63ffc62a6211b9b2b3caa"
+      }
+    },
+    {
+      "id": "b30315dc-9f9e-4286-bc7e-a3e15822257e",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "07958b669db0e9c35d3505147fde1c6004620d56244a1ade643e3a90c86b36a0",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T22:58:56.672Z",
+      "finishedAt": "2026-11-24T22:59:10.031Z",
+      "durationMs": 13327.54025,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/waterline-gpu-current-20261125.json",
+        "sha256": "64a9ae360d8f52f5a47c9e1e6edaadcf315f91fd1b04a7342c9870a53b046636"
+      }
+    },
+    {
+      "id": "9eda9b60-30d6-41fc-91b5-69962e8271a3",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "b8eb77e1d3735eb1a841859dbd273b1961b395bee9bf0a504543c57d503a7d1b",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T22:59:28.218Z",
+      "finishedAt": "2026-11-24T23:00:26.957Z",
+      "durationMs": 58714.343875,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/waterline-playmode-final-20261125.json",
+        "sha256": "3143296e359c90173bd574cb4c601e23a1b82d2e1eb2e1105f144bc6b156a1c1"
+      }
+    },
+    {
+      "id": "51359d7a-50aa-422f-8ca8-2d8bdb426c0b",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "48d9bc2f426bd53c6ee646374f8e690eb26fc7ae7c1ecc344726d55500acd09a",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T23:00:33.309Z",
+      "finishedAt": "2026-11-24T23:00:43.234Z",
+      "durationMs": 9900.238916999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/waterline-editor-frozen-20261125.json",
+        "sha256": "28b71d260a2c83fe4feac3656b6bef467602d03fe5a5435db8783d9e42e9a6c4"
+      }
+    },
+    {
+      "id": "4bbae613-7a58-4033-9e7e-5f9737f7c1e5",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "1b9b750d007c851f920bb86ccb95b6c8d0649e1d11d26d4708a2736b0478955e",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-24T23:01:25.909Z",
+      "finishedAt": "2026-11-24T23:01:26.695Z",
+      "durationMs": 762.4352920000001,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/waterline-source-validate-20261125.json",
+        "sha256": "5df47734eb057465759ef33b54afa578d924900a3e3bf4b11fbaac8a766fa1a7"
+      }
+    },
+    {
+      "id": "3fdd3ea9-bf01-4c72-8a27-c00bd90ef3c2",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d89602c770c16a35b6c5da9a9da4ae967807390aa462f4349604d0463de12f51",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-24T23:01:27.104Z",
+      "finishedAt": "2026-11-24T23:01:27.762Z",
+      "durationMs": 634.4924169999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/waterline-source-public-audit-20261125.json",
+        "sha256": "171860027b7526c3404d9700e5dddf4d7b4c0f41b20661c47ec3db6bdc65df92"
+      }
+    },
+    {
+      "id": "d17affaf-ba59-42ef-ba72-632c061156b3",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d3367314c7b97c8c7dbd48aed6cc9a7027b4f6c84cc7cf79b0cbf6cf6374f5ab",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T23:01:28.186Z",
+      "finishedAt": "2026-11-24T23:01:36.083Z",
+      "durationMs": 7871.083125,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/waterline-retention-before-20261125.json",
+        "sha256": "150273e7326edab1e6d949106b89ae28fb60f42c329d22f747e92c4176b1c061"
+      }
+    },
+    {
+      "id": "69352f9b-fb8c-4ed9-b9df-f57e8fe2bf53",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "2bf5bdcdc8b19666e9be52e6f452ad5e7a3a3292b1b24c08aedaa2b336878ae7",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T23:02:28.599Z",
+      "finishedAt": "2026-11-24T23:04:40.835Z",
+      "durationMs": 132208.15099999998,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/waterline-native-build-20261125.json",
+        "sha256": "e04392347f4050d0572251c00c7856f7056bfcd5fe9e473e5c50cf48c82a8a48"
+      }
+    },
+    {
+      "id": "ed98f853-1dbb-426c-ae16-bb3460198e72",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "78ab065e2be4dd9a7b289765bc01a9f2c12242a7591da0428fe0e305bc3240e1",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T23:04:54.510Z",
+      "finishedAt": "2026-11-24T23:04:54.705Z",
+      "durationMs": 165.7400829999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/waterline-assets-identity-20261125.json",
+        "sha256": "5ac2ddf1d2ab79ed9ae0044c12e8b2d1538d514f728ba8ab259eb031b9b0bc4e"
+      }
+    },
+    {
+      "id": "3d02225f-4bd4-4377-bbf4-eca024992216",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "a71fbda175f120cb41bdc5bb8535d4304681e9aba747d625007157366c043395",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-24T23:05:01.554Z",
+      "finishedAt": "2026-11-24T23:06:02.299Z",
+      "durationMs": 60713.633875,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/waterline-phone-20261125.json",
+        "sha256": "b44a00b0011d7134abef7a9e9acd2a4b89c007416ed4c1ae35d1d0da16020968"
+      }
+    },
+    {
+      "id": "0c4d318f-9bfc-47d6-888b-d277e71d8824",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d171f85b6880c0ef056bb9905d5a292741d41a8897faf9d0f87d6e9e1f87e85e",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T23:07:54.399Z",
+      "finishedAt": "2026-11-24T23:08:03.144Z",
+      "durationMs": 8719.322084,
+      "exitCode": 2,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/waterline-splash-red-20261125.json",
+        "sha256": "7002070893d22016c4f9556b35810ca157a60a2a783ebdcbe09fb6d380e5bf55"
+      }
+    },
+    {
+      "id": "a8372df8-19c2-4a37-ad16-1d8c7afbdcc8",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "3d2f58a0bd75f12d4c27f7d17d70b76abd0d905c69fa4ad3358c2b4a3eabbb55",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T23:08:58.812Z",
+      "finishedAt": "2026-11-24T23:09:09.963Z",
+      "durationMs": 11105.619834000001,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/waterline-splash-green-20261125.json",
+        "sha256": "196305f06b311411cfe9fd5c6533142b49ceb696a5ba66bbb676b745b8c8c15c"
+      }
+    },
+    {
+      "id": "ca48e5a0-68fb-4551-a29f-5b6e84c4524a",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "85cd4c156dbff4975684f87139ad7ed81ec76acf47bc67559d3d8b6844ca3c1e",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T23:10:02.221Z",
+      "finishedAt": "2026-11-24T23:10:13.207Z",
+      "durationMs": 10942.193458,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/waterline-gpu-finite-inputs-20261125.json",
+        "sha256": "432b0847a1333920f2f49d56fac56680adcdf990b31432f7d8a9069a2c5b2a43"
+      }
+    },
+    {
+      "id": "06fe00ac-6a99-4180-873b-83083bf5708f",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "9b131e61a709dd23a078926accea1edcf73ef5eb0d9d030dfb8b5ca10bcbfd67",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T23:10:23.462Z",
+      "finishedAt": "2026-11-24T23:11:17.200Z",
+      "durationMs": 53714.341167,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/waterline-splash-playmode-20261125.json",
+        "sha256": "aa69caaeead108ca762a6ec0c72a7c0a7c906f317664d5a53fc1b48d32e070c0"
+      }
+    },
+    {
+      "id": "5fd54b9b-e132-4794-af85-8d3ff7a8c206",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "9c4637b8847468e4451100269e72036ee7b85c908542c45d278c8b56407f9767",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T23:11:45.613Z",
+      "finishedAt": "2026-11-24T23:11:52.606Z",
+      "durationMs": 6970.173624999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/waterline-retention-after-a-20261125.json",
+        "sha256": "f493cb8e065e80dff943f2c3bdd6f30a6624f71ad493bf1b56a1bbcce752d899"
+      }
+    },
+    {
+      "id": "0ebbc61c-251b-4459-badc-39c51fe22d4c",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "eafeade6990d3312ce8843a9996aa0568b69d71ba9a619ad712079b20e03c101",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T23:11:52.975Z",
+      "finishedAt": "2026-11-24T23:11:59.832Z",
+      "durationMs": 6820.768875,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/waterline-retention-before-b-20261125.json",
+        "sha256": "9bd3e1ceab7fedcae8a48c8d78b1b98d7a008fc3a5f43e5ad3b62665ee8335ac"
+      }
+    },
+    {
+      "id": "4ff38bfb-a3ce-4558-a280-91ddc0cb454f",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "075e37f95fbb7fc314b7cdfd08e433a24cedbe0eb47862e4788a4c1e02e7b447",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T23:12:22.269Z",
+      "finishedAt": "2026-11-24T23:14:11.115Z",
+      "durationMs": 108822.072167,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/waterline-native-finite-build-20261125.json",
+        "sha256": "dbb5dfcab8bb5496f178439dc96e02ce40c4c3b285e979d2a26d1b6b51f7d6b8"
+      }
+    },
+    {
+      "id": "9219c3f3-2ead-45dc-81f4-f0fd1dcb534e",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d829f4125647de38552a60e67a07f3d8e7d916879e981e1965d9ca34926a8f14",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T23:20:00.513Z",
+      "finishedAt": "2026-11-24T23:20:08.315Z",
+      "durationMs": 7768.904667,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/waterline-retention-after-b-20261125.json",
+        "sha256": "3f1da94044de2fd6f02e87aa7e0493b740b84c3074c4a9d67e7db6bc0c3dcbbc"
+      }
+    },
+    {
+      "id": "ba0dafbe-86a3-4a39-89f1-f6a1351e2cdf",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "264a254918e35c7d8f922a2d853525c53b756bee98f04aed57e8e5f75f346b86",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T23:20:08.692Z",
+      "finishedAt": "2026-11-24T23:20:16.338Z",
+      "durationMs": 7618.259834,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/waterline-retry-retention-before-20261125.json",
+        "sha256": "d5550495845ce4d7a7911f18e472f431da73241077572e951125b5525f856634"
+      }
+    },
+    {
+      "id": "0d10c66e-7d8c-40b5-9dd3-11f93530395f",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "41002e04cf5f713ce02c250232e8c032a5de3d80ad435e709ace6a483496d542",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-24T23:20:26.227Z",
+      "finishedAt": "2026-11-24T23:21:15.569Z",
+      "durationMs": 49305.694125,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/waterline-finite-phone-retry-20261125.json",
+        "sha256": "6771b1cd015009253f4c8d265159b77b0de4b98e9bf06c951072b5c806fe2590"
+      }
+    },
+    {
+      "id": "89597b19-80f9-475f-bd1b-c68e17887f32",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d82efdd29d45fa66bae45d0d842c07419b3c431235b12b504b10cffc5aa22eb5",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T23:21:23.350Z",
+      "finishedAt": "2026-11-24T23:21:23.439Z",
+      "durationMs": 56.10420800000003,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/waterline-finite-phone-proof-20261125.json",
+        "sha256": "95e415114b55650a8bc1bb32c710e23b184237f3bdea27d9abbbc644fb53b3ab"
+      }
+    },
+    {
+      "id": "7f47a3b1-0166-41da-a3a4-818443271f23",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "2fe18fbeb23bcf57b3ab23ca60e45d1e5a2e6c772fa7c4712adeb318a05f65e4",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-24T23:21:56.382Z",
+      "finishedAt": "2026-11-24T23:22:41.808Z",
+      "durationMs": 45395.270124999995,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/waterline-finite-pad-20261125.json",
+        "sha256": "6650895721ebacc4d213c13ff856f7df06ef4534ad87cc14d0715af5e2e0a0d9"
+      }
+    },
+    {
+      "id": "e0a043de-0031-4fa6-a52f-a1faea29658c",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "a9a44f73663982d0fc1c2673784d9a384f5edf590ed7f88217ba56304f13223d",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T23:22:59.948Z",
+      "finishedAt": "2026-11-24T23:23:00.057Z",
+      "durationMs": 76.27783299999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/waterline-finite-pad-proof-20261125.json",
+        "sha256": "46ba76799016a5c2e396e4f02c62585314e0e147564af5f035c2727175ff3c1b"
+      }
+    },
+    {
+      "id": "4cba7e90-4f7f-4993-82ea-0e53df4af6e6",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "3b3cffe313c6f31aeb11a5bd433f48eb153d714e1248eab6b6ed0489a46d95b4",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T23:23:00.445Z",
+      "finishedAt": "2026-11-24T23:23:08.337Z",
+      "durationMs": 7868.835,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/waterline-retry-retention-after-20261125.json",
+        "sha256": "4a88e08c8c8f5371b9f44ffa82180f2a97cb3792cbf981db5dffb9d8572ea94d"
+      }
+    },
+    {
+      "id": "9e27c54d-5a1d-496e-bcf9-2b892d43c42a",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "1b9b750d007c851f920bb86ccb95b6c8d0649e1d11d26d4708a2736b0478955e",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-24T23:27:14.846Z",
+      "finishedAt": "2026-11-24T23:27:15.551Z",
+      "durationMs": 661.6098330000001,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/waterline-final-public-validate-20261125.json",
+        "sha256": "1212994a464db912f7517700cb117c3b3a72f6cdebe099a6b13b9fcc554181e4"
+      }
+    },
+    {
+      "id": "0addb1ba-a5e3-48da-ac6a-7752873bb424",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d89602c770c16a35b6c5da9a9da4ae967807390aa462f4349604d0463de12f51",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-24T23:27:15.928Z",
+      "finishedAt": "2026-11-24T23:27:16.528Z",
+      "durationMs": 575.185333,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/waterline-final-public-audit-20261125.json",
+        "sha256": "5e9f4e219d9c596fbeef2268fff484bb71b8a3080f80ec5b091c35bbcb687049"
+      }
+    },
+    {
+      "id": "97817c3e-7028-4f37-b54d-a0a537b1e18b",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "b444b2c840c2c4bf19e33f62288a9bff57f4e8fce2e25faa8392fcec9e9fe37a",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T23:27:16.896Z",
+      "finishedAt": "2026-11-24T23:27:16.984Z",
+      "durationMs": 65.207291,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/waterline-final-record-integrity-20261125.json",
+        "sha256": "bb3bd4dac593ec0e972b19cfe166efa0cfc14935d05ee95cde320d36121f9e03"
+      }
     }
   ],
   "measurementAudit": {
@@ -20026,14 +20672,20 @@
     "scope": "declared-command-receipts-only",
     "runId": null,
     "complete": false,
-    "registered": 1215,
-    "completed": 1220,
-    "unfinishedIds": [],
+    "registered": 1250,
+    "completed": 1254,
+    "unfinishedIds": [
+      "539d2470-da3f-4a9d-941c-e4c4a34b48da"
+    ],
     "legacyMeasurementIds": [],
     "legacyPolicy": "unverified-format-without-start-records-not-reconstructed",
     "issues": [
       {
         "code": "expectation-not-declared"
+      },
+      {
+        "code": "completion-not-observed",
+        "measurementId": "539d2470-da3f-4a9d-941c-e4c4a34b48da"
       },
       {
         "code": "receipt-missing-or-invalid",
@@ -23320,35 +23972,35 @@
   "commands": [
     {
       "category": "test",
-      "count": 499,
-      "succeededCount": 427,
-      "failedCount": 72,
-      "successRate": 0.8557114228456913,
-      "durationMs": 16202735.822991997
+      "count": 524,
+      "succeededCount": 444,
+      "failedCount": 80,
+      "successRate": 0.8473282442748091,
+      "durationMs": 16588189.89966
     },
     {
       "category": "compile",
-      "count": 285,
-      "succeededCount": 273,
+      "count": 287,
+      "succeededCount": 275,
       "failedCount": 12,
-      "successRate": 0.9578947368421052,
-      "durationMs": 12374510.715839
+      "successRate": 0.9581881533101045,
+      "durationMs": 12615540.939006
     },
     {
       "category": "e2e",
-      "count": 268,
-      "succeededCount": 221,
+      "count": 271,
+      "succeededCount": 224,
       "failedCount": 47,
-      "successRate": 0.8246268656716418,
-      "durationMs": 17405231.001712006
+      "successRate": 0.8265682656826568,
+      "durationMs": 17560645.59983701
     },
     {
       "category": "lint",
-      "count": 168,
-      "succeededCount": 167,
+      "count": 172,
+      "succeededCount": 171,
       "failedCount": 1,
-      "successRate": 0.9940476190476191,
-      "durationMs": 69738.82395399998
+      "successRate": 0.9941860465116279,
+      "durationMs": 72372.54682899997
     }
   ],
   "gateChecks": [
@@ -23791,6 +24443,14 @@
       "checkedAt": "2026-11-24T21:21:24.796Z",
       "durationMs": 139.94191700000005,
       "outcome": "accepted"
+    },
+    {
+      "stageId": "apply",
+      "runId": null,
+      "operation": "start",
+      "checkedAt": "2026-11-24T22:42:02.998Z",
+      "durationMs": 135.96320799999995,
+      "outcome": "accepted"
     }
   ],
   "timing": {
@@ -23798,8 +24458,8 @@
     "finishedAt": null,
     "status": "in_progress",
     "measurementBasis": "before-first-entry-gate",
-    "elapsedMs": 155547918,
-    "observedStepWallMs": 121946364,
+    "elapsedMs": 158456880,
+    "observedStepWallMs": 124855326,
     "unattributedMs": 33601554,
     "waitingMs": null,
     "retryAttemptMs": 0,

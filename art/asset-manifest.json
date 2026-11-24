@@ -2651,6 +2651,88 @@
         }
       ],
       "note": "Actual frozen5a5936c native player.15-frame contact sheets and selected full-size originals viewed.4-second screen recording with selected1s/3s frames reviewed, not full dynamic natural-art or performance qualification. No device identifiers or logs."
+    },
+    {
+      "id": "waterline-casting-reviewed-previews",
+      "author": "OceanAngler contributors",
+      "license": "MIT",
+      "redistribution": true,
+      "sourceRedistribution": true,
+      "canModify": true,
+      "acquiredAt": "2026-11-25",
+      "source": "Own imported assets rendered by isolated Unity Metal fixtures and own native iPhone/iPad Simulator UI; bundled OFL font; no reference photos or personal media",
+      "status": "SCOPED_SIMULATOR_UI_REVIEW_GPU_FIRST_DRAW_PARTIAL_FULL_ART_PENDING",
+      "artifacts": [
+        {
+          "path": "art/previews/waterline-casting/bay-impact.png",
+          "sha256": "9404bb3c12834f03c73320e4248f60bb739609cf4f4fcc6237f686597f98327c"
+        },
+        {
+          "path": "art/previews/waterline-casting/bay-surface-cast.png",
+          "sha256": "bfe8a8a99a9efdd45efecaa888beaf8a777f02b4475f5acac9a83568244fb0e3"
+        },
+        {
+          "path": "art/previews/waterline-casting/bay-surface-ready.png",
+          "sha256": "52148de4d52bfb783a87557d460216780871e7cc5dd1a0243cb6cdfadf1ead06"
+        },
+        {
+          "path": "art/previews/waterline-casting/bay-underwater.png",
+          "sha256": "e79cd075afabe2b20f0d3981457b9516133fe39228ad46c168b24da5e12e9f0a"
+        },
+        {
+          "path": "art/previews/waterline-casting/channel-surface.png",
+          "sha256": "66507e5942d169c01330ea4f20e8531321e659e90879ffe91e463865be05e0ac"
+        },
+        {
+          "path": "art/previews/waterline-casting/native-phone-casting.mp4",
+          "sha256": "3626d9061c26b5a0034d139d8acec3a95ef4c4a64f70d644a8460fb0a0198fd3"
+        },
+        {
+          "path": "art/previews/waterline-casting/native-phone-contact.png",
+          "sha256": "89f4fe23c30b52034d676fc9a6ddd8637bbceb2877fe4daf2696377bc879eca4"
+        },
+        {
+          "path": "art/previews/waterline-casting/native-phone-impact.png",
+          "sha256": "54d7874d7417d5789557964cf5a86c97303f5aa2bf8683ba4a0b58778a36bd38"
+        },
+        {
+          "path": "art/previews/waterline-casting/native-phone-ready.png",
+          "sha256": "5b9b99931ae0377a5feb1e443190875eaa2260cfb936d7352b61e5fac16f7a42"
+        },
+        {
+          "path": "art/previews/waterline-casting/native-phone-underwater.png",
+          "sha256": "2e535968da3e45864fa5562e7371426af6d685023fd8b88d807d73d70f8a40cb"
+        },
+        {
+          "path": "art/previews/waterline-casting/native-tablet-contact.png",
+          "sha256": "2eaff774a0c12029b24000639945961eb2531dcdc37645cb32c4d22ad629fee2"
+        },
+        {
+          "path": "art/previews/waterline-casting/native-tablet-fighting.png",
+          "sha256": "c1c30f720fac40a2d8bd0f748d64f4d3984b91aa3618781ed11d13b6e450dd11"
+        },
+        {
+          "path": "art/previews/waterline-casting/native-tablet-ready.png",
+          "sha256": "8beacdd90e309bf4c9c8e0824e30298cc6632c3ae4d159bc827aa973226dda94"
+        },
+        {
+          "path": "art/previews/waterline-casting/rejected-bottom-framing.png",
+          "sha256": "911ece206da44663b493a9078c11a53f1824a7cfa4a907f8845a99e8f7f0fd3e"
+        },
+        {
+          "path": "art/previews/waterline-casting/rejected-native-idle-water.png",
+          "sha256": "1febf11ea53267becaa5cc615a2068445281bc46fe437376987b37dd7406f9d5"
+        },
+        {
+          "path": "art/previews/waterline-casting/slope-surface.png",
+          "sha256": "69ec7111ba21d8b0c6b4c94f6ae75120b7f71e7dc32e54591776eb4f53bb6d73"
+        },
+        {
+          "path": "art/previews/waterline-casting/three-habitat-contact.png",
+          "sha256": "d13ce37c868b72333927460c97e5cfe459fa596bf9cee953957262d5c0f8b04c"
+        }
+      ],
+      "note": "CurrentE48 static frames retain strict first/repeat partial.19-frame native contacts, selected originals and four normalized video frames reviewed.4-second video is actual screen recording, not performance or complete natural-motion proof. Two rejected originals retained. No device logs/identifiers."
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."

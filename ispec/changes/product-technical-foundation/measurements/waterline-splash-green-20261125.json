@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "a8372df8-19c2-4a37-ad16-1d8c7afbdcc8",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "3d2f58a0bd75f12d4c27f7d17d70b76abd0d905c69fa4ad3358c2b4a3eabbb55",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-24T23:08:58.812Z",
+    "finishedAt": "2026-11-24T23:09:09.963Z",
+    "durationMs": 11105.619834000001,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      "tools/game.py",
+      "tests",
+      "--test-platform",
+      "EditMode",
+      "--test-filter",
+      "WaterlinePresentationTests;EncounterGeometryTests;FishingSessionTests;BayHabitatTests",
+      "--label",
+      "waterlinesplashgreen20261125a"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    "tools/game.py",
+    "tests",
+    "--test-platform",
+    "EditMode",
+    "--test-filter",
+    "WaterlinePresentationTests;EncounterGeometryTests;FishingSessionTests;BayHabitatTests",
+    "--label",
+    "waterlinesplashgreen20261125a"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T23:08:58.812Z",
+  "finishedAt": "2026-11-24T23:09:09.963Z",
+  "durationMs": 11105.619834000001
+}

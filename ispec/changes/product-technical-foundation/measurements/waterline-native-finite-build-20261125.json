@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "4ff38bfb-a3ce-4558-a280-91ddc0cb454f",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "075e37f95fbb7fc314b7cdfd08e433a24cedbe0eb47862e4788a4c1e02e7b447",
+    "category": "compile",
+    "executable": "python3",
+    "startedAt": "2026-11-24T23:12:22.269Z",
+    "finishedAt": "2026-11-24T23:14:11.115Z",
+    "durationMs": 108822.072167,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/waterline-qa/build-b.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/waterline-qa/build-b.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T23:12:22.269Z",
+  "finishedAt": "2026-11-24T23:14:11.115Z",
+  "durationMs": 108822.072167
+}

@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "4a52add5-cd5d-426a-add0-e4a1dfb2d903",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "e28e5779ad03375e16c8f92b6a26ff9a3b5be34884fc170f8da8b85f85a2b4e8",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-24T22:51:36.236Z",
+    "finishedAt": "2026-11-24T22:52:21.368Z",
+    "durationMs": 45112.286625,
+    "exitCode": 2,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      "tools/game.py",
+      "tests",
+      "--test-platform",
+      "PlayMode",
+      "--test-filter",
+      "ImmersiveNavigationTests;IntegratedWorldTests;FishAnimationTests",
+      "--label",
+      "waterlineplay20261125a"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    "tools/game.py",
+    "tests",
+    "--test-platform",
+    "PlayMode",
+    "--test-filter",
+    "ImmersiveNavigationTests;IntegratedWorldTests;FishAnimationTests",
+    "--label",
+    "waterlineplay20261125a"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 2,
+  "startedAt": "2026-11-24T22:51:36.236Z",
+  "finishedAt": "2026-11-24T22:52:21.368Z",
+  "durationMs": 45112.286625
+}

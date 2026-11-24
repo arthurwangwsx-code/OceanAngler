@@ -1,0 +1,3672 @@
+{
+  "status": "SCOPED_SOURCE_AND_DUAL_NATIVE_PASS_GPU_FIRST_DRAW_PARTIAL",
+  "wholeProduct": "PARTIAL",
+  "source": {
+    "sourceCommit": "1317bc4b42958c2d94cb2c76854cc1765a851b3b",
+    "sourceDigest": "dfd49d5f4d924ba6de433f43462f6ac4a4afb67600eedc963edeccf68d081bc8",
+    "projectSettingsSha256": "bea92e9b5c8b678dd130d48c1f43acaf939b56cacce33928a5a45af6da0a4585"
+  },
+  "distribution": "LOCAL_SIMULATOR_ONLY_NOT_TESTFLIGHT",
+  "appDigest": "10ffafdaf18b24889843568f30bbc844d1901fb61194ecc673beb8045ccfd7a6",
+  "tests": {
+    "editor": {
+      "result": "Passed",
+      "total": "38",
+      "passed": "38",
+      "failed": "0",
+      "start-time": "2026-11-24 23:09:07Z",
+      "end-time": "2026-11-24 23:09:08Z"
+    },
+    "playmode": {
+      "result": "Passed",
+      "total": "6",
+      "passed": "6",
+      "failed": "0",
+      "start-time": "2026-11-24 23:10:31Z",
+      "end-time": "2026-11-24 23:11:15Z"
+    }
+  },
+  "sourceCI": {
+    "conclusion": "success",
+    "databaseId": 45507935987,
+    "headSha": "1317bc4b42958c2d94cb2c76854cc1765a851b3b",
+    "status": "completed"
+  },
+  "assetIdentity": {
+    "status": "PASS",
+    "baselineCommit": "cf0c9c98f7c68f6cb4c446051918d85eb3b81203",
+    "files": 278,
+    "allModelAndSourceAssetBytesUnchanged": true,
+    "scope": "Tracked authored geometry,rig,PBR,source files and prefabs only; runtime pose,shader,camera and settings intentionally change; not art acceptance"
+  },
+  "gpu": {
+    "status": "PARTIAL",
+    "scope": "Static actual imported three-habitat waterline poses; not Player transition, natural motion or physical qualification",
+    "graphics": "Metal",
+    "quality": "Medium",
+    "target": "R16G16B16A16_SFloat",
+    "images": 48,
+    "samples": 4,
+    "views": [
+      {
+        "name": "bay-right-ready",
+        "seaLevel": 4.5,
+        "cameraY": 5.75,
+        "rigY": 4.75,
+        "lureY": 5.922754287719727,
+        "mechanismMargin": 0.20310349762439728,
+        "repeatChangedPixels": 232
+      },
+      {
+        "name": "bay-right-cast",
+        "seaLevel": 4.5,
+        "cameraY": 5.75,
+        "rigY": 4.75,
+        "lureY": 6.51137638092041,
+        "mechanismMargin": 0.20310349762439728,
+        "repeatChangedPixels": 0
+      },
+      {
+        "name": "bay-right-impact",
+        "seaLevel": 4.5,
+        "cameraY": 5.75,
+        "rigY": 4.75,
+        "lureY": 4.499999046325684,
+        "mechanismMargin": 0.20310349762439728,
+        "repeatChangedPixels": 0
+      },
+      {
+        "name": "bay-right-underwater",
+        "seaLevel": 4.5,
+        "cameraY": 1.2500001192092896,
+        "rigY": 4.75,
+        "lureY": 0.22059154510498047,
+        "mechanismMargin": 1.0,
+        "repeatChangedPixels": 0
+      },
+      {
+        "name": "bay-left-ready",
+        "seaLevel": 4.5,
+        "cameraY": 5.75,
+        "rigY": 4.75,
+        "lureY": 5.875945091247559,
+        "mechanismMargin": 0.19949808716773987,
+        "repeatChangedPixels": 0
+      },
+      {
+        "name": "bay-left-cast",
+        "seaLevel": 4.5,
+        "cameraY": 5.75,
+        "rigY": 4.75,
+        "lureY": 6.511375427246094,
+        "mechanismMargin": 0.19949808716773987,
+        "repeatChangedPixels": 0
+      },
+      {
+        "name": "bay-left-impact",
+        "seaLevel": 4.5,
+        "cameraY": 5.75,
+        "rigY": 4.75,
+        "lureY": 4.499998569488525,
+        "mechanismMargin": 0.19949808716773987,
+        "repeatChangedPixels": 0
+      },
+      {
+        "name": "bay-left-underwater",
+        "seaLevel": 4.5,
+        "cameraY": 1.2500001192092896,
+        "rigY": 4.75,
+        "lureY": 0.22059297561645508,
+        "mechanismMargin": 1.0,
+        "repeatChangedPixels": 0
+      },
+      {
+        "name": "channel-right-ready",
+        "seaLevel": 4.5,
+        "cameraY": 5.75,
+        "rigY": 4.75,
+        "lureY": 5.922754287719727,
+        "mechanismMargin": 0.20310349762439728,
+        "repeatChangedPixels": 0
+      },
+      {
+        "name": "channel-right-cast",
+        "seaLevel": 4.5,
+        "cameraY": 5.75,
+        "rigY": 4.75,
+        "lureY": 6.51137638092041,
+        "mechanismMargin": 0.20310349762439728,
+        "repeatChangedPixels": 0
+      },
+      {
+        "name": "channel-right-impact",
+        "seaLevel": 4.5,
+        "cameraY": 5.75,
+        "rigY": 4.75,
+        "lureY": 4.499999046325684,
+        "mechanismMargin": 0.20310349762439728,
+        "repeatChangedPixels": 0
+      },
+      {
+        "name": "channel-right-underwater",
+        "seaLevel": 4.5,
+        "cameraY": 1.2500001192092896,
+        "rigY": 4.75,
+        "lureY": 0.22059154510498047,
+        "mechanismMargin": 1.0,
+        "repeatChangedPixels": 0
+      },
+      {
+        "name": "channel-left-ready",
+        "seaLevel": 4.5,
+        "cameraY": 5.75,
+        "rigY": 4.75,
+        "lureY": 5.875945091247559,
+        "mechanismMargin": 0.19949808716773987,
+        "repeatChangedPixels": 0
+      },
+      {
+        "name": "channel-left-cast",
+        "seaLevel": 4.5,
+        "cameraY": 5.75,
+        "rigY": 4.75,
+        "lureY": 6.511375427246094,
+        "mechanismMargin": 0.19949808716773987,
+        "repeatChangedPixels": 0
+      },
+      {
+        "name": "channel-left-impact",
+        "seaLevel": 4.5,
+        "cameraY": 5.75,
+        "rigY": 4.75,
+        "lureY": 4.499998569488525,
+        "mechanismMargin": 0.19949808716773987,
+        "repeatChangedPixels": 0
+      },
+      {
+        "name": "channel-left-underwater",
+        "seaLevel": 4.5,
+        "cameraY": 1.2500001192092896,
+        "rigY": 4.75,
+        "lureY": 0.22059297561645508,
+        "mechanismMargin": 1.0,
+        "repeatChangedPixels": 0
+      },
+      {
+        "name": "slope-right-ready",
+        "seaLevel": 200.0,
+        "cameraY": 201.25,
+        "rigY": 200.25,
+        "lureY": 201.42274475097656,
+        "mechanismMargin": 0.2031077742576599,
+        "repeatChangedPixels": 0
+      },
+      {
+        "name": "slope-right-cast",
+        "seaLevel": 200.0,
+        "cameraY": 201.25,
+        "rigY": 200.25,
+        "lureY": 202.01136779785156,
+        "mechanismMargin": 0.2031077742576599,
+        "repeatChangedPixels": 0
+      },
+      {
+        "name": "slope-right-impact",
+        "seaLevel": 200.0,
+        "cameraY": 201.25,
+        "rigY": 200.25,
+        "lureY": 200.0,
+        "mechanismMargin": 0.2031077742576599,
+        "repeatChangedPixels": 0
+      },
+      {
+        "name": "slope-right-underwater",
+        "seaLevel": 200.0,
+        "cameraY": 1.2500001192092896,
+        "rigY": 200.25,
+        "lureY": 0.22064208984375,
+        "mechanismMargin": 1.0,
+        "repeatChangedPixels": 0
+      },
+      {
+        "name": "slope-left-ready",
+        "seaLevel": 200.0,
+        "cameraY": 201.25,
+        "rigY": 200.25,
+        "lureY": 201.37596130371094,
+        "mechanismMargin": 0.19950151443481445,
+        "repeatChangedPixels": 0
+      },
+      {
+        "name": "slope-left-cast",
+        "seaLevel": 200.0,
+        "cameraY": 201.25,
+        "rigY": 200.25,
+        "lureY": 202.01136779785156,
+        "mechanismMargin": 0.19950151443481445,
+        "repeatChangedPixels": 0
+      },
+      {
+        "name": "slope-left-impact",
+        "seaLevel": 200.0,
+        "cameraY": 201.25,
+        "rigY": 200.25,
+        "lureY": 200.0,
+        "mechanismMargin": 0.19950151443481445,
+        "repeatChangedPixels": 0
+      },
+      {
+        "name": "slope-left-underwater",
+        "seaLevel": 200.0,
+        "cameraY": 1.2500001192092896,
+        "rigY": 200.25,
+        "lureY": 0.22064208984375,
+        "mechanismMargin": 1.0,
+        "repeatChangedPixels": 0
+      }
+    ]
+  },
+  "native": [
+    {
+      "status": "PASS",
+      "label": "waterline20261125phone3",
+      "scope": "native19-frame waterline cast and underwater transition with real UI camera/reduced-motion toggles and unchanged minimal HUD; first-tutorial normal fishing flow; no RNG/points injection; not900-second rest-trigger, child, OS touch, full progression or physical20-minute qualification",
+      "source": {
+        "sourceCommit": "1317bc4b42958c2d94cb2c76854cc1765a851b3b",
+        "sourceDigest": "dfd49d5f4d924ba6de433f43462f6ac4a4afb67600eedc963edeccf68d081bc8",
+        "projectSettingsSha256": "bea92e9b5c8b678dd130d48c1f43acaf939b56cacce33928a5a45af6da0a4585"
+      },
+      "appDigest": "10ffafdaf18b24889843568f30bbc844d1901fb61194ecc673beb8045ccfd7a6",
+      "externalMeasurementDurationMs": 49305.694125,
+      "catches": 1,
+      "points": 195,
+      "fishId": "trevally",
+      "saveSha256": "a1f1aee8d7eaadaa21ddb493ba7fe35037013338f1b8682cfa9defb9f1849ead",
+      "maxHudRatio": 0.12227564305067062,
+      "waterline": [
+        {
+          "stage": "ready",
+          "phase": "Ready",
+          "leftHanded": false,
+          "surface": true,
+          "seaLevel": 4.5,
+          "cameraY": 5.75,
+          "rigY": 4.75,
+          "lureY": 5.922754287719727,
+          "fade": 0.0,
+          "guideError": 0.0,
+          "splashAge": -1.0
+        },
+        {
+          "stage": "固定水下镜头",
+          "phase": "Ready",
+          "leftHanded": false,
+          "surface": false,
+          "seaLevel": 4.5,
+          "cameraY": 1.2500001192092896,
+          "rigY": 4.75,
+          "lureY": 5.922755241394043,
+          "fade": 0.0,
+          "guideError": 0.0,
+          "splashAge": -1.0
+        },
+        {
+          "stage": "restored-auto",
+          "phase": "Ready",
+          "leftHanded": false,
+          "surface": true,
+          "seaLevel": 4.5,
+          "cameraY": 5.75,
+          "rigY": 4.75,
+          "lureY": 5.922755241394043,
+          "fade": 0.0,
+          "guideError": 0.0,
+          "splashAge": -1.0
+        },
+        {
+          "stage": "减弱动态效果",
+          "phase": "Ready",
+          "leftHanded": false,
+          "surface": false,
+          "seaLevel": 4.5,
+          "cameraY": 1.2500001192092896,
+          "rigY": 4.75,
+          "lureY": 0.19999933242797852,
+          "fade": 0.0,
+          "guideError": 0.0,
+          "splashAge": -1.0
+        },
+        {
+          "stage": "restored-auto",
+          "phase": "Ready",
+          "leftHanded": false,
+          "surface": true,
+          "seaLevel": 4.5,
+          "cameraY": 5.75,
+          "rigY": 4.75,
+          "lureY": 5.922754764556885,
+          "fade": 0.0,
+          "guideError": 0.0,
+          "splashAge": -1.0
+        },
+        {
+          "stage": "casting",
+          "phase": "Casting",
+          "leftHanded": false,
+          "surface": true,
+          "seaLevel": 4.5,
+          "cameraY": 5.75,
+          "rigY": 4.75,
+          "lureY": 5.922754287719727,
+          "fade": 0.0,
+          "guideError": 0.0,
+          "splashAge": -1.0
+        },
+        {
+          "stage": "impact",
+          "phase": "Waiting",
+          "leftHanded": false,
+          "surface": true,
+          "seaLevel": 4.5,
+          "cameraY": 5.75,
+          "rigY": 4.75,
+          "lureY": 4.7669196128845215,
+          "fade": 0.0,
+          "guideError": 0.0,
+          "splashAge": 0.0
+        },
+        {
+          "stage": "underwater-waiting",
+          "phase": "Waiting",
+          "leftHanded": false,
+          "surface": false,
+          "seaLevel": 4.5,
+          "cameraY": 1.2500001192092896,
+          "rigY": 4.75,
+          "lureY": 3.3851842880249023,
+          "fade": 0.0,
+          "guideError": 0.0,
+          "splashAge": 0.6999008655548096
+        },
+        {
+          "stage": "ready",
+          "phase": "Ready",
+          "leftHanded": true,
+          "surface": true,
+          "seaLevel": 4.5,
+          "cameraY": 5.75,
+          "rigY": 4.75,
+          "lureY": 5.922754287719727,
+          "fade": 0.0,
+          "guideError": 0.0,
+          "splashAge": -1.0
+        },
+        {
+          "stage": "underwater-waiting",
+          "phase": "Waiting",
+          "leftHanded": true,
+          "surface": false,
+          "seaLevel": 4.5,
+          "cameraY": 1.2500001192092896,
+          "rigY": 4.75,
+          "lureY": 3.475071907043457,
+          "fade": 0.0,
+          "guideError": 0.0,
+          "splashAge": 0.6999702453613281
+        }
+      ],
+      "samples": [
+        {
+          "phase": "Ready",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0890224352478981
+        },
+        {
+          "phase": "Waiting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0890224352478981
+        },
+        {
+          "phase": "Bite",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0890224352478981
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.12034111469984055
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.12034111469984055
+        },
+        {
+          "phase": "Landed",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.12227564305067062
+        },
+        {
+          "phase": "Ready",
+          "leftHanded": true,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0890224352478981
+        },
+        {
+          "phase": "Waiting",
+          "leftHanded": true,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0890224352478981
+        },
+        {
+          "phase": "Bite",
+          "leftHanded": true,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0890224352478981
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": true,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.12034111469984055
+        }
+      ],
+      "meterLabels": [
+        {
+          "text": "张力  9%  安全",
+          "preferredWidth": 108.33333587646484,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  2%",
+          "preferredWidth": 67.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  6%  安全",
+          "preferredWidth": 108.33333587646484,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  8%  安全",
+          "preferredWidth": 108.33333587646484,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  3%",
+          "preferredWidth": 67.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  10%  安全",
+          "preferredWidth": 118.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  11%  安全",
+          "preferredWidth": 118.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  13%  安全",
+          "preferredWidth": 118.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  4%",
+          "preferredWidth": 67.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  14%  安全",
+          "preferredWidth": 118.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  16%  安全",
+          "preferredWidth": 118.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  17%  安全",
+          "preferredWidth": 118.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  19%  安全",
+          "preferredWidth": 118.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  5%",
+          "preferredWidth": 67.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  21%  安全",
+          "preferredWidth": 118.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  22%  安全",
+          "preferredWidth": 118.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  24%  安全",
+          "preferredWidth": 118.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  6%",
+          "preferredWidth": 67.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  26%  安全",
+          "preferredWidth": 118.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  27%  安全",
+          "preferredWidth": 118.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  29%  安全",
+          "preferredWidth": 118.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  7%",
+          "preferredWidth": 67.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  30%  安全",
+          "preferredWidth": 118.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  32%  安全",
+          "preferredWidth": 118.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  34%  安全",
+          "preferredWidth": 118.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  35%  安全",
+          "preferredWidth": 118.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  8%",
+          "preferredWidth": 67.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  37%  安全",
+          "preferredWidth": 118.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  38%  安全",
+          "preferredWidth": 118.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  40%  安全",
+          "preferredWidth": 118.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  9%",
+          "preferredWidth": 67.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  42%  安全",
+          "preferredWidth": 118.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  43%  安全",
+          "preferredWidth": 118.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  45%  安全",
+          "preferredWidth": 118.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  10%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  46%  安全",
+          "preferredWidth": 118.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  48%  安全",
+          "preferredWidth": 118.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  49%  安全",
+          "preferredWidth": 118.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  50%  安全",
+          "preferredWidth": 118.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  11%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  52%  安全",
+          "preferredWidth": 118.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  53%  安全",
+          "preferredWidth": 118.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  55%  安全",
+          "preferredWidth": 118.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  12%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  56%  安全",
+          "preferredWidth": 118.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  57%  安全",
+          "preferredWidth": 118.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  58%  安全",
+          "preferredWidth": 118.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  13%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  60%  安全",
+          "preferredWidth": 118.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  61%  安全",
+          "preferredWidth": 118.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  62%  安全",
+          "preferredWidth": 118.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  63%  安全",
+          "preferredWidth": 118.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  14%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  64%  安全",
+          "preferredWidth": 118.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  65%  安全",
+          "preferredWidth": 118.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  15%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  16%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  17%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  66%  安全",
+          "preferredWidth": 118.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  18%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  19%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  20%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  21%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  22%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  23%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  24%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  25%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  26%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  27%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  28%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  29%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  30%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  31%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  32%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  33%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  34%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  35%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  36%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  37%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  38%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  39%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  40%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  41%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  42%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  43%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  44%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  45%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  46%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  47%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  48%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  49%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  50%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  51%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  52%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  53%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  54%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  55%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  56%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  57%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  58%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  59%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  60%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  61%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  62%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  63%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  64%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  65%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  66%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  67%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  68%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  69%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  70%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  71%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  72%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  73%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  74%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  75%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  76%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  77%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  78%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  79%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  80%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  81%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  82%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  83%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  67%  安全",
+          "preferredWidth": 118.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  84%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  85%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  86%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  87%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  88%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  89%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  90%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  91%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  92%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  93%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  94%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  95%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  96%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  97%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  98%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  99%",
+          "preferredWidth": 76.66666412353516,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  100%",
+          "preferredWidth": 86.33333587646484,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.66666603088379,
+          "availableHeight": 26.0,
+          "fits": true
+        }
+      ],
+      "capturedFrames": 19,
+      "renderProbe": {
+        "graphics": "Metal",
+        "quality": "Medium",
+        "hdrAfter": true,
+        "halfHdrSamples": 4,
+        "desiredSamples": 4,
+        "heroMotionClips": [
+          "idle",
+          "swim",
+          "turn",
+          "burst",
+          "bite",
+          "hooked",
+          "release"
+        ],
+        "heroMotionLoops": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          false
+        ]
+      },
+      "checks": [
+        "immersive-isolated-save-root",
+        "immersive-ready-valid-save",
+        "visible-hit-target:继续探索",
+        "visible-hit-target:暂停",
+        "visible-hit-target:设置",
+        "visible-hit-target:出海",
+        "visible-hit-target:返回首页",
+        "visible-hit-target:海域与装备",
+        "immersive-separate-preparation",
+        "immersive-departure-visible-without-scrolling",
+        "immersive-departure-inside-safe-area",
+        "visible-hit-target:开始钓鱼",
+        "immersive-active-play",
+        "immersive-only-pause-and-current-action",
+        "immersive-no-global-chrome-or-panels",
+        "immersive-hud-under-15-percent-and-central-view-clear-Ready",
+        "immersive-meters-only-while-fighting",
+        "waterline-finite-shader-input-ready",
+        "waterline-ready-actual-camera-rig-and-guides",
+        "visible-hit-target:固定水下镜头    已关闭",
+        "waterline-finite-shader-input-固定水下镜头",
+        "waterline-固定水下镜头-actual-camera-rig-and-guides",
+        "waterline-fixed-camera-no-fade-固定水下镜头",
+        "visible-hit-target:固定水下镜头    已开启",
+        "waterline-finite-shader-input-restored-auto",
+        "waterline-restored-auto-actual-camera-rig-and-guides",
+        "visible-hit-target:减弱动态效果    已关闭",
+        "waterline-finite-shader-input-减弱动态效果",
+        "waterline-减弱动态效果-actual-camera-rig-and-guides",
+        "waterline-fixed-camera-no-fade-减弱动态效果",
+        "visible-hit-target:减弱动态效果    已开启",
+        "visible-hit-target:按住蓄力 · 松手抛竿",
+        "immersive-menu-cancels-cast-charge",
+        "waterline-finite-shader-input-casting",
+        "waterline-casting-actual-camera-rig-and-guides",
+        "waterline-finite-shader-input-impact",
+        "waterline-impact-actual-camera-rig-and-guides",
+        "immersive-hud-under-15-percent-and-central-view-clear-Waiting",
+        "waterline-finite-shader-input-underwater-waiting",
+        "waterline-underwater-waiting-actual-camera-rig-and-guides",
+        "waterline-transition-completes",
+        "immersive-normal-bite",
+        "immersive-hud-under-15-percent-and-central-view-clear-Bite",
+        "visible-hit-target:提竿",
+        "immersive-hud-under-15-percent-and-central-view-clear-Fighting",
+        "visible-hit-target:按住收线",
+        "immersive-pause-releases-held-reel",
+        "immersive-pause-freezes-current-fish",
+        "immersive-settings-retain-catch",
+        "visible-hit-target:上一级",
+        "immersive-back-does-not-resume",
+        "visible-hit-target:结束本次 · 返回准备",
+        "visible-hit-target:取消，继续留在这里",
+        "immersive-exit-cancel-keeps-current-fish",
+        "immersive-focus-loss-cancels-input",
+        "immersive-focus-return-awaits-continue",
+        "immersive-live-meter-label-fits-张力  9%  安全",
+        "immersive-live-meter-label-fits-收鱼  2%",
+        "immersive-live-meter-label-fits-张力  6%  安全",
+        "immersive-live-meter-label-fits-张力  8%  安全",
+        "immersive-live-meter-label-fits-收鱼  3%",
+        "immersive-live-meter-label-fits-张力  10%  安全",
+        "immersive-live-meter-label-fits-张力  11%  安全",
+        "immersive-live-meter-label-fits-张力  13%  安全",
+        "immersive-live-meter-label-fits-收鱼  4%",
+        "immersive-live-meter-label-fits-张力  14%  安全",
+        "immersive-live-meter-label-fits-张力  16%  安全",
+        "immersive-live-meter-label-fits-张力  17%  安全",
+        "immersive-live-meter-label-fits-张力  19%  安全",
+        "immersive-live-meter-label-fits-收鱼  5%",
+        "immersive-live-meter-label-fits-张力  21%  安全",
+        "immersive-live-meter-label-fits-张力  22%  安全",
+        "immersive-live-meter-label-fits-张力  24%  安全",
+        "immersive-live-meter-label-fits-收鱼  6%",
+        "immersive-live-meter-label-fits-张力  26%  安全",
+        "immersive-live-meter-label-fits-张力  27%  安全",
+        "immersive-live-meter-label-fits-张力  29%  安全",
+        "immersive-live-meter-label-fits-收鱼  7%",
+        "immersive-live-meter-label-fits-张力  30%  安全",
+        "immersive-live-meter-label-fits-张力  32%  安全",
+        "immersive-live-meter-label-fits-张力  34%  安全",
+        "immersive-live-meter-label-fits-张力  35%  安全",
+        "immersive-live-meter-label-fits-收鱼  8%",
+        "immersive-live-meter-label-fits-张力  37%  安全",
+        "immersive-live-meter-label-fits-张力  38%  安全",
+        "immersive-live-meter-label-fits-张力  40%  安全",
+        "immersive-live-meter-label-fits-收鱼  9%",
+        "immersive-live-meter-label-fits-张力  42%  安全",
+        "immersive-live-meter-label-fits-张力  43%  安全",
+        "immersive-live-meter-label-fits-张力  45%  安全",
+        "immersive-live-meter-label-fits-收鱼  10%",
+        "immersive-live-meter-label-fits-张力  46%  安全",
+        "immersive-live-meter-label-fits-张力  48%  安全",
+        "immersive-live-meter-label-fits-张力  49%  安全",
+        "immersive-live-meter-label-fits-张力  50%  安全",
+        "immersive-live-meter-label-fits-收鱼  11%",
+        "immersive-live-meter-label-fits-张力  52%  安全",
+        "immersive-live-meter-label-fits-张力  53%  安全",
+        "immersive-live-meter-label-fits-张力  55%  安全",
+        "immersive-live-meter-label-fits-收鱼  12%",
+        "immersive-live-meter-label-fits-张力  56%  安全",
+        "immersive-live-meter-label-fits-张力  57%  安全",
+        "immersive-live-meter-label-fits-张力  58%  安全",
+        "immersive-live-meter-label-fits-收鱼  13%",
+        "immersive-live-meter-label-fits-张力  60%  安全",
+        "immersive-live-meter-label-fits-张力  61%  安全",
+        "immersive-live-meter-label-fits-张力  62%  安全",
+        "immersive-live-meter-label-fits-张力  63%  安全",
+        "immersive-live-meter-label-fits-收鱼  14%",
+        "immersive-live-meter-label-fits-张力  64%  安全",
+        "immersive-live-meter-label-fits-张力  65%  安全",
+        "immersive-live-meter-label-fits-收鱼  15%",
+        "immersive-live-meter-label-fits-收鱼  16%",
+        "immersive-live-meter-label-fits-收鱼  17%",
+        "immersive-live-meter-label-fits-张力  66%  安全",
+        "immersive-live-meter-label-fits-收鱼  18%",
+        "immersive-live-meter-label-fits-收鱼  19%",
+        "immersive-live-meter-label-fits-收鱼  20%",
+        "immersive-live-meter-label-fits-收鱼  21%",
+        "immersive-live-meter-label-fits-收鱼  22%",
+        "immersive-live-meter-label-fits-收鱼  23%",
+        "immersive-live-meter-label-fits-收鱼  24%",
+        "immersive-live-meter-label-fits-收鱼  25%",
+        "immersive-live-meter-label-fits-收鱼  26%",
+        "immersive-live-meter-label-fits-收鱼  27%",
+        "immersive-live-meter-label-fits-收鱼  28%",
+        "immersive-live-meter-label-fits-收鱼  29%",
+        "immersive-live-meter-label-fits-收鱼  30%",
+        "immersive-live-meter-label-fits-收鱼  31%",
+        "immersive-live-meter-label-fits-收鱼  32%",
+        "immersive-live-meter-label-fits-收鱼  33%",
+        "immersive-live-meter-label-fits-收鱼  34%",
+        "immersive-live-meter-label-fits-收鱼  35%",
+        "immersive-live-meter-label-fits-收鱼  36%",
+        "immersive-live-meter-label-fits-收鱼  37%",
+        "immersive-live-meter-label-fits-收鱼  38%",
+        "immersive-live-meter-label-fits-收鱼  39%",
+        "immersive-live-meter-label-fits-收鱼  40%",
+        "immersive-live-meter-label-fits-收鱼  41%",
+        "immersive-live-meter-label-fits-收鱼  42%",
+        "immersive-live-meter-label-fits-收鱼  43%",
+        "immersive-live-meter-label-fits-收鱼  44%",
+        "immersive-live-meter-label-fits-收鱼  45%",
+        "immersive-live-meter-label-fits-收鱼  46%",
+        "immersive-live-meter-label-fits-收鱼  47%",
+        "immersive-live-meter-label-fits-收鱼  48%",
+        "immersive-live-meter-label-fits-收鱼  49%",
+        "immersive-live-meter-label-fits-收鱼  50%",
+        "immersive-live-meter-label-fits-收鱼  51%",
+        "immersive-live-meter-label-fits-收鱼  52%",
+        "immersive-live-meter-label-fits-收鱼  53%",
+        "immersive-live-meter-label-fits-收鱼  54%",
+        "immersive-live-meter-label-fits-收鱼  55%",
+        "immersive-live-meter-label-fits-收鱼  56%",
+        "immersive-live-meter-label-fits-收鱼  57%",
+        "immersive-live-meter-label-fits-收鱼  58%",
+        "immersive-live-meter-label-fits-收鱼  59%",
+        "immersive-live-meter-label-fits-收鱼  60%",
+        "immersive-live-meter-label-fits-收鱼  61%",
+        "immersive-live-meter-label-fits-收鱼  62%",
+        "immersive-live-meter-label-fits-收鱼  63%",
+        "immersive-live-meter-label-fits-收鱼  64%",
+        "immersive-live-meter-label-fits-收鱼  65%",
+        "immersive-live-meter-label-fits-收鱼  66%",
+        "immersive-live-meter-label-fits-收鱼  67%",
+        "immersive-live-meter-label-fits-收鱼  68%",
+        "immersive-live-meter-label-fits-收鱼  69%",
+        "immersive-live-meter-label-fits-收鱼  70%",
+        "immersive-live-meter-label-fits-收鱼  71%",
+        "immersive-live-meter-label-fits-收鱼  72%",
+        "immersive-live-meter-label-fits-收鱼  73%",
+        "immersive-live-meter-label-fits-收鱼  74%",
+        "immersive-live-meter-label-fits-收鱼  75%",
+        "immersive-live-meter-label-fits-收鱼  76%",
+        "immersive-live-meter-label-fits-收鱼  77%",
+        "immersive-live-meter-label-fits-收鱼  78%",
+        "immersive-live-meter-label-fits-收鱼  79%",
+        "immersive-live-meter-label-fits-收鱼  80%",
+        "immersive-live-meter-label-fits-收鱼  81%",
+        "immersive-live-meter-label-fits-收鱼  82%",
+        "immersive-live-meter-label-fits-收鱼  83%",
+        "immersive-live-meter-label-fits-张力  67%  安全",
+        "immersive-live-meter-label-fits-收鱼  84%",
+        "immersive-live-meter-label-fits-收鱼  85%",
+        "immersive-live-meter-label-fits-收鱼  86%",
+        "immersive-live-meter-label-fits-收鱼  87%",
+        "immersive-live-meter-label-fits-收鱼  88%",
+        "immersive-live-meter-label-fits-收鱼  89%",
+        "immersive-live-meter-label-fits-收鱼  90%",
+        "immersive-live-meter-label-fits-收鱼  91%",
+        "immersive-live-meter-label-fits-收鱼  92%",
+        "immersive-live-meter-label-fits-收鱼  93%",
+        "immersive-live-meter-label-fits-收鱼  94%",
+        "immersive-live-meter-label-fits-收鱼  95%",
+        "immersive-live-meter-label-fits-收鱼  96%",
+        "immersive-live-meter-label-fits-收鱼  97%",
+        "immersive-live-meter-label-fits-收鱼  98%",
+        "immersive-live-meter-label-fits-收鱼  99%",
+        "immersive-live-meter-label-fits-收鱼  100%",
+        "immersive-observed-real-two-digit-progress",
+        "immersive-real-fish-landed",
+        "immersive-hud-under-15-percent-and-central-view-clear-Landed",
+        "visible-hit-target:记录并放流",
+        "immersive-one-real-record",
+        "visible-hit-target:左手操作    已关闭",
+        "visible-hit-target:确认结束并返回准备",
+        "immersive-confirm-exit-to-preparation",
+        "immersive-unrecorded-exit-preserves-existing-disk-ledger",
+        "visible-hit-target:左手操作    已开启",
+        "immersive-restored-settings-real-disk-ledger"
+      ]
+    },
+    {
+      "status": "PASS",
+      "label": "waterline20261125pad1",
+      "scope": "native19-frame waterline cast and underwater transition with real UI camera/reduced-motion toggles and unchanged minimal HUD; first-tutorial normal fishing flow; no RNG/points injection; not900-second rest-trigger, child, OS touch, full progression or physical20-minute qualification",
+      "source": {
+        "sourceCommit": "1317bc4b42958c2d94cb2c76854cc1765a851b3b",
+        "sourceDigest": "dfd49d5f4d924ba6de433f43462f6ac4a4afb67600eedc963edeccf68d081bc8",
+        "projectSettingsSha256": "bea92e9b5c8b678dd130d48c1f43acaf939b56cacce33928a5a45af6da0a4585"
+      },
+      "appDigest": "10ffafdaf18b24889843568f30bbc844d1901fb61194ecc673beb8045ccfd7a6",
+      "externalMeasurementDurationMs": 45395.270124999995,
+      "catches": 1,
+      "points": 220,
+      "fishId": "trevally",
+      "saveSha256": "62e12f24e7abd2c375d681e2cf6fbd36381e428fedaa674219886f6c53ae8cc6",
+      "maxHudRatio": 0.045262712985277176,
+      "waterline": [
+        {
+          "stage": "ready",
+          "phase": "Ready",
+          "leftHanded": false,
+          "surface": true,
+          "seaLevel": 4.5,
+          "cameraY": 5.75,
+          "rigY": 4.75,
+          "lureY": 5.922754287719727,
+          "fade": 0.0,
+          "guideError": 0.0,
+          "splashAge": -1.0
+        },
+        {
+          "stage": "固定水下镜头",
+          "phase": "Ready",
+          "leftHanded": false,
+          "surface": false,
+          "seaLevel": 4.5,
+          "cameraY": 1.2500001192092896,
+          "rigY": 4.75,
+          "lureY": 5.922755241394043,
+          "fade": 0.0,
+          "guideError": 0.0,
+          "splashAge": -1.0
+        },
+        {
+          "stage": "restored-auto",
+          "phase": "Ready",
+          "leftHanded": false,
+          "surface": true,
+          "seaLevel": 4.5,
+          "cameraY": 5.75,
+          "rigY": 4.75,
+          "lureY": 5.922755241394043,
+          "fade": 0.0,
+          "guideError": 0.0,
+          "splashAge": -1.0
+        },
+        {
+          "stage": "减弱动态效果",
+          "phase": "Ready",
+          "leftHanded": false,
+          "surface": false,
+          "seaLevel": 4.5,
+          "cameraY": 1.2500001192092896,
+          "rigY": 4.75,
+          "lureY": 0.19999933242797852,
+          "fade": 0.0,
+          "guideError": 0.0,
+          "splashAge": -1.0
+        },
+        {
+          "stage": "restored-auto",
+          "phase": "Ready",
+          "leftHanded": false,
+          "surface": true,
+          "seaLevel": 4.5,
+          "cameraY": 5.75,
+          "rigY": 4.75,
+          "lureY": 5.922754764556885,
+          "fade": 0.0,
+          "guideError": 0.0,
+          "splashAge": -1.0
+        },
+        {
+          "stage": "casting",
+          "phase": "Casting",
+          "leftHanded": false,
+          "surface": true,
+          "seaLevel": 4.5,
+          "cameraY": 5.75,
+          "rigY": 4.75,
+          "lureY": 5.922754287719727,
+          "fade": 0.0,
+          "guideError": 0.0,
+          "splashAge": -1.0
+        },
+        {
+          "stage": "impact",
+          "phase": "Waiting",
+          "leftHanded": false,
+          "surface": true,
+          "seaLevel": 4.5,
+          "cameraY": 5.75,
+          "rigY": 4.75,
+          "lureY": 4.766918659210205,
+          "fade": 0.0,
+          "guideError": 0.0,
+          "splashAge": 0.0
+        },
+        {
+          "stage": "underwater-waiting",
+          "phase": "Waiting",
+          "leftHanded": false,
+          "surface": false,
+          "seaLevel": 4.5,
+          "cameraY": 1.2500001192092896,
+          "rigY": 4.75,
+          "lureY": 3.293130874633789,
+          "fade": 0.0,
+          "guideError": 0.0,
+          "splashAge": 0.7333619594573975
+        },
+        {
+          "stage": "ready",
+          "phase": "Ready",
+          "leftHanded": true,
+          "surface": true,
+          "seaLevel": 4.5,
+          "cameraY": 5.75,
+          "rigY": 4.75,
+          "lureY": 5.922754287719727,
+          "fade": 0.0,
+          "guideError": 0.0,
+          "splashAge": -1.0
+        },
+        {
+          "stage": "underwater-waiting",
+          "phase": "Waiting",
+          "leftHanded": true,
+          "surface": false,
+          "seaLevel": 4.5,
+          "cameraY": 1.2500001192092896,
+          "rigY": 4.75,
+          "lureY": 3.475071907043457,
+          "fade": 0.0,
+          "guideError": 0.0,
+          "splashAge": 0.6999893188476562
+        }
+      ],
+      "samples": [
+        {
+          "phase": "Ready",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.03295338898897171
+        },
+        {
+          "phase": "Waiting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.03295338898897171
+        },
+        {
+          "phase": "Bite",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.03295338898897171
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.04454661160707474
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.04454661160707474
+        },
+        {
+          "phase": "Landed",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.045262712985277176
+        },
+        {
+          "phase": "Ready",
+          "leftHanded": true,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.03295338898897171
+        },
+        {
+          "phase": "Waiting",
+          "leftHanded": true,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.03295338898897171
+        },
+        {
+          "phase": "Bite",
+          "leftHanded": true,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.03295338898897171
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": true,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.04454661160707474
+        }
+      ],
+      "meterLabels": [
+        {
+          "text": "张力  11%  安全",
+          "preferredWidth": 119.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  2%",
+          "preferredWidth": 67.5,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  8%  安全",
+          "preferredWidth": 109.5,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  10%  安全",
+          "preferredWidth": 119.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  3%",
+          "preferredWidth": 67.5,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  13%  安全",
+          "preferredWidth": 119.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  14%  安全",
+          "preferredWidth": 119.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  4%",
+          "preferredWidth": 67.5,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  16%  安全",
+          "preferredWidth": 119.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  18%  安全",
+          "preferredWidth": 119.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  19%  安全",
+          "preferredWidth": 119.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  21%  安全",
+          "preferredWidth": 119.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  5%",
+          "preferredWidth": 67.5,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  22%  安全",
+          "preferredWidth": 119.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  24%  安全",
+          "preferredWidth": 119.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  26%  安全",
+          "preferredWidth": 119.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  6%",
+          "preferredWidth": 67.5,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  27%  安全",
+          "preferredWidth": 119.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  29%  安全",
+          "preferredWidth": 119.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  30%  安全",
+          "preferredWidth": 119.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  7%",
+          "preferredWidth": 67.5,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  32%  安全",
+          "preferredWidth": 119.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  34%  安全",
+          "preferredWidth": 119.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  35%  安全",
+          "preferredWidth": 119.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  37%  安全",
+          "preferredWidth": 119.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  8%",
+          "preferredWidth": 67.5,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  39%  安全",
+          "preferredWidth": 119.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  40%  安全",
+          "preferredWidth": 119.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  42%  安全",
+          "preferredWidth": 119.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  9%",
+          "preferredWidth": 67.5,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  43%  安全",
+          "preferredWidth": 119.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  45%  安全",
+          "preferredWidth": 119.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  46%  安全",
+          "preferredWidth": 119.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  10%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  48%  安全",
+          "preferredWidth": 119.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  50%  安全",
+          "preferredWidth": 119.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  51%  安全",
+          "preferredWidth": 119.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  52%  安全",
+          "preferredWidth": 119.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  11%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  54%  安全",
+          "preferredWidth": 119.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  55%  安全",
+          "preferredWidth": 119.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  57%  安全",
+          "preferredWidth": 119.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  12%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  58%  安全",
+          "preferredWidth": 119.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  59%  安全",
+          "preferredWidth": 119.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  61%  安全",
+          "preferredWidth": 119.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  13%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  62%  安全",
+          "preferredWidth": 119.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  63%  安全",
+          "preferredWidth": 119.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  65%  安全",
+          "preferredWidth": 119.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  66%  安全",
+          "preferredWidth": 119.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  14%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  64%  安全",
+          "preferredWidth": 119.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  15%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  16%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  17%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  18%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  19%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  20%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  21%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  22%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  23%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  24%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  25%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  26%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  27%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "张力  67%  安全",
+          "preferredWidth": 119.0,
+          "availableWidth": 128.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  28%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  29%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  30%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  31%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  32%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  33%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  34%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  35%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  36%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  37%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  38%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  39%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  40%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  41%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  42%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  43%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  44%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  45%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  46%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  47%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  48%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  49%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  50%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  51%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  52%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  53%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  54%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  55%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  56%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  57%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  58%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  59%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  60%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  61%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  62%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  63%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  64%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  65%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  66%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  67%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  68%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  69%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  70%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  71%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  72%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  73%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  74%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  75%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  76%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  77%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  78%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  79%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  80%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  81%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  82%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  83%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  84%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  85%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  86%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  87%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  88%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  89%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  90%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  91%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  92%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  93%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  94%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  95%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  96%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  97%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  98%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  99%",
+          "preferredWidth": 77.0,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        },
+        {
+          "text": "收鱼  100%",
+          "preferredWidth": 86.5,
+          "availableWidth": 92.0,
+          "preferredHeight": 24.5,
+          "availableHeight": 26.0,
+          "fits": true
+        }
+      ],
+      "capturedFrames": 19,
+      "renderProbe": {
+        "graphics": "Metal",
+        "quality": "Medium",
+        "hdrAfter": true,
+        "halfHdrSamples": 4,
+        "desiredSamples": 4,
+        "heroMotionClips": [
+          "idle",
+          "swim",
+          "turn",
+          "burst",
+          "bite",
+          "hooked",
+          "release"
+        ],
+        "heroMotionLoops": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          false
+        ]
+      },
+      "checks": [
+        "immersive-isolated-save-root",
+        "immersive-ready-valid-save",
+        "visible-hit-target:继续探索",
+        "visible-hit-target:暂停",
+        "visible-hit-target:设置",
+        "visible-hit-target:出海",
+        "visible-hit-target:返回首页",
+        "visible-hit-target:海域与装备",
+        "immersive-separate-preparation",
+        "immersive-departure-visible-without-scrolling",
+        "immersive-departure-inside-safe-area",
+        "visible-hit-target:开始钓鱼",
+        "immersive-active-play",
+        "immersive-only-pause-and-current-action",
+        "immersive-no-global-chrome-or-panels",
+        "immersive-hud-under-15-percent-and-central-view-clear-Ready",
+        "immersive-meters-only-while-fighting",
+        "waterline-finite-shader-input-ready",
+        "waterline-ready-actual-camera-rig-and-guides",
+        "visible-hit-target:固定水下镜头    已关闭",
+        "waterline-finite-shader-input-固定水下镜头",
+        "waterline-固定水下镜头-actual-camera-rig-and-guides",
+        "waterline-fixed-camera-no-fade-固定水下镜头",
+        "visible-hit-target:固定水下镜头    已开启",
+        "waterline-finite-shader-input-restored-auto",
+        "waterline-restored-auto-actual-camera-rig-and-guides",
+        "visible-hit-target:减弱动态效果    已关闭",
+        "waterline-finite-shader-input-减弱动态效果",
+        "waterline-减弱动态效果-actual-camera-rig-and-guides",
+        "waterline-fixed-camera-no-fade-减弱动态效果",
+        "visible-hit-target:减弱动态效果    已开启",
+        "visible-hit-target:按住蓄力 · 松手抛竿",
+        "immersive-menu-cancels-cast-charge",
+        "waterline-finite-shader-input-casting",
+        "waterline-casting-actual-camera-rig-and-guides",
+        "waterline-finite-shader-input-impact",
+        "waterline-impact-actual-camera-rig-and-guides",
+        "immersive-hud-under-15-percent-and-central-view-clear-Waiting",
+        "waterline-finite-shader-input-underwater-waiting",
+        "waterline-underwater-waiting-actual-camera-rig-and-guides",
+        "waterline-transition-completes",
+        "immersive-normal-bite",
+        "immersive-hud-under-15-percent-and-central-view-clear-Bite",
+        "visible-hit-target:提竿",
+        "immersive-hud-under-15-percent-and-central-view-clear-Fighting",
+        "visible-hit-target:按住收线",
+        "immersive-pause-releases-held-reel",
+        "immersive-pause-freezes-current-fish",
+        "immersive-settings-retain-catch",
+        "visible-hit-target:上一级",
+        "immersive-back-does-not-resume",
+        "visible-hit-target:结束本次 · 返回准备",
+        "visible-hit-target:取消，继续留在这里",
+        "immersive-exit-cancel-keeps-current-fish",
+        "immersive-focus-loss-cancels-input",
+        "immersive-focus-return-awaits-continue",
+        "immersive-live-meter-label-fits-张力  11%  安全",
+        "immersive-live-meter-label-fits-收鱼  2%",
+        "immersive-live-meter-label-fits-张力  8%  安全",
+        "immersive-live-meter-label-fits-张力  10%  安全",
+        "immersive-live-meter-label-fits-收鱼  3%",
+        "immersive-live-meter-label-fits-张力  13%  安全",
+        "immersive-live-meter-label-fits-张力  14%  安全",
+        "immersive-live-meter-label-fits-收鱼  4%",
+        "immersive-live-meter-label-fits-张力  16%  安全",
+        "immersive-live-meter-label-fits-张力  18%  安全",
+        "immersive-live-meter-label-fits-张力  19%  安全",
+        "immersive-live-meter-label-fits-张力  21%  安全",
+        "immersive-live-meter-label-fits-收鱼  5%",
+        "immersive-live-meter-label-fits-张力  22%  安全",
+        "immersive-live-meter-label-fits-张力  24%  安全",
+        "immersive-live-meter-label-fits-张力  26%  安全",
+        "immersive-live-meter-label-fits-收鱼  6%",
+        "immersive-live-meter-label-fits-张力  27%  安全",
+        "immersive-live-meter-label-fits-张力  29%  安全",
+        "immersive-live-meter-label-fits-张力  30%  安全",
+        "immersive-live-meter-label-fits-收鱼  7%",
+        "immersive-live-meter-label-fits-张力  32%  安全",
+        "immersive-live-meter-label-fits-张力  34%  安全",
+        "immersive-live-meter-label-fits-张力  35%  安全",
+        "immersive-live-meter-label-fits-张力  37%  安全",
+        "immersive-live-meter-label-fits-收鱼  8%",
+        "immersive-live-meter-label-fits-张力  39%  安全",
+        "immersive-live-meter-label-fits-张力  40%  安全",
+        "immersive-live-meter-label-fits-张力  42%  安全",
+        "immersive-live-meter-label-fits-收鱼  9%",
+        "immersive-live-meter-label-fits-张力  43%  安全",
+        "immersive-live-meter-label-fits-张力  45%  安全",
+        "immersive-live-meter-label-fits-张力  46%  安全",
+        "immersive-live-meter-label-fits-收鱼  10%",
+        "immersive-live-meter-label-fits-张力  48%  安全",
+        "immersive-live-meter-label-fits-张力  50%  安全",
+        "immersive-live-meter-label-fits-张力  51%  安全",
+        "immersive-live-meter-label-fits-张力  52%  安全",
+        "immersive-live-meter-label-fits-收鱼  11%",
+        "immersive-live-meter-label-fits-张力  54%  安全",
+        "immersive-live-meter-label-fits-张力  55%  安全",
+        "immersive-live-meter-label-fits-张力  57%  安全",
+        "immersive-live-meter-label-fits-收鱼  12%",
+        "immersive-live-meter-label-fits-张力  58%  安全",
+        "immersive-live-meter-label-fits-张力  59%  安全",
+        "immersive-live-meter-label-fits-张力  61%  安全",
+        "immersive-live-meter-label-fits-收鱼  13%",
+        "immersive-live-meter-label-fits-张力  62%  安全",
+        "immersive-live-meter-label-fits-张力  63%  安全",
+        "immersive-live-meter-label-fits-张力  65%  安全",
+        "immersive-live-meter-label-fits-张力  66%  安全",
+        "immersive-live-meter-label-fits-收鱼  14%",
+        "immersive-live-meter-label-fits-张力  64%  安全",
+        "immersive-live-meter-label-fits-收鱼  15%",
+        "immersive-live-meter-label-fits-收鱼  16%",
+        "immersive-live-meter-label-fits-收鱼  17%",
+        "immersive-live-meter-label-fits-收鱼  18%",
+        "immersive-live-meter-label-fits-收鱼  19%",
+        "immersive-live-meter-label-fits-收鱼  20%",
+        "immersive-live-meter-label-fits-收鱼  21%",
+        "immersive-live-meter-label-fits-收鱼  22%",
+        "immersive-live-meter-label-fits-收鱼  23%",
+        "immersive-live-meter-label-fits-收鱼  24%",
+        "immersive-live-meter-label-fits-收鱼  25%",
+        "immersive-live-meter-label-fits-收鱼  26%",
+        "immersive-live-meter-label-fits-收鱼  27%",
+        "immersive-live-meter-label-fits-张力  67%  安全",
+        "immersive-live-meter-label-fits-收鱼  28%",
+        "immersive-live-meter-label-fits-收鱼  29%",
+        "immersive-live-meter-label-fits-收鱼  30%",
+        "immersive-live-meter-label-fits-收鱼  31%",
+        "immersive-live-meter-label-fits-收鱼  32%",
+        "immersive-live-meter-label-fits-收鱼  33%",
+        "immersive-live-meter-label-fits-收鱼  34%",
+        "immersive-live-meter-label-fits-收鱼  35%",
+        "immersive-live-meter-label-fits-收鱼  36%",
+        "immersive-live-meter-label-fits-收鱼  37%",
+        "immersive-live-meter-label-fits-收鱼  38%",
+        "immersive-live-meter-label-fits-收鱼  39%",
+        "immersive-live-meter-label-fits-收鱼  40%",
+        "immersive-live-meter-label-fits-收鱼  41%",
+        "immersive-live-meter-label-fits-收鱼  42%",
+        "immersive-live-meter-label-fits-收鱼  43%",
+        "immersive-live-meter-label-fits-收鱼  44%",
+        "immersive-live-meter-label-fits-收鱼  45%",
+        "immersive-live-meter-label-fits-收鱼  46%",
+        "immersive-live-meter-label-fits-收鱼  47%",
+        "immersive-live-meter-label-fits-收鱼  48%",
+        "immersive-live-meter-label-fits-收鱼  49%",
+        "immersive-live-meter-label-fits-收鱼  50%",
+        "immersive-live-meter-label-fits-收鱼  51%",
+        "immersive-live-meter-label-fits-收鱼  52%",
+        "immersive-live-meter-label-fits-收鱼  53%",
+        "immersive-live-meter-label-fits-收鱼  54%",
+        "immersive-live-meter-label-fits-收鱼  55%",
+        "immersive-live-meter-label-fits-收鱼  56%",
+        "immersive-live-meter-label-fits-收鱼  57%",
+        "immersive-live-meter-label-fits-收鱼  58%",
+        "immersive-live-meter-label-fits-收鱼  59%",
+        "immersive-live-meter-label-fits-收鱼  60%",
+        "immersive-live-meter-label-fits-收鱼  61%",
+        "immersive-live-meter-label-fits-收鱼  62%",
+        "immersive-live-meter-label-fits-收鱼  63%",
+        "immersive-live-meter-label-fits-收鱼  64%",
+        "immersive-live-meter-label-fits-收鱼  65%",
+        "immersive-live-meter-label-fits-收鱼  66%",
+        "immersive-live-meter-label-fits-收鱼  67%",
+        "immersive-live-meter-label-fits-收鱼  68%",
+        "immersive-live-meter-label-fits-收鱼  69%",
+        "immersive-live-meter-label-fits-收鱼  70%",
+        "immersive-live-meter-label-fits-收鱼  71%",
+        "immersive-live-meter-label-fits-收鱼  72%",
+        "immersive-live-meter-label-fits-收鱼  73%",
+        "immersive-live-meter-label-fits-收鱼  74%",
+        "immersive-live-meter-label-fits-收鱼  75%",
+        "immersive-live-meter-label-fits-收鱼  76%",
+        "immersive-live-meter-label-fits-收鱼  77%",
+        "immersive-live-meter-label-fits-收鱼  78%",
+        "immersive-live-meter-label-fits-收鱼  79%",
+        "immersive-live-meter-label-fits-收鱼  80%",
+        "immersive-live-meter-label-fits-收鱼  81%",
+        "immersive-live-meter-label-fits-收鱼  82%",
+        "immersive-live-meter-label-fits-收鱼  83%",
+        "immersive-live-meter-label-fits-收鱼  84%",
+        "immersive-live-meter-label-fits-收鱼  85%",
+        "immersive-live-meter-label-fits-收鱼  86%",
+        "immersive-live-meter-label-fits-收鱼  87%",
+        "immersive-live-meter-label-fits-收鱼  88%",
+        "immersive-live-meter-label-fits-收鱼  89%",
+        "immersive-live-meter-label-fits-收鱼  90%",
+        "immersive-live-meter-label-fits-收鱼  91%",
+        "immersive-live-meter-label-fits-收鱼  92%",
+        "immersive-live-meter-label-fits-收鱼  93%",
+        "immersive-live-meter-label-fits-收鱼  94%",
+        "immersive-live-meter-label-fits-收鱼  95%",
+        "immersive-live-meter-label-fits-收鱼  96%",
+        "immersive-live-meter-label-fits-收鱼  97%",
+        "immersive-live-meter-label-fits-收鱼  98%",
+        "immersive-live-meter-label-fits-收鱼  99%",
+        "immersive-live-meter-label-fits-收鱼  100%",
+        "immersive-observed-real-two-digit-progress",
+        "immersive-real-fish-landed",
+        "immersive-hud-under-15-percent-and-central-view-clear-Landed",
+        "visible-hit-target:记录并放流",
+        "immersive-one-real-record",
+        "visible-hit-target:左手操作    已关闭",
+        "visible-hit-target:确认结束并返回准备",
+        "immersive-confirm-exit-to-preparation",
+        "immersive-unrecorded-exit-preserves-existing-disk-ledger",
+        "visible-hit-target:左手操作    已开启",
+        "immersive-restored-settings-real-disk-ledger"
+      ]
+    }
+  ],
+  "video": {
+    "status": "LANDSCAPE_SELECTED_FRAMES_UI_PHASE_REVIEW_PASS_FULL_MOTION_PENDING",
+    "label": "waterline20261125phone3",
+    "clipSeconds": 4,
+    "width": 2868,
+    "height": 1320,
+    "clipSha256": "3626d9061c26b5a0034d139d8acec3a95ef4c4a64f70d644a8460fb0a0198fd3",
+    "normalization": "FFmpeg honors actual raw90-degree display matrix; prior extra counterclockwise transform rejected and retained separately; no source scene manipulation",
+    "offsetSeconds": 9.446223545074464,
+    "scope": "Actual isolated iPhone Simulator player screen recording; automated EventSystem, not OS touch, child, actual phone or performance qualification",
+    "originalVideoReceiptSha256": "5487979be554f1e9b8b497cb71ed034a7dc95bc31ac0421a283fd16eeebf4e7e",
+    "selectedSecondsReviewed": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "observedPhases": [
+      "ReadyCharge",
+      "WaitingSurface",
+      "WaitingUnderwater",
+      "WaitingUnderwater"
+    ],
+    "fullMovieWatched": false
+  },
+  "artifacts": [
+    {
+      "path": "art/previews/waterline-casting/bay-impact.png",
+      "sha256": "9404bb3c12834f03c73320e4248f60bb739609cf4f4fcc6237f686597f98327c"
+    },
+    {
+      "path": "art/previews/waterline-casting/bay-surface-cast.png",
+      "sha256": "bfe8a8a99a9efdd45efecaa888beaf8a777f02b4475f5acac9a83568244fb0e3"
+    },
+    {
+      "path": "art/previews/waterline-casting/bay-surface-ready.png",
+      "sha256": "52148de4d52bfb783a87557d460216780871e7cc5dd1a0243cb6cdfadf1ead06"
+    },
+    {
+      "path": "art/previews/waterline-casting/bay-underwater.png",
+      "sha256": "e79cd075afabe2b20f0d3981457b9516133fe39228ad46c168b24da5e12e9f0a"
+    },
+    {
+      "path": "art/previews/waterline-casting/channel-surface.png",
+      "sha256": "66507e5942d169c01330ea4f20e8531321e659e90879ffe91e463865be05e0ac"
+    },
+    {
+      "path": "art/previews/waterline-casting/native-phone-casting.mp4",
+      "sha256": "3626d9061c26b5a0034d139d8acec3a95ef4c4a64f70d644a8460fb0a0198fd3"
+    },
+    {
+      "path": "art/previews/waterline-casting/native-phone-contact.png",
+      "sha256": "89f4fe23c30b52034d676fc9a6ddd8637bbceb2877fe4daf2696377bc879eca4"
+    },
+    {
+      "path": "art/previews/waterline-casting/native-phone-impact.png",
+      "sha256": "54d7874d7417d5789557964cf5a86c97303f5aa2bf8683ba4a0b58778a36bd38"
+    },
+    {
+      "path": "art/previews/waterline-casting/native-phone-ready.png",
+      "sha256": "5b9b99931ae0377a5feb1e443190875eaa2260cfb936d7352b61e5fac16f7a42"
+    },
+    {
+      "path": "art/previews/waterline-casting/native-phone-underwater.png",
+      "sha256": "2e535968da3e45864fa5562e7371426af6d685023fd8b88d807d73d70f8a40cb"
+    },
+    {
+      "path": "art/previews/waterline-casting/native-tablet-contact.png",
+      "sha256": "2eaff774a0c12029b24000639945961eb2531dcdc37645cb32c4d22ad629fee2"
+    },
+    {
+      "path": "art/previews/waterline-casting/native-tablet-fighting.png",
+      "sha256": "c1c30f720fac40a2d8bd0f748d64f4d3984b91aa3618781ed11d13b6e450dd11"
+    },
+    {
+      "path": "art/previews/waterline-casting/native-tablet-ready.png",
+      "sha256": "8beacdd90e309bf4c9c8e0824e30298cc6632c3ae4d159bc827aa973226dda94"
+    },
+    {
+      "path": "art/previews/waterline-casting/rejected-bottom-framing.png",
+      "sha256": "911ece206da44663b493a9078c11a53f1824a7cfa4a907f8845a99e8f7f0fd3e"
+    },
+    {
+      "path": "art/previews/waterline-casting/rejected-native-idle-water.png",
+      "sha256": "1febf11ea53267becaa5cc615a2068445281bc46fe437376987b37dd7406f9d5"
+    },
+    {
+      "path": "art/previews/waterline-casting/slope-surface.png",
+      "sha256": "69ec7111ba21d8b0c6b4c94f6ae75120b7f71e7dc32e54591776eb4f53bb6d73"
+    },
+    {
+      "path": "art/previews/waterline-casting/three-habitat-contact.png",
+      "sha256": "d13ce37c868b72333927460c97e5cfe459fa596bf9cee953957262d5c0f8b04c"
+    }
+  ],
+  "retention": {
+    "initialAUpdateFiles": 36,
+    "bUpdateFiles": 37,
+    "retryProtectedFiles": 38,
+    "status": "PASS",
+    "method": "Current owned app containers, actual primary QA save bytes identical; no restore,replay or uninstall"
+  },
+  "nativeA": {
+    "sourceCommit": "a5e05059e3315ff064335a0ea862af48159ef512",
+    "flow": "PASS_19_FRAMES_196_POINTS",
+    "visual": "FAIL_NONFINITE_IDLE_WATER_INPUT"
+  },
+  "enospc": {
+    "status": "TERMINAL_ENVIRONMENT_ENOSPC_WITH_VALID_STATE_AND_INCOMPLETE_MEASUREMENT_START",
+    "measurementStartId": "539d2470-da3f-4a9d-941c-e4c4a34b48da",
+    "completionNotWritten": true,
+    "frozenAppBytesUnchanged": true,
+    "failedRunSave": {
+      "validChecksum": true,
+      "catches": 1,
+      "points": 192
+    },
+    "scope": "Host disk full during QA screenshot; incomplete actual start retained; no fabricated completion or duration; fresh isolated retry uses exact already-installed binary"
+  },
+  "visualReview": {
+    "staticContacts": 1,
+    "selectedStaticOriginals": 1,
+    "earlierDOriginals": 5,
+    "nativeContacts": 2,
+    "selectedNativeOriginals": 2,
+    "normalizedVideoSeconds": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "fullMovieWatched": false,
+    "allStaticFramesManuallyViewed": false
+  },
+  "metrics": {
+    "status": "COMPLETED_RECORDS_VERIFIED_ONE_ENOSPC_START_INCOMPLETE",
+    "historicalOverall": "INCOMPLETE",
+    "baselineCompleted": 1220,
+    "baselineStarts": 1215,
+    "newCompleted": 34,
+    "newStarts": 35,
+    "totalCompleted": 1254,
+    "totalStarts": 1250,
+    "oldObjectsUnchanged": true,
+    "actualReceiptsAndBindingsVerified": true,
+    "completedIntervalsDisjoint": true,
+    "uncompletedStarts": [
+      {
+        "runId": null,
+        "stageId": "apply",
+        "category": "e2e",
+        "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+        "id": "539d2470-da3f-4a9d-941c-e4c4a34b48da",
+        "startedAt": "2026-11-24T23:14:40.154Z",
+        "executable": "python3",
+        "commandDigest": "0c56373f97a1bac3448c21ea70d0a050b17cd1b8bb787f742cfd35871637e0ab",
+        "receiptPath": "measurements/waterline-finite-phone-20261125.json"
+      }
+    ],
+    "enospcCompletionNotFabricated": true,
+    "overlaps": [],
+    "newFailures": [
+      {
+        "id": "d4d7a3be-a8d0-4b33-81e0-31b952e64d0d",
+        "receipt": "measurements/waterline-editor-first-20261125.json",
+        "exitCode": 2
+      },
+      {
+        "id": "4a52add5-cd5d-426a-add0-e4a1dfb2d903",
+        "receipt": "measurements/waterline-playmode-first-20261125.json",
+        "exitCode": 2
+      },
+      {
+        "id": "8440265e-b644-4941-928d-99e61e8133a5",
+        "receipt": "measurements/waterline-gpu-first-20261125.json",
+        "exitCode": 1
+      },
+      {
+        "id": "cc619dbd-7b17-4916-807b-bcf94b2d992e",
+        "receipt": "measurements/waterline-gpu-second-20261125.json",
+        "exitCode": 1
+      },
+      {
+        "id": "02e55f0b-afed-4a2d-82dc-8790bf763b98",
+        "receipt": "measurements/waterline-gpu-framed-20261125.json",
+        "exitCode": 1
+      },
+      {
+        "id": "b30315dc-9f9e-4286-bc7e-a3e15822257e",
+        "receipt": "measurements/waterline-gpu-current-20261125.json",
+        "exitCode": 1
+      },
+      {
+        "id": "0c4d318f-9bfc-47d6-888b-d277e71d8824",
+        "receipt": "measurements/waterline-splash-red-20261125.json",
+        "exitCode": 2
+      },
+      {
+        "id": "ca48e5a0-68fb-4551-a29f-5b6e84c4524a",
+        "receipt": "measurements/waterline-gpu-finite-inputs-20261125.json",
+        "exitCode": 1
+      }
+    ],
+    "scope": "actual local state/start/completion/receipt integrity for this increment only; not formal independent CLI compliance or product acceptance"
+  },
+  "limits": [
+    "Static cross-habitat hero is shared geometry fixture, not fish-distribution acceptance",
+    "Deep sinking is compressed game time; first-person hands remain P0 omission",
+    "Current waiting action still says observe sea surface after underwater transition; wording remains to refine",
+    "No new20-round full progression,900-second timer, OS touch,child,user/science or physical20-minute qualification",
+    "First-render/repeat strict GPU equality remains PARTIAL; full natural art and other finished species pending"
+  ],
+  "testFlight": {
+    "build": 8,
+    "sourceCommit": "1bdfa785237701ab2c7675031142d526f66c0e28",
+    "updated": false,
+    "actualInstallation": "NOT_RUN"
+  }
+}
