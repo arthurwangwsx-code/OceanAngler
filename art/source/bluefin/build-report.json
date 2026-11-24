@@ -51,7 +51,7 @@
     "Bluefin_Fin_MetallicSmoothness.png": "35aeee5a17e984ecc81683eb944c9ec6d310171856149635f130cfb88e4ca72c",
     "Bluefin_Roughness.png": "e84ebdb6581ea835014dfa6085f8636ad48f44fd0544a2f080a108d98cec915c",
     "Bluefin_MetallicSmoothness.png": "a36fac61f41493501675e1a1cfb171f0cdd718648d0eb3e3ac8c8f56a52d56bc",
-    "Bluefin_BaseColor.png": "37e50f721c81e08091b4ee5a56afa0dbc05aa7007869c6a3ce7d85d8fd97add1",
+    "Bluefin_BaseColor.png": "51b39875e79feb17cde7a370ccfe3e78dd25fcc28f415fdae76700452003ee8f",
     "Bluefin_Normal.png": "e8f83e511693e6001147c1203f259243dac9a403899f77414b3b2ad2d2c76a19"
   },
   "artAcceptance": "NOT_ACCEPTED",
@@ -401,5 +401,6 @@
     "opacity": "authored pigment alpha, not measured biological transmission",
     "shadow": "opaque geometric rays; runtime transparent membrane shadow disabled"
   },
-  "note": "Original authoring candidate; scientific, runtime, deformation, LOD and human visual gates remain separate."
+  "note": "Original authoring candidate; scientific, runtime, deformation, LOD and human visual gates remain separate.",
+  "mapUpdateMode": "Existing blend image datablocks only; geometry,rig,UV,actions and external-texture FBX retained"
 }

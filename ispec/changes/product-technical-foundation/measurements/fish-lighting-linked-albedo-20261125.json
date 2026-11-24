@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "2c855b43-d57b-40e4-bc43-b997e7dd837a",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "29fdcdffc202e96d440eb99ecf2ac734a905ebb15e1109193c38463091304b78",
+    "category": "test",
+    "executable": "Blender",
+    "startedAt": "2026-11-24T20:15:49.150Z",
+    "finishedAt": "2026-11-24T20:15:53.485Z",
+    "durationMs": 4306.988874999999,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "/Applications/Blender.app/Contents/MacOS/Blender",
+    "args": [
+      "--background",
+      "--factory-startup",
+      "--threads",
+      "8",
+      "--python-exit-code",
+      "1",
+      "--python",
+      ".local/fish-lighting-qa/check-linked-albedo.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "/Applications/Blender.app/Contents/MacOS/Blender",
+    "--background",
+    "--factory-startup",
+    "--threads",
+    "8",
+    "--python-exit-code",
+    "1",
+    "--python",
+    ".local/fish-lighting-qa/check-linked-albedo.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T20:15:49.150Z",
+  "finishedAt": "2026-11-24T20:15:53.485Z",
+  "durationMs": 4306.988874999999
+}

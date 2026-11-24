@@ -37,3 +37,6 @@ Unity执行python3 tools/game.py bluefin，重建URP材质、动画控制器和R
 当前薄鳍迭代见[制作约束](../../../docs/25-hero-fin-tissue.md)：保留24664面LOD0预算，三LOD24664/9864/3699；鳍膜在各LOD独立重建闭合渐薄壁，胸鳍边界按有序轮廓修正；原RGBA膜图与法线、粗糙度、MetallicSmoothness均为本项目生成。鳍条与膜拆为七材质槽，实体保持不透明，膜采用URP Lit透明Alpha并保留高光。膜不写深度或投影，不声称真实折射或生物透射率；多角度、原生运行、美术和科学验收须分开。
 
 当前胸鳍曲线B内收后缘，三LOD24664/9864/3698，保留原贴图；非胸鳍LOD0在保持六位精度/面朝向/重复数量、归一面顺序/循环起点后几何UV权重与材质角色一致。第一版工程通过但画面被否决，失败样本不删除；当前仍非完整美术通过，见[胸鳍回执](../../../reports/bluefin-pectoral.md)。
+# 体色单独更新入口
+
+已有源模型需要改色时，使用`python3 tools/art.py build --asset bluefin --maps-only --label unique --no-preview`保留现有网格、UV、骨骼、动作和FBX；随后重新验证源文件和导入贴图。完整build会重新执行减面，不保证不同折叠选择下逐顶点身份不变。当前体色与反射对照、首次失败及范围见[制作约束](../../../docs/32-hero-albedo-and-lighting.md)，科学、用户和完整美术仍待验收。

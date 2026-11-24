@@ -11,8 +11,11 @@ from mathutils import Vector
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'art/source/bluefin';GAME=ROOT/'game/Assets/OceanAngler/Art/Bluefin'
 PREVIEW=ROOT/'.local/art/bluefin';OUT.mkdir(parents=True,exist_ok=True);GAME.mkdir(parents=True,exist_ok=True);PREVIEW.mkdir(parents=True,exist_ok=True)
-bpy.ops.object.select_all(action='SELECT');bpy.ops.object.delete(use_global=False)
-for block in list(bpy.data.materials):bpy.data.materials.remove(block)
+MAPS_ONLY='--maps-only' in sys.argv
+if MAPS_ONLY:bpy.ops.wm.open_mainfile(filepath=str(OUT/'Bluefin.blend'))
+else:
+    bpy.ops.object.select_all(action='SELECT');bpy.ops.object.delete(use_global=False)
+    for block in list(bpy.data.materials):bpy.data.materials.remove(block)
 scene=bpy.context.scene;scene.unit_settings.system='METRIC';scene.render.fps=30
 bpy.context.preferences.filepaths.save_version=0
 scene.render.engine='CYCLES';scene.cycles.samples=48;scene.cycles.use_denoising=True
@@ -28,7 +31,10 @@ def image(name,data,noncolor=False):
     # explicitly label color maps sRGB and technical maps Non-Color on reload.
     if data.ndim==2:data=np.repeat(data[:,:,None],3,axis=2)
     rgba=np.ones((*data.shape[:2],4),dtype=np.float32);rgba[:,:,:data.shape[2]]=np.clip(data,0,1)
-    im=bpy.data.images.new(name,width=data.shape[1],height=data.shape[0],alpha=data.shape[2]==4)
+    im=bpy.data.images.get(name) if MAPS_ONLY else None
+    if MAPS_ONLY and im is None:raise RuntimeError('Map update requires the existing linked image: '+name)
+    if im is not None and tuple(im.size)!=(data.shape[1],data.shape[0]):raise RuntimeError('Map update must retain texture dimensions: '+name)
+    if im is None:im=bpy.data.images.new(name,width=data.shape[1],height=data.shape[0],alpha=data.shape[2]==4)
     im.use_fake_user=True;im.colorspace_settings.name='Non-Color' if noncolor else 'sRGB'
     im.pixels.foreach_set(rgba.ravel());im.filepath_raw=str(GAME/(name+'.png'));im.file_format='PNG';im.save()
     return im
@@ -36,8 +42,10 @@ def image(name,data,noncolor=False):
 def make_maps():
     h,w=1024,2048;y,x=np.mgrid[0:h,0:w];u=x/(w-1);v=y/(h-1);z=np.cos(v*math.tau)
     upper=np.clip((z+.1)/1.1,0,1);upper=upper*upper*(3-2*upper)
-    silver=np.array([.44,.52,.48]);brass=np.array([.22,.28,.18]);color=silver[None,None,:]*(1-upper[:,:,None])+brass[None,None,:]*upper[:,:,None]
-    belly=np.clip((-z-.12)/.88,0,1);color=color*(1-belly[:,:,None]) + np.array([.52,.59,.53])*belly[:,:,None]
+    # Neutral silver flanks and a restrained warm grey-bronze back. These are
+    # authored albedo choices, not RGB samples taken from reference photos.
+    silver=np.array([.48,.50,.51]);brass=np.array([.30,.29,.25]);color=silver[None,None,:]*(1-upper[:,:,None])+brass[None,None,:]*upper[:,:,None]
+    belly=np.clip((-z-.12)/.88,0,1);color=color*(1-belly[:,:,None]) + np.array([.56,.57,.56])*belly[:,:,None]
     band=np.exp(-((z-.22)/.19)**2);color+=band[:,:,None]*np.array([-.015,.01,.04])
     rng=np.random.default_rng(6931);noise=rng.normal(0,.004,(h,w));color+=noise[:,:,None]
     # Fine overlapping scale relief; head and caudal peduncle are deliberately smoother.
@@ -95,6 +103,20 @@ def make_maps():
     return base,normal,rough,fin,iris_map,fin_normal,fin_rough
 
 base,normal,rough,finmap,irismap,finnormal,finrough=make_maps()
+
+if MAPS_ONLY:
+    # Keep the existing authored/decimated meshes, rig, UVs, actions and FBX.
+    # Re-running reduction is unnecessary for a palette change and can select
+    # different collapse ties. Update the linked image datablocks in place.
+    for im in bpy.data.images:
+        if im.filepath and (GAME/Path(im.filepath).name).is_file():im.filepath=bpy.path.relpath(im.filepath,start=str(OUT))
+    bpy.ops.wm.save_as_mainfile(filepath=str(OUT/'Bluefin.blend'))
+    report=json.loads((OUT/'build-report.json').read_text());report['maps']={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in GAME.glob('*.png')}
+    report['mapUpdateMode']='Existing blend image datablocks only; geometry,rig,UV,actions and external-texture FBX retained'
+    for level in range(3):
+        obj=bpy.data.objects['Bluefin_LOD'+str(level)];obj.data.calc_loop_triangles();report['lods'][obj.name]={'triangles':len(obj.data.loop_triangles),'vertices':len(obj.data.vertices),'uvLayers':len(obj.data.uv_layers)}
+    if not (GAME/'Bluefin.fbx').is_file():raise RuntimeError('Map update requires the existing FBX')
+    (OUT/'build-report.json').write_text(json.dumps(report,indent=2)+'\n');print('BLUEFIN_MAP_UPDATE_OK '+json.dumps(report['lods']));sys.exit(0)
 def material(name,color,roughness=.3,texture=None):
     m=bpy.data.materials.new(name);m.diffuse_color=(*color,1);m.use_nodes=True;p=m.node_tree.nodes.get('Principled BSDF')
     p.inputs['Base Color'].default_value=(*color,1);p.inputs['Roughness'].default_value=roughness

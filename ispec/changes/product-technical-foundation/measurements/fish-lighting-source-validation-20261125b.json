@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "ef978c13-d6a4-402f-8f10-9230a67ce8a3",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "1311b44a7ad3ad9dbd852628b16df5dc1fdae8244007c6446811b54e4ccb5a39",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-24T20:11:14.395Z",
+    "finishedAt": "2026-11-24T20:11:17.044Z",
+    "durationMs": 2618.038875,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      "tools/art.py",
+      "validate",
+      "--asset",
+      "bluefin",
+      "--label",
+      "fishlightingvalidate20261125b"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    "tools/art.py",
+    "validate",
+    "--asset",
+    "bluefin",
+    "--label",
+    "fishlightingvalidate20261125b"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T20:11:14.395Z",
+  "finishedAt": "2026-11-24T20:11:17.044Z",
+  "durationMs": 2618.038875
+}

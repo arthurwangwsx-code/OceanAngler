@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "e838620a-2064-4451-8f8c-3eb2ce7015ae",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "3f199a8a7d05808197f24333f00692cc28701a268476e6d4d6566d9f9d8d20b7",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-24T20:11:32.046Z",
+    "finishedAt": "2026-11-24T20:11:41.895Z",
+    "durationMs": 9809.613582999998,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      "tools/game.py",
+      "fish-lighting-review",
+      "--label",
+      "fishlighting20261125e",
+      "--review-target",
+      "ios"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    "tools/game.py",
+    "fish-lighting-review",
+    "--label",
+    "fishlighting20261125e",
+    "--review-target",
+    "ios"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T20:11:32.046Z",
+  "finishedAt": "2026-11-24T20:11:41.895Z",
+  "durationMs": 9809.613582999998
+}

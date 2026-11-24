@@ -50,15 +50,15 @@
       "acquiredAt": "2026-11-23",
       "status": "ART_REVIEW_PENDING",
       "path": "art/source/bluefin/Bluefin.blend",
-      "sha256": "29ba74536a45ba30d19d46f49b6f13908ea91a1e5bb3eead18d2698f3f3625ad",
+      "sha256": "2778aaf6cf711c7b8631c7068205908fffb3873905cd9cf9d68330f426615085",
       "artifacts": [
         {
           "path": "art/source/bluefin/Bluefin.blend",
-          "sha256": "29ba74536a45ba30d19d46f49b6f13908ea91a1e5bb3eead18d2698f3f3625ad"
+          "sha256": "2778aaf6cf711c7b8631c7068205908fffb3873905cd9cf9d68330f426615085"
         },
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin_BaseColor.png",
-          "sha256": "37e50f721c81e08091b4ee5a56afa0dbc05aa7007869c6a3ce7d85d8fd97add1"
+          "sha256": "51b39875e79feb17cde7a370ccfe3e78dd25fcc28f415fdae76700452003ee8f"
         },
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin_Fin.png",
@@ -151,7 +151,7 @@
         },
         {
           "path": "art/source/bluefin/build-report.json",
-          "sha256": "9db07edd33eab2cab618d533fb673dc6049170bf419724d3b107fd8007d348bf"
+          "sha256": "ec31a76b35372af412786fa42d0311cd5bdd5445dd0dcd6d50d15e48c95c1ce7"
         },
         {
           "path": "art/previews/bluefin-fin-tissue/first-native-phone-exit.png",
@@ -266,7 +266,7 @@
       ],
       "note": "Original bluefin trevally mesh, UV, PBR maps, 12-bone rig, seven animation clips and three LODs. Scientific/visual/user/device acceptance remains open. No third-party photographs or models included.",
       "modifiedAt": "2026-11-25",
-      "modifications": "Fin membranes rebuilt with tapered closed shells in all three LODs; original RGBA, normal, roughness and packed maps; separate opaque rays. Material slots6->7 explicitly; triangles24664/9864/3699 within unchanged25000 LOD0 budget,12bones/7motions retained. Actual source checks and isolated HDR Metal controls pass; source/Player visual, scientific, user and device gates remain separate. Pectoral trailing-edge curve candidate B after visibly rejecting A; existing maps unchanged, LOD0 non-pectoral geometry/UV/weights/material roles normalized-identical. Art/science/user/Player qualification pending. Distance fin meshes retain16 complete opaque outline-ray components, closed tapered membrane and original PBR. Entire nearLOD0 geometry/UV/weights unchanged at six-decimal canonical identity; all original PNG bytes unchanged. LOD budgets24664/9864/3698 unchanged. Screen-size thresholds revised;58 Metal diagnostic frames and auto-vs-forced selected LOD pixel identity checked. Art/science/user/native followup pending.",
+      "modifications": "Fin membranes rebuilt with tapered closed shells in all three LODs; original RGBA, normal, roughness and packed maps; separate opaque rays. Material slots6->7 explicitly; triangles24664/9864/3699 within unchanged25000 LOD0 budget,12bones/7motions retained. Actual source checks and isolated HDR Metal controls pass; source/Player visual, scientific, user and device gates remain separate. Pectoral trailing-edge curve candidate B after visibly rejecting A; existing maps unchanged, LOD0 non-pectoral geometry/UV/weights/material roles normalized-identical. Art/science/user/Player qualification pending. Distance fin meshes retain16 complete opaque outline-ray components, closed tapered membrane and original PBR. Entire nearLOD0 geometry/UV/weights unchanged at six-decimal canonical identity; all original PNG bytes unchanged. LOD budgets24664/9864/3698 unchanged. Screen-size thresholds revised;58 Metal diagnostic frames and auto-vs-forced selected LOD pixel identity checked. Art/science/user/native followup pending. Neutral silver/grey-brass body albedo; actual saved allLOD geometry,UV,weights and material roles retained; FBX and eight other PNG bytes unchanged. maps-only entry preserves existing authored/reduced meshes. Local128 reflection probe remains an unadopted Editor diagnostic; no production reflection asset. Source189 checks,linked image pixels and three-view stable controls qualified; full art/science/user/native followup pending.",
       "nativeFollowup": "reports/bluefin-distance-fins.json; d50f1c3 scoped dual15-frame flow; selected visuals reviewed; full art remains partial"
     },
     {

@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "0bcab398-97f0-4ad9-89bc-f3b1b0ab5d10",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "f422bf8b11bec9373610029905ad738a5a076281b3ed04ab58f58796afff8f50",
+    "category": "compile",
+    "executable": "python3",
+    "startedAt": "2026-11-24T20:11:10.366Z",
+    "finishedAt": "2026-11-24T20:11:14.005Z",
+    "durationMs": 3604.797875,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      "tools/art.py",
+      "build",
+      "--asset",
+      "bluefin",
+      "--maps-only",
+      "--label",
+      "fishlightingmapsonly20261125a",
+      "--no-preview"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    "tools/art.py",
+    "build",
+    "--asset",
+    "bluefin",
+    "--maps-only",
+    "--label",
+    "fishlightingmapsonly20261125a",
+    "--no-preview"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T20:11:10.366Z",
+  "finishedAt": "2026-11-24T20:11:14.005Z",
+  "durationMs": 3604.797875
+}

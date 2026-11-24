@@ -24,6 +24,8 @@
 
 ## 3. 发布链路
 
+2.4体色/光照后续IN_PROGRESS：默认天空反射已存在，临时局部探针未采纳；调整原创体色偏绿，保留灰银/灰铜、蓝黑斑和蓝色鳍。全量重生成的低LOD身份差异被独立校验拒绝，改用maps-only更新入口，全部三档几何/UV/权重、FBX和八张其他PNG保持，链接图像与导出PNG一致；最终5定向Editor/2定向PlayMode及18张GPU静态对照通过。新原生与完整美术待验，见docs/32-hero-albedo-and-lighting.md，原任务不勾选。
+
 - [x] 3.1 核验ASC连接并注册本项目独立Bundle ID。
 - [x] 3.2 网站创建App记录并核验numeric app ID（6838308856）。
 - [x] 3.3 归档、签名、内部专用导出并上传TestFlight（build1/b771909、build2/2971b11、build3/05c8cc7及build4/ee7ba50；build4累计包含环境鱼群、阶段接近/收鱼、共享遭遇入口和鱼体/阴影修正；历史产物保留，安装另验）。

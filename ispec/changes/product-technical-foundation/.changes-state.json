@@ -469,6 +469,14 @@
       "checkedAt": "2026-11-24T19:27:56.357Z",
       "durationMs": 135.58574999999996,
       "outcome": "accepted"
+    },
+    {
+      "stageId": "apply",
+      "runId": null,
+      "operation": "start",
+      "checkedAt": "2026-11-24T19:53:29.156Z",
+      "durationMs": 110.89745800000003,
+      "outcome": "accepted"
     }
   ],
   "measurementJournal": {
@@ -11942,6 +11950,270 @@
       "executable": "python3",
       "commandDigest": "e96bc639a4a94ab0551038851be793e70338a7c4d97b6bf0b93962c2014a058f",
       "receiptPath": "measurements/fin-screen-record-audit-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "52ae29b2-10f1-4bb5-b559-73923ebdac16",
+      "startedAt": "2026-11-24T19:55:51.667Z",
+      "executable": "python3",
+      "commandDigest": "56f535b951ca290aaba02f84565d3ec823ef8cc59daf21fbdc2b75feaf8d03ee",
+      "receiptPath": "measurements/fish-lighting-baseline-gpu-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "39e18808-f3c5-4ab7-98ea-53166bfa535b",
+      "startedAt": "2026-11-24T19:59:49.264Z",
+      "executable": "python3",
+      "commandDigest": "8786d3d8117314329aea1804d150537fd5b8935c318a0f78fa28112ab72efffa",
+      "receiptPath": "measurements/fish-lighting-bindings-gpu-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "e9474832-9394-4805-a6c2-256254329291",
+      "startedAt": "2026-11-24T20:01:11.277Z",
+      "executable": "python3",
+      "commandDigest": "3548525f398fa0fe49ef975d49ab8d632014674b7719890c46aabca2e06adfc3",
+      "receiptPath": "measurements/fish-lighting-stable-gpu-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "b526f9a8-c6a1-4175-a10c-88db688aa472",
+      "startedAt": "2026-11-24T20:04:01.215Z",
+      "executable": "python3",
+      "commandDigest": "4700e95ff284a10e602012067f30a1ef2aa9ad1c3115b05532e48be73494b70b",
+      "receiptPath": "measurements/fish-lighting-palette-build-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "771383ef-0447-466f-a0e5-b2c9cdbe266f",
+      "startedAt": "2026-11-24T20:04:11.018Z",
+      "executable": "python3",
+      "commandDigest": "bf125401f4a6f6169ea75e2831bb0e1a1387c7b6f13a160cc185e1d14903042a",
+      "receiptPath": "measurements/fish-lighting-source-validation-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "86ef1570-11f0-4d8e-a922-2ac13ce2e301",
+      "startedAt": "2026-11-24T20:04:14.381Z",
+      "executable": "python3",
+      "commandDigest": "1bcf850a8da57724302cbb03c3e95dd16457633d2c57458e2ec0056a293daf5d",
+      "receiptPath": "measurements/fish-lighting-unity-import-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "41aae404-0787-4111-a19c-64f49d012e47",
+      "startedAt": "2026-11-24T20:04:26.584Z",
+      "executable": "python3",
+      "commandDigest": "63266be9b483318f92be4ec31f5805288235ea85f21ab93ef9afc420cb0cee52",
+      "receiptPath": "measurements/fish-lighting-palette-gpu-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "ef527c9a-7c02-4b2e-8692-f1cfa6a3e3c9",
+      "startedAt": "2026-11-24T20:06:33.041Z",
+      "executable": "Blender",
+      "commandDigest": "d82afb86dfc907669ca9025f469e85645447fab03fd6b3a728489639110be460",
+      "receiptPath": "measurements/fish-lighting-source-identity-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "f4a47b51-80e6-4875-87d1-c4b163d00d3a",
+      "startedAt": "2026-11-24T20:07:39.259Z",
+      "executable": "python3",
+      "commandDigest": "cdb377ed2ef55b1bd874afb1d373853d337c1c1a7dca4ee501a3e8f58d53146e",
+      "receiptPath": "measurements/fish-lighting-editor-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "b55b77c5-ac50-4629-bf69-967967bdab86",
+      "startedAt": "2026-11-24T20:07:48.690Z",
+      "executable": "python3",
+      "commandDigest": "66ffbb8e34031c56d735c427fefb956e802d5830b0891922db4283bcaa4c3c75",
+      "receiptPath": "measurements/fish-lighting-playmode-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "31b857c4-5371-4946-a7ea-80978903c821",
+      "startedAt": "2026-11-24T20:10:04.501Z",
+      "executable": "Blender",
+      "commandDigest": "dc68ff661de79e506d80c8ff20ae1d969c65c18c7afd56ed0f9c24a40c1d56d8",
+      "receiptPath": "measurements/fish-lighting-rebuild-diagnostic-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "0bcab398-97f0-4ad9-89bc-f3b1b0ab5d10",
+      "startedAt": "2026-11-24T20:11:10.366Z",
+      "executable": "python3",
+      "commandDigest": "f422bf8b11bec9373610029905ad738a5a076281b3ed04ab58f58796afff8f50",
+      "receiptPath": "measurements/fish-lighting-maps-only-build-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "ef978c13-d6a4-402f-8f10-9230a67ce8a3",
+      "startedAt": "2026-11-24T20:11:14.395Z",
+      "executable": "python3",
+      "commandDigest": "1311b44a7ad3ad9dbd852628b16df5dc1fdae8244007c6446811b54e4ccb5a39",
+      "receiptPath": "measurements/fish-lighting-source-validation-20261125b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "61261ae2-f8ba-4b38-9721-07aa5b4018cf",
+      "startedAt": "2026-11-24T20:11:17.432Z",
+      "executable": "Blender",
+      "commandDigest": "d82afb86dfc907669ca9025f469e85645447fab03fd6b3a728489639110be460",
+      "receiptPath": "measurements/fish-lighting-source-identity-20261125b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "22daa5ed-1ee3-46f3-9f95-9760f43c02c8",
+      "startedAt": "2026-11-24T20:11:20.902Z",
+      "executable": "python3",
+      "commandDigest": "1bcf850a8da57724302cbb03c3e95dd16457633d2c57458e2ec0056a293daf5d",
+      "receiptPath": "measurements/fish-lighting-unity-import-20261125b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "e838620a-2064-4451-8f8c-3eb2ce7015ae",
+      "startedAt": "2026-11-24T20:11:32.046Z",
+      "executable": "python3",
+      "commandDigest": "3f199a8a7d05808197f24333f00692cc28701a268476e6d4d6566d9f9d8d20b7",
+      "receiptPath": "measurements/fish-lighting-palette-gpu-20261125b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "47b3bb02-5242-43a6-9125-1ea2b5e0e5ce",
+      "startedAt": "2026-11-24T20:13:48.124Z",
+      "executable": "python3",
+      "commandDigest": "efc00595c0fcab48231c5acb2ad48fb9858682bf374edf1c4912bbca256a2ee0",
+      "receiptPath": "measurements/fish-lighting-maps-only-repeat-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "cdbbef72-8634-43f3-982b-e40f817ceca2",
+      "startedAt": "2026-11-24T20:13:57.279Z",
+      "executable": "Blender",
+      "commandDigest": "d82afb86dfc907669ca9025f469e85645447fab03fd6b3a728489639110be460",
+      "receiptPath": "measurements/fish-lighting-source-identity-20261125c.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "b97824e7-6c59-47a3-ba2f-13bb6715b3de",
+      "startedAt": "2026-11-24T20:14:00.768Z",
+      "executable": "python3",
+      "commandDigest": "dc73c3b61ba0af5ab66d75c328553d59278b1e7a88c409894433de5d48b5876f",
+      "receiptPath": "measurements/fish-lighting-final-gpu-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "2c855b43-d57b-40e4-bc43-b997e7dd837a",
+      "startedAt": "2026-11-24T20:15:49.150Z",
+      "executable": "Blender",
+      "commandDigest": "29fdcdffc202e96d440eb99ecf2ac734a905ebb15e1109193c38463091304b78",
+      "receiptPath": "measurements/fish-lighting-linked-albedo-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "cf730516-ac78-4272-bd52-63d967df324f",
+      "startedAt": "2026-11-24T20:16:48.343Z",
+      "executable": "python3",
+      "commandDigest": "cdb377ed2ef55b1bd874afb1d373853d337c1c1a7dca4ee501a3e8f58d53146e",
+      "receiptPath": "measurements/fish-lighting-final-editor-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "df3f760e-85a8-4ace-a02d-2d275a08355f",
+      "startedAt": "2026-11-24T20:18:01.105Z",
+      "executable": "python3",
+      "commandDigest": "66ea2096f5ebefbc53d027fb86e1f6b985bfa4fe7b06a72da73ace74a686a666",
+      "receiptPath": "measurements/fish-lighting-final-playmode-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "b38a1ef1-8e2c-48d9-b375-dda42c8d3ba7",
+      "startedAt": "2026-11-24T20:19:08.953Z",
+      "executable": "python3",
+      "commandDigest": "b0d36fce288a69cfb07796fd62a1a9d2d39b86232a7e0a511d571164385f20c6",
+      "receiptPath": "measurements/fish-lighting-cache-maintenance-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "ca6a87ba-ce7f-43b5-ba0b-0d8f5d8647a4",
+      "startedAt": "2026-11-24T20:20:20.339Z",
+      "executable": "python3",
+      "commandDigest": "92b88d46c0b5545788a9a2ce5359954222ebde80f299018987788284e4627495",
+      "receiptPath": "measurements/fish-lighting-source-public-checks-20261125.json"
     }
   ],
   "runMeasurements": [
@@ -29990,6 +30262,462 @@
       "receipt": {
         "path": "measurements/fin-screen-record-audit-20261125.json",
         "sha256": "ea567146cd359873ea5987b423aefd4233280ca484bef857fbd92abf13caeaa3"
+      }
+    },
+    {
+      "id": "52ae29b2-10f1-4bb5-b559-73923ebdac16",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "56f535b951ca290aaba02f84565d3ec823ef8cc59daf21fbdc2b75feaf8d03ee",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:55:51.667Z",
+      "finishedAt": "2026-11-24T19:56:10.164Z",
+      "durationMs": 18444.648666,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-baseline-gpu-20261125.json",
+        "sha256": "7a531c5d6fdef3b51c40bf794e0b16cea43daadd735de60f9b137852a5fd4a3f"
+      }
+    },
+    {
+      "id": "39e18808-f3c5-4ab7-98ea-53166bfa535b",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "8786d3d8117314329aea1804d150537fd5b8935c318a0f78fa28112ab72efffa",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:59:49.264Z",
+      "finishedAt": "2026-11-24T20:00:01.643Z",
+      "durationMs": 12354.256667,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-bindings-gpu-20261125.json",
+        "sha256": "e297d893ee227532b71b49811f4b119d25ae0735b96d46f615917b317beac42a"
+      }
+    },
+    {
+      "id": "e9474832-9394-4805-a6c2-256254329291",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "3548525f398fa0fe49ef975d49ab8d632014674b7719890c46aabca2e06adfc3",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:01:11.277Z",
+      "finishedAt": "2026-11-24T20:01:22.502Z",
+      "durationMs": 11202.226833,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-stable-gpu-20261125.json",
+        "sha256": "e8a43e9e16f405208927bf3700c1e33fd8f4edcb03dfee62c02c24c06ba59d62"
+      }
+    },
+    {
+      "id": "b526f9a8-c6a1-4175-a10c-88db688aa472",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "4700e95ff284a10e602012067f30a1ef2aa9ad1c3115b05532e48be73494b70b",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:04:01.215Z",
+      "finishedAt": "2026-11-24T20:04:10.572Z",
+      "durationMs": 9304.675833,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-palette-build-20261125.json",
+        "sha256": "377540d7a0a61d0d65b8ece375a6aa3eba61f686d8bb85d7811767a5ffd661eb"
+      }
+    },
+    {
+      "id": "771383ef-0447-466f-a0e5-b2c9cdbe266f",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "bf125401f4a6f6169ea75e2831bb0e1a1387c7b6f13a160cc185e1d14903042a",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:04:11.018Z",
+      "finishedAt": "2026-11-24T20:04:13.881Z",
+      "durationMs": 2841.257375,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-source-validation-20261125.json",
+        "sha256": "bc06f77cd898ebb76d57c0b63f7e0b5fef2df793e45e498ac6e3dd9e2bb9ef78"
+      }
+    },
+    {
+      "id": "86ef1570-11f0-4d8e-a922-2ac13ce2e301",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "1bcf850a8da57724302cbb03c3e95dd16457633d2c57458e2ec0056a293daf5d",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:04:14.381Z",
+      "finishedAt": "2026-11-24T20:04:25.954Z",
+      "durationMs": 11539.797333,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-unity-import-20261125.json",
+        "sha256": "80eb19c3c35eaba98d401c372021e620ce35518be66c35691c94835f52ce0de5"
+      }
+    },
+    {
+      "id": "41aae404-0787-4111-a19c-64f49d012e47",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "63266be9b483318f92be4ec31f5805288235ea85f21ab93ef9afc420cb0cee52",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:04:26.584Z",
+      "finishedAt": "2026-11-24T20:04:35.699Z",
+      "durationMs": 9076.430750000001,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-palette-gpu-20261125.json",
+        "sha256": "42bf13aea3caf5aba458339003de4b9e99ac622d2c1855b269ace32fafd702e4"
+      }
+    },
+    {
+      "id": "ef527c9a-7c02-4b2e-8692-f1cfa6a3e3c9",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d82afb86dfc907669ca9025f469e85645447fab03fd6b3a728489639110be460",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-24T20:06:33.041Z",
+      "finishedAt": "2026-11-24T20:06:36.877Z",
+      "durationMs": 3801.915,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-source-identity-20261125.json",
+        "sha256": "f65b41403362c0a19178d32eae72eb6f4f330e27bc6db1533072e67e413437b5"
+      }
+    },
+    {
+      "id": "f4a47b51-80e6-4875-87d1-c4b163d00d3a",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "cdb377ed2ef55b1bd874afb1d373853d337c1c1a7dca4ee501a3e8f58d53146e",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:07:39.259Z",
+      "finishedAt": "2026-11-24T20:07:48.155Z",
+      "durationMs": 8863.70075,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-editor-20261125.json",
+        "sha256": "3950f255c5dee292c29c7ef05ecc13438b0fc39e4fc2c939d7c9d2c85830452f"
+      }
+    },
+    {
+      "id": "b55b77c5-ac50-4629-bf69-967967bdab86",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "66ffbb8e34031c56d735c427fefb956e802d5830b0891922db4283bcaa4c3c75",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:07:48.690Z",
+      "finishedAt": "2026-11-24T20:08:05.544Z",
+      "durationMs": 16822.805875000002,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-playmode-20261125.json",
+        "sha256": "f153ca55c9fc2036cc34eae64965ebf0debd4c940dc86940d206f56210c2f5cf"
+      }
+    },
+    {
+      "id": "31b857c4-5371-4946-a7ea-80978903c821",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "dc68ff661de79e506d80c8ff20ae1d969c65c18c7afd56ed0f9c24a40c1d56d8",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-24T20:10:04.501Z",
+      "finishedAt": "2026-11-24T20:10:07.755Z",
+      "durationMs": 3203.742583,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-rebuild-diagnostic-20261125.json",
+        "sha256": "710c603563f8ce2ea1246af62cc300159f948d017ee71436743a128b9692f46b"
+      }
+    },
+    {
+      "id": "0bcab398-97f0-4ad9-89bc-f3b1b0ab5d10",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "f422bf8b11bec9373610029905ad738a5a076281b3ed04ab58f58796afff8f50",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:11:10.366Z",
+      "finishedAt": "2026-11-24T20:11:14.005Z",
+      "durationMs": 3604.797875,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-maps-only-build-20261125.json",
+        "sha256": "e0b7387c46dbeff7a38d1c50fe5c4483465db96d58aca13c4c40c99adfbb4456"
+      }
+    },
+    {
+      "id": "ef978c13-d6a4-402f-8f10-9230a67ce8a3",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "1311b44a7ad3ad9dbd852628b16df5dc1fdae8244007c6446811b54e4ccb5a39",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:11:14.395Z",
+      "finishedAt": "2026-11-24T20:11:17.044Z",
+      "durationMs": 2618.038875,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-source-validation-20261125b.json",
+        "sha256": "c6747cab04c6986aeb9d26105323b832567e32623e3dd3c9b0c4d08896b8d699"
+      }
+    },
+    {
+      "id": "61261ae2-f8ba-4b38-9721-07aa5b4018cf",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d82afb86dfc907669ca9025f469e85645447fab03fd6b3a728489639110be460",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-24T20:11:17.432Z",
+      "finishedAt": "2026-11-24T20:11:20.482Z",
+      "durationMs": 3024.1296660000003,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-source-identity-20261125b.json",
+        "sha256": "ecfe1d9aa6f0d71b6dbac9bce2e90dbae36c463e1fc485ee765188fa1ec14e32"
+      }
+    },
+    {
+      "id": "22daa5ed-1ee3-46f3-9f95-9760f43c02c8",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "1bcf850a8da57724302cbb03c3e95dd16457633d2c57458e2ec0056a293daf5d",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:11:20.902Z",
+      "finishedAt": "2026-11-24T20:11:31.486Z",
+      "durationMs": 10553.070083,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-unity-import-20261125b.json",
+        "sha256": "b6feb964ca36670e44b158dee335562bd7b5ab737d68df3f8b5e4f5a5eabce95"
+      }
+    },
+    {
+      "id": "e838620a-2064-4451-8f8c-3eb2ce7015ae",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "3f199a8a7d05808197f24333f00692cc28701a268476e6d4d6566d9f9d8d20b7",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:11:32.046Z",
+      "finishedAt": "2026-11-24T20:11:41.895Z",
+      "durationMs": 9809.613582999998,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-palette-gpu-20261125b.json",
+        "sha256": "9ca36a8f007b82506f23ff59490f6de26f4958c904dd4fab68174af6519841de"
+      }
+    },
+    {
+      "id": "47b3bb02-5242-43a6-9125-1ea2b5e0e5ce",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "efc00595c0fcab48231c5acb2ad48fb9858682bf374edf1c4912bbca256a2ee0",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:13:48.124Z",
+      "finishedAt": "2026-11-24T20:13:56.730Z",
+      "durationMs": 8568.793333000001,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-maps-only-repeat-20261125.json",
+        "sha256": "71d3d60f14f1e96f03440d2f4254627232fb61b76eb1bb92732833ad04f137ab"
+      }
+    },
+    {
+      "id": "cdbbef72-8634-43f3-982b-e40f817ceca2",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d82afb86dfc907669ca9025f469e85645447fab03fd6b3a728489639110be460",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-24T20:13:57.279Z",
+      "finishedAt": "2026-11-24T20:14:00.376Z",
+      "durationMs": 3071.734166,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-source-identity-20261125c.json",
+        "sha256": "a3b8ab36b2d41f6246f7917d5aedda479240e60401b02219cd63debe3f75a017"
+      }
+    },
+    {
+      "id": "b97824e7-6c59-47a3-ba2f-13bb6715b3de",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "dc73c3b61ba0af5ab66d75c328553d59278b1e7a88c409894433de5d48b5876f",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:14:00.768Z",
+      "finishedAt": "2026-11-24T20:14:12.919Z",
+      "durationMs": 12129.86525,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-final-gpu-20261125.json",
+        "sha256": "faccc41e49fa8c8fcfa498a8f01d03ef0338bd6f40bf5aabc497e2388b4f16b4"
+      }
+    },
+    {
+      "id": "2c855b43-d57b-40e4-bc43-b997e7dd837a",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "29fdcdffc202e96d440eb99ecf2ac734a905ebb15e1109193c38463091304b78",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-24T20:15:49.150Z",
+      "finishedAt": "2026-11-24T20:15:53.485Z",
+      "durationMs": 4306.988874999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-linked-albedo-20261125.json",
+        "sha256": "5cdeed0a486e3f27e822ca0a00c2e84e6fd011461a60180dacf4a18214460e66"
+      }
+    },
+    {
+      "id": "cf730516-ac78-4272-bd52-63d967df324f",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "cdb377ed2ef55b1bd874afb1d373853d337c1c1a7dca4ee501a3e8f58d53146e",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:16:48.343Z",
+      "finishedAt": "2026-11-24T20:17:10.727Z",
+      "durationMs": 22338.085208,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-final-editor-20261125.json",
+        "sha256": "3a21abeb15a0556743425ea386ff504df13b88c56018e20dbdfcc3b466b23672"
+      }
+    },
+    {
+      "id": "df3f760e-85a8-4ace-a02d-2d275a08355f",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "66ea2096f5ebefbc53d027fb86e1f6b985bfa4fe7b06a72da73ace74a686a666",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:18:01.105Z",
+      "finishedAt": "2026-11-24T20:18:18.136Z",
+      "durationMs": 17003.279458999998,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-final-playmode-20261125.json",
+        "sha256": "ccf3f1c8f80e4294e49ddc46935a308c4c624fffc8803cfbc3615cfe46ffd204"
+      }
+    },
+    {
+      "id": "b38a1ef1-8e2c-48d9-b375-dda42c8d3ba7",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "b0d36fce288a69cfb07796fd62a1a9d2d39b86232a7e0a511d571164385f20c6",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:19:08.953Z",
+      "finishedAt": "2026-11-24T20:19:10.933Z",
+      "durationMs": 1946.530334,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-cache-maintenance-20261125.json",
+        "sha256": "9a692745178a20c50a5d5ec3b52c5aa1df95bb917df101685301906a44acb174"
+      }
+    },
+    {
+      "id": "ca6a87ba-ce7f-43b5-ba0b-0d8f5d8647a4",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "92b88d46c0b5545788a9a2ce5359954222ebde80f299018987788284e4627495",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:20:20.339Z",
+      "finishedAt": "2026-11-24T20:20:23.941Z",
+      "durationMs": 3559.4140419999994,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-source-public-checks-20261125.json",
+        "sha256": "3c2b3f9cda964c406e23eb5cf631bbb428f4105b1d6fa59412a42fad27862f2f"
       }
     }
   ]
