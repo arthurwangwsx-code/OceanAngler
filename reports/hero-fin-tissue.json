@@ -58,7 +58,200 @@
     "scope": "full fin-candidate suite before subsequent landing UI correction",
     "sourceCommit": "4223d8db1c0d649a0ae3ed5f022ea90327813160"
   },
-  "native": "NOT_RUN",
+  "native": {
+    "phone": {
+      "status": "PASS",
+      "label": "fin20261124phone2",
+      "scope": "fresh normal tutorial hero with native15-frame immersive EventSystem flow; no RNG/points injection, OS touch, whole progression, biological optical or device qualification",
+      "source": {
+        "sourceCommit": "d99cd12f29254f6b267e2469d8b6a970fcf2126b",
+        "sourceDigest": "763211e394f18917628c3fec941a019aecad13c122aa5dbf7b9899556296811d",
+        "projectSettingsSha256": "487dd5cc37a763cb9f23702f91a10b6680094d7b2165050d05327b1376c0d54d"
+      },
+      "appDigest": "dfe2c8661d0e7f543de249a25a6bb03656385b56fabf55a6e31e21680987ad9b",
+      "catches": 1,
+      "points": 231,
+      "fishId": "trevally",
+      "saveSha256": "e465c389295bbd1a1a0567972084a478519d4d616dd5811d72c7a272b24ec7fb",
+      "maxHudRatio": 0.12227564305067062,
+      "samples": [
+        {
+          "phase": "Ready",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0890224352478981
+        },
+        {
+          "phase": "Waiting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0890224352478981
+        },
+        {
+          "phase": "Bite",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0890224352478981
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.12034111469984055
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.12034111469984055
+        },
+        {
+          "phase": "Landed",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.12227564305067062
+        },
+        {
+          "phase": "Ready",
+          "leftHanded": true,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0890224352478981
+        },
+        {
+          "phase": "Waiting",
+          "leftHanded": true,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0890224352478981
+        },
+        {
+          "phase": "Bite",
+          "leftHanded": true,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0890224352478981
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": true,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.12034111469984055
+        }
+      ],
+      "capturedFrames": 15,
+      "renderProbe": {
+        "graphics": "Metal",
+        "quality": "Medium",
+        "hdrAfter": true,
+        "halfHdrSamples": 4,
+        "desiredSamples": 4
+      }
+    },
+    "tablet": {
+      "status": "PASS",
+      "label": "fin20261124pad2",
+      "scope": "fresh normal tutorial hero with native15-frame immersive EventSystem flow; no RNG/points injection, OS touch, whole progression, biological optical or device qualification",
+      "source": {
+        "sourceCommit": "d99cd12f29254f6b267e2469d8b6a970fcf2126b",
+        "sourceDigest": "763211e394f18917628c3fec941a019aecad13c122aa5dbf7b9899556296811d",
+        "projectSettingsSha256": "487dd5cc37a763cb9f23702f91a10b6680094d7b2165050d05327b1376c0d54d"
+      },
+      "appDigest": "dfe2c8661d0e7f543de249a25a6bb03656385b56fabf55a6e31e21680987ad9b",
+      "catches": 1,
+      "points": 180,
+      "fishId": "trevally",
+      "saveSha256": "0faf82ce572e46e00920c3801da66ffdf13536941e8d6ab3585a6fa64df9d0e9",
+      "maxHudRatio": 0.045262712985277176,
+      "samples": [
+        {
+          "phase": "Ready",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.03295338898897171
+        },
+        {
+          "phase": "Waiting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.03295338898897171
+        },
+        {
+          "phase": "Bite",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.03295338898897171
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.04454661160707474
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.04454661160707474
+        },
+        {
+          "phase": "Landed",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.045262712985277176
+        },
+        {
+          "phase": "Ready",
+          "leftHanded": true,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.03295338898897171
+        },
+        {
+          "phase": "Waiting",
+          "leftHanded": true,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.03295338898897171
+        },
+        {
+          "phase": "Bite",
+          "leftHanded": true,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.03295338898897171
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": true,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.04454661160707474
+        }
+      ],
+      "capturedFrames": 15,
+      "renderProbe": {
+        "graphics": "Metal",
+        "quality": "Medium",
+        "hdrAfter": true,
+        "halfHdrSamples": 4,
+        "desiredSamples": 4
+      }
+    }
+  },
   "scope": "first hero only; no new species, points, HUD or save changes",
   "art": "NOT_ACCEPTED",
   "scientific": "NOT_ACCEPTED",
@@ -654,11 +847,34 @@
     "measurements/fin-gpu-20261124c.json",
     "measurements/fin-gpu-20261124d.json",
     "measurements/fin-import-20261124c.json",
+    "measurements/fin-landing-play-20261124b.json",
+    "measurements/fin-landing-red-20261124a.json",
+    "measurements/fin-native-independent-20261124a.json",
+    "measurements/fin-native-independent-20261124b.json",
+    "measurements/fin-native-phone-20261124a.json",
+    "measurements/fin-native-phone-20261124b.json",
+    "measurements/fin-native-tablet-20261124a.json",
+    "measurements/fin-native-tablet-20261124b.json",
+    "measurements/fin-play-20261124d.json",
+    "measurements/fin-public-final-20261124b.json",
+    "measurements/fin-public-prebuild-20261124a.json",
+    "measurements/fin-public-prebuild-20261124b.json",
+    "measurements/fin-public-prebuild-20261124c.json",
+    "measurements/fin-record-integrity-20261124b.json",
+    "measurements/fin-reopen-20261124b.json",
+    "measurements/fin-reopen-check-20261124b.json",
+    "measurements/fin-retention-after-20261124a.json",
+    "measurements/fin-retention-after-20261124b.json",
+    "measurements/fin-retention-before-20261124a.json",
+    "measurements/fin-retention-before-20261124b.json",
+    "measurements/fin-simulator-build-20261124a.json",
+    "measurements/fin-simulator-build-20261124b.json",
     "measurements/fin-source-20261124a.json",
     "measurements/fin-source-20261124b.json",
     "measurements/fin-source-20261124c.json",
     "measurements/fin-source-red-20261124a.json",
-    "measurements/fin-studio-20261124c.json"
+    "measurements/fin-studio-20261124c.json",
+    "measurements/fin-tool-tests-20261124a.json"
   ],
   "playMode": {
     "result": "Passed",
@@ -685,5 +901,100 @@
     "scope": "include all visible panel backgrounds and Landed in real HUD union and central-clear checks",
     "greenExitCode": 0,
     "targetedPlayPassed": 3
+  },
+  "source": {
+    "sourceCommit": "d99cd12f29254f6b267e2469d8b6a970fcf2126b",
+    "sourceDigest": "763211e394f18917628c3fec941a019aecad13c122aa5dbf7b9899556296811d",
+    "projectSettingsSha256": "487dd5cc37a763cb9f23702f91a10b6680094d7b2165050d05327b1376c0d54d"
+  },
+  "appDigest": "dfe2c8661d0e7f543de249a25a6bb03656385b56fabf55a6e31e21680987ad9b",
+  "distribution": "LOCAL_SIMULATOR_ONLY_NOT_TESTFLIGHT",
+  "retention": {
+    "a": {
+      "files": 11,
+      "status": "BYTE_IDENTICAL",
+      "method": "current own containers; original bytes, no restore/replay"
+    },
+    "b": {
+      "files": 13,
+      "status": "BYTE_IDENTICAL",
+      "method": "current own containers; original bytes, no restore/replay"
+    }
+  },
+  "reopening": {
+    "status": "PASS_WITH_ORIGINAL_FRAME_REVIEW",
+    "catches": 26,
+    "points": 4622,
+    "saveBytesUnchanged": true,
+    "saveSha256": "e3913747a21f851fbee465ecb7d406d6bbdb7c78702e1f54f6e7d23dc64d0bec",
+    "frameSha256": "47a86399a468775482300af0a635df2fbbac5dd6cbc1ac294185034262cbef1a",
+    "automaticFishingFlags": false,
+    "qaArguments": [
+      "--ocean-save-root",
+      "--ocean-simulator-probe"
+    ]
+  },
+  "visualReview": {
+    "sourceStudioImages": 8,
+    "sourceContactSheets": 1,
+    "gpuProductionViews": 9,
+    "gpuProductionContactSheets": 1,
+    "nativeFinalFrames": 30,
+    "nativeFinalContactSheets": 2,
+    "nativeFinalLandedOriginals": 2,
+    "reopenedOriginal": 1,
+    "scope": "original fish still prototype; no art/scientific/user acceptance"
+  },
+  "measurementBindingAudit": {
+    "status": "NEW_RECORDS_INTEGRITY_PASS",
+    "historicalOverall": "INCOMPLETE",
+    "baselineCompleted": 858,
+    "baselineStarts": 854,
+    "newCompleted": 37,
+    "newStarts": 38,
+    "totalCompleted": 895,
+    "totalStarts": 892,
+    "oldObjectsUnchanged": true,
+    "actualReceiptsAndBindingsVerified": true,
+    "newIntervalsDisjoint": true,
+    "overlaps": [],
+    "newFailures": [
+      {
+        "id": "9eb8ff9d-9143-4009-9f61-2f280809cae5",
+        "receipt": "measurements/fin-source-red-20261124a.json",
+        "exitCode": 1
+      },
+      {
+        "id": "8931daff-5110-4c92-b2b4-6e819f4a15a4",
+        "receipt": "measurements/fin-source-20261124a.json",
+        "exitCode": 1
+      },
+      {
+        "id": "a78cc276-88cc-48b3-8693-9742759b3788",
+        "receipt": "measurements/fin-source-20261124b.json",
+        "exitCode": 1
+      },
+      {
+        "id": "ba22fb77-3650-4a91-b149-ca6437b5ee83",
+        "receipt": "measurements/fin-gpu-20261124a.json",
+        "exitCode": 1
+      },
+      {
+        "id": "44c279a8-9d1f-49e5-b5c3-051d55ebd67c",
+        "receipt": "measurements/fin-gpu-20261124b.json",
+        "exitCode": 1
+      },
+      {
+        "id": "2e1b05ac-419b-4fe1-8618-f3d749aebe02",
+        "receipt": "measurements/fin-landing-red-20261124a.json",
+        "exitCode": 2
+      }
+    ],
+    "scope": "37 actual completed records plus returned integrity-audit completion verified; old objects preserved; new intervals disjoint; formal historical compliance still INCOMPLETE",
+    "newCompletedIncludingAudit": 38,
+    "newStartsIncludingAudit": 38,
+    "totalCompletedIncludingAudit": 896,
+    "totalStartsIncludingAudit": 892,
+    "auditCompletionReceiptVerified": true
   }
 }

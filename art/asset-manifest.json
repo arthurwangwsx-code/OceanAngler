@@ -152,6 +152,116 @@
         {
           "path": "art/source/bluefin/build-report.json",
           "sha256": "7e54bdedb221d3363178bc4aa3f4fc88ed761ba4497034cea73c9857d772ae0b"
+        },
+        {
+          "path": "art/previews/bluefin-fin-tissue/first-native-phone-exit.png",
+          "sha256": "39124f00f6dd5fa1c404a115959f82b7034d01a5afc69f36a1f58362d1d2dcfe",
+          "scope": "Historical first local iOS Simulator build4223d8d; landing obstruction rejected"
+        },
+        {
+          "path": "art/previews/bluefin-fin-tissue/first-native-phone-fighting.png",
+          "sha256": "f6d7f2dcf332e068c05f8d54fffd5d53fd6631546d3e98db59f23eb7233b63b3",
+          "scope": "Historical first local iOS Simulator build4223d8d; landing obstruction rejected"
+        },
+        {
+          "path": "art/previews/bluefin-fin-tissue/first-native-phone-landed.png",
+          "sha256": "2b2e6ea63bb675e8fbb1e70e6aa39aef486aa566d2fcfd9dfdd1c8eed170f137",
+          "scope": "Historical first local iOS Simulator build4223d8d; landing obstruction rejected"
+        },
+        {
+          "path": "art/previews/bluefin-fin-tissue/first-native-phone-pause.png",
+          "sha256": "5790f6929f9f1b7c3d894c3ca82356fb5ace09745cb4bda07f967024cc17d5a9",
+          "scope": "Historical first local iOS Simulator build4223d8d; landing obstruction rejected"
+        },
+        {
+          "path": "art/previews/bluefin-fin-tissue/first-native-tablet-fighting.png",
+          "sha256": "ab85e159ad30d11f24520d931a986ea93b8b0fa23abeffdd38c390f6dd8e0fa9",
+          "scope": "Historical first local iOS Simulator build4223d8d; landing obstruction rejected"
+        },
+        {
+          "path": "art/previews/bluefin-fin-tissue/first-native-tablet-landed.png",
+          "sha256": "024d2e62e631fffb36ebf25975eee24c25847a312c713220dbeada055d407090",
+          "scope": "Historical first local iOS Simulator build4223d8d; landing obstruction rejected"
+        },
+        {
+          "path": "art/previews/bluefin-fin-tissue/gpu-lod0-production-dark.png",
+          "sha256": "f44d5c3673ceeb66a47ceef1ab5a2c892545df04cf8dc985ac5407ed0ef8fd18",
+          "scope": "Original authored source/GPU candidate; not biological or device qualification"
+        },
+        {
+          "path": "art/previews/bluefin-fin-tissue/gpu-lod0-production-light.png",
+          "sha256": "175da3578111af8d49d4623b77d10d6af24459b8c8164f9541a285571792c02a",
+          "scope": "Original authored source/GPU candidate; not biological or device qualification"
+        },
+        {
+          "path": "art/previews/bluefin-fin-tissue/gpu-production-edge.png",
+          "sha256": "36d7b4b44f0447e3152a77a2fc529eb7ab848ff964981b9a5ce0ee2770f586a9",
+          "scope": "Original authored source/GPU candidate; not biological or device qualification"
+        },
+        {
+          "path": "art/previews/bluefin-fin-tissue/gpu-production-quarter.png",
+          "sha256": "11686052399000f01413dcba1d63b6e67d7693327a8cd0144677d444e05434cc",
+          "scope": "Original authored source/GPU candidate; not biological or device qualification"
+        },
+        {
+          "path": "art/previews/bluefin-fin-tissue/gpu-production-reverse.png",
+          "sha256": "ecc7cb4c8f485fd9459aa9290b2fec64426eaeb82723fe99e3528b107625bd1d",
+          "scope": "Original authored source/GPU candidate; not biological or device qualification"
+        },
+        {
+          "path": "art/previews/bluefin-fin-tissue/native-phone-exit.png",
+          "sha256": "dbcede88f47143426fcf856284f1819fb13f6b5fbcaf441624518f2378c05324",
+          "scope": "Local iOS Simulator source freeze d99cd12; not personal device or TestFlight"
+        },
+        {
+          "path": "art/previews/bluefin-fin-tissue/native-phone-fighting.png",
+          "sha256": "185296f77f13ceee7157377b02476fee397e4b52f2eddda3d0a1ee17571c00ea",
+          "scope": "Local iOS Simulator source freeze d99cd12; not personal device or TestFlight"
+        },
+        {
+          "path": "art/previews/bluefin-fin-tissue/native-phone-landed.png",
+          "sha256": "cb491dd1b24b71b0cc68071869fac5bd9d1106dcb274b612ae18c30b8c3ee30a",
+          "scope": "Local iOS Simulator source freeze d99cd12; not personal device or TestFlight"
+        },
+        {
+          "path": "art/previews/bluefin-fin-tissue/native-phone-pause.png",
+          "sha256": "cdc551d77288e903625a315135fedce38764c8e0727ea2eca977d2d7788e39e6",
+          "scope": "Local iOS Simulator source freeze d99cd12; not personal device or TestFlight"
+        },
+        {
+          "path": "art/previews/bluefin-fin-tissue/native-preserved-home.png",
+          "sha256": "47a86399a468775482300af0a635df2fbbac5dd6cbc1ac294185034262cbef1a",
+          "scope": "Local iOS Simulator source freeze d99cd12; not personal device or TestFlight"
+        },
+        {
+          "path": "art/previews/bluefin-fin-tissue/native-tablet-fighting.png",
+          "sha256": "a2978431a8aa90291fd520959e342e696d75106335e02f4eae1190f6b7d936f1",
+          "scope": "Local iOS Simulator source freeze d99cd12; not personal device or TestFlight"
+        },
+        {
+          "path": "art/previews/bluefin-fin-tissue/native-tablet-landed.png",
+          "sha256": "13e873ecce9aa20d316bf0cd8555b8a16bfe1698ae3866e35006df3459b9dbd3",
+          "scope": "Local iOS Simulator source freeze d99cd12; not personal device or TestFlight"
+        },
+        {
+          "path": "art/previews/bluefin-fin-tissue/studio-contact.png",
+          "sha256": "49edc6f1223158918a29d5d940bfc6875377e07a16f3461d03ce378891b6f064",
+          "scope": "Original authored source/GPU candidate; not biological or device qualification"
+        },
+        {
+          "path": "art/previews/bluefin-fin-tissue/studio-fin-close.png",
+          "sha256": "e1a0ff563be99cfcb81ff6ba90f2ba33511084cafb5567f23ea7d502c516b5a2",
+          "scope": "Original authored source/GPU candidate; not biological or device qualification"
+        },
+        {
+          "path": "art/previews/bluefin-fin-tissue/studio-side.png",
+          "sha256": "5ae26e617ef6a27e771b368dbffa4b76337fce2276c89c0da353b0dfa2a008a5",
+          "scope": "Original authored source/GPU candidate; not biological or device qualification"
+        },
+        {
+          "path": "art/previews/bluefin-fin-tissue/studio-three-quarter.png",
+          "sha256": "5cd97f8196ffe1f74a1ebe99e4ba2b577fcfa466352faeff4c6403868a28ffc2",
+          "scope": "Original authored source/GPU candidate; not biological or device qualification"
         }
       ],
       "note": "Original bluefin trevally mesh, UV, PBR maps, 12-bone rig, seven animation clips and three LODs. Scientific/visual/user/device acceptance remains open. No third-party photographs or models included.",

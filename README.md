@@ -1,5 +1,7 @@
 # OceanAngler · 海洋小钓手
 
+英雄鱼薄鳍已独立制作闭合渐薄壳、原创RGBA/PBR与实体鳍条，仍属待审候选。手机原生实图发现的收鱼结果卡遮挡已修正为底部三行；d99cd12新包双端各15帧、一条正常教学鱼与13份旧QA主文件保留通过，包含收鱼的HUD最高12.228%/4.526%。鱼模拟真、科学/用户/儿童与双真机仍未验收，本轮未更新TestFlight，见[薄鳍及沉浸收鱼原图](reports/hero-fin-tissue.md)。
+
 [GitHub 开源仓库](https://github.com/arthurwangwsx-code/OceanAngler) · [完整验收总账](reports/acceptance-ledger.md)
 
 儿童与家庭向的 3D 海洋钓鱼探索游戏。真实比例鱼类、漂亮水下世界、易懂钓具、积分成长、图鉴与放流。正式名称待商标检查。
