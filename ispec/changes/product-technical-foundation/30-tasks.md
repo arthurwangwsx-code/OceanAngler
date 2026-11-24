@@ -66,3 +66,5 @@ REQ-06近海航道后续：独立Blend/FBX/四组PBR、六组各三LOD、系泊�
 REQ-06地形/材质后续：封闭高度场山脊、连续土层权重和世界三轴PBR已接入，近景发现的按面UV接缝修复；源三LOD、45处基座剖面及权重通过，51项Editor、10项无画面PlayMode与Mac编译通过。16张源/Metal原图含否决近景分别审阅；最新4×MSAA回执仍PARTIAL（12像素最大1/255），两次中间零差异不能覆盖该结果，独立进程环境/颜色还未校准。材质/倒影/波纹/释放检查与海湾控制完成；未降抗锯齿或放宽阈值，失败/撤回尝试保留。细裂纹/崖面与重复细节、科学/用户/双设备/A1–A3及完整内容未完成；本轮未进build 5，未修改个人存档，Mac仍锁定，没有新原生窗口。独立receipt审计INCOMPLETE，2.4、3.4、4.1–4.3和apply不勾选完成。见[本轮证据](../../../reports/nearshore-terrain.md)。
 
 渲染平台校准后续：GPU入口明确选择Mac/iOS，记录实际目标、Gamma/Ultra、太阳/雾/探针及BC7/ASTC格式，分离平台差异与船体区域差异。51项Editor通过；最终iOS配置严格三图PASS，Mac仍PARTIAL，中间成功不覆盖其他失败。船体各槽材质对照只用于默认关闭的Editor实验，运行时未改；无新移动包或原生/真机验收，build 5不变。完整产品与apply未完成，独立receipt审计INCOMPLETE，见[校准证据](../../../reports/render-platform-calibration.md)。
+
+2026-11-24模拟器后续：按用户要求用iOS27.2的iPhone 17 Pro Max/iPad Air 11 M3继续，52项Editor、10项无画面PlayMode、sim4导出/原生编译及各一次EventSystem钓鱼/放流、多页UI流程通过，32帧审阅。移动默认质量档原生AA/URP不一致的黑屏与托管参数读取已修复，保留HDR/4×MSAA；六次早期非零运行和另一次普通启动客户端超时均保留，默认无QA启动未确认。海湾基础流程可运行，不代表新航道/保护观察原生流程、实际20轮UI、系统触摸、完整18任务/内容、美术A1–A3、科学/用户/儿童或真实双设备20分钟通过。无个人手机或TestFlight更新；模拟器配置号5不等于冻结build 5。2.4、3.4、4.1–4.3及apply继续未完成，独立receipt审计INCOMPLETE。见[当前模拟器证据](../../../reports/ios-simulator.md)。

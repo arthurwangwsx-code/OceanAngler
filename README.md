@@ -19,6 +19,7 @@
 | App Store Connect 与本人 TestFlight | [发布流程](docs/08-testflight.md) |
 | 本次候选如何在设备上复核 | [build 5设备检查](docs/16-beta5-review.md) |
 | 当前真实结果 | [完整总账](reports/acceptance-ledger.md)、[移动布局与发行](reports/mobile-layout.md)、[逻辑与Mac运行](reports/progression-validation.md) |
+| 当前iOS模拟器运行 | [iPhone/iPad实际流程与原图](reports/ios-simulator.md)、[重建和数据隔离](docs/19-ios-simulator-verification.md) |
 | 首条独立源模型 | [蓝鳍鲹候选及验收边界](reports/bluefin-art.md)、[源资产重建](art/source/bluefin/README.md) |
 | 第一套完整钓组候选 | [纺车钓组与验证边界](reports/spinning-rig-art.md)、[源资产重建](art/source/spinning-rig/README.md) |
 | 第二处海域与共享观察 | [近海航道、切换与验收边界](docs/15-nearshore-channel.md)、[源资产重建](art/source/nearshore-channel/README.md) |
@@ -70,3 +71,5 @@ TestFlight 0.1.0 (5)冻结于a6bcf8e，在build 4基础上新增保护观察记�
 后续开发源码e9fe2a3已更新为封闭高度场山脊、连续土层与世界三轴PBR，51项Editor、10项无画面PlayMode、Mac编译及源码CI通过；最新图形稳定性仍PARTIAL，独立Editor进程环境/颜色尚未校准。该后续源码尚未进入已发布或已安装的build 5；上段build 5结果覆盖的是前一近海候选。完整美术和真机门槛仍未通过，详见[当前地形证据](reports/nearshore-terrain.md)。
 
 渲染平台校准后续：GPU入口明确选择Mac/iOS，记录实际目标、Gamma/Ultra、太阳/雾/探针及BC7/ASTC格式，分离平台差异与船体区域差异。51项Editor通过；最终iOS配置严格三图PASS，Mac仍PARTIAL，中间成功不覆盖其他失败。船体各槽材质对照只用于默认关闭的Editor实验，运行时未改；无新移动包或原生/真机验收，build 5不变。完整产品与apply未完成，独立receipt审计INCOMPLETE，见[校准证据](reports/render-platform-calibration.md)。
+
+按用户要求继续模拟器验证：后续开发源码已在iOS27.2的iPhone 17 Pro Max和iPad Air 11 M3模拟器实际安装、渲染并各完成一次钓鱼/放流、多页UI程序输入流程，32帧逐张审阅；52项Editor和10项无画面PlayMode通过。修复移动启动原生采样与URP不一致造成的黑屏，以及iOS托管测试参数缺失，保留HDR与4×MSAA。另一次不带QA参数的普通启动客户端180秒超时，不能据此宣布默认启动通过。源摘要/失败和12张代表性自有原图见[模拟器证据](reports/ios-simulator.md)。本轮只验证海湾基础流程，未覆盖新航道/保护观察原生流程、实际20轮UI、系统触摸或真机20分钟，拟真美术和完整产品仍PARTIAL。此模拟器包沿用配置build 5但不是a6bcf8e的TestFlight包；没有新发行或个人手机变更。

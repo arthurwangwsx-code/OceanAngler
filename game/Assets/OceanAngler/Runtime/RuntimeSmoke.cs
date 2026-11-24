@@ -15,7 +15,7 @@ namespace OceanAngler
         GameController game;string folder;Receipt receipt;bool finished;float began;
         IEnumerator Start()
         {
-            var args=Environment.GetCommandLineArgs();int index=Array.IndexOf(args,"--ocean-smoke");if(index<0||index+1>=args.Length){if(Debug.isDebugBuild)Debug.Log("OCEAN_SMOKE_MODE_OFF");yield break;}
+            var args=LaunchArguments.Get();int index=Array.IndexOf(args,"--ocean-smoke");if(index<0||index+1>=args.Length){if(Debug.isDebugBuild)Debug.Log("OCEAN_SMOKE_MODE_OFF");yield break;}
             folder=args[index+1];Directory.CreateDirectory(folder);receipt=new Receipt();began=Time.realtimeSinceStartup;game=GetComponent<GameController>();Application.runInBackground=true;
             Debug.Log("OCEAN_SMOKE_BEGIN");
             yield return new WaitForSecondsRealtime(1);

@@ -1276,6 +1276,65 @@
           "sha256": "e60a22ad1288a855216bdce500de4535460db488c72ab6d368a86ef9a89a1912"
         }
       ]
+    },
+    {
+      "id": "ios-simulator-native-ui-evidence",
+      "author": "OceanAngler contributors; Noto font under separately registered OFL",
+      "source": "game/Assets/OceanAngler/Runtime/RuntimeSmoke.cs",
+      "license": "MIT; embedded Noto UI glyphs SIL OFL 1.1",
+      "redistribution": true,
+      "status": "NATIVE_SIMULATOR_EVIDENCE_NOT_ART_ACCEPTANCE",
+      "note": "Twelve selected native iOS Simulator frames from 32 reviewed synthetic own-app frames; not physical hardware, final model quality or human touch acceptance.",
+      "artifacts": [
+        {
+          "path": "art/previews/ios-simulator/phone/01-fishing.png",
+          "sha256": "cf21eaf6a1fb253e5a6635a6e3d6de361cd852b8d0691fa3904a1c7c741dbe5b"
+        },
+        {
+          "path": "art/previews/ios-simulator/phone/02-catch.png",
+          "sha256": "2ccbdb78e9388891df1c4d7ca823a3491b852f599a95ba0f271b57ed979a157b"
+        },
+        {
+          "path": "art/previews/ios-simulator/phone/04-gear.png",
+          "sha256": "a6ad3cf142135f3cdf3ab62d3b69fc925907c747fd1094d98b78fe6d35d859fa"
+        },
+        {
+          "path": "art/previews/ios-simulator/phone/07-bay-surface.png",
+          "sha256": "de7bde1329e2ca740cab15a68273c84ec5d93fefc67c2dd78d1b0344517ca264"
+        },
+        {
+          "path": "art/previews/ios-simulator/phone/10-settings.png",
+          "sha256": "bf3414b75685d18676740afd1734ae67d0f52bf737c21476e54c6743cc6fa0fb"
+        },
+        {
+          "path": "art/previews/ios-simulator/phone/13-species-details.png",
+          "sha256": "3cc60b597c5b89f4f53f596cef59a373feed51021bb62d08017421fbed041b88"
+        },
+        {
+          "path": "art/previews/ios-simulator/tablet/01-fishing.png",
+          "sha256": "cdced98bc271fc1dd0125512953aef6051c16beff060e52e147c1463e98c26ca"
+        },
+        {
+          "path": "art/previews/ios-simulator/tablet/02-catch.png",
+          "sha256": "671fce4b4c6ec36aec97db0f463259d19e90f2c2f82ff4204f2dd8878c9da6b8"
+        },
+        {
+          "path": "art/previews/ios-simulator/tablet/04-gear.png",
+          "sha256": "67cea9e3eb2751719b8fcf6abf1a1c4c5fd020826f943d5c387c94578f42289a"
+        },
+        {
+          "path": "art/previews/ios-simulator/tablet/07-bay-surface.png",
+          "sha256": "66caa5d683547697b81841659a54fa40ad41fc1be3c8b60011bd43f96e4bdbac"
+        },
+        {
+          "path": "art/previews/ios-simulator/tablet/10-settings.png",
+          "sha256": "f2b1167a106277c460ec6c4ca508cd5b974bdd523da14e5625af443290324814"
+        },
+        {
+          "path": "art/previews/ios-simulator/tablet/13-species-details.png",
+          "sha256": "56aa149d82081e7005681d1b8c2311958c814061ece401628d39f3439d07ee6f"
+        }
+      ]
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."

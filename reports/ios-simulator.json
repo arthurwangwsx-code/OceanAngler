@@ -1,0 +1,777 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-24",
+  "status": "PARTIAL",
+  "fullProductAcceptance": "PARTIAL",
+  "implementation": "IMPLEMENTED",
+  "sourceAtBuild": {
+    "baseCommit": "a3415b868277d5393208680e9c40bbfa8405d85d",
+    "sourceDigest": "5e60c679e5253f934b7703828e7e059a08ef16bb733a0bbf3a85e6620fb0c4cb",
+    "projectSettingsSha256": "487dd5cc37a763cb9f23702f91a10b6680094d7b2165050d05327b1376c0d54d"
+  },
+  "app": {
+    "status": "SIMULATOR_APP_BUILT",
+    "distribution": "LOCAL_SIMULATOR_ONLY_NOT_TESTFLIGHT",
+    "bundleId": "com.arthur.OceanAngler",
+    "version": "0.1.0",
+    "bundleBuild": "5",
+    "platform": "iphonesimulator",
+    "deviceFamilies": [
+      1,
+      2
+    ],
+    "appDigest": "6ba31b61f1d2af3326130bd9da6dc63452217efde275aa5d3e80afddff20e66b"
+  },
+  "artifactLabel": "sim4",
+  "toolchain": {
+    "unity": "6000.3.29f1",
+    "urp": "17.3.0",
+    "xcode": "27.2 (27B52)"
+  },
+  "tests": {
+    "editor": {
+      "passed": 52,
+      "total": 52
+    },
+    "headlessPlayMode": {
+      "passed": 10,
+      "total": 10
+    },
+    "releaseGuards": {
+      "passed": 11,
+      "total": 11
+    }
+  },
+  "devices": [
+    {
+      "model": "iPhone 17 Pro Max",
+      "runtime": "iOS 27.2",
+      "pixels": [
+        2868,
+        1320
+      ],
+      "status": "PASS",
+      "input": "Programmatic Unity EventSystem, not OS touch",
+      "receipt": {
+        "status": "PASS",
+        "checks": [
+          "authored-spinning-rig-loaded",
+          "rig-guides-and-bend-bones",
+          "rig-single-lod-owner",
+          "rig-line-through-guides",
+          "authored-bluefin-loaded",
+          "authored-three-lods-single-owner",
+          "authored-seven-motion-states",
+          "authored-hook-at-mouth",
+          "authored-swim-actually-deforms-tail",
+          "authored-renderer-materials",
+          "authored-bay-loaded",
+          "visible-hit-target:海域与装备",
+          "visible-hit-target:看看海湾",
+          "rendered-inspection-title:bay-surface",
+          "observation-pauses-fishing",
+          "surface-camera-above-water",
+          "real-planar-reflection-ready",
+          "reflection-texture-resolution-capped",
+          "reflection-contains-rendered-scene-detail",
+          "static-view-reuses-reflection",
+          "visible-hit-target:换个角度",
+          "rendered-inspection-title:bay-pier",
+          "new-view-refreshes-reflection",
+          "visible-hit-target:潜入水下",
+          "rendered-inspection-title:bay-underwater",
+          "underwater-camera-below-water",
+          "underwater-skips-reflection-render",
+          "reef-camera-actually-changes",
+          "visible-hit-target:返回钓鱼",
+          "observation-return-keeps-pause",
+          "visible-hit-target:收起准备",
+          "visible-hit-target:继续探索",
+          "fishing-camera-restored",
+          "visible-hit-target:按住蓄力 · 松手抛竿",
+          "cast-to-bite",
+          "visible-hit-target:提竿",
+          "strike-to-fighting",
+          "visible-hit-target:按住收线",
+          "controlled-catch",
+          "rig-crank-rotor-drive",
+          "rig-spool-stroke-bounded",
+          "rig-loaded-line-through-guides",
+          "visible-hit-target:记录并放流",
+          "release-and-persist",
+          "visible-hit-target:图鉴",
+          "visible-hit-target:未发现 · 大西洋庸鲽",
+          "journal-full-scientific-name",
+          "journal-habitat-rendered-after-scroll",
+          "journal-does-not-award-or-discover",
+          "visible-hit-target:钓具",
+          "visible-hit-target:观察入门钓组",
+          "rendered-inspection-title:gear-preview",
+          "gear-view-pauses-fishing",
+          "visible-hit-target:近看卷线器",
+          "rendered-inspection-title:gear-closeup",
+          "visible-hit-target:试摇卷线器",
+          "gear-preview-real-winding",
+          "gear-preview-spool-actually-oscillates",
+          "visible-hit-target:停止收线演示",
+          "gear-demo-stops-on-release",
+          "visible-hit-target:旋转钓组",
+          "visible-hit-target:查看全竿",
+          "visible-hit-target:返回钓具",
+          "visible-hit-target:任务",
+          "visible-hit-target:设置",
+          "visible-hit-target:左手操作    已关闭",
+          "left-hand-setting",
+          "visible-hit-target:家长区与隐私",
+          "visible-hit-target:16",
+          "visible-hit-target:查看隐私与字体许可",
+          "visible-hit-target:返回家长区",
+          "visible-hit-target:清除游戏进度",
+          "reset-first-confirm-does-not-delete",
+          "visible-hit-target:取消并返回设置",
+          "cancel-reset-keeps-catches",
+          "visible-hit-target:出海",
+          "navigation-clears-held-input",
+          "reflection-dispose-releases-target"
+        ],
+        "failures": [],
+        "inspectedLabels": [
+          {
+            "page": "bay-surface",
+            "text": "珊瑚海湾",
+            "requiredHeight": 33.33333206176758,
+            "availableHeight": 44.0,
+            "visibleCharacters": 4,
+            "vertices": 16
+          },
+          {
+            "page": "bay-pier",
+            "text": "珊瑚海湾",
+            "requiredHeight": 33.33333206176758,
+            "availableHeight": 44.0,
+            "visibleCharacters": 4,
+            "vertices": 16
+          },
+          {
+            "page": "bay-underwater",
+            "text": "珊瑚海湾",
+            "requiredHeight": 33.33333206176758,
+            "availableHeight": 44.0,
+            "visibleCharacters": 4,
+            "vertices": 16
+          },
+          {
+            "page": "gear-preview",
+            "text": "入门钓组",
+            "requiredHeight": 33.33333206176758,
+            "availableHeight": 44.0,
+            "visibleCharacters": 4,
+            "vertices": 16
+          },
+          {
+            "page": "gear-closeup",
+            "text": "入门钓组",
+            "requiredHeight": 33.33333206176758,
+            "availableHeight": 44.0,
+            "visibleCharacters": 4,
+            "vertices": 16
+          }
+        ],
+        "catches": 1,
+        "points": 180,
+        "reflectionPasses": 3,
+        "reflectionWidth": 768,
+        "reflectionHeight": 353,
+        "pixelsPerPoint": 3.0,
+        "safeWidthPoints": 832.0,
+        "safeHeightPoints": 420.0,
+        "reflectionVariance": 0.028907135128974915
+      },
+      "renderProbe": {
+        "scope": "explicit development-player diagnostic, not device qualification",
+        "graphics": "Metal",
+        "deviceType": "Handheld",
+        "quality": "Medium",
+        "nativeSamples": 4,
+        "desiredSamples": 4,
+        "ldrSamples": 4,
+        "packedHdrSamples": 4,
+        "halfHdrSamples": 4,
+        "hdrBefore": true,
+        "hdrAfter": true,
+        "ldrControl": false
+      },
+      "frames": [
+        {
+          "name": "00-water-reflection.png",
+          "sha256": "15c98e82558ac6e06e94a94e9f4e8037c0ef78f3c25e4684295bb315be720635",
+          "reviewed": true
+        },
+        {
+          "name": "01-fishing.png",
+          "sha256": "cf21eaf6a1fb253e5a6635a6e3d6de361cd852b8d0691fa3904a1c7c741dbe5b",
+          "reviewed": true,
+          "publicPath": "art/previews/ios-simulator/phone/01-fishing.png"
+        },
+        {
+          "name": "02-catch.png",
+          "sha256": "2ccbdb78e9388891df1c4d7ca823a3491b852f599a95ba0f271b57ed979a157b",
+          "reviewed": true,
+          "publicPath": "art/previews/ios-simulator/phone/02-catch.png"
+        },
+        {
+          "name": "03-journal.png",
+          "sha256": "128c266d17a26d67d269f16a55c7c15dd7bef2fe8df2e7ef7582fc5b475b5fea",
+          "reviewed": true
+        },
+        {
+          "name": "04-gear.png",
+          "sha256": "a6ad3cf142135f3cdf3ab62d3b69fc925907c747fd1094d98b78fe6d35d859fa",
+          "reviewed": true,
+          "publicPath": "art/previews/ios-simulator/phone/04-gear.png"
+        },
+        {
+          "name": "05-tasks.png",
+          "sha256": "e10ce20241a1ccc9a8ab067a2995de09dfd35007a08de243b40bff4b2bf244ca",
+          "reviewed": true
+        },
+        {
+          "name": "06-left-handed.png",
+          "sha256": "99ade6a9e6df3e2acf70053a5ba8a485cf2da4b496d53422fdf604fe7f519d3a",
+          "reviewed": true
+        },
+        {
+          "name": "07-bay-surface.png",
+          "sha256": "de7bde1329e2ca740cab15a68273c84ec5d93fefc67c2dd78d1b0344517ca264",
+          "reviewed": true,
+          "publicPath": "art/previews/ios-simulator/phone/07-bay-surface.png"
+        },
+        {
+          "name": "07-gear-whole.png",
+          "sha256": "d70150b5961c34ef16f6956772c65af7d1ce8676a210060d6684f51f89e9ee27",
+          "reviewed": true
+        },
+        {
+          "name": "08-bay-underwater.png",
+          "sha256": "9a9ce7016f5c5e17e936f8ce61d82342aaa7a794f4a5158f1e9b2c2580afaccc",
+          "reviewed": true
+        },
+        {
+          "name": "09-release.png",
+          "sha256": "324d01668f80e0a8b763f463ad171834abc7f1f17ee4a9ebe0a3b2bab3209590",
+          "reviewed": true
+        },
+        {
+          "name": "10-settings.png",
+          "sha256": "bf3414b75685d18676740afd1734ae67d0f52bf737c21476e54c6743cc6fa0fb",
+          "reviewed": true,
+          "publicPath": "art/previews/ios-simulator/phone/10-settings.png"
+        },
+        {
+          "name": "11-bay-reef.png",
+          "sha256": "720114a0292bf91b93203ef0af386ed2b14eaca333eccd8e343e86becc8f9917",
+          "reviewed": true
+        },
+        {
+          "name": "12-bay-pier.png",
+          "sha256": "32ebe6227600dc84fa602c68d21bb5410ed0472ef1538acbc0d9b22edb16d198",
+          "reviewed": true
+        },
+        {
+          "name": "13-species-details.png",
+          "sha256": "3cc60b597c5b89f4f53f596cef59a373feed51021bb62d08017421fbed041b88",
+          "reviewed": true,
+          "publicPath": "art/previews/ios-simulator/phone/13-species-details.png"
+        },
+        {
+          "name": "14-species-habitat.png",
+          "sha256": "e25822daaef7875a0703f8ca20f1a18a3a5ac7498cd7f4df365a3b399a858f30",
+          "reviewed": true
+        }
+      ]
+    },
+    {
+      "model": "iPad Air 11 M3",
+      "runtime": "iOS 27.2",
+      "pixels": [
+        2360,
+        1640
+      ],
+      "status": "PASS",
+      "input": "Programmatic Unity EventSystem, not OS touch",
+      "receipt": {
+        "status": "PASS",
+        "checks": [
+          "authored-spinning-rig-loaded",
+          "rig-guides-and-bend-bones",
+          "rig-single-lod-owner",
+          "rig-line-through-guides",
+          "authored-bluefin-loaded",
+          "authored-three-lods-single-owner",
+          "authored-seven-motion-states",
+          "authored-hook-at-mouth",
+          "authored-swim-actually-deforms-tail",
+          "authored-renderer-materials",
+          "authored-bay-loaded",
+          "visible-hit-target:看看海湾",
+          "rendered-inspection-title:bay-surface",
+          "observation-pauses-fishing",
+          "surface-camera-above-water",
+          "real-planar-reflection-ready",
+          "reflection-texture-resolution-capped",
+          "reflection-contains-rendered-scene-detail",
+          "static-view-reuses-reflection",
+          "visible-hit-target:换个角度",
+          "rendered-inspection-title:bay-pier",
+          "new-view-refreshes-reflection",
+          "visible-hit-target:潜入水下",
+          "rendered-inspection-title:bay-underwater",
+          "underwater-camera-below-water",
+          "underwater-skips-reflection-render",
+          "reef-camera-actually-changes",
+          "visible-hit-target:返回钓鱼",
+          "observation-return-keeps-pause",
+          "visible-hit-target:继续探索",
+          "fishing-camera-restored",
+          "visible-hit-target:按住蓄力 · 松手抛竿",
+          "cast-to-bite",
+          "visible-hit-target:提竿",
+          "strike-to-fighting",
+          "visible-hit-target:按住收线",
+          "controlled-catch",
+          "rig-crank-rotor-drive",
+          "rig-spool-stroke-bounded",
+          "rig-loaded-line-through-guides",
+          "visible-hit-target:记录并放流",
+          "release-and-persist",
+          "visible-hit-target:图鉴",
+          "visible-hit-target:未发现 · 大西洋庸鲽",
+          "journal-full-scientific-name",
+          "journal-habitat-rendered-after-scroll",
+          "journal-does-not-award-or-discover",
+          "visible-hit-target:钓具",
+          "visible-hit-target:观察入门钓组",
+          "rendered-inspection-title:gear-preview",
+          "gear-view-pauses-fishing",
+          "visible-hit-target:近看卷线器",
+          "rendered-inspection-title:gear-closeup",
+          "visible-hit-target:试摇卷线器",
+          "gear-preview-real-winding",
+          "gear-preview-spool-actually-oscillates",
+          "visible-hit-target:停止收线演示",
+          "gear-demo-stops-on-release",
+          "visible-hit-target:旋转钓组",
+          "visible-hit-target:查看全竿",
+          "visible-hit-target:返回钓具",
+          "visible-hit-target:任务",
+          "visible-hit-target:设置",
+          "visible-hit-target:左手操作    已关闭",
+          "left-hand-setting",
+          "visible-hit-target:家长区与隐私",
+          "visible-hit-target:15",
+          "visible-hit-target:查看隐私与字体许可",
+          "visible-hit-target:返回家长区",
+          "visible-hit-target:清除游戏进度",
+          "reset-first-confirm-does-not-delete",
+          "visible-hit-target:取消并返回设置",
+          "cancel-reset-keeps-catches",
+          "visible-hit-target:出海",
+          "navigation-clears-held-input",
+          "reflection-dispose-releases-target"
+        ],
+        "failures": [],
+        "inspectedLabels": [
+          {
+            "page": "bay-surface",
+            "text": "珊瑚海湾",
+            "requiredHeight": 40.5,
+            "availableHeight": 44.0,
+            "visibleCharacters": 4,
+            "vertices": 16
+          },
+          {
+            "page": "bay-pier",
+            "text": "珊瑚海湾",
+            "requiredHeight": 40.5,
+            "availableHeight": 44.0,
+            "visibleCharacters": 4,
+            "vertices": 16
+          },
+          {
+            "page": "bay-underwater",
+            "text": "珊瑚海湾",
+            "requiredHeight": 40.5,
+            "availableHeight": 44.0,
+            "visibleCharacters": 4,
+            "vertices": 16
+          },
+          {
+            "page": "gear-preview",
+            "text": "入门钓组",
+            "requiredHeight": 40.5,
+            "availableHeight": 44.0,
+            "visibleCharacters": 4,
+            "vertices": 16
+          },
+          {
+            "page": "gear-closeup",
+            "text": "入门钓组",
+            "requiredHeight": 40.5,
+            "availableHeight": 44.0,
+            "visibleCharacters": 4,
+            "vertices": 16
+          }
+        ],
+        "catches": 1,
+        "points": 187,
+        "reflectionPasses": 3,
+        "reflectionWidth": 768,
+        "reflectionHeight": 534,
+        "pixelsPerPoint": 2.0,
+        "safeWidthPoints": 1180.0,
+        "safeHeightPoints": 790.0,
+        "reflectionVariance": 0.027806326746940613
+      },
+      "renderProbe": {
+        "scope": "explicit development-player diagnostic, not device qualification",
+        "graphics": "Metal",
+        "deviceType": "Handheld",
+        "quality": "Medium",
+        "nativeSamples": 4,
+        "desiredSamples": 4,
+        "ldrSamples": 4,
+        "packedHdrSamples": 4,
+        "halfHdrSamples": 4,
+        "hdrBefore": true,
+        "hdrAfter": true,
+        "ldrControl": false
+      },
+      "frames": [
+        {
+          "name": "00-water-reflection.png",
+          "sha256": "601cfd1338b0b8b6abb074741fc7bbb892eef07649d91bb6d6759e80ae744087",
+          "reviewed": true
+        },
+        {
+          "name": "01-fishing.png",
+          "sha256": "cdced98bc271fc1dd0125512953aef6051c16beff060e52e147c1463e98c26ca",
+          "reviewed": true,
+          "publicPath": "art/previews/ios-simulator/tablet/01-fishing.png"
+        },
+        {
+          "name": "02-catch.png",
+          "sha256": "671fce4b4c6ec36aec97db0f463259d19e90f2c2f82ff4204f2dd8878c9da6b8",
+          "reviewed": true,
+          "publicPath": "art/previews/ios-simulator/tablet/02-catch.png"
+        },
+        {
+          "name": "03-journal.png",
+          "sha256": "7551d8239de6d6798374e05c86bd267f874f5c0ec34a20db389a0ccfa26288e6",
+          "reviewed": true
+        },
+        {
+          "name": "04-gear.png",
+          "sha256": "67cea9e3eb2751719b8fcf6abf1a1c4c5fd020826f943d5c387c94578f42289a",
+          "reviewed": true,
+          "publicPath": "art/previews/ios-simulator/tablet/04-gear.png"
+        },
+        {
+          "name": "05-tasks.png",
+          "sha256": "ba4ce4c63e8e6ae457582605009880b016d787d67a290780f761bead94ad4bc3",
+          "reviewed": true
+        },
+        {
+          "name": "06-left-handed.png",
+          "sha256": "5e61f8ce00059666d2a99d579fa6c50f4146bac6ebe489090179e22a2a1c2bc9",
+          "reviewed": true
+        },
+        {
+          "name": "07-bay-surface.png",
+          "sha256": "66caa5d683547697b81841659a54fa40ad41fc1be3c8b60011bd43f96e4bdbac",
+          "reviewed": true,
+          "publicPath": "art/previews/ios-simulator/tablet/07-bay-surface.png"
+        },
+        {
+          "name": "07-gear-whole.png",
+          "sha256": "384a2237b5776841e450e4cf8dce569ca2a8b5b09c4901b51f6a96c3f61203cb",
+          "reviewed": true
+        },
+        {
+          "name": "08-bay-underwater.png",
+          "sha256": "ed457c12068fbead7f10f91a14c7182bc828f1c1cc57b7c3ab478c7f4881be1f",
+          "reviewed": true
+        },
+        {
+          "name": "09-release.png",
+          "sha256": "d785c8f699b60827fa0a55a3dc628781de5a722f2215fc709ee0fcda1798871d",
+          "reviewed": true
+        },
+        {
+          "name": "10-settings.png",
+          "sha256": "f2b1167a106277c460ec6c4ca508cd5b974bdd523da14e5625af443290324814",
+          "reviewed": true,
+          "publicPath": "art/previews/ios-simulator/tablet/10-settings.png"
+        },
+        {
+          "name": "11-bay-reef.png",
+          "sha256": "424f1f3cbe91e673c8e5a16494c64f108233e54b257a504ec2cd2de140d24e56",
+          "reviewed": true
+        },
+        {
+          "name": "12-bay-pier.png",
+          "sha256": "6f4a65d77344120630896c2547116d9277cf229abcafa9792d61c11b2a46f4cd",
+          "reviewed": true
+        },
+        {
+          "name": "13-species-details.png",
+          "sha256": "56aa149d82081e7005681d1b8c2311958c814061ece401628d39f3439d07ee6f",
+          "reviewed": true,
+          "publicPath": "art/previews/ios-simulator/tablet/13-species-details.png"
+        },
+        {
+          "name": "14-species-habitat.png",
+          "sha256": "9c8da6888f295706c897a5c0e56b739f80bb0bb7726fbad7dd193c42feb3600d",
+          "reviewed": true
+        }
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "name": "editor52",
+      "id": "f1df2404-187b-47ee-aa95-cbb2e5c0bc4b",
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "category": "test",
+      "durationMs": 121249.20241700001,
+      "exitCode": 0
+    },
+    {
+      "name": "playmode10",
+      "id": "a867f2ac-cc4c-44b9-8ba2-9f459a9135ab",
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "category": "test",
+      "durationMs": 29767.281166999997,
+      "exitCode": 0
+    },
+    {
+      "name": "unitySim4",
+      "id": "cb1207a6-515f-4484-9c1a-6b08cb66dec8",
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "category": "compile",
+      "durationMs": 37460.338167,
+      "exitCode": 0
+    },
+    {
+      "name": "xcodeSim4",
+      "id": "f69db6fa-a9bf-412a-8cdf-35a19ceafe62",
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "category": "compile",
+      "durationMs": 72548.39325,
+      "exitCode": 0
+    },
+    {
+      "name": "phoneOwnCapture",
+      "id": "0ea7b76c-d52b-4e9c-9b29-6ed032c50f8b",
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "category": "e2e",
+      "durationMs": 65898.487875,
+      "exitCode": 0
+    },
+    {
+      "name": "phoneUI",
+      "id": "df7c6996-f1e6-4d4d-88c9-9f7c29ea3099",
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "category": "e2e",
+      "durationMs": 36886.480459,
+      "exitCode": 0
+    },
+    {
+      "name": "tabletUI",
+      "id": "c3a96b05-ebf4-4301-802f-695d3577dae1",
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "category": "e2e",
+      "durationMs": 53666.645917,
+      "exitCode": 0
+    },
+    {
+      "name": "phoneStableBoot",
+      "id": "f1a4d32b-93a0-4702-af9c-9d5e32261690",
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "category": "e2e",
+      "durationMs": 15569.0585,
+      "exitCode": 0
+    },
+    {
+      "name": "tabletStableBoot",
+      "id": "194ec2ab-83c2-4b0f-986e-b1924af47168",
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "category": "e2e",
+      "durationMs": 7848.2324579999995,
+      "exitCode": 0
+    },
+    {
+      "name": "phonecapture1",
+      "id": "eef9577a-c904-401b-bc6b-afe3fe03c70d",
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "category": "e2e",
+      "durationMs": 550561.578792,
+      "exitCode": 1
+    },
+    {
+      "name": "phonecapture2",
+      "id": "50dbd09c-6d8d-4f41-9985-980820fb29ec",
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "category": "e2e",
+      "durationMs": 182521.957541,
+      "exitCode": 1
+    },
+    {
+      "name": "tabletcapture1",
+      "id": "560e6ef4-baf4-40d9-be0e-28077cb50a4a",
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "category": "e2e",
+      "durationMs": 30339.057625,
+      "exitCode": 1
+    },
+    {
+      "name": "phonecapture3",
+      "id": "076ea3b6-3315-41bb-8441-4cb3e918ce79",
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "category": "e2e",
+      "durationMs": 30414.547625,
+      "exitCode": 1
+    },
+    {
+      "name": "phonecapture4",
+      "id": "021119a0-52f6-4649-87ff-915b26037bea",
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "category": "e2e",
+      "durationMs": 674.160791,
+      "exitCode": 1
+    },
+    {
+      "name": "phonecapture5",
+      "id": "da30ac78-9477-44c3-8148-2ada3ee83e16",
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "category": "e2e",
+      "durationMs": 101207.03520799999,
+      "exitCode": 1
+    },
+    {
+      "name": "plainstart1",
+      "id": "105c0bf7-adc7-44a3-aa9d-1c6c366f398c",
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "category": "e2e",
+      "durationMs": 181030.881333,
+      "exitCode": 1
+    },
+    {
+      "name": "plainstart2",
+      "id": "c8e1a0b5-fde7-417c-bfd4-2c26faff3faa",
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "category": "e2e",
+      "durationMs": 90499.165709,
+      "exitCode": 1
+    },
+    {
+      "name": "scopeLinksAssets",
+      "id": "1cec14f0-d95a-4082-b9b2-ab71e7008053",
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "category": "lint",
+      "durationMs": 485.441875,
+      "exitCode": 0
+    },
+    {
+      "name": "publication738",
+      "id": "64eb53c8-2ce2-49ae-a86c-015da6a35535",
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "category": "lint",
+      "durationMs": 568.949208,
+      "exitCode": 0
+    },
+    {
+      "name": "releaseGuards11",
+      "id": "92e44e81-4cc2-4547-92a0-395a1910e168",
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "category": "test",
+      "durationMs": 320.9206670000001,
+      "exitCode": 0
+    },
+    {
+      "name": "finalScopeLinksAssets",
+      "id": "2d8f4933-a0a7-4283-9f1f-adc85bb8fd67",
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "category": "lint",
+      "durationMs": 559.9095,
+      "exitCode": 0
+    },
+    {
+      "name": "stagedWhitespace",
+      "id": "3f128a90-a559-43ed-98ef-868a052d7d90",
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "category": "lint",
+      "durationMs": 35.07925,
+      "exitCode": 0
+    }
+  ],
+  "independentReceiptAudit": "INCOMPLETE",
+  "publication": {
+    "reviewedFrames": 32,
+    "publishedFrames": 12,
+    "scope": "Own synthetic game UI and authored assets; raw service logs and device identifiers remain local"
+  },
+  "notVerified": [
+    "OS touch and human gestures",
+    "20 UI fishing cycles",
+    "child first fish within 3 minutes",
+    "new channel terrain native UI",
+    "protected observation native UI",
+    "slope habitat and remaining models",
+    "A1-A3 art and user/science review",
+    "audio/haptics",
+    "minimum OS",
+    "physical iPhone and iPad 20-minute performance/recovery",
+    "TestFlight-origin installation"
+  ],
+  "releaseState": "No new physical-device install or TestFlight upload; configuration build5 is not frozen TestFlight source a6bcf8e",
+  "nativeQaFlowStatus": "PASS",
+  "plainStartupStatus": "NOT_CONFIRMED",
+  "plainStartupAttempts": [
+    {
+      "label": "plainstart1",
+      "stage": "launch client",
+      "timeoutSeconds": 180,
+      "status": "NOT_CONFIRMED",
+      "measurementId": "105c0bf7-adc7-44a3-aa9d-1c6c366f398c"
+    },
+    {
+      "label": "plainstart2",
+      "stage": "read existing installation app container, before launch",
+      "timeoutSeconds": 90,
+      "status": "NOT_CONFIRMED",
+      "measurementId": "c8e1a0b5-fde7-417c-bfd4-2c26faff3faa"
+    }
+  ]
+}

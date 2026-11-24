@@ -2,6 +2,7 @@ using System.Linq;
 using NUnit.Framework;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 namespace OceanAngler.Tests
 {
@@ -22,6 +23,21 @@ namespace OceanAngler.Tests
                 var mirror=BayPlanarReflection.MirrorMatrix(level);var q=mirror.MultiplyPoint(p);
                 Assert.That(Vector3.Distance(mirror.MultiplyPoint(q),p),Is.LessThan(.0001f));Assert.That(q.y-level,Is.EqualTo(-(p.y-level)).Within(.0001f));Assert.That(new Vector2(q.x,q.z),Is.EqualTo(new Vector2(p.x,p.z)));
             }
+        }
+        [Test] public void EveryStartupQualityProfileMatchesItsPipelineSampleCount()
+        {
+            int prior=QualitySettings.GetQualityLevel();
+            try
+            {
+                for(int i=0;i<QualitySettings.names.Length;i++)
+                {
+                    QualitySettings.SetQualityLevel(i,false);
+                    var pipeline=(QualitySettings.renderPipeline??GraphicsSettings.defaultRenderPipeline) as UniversalRenderPipelineAsset;
+                    Assert.That(pipeline,Is.Not.Null,QualitySettings.names[i]);
+                    Assert.That(QualitySettings.antiAliasing,Is.EqualTo(pipeline.msaaSampleCount),QualitySettings.names[i]+" must not allocate a different native backbuffer before the first URP frame");
+                }
+            }
+            finally{QualitySettings.SetQualityLevel(prior,false);}
         }
         [Test] public void ImportedSceneHasDistinctLodOwnersAndSeparateWater()
         {

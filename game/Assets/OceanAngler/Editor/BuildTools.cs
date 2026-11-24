@@ -29,8 +29,8 @@ namespace OceanAngler.Editor
                 AssetDatabase.CreateAsset(new Material(Shader.Find("Universal Render Pipeline/Lit")), surfacePath);
             GraphicsSettings.defaultRenderPipeline = pipeline;
             QualitySettings.renderPipeline = pipeline;
-            QualitySettings.antiAliasing=4;
             pipeline.msaaSampleCount=4;EditorUtility.SetDirty(pipeline);
+            AlignMsaaProfiles();
             var waterRenderer=AssetDatabase.LoadAssetAtPath<UniversalRendererData>(folder+"/OceanRenderer.asset");waterRenderer.copyDepthMode=CopyDepthMode.AfterOpaques;EditorUtility.SetDirty(waterRenderer);
             ApplyRenderQuality();
             EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Single);
@@ -78,6 +78,18 @@ namespace OceanAngler.Editor
             mat.color = color; EditorUtility.SetDirty(mat);
             obj.GetComponent<Renderer>().sharedMaterial = mat;
         }
+        // The iOS default quality profile can differ from the current Editor
+        // profile. Set its native backbuffer sample count before the first URP
+        // frame instead of relying on the pipeline constructor to resize it.
+        public static void AlignMsaaProfiles()
+        {
+            var pipeline=AssetDatabase.LoadAssetAtPath<UniversalRenderPipelineAsset>("Assets/OceanAngler/Generated/OceanURP.asset");
+            if(pipeline==null)throw new InvalidOperationException("Prepare the render pipeline before aligning quality profiles");
+            int prior=QualitySettings.GetQualityLevel();
+            try{for(int i=0;i<QualitySettings.names.Length;i++){QualitySettings.SetQualityLevel(i,false);QualitySettings.antiAliasing=pipeline.msaaSampleCount;}}
+            finally{QualitySettings.SetQualityLevel(prior,false);}
+            AssetDatabase.SaveAssets();
+        }
         public static void ApplyRenderQuality()
         {
             var pipeline=AssetDatabase.LoadAssetAtPath<UniversalRenderPipelineAsset>("Assets/OceanAngler/Generated/OceanURP.asset");
@@ -108,6 +120,24 @@ namespace OceanAngler.Editor
             if (string.IsNullOrEmpty(output) || System.IO.Directory.Exists(output)) throw new Exception("A new export path is required");
             var result = BuildPipeline.BuildPlayer(EditorBuildSettings.scenes.Select(x => x.path).ToArray(), output, BuildTarget.iOS, BuildOptions.None);
             if (result.summary.result != BuildResult.Succeeded) throw new Exception("iOS export failed");
+        }
+        public static void ExportIOSSimulator()
+        {
+            AudioAssetBuilder.Validate();
+            var output=Environment.GetEnvironmentVariable("OCEAN_SIMULATOR_OUTPUT");
+            if(string.IsNullOrEmpty(output)||System.IO.Directory.Exists(output))throw new Exception("A new simulator export path is required");
+            var sdk=PlayerSettings.iOS.sdkVersion;var architecture=PlayerSettings.iOS.simulatorSdkArchitecture;
+            try
+            {
+                PlayerSettings.iOS.sdkVersion=iOSSdkVersion.SimulatorSDK;
+                PlayerSettings.iOS.simulatorSdkArchitecture=AppleMobileArchitectureSimulator.ARM64;
+                var result=BuildPipeline.BuildPlayer(EditorBuildSettings.scenes.Select(x=>x.path).ToArray(),output,BuildTarget.iOS,BuildOptions.Development);
+                if(result.summary.result!=BuildResult.Succeeded)throw new Exception("iOS simulator export failed");
+            }
+            finally
+            {
+                PlayerSettings.iOS.sdkVersion=sdk;PlayerSettings.iOS.simulatorSdkArchitecture=architecture;AssetDatabase.SaveAssets();
+            }
         }
     }
 }

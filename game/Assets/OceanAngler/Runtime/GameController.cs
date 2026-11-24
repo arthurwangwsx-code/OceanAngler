@@ -19,7 +19,7 @@ namespace OceanAngler
         {
             Application.targetFrameRate = 60;
             Content = ContentCatalog.Load(); Session = new FishingSession();
-            var args=Environment.GetCommandLineArgs();int preview=Array.IndexOf(args,"--ocean-save-root");
+            var args=LaunchArguments.Get();int preview=Array.IndexOf(args,"--ocean-save-root");
             string saveRoot=preview>=0&&preview+1<args.Length?args[preview+1]:Application.persistentDataPath;
             Progress = new ProgressService(Content, new SaveStore(Path.Combine(saveRoot, "ocean-progress.json"), Content));
             Notice = Progress.LoadMessage;

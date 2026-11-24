@@ -3,7 +3,7 @@
 import argparse, os, subprocess, json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-p=argparse.ArgumentParser();p.add_argument('action',choices=['prepare','tests','ios','mac','bluefin','spinning-rig','coral-bay','nearshore-channel','shoal','water-review','fish-review','school-review','encounter-review','observation-review','channel-review']);p.add_argument('--build',type=int);p.add_argument('--label',default='a');p.add_argument('--review-target',choices=['mac','ios'],default='mac');p.add_argument('--test-platform',choices=['EditMode','PlayMode'],default='EditMode');a=p.parse_args()
+p=argparse.ArgumentParser();p.add_argument('action',choices=['prepare','tests','ios','simulator','mac','bluefin','spinning-rig','coral-bay','nearshore-channel','shoal','water-review','fish-review','school-review','encounter-review','observation-review','channel-review']);p.add_argument('--build',type=int);p.add_argument('--label',default='a');p.add_argument('--review-target',choices=['mac','ios'],default='mac');p.add_argument('--test-platform',choices=['EditMode','PlayMode'],default='EditMode');a=p.parse_args()
 editor=Path(os.environ.get('UNITY_EDITOR','/Applications/Unity/Hub/Editor/6000.3.29f1/Unity.app/Contents/MacOS/Unity'))
 local=ROOT/'.local';local.mkdir(exist_ok=True)
 if not editor.is_file():raise SystemExit('Unity Editor not found')
@@ -25,10 +25,15 @@ if a.action=='tests':
   if save.exists():raise SystemExit('Use a fresh PlayMode label; test saves are isolated and retained')
   save.mkdir(parents=True);cmd+=['--ocean-save-root',str(save)]
 else:
- method=reviews[a.action][2] if gpu_review else 'OceanAngler.Editor.BaySchoolBuilder.Prepare' if a.action=='shoal' else 'OceanAngler.Editor.FishRenderReview.Capture' if a.action=='fish-review' else 'OceanAngler.Editor.WaterRenderReview.Capture' if a.action=='water-review' else 'OceanAngler.Editor.BayAssetBuilder.Prepare' if a.action=='coral-bay' else 'OceanAngler.Editor.ChannelAssetBuilder.Prepare' if a.action=='nearshore-channel' else 'OceanAngler.Editor.SpinningRigAssetBuilder.Prepare' if a.action=='spinning-rig' else 'OceanAngler.Editor.BluefinAssetBuilder.Prepare' if a.action=='bluefin' else 'OceanAngler.Editor.BuildTools.'+('Prepare' if a.action=='prepare' else 'ExportMac' if a.action=='mac' else 'ExportIOS')
+ method='OceanAngler.Editor.BuildTools.ExportIOSSimulator' if a.action=='simulator' else reviews[a.action][2] if gpu_review else 'OceanAngler.Editor.BaySchoolBuilder.Prepare' if a.action=='shoal' else 'OceanAngler.Editor.FishRenderReview.Capture' if a.action=='fish-review' else 'OceanAngler.Editor.WaterRenderReview.Capture' if a.action=='water-review' else 'OceanAngler.Editor.BayAssetBuilder.Prepare' if a.action=='coral-bay' else 'OceanAngler.Editor.ChannelAssetBuilder.Prepare' if a.action=='nearshore-channel' else 'OceanAngler.Editor.SpinningRigAssetBuilder.Prepare' if a.action=='spinning-rig' else 'OceanAngler.Editor.BluefinAssetBuilder.Prepare' if a.action=='bluefin' else 'OceanAngler.Editor.BuildTools.'+('Prepare' if a.action=='prepare' else 'ExportMac' if a.action=='mac' else 'ExportIOS')
  cmd+=([] if a.action in ('fish-review','school-review','encounter-review','observation-review') else ['-quit'])+['-executeMethod',method]
  if a.action=='mac':
   output=ROOT/'build/OceanAngler.app';output.parent.mkdir(exist_ok=True);env['OCEAN_MAC_OUTPUT']=str(output)
+ if a.action=='simulator':
+  if not a.label.isalnum():raise SystemExit('simple simulator export label required')
+  output=ROOT/'build'/('ios-simulator-'+a.label)
+  if output.exists():raise SystemExit('simulator export already exists; use a new label')
+  output.parent.mkdir(exist_ok=True);env['OCEAN_SIMULATOR_OUTPUT']=str(output);cmd+=['-buildTarget','iOS']
  if a.action=='ios':
   cmd+=['-buildTarget','iOS']
   if not a.build or a.build<1:raise SystemExit('positive --build required')
