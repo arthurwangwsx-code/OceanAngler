@@ -11,11 +11,15 @@ namespace OceanAngler
     public sealed class RuntimeSmoke : MonoBehaviour
     {
         [Serializable] sealed class LabelRender { public string page,text;public float requiredHeight,availableHeight;public int visibleCharacters,vertices; }
-        [Serializable] sealed class Receipt { public string status="RUNNING";public List<string> checks=new List<string>();public List<string> failures=new List<string>();public List<LabelRender> inspectedLabels=new List<LabelRender>();public int catches,points,reflectionPasses,reflectionWidth,reflectionHeight;public float pixelsPerPoint, safeWidthPoints, safeHeightPoints,reflectionVariance; }
-        GameController game;string folder;Receipt receipt;bool finished;float began;
+        [Serializable] sealed class JourneyRound { public int number,pointsBefore,pointsAfter;public string fishId,habitatId,mode;public float elapsedSeconds; }
+        [Serializable] sealed class HitFailure { public string target;public string[] hitTargets;public Vector2 point,screen;public Rect button,viewport;public float scrollPosition,contentHeight;public bool culled,insideViewport; }
+        [Serializable] sealed class Receipt { public string status="RUNNING",scope;public List<string> checks=new List<string>();public List<string> failures=new List<string>();public List<LabelRender> inspectedLabels=new List<LabelRender>();public List<JourneyRound> rounds=new List<JourneyRound>();public List<HitFailure> hitFailures=new List<HitFailure>();public int catches,points,reflectionPasses,reflectionWidth,reflectionHeight,requestedRounds,completedRounds,capturedFrames;public bool captureEnabled;public float pixelsPerPoint, safeWidthPoints, safeHeightPoints,reflectionVariance,elapsedSeconds; }
+        GameController game;string folder;Receipt receipt;bool finished,journeyMode,journeyQuit;float began;
         IEnumerator Start()
         {
-            var args=LaunchArguments.Get();int index=Array.IndexOf(args,"--ocean-smoke");if(index<0||index+1>=args.Length){if(Debug.isDebugBuild)Debug.Log("OCEAN_SMOKE_MODE_OFF");yield break;}
+            var args=LaunchArguments.Get();int journey=Array.IndexOf(args,"--ocean-journey20");
+            if(journey>=0&&journey+1<args.Length){yield return RunJourney20(args[journey+1],true,true);yield break;}
+            int index=Array.IndexOf(args,"--ocean-smoke");if(index<0||index+1>=args.Length){if(Debug.isDebugBuild)Debug.Log("OCEAN_SMOKE_MODE_OFF");yield break;}
             folder=args[index+1];Directory.CreateDirectory(folder);receipt=new Receipt();began=Time.realtimeSinceStartup;game=GetComponent<GameController>();Application.runInBackground=true;
             Debug.Log("OCEAN_SMOKE_BEGIN");
             yield return new WaitForSecondsRealtime(1);
@@ -113,6 +117,152 @@ namespace OceanAngler
             receipt.catches=game.Progress.Data.catches.Count;receipt.points=game.Progress.Data.totalPoints;receipt.status=receipt.failures.Count==0?"PASS":"FAIL";finished=true;
             File.WriteAllText(Path.Combine(folder,"receipt.json"),JsonUtility.ToJson(receipt,true));Debug.Log("OCEAN_SMOKE_"+receipt.status);Application.Quit(receipt.failures.Count==0?0:1);
         }
+        // The same EventSystem journey can run headlessly in PlayMode and with
+        // real frames in a native player. Headless results never claim rendering.
+        public IEnumerator RunJourney20(string outputFolder,bool captureFrames,bool quitProcess=false)
+        {
+            folder=Path.GetFullPath(outputFolder);Directory.CreateDirectory(folder);
+            if(File.Exists(Path.Combine(folder,"receipt.json")))throw new InvalidOperationException("Use a new journey output folder");
+            game=GetComponent<GameController>();began=Time.realtimeSinceStartup;finished=false;journeyMode=true;journeyQuit=quitProcess;
+            receipt=new Receipt{requestedRounds=20,captureEnabled=captureFrames,scope=captureFrames?"native Player EventSystem journey; not OS touch or human play":"headless PlayMode EventSystem journey; no rendered-frame/device acceptance"};
+            Application.runInBackground=true;
+            var stack=new Stack<IEnumerator>();stack.Push(Journey20());
+            while(stack.Count>0&&!finished)
+            {
+                object next=null;bool moved=false;Exception failure=null;
+                try{moved=stack.Peek().MoveNext();if(moved)next=stack.Peek().Current;}
+                catch(Exception e){failure=e;}
+                if(failure!=null){receipt.failures.Add("journey-exception:"+failure.GetType().Name+":"+failure.Message);break;}
+                if(!moved){(stack.Pop() as IDisposable)?.Dispose();continue;}
+                if(next is IEnumerator nested)stack.Push(nested);else yield return next;
+            }
+            while(stack.Count>0)(stack.Pop() as IDisposable)?.Dispose();
+            if(!finished)FinishJourney();
+        }
+        void JourneyRequire(bool condition,string name)
+        {
+            Require(condition,name);if(!condition)throw new InvalidOperationException(name);
+        }
+        IEnumerator JourneyFrame(string name)
+        {
+            CheckLayout(name);CheckTouchTargets(name);
+            if(receipt.captureEnabled){yield return Snapshot(name);receipt.capturedFrames++;}
+            else {yield return null;yield return null;}
+        }
+        IEnumerator JourneyClick(string text,bool exact=false)
+        {
+            var button=Find(text,exact);
+            // Scrolling changes clipping/culling in the next canvas update.
+            // A callback before that update is not a valid visible UI tap.
+            if(button.GetComponentInParent<ScrollRect>()!=null){yield return null;yield return null;}
+            Click(text,exact);
+        }
+        IEnumerator Journey20()
+        {
+            var args=LaunchArguments.Get();int saveIndex=Array.IndexOf(args,"--ocean-save-root");
+            JourneyRequire(saveIndex>=0&&saveIndex+1<args.Length,"journey-requires-explicit-isolated-save-root");
+            string saveFile=Path.Combine(Path.GetFullPath(args[saveIndex+1]),"ocean-progress.json");
+            JourneyRequire(!game.Progress.RequiresRecovery&&game.Progress.Data.catches.Count==0&&game.Progress.Data.totalPoints==0&&game.Progress.Data.observations.Count==0&&!File.Exists(saveFile)&&!File.Exists(saveFile+".bak")&&!File.Exists(saveFile+".tmp"),"journey-requires-fresh-save");
+            if(receipt.captureEnabled)JourneyRequire(SystemInfo.graphicsDeviceType!=UnityEngine.Rendering.GraphicsDeviceType.Null,"journey-capture-needs-graphics-device");
+            yield return null;yield return null;
+            var ui=GetComponent<GameUI>();
+            for(int round=1;round<=20;round++)
+            {
+                float roundStart=Time.realtimeSinceStartup;
+                if(round%4==1)
+                {
+                    yield return JourneyClick("钓具",true);yield return null;yield return null;
+                    string[] categories={"rod","reel","line","lure"},labels={"鱼竿","卷线器","鱼线","拟饵"};
+                    for(int i=0;i<categories.Length;i++)
+                    {
+                        yield return JourneyClick(labels[i],true);yield return null;yield return null;
+                        var gear=game.Content.gear.Where(g=>g.category==categories[i]&&g.unlockPoints<=game.Progress.Data.totalPoints).OrderByDescending(g=>g.power).First();
+                        yield return JourneyClick(gear.name);yield return null;yield return null;
+                        JourneyRequire(new[]{game.Progress.Data.rodId,game.Progress.Data.reelId,game.Progress.Data.lineId,game.Progress.Data.lureId}.Contains(gear.id),"round-"+round+"-equip-"+categories[i]);
+                    }
+                }
+                if(round==11){yield return JourneyClick("设置",true);yield return null;yield return null;yield return JourneyClick("初学辅助");yield return null;yield return null;JourneyRequire(!game.Progress.Data.settings.assisted,"journey-standard-mode-enabled");}
+                yield return JourneyClick("出海",true);yield return null;yield return null;
+                JourneyRequire(game.Session.Phase==FishingPhase.Ready&&!game.Reeling,"round-"+round+"-ready-with-no-held-input");
+                if(ui.Compact){yield return JourneyClick("海域与装备",true);yield return null;yield return null;}
+                var available=game.Content.habitats.Where(h=>h.unlockPoints<=game.Progress.Data.totalPoints).ToArray();
+                var habitat=available.FirstOrDefault(h=>!receipt.rounds.Any(r=>r.habitatId==h.id))??available[(round-1)%available.Length];
+                yield return JourneyClick(habitat.name,true);yield return null;yield return null;
+                JourneyRequire(game.Progress.Data.habitatId==habitat.id,"round-"+round+"-selected-habitat");
+                if(!receipt.rounds.Any(r=>r.habitatId==habitat.id)&&MarineHabitat.ResourceFor(habitat.id)!=null)
+                {
+                    yield return JourneyClick(habitat.id=="bay"?"看看海湾":"看看海域",true);yield return null;yield return null;
+                    if(!ui.HabitatSurfaceView){yield return JourneyClick("回到水面",true);yield return null;yield return null;}
+                    var active=GetComponent<OceanWorld>().ActiveHabitat;
+                    JourneyRequire(active!=null&&game.Session.Paused&&Camera.main.transform.position.y>active.SeaLevel,"journey-"+habitat.id+"-surface");
+                    yield return JourneyFrame("habitat-"+habitat.id+"-surface");
+                    yield return JourneyClick("潜入水下",true);yield return null;yield return null;
+                    JourneyRequire(Camera.main.transform.position.y<active.SeaLevel,"journey-"+habitat.id+"-underwater");
+                    yield return JourneyFrame("habitat-"+habitat.id+"-underwater");
+                    yield return JourneyClick("返回钓鱼",true);yield return null;yield return null;
+                }
+                if(ui.Compact){yield return JourneyClick("收起准备",true);yield return null;yield return null;}
+                if(game.Session.Paused){yield return JourneyClick("继续探索",true);yield return null;yield return null;}
+                int beforePoints=game.Progress.Data.totalPoints,beforeCount=game.Progress.Data.catches.Count;
+                var cast=Find("按住蓄力");Pointer(cast,true);yield return new WaitForSecondsRealtime(.35f);Pointer(cast,false);
+                float deadline=Time.realtimeSinceStartup+20;
+                while(game.Session.Phase!=FishingPhase.Bite&&Time.realtimeSinceStartup<deadline)yield return null;
+                JourneyRequire(game.Session.Phase==FishingPhase.Bite,"round-"+round+"-cast-to-bite");
+                yield return null;yield return null;yield return JourneyClick("提竿",true);yield return null;yield return null;
+                JourneyRequire(game.Session.Phase==FishingPhase.Fighting,"round-"+round+"-strike");
+                var reel=Find("按住收线");bool held=false;
+                if(round%5==0)
+                {
+                    Pointer(reel,true);yield return new WaitForSecondsRealtime(.2f);yield return JourneyClick("图鉴",true);yield return null;yield return null;
+                    JourneyRequire(game.Session.Paused&&!game.Reeling,"round-"+round+"-navigation-cancels-held-reel");
+                    float tension=game.Session.Tension,progress=game.Session.Progress;yield return new WaitForSecondsRealtime(.2f);
+                    JourneyRequire(game.Session.Tension==tension&&game.Session.Progress==progress,"round-"+round+"-pause-freezes-fight");
+                    yield return JourneyClick("出海",true);yield return null;yield return null;yield return JourneyClick("继续探索",true);yield return null;yield return null;reel=Find("按住收线");
+                }
+                deadline=Time.realtimeSinceStartup+75;
+                while(game.Session.Phase==FishingPhase.Fighting&&Time.realtimeSinceStartup<deadline)
+                {
+                    bool desired=game.Session.Tension<.65f;
+                    if(desired!=held){held=desired;Pointer(reel,held);}yield return null;
+                }
+                if(held)Pointer(reel,false);yield return null;yield return null;
+                JourneyRequire(game.Session.Phase==FishingPhase.Landed,"round-"+round+"-landed");
+                var caught=game.Session.Catch;
+                if(round==1||round==10||round==20)yield return JourneyFrame("round-"+round.ToString("D2")+"-landed");
+                yield return JourneyClick("记录并放流",true);yield return null;yield return null;
+                JourneyRequire(game.Session.Phase==FishingPhase.Ready&&!game.Reeling&&game.Progress.Data.catches.Count==beforeCount+1,"round-"+round+"-released-and-ready");
+                var loaded=new SaveStore(saveFile,game.Content).Load();
+                JourneyRequire(!loaded.requiresRecovery&&loaded.data.catches.Count==round&&loaded.data.totalPoints==game.Progress.Data.totalPoints&&loaded.data.catches.Sum(c=>c.awardedPoints)==loaded.data.totalPoints&&loaded.data.catches.Select(c=>c.catchId).Distinct().Count()==round&&loaded.data.catches.All(c=>c.released)&&loaded.data.habitatId==habitat.id,"round-"+round+"-disk-ledger-matches");
+                receipt.rounds.Add(new JourneyRound{number=round,fishId=caught.fishId,habitatId=habitat.id,mode=caught.mode,pointsBefore=beforePoints,pointsAfter=loaded.data.totalPoints,elapsedSeconds=Time.realtimeSinceStartup-roundStart});receipt.completedRounds=round;
+                WriteJourney();
+            }
+            int points=game.Progress.Data.totalPoints;
+            foreach(var species in game.Content.observations)
+            {
+                JourneyRequire(game.Content.Habitat(species.habitatId).unlockPoints<=points,"journey-natural-progression-unlocked-observation-"+species.id);
+                yield return JourneyClick("图鉴",true);yield return null;yield return null;yield return JourneyClick("保护观察");yield return null;yield return null;yield return JourneyClick("观察"+species.name,true);yield return null;yield return null;
+                yield return JourneyClick("安静观察",true);float deadline=Time.realtimeSinceStartup+8;
+                while(!GetComponent<OceanWorld>().Observations.CanRecord&&Time.realtimeSinceStartup<deadline)yield return null;
+                JourneyRequire(GetComponent<OceanWorld>().Observations.CanRecord,"journey-observation-ready-"+species.id);
+                yield return JourneyFrame("observation-"+species.id);yield return JourneyClick("记入观察图鉴",true);yield return null;yield return null;
+                var loaded=new SaveStore(saveFile,game.Content).Load();
+                JourneyRequire(!loaded.requiresRecovery&&loaded.data.observations.Contains(species.id)&&loaded.data.totalPoints==points&&loaded.data.catches.Count==20,"journey-observation-persists-without-catch-points-"+species.id);
+            }
+            yield return JourneyClick("出海",true);yield return null;yield return null;
+            JourneyRequire(receipt.completedRounds==20&&receipt.rounds.Any(r=>r.mode=="assisted")&&receipt.rounds.Any(r=>r.mode=="standard"),"journey-20-rounds-both-modes");
+            JourneyRequire(game.Progress.Data.observations.Count==3,"journey-three-protected-observations");
+            receipt.pixelsPerPoint=DisplayMetrics.PixelsPerPoint;receipt.safeWidthPoints=DisplayMetrics.SafeArea.width/DisplayMetrics.PixelsPerPoint;receipt.safeHeightPoints=DisplayMetrics.SafeArea.height/DisplayMetrics.PixelsPerPoint;
+        }
+        void WriteJourney()
+        {
+            receipt.catches=game.Progress.Data.catches.Count;receipt.points=game.Progress.Data.totalPoints;receipt.elapsedSeconds=Time.realtimeSinceStartup-began;
+            File.WriteAllText(Path.Combine(folder,"receipt.json"),JsonUtility.ToJson(receipt,true));
+        }
+        void FinishJourney()
+        {
+            receipt.status=receipt.failures.Count==0?"PASS":"FAIL";finished=true;WriteJourney();Debug.Log("OCEAN_JOURNEY_"+receipt.status);
+            if(journeyQuit)Application.Quit(receipt.failures.Count==0?0:1);
+        }
         Button Find(string text,bool exact=false)
         {
             var button=FindObjectsByType<Button>(FindObjectsSortMode.None).FirstOrDefault(b=>b.isActiveAndEnabled&&b.interactable&&(exact?b.GetComponentInChildren<Text>()?.text==text:b.GetComponentInChildren<Text>()?.text.StartsWith(text)==true));
@@ -138,7 +288,15 @@ namespace OceanAngler
             if(down)
             {
                 var hits=new List<RaycastResult>();EventSystem.current.RaycastAll(data,hits);
-                Require(hits.Count>0&&hits[0].gameObject.GetComponentInParent<Button>()==b,"visible-hit-target:"+b.GetComponentInChildren<Text>().text);
+                bool hit=hits.Count>0&&hits[0].gameObject.GetComponentInParent<Button>()==b;
+                string check="visible-hit-target:"+b.GetComponentInChildren<Text>().text;
+                if(!hit)
+                {
+                    Rect ScreenRect(RectTransform target){var corners=new Vector3[4];target.GetWorldCorners(corners);return Rect.MinMaxRect(corners[0].x,corners[0].y,corners[2].x,corners[2].y);}
+                    var scroll=b.GetComponentInParent<ScrollRect>();
+                    receipt.hitFailures.Add(new HitFailure{target=b.GetComponentInChildren<Text>().text,point=point,screen=new Vector2(Screen.width,Screen.height),button=ScreenRect(rect),viewport=scroll!=null?ScreenRect(scroll.viewport):default,scrollPosition=scroll!=null?scroll.verticalNormalizedPosition:0,contentHeight=scroll!=null?scroll.content.rect.height:0,insideViewport=scroll==null||RectTransformUtility.RectangleContainsScreenPoint(scroll.viewport,point),culled=b.GetComponent<Image>().canvasRenderer.cull,hitTargets=hits.Take(5).Select(h=>h.gameObject.GetComponentInParent<Button>()?.GetComponentInChildren<Text>()?.text??h.gameObject.name).ToArray()});
+                }
+                if(journeyMode)JourneyRequire(hit,check);else Require(hit,check);
                 ExecuteEvents.Execute(b.gameObject,data,ExecuteEvents.pointerDownHandler);
             }
             else ExecuteEvents.Execute(b.gameObject,data,ExecuteEvents.pointerUpHandler);
@@ -188,10 +346,11 @@ namespace OceanAngler
         }
         void Update()
         {
-            if(receipt!=null&&!finished&&Time.realtimeSinceStartup-began>100)
+            if(receipt!=null&&!finished&&Time.realtimeSinceStartup-began>(journeyMode?1800:100))
             {
-                receipt.status="FAIL";receipt.failures.Add("Runtime smoke timed out");finished=true;
-                File.WriteAllText(Path.Combine(folder,"receipt.json"),JsonUtility.ToJson(receipt,true));Application.Quit(1);
+                receipt.failures.Add("Runtime smoke timed out");
+                if(journeyMode)FinishJourney();
+                else {receipt.status="FAIL";finished=true;File.WriteAllText(Path.Combine(folder,"receipt.json"),JsonUtility.ToJson(receipt,true));Application.Quit(1);}
             }
         }
         void OnDestroy()

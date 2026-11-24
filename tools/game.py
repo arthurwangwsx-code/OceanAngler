@@ -3,7 +3,7 @@
 import argparse, os, subprocess, json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-p=argparse.ArgumentParser();p.add_argument('action',choices=['prepare','tests','ios','simulator','mac','bluefin','spinning-rig','coral-bay','nearshore-channel','shoal','water-review','fish-review','school-review','encounter-review','observation-review','channel-review']);p.add_argument('--build',type=int);p.add_argument('--label',default='a');p.add_argument('--review-target',choices=['mac','ios'],default='mac');p.add_argument('--test-platform',choices=['EditMode','PlayMode'],default='EditMode');a=p.parse_args()
+p=argparse.ArgumentParser();p.add_argument('action',choices=['prepare','tests','ios','simulator','mac','bluefin','spinning-rig','coral-bay','nearshore-channel','shoal','water-review','fish-review','school-review','encounter-review','observation-review','channel-review']);p.add_argument('--build',type=int);p.add_argument('--label',default='a');p.add_argument('--review-target',choices=['mac','ios'],default='mac');p.add_argument('--test-platform',choices=['EditMode','PlayMode'],default='EditMode');p.add_argument('--test-filter');a=p.parse_args()
 editor=Path(os.environ.get('UNITY_EDITOR','/Applications/Unity/Hub/Editor/6000.3.29f1/Unity.app/Contents/MacOS/Unity'))
 local=ROOT/'.local';local.mkdir(exist_ok=True)
 if not editor.is_file():raise SystemExit('Unity Editor not found')
@@ -19,6 +19,7 @@ if gpu_review:
 cmd=[str(editor),'-batchmode']+(['-buildTarget','ios' if a.review_target=='ios' else 'osxuniversal'] if gpu_review else [])+([] if gpu_review else ['-nographics'])+['-projectPath',str(ROOT/'game'),'-logFile',str(log)]
 if a.action=='tests':
  cmd+=['-runTests','-testPlatform',a.test_platform,'-testResults',str(local/(a.test_platform.lower()+'.xml'))]
+ if a.test_filter:cmd+=['-testFilter',a.test_filter]
  if a.test_platform=='PlayMode':
   if not a.label.isalnum():raise SystemExit('simple test label required')
   save=local/'unity-test-saves'/a.label

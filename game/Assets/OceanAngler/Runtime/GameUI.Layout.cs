@@ -58,7 +58,11 @@ namespace OceanAngler
             if(preparation)
             {
                 float w=Width-cardWidth-38;
-                var prep=Box(pageRoot,"Preparation",Panel,new Vector2(left?1:0,0),new Vector2(left?1:0,1),new Vector2(left?-w-12:12,36),new Vector2(left?-12:w+12,-152));
+                // The paused return button occupies the bottom 90 points on
+                // this side. Keep scroll content above it so its visible last
+                // row cannot be intercepted by "return to preparation".
+                float preparationBottom=game.Session.Paused?102:36;
+                var prep=Box(pageRoot,"Preparation",Panel,new Vector2(left?1:0,0),new Vector2(left?1:0,1),new Vector2(left?-w-12:12,preparationBottom),new Vector2(left?-12:w+12,-152));
                 prep.gameObject.AddComponent<RectMask2D>();var content=new GameObject("PreparationContent",typeof(RectTransform)).GetComponent<RectTransform>();content.SetParent(prep,false);content.anchorMin=new Vector2(0,1);content.anchorMax=new Vector2(1,1);content.pivot=new Vector2(.5f,1);content.sizeDelta=new Vector2(0,366);
                 var scroll=prep.gameObject.AddComponent<ScrollRect>();scroll.viewport=prep;scroll.content=content;scroll.horizontal=false;scroll.movementType=ScrollRect.MovementType.Clamped;
                 Label(content,game.Content.Habitat(game.Progress.Data.habitatId).name,22,Color.white,12,6,-24,34);
