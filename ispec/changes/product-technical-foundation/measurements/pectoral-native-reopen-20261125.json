@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "b347a4de-e767-4478-b934-ff7ed1b8767c",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "6e7a4811cb549640eb5dcdff04f27ae42edb6fd95c6b92ede02a429e968812bc",
+    "category": "e2e",
+    "executable": "python3",
+    "startedAt": "2026-11-24T18:54:19.210Z",
+    "finishedAt": "2026-11-24T18:54:27.351Z",
+    "durationMs": 8112.111167,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/pectoral-native-qa/run-native.py",
+      "manual",
+      "pect20261125phoneopen",
+      "--device",
+      "phone",
+      "--save-from",
+      "slope20261124phone2"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/pectoral-native-qa/run-native.py",
+    "manual",
+    "pect20261125phoneopen",
+    "--device",
+    "phone",
+    "--save-from",
+    "slope20261124phone2"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T18:54:19.210Z",
+  "finishedAt": "2026-11-24T18:54:27.351Z",
+  "durationMs": 8112.111167
+}

@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "4fb76928-e8dd-4c25-bef8-1d034a9d89b5",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "f45bca3d1db0a5af6aafc90c968cfcfa26ea2fd01b01274879cf0125d675034c",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-24T18:50:30.488Z",
+    "finishedAt": "2026-11-24T18:50:30.644Z",
+    "durationMs": 99.61095799999998,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/pectoral-native-qa/verify-native.py",
+      "pect20261125phone1",
+      "pectoral-native-phone-20261125.json"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/pectoral-native-qa/verify-native.py",
+    "pect20261125phone1",
+    "pectoral-native-phone-20261125.json"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T18:50:30.488Z",
+  "finishedAt": "2026-11-24T18:50:30.644Z",
+  "durationMs": 99.61095799999998
+}

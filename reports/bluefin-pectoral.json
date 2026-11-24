@@ -1,5 +1,5 @@
 {
-  "status": "SOURCE_AND_EDITOR_PASS_ART_PARTIAL_PLAYER_PENDING",
+  "status": "SOURCE_EDITOR_AND_SCOPED_NATIVE_PASS_ART_PARTIAL",
   "implementation": "IN_PROGRESS",
   "wholeProduct": "PARTIAL",
   "baseCommit": "773e668eed4440745547faad2543f31ee23941f8",
@@ -932,7 +932,7 @@
       }
     ]
   },
-  "nativePlayer": "NOT_RUN_NEW_CANDIDATE",
+  "nativePlayer": "PASS_SCOPED_DUAL15_FRAME_FLOW",
   "physicalDevices": "NOT_RUN",
   "userDirection": "PENDING_EXISTING_FIRST_SET_REVIEW",
   "scienceAcceptance": "NOT_RUN",
@@ -978,5 +978,17 @@
       "scope": "actual local state/start/completion/receipt integrity for this increment only; not formal independent CLI compliance or product acceptance"
     },
     "historicalIndependentAudit": "INCOMPLETE"
+  },
+  "nativeAtSourceIncrement": "NOT_RUN",
+  "nativeFollowUp": {
+    "report": "reports/bluefin-pectoral-native.json",
+    "source": {
+      "sourceCommit": "f2abf498f81ccfc5ee6d4e45e149c386165496a9",
+      "sourceDigest": "f1aad882a037109f35f3667a2916aa33adc6d74a54c125d8d80f4a0e46738e0f",
+      "projectSettingsSha256": "15b80559faa4f4758454e50942f82ac04a1473bc6e4cf968ee7c497d7a3a3620"
+    },
+    "appDigest": "f4ca92e461d35fc04aeb2607991cb4805eef1982d15238f53a5ff4cc0a7b2480",
+    "artAcceptance": "PARTIAL",
+    "uiContrast": "PARTIAL"
   }
 }

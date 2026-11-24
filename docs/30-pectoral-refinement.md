@@ -1,5 +1,7 @@
 # 首条英雄鱼胸鳍精修
 
+后续f2abf49候选已完成同一新包的双端各15帧原生沉浸流程，198/250分、24份旧QA文件与原4622分保留。双接触表和六张选定原图已查看；手机收线仪表白字在亮沙背景偏淡，交由4.4修正，胸鳍与整体美术仍PARTIAL。首次黑图/探针过早失败及原进程就绪后复验均保留，详见[原生复核](../reports/bluefin-pectoral-native.md)。以下Player未验表述属于先前源/Editor增量的当时范围。
+
 对应REQ-05，继续打磨首条蓝鳍鲹，不批量生产其他物种。实际模拟器收鱼图显示胸鳍偏宽直、表面有规则细点；先用真实导入模型做近景对照，再修改作者曲线，不把诊断关闭阴影或法线的图当成成品。
 
 色彩和物种身份沿用[澳大利亚博物馆](https://australian.museum/learn/animals/fishes/bluefin-trevally-caranx-melampygus-cuvier-1833/)、[Fishes of Australia](https://fishesofaustralia.net.au/home/species/1652)及既有[Smithsonian资料](https://biogeodb.stri.si.edu/sftep/en/thefishes/species/1248)。本轮前两页可读，Smithsonian正文超时；没有下载、取样或再分发照片，曲线控制点不是生物测量，不能据此标为科学验收通过。

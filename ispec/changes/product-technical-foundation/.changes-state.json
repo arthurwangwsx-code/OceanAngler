@@ -445,6 +445,22 @@
       "checkedAt": "2026-11-24T18:12:35.207Z",
       "durationMs": 133.13754099999994,
       "outcome": "accepted"
+    },
+    {
+      "stageId": "apply",
+      "runId": null,
+      "operation": "start",
+      "checkedAt": "2026-11-24T18:41:12.300Z",
+      "durationMs": 250.54104200000006,
+      "outcome": "accepted"
+    },
+    {
+      "stageId": "apply",
+      "runId": null,
+      "operation": "start",
+      "checkedAt": "2026-11-24T19:12:03.812Z",
+      "durationMs": 162.6133339999999,
+      "outcome": "accepted"
     }
   ],
   "measurementJournal": {
@@ -11390,6 +11406,171 @@
       "executable": "python3",
       "commandDigest": "edda3e1ef5f8acf566544817d77e144add4558be5c4232ee5671e2fab3eec7c1",
       "receiptPath": "measurements/pectoral-record-audit-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "50393c35-6826-44bf-862b-5f2715393432",
+      "startedAt": "2026-11-24T18:41:35.378Z",
+      "executable": "python3",
+      "commandDigest": "8d1c12cbf598c2e4062052f7f2b4c7a9ed1d8e350f8b5cdb77de89ecbcb0a455",
+      "receiptPath": "measurements/pectoral-native-bootstrap-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "3bf70147-4ecf-4b45-aabf-272bd79d2b9a",
+      "startedAt": "2026-11-24T18:42:55.546Z",
+      "executable": "python3",
+      "commandDigest": "95412c9e4ea6f9298499f07f610010b592372c95f70e08499917c353196f3c3e",
+      "receiptPath": "measurements/pectoral-native-retention-before-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "439c3ec7-70f5-406a-8d65-b10b6040ff5a",
+      "startedAt": "2026-11-24T18:43:24.161Z",
+      "executable": "python3",
+      "commandDigest": "cf89e4dd2478c971f785efb79e668253b5f03a90b39bc926ccd073f10e4c0b27",
+      "receiptPath": "measurements/pectoral-native-build-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "6c179ff3-acef-476f-9cbb-35932669ffcc",
+      "startedAt": "2026-11-24T18:49:08.410Z",
+      "executable": "python3",
+      "commandDigest": "87d5c5a5e9cdc8ad606eea5ba6d450dc114c88a3523fb396413f365abffeeaf7",
+      "receiptPath": "measurements/pectoral-native-phone-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "4fb76928-e8dd-4c25-bef8-1d034a9d89b5",
+      "startedAt": "2026-11-24T18:50:30.488Z",
+      "executable": "python3",
+      "commandDigest": "f45bca3d1db0a5af6aafc90c968cfcfa26ea2fd01b01274879cf0125d675034c",
+      "receiptPath": "measurements/pectoral-native-phone-proof-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "efacbc98-a985-4855-b2f7-411d607e9762",
+      "startedAt": "2026-11-24T18:51:13.765Z",
+      "executable": "python3",
+      "commandDigest": "4ab1543857a4cf2fb1b431fe3bb8444c86f25fc50edc91d1d6e8f35512cb1635",
+      "receiptPath": "measurements/pectoral-native-pad-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "beb04f8a-44e1-48f1-bf07-f55bce8b9732",
+      "startedAt": "2026-11-24T18:54:10.502Z",
+      "executable": "python3",
+      "commandDigest": "d51e558ab6a09ae1ab85e2cd89f2fd01141d26654094319cacda44a73a16ba17",
+      "receiptPath": "measurements/pectoral-native-pad-proof-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "1a747c8d-cbb3-46ca-b9ca-8f3aea61938e",
+      "startedAt": "2026-11-24T18:54:11.303Z",
+      "executable": "python3",
+      "commandDigest": "e08cb7f1c34ed76158d7474a05fa1f000dc907bf11e18c5bb1b4a621eeaa35cc",
+      "receiptPath": "measurements/pectoral-native-retention-after-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "b347a4de-e767-4478-b934-ff7ed1b8767c",
+      "startedAt": "2026-11-24T18:54:19.210Z",
+      "executable": "python3",
+      "commandDigest": "6e7a4811cb549640eb5dcdff04f27ae42edb6fd95c6b92ede02a429e968812bc",
+      "receiptPath": "measurements/pectoral-native-reopen-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "ba39523f-dee4-49fe-a796-0d671a311b39",
+      "startedAt": "2026-11-24T18:54:27.767Z",
+      "executable": "python3",
+      "commandDigest": "72d3d7c75d2e01816bb5d3046d3a9444da4c770328a89d3e69e075d5d50dcb11",
+      "receiptPath": "measurements/pectoral-native-reopen-proof-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "f9cf2166-9b06-49e7-b68a-e5548944d2ab",
+      "startedAt": "2026-11-24T18:57:37.816Z",
+      "executable": "python3",
+      "commandDigest": "72d3d7c75d2e01816bb5d3046d3a9444da4c770328a89d3e69e075d5d50dcb11",
+      "receiptPath": "measurements/pectoral-native-reopen-proof-20261125b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "707ed13d-2f14-4f65-8492-5688ec89baae",
+      "startedAt": "2026-11-24T19:07:04.721Z",
+      "executable": "python3",
+      "commandDigest": "6b767a4760f0addb1cd7c225971a89db5ecdec567e18708abbe662028707f095",
+      "receiptPath": "measurements/pectoral-native-report-proof-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "341cb0cf-d611-473e-aa2d-7d64168d08dc",
+      "startedAt": "2026-11-24T19:12:58.287Z",
+      "executable": "python3",
+      "commandDigest": "92b88d46c0b5545788a9a2ce5359954222ebde80f299018987788284e4627495",
+      "receiptPath": "measurements/pectoral-native-public-checks-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "815182c6-d102-4b3d-b54f-4afea8200aa1",
+      "startedAt": "2026-11-24T19:13:07.392Z",
+      "executable": "python3",
+      "commandDigest": "92b88d46c0b5545788a9a2ce5359954222ebde80f299018987788284e4627495",
+      "receiptPath": "measurements/pectoral-native-public-checks-20261125b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "2f12e462-6159-453f-a51c-b3edca803abb",
+      "startedAt": "2026-11-24T19:13:21.729Z",
+      "executable": "python3",
+      "commandDigest": "6de03ec0e92598c1a77f984fe728b74b5ec0048d99162fe663c08f36d7a2a024",
+      "receiptPath": "measurements/pectoral-native-record-audit-20261125.json"
     }
   ],
   "runMeasurements": [
@@ -28526,6 +28707,291 @@
       "receipt": {
         "path": "measurements/pectoral-record-audit-20261125.json",
         "sha256": "425239d178a6bde742dc9ca8432dbbbaac5db96b38b6b39f0659a803cd65cbe6"
+      }
+    },
+    {
+      "id": "50393c35-6826-44bf-862b-5f2715393432",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "8d1c12cbf598c2e4062052f7f2b4c7a9ed1d8e350f8b5cdb77de89ecbcb0a455",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T18:41:35.378Z",
+      "finishedAt": "2026-11-24T18:41:36.713Z",
+      "durationMs": 1290.795959,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-native-bootstrap-20261125.json",
+        "sha256": "3815a85cbc59e2435ee8c4f2358217f06eda4fbefc8a013d71c681f6360edb2e"
+      }
+    },
+    {
+      "id": "3bf70147-4ecf-4b45-aabf-272bd79d2b9a",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "95412c9e4ea6f9298499f07f610010b592372c95f70e08499917c353196f3c3e",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T18:42:55.546Z",
+      "finishedAt": "2026-11-24T18:43:05.438Z",
+      "durationMs": 9820.736834000001,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-native-retention-before-20261125.json",
+        "sha256": "e303e7445b6f476e07af9e516cb43592f263b1b13b980bbde1799a6920a3e4eb"
+      }
+    },
+    {
+      "id": "439c3ec7-70f5-406a-8d65-b10b6040ff5a",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "cf89e4dd2478c971f785efb79e668253b5f03a90b39bc926ccd073f10e4c0b27",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T18:43:24.161Z",
+      "finishedAt": "2026-11-24T18:48:37.685Z",
+      "durationMs": 313459.31383299996,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-native-build-20261125.json",
+        "sha256": "329025c5d28a891a2807fb6a8cfff2845f3afa0abc3c9a963f771cbd419a1c15"
+      }
+    },
+    {
+      "id": "6c179ff3-acef-476f-9cbb-35932669ffcc",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "87d5c5a5e9cdc8ad606eea5ba6d450dc114c88a3523fb396413f365abffeeaf7",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-24T18:49:08.410Z",
+      "finishedAt": "2026-11-24T18:50:13.032Z",
+      "durationMs": 64556.938875,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-native-phone-20261125.json",
+        "sha256": "8ae473c05dae43191385d057f37c98d43d2916890593576b699e59a1a83c3219"
+      }
+    },
+    {
+      "id": "4fb76928-e8dd-4c25-bef8-1d034a9d89b5",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "f45bca3d1db0a5af6aafc90c968cfcfa26ea2fd01b01274879cf0125d675034c",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T18:50:30.488Z",
+      "finishedAt": "2026-11-24T18:50:30.644Z",
+      "durationMs": 99.61095799999998,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-native-phone-proof-20261125.json",
+        "sha256": "7be039aa40fcb4d3465b65db38fd865dd42cfeada503f7213b8df4fc3445cdb2"
+      }
+    },
+    {
+      "id": "efacbc98-a985-4855-b2f7-411d607e9762",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "4ab1543857a4cf2fb1b431fe3bb8444c86f25fc50edc91d1d6e8f35512cb1635",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-24T18:51:13.765Z",
+      "finishedAt": "2026-11-24T18:52:33.743Z",
+      "durationMs": 79944.132417,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-native-pad-20261125.json",
+        "sha256": "b18e02654249b0c40f7d780859c113fda6d886a3ce90dd50d3595a6fe0097960"
+      }
+    },
+    {
+      "id": "beb04f8a-44e1-48f1-bf07-f55bce8b9732",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d51e558ab6a09ae1ab85e2cd89f2fd01141d26654094319cacda44a73a16ba17",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T18:54:10.502Z",
+      "finishedAt": "2026-11-24T18:54:10.662Z",
+      "durationMs": 118.11737499999992,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-native-pad-proof-20261125.json",
+        "sha256": "90f34646f9ab0993bffc37ad1f0c5039c17a8c82fa483e80b775f528373afa08"
+      }
+    },
+    {
+      "id": "1a747c8d-cbb3-46ca-b9ca-8f3aea61938e",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "e08cb7f1c34ed76158d7474a05fa1f000dc907bf11e18c5bb1b4a621eeaa35cc",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T18:54:11.303Z",
+      "finishedAt": "2026-11-24T18:54:18.769Z",
+      "durationMs": 7439.868334000001,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-native-retention-after-20261125.json",
+        "sha256": "4d761421d91c074345070c507417b69e95d29913a52bfac6e63a544015f3c96a"
+      }
+    },
+    {
+      "id": "b347a4de-e767-4478-b934-ff7ed1b8767c",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "6e7a4811cb549640eb5dcdff04f27ae42edb6fd95c6b92ede02a429e968812bc",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-24T18:54:19.210Z",
+      "finishedAt": "2026-11-24T18:54:27.351Z",
+      "durationMs": 8112.111167,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-native-reopen-20261125.json",
+        "sha256": "d8c4370fb530bbe447217b718b3dc3cba8316db74771bf48aed9ffb67ced33ec"
+      }
+    },
+    {
+      "id": "ba39523f-dee4-49fe-a796-0d671a311b39",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "72d3d7c75d2e01816bb5d3046d3a9444da4c770328a89d3e69e075d5d50dcb11",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T18:54:27.767Z",
+      "finishedAt": "2026-11-24T18:54:27.866Z",
+      "durationMs": 72.68070799999998,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-native-reopen-proof-20261125.json",
+        "sha256": "1e8a2aac52a46aa13c141b2f39b080193c98907bf3d44be16833e63fa3575534"
+      }
+    },
+    {
+      "id": "f9cf2166-9b06-49e7-b68a-e5548944d2ab",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "72d3d7c75d2e01816bb5d3046d3a9444da4c770328a89d3e69e075d5d50dcb11",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T18:57:37.816Z",
+      "finishedAt": "2026-11-24T18:57:38.529Z",
+      "durationMs": 673.641167,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-native-reopen-proof-20261125b.json",
+        "sha256": "ab6cafddd06274d8cea50fa0cd8259c08029f85df53692ae50c1da9a7ef54b79"
+      }
+    },
+    {
+      "id": "707ed13d-2f14-4f65-8492-5688ec89baae",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "6b767a4760f0addb1cd7c225971a89db5ecdec567e18708abbe662028707f095",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:07:04.721Z",
+      "finishedAt": "2026-11-24T19:07:05.326Z",
+      "durationMs": 539.2155,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-native-report-proof-20261125.json",
+        "sha256": "4c0307ce7e5eb394e16cd15d052510d339811883cc3b45e6bc2bd0692bf39faa"
+      }
+    },
+    {
+      "id": "341cb0cf-d611-473e-aa2d-7d64168d08dc",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "92b88d46c0b5545788a9a2ce5359954222ebde80f299018987788284e4627495",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:12:58.287Z",
+      "finishedAt": "2026-11-24T19:13:01.448Z",
+      "durationMs": 3135.7581250000003,
+      "exitCode": 2,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-native-public-checks-20261125.json",
+        "sha256": "46bd2dbfc4783bb9142f68675ed710e57b32b1c665d6e53cd9fb9d08c5bffd6b"
+      }
+    },
+    {
+      "id": "815182c6-d102-4b3d-b54f-4afea8200aa1",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "92b88d46c0b5545788a9a2ce5359954222ebde80f299018987788284e4627495",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:13:07.392Z",
+      "finishedAt": "2026-11-24T19:13:09.485Z",
+      "durationMs": 2065.93675,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-native-public-checks-20261125b.json",
+        "sha256": "10bfe730ba98640fc28b00ac34d26b1f76ef45eafa94f28542b137a25aec90d3"
+      }
+    },
+    {
+      "id": "2f12e462-6159-453f-a51c-b3edca803abb",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "6de03ec0e92598c1a77f984fe728b74b5ec0048d99162fe663c08f36d7a2a024",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:13:21.729Z",
+      "finishedAt": "2026-11-24T19:13:21.910Z",
+      "durationMs": 137.09741699999995,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-native-record-audit-20261125.json",
+        "sha256": "3e9b993e39cc4a7bc177ae4fa6f8b0e0ad0b66f8c0e5e97c0915ac6fa58d6cf6"
       }
     }
   ]

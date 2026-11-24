@@ -2359,6 +2359,44 @@
         }
       ],
       "note": "Own rendered images: original, rejected curve, retained B close/side/quarter/LOD2. Material controls are diagnostics, not approved art. No institutional photography copied."
+    },
+    {
+      "id": "bluefin-pectoral-native-reviewed-frames",
+      "author": "OceanAngler contributors",
+      "source": "Own f2abf49 native Simulator app, actual gameplay and same-process reopened original QA save",
+      "license": "MIT",
+      "redistribution": true,
+      "sourceRedistribution": true,
+      "canModify": true,
+      "acquiredAt": "2026-11-25",
+      "status": "FUNCTIONAL_PASS_ART_REVIEW_PENDING",
+      "artifacts": [
+        {
+          "path": "art/previews/bluefin-pectoral-native/phone-landed.png",
+          "sha256": "d4b425d38aa989d9bc9c83677de961631482f3b97b9d6d56a97de972c83b001a"
+        },
+        {
+          "path": "art/previews/bluefin-pectoral-native/tablet-landed.png",
+          "sha256": "5979f812ebc901251df0bf4427a0f3b7c0d86c4cd63bef30ec9a9058f5d638b5"
+        },
+        {
+          "path": "art/previews/bluefin-pectoral-native/phone-fighting.png",
+          "sha256": "9e3ab57060d1d1f5881fa8157cb2370d83da4e2d2d5be83718e6ff27a7e5bc2a"
+        },
+        {
+          "path": "art/previews/bluefin-pectoral-native/phone-pause.png",
+          "sha256": "04a6b2513870a0de34c9b2cd071b65fe9a115284712b7010182616a12a9744a7"
+        },
+        {
+          "path": "art/previews/bluefin-pectoral-native/tablet-left-ready.png",
+          "sha256": "d57953da5a6c9df035d76c7a9f888572e6933f75f52030170c40f334ae21c37d"
+        },
+        {
+          "path": "art/previews/bluefin-pectoral-native/reopened-home.png",
+          "sha256": "d664dfe8dbb22dab8056eaf30bea3efe4664dcf23ea241437c0439417cef3eb5"
+        }
+      ],
+      "note": "Six reviewed original game captures; own models and OFL game font with existing notices retained. No device logs, private media or credentials. Art and meter text contrast remain partial."
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."
