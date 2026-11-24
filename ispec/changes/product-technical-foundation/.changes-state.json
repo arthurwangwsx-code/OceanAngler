@@ -12453,6 +12453,160 @@
       "executable": "python3",
       "commandDigest": "92b88d46c0b5545788a9a2ce5359954222ebde80f299018987788284e4627495",
       "receiptPath": "measurements/beta8-source-public-checks-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "e59291e7-abb8-4feb-8ee2-5eade285a513",
+      "startedAt": "2026-11-24T20:58:58.537Z",
+      "executable": "python3",
+      "commandDigest": "e10f73d3859b38117c140aea52eedf095c635c9a14dfac2758dd04482104d394",
+      "receiptPath": "measurements/beta8-native-export-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "d6c60bce-bf67-4602-9f69-e91dfdf0ae30",
+      "startedAt": "2026-11-24T21:00:59.231Z",
+      "executable": "python3",
+      "commandDigest": "f62e0560b819ec5ce76609599a89f16c61dacd259a006371b07d731d94ad3663",
+      "receiptPath": "measurements/beta8-signing-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "20eac39f-0f4f-4d38-a95c-0de17dac83a2",
+      "startedAt": "2026-11-24T21:01:22.802Z",
+      "executable": "python3",
+      "commandDigest": "7a3e5a7b5288585c6ebf52725d2725437636b9b4ec060238afc67018ece4fb46",
+      "receiptPath": "measurements/beta8-archive-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "8ebcacf0-d6ec-4c91-af18-e312f586e8e8",
+      "startedAt": "2026-11-24T21:06:53.606Z",
+      "executable": "python3",
+      "commandDigest": "915104ba8869a3050a5824f065624970c642e04f6ac36a8b1b2e54d86e61e2ba",
+      "receiptPath": "measurements/beta8-export-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "0c4822b4-a481-439b-bedf-dd639146f74d",
+      "startedAt": "2026-11-24T21:07:33.232Z",
+      "executable": "python3",
+      "commandDigest": "e39dd6442ef2ebfe49eb5925a52411fab583f894998b9f25f6e09afb0073f0d4",
+      "receiptPath": "measurements/beta8-package-metadata-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "f5e72ffb-f1f4-4a12-aba8-4c1af404f7c9",
+      "startedAt": "2026-11-24T21:07:41.860Z",
+      "executable": "python3",
+      "commandDigest": "4533e4d919f003ae460f643e7a7b239cacae122218c6820c84dbeb7a8ddbfecb",
+      "receiptPath": "measurements/beta8-upload-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "6b636ed0-8b87-434a-84b0-b002124ef317",
+      "startedAt": "2026-11-24T21:11:41.907Z",
+      "executable": "python3",
+      "commandDigest": "7863c8d9af364ed591a33443ea3fed26197586a2f7b6f271f4353b092fc29c5d",
+      "receiptPath": "measurements/beta8-apple-status-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "15831cbd-f9e1-46a8-b1fe-91c1af5133c4",
+      "startedAt": "2026-11-24T21:12:03.492Z",
+      "executable": "python3",
+      "commandDigest": "75727367e35327435a13e804c1b3536262a0254505582ac8e0c2ea4c45c2c01a",
+      "receiptPath": "measurements/beta8-apple-processing-wait-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "b40ce4da-ca82-4142-9de9-c5c2cf6ea9d2",
+      "startedAt": "2026-11-24T21:14:31.928Z",
+      "executable": "python3",
+      "commandDigest": "dfe342c61036acbac3f8befe41d0e2d5b87a731dce85664c39dda1887d967fd4",
+      "receiptPath": "measurements/beta8-apple-processing-wait-20261125b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "9e3c309f-2042-496c-8327-d864a2d7bd7b",
+      "startedAt": "2026-11-24T21:15:41.640Z",
+      "executable": "python3",
+      "commandDigest": "2fe4199980fe639f594b789eca776e01256fde423d48bf8d50cadf0b53366325",
+      "receiptPath": "measurements/beta8-personal-group-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "82de62fa-c98a-47bb-8fd4-da7ae38e3f0d",
+      "startedAt": "2026-11-24T21:16:19.539Z",
+      "executable": "python3",
+      "commandDigest": "ea9b61d11ad59c13aa489a262817a46a6e9c26f9cb3dd369c027b072a9470ee0",
+      "receiptPath": "measurements/beta8-notes-readback-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "e3236108-0c71-44ee-90bf-9ca03dba75b3",
+      "startedAt": "2026-11-24T21:16:39.965Z",
+      "executable": "python3",
+      "commandDigest": "5e94c17a786a9a0ca87b22a757370c788f43e28550e66430dcc0308abebb25dd",
+      "receiptPath": "measurements/beta8-delivery-readback-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "c5b37393-2b8f-41e6-9f7c-3a767899c783",
+      "startedAt": "2026-11-24T21:17:26.142Z",
+      "executable": "python3",
+      "commandDigest": "92b88d46c0b5545788a9a2ce5359954222ebde80f299018987788284e4627495",
+      "receiptPath": "measurements/beta8-delivery-public-checks-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "a228acb8-4ab4-47c4-82c5-b4f8ff46728f",
+      "startedAt": "2026-11-24T21:17:48.165Z",
+      "executable": "python3",
+      "commandDigest": "d4f762b5f589e52094edc951bd230b09ad8b8502a65870d5d76e78a014aabd29",
+      "receiptPath": "measurements/beta8-record-integrity-20261125.json"
     }
   ],
   "runMeasurements": [
@@ -31356,6 +31510,272 @@
       "receipt": {
         "path": "measurements/beta8-source-public-checks-20261125.json",
         "sha256": "482a1c4e7a2791a7add36a9b6bb93e675549f2c5b7670cc37a44d97ffbee7213"
+      }
+    },
+    {
+      "id": "e59291e7-abb8-4feb-8ee2-5eade285a513",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "e10f73d3859b38117c140aea52eedf095c635c9a14dfac2758dd04482104d394",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:58:58.537Z",
+      "finishedAt": "2026-11-24T21:00:54.839Z",
+      "durationMs": 116262.801042,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/beta8-native-export-20261125.json",
+        "sha256": "a68411b3b526f1d7926c26d7e9cbdc2cab212b37e2044bfec537419f7437fc7f"
+      }
+    },
+    {
+      "id": "d6c60bce-bf67-4602-9f69-e91dfdf0ae30",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "f62e0560b819ec5ce76609599a89f16c61dacd259a006371b07d731d94ad3663",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T21:00:59.231Z",
+      "finishedAt": "2026-11-24T21:01:13.798Z",
+      "durationMs": 14532.710542,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/beta8-signing-20261125.json",
+        "sha256": "f0ec089718ecfd45c79b8ac4bd2da5568502a5836f86bfcc478a07a8f0b012dc"
+      }
+    },
+    {
+      "id": "20eac39f-0f4f-4d38-a95c-0de17dac83a2",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "7a3e5a7b5288585c6ebf52725d2725437636b9b4ec060238afc67018ece4fb46",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T21:01:22.802Z",
+      "finishedAt": "2026-11-24T21:06:34.637Z",
+      "durationMs": 311762.696458,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/beta8-archive-20261125.json",
+        "sha256": "da44af46ddb50c2a8442551ea1320ece74e33dec732d2dc32230d7767d155e16"
+      }
+    },
+    {
+      "id": "8ebcacf0-d6ec-4c91-af18-e312f586e8e8",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "915104ba8869a3050a5824f065624970c642e04f6ac36a8b1b2e54d86e61e2ba",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T21:06:53.606Z",
+      "finishedAt": "2026-11-24T21:07:29.508Z",
+      "durationMs": 35078.934292,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/beta8-export-20261125.json",
+        "sha256": "7806bd1889ca806936af26ee57e860957acf35e9b210e0dbcf54ae2a9a05eaf7"
+      }
+    },
+    {
+      "id": "0c4822b4-a481-439b-bedf-dd639146f74d",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "e39dd6442ef2ebfe49eb5925a52411fab583f894998b9f25f6e09afb0073f0d4",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T21:07:33.232Z",
+      "finishedAt": "2026-11-24T21:07:34.222Z",
+      "durationMs": 948.3041659999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/beta8-package-metadata-20261125.json",
+        "sha256": "9024a93ca1fc9d2d84be6fe4055cb9116e0c191f9d78e4c8a9089f4b86ff254d"
+      }
+    },
+    {
+      "id": "f5e72ffb-f1f4-4a12-aba8-4c1af404f7c9",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "4533e4d919f003ae460f643e7a7b239cacae122218c6820c84dbeb7a8ddbfecb",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T21:07:41.860Z",
+      "finishedAt": "2026-11-24T21:11:29.134Z",
+      "durationMs": 227187.801125,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/beta8-upload-20261125.json",
+        "sha256": "67053da07f0232205c22838ac79d3a185b51642660d77f0f5306842bacf1df06"
+      }
+    },
+    {
+      "id": "6b636ed0-8b87-434a-84b0-b002124ef317",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "7863c8d9af364ed591a33443ea3fed26197586a2f7b6f271f4353b092fc29c5d",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T21:11:41.907Z",
+      "finishedAt": "2026-11-24T21:11:46.725Z",
+      "durationMs": 4778.831833,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/beta8-apple-status-20261125.json",
+        "sha256": "edac2f0f0b9c3dcf67bbac578efca81d6dc09f4ce3618742667e7174b33965f7"
+      }
+    },
+    {
+      "id": "15831cbd-f9e1-46a8-b1fe-91c1af5133c4",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "75727367e35327435a13e804c1b3536262a0254505582ac8e0c2ea4c45c2c01a",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T21:12:03.492Z",
+      "finishedAt": "2026-11-24T21:14:13.979Z",
+      "durationMs": 130453.68441700001,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/beta8-apple-processing-wait-20261125.json",
+        "sha256": "08ce029574ff697ca198c0d400691caffd13194f9192360ac83933bf8ee0c1bf"
+      }
+    },
+    {
+      "id": "b40ce4da-ca82-4142-9de9-c5c2cf6ea9d2",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "dfe342c61036acbac3f8befe41d0e2d5b87a731dce85664c39dda1887d967fd4",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T21:14:31.928Z",
+      "finishedAt": "2026-11-24T21:15:35.414Z",
+      "durationMs": 63442.205167,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/beta8-apple-processing-wait-20261125b.json",
+        "sha256": "a2fdb9d3bc005480e0a321d0f698c42adbee064fbebf0c2a99254267a13a822a"
+      }
+    },
+    {
+      "id": "9e3c309f-2042-496c-8327-d864a2d7bd7b",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "2fe4199980fe639f594b789eca776e01256fde423d48bf8d50cadf0b53366325",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T21:15:41.640Z",
+      "finishedAt": "2026-11-24T21:16:07.395Z",
+      "durationMs": 25729.682916,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/beta8-personal-group-20261125.json",
+        "sha256": "fbe661f0ab8cc939bed9f689668609978122f06d729bd46ae08a20ad83e24afc"
+      }
+    },
+    {
+      "id": "82de62fa-c98a-47bb-8fd4-da7ae38e3f0d",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "ea9b61d11ad59c13aa489a262817a46a6e9c26f9cb3dd369c027b072a9470ee0",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T21:16:19.539Z",
+      "finishedAt": "2026-11-24T21:16:33.547Z",
+      "durationMs": 13952.716041,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/beta8-notes-readback-20261125.json",
+        "sha256": "c737cbebf4df8f822fddbafbb9347715d3174ca5e96a3c67f365ab37d3f72231"
+      }
+    },
+    {
+      "id": "e3236108-0c71-44ee-90bf-9ca03dba75b3",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "5e94c17a786a9a0ca87b22a757370c788f43e28550e66430dcc0308abebb25dd",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T21:16:39.965Z",
+      "finishedAt": "2026-11-24T21:17:00.996Z",
+      "durationMs": 20584.396333,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/beta8-delivery-readback-20261125.json",
+        "sha256": "5f4fe0649e97f0a2f21df52bbb690a04160aa7e7cb0bab7aedfb337c50ab60d0"
+      }
+    },
+    {
+      "id": "c5b37393-2b8f-41e6-9f7c-3a767899c783",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "92b88d46c0b5545788a9a2ce5359954222ebde80f299018987788284e4627495",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T21:17:26.142Z",
+      "finishedAt": "2026-11-24T21:17:28.265Z",
+      "durationMs": 2091.192125,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/beta8-delivery-public-checks-20261125.json",
+        "sha256": "fd0238d57b1f791a59d00d7136b628e26b7695701ff2fc9276821b304c2184ea"
+      }
+    },
+    {
+      "id": "a228acb8-4ab4-47c4-82c5-b4f8ff46728f",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d4f762b5f589e52094edc951bd230b09ad8b8502a65870d5d76e78a014aabd29",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T21:17:48.165Z",
+      "finishedAt": "2026-11-24T21:17:48.275Z",
+      "durationMs": 82.86191700000006,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/beta8-record-integrity-20261125.json",
+        "sha256": "fcc8e57fd071f87037b8be231ebba50991f6573cc5d6b5cc7ba3cfeeec419f00"
       }
     }
   ]

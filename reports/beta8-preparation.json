@@ -1,5 +1,5 @@
 {
-  "status": "PREPARATION_PASS_NOT_YET_RELEASED",
+  "status": "PREPARATION_PASS_RELEASE_READBACK_PASS",
   "preparedAt": "2026-11-24T20:58:16.115779+00:00",
   "version": "0.1.0",
   "build": "8",
@@ -29,9 +29,9 @@
   },
   "previousSimulatorEvidence": "reports/bluefin-neutral-albedo.json",
   "scope": "Cumulative first-hero and HUD improvements; no new runtime UI or gameplay implementation this release increment",
-  "freeze": "PENDING",
-  "archive": "PENDING",
-  "upload": "PENDING",
+  "freeze": "PASS",
+  "archive": "PASS",
+  "upload": "PASS",
   "actualInstallation": "NOT_RUN",
   "actualSystemTouch": "NOT_RUN",
   "artAcceptance": "PARTIAL",
@@ -78,5 +78,10 @@
       },
       "scope": "headless PlayMode EventSystem journey; no rendered-frame/device acceptance"
     }
-  }
+  },
+  "releaseReport": "reports/testflight-0.1.0-8.json",
+  "frozenSource": "1bdfa785237701ab2c7675031142d526f66c0e28",
+  "sourceDigest": "32c455de065963cf5d659193ba860809444de9ffcb7f5fefa36202619aa781cd",
+  "appleProcessing": "VALID",
+  "internalGroup": "VERIFIED"
 }

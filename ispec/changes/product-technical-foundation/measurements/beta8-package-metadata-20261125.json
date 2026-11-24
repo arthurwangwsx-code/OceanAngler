@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "0c4822b4-a481-439b-bedf-dd639146f74d",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "e39dd6442ef2ebfe49eb5925a52411fab583f894998b9f25f6e09afb0073f0d4",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-24T21:07:33.232Z",
+    "finishedAt": "2026-11-24T21:07:34.222Z",
+    "durationMs": 948.3041659999999,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/beta8-qa/inspect_package.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/beta8-qa/inspect_package.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T21:07:33.232Z",
+  "finishedAt": "2026-11-24T21:07:34.222Z",
+  "durationMs": 948.3041659999999
+}

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-24T18:07:58.616Z",
+  "generatedAt": "2026-11-24T21:18:17.530Z",
   "source": {
     "change": "product-technical-foundation",
     "cliVersion": "1.0.20",
@@ -26,16 +26,16 @@
     "firstAttemptPassedCount": 1,
     "firstAttemptEvaluatedCount": 1,
     "firstAttemptPassRate": 1,
-    "elapsedMs": 139242752,
-    "observedStepWallMs": 105641198,
+    "elapsedMs": 150661625,
+    "observedStepWallMs": 117060071,
     "unattributedMs": 33601554,
-    "unattributedRate": 0.24131635950429936,
-    "commandMeasurementCount": 1051,
-    "commandSucceededCount": 931,
-    "commandFailedCount": 120,
-    "commandSuccessRate": 0.8858230256898192,
-    "commandDurationMs": 40540458.883496016,
-    "gateCheckCount": 48,
+    "unattributedRate": 0.22302662672063972,
+    "commandMeasurementCount": 1180,
+    "commandSucceededCount": 1052,
+    "commandFailedCount": 128,
+    "commandSuccessRate": 0.8915254237288136,
+    "commandDurationMs": 45019378.06186902,
+    "gateCheckCount": 54,
     "repairCount": 0,
     "targetMs": 3600000,
     "targetMet": null,
@@ -52,7 +52,7 @@
     },
     "entryChecks": {
       "status": "complete",
-      "recorded": 48,
+      "recorded": 54,
       "expectedAtLeast": 2
     },
     "runAttribution": {
@@ -62,7 +62,7 @@
     },
     "commandMeasurements": {
       "status": "partial",
-      "recorded": 1051
+      "recorded": 1180
     },
     "waitingTime": {
       "status": "unavailable"
@@ -78,14 +78,14 @@
   "runs": [],
   "runMetrics": {
     "version": 1,
-    "generatedAt": "2026-11-24T18:07:58.616Z",
+    "generatedAt": "2026-11-24T21:18:17.530Z",
     "runs": [],
     "unattributed": {
       "unboundAttempts": 2,
       "unknownRunAttempts": 0,
-      "unboundCommands": 1051,
+      "unboundCommands": 1180,
       "unknownRunCommands": 0,
-      "unboundGateChecks": 48,
+      "unboundGateChecks": 54,
       "unknownRunGateChecks": 0,
       "repairsWithoutRunBinding": 0,
       "unknownRunRepairs": 0
@@ -16808,6 +16808,2457 @@
         "path": "measurements/beta7-delivery-audit-20261125c.json",
         "sha256": "b736c3877f489ec3573d84a4eb9b337a58e4f99dca00525e2a6c287327254435"
       }
+    },
+    {
+      "id": "4f9c738b-4c6a-42d7-bb29-fdf5d0b572d7",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "ebff32a890bb0b5816717c5ea15610f0bcf2206c4b53da12294713a53d42573f",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T18:12:56.919Z",
+      "finishedAt": "2026-11-24T18:13:20.010Z",
+      "durationMs": 23047.612167000003,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-cache-maintenance-20261125.json",
+        "sha256": "7193b6637a295d3189a8244b1efbc34f2c011852528a6f2c1dbd2f5d878bf87e"
+      }
+    },
+    {
+      "id": "e07fdbed-9125-4c68-999c-ab94a0c4ebe8",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "344d672e47c66724b7ee040265cd9cc307849ed2943eb492ef88a3b3d9a1a0eb",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T18:14:33.009Z",
+      "finishedAt": "2026-11-24T18:14:51.059Z",
+      "durationMs": 17964.9245,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-gpu-20261125a.json",
+        "sha256": "fc6e1334d7b3b69929f8291c31d1bcad07daef7e39b420606040d5c4bce3dfea"
+      }
+    },
+    {
+      "id": "af36aa5e-ac32-4e3a-9d7c-103f31bcbf01",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "922ac8882dae7d89f7548180885eaa0bd109981d4df22d68a809b5b36e94d7c5",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T18:15:15.226Z",
+      "finishedAt": "2026-11-24T18:15:32.180Z",
+      "durationMs": 16912.596083,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-gpu-20261125b.json",
+        "sha256": "27ddba1da39342c6e329ef5a22615c1fcff29d23aae93a0ea846cb7e3ed2a376"
+      }
+    },
+    {
+      "id": "53c8d3cd-074f-440c-9466-8b3389cde7cd",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "b09014db2601ae4dc034f4030db205a3175986d1e820df01e9832b7538007993",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T18:16:28.261Z",
+      "finishedAt": "2026-11-24T18:17:11.373Z",
+      "durationMs": 43032.159833,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-gpu-20261125c.json",
+        "sha256": "f00abeb25a8cf6c1ec75ae977d0904c36ad430ad824ab9da2d8e11e6d01fc04e"
+      }
+    },
+    {
+      "id": "8d9af14f-cda8-4245-9b38-d47c10fcb2cc",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "235282583cbcba378602d683bc8cf33441709869f16518906e4267a21130a607",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T18:19:49.522Z",
+      "finishedAt": "2026-11-24T18:20:11.427Z",
+      "durationMs": 21847.824334,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-source-build-20261125a.json",
+        "sha256": "ef4e8fbad760eca3decba95643ea491db094622d3508a15b110c2a6089fa85cd"
+      }
+    },
+    {
+      "id": "120baad1-1d34-4fde-b4f9-81ff1fb0bffc",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "4f936923823dbc63c80ed1ce9236a4c0ecf6b4603b70f339e3fecacee5c3452b",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T18:20:30.071Z",
+      "finishedAt": "2026-11-24T18:20:36.461Z",
+      "durationMs": 6353.682833,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-source-validation-20261125a.json",
+        "sha256": "b3a8818e9821f432a36f6789515b6e0c0e3336d905d72f1690bc7303cd65105b"
+      }
+    },
+    {
+      "id": "fda2cb3f-ac19-4197-9abe-ac3e6bb25748",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "1bcf850a8da57724302cbb03c3e95dd16457633d2c57458e2ec0056a293daf5d",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T18:21:01.621Z",
+      "finishedAt": "2026-11-24T18:21:18.803Z",
+      "durationMs": 17148.656458,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-unity-import-20261125.json",
+        "sha256": "75db72aa3228609268366376ad7e31a3a130ee410d88c0a961c50752ed51c540"
+      }
+    },
+    {
+      "id": "e897b43a-780d-4bec-ab9b-200708155a41",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "8ac1d7895be4f5c439763e93ac9b30d64ece04d5e3070a388c62c4ce916f22a1",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-24T18:21:52.928Z",
+      "finishedAt": "2026-11-24T18:22:02.775Z",
+      "durationMs": 9768.034625,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-source-comparison-20261125.json",
+        "sha256": "e4c828835ef1899dcbdf5a01c623342ba24dfd189be5cc20d94eba1f623f44c5"
+      }
+    },
+    {
+      "id": "468e2039-6e76-4e1d-9e68-4ef68abd8990",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "303bfdf57ea6046eb9459ed479ba5f3be4c6526187943942489a14971eae0ff1",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-24T18:22:30.701Z",
+      "finishedAt": "2026-11-24T18:22:39.516Z",
+      "durationMs": 8754.346083,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-source-diagnostic-20261125.json",
+        "sha256": "228084e7d5fab0a4a979bb85f0c56ff99f4640ae5c54a23a44427534b222c9ab"
+      }
+    },
+    {
+      "id": "665ff487-980f-4fc1-bf00-36f94125eca6",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "8ac1d7895be4f5c439763e93ac9b30d64ece04d5e3070a388c62c4ce916f22a1",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-24T18:23:16.425Z",
+      "finishedAt": "2026-11-24T18:23:25.818Z",
+      "durationMs": 9359.06625,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-source-comparison-20261125b.json",
+        "sha256": "1417d950ccadb33eaa20207400d43c4ed182af4d18a2a4e7e06878c2e5e08749"
+      }
+    },
+    {
+      "id": "698284fd-364a-468c-b0f4-337f58c48a07",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "1cf0f47e640085a084bb7c56d7ff10f1f975188d1d48e439865c555c41a2bb29",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T18:23:40.302Z",
+      "finishedAt": "2026-11-24T18:24:03.385Z",
+      "durationMs": 23044.600084,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-gpu-20261125d.json",
+        "sha256": "5af32e282bb26f81dc6eead228b6b6243165cb7cceb9ce7623103c70dc4a1189"
+      }
+    },
+    {
+      "id": "170c1564-a771-4b12-86d1-06c9de9086a9",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "f0bab0dde68abe742e6141116dbdca4e9e1b461bcfae2cd169b45098395fa293",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T18:24:58.537Z",
+      "finishedAt": "2026-11-24T18:25:17.933Z",
+      "durationMs": 19331.932,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-source-build-20261125b.json",
+        "sha256": "842d485009bbb78709a4fd62a2e7270fef53e5ef5d092dd9926abb670e652777"
+      }
+    },
+    {
+      "id": "42fe967d-40c8-4606-96d8-dcf393ffb700",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "541119e09183da987391e50fe702a9ff3bd65e1dea8271798e4d3ffd20f339f2",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T18:25:27.986Z",
+      "finishedAt": "2026-11-24T18:25:36.151Z",
+      "durationMs": 8133.717124999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-source-validation-20261125b.json",
+        "sha256": "388e91c7a2c93463dae740ce0d2d16144f3ac34df315ad797ef171255f49b6b6"
+      }
+    },
+    {
+      "id": "d2fce224-4f3f-4e1f-919f-246105fefd98",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "1bcf850a8da57724302cbb03c3e95dd16457633d2c57458e2ec0056a293daf5d",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T18:25:55.367Z",
+      "finishedAt": "2026-11-24T18:26:22.935Z",
+      "durationMs": 27531.600334,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-unity-import-20261125b.json",
+        "sha256": "3d9f7f48f2b00b5c9bcb496fde8cbb4d54a1d1ea66f3fdc0fb800650b744db1a"
+      }
+    },
+    {
+      "id": "0beb3d1b-6bc1-4e2d-bf1c-21f22af57534",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "9b91443580e6f70ff8440a3185c087a6e2b7700350dca3980a9c702b05dade20",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T18:26:44.494Z",
+      "finishedAt": "2026-11-24T18:27:05.194Z",
+      "durationMs": 20662.981042,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-gpu-20261125e.json",
+        "sha256": "d521a2ba58a9e9d0b1ff72117ffff0fcede2a198a74659ba43f6cea418854210"
+      }
+    },
+    {
+      "id": "0792713d-e4aa-4cf3-a24a-cd9a9c33d81c",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "8ac1d7895be4f5c439763e93ac9b30d64ece04d5e3070a388c62c4ce916f22a1",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-24T18:28:10.694Z",
+      "finishedAt": "2026-11-24T18:28:17.811Z",
+      "durationMs": 7072.997582999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-source-comparison-20261125c.json",
+        "sha256": "114632e35bfc5e3af9272b4e974821e00f37457acd521d087d81a5ab66c1dd5d"
+      }
+    },
+    {
+      "id": "a4e569bc-9306-42dd-8e29-66b7714ae4e9",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "cdb377ed2ef55b1bd874afb1d373853d337c1c1a7dca4ee501a3e8f58d53146e",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T18:28:36.958Z",
+      "finishedAt": "2026-11-24T18:29:08.254Z",
+      "durationMs": 31250.238333,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-editor-20261125.json",
+        "sha256": "cd41803d538827b6e2a7b6158d288ae90b8c5fce2959eff9274b19f635cb0288"
+      }
+    },
+    {
+      "id": "936810bb-6c3d-42d7-8865-fdcac76ecd8b",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "e188e59b7bb07b868c3200ca17330453fa22a07e2d27c4d00d53c9474ec296a8",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T18:29:22.946Z",
+      "finishedAt": "2026-11-24T18:30:17.185Z",
+      "durationMs": 54184.707875,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-playmode-20261125.json",
+        "sha256": "53d16d11c835b9b6ab53b7c333e4dbb49944b9ab009c54db1238b626510e58f6"
+      }
+    },
+    {
+      "id": "b21b8fbb-a472-421d-b7bf-38fe9c8cbeff",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "64921cce5a58ecb3a703b63963ea9f77cece9d3fef497fb20439754dd5e191ac",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T18:31:28.533Z",
+      "finishedAt": "2026-11-24T18:31:28.811Z",
+      "durationMs": 249.92775000000006,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-proof-20261125.json",
+        "sha256": "158268ad1130b502ff93b48d38eaa5733d5867111a3f062afbaeb01d0e2045f1"
+      }
+    },
+    {
+      "id": "7d32c253-d63f-43b5-8dc6-f5d1dcb08813",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "92b88d46c0b5545788a9a2ce5359954222ebde80f299018987788284e4627495",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T18:33:35.431Z",
+      "finishedAt": "2026-11-24T18:33:36.894Z",
+      "durationMs": 1430.120833,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-public-checks-20261125.json",
+        "sha256": "54eb6718ec8d90b2788daac22f5f05cbe701d7231cf84bbe551184fb5484ecbf"
+      }
+    },
+    {
+      "id": "abc581ca-4973-49f9-a283-d9af82b26ca8",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "92b88d46c0b5545788a9a2ce5359954222ebde80f299018987788284e4627495",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T18:34:20.648Z",
+      "finishedAt": "2026-11-24T18:34:23.648Z",
+      "durationMs": 2967.326417,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-public-checks-20261125b.json",
+        "sha256": "f273b53d68696149e264b8ed1461276ffbf6a2427530a12005df6e97d30cad32"
+      }
+    },
+    {
+      "id": "0ef48f40-fb89-47bc-9b75-fc252fa1ea08",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "edda3e1ef5f8acf566544817d77e144add4558be5c4232ee5671e2fab3eec7c1",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T18:34:57.565Z",
+      "finishedAt": "2026-11-24T18:34:57.702Z",
+      "durationMs": 94.82437500000003,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-record-audit-20261125.json",
+        "sha256": "425239d178a6bde742dc9ca8432dbbbaac5db96b38b6b39f0659a803cd65cbe6"
+      }
+    },
+    {
+      "id": "50393c35-6826-44bf-862b-5f2715393432",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "8d1c12cbf598c2e4062052f7f2b4c7a9ed1d8e350f8b5cdb77de89ecbcb0a455",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T18:41:35.378Z",
+      "finishedAt": "2026-11-24T18:41:36.713Z",
+      "durationMs": 1290.795959,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-native-bootstrap-20261125.json",
+        "sha256": "3815a85cbc59e2435ee8c4f2358217f06eda4fbefc8a013d71c681f6360edb2e"
+      }
+    },
+    {
+      "id": "3bf70147-4ecf-4b45-aabf-272bd79d2b9a",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "95412c9e4ea6f9298499f07f610010b592372c95f70e08499917c353196f3c3e",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T18:42:55.546Z",
+      "finishedAt": "2026-11-24T18:43:05.438Z",
+      "durationMs": 9820.736834000001,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-native-retention-before-20261125.json",
+        "sha256": "e303e7445b6f476e07af9e516cb43592f263b1b13b980bbde1799a6920a3e4eb"
+      }
+    },
+    {
+      "id": "439c3ec7-70f5-406a-8d65-b10b6040ff5a",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "cf89e4dd2478c971f785efb79e668253b5f03a90b39bc926ccd073f10e4c0b27",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T18:43:24.161Z",
+      "finishedAt": "2026-11-24T18:48:37.685Z",
+      "durationMs": 313459.31383299996,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-native-build-20261125.json",
+        "sha256": "329025c5d28a891a2807fb6a8cfff2845f3afa0abc3c9a963f771cbd419a1c15"
+      }
+    },
+    {
+      "id": "6c179ff3-acef-476f-9cbb-35932669ffcc",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "87d5c5a5e9cdc8ad606eea5ba6d450dc114c88a3523fb396413f365abffeeaf7",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-24T18:49:08.410Z",
+      "finishedAt": "2026-11-24T18:50:13.032Z",
+      "durationMs": 64556.938875,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-native-phone-20261125.json",
+        "sha256": "8ae473c05dae43191385d057f37c98d43d2916890593576b699e59a1a83c3219"
+      }
+    },
+    {
+      "id": "4fb76928-e8dd-4c25-bef8-1d034a9d89b5",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "f45bca3d1db0a5af6aafc90c968cfcfa26ea2fd01b01274879cf0125d675034c",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T18:50:30.488Z",
+      "finishedAt": "2026-11-24T18:50:30.644Z",
+      "durationMs": 99.61095799999998,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-native-phone-proof-20261125.json",
+        "sha256": "7be039aa40fcb4d3465b65db38fd865dd42cfeada503f7213b8df4fc3445cdb2"
+      }
+    },
+    {
+      "id": "efacbc98-a985-4855-b2f7-411d607e9762",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "4ab1543857a4cf2fb1b431fe3bb8444c86f25fc50edc91d1d6e8f35512cb1635",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-24T18:51:13.765Z",
+      "finishedAt": "2026-11-24T18:52:33.743Z",
+      "durationMs": 79944.132417,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-native-pad-20261125.json",
+        "sha256": "b18e02654249b0c40f7d780859c113fda6d886a3ce90dd50d3595a6fe0097960"
+      }
+    },
+    {
+      "id": "beb04f8a-44e1-48f1-bf07-f55bce8b9732",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d51e558ab6a09ae1ab85e2cd89f2fd01141d26654094319cacda44a73a16ba17",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T18:54:10.502Z",
+      "finishedAt": "2026-11-24T18:54:10.662Z",
+      "durationMs": 118.11737499999992,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-native-pad-proof-20261125.json",
+        "sha256": "90f34646f9ab0993bffc37ad1f0c5039c17a8c82fa483e80b775f528373afa08"
+      }
+    },
+    {
+      "id": "1a747c8d-cbb3-46ca-b9ca-8f3aea61938e",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "e08cb7f1c34ed76158d7474a05fa1f000dc907bf11e18c5bb1b4a621eeaa35cc",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T18:54:11.303Z",
+      "finishedAt": "2026-11-24T18:54:18.769Z",
+      "durationMs": 7439.868334000001,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-native-retention-after-20261125.json",
+        "sha256": "4d761421d91c074345070c507417b69e95d29913a52bfac6e63a544015f3c96a"
+      }
+    },
+    {
+      "id": "b347a4de-e767-4478-b934-ff7ed1b8767c",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "6e7a4811cb549640eb5dcdff04f27ae42edb6fd95c6b92ede02a429e968812bc",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-24T18:54:19.210Z",
+      "finishedAt": "2026-11-24T18:54:27.351Z",
+      "durationMs": 8112.111167,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-native-reopen-20261125.json",
+        "sha256": "d8c4370fb530bbe447217b718b3dc3cba8316db74771bf48aed9ffb67ced33ec"
+      }
+    },
+    {
+      "id": "ba39523f-dee4-49fe-a796-0d671a311b39",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "72d3d7c75d2e01816bb5d3046d3a9444da4c770328a89d3e69e075d5d50dcb11",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T18:54:27.767Z",
+      "finishedAt": "2026-11-24T18:54:27.866Z",
+      "durationMs": 72.68070799999998,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-native-reopen-proof-20261125.json",
+        "sha256": "1e8a2aac52a46aa13c141b2f39b080193c98907bf3d44be16833e63fa3575534"
+      }
+    },
+    {
+      "id": "f9cf2166-9b06-49e7-b68a-e5548944d2ab",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "72d3d7c75d2e01816bb5d3046d3a9444da4c770328a89d3e69e075d5d50dcb11",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T18:57:37.816Z",
+      "finishedAt": "2026-11-24T18:57:38.529Z",
+      "durationMs": 673.641167,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-native-reopen-proof-20261125b.json",
+        "sha256": "ab6cafddd06274d8cea50fa0cd8259c08029f85df53692ae50c1da9a7ef54b79"
+      }
+    },
+    {
+      "id": "707ed13d-2f14-4f65-8492-5688ec89baae",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "6b767a4760f0addb1cd7c225971a89db5ecdec567e18708abbe662028707f095",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:07:04.721Z",
+      "finishedAt": "2026-11-24T19:07:05.326Z",
+      "durationMs": 539.2155,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-native-report-proof-20261125.json",
+        "sha256": "4c0307ce7e5eb394e16cd15d052510d339811883cc3b45e6bc2bd0692bf39faa"
+      }
+    },
+    {
+      "id": "341cb0cf-d611-473e-aa2d-7d64168d08dc",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "92b88d46c0b5545788a9a2ce5359954222ebde80f299018987788284e4627495",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:12:58.287Z",
+      "finishedAt": "2026-11-24T19:13:01.448Z",
+      "durationMs": 3135.7581250000003,
+      "exitCode": 2,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-native-public-checks-20261125.json",
+        "sha256": "46bd2dbfc4783bb9142f68675ed710e57b32b1c665d6e53cd9fb9d08c5bffd6b"
+      }
+    },
+    {
+      "id": "815182c6-d102-4b3d-b54f-4afea8200aa1",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "92b88d46c0b5545788a9a2ce5359954222ebde80f299018987788284e4627495",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:13:07.392Z",
+      "finishedAt": "2026-11-24T19:13:09.485Z",
+      "durationMs": 2065.93675,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-native-public-checks-20261125b.json",
+        "sha256": "10bfe730ba98640fc28b00ac34d26b1f76ef45eafa94f28542b137a25aec90d3"
+      }
+    },
+    {
+      "id": "2f12e462-6159-453f-a51c-b3edca803abb",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "6de03ec0e92598c1a77f984fe728b74b5ec0048d99162fe663c08f36d7a2a024",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:13:21.729Z",
+      "finishedAt": "2026-11-24T19:13:21.910Z",
+      "durationMs": 137.09741699999995,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/pectoral-native-record-audit-20261125.json",
+        "sha256": "3e9b993e39cc4a7bc177ae4fa6f8b0e0ad0b66f8c0e5e97c0915ac6fa58d6cf6"
+      }
+    },
+    {
+      "id": "81b0f911-148c-4401-a346-aae7f606cf6f",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "f1ea0a411c1329adf712c26a3bb57443190d38c93e68730a7969c8ee66f54b75",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:13:56.982Z",
+      "finishedAt": "2026-11-24T19:14:57.150Z",
+      "durationMs": 60124.543125000004,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hud-contrast-playmode-20261125.json",
+        "sha256": "1350a5f7a9b35ba56045b8eb7e4994649aa9387d10f4b19c1687c0fd769e2f9f"
+      }
+    },
+    {
+      "id": "04e54f08-5634-4820-a50b-8a871852f91b",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "e66bb6e3f4414b8b8737390c7b55145a6675b69e91484977174c2f7616dc612e",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:15:14.796Z",
+      "finishedAt": "2026-11-24T19:15:26.830Z",
+      "durationMs": 11968.440375,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hud-contrast-retention-before-20261125.json",
+        "sha256": "3b54accbeb49cd4b47d6f7c0d6709b34c90ce897ec10250200c860581ec8a5eb"
+      }
+    },
+    {
+      "id": "5f275c28-7573-41d8-a94d-565212090df8",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "94f4186f2b2a0a86cdb5a1a45b90b1446b1017bcd2ea299678b5ccc7b4ffe9c1",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:15:31.421Z",
+      "finishedAt": "2026-11-24T19:19:12.188Z",
+      "durationMs": 220727.922666,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hud-contrast-native-build-20261125.json",
+        "sha256": "dd3e6347de698d86252d916f4b12ee656a56063d00b8c5a8db60e968e8a509ae"
+      }
+    },
+    {
+      "id": "f94117c4-b521-47f7-b17d-62a8f9c87048",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "9241d91c1f38926e3a433896d58c4b99c780718befee53190d35ab7ccf5d5dad",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:19:33.019Z",
+      "finishedAt": "2026-11-24T19:20:23.276Z",
+      "durationMs": 50208.702041000004,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hud-contrast-phone-20261125.json",
+        "sha256": "95f6e7329c297fd6ca9ad924c595e5a0896a78c06ff812dd761f287d804f1f8e"
+      }
+    },
+    {
+      "id": "235dad5e-6438-4996-9240-5b0a0252e3a6",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "166cac9171c47f9b5906bb556f5fa3f7fd2bef3379d2702676ad98176b74055e",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:20:24.745Z",
+      "finishedAt": "2026-11-24T19:20:24.928Z",
+      "durationMs": 147.36566600000015,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hud-contrast-phone-proof-20261125.json",
+        "sha256": "fc8ca439fc0509f4e7f402fae3859a703afae6980b8f2e9da1d764dfb199c8ad"
+      }
+    },
+    {
+      "id": "a3fb58ea-0d8a-41f9-83c6-5a74c1fa85d6",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "2ea2ea7266d5ca541e407b2cc48799588a269a4c7976d6231fe8333d1537a8c2",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:20:26.075Z",
+      "finishedAt": "2026-11-24T19:22:52.868Z",
+      "durationMs": 146695.885417,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hud-contrast-pad-20261125.json",
+        "sha256": "ec6a001f005f79428bb7a59fcebb8bcca37a9f17bdfc5abe53b0b6afa35d72e6"
+      }
+    },
+    {
+      "id": "bf51e972-4588-43b9-bd19-7b9740f8e036",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "ec8f95af13878a66a8f3ffe265ab8363a25f61fcde4ae1398e736690e5d15d50",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:22:53.920Z",
+      "finishedAt": "2026-11-24T19:22:54.068Z",
+      "durationMs": 110.63387499999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hud-contrast-pad-proof-20261125.json",
+        "sha256": "f68199a0845752daa2df12aaa68795e19a5ed2a8a0411df9e39fcfddea3af16e"
+      }
+    },
+    {
+      "id": "51be8990-e7a2-458a-965a-50394b402045",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "df94a608e5bfe15ea7b115e4b8bf2378fc6b907c29b8df1c785f5e0c1ab6928c",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:22:54.660Z",
+      "finishedAt": "2026-11-24T19:23:02.285Z",
+      "durationMs": 7599.86125,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hud-contrast-retention-after-20261125.json",
+        "sha256": "d1529ca6c2633e6f25eb7266a11b366dd39a5515a13ad8cc2120d78392c329da"
+      }
+    },
+    {
+      "id": "a5e9a658-0719-4715-b06f-89879a06f777",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "c491fa58f54b2c9413da01956031affc12ddd3ba0f03f2c4dd41f9bab8066bd6",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:23:40.423Z",
+      "finishedAt": "2026-11-24T19:23:40.626Z",
+      "durationMs": 158.51566700000012,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hud-contrast-report-proof-20261125.json",
+        "sha256": "48bc4fd306d4b2911f0a153412fb1bb3dec98247d85f06bf6bab119a4adfd374"
+      }
+    },
+    {
+      "id": "59f7082c-83c6-45bc-bf01-43ac670336fe",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "92b88d46c0b5545788a9a2ce5359954222ebde80f299018987788284e4627495",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:24:34.096Z",
+      "finishedAt": "2026-11-24T19:24:36.261Z",
+      "durationMs": 2138.981792,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hud-contrast-public-checks-20261125.json",
+        "sha256": "a503a83ce8dc596fbc5bf882dd7f8dd9899e891b8849ee527ae7afda16d09cde"
+      }
+    },
+    {
+      "id": "658af26e-cee7-4dfe-907f-b365aa9efd69",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "f35ed888f405b7e530dd568129bf7cdd431ebea5d49ee6760bff57ac9c25ebbf",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:24:56.518Z",
+      "finishedAt": "2026-11-24T19:24:56.673Z",
+      "durationMs": 121.60849999999994,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hud-contrast-record-audit-20261125.json",
+        "sha256": "0dc301c604c26a8849dc9201cdc5064f66078dcc587f1a89c0b9ee6b11e68f2e"
+      }
+    },
+    {
+      "id": "3380343f-d5f9-454f-a02e-1418241ff5ee",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "590a9eabf74cdb36db75d82b837bff29290f1c3a61e0ad131f4d1751072d9bf6",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:28:45.731Z",
+      "finishedAt": "2026-11-24T19:28:59.502Z",
+      "durationMs": 13725.153125,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fin-screen-baseline-gpu-20261125.json",
+        "sha256": "fcfc145b31d6d84072591be51abd947f1c875b4ebc6e92075d894cb3047600b0"
+      }
+    },
+    {
+      "id": "3f2adf03-8039-48fb-be46-270645cc6f28",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "7f119f19d6a552cbd36a9d25db7189f29702ddabcb03010d8485ec1e02bab170",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:30:27.428Z",
+      "finishedAt": "2026-11-24T19:30:43.443Z",
+      "durationMs": 15977.04325,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fin-screen-specular-gpu-20261125.json",
+        "sha256": "8acb98c0f41766ab48126452ab8756cd028797354c68c6da1f1ee92d7217e358"
+      }
+    },
+    {
+      "id": "0e0ee450-c562-4020-bcaa-335781bb25c0",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "86a0c857bae0749c1ddd6da3b5501e1a446f54cbc47dc7fddb69e86125a9796a",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:33:24.129Z",
+      "finishedAt": "2026-11-24T19:33:28.492Z",
+      "durationMs": 4332.842209,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fin-screen-source-build-20261125.json",
+        "sha256": "2b06a5f836b47cf2412db4bad11880be7dd08286e76f685016040af96f85b41e"
+      }
+    },
+    {
+      "id": "b0d3a367-889e-43ba-9c41-fc673e645017",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "678dca6e439650092016e373d99b86f8b41c30371dedf5f1cc02e7a196778ed6",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:34:20.417Z",
+      "finishedAt": "2026-11-24T19:34:23.283Z",
+      "durationMs": 2844.0932080000002,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fin-screen-source-validation-20261125.json",
+        "sha256": "e7c4a5df6b54e422647b5aa6543d6a2fa2c92114b6ae0570e840116dfd3fde1d"
+      }
+    },
+    {
+      "id": "c1fcc305-027f-457a-8c5a-78e766bec3df",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "1bcf850a8da57724302cbb03c3e95dd16457633d2c57458e2ec0056a293daf5d",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:34:23.696Z",
+      "finishedAt": "2026-11-24T19:34:34.232Z",
+      "durationMs": 10508.941042,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fin-screen-unity-import-20261125.json",
+        "sha256": "7063c721b90f01c9a18b9bd3bdcde1eedf4c76956d090637d16728c1aba024e5"
+      }
+    },
+    {
+      "id": "86b85ea8-da3b-4a85-ad7e-7e21854297d9",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "b19ab0fa1695ca2fa6153b6c2810b5cfaafa8bc191f5f8bd54836f9e094bf862",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-24T19:35:01.515Z",
+      "finishedAt": "2026-11-24T19:35:05.111Z",
+      "durationMs": 3572.7652080000003,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fin-screen-source-identity-20261125.json",
+        "sha256": "fc3888e4a510db5e764300c6ed466431e56bd8abf70c74f2242546aac858e845"
+      }
+    },
+    {
+      "id": "f9fc11a6-386b-4246-ab11-888bde0bbec4",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "e382996d804250cd1858ce30b58e727ca2a5ec41927205b253d124b3220fd1cd",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:35:05.654Z",
+      "finishedAt": "2026-11-24T19:35:18.458Z",
+      "durationMs": 12783.707083,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fin-screen-candidate-gpu-20261125.json",
+        "sha256": "d78cdbe0dba28c22715abbbb9b93033d00b52b765b0e715ff3ea2eed641aa16c"
+      }
+    },
+    {
+      "id": "7538b984-862a-430e-9aa5-8951d2a12b99",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "cdb377ed2ef55b1bd874afb1d373853d337c1c1a7dca4ee501a3e8f58d53146e",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:36:24.510Z",
+      "finishedAt": "2026-11-24T19:36:35.729Z",
+      "durationMs": 11181.990709,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fin-screen-editor-20261125.json",
+        "sha256": "b8733e34f3fbf9f9899683ab68fc1cc06ff476c2a966553340546c33c38cfedc"
+      }
+    },
+    {
+      "id": "ef14c726-fcba-46f9-a552-c83bd2d08345",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "b3f4adbec0d18697515025917cd00b89922ed34598cc3b386a34115816ae7471",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:37:11.025Z",
+      "finishedAt": "2026-11-24T19:37:26.307Z",
+      "durationMs": 15257.451708,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fin-screen-playmode-20261125.json",
+        "sha256": "eab817cc70f6347eb8705c173379b1a647774828ae4618e90a0c74ad8586813d"
+      }
+    },
+    {
+      "id": "df3f3014-f82b-43e2-86f0-d01d700bf6a8",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d012b89cd41f5bc68cbe1feaf37580bcd2201537c7bc35ce77044e93430914e6",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:37:26.737Z",
+      "finishedAt": "2026-11-24T19:37:35.456Z",
+      "durationMs": 8692.364667,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fin-screen-transmission-gpu-20261125.json",
+        "sha256": "1cd5fed4d2561d2e8deb4ada71ee00377e5d34dc0dfd0fcf608c932edb864c0c"
+      }
+    },
+    {
+      "id": "770525d2-d5b5-429d-a896-8b75a9bce023",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "eb471c4733794ae823f341c8612e1264546cd90a55866102f4e96ad06f063573",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:38:18.401Z",
+      "finishedAt": "2026-11-24T19:38:21.786Z",
+      "durationMs": 3360.806834,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fin-screen-cache-maintenance-20261125.json",
+        "sha256": "7d0cff03b08ac14b2c7abeb9dd7a44514c0ce586f7dad42a3906881a98dd9932"
+      }
+    },
+    {
+      "id": "36a9d88e-c6c4-41cb-a390-e3875459e320",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "92b88d46c0b5545788a9a2ce5359954222ebde80f299018987788284e4627495",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:39:14.660Z",
+      "finishedAt": "2026-11-24T19:39:16.392Z",
+      "durationMs": 1709.675084,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fin-screen-source-public-checks-20261125.json",
+        "sha256": "0d2810c47813b6f749d672883484b68fe79633c2dac4be9e4f690f92db17469b"
+      }
+    },
+    {
+      "id": "6ed3b7c2-b85b-44cc-b8df-65df057d4b3a",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "929d624558db1b64331e93002674bd3a2866c432f0cf013d29de1e725f93795f",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:39:38.083Z",
+      "finishedAt": "2026-11-24T19:39:44.768Z",
+      "durationMs": 6663.997333,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fin-screen-retention-before-20261125.json",
+        "sha256": "c96e85bfcca31f64552697a3bb417a8ca087c7c5e71dd96f062ae22581daa6fc"
+      }
+    },
+    {
+      "id": "1334e195-cde9-444f-9ec0-e34e5bf29430",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "533ee061d2c2887908f0aa078c23c0f86bdabba1d26b959e5e2b1103536338c6",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:40:06.700Z",
+      "finishedAt": "2026-11-24T19:42:09.595Z",
+      "durationMs": 122874.69008300001,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fin-screen-native-build-20261125.json",
+        "sha256": "0ef47559c1a77ffbb31bb7ca6a313ca053a66ce2d1b92d3622c1ab11734b6815"
+      }
+    },
+    {
+      "id": "de5fef6d-536c-48a8-a604-000313e901b8",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "8fdadb731433f7ade260d0ebb479906848ddad1643c16fa2fa39b82b9afcdcc3",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:42:49.259Z",
+      "finishedAt": "2026-11-24T19:43:34.927Z",
+      "durationMs": 45635.822250000005,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fin-screen-phone-20261125.json",
+        "sha256": "244da7eed4b6266f9ddd7f4d972662cd87c7cab5b1b9a43f4977ab4ce07c9bf5"
+      }
+    },
+    {
+      "id": "77cf6619-7932-440b-96ab-7e9dafa46480",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "1b8f911f914178856f8afcccdeb5223b2e357aac3c9456ef5a2cd8f2a263bfca",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:43:35.817Z",
+      "finishedAt": "2026-11-24T19:43:35.914Z",
+      "durationMs": 74.420208,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fin-screen-phone-proof-20261125.json",
+        "sha256": "da5afd48ae4f14d62a50bc7c10221d87d12b5c3bf6e0570c04e2cc45abfb9272"
+      }
+    },
+    {
+      "id": "11cfbe85-5042-4f96-a99f-384631a8c8b8",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "65ba4cb3e3b5ed4fd76b812b2b65f3efbb151f66dbaa6bdf5e5aad36c0cadd66",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:43:36.392Z",
+      "finishedAt": "2026-11-24T19:44:20.674Z",
+      "durationMs": 44257.504625,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fin-screen-pad-20261125.json",
+        "sha256": "82967e586529d937563a1a2826476f4a3830fc13a94619c290be8c160e76fd7d"
+      }
+    },
+    {
+      "id": "a9350fbe-25b2-4fd6-9482-59e45406901b",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d1543fab9ec74a61491879aee8bf8688580cf561cad6679cb1be82e5f8b2af2b",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:44:22.046Z",
+      "finishedAt": "2026-11-24T19:44:22.220Z",
+      "durationMs": 143.4118329999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fin-screen-pad-proof-20261125.json",
+        "sha256": "cc3b6b1f95c0a929b77e5230f09d9f58e3258da75e13aa1f307e8c8ca0cf3243"
+      }
+    },
+    {
+      "id": "c45a2407-584a-45a6-9017-77c7a85b6c5c",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "19f82f524484b252010cf1b29d0253f9fb8d86ea00d2a047b73863ec1e5afed8",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:44:22.972Z",
+      "finishedAt": "2026-11-24T19:44:32.346Z",
+      "durationMs": 9349.658,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fin-screen-retention-after-20261125.json",
+        "sha256": "c2c54587d80d462fa0be0327e3b2019ca38bfbbcf5a0c98db360ef5d6d276b0e"
+      }
+    },
+    {
+      "id": "11bc58fd-202d-44bc-a286-03585b13141a",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "45a0173a2949a10e47591dc8666a02f8de6e7533b58d2877aba4319533fb8165",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:46:03.056Z",
+      "finishedAt": "2026-11-24T19:46:03.293Z",
+      "durationMs": 203.77333299999998,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fin-screen-report-proof-20261125.json",
+        "sha256": "ffd5d783b8efb1c926fa5b1e2e76101cd5fa586a5740bced4b1951b01b6c3003"
+      }
+    },
+    {
+      "id": "e81ad8c3-ec5d-4c4f-9825-0b76d3340046",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "92b88d46c0b5545788a9a2ce5359954222ebde80f299018987788284e4627495",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:47:18.121Z",
+      "finishedAt": "2026-11-24T19:47:20.375Z",
+      "durationMs": 2219.0573750000003,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fin-screen-final-public-checks-20261125.json",
+        "sha256": "b970269a3772aab1ed9af974eeed6ab51aa3d2c99aafb937f12621ff5b324126"
+      }
+    },
+    {
+      "id": "01f58b6d-b5b0-4e30-8a64-0def8302a99a",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "e96bc639a4a94ab0551038851be793e70338a7c4d97b6bf0b93962c2014a058f",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:47:42.788Z",
+      "finishedAt": "2026-11-24T19:47:42.894Z",
+      "durationMs": 85.21166700000003,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fin-screen-record-audit-20261125.json",
+        "sha256": "ea567146cd359873ea5987b423aefd4233280ca484bef857fbd92abf13caeaa3"
+      }
+    },
+    {
+      "id": "52ae29b2-10f1-4bb5-b559-73923ebdac16",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "56f535b951ca290aaba02f84565d3ec823ef8cc59daf21fbdc2b75feaf8d03ee",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:55:51.667Z",
+      "finishedAt": "2026-11-24T19:56:10.164Z",
+      "durationMs": 18444.648666,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-baseline-gpu-20261125.json",
+        "sha256": "7a531c5d6fdef3b51c40bf794e0b16cea43daadd735de60f9b137852a5fd4a3f"
+      }
+    },
+    {
+      "id": "39e18808-f3c5-4ab7-98ea-53166bfa535b",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "8786d3d8117314329aea1804d150537fd5b8935c318a0f78fa28112ab72efffa",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:59:49.264Z",
+      "finishedAt": "2026-11-24T20:00:01.643Z",
+      "durationMs": 12354.256667,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-bindings-gpu-20261125.json",
+        "sha256": "e297d893ee227532b71b49811f4b119d25ae0735b96d46f615917b317beac42a"
+      }
+    },
+    {
+      "id": "e9474832-9394-4805-a6c2-256254329291",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "3548525f398fa0fe49ef975d49ab8d632014674b7719890c46aabca2e06adfc3",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:01:11.277Z",
+      "finishedAt": "2026-11-24T20:01:22.502Z",
+      "durationMs": 11202.226833,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-stable-gpu-20261125.json",
+        "sha256": "e8a43e9e16f405208927bf3700c1e33fd8f4edcb03dfee62c02c24c06ba59d62"
+      }
+    },
+    {
+      "id": "b526f9a8-c6a1-4175-a10c-88db688aa472",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "4700e95ff284a10e602012067f30a1ef2aa9ad1c3115b05532e48be73494b70b",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:04:01.215Z",
+      "finishedAt": "2026-11-24T20:04:10.572Z",
+      "durationMs": 9304.675833,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-palette-build-20261125.json",
+        "sha256": "377540d7a0a61d0d65b8ece375a6aa3eba61f686d8bb85d7811767a5ffd661eb"
+      }
+    },
+    {
+      "id": "771383ef-0447-466f-a0e5-b2c9cdbe266f",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "bf125401f4a6f6169ea75e2831bb0e1a1387c7b6f13a160cc185e1d14903042a",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:04:11.018Z",
+      "finishedAt": "2026-11-24T20:04:13.881Z",
+      "durationMs": 2841.257375,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-source-validation-20261125.json",
+        "sha256": "bc06f77cd898ebb76d57c0b63f7e0b5fef2df793e45e498ac6e3dd9e2bb9ef78"
+      }
+    },
+    {
+      "id": "86ef1570-11f0-4d8e-a922-2ac13ce2e301",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "1bcf850a8da57724302cbb03c3e95dd16457633d2c57458e2ec0056a293daf5d",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:04:14.381Z",
+      "finishedAt": "2026-11-24T20:04:25.954Z",
+      "durationMs": 11539.797333,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-unity-import-20261125.json",
+        "sha256": "80eb19c3c35eaba98d401c372021e620ce35518be66c35691c94835f52ce0de5"
+      }
+    },
+    {
+      "id": "41aae404-0787-4111-a19c-64f49d012e47",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "63266be9b483318f92be4ec31f5805288235ea85f21ab93ef9afc420cb0cee52",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:04:26.584Z",
+      "finishedAt": "2026-11-24T20:04:35.699Z",
+      "durationMs": 9076.430750000001,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-palette-gpu-20261125.json",
+        "sha256": "42bf13aea3caf5aba458339003de4b9e99ac622d2c1855b269ace32fafd702e4"
+      }
+    },
+    {
+      "id": "ef527c9a-7c02-4b2e-8692-f1cfa6a3e3c9",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d82afb86dfc907669ca9025f469e85645447fab03fd6b3a728489639110be460",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-24T20:06:33.041Z",
+      "finishedAt": "2026-11-24T20:06:36.877Z",
+      "durationMs": 3801.915,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-source-identity-20261125.json",
+        "sha256": "f65b41403362c0a19178d32eae72eb6f4f330e27bc6db1533072e67e413437b5"
+      }
+    },
+    {
+      "id": "f4a47b51-80e6-4875-87d1-c4b163d00d3a",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "cdb377ed2ef55b1bd874afb1d373853d337c1c1a7dca4ee501a3e8f58d53146e",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:07:39.259Z",
+      "finishedAt": "2026-11-24T20:07:48.155Z",
+      "durationMs": 8863.70075,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-editor-20261125.json",
+        "sha256": "3950f255c5dee292c29c7ef05ecc13438b0fc39e4fc2c939d7c9d2c85830452f"
+      }
+    },
+    {
+      "id": "b55b77c5-ac50-4629-bf69-967967bdab86",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "66ffbb8e34031c56d735c427fefb956e802d5830b0891922db4283bcaa4c3c75",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:07:48.690Z",
+      "finishedAt": "2026-11-24T20:08:05.544Z",
+      "durationMs": 16822.805875000002,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-playmode-20261125.json",
+        "sha256": "f153ca55c9fc2036cc34eae64965ebf0debd4c940dc86940d206f56210c2f5cf"
+      }
+    },
+    {
+      "id": "31b857c4-5371-4946-a7ea-80978903c821",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "dc68ff661de79e506d80c8ff20ae1d969c65c18c7afd56ed0f9c24a40c1d56d8",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-24T20:10:04.501Z",
+      "finishedAt": "2026-11-24T20:10:07.755Z",
+      "durationMs": 3203.742583,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-rebuild-diagnostic-20261125.json",
+        "sha256": "710c603563f8ce2ea1246af62cc300159f948d017ee71436743a128b9692f46b"
+      }
+    },
+    {
+      "id": "0bcab398-97f0-4ad9-89bc-f3b1b0ab5d10",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "f422bf8b11bec9373610029905ad738a5a076281b3ed04ab58f58796afff8f50",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:11:10.366Z",
+      "finishedAt": "2026-11-24T20:11:14.005Z",
+      "durationMs": 3604.797875,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-maps-only-build-20261125.json",
+        "sha256": "e0b7387c46dbeff7a38d1c50fe5c4483465db96d58aca13c4c40c99adfbb4456"
+      }
+    },
+    {
+      "id": "ef978c13-d6a4-402f-8f10-9230a67ce8a3",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "1311b44a7ad3ad9dbd852628b16df5dc1fdae8244007c6446811b54e4ccb5a39",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:11:14.395Z",
+      "finishedAt": "2026-11-24T20:11:17.044Z",
+      "durationMs": 2618.038875,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-source-validation-20261125b.json",
+        "sha256": "c6747cab04c6986aeb9d26105323b832567e32623e3dd3c9b0c4d08896b8d699"
+      }
+    },
+    {
+      "id": "61261ae2-f8ba-4b38-9721-07aa5b4018cf",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d82afb86dfc907669ca9025f469e85645447fab03fd6b3a728489639110be460",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-24T20:11:17.432Z",
+      "finishedAt": "2026-11-24T20:11:20.482Z",
+      "durationMs": 3024.1296660000003,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-source-identity-20261125b.json",
+        "sha256": "ecfe1d9aa6f0d71b6dbac9bce2e90dbae36c463e1fc485ee765188fa1ec14e32"
+      }
+    },
+    {
+      "id": "22daa5ed-1ee3-46f3-9f95-9760f43c02c8",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "1bcf850a8da57724302cbb03c3e95dd16457633d2c57458e2ec0056a293daf5d",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:11:20.902Z",
+      "finishedAt": "2026-11-24T20:11:31.486Z",
+      "durationMs": 10553.070083,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-unity-import-20261125b.json",
+        "sha256": "b6feb964ca36670e44b158dee335562bd7b5ab737d68df3f8b5e4f5a5eabce95"
+      }
+    },
+    {
+      "id": "e838620a-2064-4451-8f8c-3eb2ce7015ae",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "3f199a8a7d05808197f24333f00692cc28701a268476e6d4d6566d9f9d8d20b7",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:11:32.046Z",
+      "finishedAt": "2026-11-24T20:11:41.895Z",
+      "durationMs": 9809.613582999998,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-palette-gpu-20261125b.json",
+        "sha256": "9ca36a8f007b82506f23ff59490f6de26f4958c904dd4fab68174af6519841de"
+      }
+    },
+    {
+      "id": "47b3bb02-5242-43a6-9125-1ea2b5e0e5ce",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "efc00595c0fcab48231c5acb2ad48fb9858682bf374edf1c4912bbca256a2ee0",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:13:48.124Z",
+      "finishedAt": "2026-11-24T20:13:56.730Z",
+      "durationMs": 8568.793333000001,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-maps-only-repeat-20261125.json",
+        "sha256": "71d3d60f14f1e96f03440d2f4254627232fb61b76eb1bb92732833ad04f137ab"
+      }
+    },
+    {
+      "id": "cdbbef72-8634-43f3-982b-e40f817ceca2",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d82afb86dfc907669ca9025f469e85645447fab03fd6b3a728489639110be460",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-24T20:13:57.279Z",
+      "finishedAt": "2026-11-24T20:14:00.376Z",
+      "durationMs": 3071.734166,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-source-identity-20261125c.json",
+        "sha256": "a3b8ab36b2d41f6246f7917d5aedda479240e60401b02219cd63debe3f75a017"
+      }
+    },
+    {
+      "id": "b97824e7-6c59-47a3-ba2f-13bb6715b3de",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "dc73c3b61ba0af5ab66d75c328553d59278b1e7a88c409894433de5d48b5876f",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:14:00.768Z",
+      "finishedAt": "2026-11-24T20:14:12.919Z",
+      "durationMs": 12129.86525,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-final-gpu-20261125.json",
+        "sha256": "faccc41e49fa8c8fcfa498a8f01d03ef0338bd6f40bf5aabc497e2388b4f16b4"
+      }
+    },
+    {
+      "id": "2c855b43-d57b-40e4-bc43-b997e7dd837a",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "29fdcdffc202e96d440eb99ecf2ac734a905ebb15e1109193c38463091304b78",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-24T20:15:49.150Z",
+      "finishedAt": "2026-11-24T20:15:53.485Z",
+      "durationMs": 4306.988874999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-linked-albedo-20261125.json",
+        "sha256": "5cdeed0a486e3f27e822ca0a00c2e84e6fd011461a60180dacf4a18214460e66"
+      }
+    },
+    {
+      "id": "cf730516-ac78-4272-bd52-63d967df324f",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "cdb377ed2ef55b1bd874afb1d373853d337c1c1a7dca4ee501a3e8f58d53146e",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:16:48.343Z",
+      "finishedAt": "2026-11-24T20:17:10.727Z",
+      "durationMs": 22338.085208,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-final-editor-20261125.json",
+        "sha256": "3a21abeb15a0556743425ea386ff504df13b88c56018e20dbdfcc3b466b23672"
+      }
+    },
+    {
+      "id": "df3f760e-85a8-4ace-a02d-2d275a08355f",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "66ea2096f5ebefbc53d027fb86e1f6b985bfa4fe7b06a72da73ace74a686a666",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:18:01.105Z",
+      "finishedAt": "2026-11-24T20:18:18.136Z",
+      "durationMs": 17003.279458999998,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-final-playmode-20261125.json",
+        "sha256": "ccf3f1c8f80e4294e49ddc46935a308c4c624fffc8803cfbc3615cfe46ffd204"
+      }
+    },
+    {
+      "id": "b38a1ef1-8e2c-48d9-b375-dda42c8d3ba7",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "b0d36fce288a69cfb07796fd62a1a9d2d39b86232a7e0a511d571164385f20c6",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:19:08.953Z",
+      "finishedAt": "2026-11-24T20:19:10.933Z",
+      "durationMs": 1946.530334,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-cache-maintenance-20261125.json",
+        "sha256": "9a692745178a20c50a5d5ec3b52c5aa1df95bb917df101685301906a44acb174"
+      }
+    },
+    {
+      "id": "ca6a87ba-ce7f-43b5-ba0b-0d8f5d8647a4",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "92b88d46c0b5545788a9a2ce5359954222ebde80f299018987788284e4627495",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:20:20.339Z",
+      "finishedAt": "2026-11-24T20:20:23.941Z",
+      "durationMs": 3559.4140419999994,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-source-public-checks-20261125.json",
+        "sha256": "3c2b3f9cda964c406e23eb5cf631bbb428f4105b1d6fa59412a42fad27862f2f"
+      }
+    },
+    {
+      "id": "238541fa-79e9-4fe8-996d-7c9256a4bd1c",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "3b5ef6b9192d71533b6055e6f8707cd002c214865a1a7ec2761cb1f8b1e13f39",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:21:07.478Z",
+      "finishedAt": "2026-11-24T20:21:14.548Z",
+      "durationMs": 7038.57425,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-retention-before-20261125.json",
+        "sha256": "b9da1a7f405fd69877e7eafe9db846fe91c16955533067fa49c02fecb21dff06"
+      }
+    },
+    {
+      "id": "0696ac5e-4aa4-43ac-a052-765a43acf2a8",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "41ada4229ce84f48a8f6fe5314a22fd98adb5d6f6b88741107068ab45d789d53",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:22:06.382Z",
+      "finishedAt": "2026-11-24T20:25:47.925Z",
+      "durationMs": 221496.10795900002,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-native-build-20261125.json",
+        "sha256": "d1cc2c138c586c47d1a903c83e0dc73eddb717ed94d98bcac3f26223e1f64234"
+      }
+    },
+    {
+      "id": "82ebba2d-2eab-4529-a4c2-d60e5185d52c",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "9a1f7e94b4f8053473720ae5048fb1b96690f52f72604c62034f0470d8e3ddd3",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:25:58.609Z",
+      "finishedAt": "2026-11-24T20:27:15.141Z",
+      "durationMs": 76498.658875,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-phone-20261125.json",
+        "sha256": "d5c1f30baa276a36a888f2d4852e67feb92390ab8137481fe5b11cec685ed0e6"
+      }
+    },
+    {
+      "id": "371167e3-9cb3-45d2-bebf-3afd91900426",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "27aa38c45f52dfb0258b7ee39c134c4bc58b3fb408853026e4681bdc0a5e00a4",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:27:15.928Z",
+      "finishedAt": "2026-11-24T20:27:16.035Z",
+      "durationMs": 81.96754199999998,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-phone-proof-20261125.json",
+        "sha256": "f72ce64d1436b7e4cdacc1d2ac4ffa1017fdd1a49aea6f7362da87463bc18c95"
+      }
+    },
+    {
+      "id": "86cb9dc9-81d3-4a6a-b554-7a5854fd2b14",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "ed4eb68d80a7ccb2e904fc92dfacc81e2c9064d2923cb11da6ceced0f0a31df8",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:27:16.455Z",
+      "finishedAt": "2026-11-24T20:28:19.377Z",
+      "durationMs": 62904.78125,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-pad-20261125.json",
+        "sha256": "3faeb1ae59883d2761d8cf8550330660d8684ef6d711754fba3ad2bf66987c87"
+      }
+    },
+    {
+      "id": "7ff288e6-7205-4087-947c-c161ef1bd521",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "9ea5cb991fe1d44357db19f523af83d0129e070cb7e2fd0cb5826adf68ec186d",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:28:20.684Z",
+      "finishedAt": "2026-11-24T20:28:20.799Z",
+      "durationMs": 86.33662500000014,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-pad-proof-20261125.json",
+        "sha256": "21dfb3aaca35bc32919b48b35e220abc07312f05a76a0cd3d477857fdeb4a70c"
+      }
+    },
+    {
+      "id": "72c1a0bd-e276-421d-9fce-aae39af6b78b",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "529d6e85ec1579cabe0c7e63e5daf451640f3a0db507c25affafc2126a6eae82",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:28:21.250Z",
+      "finishedAt": "2026-11-24T20:28:31.716Z",
+      "durationMs": 10439.972083,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-retention-after-20261125.json",
+        "sha256": "06082e348c657ec30574c7f3bdca4c0157879e5618ecdb820f0c9b6d29c7d1ff"
+      }
+    },
+    {
+      "id": "11bd7410-4993-4e41-830a-85d58bb80e2a",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "b5d43f9c9467c75b73cf3f05088c1967334b86cadb83a13486c0fc61f61eb33f",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:31:42.375Z",
+      "finishedAt": "2026-11-24T20:31:42.792Z",
+      "durationMs": 383.0435829999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-report-proof-20261125.json",
+        "sha256": "2705cbbb6e335ba2051ac076cb07506aab639b1262b227dd9fa00df01cfbd32f"
+      }
+    },
+    {
+      "id": "fc2a79a7-0fdb-4d54-91f9-d97e0d656f27",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "92b88d46c0b5545788a9a2ce5359954222ebde80f299018987788284e4627495",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:32:35.009Z",
+      "finishedAt": "2026-11-24T20:32:36.787Z",
+      "durationMs": 1732.1326669999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-final-public-checks-20261125.json",
+        "sha256": "42f260d47a53b342233f89698c566383c12869b7360c1f1947303762d3eb8b1c"
+      }
+    },
+    {
+      "id": "87f9edcc-d384-4b80-929c-b5229752e0ec",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "b449cedf77939af44b83932d535bac005c2b75d463bda0af2e37b802c56237f0",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:32:42.668Z",
+      "finishedAt": "2026-11-24T20:32:42.768Z",
+      "durationMs": 75.97758299999998,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-record-integrity-20261125.json",
+        "sha256": "679818ca7ba94ba3a46d7b90bdd0b914ac8b8e4034ef3f0edd7b3a8b0ea02f40"
+      }
+    },
+    {
+      "id": "e8614a10-92ac-4a79-8bdd-5c09ce091611",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "a068d9bd92e7ba3f4be883fff1508c56c2b0082252a19584b4877106987364c6",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:36:11.001Z",
+      "finishedAt": "2026-11-24T20:36:24.347Z",
+      "durationMs": 13309.786958,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/beta8-preflight-20261125.json",
+        "sha256": "a481ae45b22ae0e1c6c7bb92a58d3ce77daeb0de10c35f299e1263c781562381"
+      }
+    },
+    {
+      "id": "09a78d52-4c6b-4dce-9f8e-ea7dfaae3625",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "68ce109728f7410636e38b1530e77916bfc0fab5dacf31879b3924392099bfc3",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:36:28.237Z",
+      "finishedAt": "2026-11-24T20:36:52.187Z",
+      "durationMs": 23921.827708,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/beta8-cache-maintenance-20261125.json",
+        "sha256": "4c38d53584e46a3e0c02b04d70e0c05af330c634a8b1ed4b0a52df9fac54fca7"
+      }
+    },
+    {
+      "id": "37b096fa-e9a2-4dbd-96fa-b7b90bf20fd2",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d1551e8281ca318cdb989f8c165e492140123abce8033264e0141bf4686cf564",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:37:28.274Z",
+      "finishedAt": "2026-11-24T20:37:39.777Z",
+      "durationMs": 11441.161542,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/beta8-prepare-20261125.json",
+        "sha256": "d35e876ea4980651175e7b8edc63b21c0ea2c3f0d2e4b89e52b5e4b38d56615e"
+      }
+    },
+    {
+      "id": "9569df02-a981-4929-a7d9-99675bd9aa1e",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "cf2bd67b177809788fcda0c1c3f844573565bee32477487c3499e4545a0ae912",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:37:44.206Z",
+      "finishedAt": "2026-11-24T20:37:44.391Z",
+      "durationMs": 153.32624999999996,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/beta8-scene-comparison-20261125.json",
+        "sha256": "50f546d38ec1b462933079778c6c12a105684524b3e5f8fc01559d4e897f465d"
+      }
+    },
+    {
+      "id": "c9b5b556-cd07-40ae-9406-62c802324df0",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "66528cb0c09cc150af43d10dbf21d4b5a97d9e6527f8983a1a0b43ebaf2f8298",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:37:57.105Z",
+      "finishedAt": "2026-11-24T20:40:11.688Z",
+      "durationMs": 134511.242875,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/beta8-editmode-20261125.json",
+        "sha256": "625bf971676b5ffe38719071f32c92e38bc4a1654d9ee3ec03d2de4eea6b64c5"
+      }
+    },
+    {
+      "id": "e5fbf851-04ec-4720-9d8c-5159348d3530",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "02438434d4318e60ca1e3f136b9a608e992ef406b17a39e5c510a7d9a0b32b2a",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:40:17.725Z",
+      "finishedAt": "2026-11-24T20:57:24.826Z",
+      "durationMs": 1027061.337666,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/beta8-playmode-20261125.json",
+        "sha256": "38425a9133828d94824e8bbccb86e260b43322b47bebb72dc0d9d759a883a977"
+      }
+    },
+    {
+      "id": "131f6162-7d06-42b1-9acb-6affb43e7184",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "9c86a069bf24f003fcd41bfe74eeead2e6ffacde4a739bdc440339ac2330a82c",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:57:33.930Z",
+      "finishedAt": "2026-11-24T20:57:34.326Z",
+      "durationMs": 321.750458,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/beta8-test-results-20261125.json",
+        "sha256": "a3f8279918f7edb53fb318d5f6f57c8db2450aa09316da1c43d9608001a91425"
+      }
+    },
+    {
+      "id": "d92313dd-5887-4b9a-9d3e-0b506aea80c4",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "c7c935e1ba437ae7729f6ab91f81bc25ffeba9b54f0e4cfe8a4d89028a8747a4",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:57:45.820Z",
+      "finishedAt": "2026-11-24T20:57:46.428Z",
+      "durationMs": 436.6211249999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/beta8-release-guards-20261125.json",
+        "sha256": "c98151b795cec088fc0ad4f9aa4323297d59a158cec6e3e57bbf8d9f1ebf05fc"
+      }
+    },
+    {
+      "id": "ff933522-a383-496f-989d-64517f44385b",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "09d786baa15c819a35a746c64683fc1ff4ce768d17668c9aaf4dab0c8eed9ee1",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:58:01.701Z",
+      "finishedAt": "2026-11-24T20:58:11.144Z",
+      "durationMs": 9378.175125,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/beta8-cache-maintenance-second-20261125.json",
+        "sha256": "a48a03fa8651729093f2f2afe871753f2ecdfc76f2d3c9e081f37f5020d1c81f"
+      }
+    },
+    {
+      "id": "995a558f-18ff-45e9-89da-0e444cbe6280",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "a308abfc1cde2ad120049559acf20b453c11fc383673cfa27175ef6174c4da9f",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:58:15.826Z",
+      "finishedAt": "2026-11-24T20:58:16.122Z",
+      "durationMs": 251.86020800000006,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/beta8-preparation-proof-20261125.json",
+        "sha256": "bb6e37a06f53ba177a281140d083ed150beb5bcdad34baba94400e9277e38059"
+      }
+    },
+    {
+      "id": "9732703a-80bb-4461-8cbc-8f2c97c22119",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "92b88d46c0b5545788a9a2ce5359954222ebde80f299018987788284e4627495",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:58:24.279Z",
+      "finishedAt": "2026-11-24T20:58:27.772Z",
+      "durationMs": 3449.2457090000007,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/beta8-source-public-checks-20261125.json",
+        "sha256": "482a1c4e7a2791a7add36a9b6bb93e675549f2c5b7670cc37a44d97ffbee7213"
+      }
+    },
+    {
+      "id": "e59291e7-abb8-4feb-8ee2-5eade285a513",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "e10f73d3859b38117c140aea52eedf095c635c9a14dfac2758dd04482104d394",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:58:58.537Z",
+      "finishedAt": "2026-11-24T21:00:54.839Z",
+      "durationMs": 116262.801042,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/beta8-native-export-20261125.json",
+        "sha256": "a68411b3b526f1d7926c26d7e9cbdc2cab212b37e2044bfec537419f7437fc7f"
+      }
+    },
+    {
+      "id": "d6c60bce-bf67-4602-9f69-e91dfdf0ae30",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "f62e0560b819ec5ce76609599a89f16c61dacd259a006371b07d731d94ad3663",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T21:00:59.231Z",
+      "finishedAt": "2026-11-24T21:01:13.798Z",
+      "durationMs": 14532.710542,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/beta8-signing-20261125.json",
+        "sha256": "f0ec089718ecfd45c79b8ac4bd2da5568502a5836f86bfcc478a07a8f0b012dc"
+      }
+    },
+    {
+      "id": "20eac39f-0f4f-4d38-a95c-0de17dac83a2",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "7a3e5a7b5288585c6ebf52725d2725437636b9b4ec060238afc67018ece4fb46",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T21:01:22.802Z",
+      "finishedAt": "2026-11-24T21:06:34.637Z",
+      "durationMs": 311762.696458,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/beta8-archive-20261125.json",
+        "sha256": "da44af46ddb50c2a8442551ea1320ece74e33dec732d2dc32230d7767d155e16"
+      }
+    },
+    {
+      "id": "8ebcacf0-d6ec-4c91-af18-e312f586e8e8",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "915104ba8869a3050a5824f065624970c642e04f6ac36a8b1b2e54d86e61e2ba",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T21:06:53.606Z",
+      "finishedAt": "2026-11-24T21:07:29.508Z",
+      "durationMs": 35078.934292,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/beta8-export-20261125.json",
+        "sha256": "7806bd1889ca806936af26ee57e860957acf35e9b210e0dbcf54ae2a9a05eaf7"
+      }
+    },
+    {
+      "id": "0c4822b4-a481-439b-bedf-dd639146f74d",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "e39dd6442ef2ebfe49eb5925a52411fab583f894998b9f25f6e09afb0073f0d4",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T21:07:33.232Z",
+      "finishedAt": "2026-11-24T21:07:34.222Z",
+      "durationMs": 948.3041659999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/beta8-package-metadata-20261125.json",
+        "sha256": "9024a93ca1fc9d2d84be6fe4055cb9116e0c191f9d78e4c8a9089f4b86ff254d"
+      }
+    },
+    {
+      "id": "f5e72ffb-f1f4-4a12-aba8-4c1af404f7c9",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "4533e4d919f003ae460f643e7a7b239cacae122218c6820c84dbeb7a8ddbfecb",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T21:07:41.860Z",
+      "finishedAt": "2026-11-24T21:11:29.134Z",
+      "durationMs": 227187.801125,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/beta8-upload-20261125.json",
+        "sha256": "67053da07f0232205c22838ac79d3a185b51642660d77f0f5306842bacf1df06"
+      }
+    },
+    {
+      "id": "6b636ed0-8b87-434a-84b0-b002124ef317",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "7863c8d9af364ed591a33443ea3fed26197586a2f7b6f271f4353b092fc29c5d",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T21:11:41.907Z",
+      "finishedAt": "2026-11-24T21:11:46.725Z",
+      "durationMs": 4778.831833,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/beta8-apple-status-20261125.json",
+        "sha256": "edac2f0f0b9c3dcf67bbac578efca81d6dc09f4ce3618742667e7174b33965f7"
+      }
+    },
+    {
+      "id": "15831cbd-f9e1-46a8-b1fe-91c1af5133c4",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "75727367e35327435a13e804c1b3536262a0254505582ac8e0c2ea4c45c2c01a",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T21:12:03.492Z",
+      "finishedAt": "2026-11-24T21:14:13.979Z",
+      "durationMs": 130453.68441700001,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/beta8-apple-processing-wait-20261125.json",
+        "sha256": "08ce029574ff697ca198c0d400691caffd13194f9192360ac83933bf8ee0c1bf"
+      }
+    },
+    {
+      "id": "b40ce4da-ca82-4142-9de9-c5c2cf6ea9d2",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "dfe342c61036acbac3f8befe41d0e2d5b87a731dce85664c39dda1887d967fd4",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T21:14:31.928Z",
+      "finishedAt": "2026-11-24T21:15:35.414Z",
+      "durationMs": 63442.205167,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/beta8-apple-processing-wait-20261125b.json",
+        "sha256": "a2fdb9d3bc005480e0a321d0f698c42adbee064fbebf0c2a99254267a13a822a"
+      }
+    },
+    {
+      "id": "9e3c309f-2042-496c-8327-d864a2d7bd7b",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "2fe4199980fe639f594b789eca776e01256fde423d48bf8d50cadf0b53366325",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T21:15:41.640Z",
+      "finishedAt": "2026-11-24T21:16:07.395Z",
+      "durationMs": 25729.682916,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/beta8-personal-group-20261125.json",
+        "sha256": "fbe661f0ab8cc939bed9f689668609978122f06d729bd46ae08a20ad83e24afc"
+      }
+    },
+    {
+      "id": "82de62fa-c98a-47bb-8fd4-da7ae38e3f0d",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "ea9b61d11ad59c13aa489a262817a46a6e9c26f9cb3dd369c027b072a9470ee0",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T21:16:19.539Z",
+      "finishedAt": "2026-11-24T21:16:33.547Z",
+      "durationMs": 13952.716041,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/beta8-notes-readback-20261125.json",
+        "sha256": "c737cbebf4df8f822fddbafbb9347715d3174ca5e96a3c67f365ab37d3f72231"
+      }
+    },
+    {
+      "id": "e3236108-0c71-44ee-90bf-9ca03dba75b3",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "5e94c17a786a9a0ca87b22a757370c788f43e28550e66430dcc0308abebb25dd",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T21:16:39.965Z",
+      "finishedAt": "2026-11-24T21:17:00.996Z",
+      "durationMs": 20584.396333,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/beta8-delivery-readback-20261125.json",
+        "sha256": "5f4fe0649e97f0a2f21df52bbb690a04160aa7e7cb0bab7aedfb337c50ab60d0"
+      }
+    },
+    {
+      "id": "c5b37393-2b8f-41e6-9f7c-3a767899c783",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "92b88d46c0b5545788a9a2ce5359954222ebde80f299018987788284e4627495",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T21:17:26.142Z",
+      "finishedAt": "2026-11-24T21:17:28.265Z",
+      "durationMs": 2091.192125,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/beta8-delivery-public-checks-20261125.json",
+        "sha256": "fd0238d57b1f791a59d00d7136b628e26b7695701ff2fc9276821b304c2184ea"
+      }
+    },
+    {
+      "id": "a228acb8-4ab4-47c4-82c5-b4f8ff46728f",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d4f762b5f589e52094edc951bd230b09ad8b8502a65870d5d76e78a014aabd29",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T21:17:48.165Z",
+      "finishedAt": "2026-11-24T21:17:48.275Z",
+      "durationMs": 82.86191700000006,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/beta8-record-integrity-20261125.json",
+        "sha256": "fcc8e57fd071f87037b8be231ebba50991f6573cc5d6b5cc7ba3cfeeec419f00"
+      }
     }
   ],
   "measurementAudit": {
@@ -16815,8 +19266,8 @@
     "scope": "declared-command-receipts-only",
     "runId": null,
     "complete": false,
-    "registered": 1046,
-    "completed": 1051,
+    "registered": 1175,
+    "completed": 1180,
     "unfinishedIds": [],
     "legacyMeasurementIds": [],
     "legacyPolicy": "unverified-format-without-start-records-not-reconstructed",
@@ -20109,27 +22560,27 @@
   "commands": [
     {
       "category": "test",
-      "count": 374,
-      "succeededCount": 313,
-      "failedCount": 61,
-      "successRate": 0.8368983957219251,
-      "durationMs": 13534880.0762
+      "count": 471,
+      "succeededCount": 402,
+      "failedCount": 69,
+      "successRate": 0.8535031847133758,
+      "durationMs": 15662587.644446997
     },
     {
       "category": "compile",
-      "count": 254,
-      "succeededCount": 243,
+      "count": 277,
+      "succeededCount": 266,
       "failedCount": 11,
-      "successRate": 0.9566929133858267,
-      "durationMs": 10204200.598838998
+      "successRate": 0.9602888086642599,
+      "durationMs": 11976597.672047999
     },
     {
       "category": "e2e",
-      "count": 257,
-      "succeededCount": 210,
+      "count": 266,
+      "succeededCount": 219,
       "failedCount": 47,
-      "successRate": 0.8171206225680934,
-      "durationMs": 16733251.949253004
+      "successRate": 0.8233082706766918,
+      "durationMs": 17312066.486170005
     },
     {
       "category": "lint",
@@ -20524,6 +22975,54 @@
       "checkedAt": "2026-11-24T17:31:32.652Z",
       "durationMs": 298.8422499999999,
       "outcome": "accepted"
+    },
+    {
+      "stageId": "apply",
+      "runId": null,
+      "operation": "start",
+      "checkedAt": "2026-11-24T18:12:35.207Z",
+      "durationMs": 133.13754099999994,
+      "outcome": "accepted"
+    },
+    {
+      "stageId": "apply",
+      "runId": null,
+      "operation": "start",
+      "checkedAt": "2026-11-24T18:41:12.300Z",
+      "durationMs": 250.54104200000006,
+      "outcome": "accepted"
+    },
+    {
+      "stageId": "apply",
+      "runId": null,
+      "operation": "start",
+      "checkedAt": "2026-11-24T19:12:03.812Z",
+      "durationMs": 162.6133339999999,
+      "outcome": "accepted"
+    },
+    {
+      "stageId": "apply",
+      "runId": null,
+      "operation": "start",
+      "checkedAt": "2026-11-24T19:27:56.357Z",
+      "durationMs": 135.58574999999996,
+      "outcome": "accepted"
+    },
+    {
+      "stageId": "apply",
+      "runId": null,
+      "operation": "start",
+      "checkedAt": "2026-11-24T19:53:29.156Z",
+      "durationMs": 110.89745800000003,
+      "outcome": "accepted"
+    },
+    {
+      "stageId": "apply",
+      "runId": null,
+      "operation": "start",
+      "checkedAt": "2026-11-24T20:35:05.239Z",
+      "durationMs": 161.96054199999992,
+      "outcome": "accepted"
     }
   ],
   "timing": {
@@ -20531,8 +23030,8 @@
     "finishedAt": null,
     "status": "in_progress",
     "measurementBasis": "before-first-entry-gate",
-    "elapsedMs": 139242752,
-    "observedStepWallMs": 105641198,
+    "elapsedMs": 150661625,
+    "observedStepWallMs": 117060071,
     "unattributedMs": 33601554,
     "waitingMs": null,
     "retryAttemptMs": 0,
