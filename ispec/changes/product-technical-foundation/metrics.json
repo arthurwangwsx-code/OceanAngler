@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-24T00:20:11.548Z",
+  "generatedAt": "2026-11-24T00:26:21.430Z",
   "source": {
     "change": "product-technical-foundation",
     "cliVersion": "1.0.20",
@@ -26,15 +26,15 @@
     "firstAttemptPassedCount": 1,
     "firstAttemptEvaluatedCount": 1,
     "firstAttemptPassRate": 1,
-    "elapsedMs": 75175821,
-    "observedStepWallMs": 41574267,
+    "elapsedMs": 75545702,
+    "observedStepWallMs": 41944148,
     "unattributedMs": 33601554,
-    "unattributedRate": 0.44697289039251065,
-    "commandMeasurementCount": 533,
-    "commandSucceededCount": 485,
+    "unattributedRate": 0.4447844564340669,
+    "commandMeasurementCount": 541,
+    "commandSucceededCount": 493,
     "commandFailedCount": 48,
-    "commandSuccessRate": 0.9099437148217636,
-    "commandDurationMs": 11376098.719954995,
+    "commandSuccessRate": 0.911275415896488,
+    "commandDurationMs": 11526520.303453995,
     "gateCheckCount": 31,
     "repairCount": 0,
     "targetMs": 3600000,
@@ -62,7 +62,7 @@
     },
     "commandMeasurements": {
       "status": "partial",
-      "recorded": 533
+      "recorded": 541
     },
     "waitingTime": {
       "status": "unavailable"
@@ -78,12 +78,12 @@
   "runs": [],
   "runMetrics": {
     "version": 1,
-    "generatedAt": "2026-11-24T00:20:11.548Z",
+    "generatedAt": "2026-11-24T00:26:21.430Z",
     "runs": [],
     "unattributed": {
       "unboundAttempts": 2,
       "unknownRunAttempts": 0,
-      "unboundCommands": 533,
+      "unboundCommands": 541,
       "unknownRunCommands": 0,
       "unboundGateChecks": 31,
       "unknownRunGateChecks": 0,
@@ -8086,6 +8086,126 @@
       "exitCode": 0,
       "signal": null,
       "errorCode": null
+    },
+    {
+      "id": "4779e350-3db3-40e5-97a9-30bcc9ccc39e",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d1551e8281ca318cdb989f8c165e492140123abce8033264e0141bf4686cf564",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T00:21:26.111Z",
+      "finishedAt": "2026-11-24T00:21:33.155Z",
+      "durationMs": 7017.22575,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null
+    },
+    {
+      "id": "87168e2d-358b-4dbe-b2d5-9d070b2d0d78",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "c7c935e1ba437ae7729f6ab91f81bc25ffeba9b54f0e4cfe8a4d89028a8747a4",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T00:22:16.807Z",
+      "finishedAt": "2026-11-24T00:22:17.009Z",
+      "durationMs": 179.93595800000003,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null
+    },
+    {
+      "id": "a0979f46-8892-472d-b96e-e29aff0986f4",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "987441291a5f486ac46cb47cd629811adc78494d2c18c097a79a70dd83810587",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T00:22:43.732Z",
+      "finishedAt": "2026-11-24T00:22:43.870Z",
+      "durationMs": 99.660125,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null
+    },
+    {
+      "id": "05d57659-304d-4464-8662-508736a54b76",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "5f049fb6c545b54fa0de1247430f9ddcb14c52db16cb99cc14fe3cd0b59d8f44",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T00:22:44.244Z",
+      "finishedAt": "2026-11-24T00:24:38.966Z",
+      "durationMs": 114703.1515,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null
+    },
+    {
+      "id": "738e737c-c481-4dc0-9a47-7de39c9e8eed",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "a423f14a70694716bcf26b5c89500fb61ddcea4db3b318f18d2661d72cf302e0",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T00:24:46.382Z",
+      "finishedAt": "2026-11-24T00:25:14.341Z",
+      "durationMs": 27937.475791,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null
+    },
+    {
+      "id": "3e0b02f8-2c05-4531-8878-a53f8bab8a6e",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "1b9b750d007c851f920bb86ccb95b6c8d0649e1d11d26d4708a2736b0478955e",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-24T00:26:00.287Z",
+      "finishedAt": "2026-11-24T00:26:00.531Z",
+      "durationMs": 225.659334,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null
+    },
+    {
+      "id": "a00141e9-010b-45a8-8592-e83dffb84b4a",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "649f53e7041a0b5c99ff047535ad9586b7fba05cfe2a0f1e912953eca74dd065",
+      "category": "lint",
+      "executable": "git",
+      "startedAt": "2026-11-24T00:26:20.279Z",
+      "finishedAt": "2026-11-24T00:26:20.328Z",
+      "durationMs": 22.596208000000047,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null
+    },
+    {
+      "id": "a7d2b3e0-54a0-4959-8720-765fbe845323",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d89602c770c16a35b6c5da9a9da4ae967807390aa462f4349604d0463de12f51",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-24T00:26:20.696Z",
+      "finishedAt": "2026-11-24T00:26:20.952Z",
+      "durationMs": 235.87883300000004,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null
     }
   ],
   "measurementAudit": {
@@ -8093,8 +8213,8 @@
     "scope": "declared-command-receipts-only",
     "runId": null,
     "complete": false,
-    "registered": 531,
-    "completed": 533,
+    "registered": 539,
+    "completed": 541,
     "unfinishedIds": [],
     "legacyMeasurementIds": [],
     "legacyPolicy": "unverified-format-without-start-records-not-reconstructed",
@@ -10241,6 +10361,38 @@
       {
         "code": "receipt-missing-or-invalid",
         "measurementId": "addb58ea-849d-4b4d-92f7-a20781246bdc"
+      },
+      {
+        "code": "receipt-missing-or-invalid",
+        "measurementId": "4779e350-3db3-40e5-97a9-30bcc9ccc39e"
+      },
+      {
+        "code": "receipt-missing-or-invalid",
+        "measurementId": "87168e2d-358b-4dbe-b2d5-9d070b2d0d78"
+      },
+      {
+        "code": "receipt-missing-or-invalid",
+        "measurementId": "a0979f46-8892-472d-b96e-e29aff0986f4"
+      },
+      {
+        "code": "receipt-missing-or-invalid",
+        "measurementId": "05d57659-304d-4464-8662-508736a54b76"
+      },
+      {
+        "code": "receipt-missing-or-invalid",
+        "measurementId": "738e737c-c481-4dc0-9a47-7de39c9e8eed"
+      },
+      {
+        "code": "receipt-missing-or-invalid",
+        "measurementId": "3e0b02f8-2c05-4531-8878-a53f8bab8a6e"
+      },
+      {
+        "code": "receipt-missing-or-invalid",
+        "measurementId": "a00141e9-010b-45a8-8592-e83dffb84b4a"
+      },
+      {
+        "code": "receipt-missing-or-invalid",
+        "measurementId": "a7d2b3e0-54a0-4959-8720-765fbe845323"
       }
     ],
     "businessAcceptance": "not-evaluated",
@@ -10255,19 +10407,19 @@
   "commands": [
     {
       "category": "test",
-      "count": 147,
-      "succeededCount": 124,
+      "count": 151,
+      "succeededCount": 128,
       "failedCount": 23,
-      "successRate": 0.8435374149659864,
-      "durationMs": 2003502.0097050006
+      "successRate": 0.847682119205298,
+      "durationMs": 2146422.2330790004
     },
     {
       "category": "compile",
-      "count": 175,
-      "succeededCount": 167,
+      "count": 176,
+      "succeededCount": 168,
       "failedCount": 8,
-      "successRate": 0.9542857142857143,
-      "durationMs": 4076182.90242
+      "successRate": 0.9545454545454546,
+      "durationMs": 4083200.1281700004
     },
     {
       "category": "e2e",
@@ -10279,11 +10431,11 @@
     },
     {
       "category": "lint",
-      "count": 100,
-      "succeededCount": 99,
+      "count": 103,
+      "succeededCount": 102,
       "failedCount": 1,
-      "successRate": 0.99,
-      "durationMs": 16275.013289000006
+      "successRate": 0.9902912621359223,
+      "durationMs": 16759.147664000004
     }
   ],
   "gateChecks": [
@@ -10541,8 +10693,8 @@
     "finishedAt": null,
     "status": "in_progress",
     "measurementBasis": "before-first-entry-gate",
-    "elapsedMs": 75175821,
-    "observedStepWallMs": 41574267,
+    "elapsedMs": 75545702,
+    "observedStepWallMs": 41944148,
     "unattributedMs": 33601554,
     "waitingMs": null,
     "retryAttemptMs": 0,

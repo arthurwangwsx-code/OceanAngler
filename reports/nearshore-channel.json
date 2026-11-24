@@ -164,5 +164,11 @@
     "status": "PASS",
     "trackedFiles": 682,
     "issues": []
+  },
+  "validatedCommit": "fd14dbb2ffe6ed455e2ec5f3dbf1edf74e654ccd",
+  "ci": {
+    "status": "SUCCESS",
+    "url": "https://github.com/arthurwangwsx-code/OceanAngler/actions/runs/45296371726",
+    "scope": "GitHub scope/hash/publication and release-tool tests; not Unity/device acceptance"
   }
 }
