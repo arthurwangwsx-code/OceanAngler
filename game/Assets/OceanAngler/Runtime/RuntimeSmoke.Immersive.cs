@@ -64,6 +64,11 @@ namespace OceanAngler
                 yield return JourneyClick("出海",true);yield return null;yield return null;
                 yield return JourneyClick("返回首页",true);yield return null;yield return null;yield return JourneyFrame(left?"left-home":"home");
                 yield return JourneyClick("海域与装备",true);yield return null;yield return null;JourneyRequire(game.Session.Paused&&GetComponent<GameUI>().PageName=="准备","immersive-separate-preparation");yield return JourneyFrame(left?"left-preparation":"preparation");
+                var departure=FindObjectsByType<Button>(FindObjectsSortMode.None).Single(b=>b.isActiveAndEnabled&&b.GetComponentInChildren<Text>()?.text=="开始钓鱼");
+                JourneyRequire(departure.GetComponentInParent<ScrollRect>()==null,"immersive-departure-visible-without-scrolling");
+                var corners=new Vector3[4];departure.GetComponent<RectTransform>().GetWorldCorners(corners);var safe=DisplayMetrics.SafeArea;
+                JourneyRequire(corners[0].x>=safe.xMin&&corners[0].y>=safe.yMin&&corners[2].x<=safe.xMax&&corners[2].y<=safe.yMax,"immersive-departure-inside-safe-area");
+                Pointer(departure,true);Pointer(departure,false);
                 yield return JourneyClick("开始钓鱼",true);yield return null;yield return null;CheckImmersiveHud();yield return JourneyFrame(left?"left-ready":"ready");
                 var cast=Find("按住蓄力");Pointer(cast,true);yield return new WaitForSecondsRealtime(.25f);
                 yield return JourneyClick("暂停",true);yield return null;yield return null;

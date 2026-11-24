@@ -102,7 +102,10 @@ namespace OceanAngler
         }
         void BuildPreparation()
         {
-            var p=PagePanel("Preparation",new Vector2(.1f,.12f),new Vector2(.9f,.81f),488);
+            var p=PagePanel("Preparation",new Vector2(.1f,.12f),new Vector2(.9f,.81f),432);
+            // Keep departure above the footer, outside scroll content. Reserve
+            // space in the viewport so its last row cannot be covered.
+            var scroll=p.GetComponentInParent<ScrollRect>();var viewport=scroll!=null?scroll.viewport:p;viewport.offsetMin+=new Vector2(0,56);
             Label(p,"选择海域，准备好再出发",24,Color.white,22,12,-44,38);
             bool ready=game.Session.Phase==FishingPhase.Ready;
             for(int i=0;i<game.Content.habitats.Length;i++)
@@ -113,7 +116,7 @@ namespace OceanAngler
             Label(p,"已装备\n"+game.Content.Gear(game.Progress.Data.rodId).name+" · "+game.Content.Gear(game.Progress.Data.reelId).name+"\n"+game.Content.Gear(game.Progress.Data.lineId).name+" · "+game.Content.Gear(game.Progress.Data.lureId).name,18,Muted,22,230,-44,82);
             Button(p,"更换钓具",22,320,-44,44,()=>Navigate("钓具"),Navy).GetComponentInChildren<Text>().fontSize=18;
             if(MarineHabitat.ResourceFor(game.Progress.Data.habitatId)!=null)Button(p,game.Progress.Data.habitatId=="bay"?"看看海湾":"看看海域",22,376,-44,44,()=>Navigate("海湾观察"),Navy).GetComponentInChildren<Text>().fontSize=18;
-            Button(p,ready?"开始钓鱼":"返回当前探索",22,432,-44,44,()=>{page="出海";focusedFish=null;game.Pause(false);dirty=false;Rebuild();},Teal).GetComponentInChildren<Text>().fontSize=18;
+            Button(pageRoot,ready?"开始钓鱼":"返回当前探索",Compact?12:Width*.1f,Height-(Compact?88:124),Compact?Width-24:Width*.8f,44,()=>{page="出海";focusedFish=null;game.Pause(false);dirty=false;Rebuild();},Teal).GetComponentInChildren<Text>().fontSize=18;
         }
     }
 }
