@@ -5,18 +5,18 @@
   "blender": "5.3.0",
   "lods": {
     "Bluefin_LOD0": {
-      "triangles": 24284,
-      "vertices": 12624,
+      "triangles": 24860,
+      "vertices": 12912,
       "uvLayers": 1
     },
     "Bluefin_LOD1": {
-      "triangles": 9712,
-      "vertices": 5330,
+      "triangles": 9944,
+      "vertices": 5446,
       "uvLayers": 1
     },
     "Bluefin_LOD2": {
-      "triangles": 3642,
-      "vertices": 2283,
+      "triangles": 3728,
+      "vertices": 2326,
       "uvLayers": 1
     }
   },
@@ -44,6 +44,7 @@
     "pectoralR"
   ],
   "maps": {
+    "Bluefin_Iris.png": "5a514c9eb1cabe880c1ad2e001fa2ca87616b3c117f1da3d9ae62f36bab4d247",
     "Bluefin_Fin.png": "ca13d306992e6f98da2b1cf8cba588cba97480d040c74ddbfaa86992e253ee06",
     "Bluefin_Roughness.png": "e84ebdb6581ea835014dfa6085f8636ad48f44fd0544a2f080a108d98cec915c",
     "Bluefin_MetallicSmoothness.png": "a36fac61f41493501675e1a1cfb171f0cdd718648d0eb3e3ac8c8f56a52d56bc",

@@ -71,9 +71,21 @@ def make_maps():
     fc=np.zeros((512,512,3));fc[:]=[.025,.12,.23];fc+=fv[:,:,None]*np.array([.012,.12,.20]);fc+=rays[:,:,None]*np.array([.007,.018,.022])
     pale=np.zeros_like(fc);pale[:]=[.22,.26,.20];pale+=fv[:,:,None]*np.array([.07,.09,.06]);pale+=rays[:,:,None]*np.array([.009,.01,.007])
     fin=image('Bluefin_Fin',np.concatenate((fc,pale),axis=1))
-    return base,normal,rough,fin
+    # Original iris pigmentation, projected onto each eye's X/Z face below.
+    # Radial fibres and uneven bronze/grey mottling avoid a uniform metal rim.
+    iy,ix=np.mgrid[0:256,0:256];ex=(ix-127.5)/127.5;ez=(iy-127.5)/127.5
+    radius=np.sqrt(ex*ex+ez*ez);theta=np.arctan2(ez,ex)
+    fibres=np.sin(theta*91+np.sin(theta*17)*2+radius*8)*.5+np.sin(theta*157-radius*13)*.25
+    flecks=np.random.default_rng(1287).normal(0,.012,(256,256))
+    iris_color=np.zeros((256,256,3));iris_color[:]=[.32,.35,.27]
+    iris_color+=(fibres*.035+flecks)[:,:,None]
+    iris_color+=np.sin(theta*5+radius*9)[:,:,None]*np.array([.018,.012,-.004])
+    edge=np.clip((radius-.78)/.20,0,1);edge=edge*edge*(3-2*edge)
+    iris_color=iris_color*(1-edge[:,:,None])+np.array([.14,.19,.18])*edge[:,:,None]
+    iris_map=image('Bluefin_Iris',iris_color)
+    return base,normal,rough,fin,iris_map
 
-base,normal,rough,finmap=make_maps()
+base,normal,rough,finmap,irismap=make_maps()
 def material(name,color,roughness=.3,texture=None):
     m=bpy.data.materials.new(name);m.diffuse_color=(*color,1);m.use_nodes=True;p=m.node_tree.nodes.get('Principled BSDF')
     p.inputs['Base Color'].default_value=(*color,1);p.inputs['Roughness'].default_value=roughness
@@ -88,7 +100,8 @@ t=skin.node_tree.nodes.new('ShaderNodeTexImage');t.image=normal;n=skin.node_tree
 finmat=material('Bluefin_Fins',(.04,.3,.58),.50,finmap)
 gill=material('Bluefin_Gill',(.10,.18,.17),.58);gill.node_tree.nodes.get('Principled BSDF').inputs['Coat Weight'].default_value=0
 oral=material('Bluefin_Oral',(.065,.043,.037),.78);oral.node_tree.nodes.get('Principled BSDF').inputs['Coat Weight'].default_value=0
-iris=material('Bluefin_Iris',(.25,.21,.07),.28);dark=material('Bluefin_Dark',(.009,.023,.029),.23)
+iris=material('Bluefin_Iris',(1,1,1),.40,irismap);iris.node_tree.nodes.get('Principled BSDF').inputs['Coat Weight'].default_value=.05
+dark=material('Bluefin_Dark',(.009,.023,.029),.23)
 
 # Profile is purpose-shaped, not an ellipsoid.
 def section(x):
@@ -266,13 +279,30 @@ for sign,label in [(1,'L'),(-1,'R')]:
             top,_,w=section(px);return (px,sign*(w*math.sqrt(max(.01,1-(pz/top)**2))+rise),pz)
         mesh('Scute',[scute_surface(x,z-.009,.00035),scute_surface(x+.021,z,.00045),scute_surface(x,z+.009,.00035),scute_surface(x+.007,z,.0008)],[(0,1,3),(1,2,3),(2,0,3)],skin)
     # Eyes sit in the skull, with a small iris, dark pupil and wet specular surface.
-    pos=Vector((-.825,sign*.084,.105))
-    for name,offset,scale,mat in [('Eye',0,(.043,.019,.043),iris),('Pupil',.017,(.032,.007,.032),dark)]:
-        bpy.ops.mesh.primitive_uv_sphere_add(segments=24,ring_count=12,location=pos+Vector((0,sign*offset,0)))
+    def cheek_y(x,z):
+        top,bottom,width=section(x)
+        return width*math.sqrt(max(0,1-(z/(top if z>=0 else -bottom))**2))
+    ex,ez=-.825,.105;pos=Vector((ex,sign*cheek_y(ex,ez),ez))
+    dx=(cheek_y(ex+.001,ez)-cheek_y(ex-.001,ez))/.002
+    dz=(cheek_y(ex,ez+.001)-cheek_y(ex,ez-.001))/.002
+    eye_orientation=Vector((0,sign,0)).rotation_difference(Vector((-dx,sign,-dz)).normalized())
+    for name,offset,scale,mat in [('Eye',0,(.043,.016,.043),iris),('Pupil',.0128,(.032,.004,.032),dark)]:
+        # Put the sphere's polar axis along the shallow eye depth. Spend edges
+        # on the visible circular silhouette rather than hidden axial rings.
+        bpy.ops.mesh.primitive_uv_sphere_add(segments=48,ring_count=8,rotation=(math.pi/2,0,0),location=pos+Vector((0,sign*offset,0)))
+        bpy.ops.object.transform_apply(location=False,rotation=True,scale=False)
         obj=bpy.context.object;obj.name=name+'_'+label;obj.scale=scale;bpy.ops.object.transform_apply(location=False,rotation=False,scale=True)
         # Put vertices in common fish coordinates before joining and weighting.
         for v in obj.data.vertices:v.co+=obj.location
         obj.location=(0,0,0);obj.data.materials.append(mat)
+        if name=='Eye':
+            layer=obj.data.uv_layers.active
+            for loop in obj.data.loops:
+                point=obj.data.vertices[loop.vertex_index].co-pos
+                layer.data[loop.index].uv=(.5+point.x/(2*scale[0]),.5+point.z/(2*scale[2]))
+        # Align both iris and pupil to the actual cheek normal. A flat side-axis
+        # lens clips into the widening rear cheek when its depth is reduced.
+        for vertex in obj.data.vertices:vertex.co=pos+eye_orientation@(vertex.co-pos)
         for p in obj.data.polygons:p.use_smooth=True
         g=obj.vertex_groups.new(name='head');g.add(list(range(len(obj.data.vertices))),1,'REPLACE');parts.append(obj)
     nostril=surface(-.94,sign*1.10,.002);tube('Nostril_'+label,[nostril,tuple(Vector(nostril)+Vector((.012,0,-.002)))],.003,dark,'head')
@@ -367,7 +397,7 @@ camera=bpy.data.cameras.new('ReviewCamera');cam=bpy.data.objects.new('ReviewCame
 def view(loc,target=(.15,0,0)):
     cam.location=loc;cam.rotation_euler=(Vector(target)-cam.location).to_track_quat('-Z','Y').to_euler()
 view((-1.2,-5,1.05));scene.render.filepath='//previews/three-quarter.png'
-for im in [base,normal,rough,finmap]:im.filepath=bpy.path.relpath(im.filepath,start=str(OUT))
+for im in [base,normal,rough,finmap,irismap]:im.filepath=bpy.path.relpath(im.filepath,start=str(OUT))
 bpy.ops.wm.save_as_mainfile(filepath=str(OUT/'Bluefin.blend'))
 report={'status':'CANDIDATE','species':'Caranx melampygus','source':'tools/art_bluefin.py','blender':bpy.app.version_string,'lods':{},'actions':[a.name for a in bpy.data.actions],'bones':[b.name for b in rig.data.bones],'maps':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in GAME.glob('*.png')},'artAcceptance':'NOT_ACCEPTED','note':'Original authoring candidate; scientific, runtime, deformation, LOD and human visual gates remain separate.'}
 for o in lods:

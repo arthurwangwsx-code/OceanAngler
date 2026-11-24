@@ -19,7 +19,7 @@ namespace OceanAngler.Editor
             try{if(run.MoveNext())return;EditorApplication.update-=Step;run=null;EditorApplication.Exit(0);}
             catch(Exception e){EditorApplication.update-=Step;(run as IDisposable)?.Dispose();run=null;Debug.LogException(e);EditorApplication.Exit(1);}
         }
-        [Serializable] sealed class Receipt {public string status="PASS",scope="isolated imported-fish Editor GPU fixture; no player UI/device acceptance",graphics,initialPassScope="Production material initialization; first/repeated isolated draw checked; no player-startup claim";public int width=1440,height=960,images,initialPassImages;public float importedJawAngle,idleInitialDifference,biteInitialDifference;public bool singleSidedLining,firstDrawStable=true;}
+        [Serializable] sealed class Receipt {public string status="PASS",scope="isolated imported-fish Editor GPU fixture; no player UI/device acceptance",graphics,initialPassScope="Production material initialization; first/repeated isolated draw checked; no player-startup claim";public int width=1440,height=960,images,initialPassImages,irisTextureWidth;public float importedJawAngle,idleInitialDifference,biteInitialDifference;public bool singleSidedLining,firstDrawStable=true;}
         static IEnumerator RunCapture()
         {
             string folder=Environment.GetEnvironmentVariable("OCEAN_FISH_REVIEW_OUTPUT");if(string.IsNullOrEmpty(folder))throw new InvalidOperationException("Review output required");
@@ -51,6 +51,9 @@ namespace OceanAngler.Editor
                         var lining=root.GetComponentsInChildren<SkinnedMeshRenderer>().SelectMany(r=>r.sharedMaterials).FirstOrDefault(m=>m.name.Replace(" (Instance)","")=="Bluefin_Oral");
                         if(lining==null)throw new InvalidOperationException("Imported oral material missing");receipt.singleSidedLining=lining.GetFloat("_Cull")==2;
                         if(!receipt.singleSidedLining)throw new InvalidOperationException("Lining must retain back-face culling");
+                        var iris=root.GetComponentsInChildren<SkinnedMeshRenderer>().SelectMany(r=>r.sharedMaterials).FirstOrDefault(m=>m.name=="Bluefin_Iris");
+                        var irisMap=iris!=null?iris.GetTexture("_BaseMap"):null;
+                        if(irisMap==null||irisMap.width!=256)throw new InvalidOperationException("Imported iris texture missing or unexpected size");receipt.irisTextureWidth=irisMap.width;
                         // Sampling during executeMethod can precede the Editor's
                         // renderer/material update. Advance real Editor updates,
                         // without drawing and discarding a defective first image.
@@ -58,6 +61,11 @@ namespace OceanAngler.Editor
                         View("side",new Vector3(0,.08f,-5),new Vector3(.15f,0,0),.92f);
                         View("mouth",new Vector3(-1.3f,.05f,-5),new Vector3(-.94f,-.045f,0),.22f);
                         View("fin",new Vector3(-.1f,.55f,-5),new Vector3(-.05f,.38f,0),.43f);
+                        if(pose=="idle")
+                        {
+                            View("eye",new Vector3(-.825f,.105f,-5),new Vector3(-.825f,.105f,0),.067f);
+                            View("eye-opposite",new Vector3(-.825f,.105f,5),new Vector3(-.825f,.105f,0),.067f);
+                        }
                         void View(string name,Vector3 from,Vector3 look,float size)
                         {
                             camera.transform.SetPositionAndRotation(from,Quaternion.LookRotation(look-from,Vector3.up));camera.orthographicSize=size;

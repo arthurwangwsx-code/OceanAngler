@@ -70,6 +70,20 @@ if rig and all(lods):
     check(all(n>0 for n in anatomy_counts.values()),'第一背鳍/成对鳍/第二背鳍/尾鳍均有独立几何颜色核验')
     check(len(data.materials)==6,'鳍色分区保持六个源材质槽')
     report['finPalette']={'faces':palette_counts,'anatomySamples':anatomy_counts,'materialSlots':len(data.materials)}
+    eye_material=data.materials.get('Bluefin_Iris')
+    eye_maps=[node.image for node in eye_material.node_tree.nodes if node.type=='TEX_IMAGE' and node.image] if eye_material else []
+    check(len(eye_maps)==1 and tuple(eye_maps[0].size)==(256,256),'虹膜使用实际256x256原创贴图')
+    check(bool(eye_maps) and eye_maps[0].colorspace_settings.name=='sRGB','虹膜色图使用sRGB')
+    eye_sides={}
+    for sign,label in [(-1,'negativeY'),(1,'positiveY')]:
+        faces=[face for face in data.polygons if data.materials[face.material_index].name=='Bluefin_Iris' and sign*face.center.y>0]
+        uv=[data.uv_layers.active.data[i].uv for face in faces for i in face.loop_indices]
+        span=[max(p[j] for p in uv)-min(p[j] for p in uv) for j in (0,1)] if uv else [0,0]
+        vertices={i for face in faces for i in face.vertices};head=lods[0].vertex_groups['head'].index
+        attached=all(sum(g.weight for g in data.vertices[i].groups if g.group==head)>.99 for i in vertices)
+        check(bool(faces) and min(span)>.95 and attached,'独立眼球UV覆盖虹膜且绑定头骨：'+label)
+        eye_sides[label]={'faces':len(faces),'uvSpan':span,'headAttached':attached}
+    report['iris']={'maps':[image.name for image in eye_maps],'sides':eye_sides}
     top_spans=[]
     for face in data.polygons:
         if len(face.vertices)==4 and data.materials[face.material_index].name=='Bluefin_Skin' and all(data.vertices[i].co.z>.15 for i in face.vertices):

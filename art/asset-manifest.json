@@ -50,11 +50,11 @@
       "acquiredAt": "2026-11-23",
       "status": "ART_REVIEW_PENDING",
       "path": "art/source/bluefin/Bluefin.blend",
-      "sha256": "3c7e362e91ad3283ba00998a961c4b566265b70971059b03e7b392718bca47da",
+      "sha256": "5beced804af5c01b7256cbced387622cd5b50176f49f48efb2d0fb7c45e407c4",
       "artifacts": [
         {
           "path": "art/source/bluefin/Bluefin.blend",
-          "sha256": "3c7e362e91ad3283ba00998a961c4b566265b70971059b03e7b392718bca47da"
+          "sha256": "5beced804af5c01b7256cbced387622cd5b50176f49f48efb2d0fb7c45e407c4"
         },
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin_BaseColor.png",
@@ -78,7 +78,7 @@
         },
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin.fbx",
-          "sha256": "826a442a3c5b99d818f5b3323f55cc34ddc2bfbae117f726740e321072509624"
+          "sha256": "b1da26f3799cc9c714e1c2c0446aab2d7d1a9dff5bec908bd0b71efede2ae712"
         },
         {
           "path": "art/previews/bluefin/bite.png",
@@ -116,11 +116,19 @@
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin_Oral.mat",
           "sha256": "a22802b8d76234f2cb189adc8a9770ea6f044f28fcddaec160e9b2166773d158"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin_Iris.png",
+          "sha256": "5a514c9eb1cabe880c1ad2e001fa2ca87616b3c117f1da3d9ae62f36bab4d247"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin_Iris.mat",
+          "sha256": "bfcb92708ddc8ec368b6c82129b3da321f197bc0629cd380fbca0bb82514ec57"
         }
       ],
       "note": "Original bluefin trevally mesh, UV, PBR maps, 12-bone rig, seven animation clips and three LODs. Scientific/visual/user/device acceptance remains open. No third-party photographs or models included.",
       "modifiedAt": "2026-11-24",
-      "modifications": "Grey-silver/brassy palette, metric-compensated blue-black spots; shared padded blue/pale fin atlas, reduced fin heights/rays and surface-following scutes. Six material slots, seven actions, three LODs. Current previews: bluefin-palette-previews. A1-A3, human/science/device review pending."
+      "modifications": "Original 256x256 radial iris, projected eye-face UV, shallower pupil and actual cheek-normal orientation. Final LOD triangles 24860/9944/3728; unchanged 25000 validation budget, six materials, 12 bones and seven actions. Final source validation, eight studio images and ten imported iOS-target Editor Metal frames reviewed. Native Player and full art/science/user gates remain separate."
     },
     {
       "id": "complete-spinning-rig-candidate",
@@ -1390,6 +1398,80 @@
           "sha256": "131d454def1b3847ddcb44794bc45e72cfb6707a501d069e70475300db82db12"
         }
       ]
+    },
+    {
+      "id": "hero-bluefin-iris-reviewed-previews",
+      "author": "OceanAngler contributors",
+      "source": "Original authored Blender model and imported Unity Editor renders; source cameras recorded in tools",
+      "license": "MIT",
+      "redistribution": true,
+      "sourceRedistribution": true,
+      "canModify": true,
+      "acquiredAt": "2026-11-24",
+      "status": "ART_REVIEW_PENDING",
+      "artifacts": [
+        {
+          "path": "art/previews/bluefin-iris/eye-close-opposite.png",
+          "sha256": "b388695e399451ca3139ec5167831356747f1fa8006f6234a10b3cc741b786be"
+        },
+        {
+          "path": "art/previews/bluefin-iris/eye-close.png",
+          "sha256": "efffd5d54546a58bbe3f81f461cb565a4344e468584fda1265d7b230be6f82d4"
+        },
+        {
+          "path": "art/previews/bluefin-iris/fin-close.png",
+          "sha256": "cab942eece6206fc1e6cc1754e4a3e7c4d5592933a161d118c25b32081cc17d4"
+        },
+        {
+          "path": "art/previews/bluefin-iris/front.png",
+          "sha256": "efe7d572286696e47ac19e64376f79412f5d40720c253fae05dfa4e3aa9b4e89"
+        },
+        {
+          "path": "art/previews/bluefin-iris/mouth-close.png",
+          "sha256": "933f04d1d5bef7c5322116131603da5bfd56cae5a618ace1d66fbaeb57ec5bd0"
+        },
+        {
+          "path": "art/previews/bluefin-iris/rejected-cheek-clipping.png",
+          "sha256": "e39bcd442a26b6eb8228548cf1103332b092d01f6790286344e967ba21eb8522"
+        },
+        {
+          "path": "art/previews/bluefin-iris/side.png",
+          "sha256": "131a8f3ea54bb501e210f5168ed7e85c0301730f41e8315431b00eb1f2f3e843"
+        },
+        {
+          "path": "art/previews/bluefin-iris/three-quarter.png",
+          "sha256": "f836fcbd269ff7efb68116a432fd654c2e7ccdc09f3aecf738e71831a88bb320"
+        },
+        {
+          "path": "art/previews/bluefin-iris/top.png",
+          "sha256": "e47663a76a6c62b3044f06ad2e9a0a29eca7d6124de2ef946d2eb861918c3a5a"
+        },
+        {
+          "path": "art/previews/bluefin-iris/unity-bite-mouth.png",
+          "sha256": "449b08ba55f0340714d663338894f3a7a2b1b1dd8b5c38d8680169f289ee99eb"
+        },
+        {
+          "path": "art/previews/bluefin-iris/unity-idle-eye-opposite.png",
+          "sha256": "834ce18d6a9b5fd55a5d0bec660e087ebdccc2c4f99bffdbc34992b7500eb357"
+        },
+        {
+          "path": "art/previews/bluefin-iris/unity-idle-eye.png",
+          "sha256": "617f1e431dc80a4bc8b793c79d4e78ee4298008864cca25789260d39001d1b28"
+        },
+        {
+          "path": "art/previews/bluefin-iris/unity-idle-side.png",
+          "sha256": "5d0c0519d281879c18056e6957cc42a57f27acdcd6ff38712c75336ffc9f8b37"
+        },
+        {
+          "path": "art/previews/bluefin-iris/turntable.mp4",
+          "sha256": "b9f663cbf9f35fd348f2caff7fbdc63faa498c8033a20e537cad22dd8bbe2f5a"
+        },
+        {
+          "path": "art/previews/bluefin-iris/contact.png",
+          "sha256": "9ea3a51a79d76b3b0de875b0146f488f10c8873e4077b737a7c3f0a0a83470b7"
+        }
+      ],
+      "note": "All included images actually reviewed. rejected-cheek-clipping is a rejected intermediate, not final geometry. Editor Metal is not native Player evidence. No external photography, UI/sidebar or device logs. Turntable 36 source views inspected as contact sheet, encoded960x640/12fps/3seconds and decoded frame-count checked; not game performance."
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."
