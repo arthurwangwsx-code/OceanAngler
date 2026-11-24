@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "0792713d-e4aa-4cf3-a24a-cd9a9c33d81c",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "8ac1d7895be4f5c439763e93ac9b30d64ece04d5e3070a388c62c4ce916f22a1",
+    "category": "test",
+    "executable": "Blender",
+    "startedAt": "2026-11-24T18:28:10.694Z",
+    "finishedAt": "2026-11-24T18:28:17.811Z",
+    "durationMs": 7072.997582999999,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "/Applications/Blender.app/Contents/MacOS/Blender",
+    "args": [
+      "--background",
+      "--factory-startup",
+      "--threads",
+      "8",
+      "--python-exit-code",
+      "1",
+      "--python",
+      ".local/pectoral-qa/compare-source.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "/Applications/Blender.app/Contents/MacOS/Blender",
+    "--background",
+    "--factory-startup",
+    "--threads",
+    "8",
+    "--python-exit-code",
+    "1",
+    "--python",
+    ".local/pectoral-qa/compare-source.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T18:28:10.694Z",
+  "finishedAt": "2026-11-24T18:28:17.811Z",
+  "durationMs": 7072.997582999999
+}

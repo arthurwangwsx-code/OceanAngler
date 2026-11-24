@@ -263,8 +263,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 578907466900933907}
   m_AABB:
-    m_Center: {x: -0.0019888692, y: 0.0006639017, z: -0.000007311115}
-    m_Extent: {x: 0.012808325, y: 0.0052736597, z: 0.0041326694}
+    m_Center: {x: -0.0019888692, y: 0.0006639017, z: 0.00017225277}
+    m_Extent: {x: 0.012808325, y: 0.0052736597, z: 0.0041535785}
   m_DirtyAABB: 0
 --- !u!1 &2727477621749009421
 GameObject:
@@ -341,7 +341,7 @@ LODGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3278582666028077058}
   serializedVersion: 2
-  m_LocalReferencePoint: {x: 0.19815314, y: 0.06637341, z: 0.00073343515}
+  m_LocalReferencePoint: {x: 0.19815314, y: 0.06637341, z: -0.017281711}
   m_Size: 2.5639074
   m_FadeMode: 0
   m_AnimateCrossFading: 0
@@ -570,8 +570,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 578907466900933907}
   m_AABB:
-    m_Center: {x: -0.0019976804, y: 0.0006637343, z: -0.000007334631}
-    m_Extent: {x: 0.012802991, y: 0.005275688, z: 0.0041335938}
+    m_Center: {x: -0.0019976804, y: 0.0006637343, z: 0.00017281715}
+    m_Extent: {x: 0.012802991, y: 0.005275688, z: 0.004155103}
   m_DirtyAABB: 0
 --- !u!1 &3875973153434819146
 GameObject:
@@ -712,8 +712,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 578907466900933907}
   m_AABB:
-    m_Center: {x: -0.0019815313, y: 0.0006637948, z: -0.0000069919042}
-    m_Extent: {x: 0.012819537, y: 0.005273713, z: 0.0041316543}
+    m_Center: {x: -0.0019815313, y: 0.0006637948, z: 0.00017226068}
+    m_Extent: {x: 0.012819537, y: 0.005273713, z: 0.0041539404}
   m_DirtyAABB: 0
 --- !u!1 &4656469716251723552
 GameObject:

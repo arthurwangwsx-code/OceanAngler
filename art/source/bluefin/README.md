@@ -35,3 +35,5 @@ Unity执行python3 tools/game.py bluefin，重建URP材质、动画控制器和R
 当前鳍色/比例与表面迭代见[bluefin-palette.md](../../../reports/bluefin-palette.md)：三LOD24284/9712/3642，六源材质槽，蓝/灰铜鳍区共用1024×512纹理；斑点按局部UV尺度补偿。当前工作室/Unity图与转台在art/previews/bluefin-palette，原anatomy目录是历史快照。科学摄影仅浏览参考，没有收入资产。近景阴影通过自身投影/焦散/法线与偏移对照，最终保留1024单级联及投射/接收，使用24米/Low软过滤和偏移2/0；成本与A1–A3继续待验。转台可由review --turntable生成36帧，再用ffmpeg -framerate 12 -i turn-%03d.png -c:v libx264 -pix_fmt yuv420p -movflags +faststart turntable.mp4合成；该帧率不是运行时性能。
 
 当前薄鳍迭代见[制作约束](../../../docs/25-hero-fin-tissue.md)：保留24664面LOD0预算，三LOD24664/9864/3699；鳍膜在各LOD独立重建闭合渐薄壁，胸鳍边界按有序轮廓修正；原RGBA膜图与法线、粗糙度、MetallicSmoothness均为本项目生成。鳍条与膜拆为七材质槽，实体保持不透明，膜采用URP Lit透明Alpha并保留高光。膜不写深度或投影，不声称真实折射或生物透射率；多角度、原生运行、美术和科学验收须分开。
+
+当前胸鳍曲线B内收后缘，三LOD24664/9864/3698，保留原贴图；非胸鳍LOD0在保持六位精度/面朝向/重复数量、归一面顺序/循环起点后几何UV权重与材质角色一致。第一版工程通过但画面被否决，失败样本不删除；当前仍非完整美术通过，见[胸鳍回执](../../../reports/bluefin-pectoral.md)。

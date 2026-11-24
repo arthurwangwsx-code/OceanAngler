@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "936810bb-6c3d-42d7-8865-fdcac76ecd8b",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "e188e59b7bb07b868c3200ca17330453fa22a07e2d27c4d00d53c9474ec296a8",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-24T18:29:22.946Z",
+    "finishedAt": "2026-11-24T18:30:17.185Z",
+    "durationMs": 54184.707875,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      "tools/game.py",
+      "tests",
+      "--test-platform",
+      "PlayMode",
+      "--test-filter",
+      "FishAnimationTests;IntegratedWorldTests;ImmersiveNavigationTests",
+      "--label",
+      "pectoral20261125all"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    "tools/game.py",
+    "tests",
+    "--test-platform",
+    "PlayMode",
+    "--test-filter",
+    "FishAnimationTests;IntegratedWorldTests;ImmersiveNavigationTests",
+    "--label",
+    "pectoral20261125all"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T18:29:22.946Z",
+  "finishedAt": "2026-11-24T18:30:17.185Z",
+  "durationMs": 54184.707875
+}

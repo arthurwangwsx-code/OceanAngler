@@ -274,8 +274,11 @@ fin('Caudal_DeepFork',roots,tips,'tail')
 for sign,label in [(1,'L'),(-1,'R')]:
     roots=[];tips=[]
     for i in range(15):
-        t=i/14;length=(1-t)**.65
-        roots.append((-.48,.16*sign,.035-.14*t));tips.append((-.44+.77*length,sign*(.16+.17*math.sin(length*math.pi*.65)),-.18-.045*t))
+        # A swept leading ray and a recessed trailing edge retain a long
+        # falcate silhouette instead of a broad straight-edged fan. These
+        # control points are authored proportions, not biological measurements.
+        t=i/14;length=(1-t)**1.1
+        roots.append((-.48,.16*sign,.035-.14*t));tips.append((-.44+.77*length,sign*(.16+.17*math.sin(length*math.pi*.65)),-.18-.035*t+.075*math.sin(math.pi*t)))
     fin('Pectoral_'+label,roots,tips,'pectoral'+label,palette='pale')
     roots=[];tips=[]
     for i in range(7):

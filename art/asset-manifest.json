@@ -50,11 +50,11 @@
       "acquiredAt": "2026-11-23",
       "status": "ART_REVIEW_PENDING",
       "path": "art/source/bluefin/Bluefin.blend",
-      "sha256": "974d6a6e929541647edbb0afa5976eb3b9ce9779c0f40eb1b402df6c26217e02",
+      "sha256": "837884b5f2cc31cc631fdf0dde5255b2c0d17b0e484c42daa481ec3c143d7615",
       "artifacts": [
         {
           "path": "art/source/bluefin/Bluefin.blend",
-          "sha256": "974d6a6e929541647edbb0afa5976eb3b9ce9779c0f40eb1b402df6c26217e02"
+          "sha256": "837884b5f2cc31cc631fdf0dde5255b2c0d17b0e484c42daa481ec3c143d7615"
         },
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin_BaseColor.png",
@@ -78,7 +78,7 @@
         },
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin.fbx",
-          "sha256": "7b87ea9c137f1ab657f876a493592ab29d0f066090196393df2224190f66e445"
+          "sha256": "d41481de0a85ac31214e4f6b863b13394367871251ad69394e02fb9f5482bae7"
         },
         {
           "path": "art/previews/bluefin/bite.png",
@@ -147,11 +147,11 @@
         },
         {
           "path": "game/Assets/OceanAngler/Resources/Models/Bluefin.prefab",
-          "sha256": "29235acbb68724cf3530dd507f93106825591e75da78103b699b5e9fb9eeeee1"
+          "sha256": "51b7fa2942132ad68348f2e5644d067b2889c2e87c03038fcd0e335683da3470"
         },
         {
           "path": "art/source/bluefin/build-report.json",
-          "sha256": "7e54bdedb221d3363178bc4aa3f4fc88ed761ba4497034cea73c9857d772ae0b"
+          "sha256": "e4068e83850ac32ad71255876c449ceed98c5d612347f6b4438642994eae06f3"
         },
         {
           "path": "art/previews/bluefin-fin-tissue/first-native-phone-exit.png",
@@ -265,8 +265,8 @@
         }
       ],
       "note": "Original bluefin trevally mesh, UV, PBR maps, 12-bone rig, seven animation clips and three LODs. Scientific/visual/user/device acceptance remains open. No third-party photographs or models included.",
-      "modifiedAt": "2026-11-24",
-      "modifications": "Fin membranes rebuilt with tapered closed shells in all three LODs; original RGBA, normal, roughness and packed maps; separate opaque rays. Material slots6->7 explicitly; triangles24664/9864/3699 within unchanged25000 LOD0 budget,12bones/7motions retained. Actual source checks and isolated HDR Metal controls pass; source/Player visual, scientific, user and device gates remain separate."
+      "modifiedAt": "2026-11-25",
+      "modifications": "Fin membranes rebuilt with tapered closed shells in all three LODs; original RGBA, normal, roughness and packed maps; separate opaque rays. Material slots6->7 explicitly; triangles24664/9864/3699 within unchanged25000 LOD0 budget,12bones/7motions retained. Actual source checks and isolated HDR Metal controls pass; source/Player visual, scientific, user and device gates remain separate. Pectoral trailing-edge curve candidate B after visibly rejecting A; existing maps unchanged, LOD0 non-pectoral geometry/UV/weights/material roles normalized-identical. Art/science/user/Player qualification pending."
     },
     {
       "id": "complete-spinning-rig-candidate",
@@ -2321,6 +2321,44 @@
         }
       ],
       "note": "Both19-frame contacts and five selected original UI images reviewed by agent. Own game only; no personal photographs, device IDs or raw logs. Embedded font retains registered OFL notice. Models/world remain candidates; user/scientific/children/physical-device acceptance not implied."
+    },
+    {
+      "id": "bluefin-pectoral-reviewed-previews",
+      "author": "OceanAngler contributors",
+      "source": "Imported authored source via tools/game.py pectoral-review",
+      "license": "MIT",
+      "redistribution": true,
+      "sourceRedistribution": true,
+      "canModify": true,
+      "acquiredAt": "2026-11-25",
+      "status": "ART_REVIEW_PENDING",
+      "artifacts": [
+        {
+          "path": "art/previews/bluefin-pectoral/before-close.png",
+          "sha256": "6b623cc906ebf802d9d7f494af788e90a58d2fe51f09c831075fb6b1479262ec"
+        },
+        {
+          "path": "art/previews/bluefin-pectoral/rejected-first-curve.png",
+          "sha256": "9800a4302e659961f82965d5e1f93335ea5979fe3d3e507eadae5df71e9fc316"
+        },
+        {
+          "path": "art/previews/bluefin-pectoral/candidate-close.png",
+          "sha256": "899aef5a80e3784c46db7c62d0caa8882a9413b050501876c207f26ee0041248"
+        },
+        {
+          "path": "art/previews/bluefin-pectoral/candidate-lod2.png",
+          "sha256": "9fd1f7f1cbaac54a29786dc14a8080ef985a83153f25fa5bb55cd7a8ca1844e1"
+        },
+        {
+          "path": "art/previews/bluefin-pectoral/candidate-side.png",
+          "sha256": "5446597f2d4b67b93403c54e937e606923a391eff63754efca32b7e7c109f92e"
+        },
+        {
+          "path": "art/previews/bluefin-pectoral/candidate-quarter.png",
+          "sha256": "f17064b7368e91b3c4cccc87ed9f6e961ba2cfb84e0c6174fc97ee8b5ad6812f"
+        }
+      ],
+      "note": "Own rendered images: original, rejected curve, retained B close/side/quarter/LOD2. Material controls are diagnostics, not approved art. No institutional photography copied."
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."
