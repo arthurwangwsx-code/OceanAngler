@@ -72,9 +72,10 @@ namespace OceanAngler
                 phaseText.text="已记录并放流";
                 hintText.text="获得 "+game.Progress.Data.catches[game.Progress.Data.catches.Count-1].awardedPoints+" 研究积分";
             }
-            if(game.RestReminder&&game.Session.Phase==FishingPhase.Ready)hintText.text="和家人休息一下吧。";
+            bool showRest=game.RestReminder&&game.Session.Phase==FishingPhase.Ready;
+            if(showRest)hintText.text="和家人休息一下吧。";
             bool quiet=game.Progress.Data.tutorialComplete&&(game.Session.Phase==FishingPhase.Ready||game.Session.Phase==FishingPhase.Waiting)&&Time.unscaledTime-hintBegan>6;
-            hintGroup.SetActive(!quiet||game.RestReminder);
+            hintGroup.SetActive(!quiet||showRest);
         }
         void BuildPauseMenu(bool home)
         {
@@ -84,13 +85,13 @@ namespace OceanAngler
             Label(panel,home?"海洋小钓手":"探索已暂停",26,Color.white,20,12,-40,40);
             Label(panel,game.Content.Habitat(game.Progress.Data.habitatId).name+" · 研究积分 "+game.Progress.Data.totalPoints,17,Muted,20,53,-40,28);
             float half=(w-52)/2;
-            Button(panel,"继续探索",20,88,half,46,()=>{page="出海";focusedFish=null;game.Pause(false);dirty=false;Rebuild();},Teal);
+            Button(panel,game.RestReminder?"休息好了，继续":"继续探索",20,88,half,46,()=>{if(game.RestReminder)game.DismissRest();page="出海";focusedFish=null;game.Pause(false);dirty=false;Rebuild();},Teal);
             Button(panel,"海域与装备",32+half,88,half,46,()=>Navigate("准备"),Navy);
             string[] names={"出海","图鉴","钓具","任务","设置"};TouchSymbol.Kind[] icons={TouchSymbol.Kind.Rod,TouchSymbol.Kind.Book,TouchSymbol.Kind.Reel,TouchSymbol.Kind.Tasks,TouchSymbol.Kind.Settings};float cell=(w-32)/5;
             for(int i=0;i<names.Length;i++){string target=names[i];IconButton(panel,target,icons[i],16+i*cell,146,cell,82,()=>Navigate(target),48);}
             Button(panel,"结束本次 · 返回准备",20,240,half,44,()=>Navigate("退出确认"),Navy).GetComponentInChildren<Text>().fontSize=17;
             Button(panel,home?"返回暂停":"返回首页",32+half,240,half,44,()=>Navigate(home?"出海":"首页"),Navy).GetComponentInChildren<Text>().fontSize=17;
-            Label(panel,"当前探索会保留，点继续才恢复。",17,Muted,20,294,-40,28);
+            Label(panel,game.RestReminder?"和家人休息一下，准备好再继续。":"当前探索会保留，点继续才恢复。",17,Muted,20,294,-40,28);
         }
         void BuildExitConfirmation()
         {

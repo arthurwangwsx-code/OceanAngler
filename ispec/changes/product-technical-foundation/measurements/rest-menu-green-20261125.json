@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "e32dc461-40e2-46fa-baad-851ae3339c86",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "69707dfead06b45b25549891a5f2a5dca8ae3dd99683f0b8b93f3a83768005d1",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-24T16:28:56.808Z",
+    "finishedAt": "2026-11-24T16:29:38.305Z",
+    "durationMs": 41459.761791000004,
+    "exitCode": 2,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      "tools/game.py",
+      "tests",
+      "--test-platform",
+      "PlayMode",
+      "--test-filter",
+      "ImmersiveNavigationTests",
+      "--label",
+      "rest20261125green"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    "tools/game.py",
+    "tests",
+    "--test-platform",
+    "PlayMode",
+    "--test-filter",
+    "ImmersiveNavigationTests",
+    "--label",
+    "rest20261125green"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 2,
+  "startedAt": "2026-11-24T16:28:56.808Z",
+  "finishedAt": "2026-11-24T16:29:38.305Z",
+  "durationMs": 41459.761791000004
+}

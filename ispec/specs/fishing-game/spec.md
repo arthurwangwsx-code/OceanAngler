@@ -61,6 +61,10 @@ The system SHALL satisfy the P1 contract: 横屏安全区、左右手、减弱�
 - **WHEN** 对应阶段执行验收
 - **THEN** 必须提供以下证据：横屏安全区、左右手、减弱动态、非纯颜色提示，未运行不得写 PASS。
 
+#### Scenario: REQ-08 gentle rest reminder
+- **WHEN** 未暂停游玩累计900秒
+- **THEN** 仅在准备抛竿时借用原边缘提示，暂停/首页复用原继续按钮和说明；不自动暂停、不遮挡提竿/控线/收鱼。普通导航不清除，主动确认继续才开启下一周期，不改变已有积分、记录或设置。计时边界、原生实际时间/画面与儿童体验分别验收。
+
 ### Requirement: REQ-09 隐私家长区
 The system SHALL satisfy the P1 contract: 无跟踪SDK或隐私权限，清档与外链经家长区。
 

@@ -10,12 +10,14 @@ namespace OceanAngler
     public sealed partial class RuntimeSmoke
     {
         [Serializable] sealed class HudSample { public string phase;public bool leftHanded,centralClear;public int buttons;public float occupiedRatio; }
-        [Serializable] sealed class ImmersiveResult { public string status,scope;public string[] failures;public List<HudSample> samples;public int catchesBefore,catchesAfter,pointsBefore,pointsAfter;public bool unfinishedExitPreservedLedger,settingsRestored; }
+        [Serializable] sealed class RestTimerResult { public string status="RUNNING",scope="real unmodified active timer on a QA player; not child or physical-device qualification";public float observedSeconds;public bool paused,reminderDue,acknowledged,progressUnchanged; }
+        [Serializable] sealed class ImmersiveResult { public string status,scope;public string[] failures;public List<HudSample> samples;public int catchesBefore,catchesAfter,pointsBefore,pointsAfter;public bool unfinishedExitPreservedLedger,settingsRestored;public RestTimerResult restTimer; }
+        RestTimerResult restTimer;
         readonly List<HudSample> hudSamples=new List<HudSample>();
         public IEnumerator RunImmersiveReview(string outputFolder,bool captureFrames,bool quitProcess=false)
         {
             folder=Path.GetFullPath(outputFolder);Directory.CreateDirectory(folder);if(File.Exists(Path.Combine(folder,"receipt.json")))throw new InvalidOperationException("Use a new review folder");
-            game=GetComponent<GameController>();began=Time.realtimeSinceStartup;finished=false;journeyMode=gearReviewMode=true;journeyQuit=quitProcess;completeContent=false;hudSamples.Clear();
+            game=GetComponent<GameController>();began=Time.realtimeSinceStartup;finished=false;journeyMode=true;gearReviewMode=!LaunchArguments.Get().Contains("--ocean-rest-timer");journeyQuit=quitProcess;completeContent=false;hudSamples.Clear();restTimer=null;
             receipt=new Receipt{captureEnabled=captureFrames,scope=captureFrames?"native focused immersive UI EventSystem review; not OS touch, child or full progression":"headless immersive UI regression; no rendered acceptance"};
             var before=game.Progress.Data.Clone();var stack=new Stack<IEnumerator>();stack.Push(ImmersiveReview());
             while(stack.Count>0&&!finished)
@@ -27,7 +29,7 @@ namespace OceanAngler
             }
             while(stack.Count>0)(stack.Pop() as IDisposable)?.Dispose();
             if(!finished)FinishJourney();
-            File.WriteAllText(Path.Combine(folder,"immersive.json"),JsonUtility.ToJson(new ImmersiveResult{status=receipt.status,scope=receipt.scope,failures=receipt.failures.ToArray(),samples=new List<HudSample>(hudSamples),catchesBefore=before.catches.Count,catchesAfter=game.Progress.Data.catches.Count,pointsBefore=before.totalPoints,pointsAfter=game.Progress.Data.totalPoints,unfinishedExitPreservedLedger=game.Progress.Data.catches.Count==before.catches.Count+1,settingsRestored=JsonUtility.ToJson(before.settings)==JsonUtility.ToJson(game.Progress.Data.settings)},true));
+            File.WriteAllText(Path.Combine(folder,"immersive.json"),JsonUtility.ToJson(new ImmersiveResult{status=receipt.status,scope=receipt.scope,failures=receipt.failures.ToArray(),samples=new List<HudSample>(hudSamples),catchesBefore=before.catches.Count,catchesAfter=game.Progress.Data.catches.Count,pointsBefore=before.totalPoints,pointsAfter=game.Progress.Data.totalPoints,unfinishedExitPreservedLedger=game.Progress.Data.catches.Count==before.catches.Count+1,settingsRestored=JsonUtility.ToJson(before.settings)==JsonUtility.ToJson(game.Progress.Data.settings),restTimer=restTimer},true));
         }
         void CheckImmersiveHud()
         {
@@ -60,7 +62,10 @@ namespace OceanAngler
             var args=LaunchArguments.Get();int index=Array.IndexOf(args,"--ocean-save-root");JourneyRequire(index>=0&&index+1<args.Length,"immersive-isolated-save-root");string save=Path.Combine(args[index+1],"ocean-progress.json");
             JourneyRequire(!game.Progress.RequiresRecovery&&game.Session.Phase==FishingPhase.Ready,"immersive-ready-valid-save");var original=game.Progress.Data.Clone();
             yield return null;yield return null;
+            bool verifyRest=LaunchArguments.Get().Contains("--ocean-rest-timer");float restStart=Time.realtimeSinceStartup;
+            if(verifyRest)JourneyRequire(game.Session.Paused&&!game.RestReminder,"rest-clock-starts-from-paused-new-process");
             if(game.Session.Paused){yield return JourneyClick("继续探索",true);yield return null;yield return null;}
+            if(verifyRest)yield return VerifyRealRestTimer(restStart);
             foreach(bool left in new[]{false,true})
             {
                 yield return JourneyClick("设置",true);yield return null;yield return null;
@@ -112,6 +117,27 @@ namespace OceanAngler
             if(game.Progress.Data.settings.leftHanded!=original.settings.leftHanded){yield return JourneyClick("左手操作");yield return null;yield return null;}
             var loaded=new SaveStore(save,game.Content).Load();JourneyRequire(!loaded.requiresRecovery&&loaded.data.catches.Count==original.catches.Count+1&&loaded.data.totalPoints==loaded.data.catches.Sum(c=>c.awardedPoints)&&JsonUtility.ToJson(loaded.data.settings)==JsonUtility.ToJson(original.settings),"immersive-restored-settings-real-disk-ledger");
             receipt.pixelsPerPoint=DisplayMetrics.PixelsPerPoint;receipt.safeWidthPoints=DisplayMetrics.SafeArea.width/DisplayMetrics.PixelsPerPoint;receipt.safeHeightPoints=DisplayMetrics.SafeArea.height/DisplayMetrics.PixelsPerPoint;
+        }
+        IEnumerator VerifyRealRestTimer(float started)
+        {
+            string before=JsonUtility.ToJson(game.Progress.Data);restTimer=new RestTimerResult();float next=0;
+            CheckImmersiveHud();yield return JourneyFrame("rest-before");
+            while(!game.RestReminder&&Time.realtimeSinceStartup-started<930)
+            {
+                restTimer.observedSeconds=Time.realtimeSinceStartup-started;restTimer.paused=game.Session.Paused;
+                JourneyRequire(!restTimer.paused&&game.Session.Phase==FishingPhase.Ready,"rest-clock-uninterrupted-ready-no-auto-pause");
+                if(restTimer.observedSeconds>=next){File.WriteAllText(Path.Combine(folder,"rest-timer.json"),JsonUtility.ToJson(restTimer,true));next+=30;}
+                yield return null;
+            }
+            restTimer.observedSeconds=Time.realtimeSinceStartup-started;restTimer.reminderDue=game.RestReminder;
+            JourneyRequire(restTimer.reminderDue&&restTimer.observedSeconds>=899.5f&&restTimer.observedSeconds<930,"rest-real-quarter-hour-trigger-without-clock-injection");
+            yield return null;CheckImmersiveHud();yield return JourneyFrame("rest-ready");
+            yield return JourneyClick("暂停",true);yield return null;yield return null;CheckLayout("rest-pause");
+            JourneyRequire(game.Session.Paused&&game.RestReminder&&FindObjectsByType<Text>(FindObjectsSortMode.None).Any(t=>t.text=="和家人休息一下，准备好再继续。"),"rest-visible-paused-context");yield return JourneyFrame("rest-pause");
+            yield return JourneyClick("休息好了，继续",true);yield return null;yield return null;
+            restTimer.acknowledged=!game.RestReminder&&!game.Session.Paused&&!game.Reeling;restTimer.progressUnchanged=before==JsonUtility.ToJson(game.Progress.Data);
+            JourneyRequire(restTimer.acknowledged&&restTimer.progressUnchanged,"rest-explicit-continue-clears-without-ledger-change");CheckImmersiveHud();yield return JourneyFrame("rest-resumed");
+            restTimer.status="PASS";File.WriteAllText(Path.Combine(folder,"rest-timer.json"),JsonUtility.ToJson(restTimer,true));
         }
     }
 }
