@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "0a63d253-0057-405e-b678-6c1218c096fb",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "9b0b2298158f673f3a9d7f2c404dd57ebeeff698ca64ba46da9938fe46d756a4",
+    "category": "e2e",
+    "executable": "python3",
+    "startedAt": "2026-11-24T16:49:52.482Z",
+    "finishedAt": "2026-11-24T17:06:16.737Z",
+    "durationMs": 984216.361916,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/rest-qa/run-native.py",
+      "immersive",
+      "rest20261125phone1",
+      "--device",
+      "phone"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/rest-qa/run-native.py",
+    "immersive",
+    "rest20261125phone1",
+    "--device",
+    "phone"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T16:49:52.482Z",
+  "finishedAt": "2026-11-24T17:06:16.737Z",
+  "durationMs": 984216.361916
+}

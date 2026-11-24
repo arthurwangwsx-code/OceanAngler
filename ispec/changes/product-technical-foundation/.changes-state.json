@@ -10681,6 +10681,171 @@
       "executable": "python3",
       "commandDigest": "bb714160493a947abb92b098b1f304047a09e1a6ad0dca4c39cdd36f5dc38916",
       "receiptPath": "measurements/rest-prefreeze-audit-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "590fc35d-0d12-4e6a-af91-3dcbf4276ada",
+      "startedAt": "2026-11-24T16:38:20.037Z",
+      "executable": "python3",
+      "commandDigest": "526f9165a6fbf6f0cfa4abd52e8f84749fc952e83a50c7367f8ee667d2495683",
+      "receiptPath": "measurements/rest-native-build-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "5728c82e-0010-434b-b99e-8c36be129571",
+      "startedAt": "2026-11-24T16:45:25.006Z",
+      "executable": "python3",
+      "commandDigest": "2848a26a685399e2bd3aab55afbc7088efaae83d151872150980247f689edcbb",
+      "receiptPath": "measurements/rest-cache-maintenance-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "627f777c-39a6-4dd6-ae8c-c8eb41fe9ad3",
+      "startedAt": "2026-11-24T16:46:16.691Z",
+      "executable": "python3",
+      "commandDigest": "2848a26a685399e2bd3aab55afbc7088efaae83d151872150980247f689edcbb",
+      "receiptPath": "measurements/rest-cache-maintenance-20261125b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "529a5868-0540-43e1-85c6-0cc6a194cb42",
+      "startedAt": "2026-11-24T16:47:24.980Z",
+      "executable": "python3",
+      "commandDigest": "7300190d01638c15c5eac2c2e4dae991f6a670e6c0fe1c933db6aa11d3f402dc",
+      "receiptPath": "measurements/rest-cache-maintenance-20261125c.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "96f02bdf-6e1f-4648-85ff-1596cd409296",
+      "startedAt": "2026-11-24T16:48:13.994Z",
+      "executable": "python3",
+      "commandDigest": "799162a2bebd8c257fe1a43371945cca6ae72e39a2516875e5d60d9126ca7666",
+      "receiptPath": "measurements/rest-native-resume-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "0a63d253-0057-405e-b678-6c1218c096fb",
+      "startedAt": "2026-11-24T16:49:52.482Z",
+      "executable": "python3",
+      "commandDigest": "9b0b2298158f673f3a9d7f2c404dd57ebeeff698ca64ba46da9938fe46d756a4",
+      "receiptPath": "measurements/rest-native-phone-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "03de5132-c6d2-40ef-bca9-e9ec30c15e8c",
+      "startedAt": "2026-11-24T17:06:46.862Z",
+      "executable": "python3",
+      "commandDigest": "c4de922f711bf7c7e27c58ea866352c3f62c858c830fd89741cc2df72d869681",
+      "receiptPath": "measurements/rest-native-phone-proof-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "e4839f22-340e-4fc1-82dd-ae139c4243b6",
+      "startedAt": "2026-11-24T17:07:18.599Z",
+      "executable": "python3",
+      "commandDigest": "9c67ec1b3d9f89e6f1be51333524d2806b75bfa40412d3d47a0fe87a5de3e334",
+      "receiptPath": "measurements/rest-retention-after-phone-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "63763d47-4d27-46a1-99c7-72cb018b95b0",
+      "startedAt": "2026-11-24T17:07:57.247Z",
+      "executable": "python3",
+      "commandDigest": "d5d288a5feb9d6ada4f612cc7e2e159284b6700f6f297ee06c2b71dced49a989",
+      "receiptPath": "measurements/rest-native-pad-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "92e3afb4-eac2-4a2d-8ea3-9a52b6ce9583",
+      "startedAt": "2026-11-24T17:24:22.893Z",
+      "executable": "python3",
+      "commandDigest": "b6655103e5110a164694d56ead254d1ed6045e92a5ec545118ef59fb9ad8a6be",
+      "receiptPath": "measurements/rest-native-pad-proof-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "316e470f-69a7-48ee-aa9c-e843aaf5e63c",
+      "startedAt": "2026-11-24T17:24:26.086Z",
+      "executable": "python3",
+      "commandDigest": "9c67ec1b3d9f89e6f1be51333524d2806b75bfa40412d3d47a0fe87a5de3e334",
+      "receiptPath": "measurements/rest-retention-after-pad-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "231c014f-b38b-4d74-9150-1595b89f65ee",
+      "startedAt": "2026-11-24T17:24:52.118Z",
+      "executable": "python3",
+      "commandDigest": "a77b236ddb194ae63797a17d0e16a26a04b771bdd93e096da431a2fd46dfabb7",
+      "receiptPath": "measurements/rest-reopen-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "3043e898-693c-4b1e-82ef-11d4977e10fd",
+      "startedAt": "2026-11-24T17:25:15.696Z",
+      "executable": "python3",
+      "commandDigest": "f19e07c0e80004b4e278f5cab615c0f7f052be4582079441fd424c2323401c58",
+      "receiptPath": "measurements/rest-reopen-proof-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "6a85145e-0b97-40e5-8b7a-40aac961ad9c",
+      "startedAt": "2026-11-24T17:27:25.196Z",
+      "executable": "python3",
+      "commandDigest": "bb714160493a947abb92b098b1f304047a09e1a6ad0dca4c39cdd36f5dc38916",
+      "receiptPath": "measurements/rest-final-audit-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "84ae5a15-6b4c-41ba-b5c3-e3a2d6591fa8",
+      "startedAt": "2026-11-24T17:27:25.877Z",
+      "executable": "python3",
+      "commandDigest": "a4a5e2324d81638e3a1d136659f041eed96f8bda7b24ef43305020eacb2c83ee",
+      "receiptPath": "measurements/rest-final-public-checks-20261125.json"
     }
   ],
   "runMeasurements": [
@@ -26601,6 +26766,291 @@
       "receipt": {
         "path": "measurements/rest-prefreeze-audit-20261125.json",
         "sha256": "b500b98494998b1ecec183810b6491e8332d299ecd3b09879c032148f9a50820"
+      }
+    },
+    {
+      "id": "590fc35d-0d12-4e6a-af91-3dcbf4276ada",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "526f9165a6fbf6f0cfa4abd52e8f84749fc952e83a50c7367f8ee667d2495683",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T16:38:20.037Z",
+      "finishedAt": "2026-11-24T16:43:46.721Z",
+      "durationMs": 326532.93854199996,
+      "exitCode": 65,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rest-native-build-20261125.json",
+        "sha256": "202ebbac53948a5e3460915311a1bfe53be326db800efbbbf14e555b0173003e"
+      }
+    },
+    {
+      "id": "5728c82e-0010-434b-b99e-8c36be129571",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "2848a26a685399e2bd3aab55afbc7088efaae83d151872150980247f689edcbb",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T16:45:25.006Z",
+      "finishedAt": "2026-11-24T16:45:25.517Z",
+      "durationMs": 361.33624999999984,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rest-cache-maintenance-20261125.json",
+        "sha256": "12838f4d430822788c76ac82d0facc1b38a895af7ab5807e0e1f6fd8c2dc183c"
+      }
+    },
+    {
+      "id": "627f777c-39a6-4dd6-ae8c-c8eb41fe9ad3",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "2848a26a685399e2bd3aab55afbc7088efaae83d151872150980247f689edcbb",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T16:46:16.691Z",
+      "finishedAt": "2026-11-24T16:46:20.122Z",
+      "durationMs": 3399.3678330000002,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rest-cache-maintenance-20261125b.json",
+        "sha256": "1985b4c6d0bff5fad004ac2abbf761a95546dc45dd2c1bc9306a554f23423fd4"
+      }
+    },
+    {
+      "id": "529a5868-0540-43e1-85c6-0cc6a194cb42",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "7300190d01638c15c5eac2c2e4dae991f6a670e6c0fe1c933db6aa11d3f402dc",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T16:47:24.980Z",
+      "finishedAt": "2026-11-24T16:47:33.632Z",
+      "durationMs": 8613.477499999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rest-cache-maintenance-20261125c.json",
+        "sha256": "36ed489650daacd6454267d8ebe25d073db7b0e2d4dcb6ac8612ff435fce5853"
+      }
+    },
+    {
+      "id": "96f02bdf-6e1f-4648-85ff-1596cd409296",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "799162a2bebd8c257fe1a43371945cca6ae72e39a2516875e5d60d9126ca7666",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T16:48:13.994Z",
+      "finishedAt": "2026-11-24T16:49:31.903Z",
+      "durationMs": 77500.00341599999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rest-native-resume-20261125.json",
+        "sha256": "29619203724e0b9f39bc63b23652b271ff34143706fdb8b35302c775ada1cbac"
+      }
+    },
+    {
+      "id": "0a63d253-0057-405e-b678-6c1218c096fb",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "9b0b2298158f673f3a9d7f2c404dd57ebeeff698ca64ba46da9938fe46d756a4",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-24T16:49:52.482Z",
+      "finishedAt": "2026-11-24T17:06:16.737Z",
+      "durationMs": 984216.361916,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rest-native-phone-20261125.json",
+        "sha256": "1539b8cfbbc8a426e46eef33047fd2d68fb08bb2c1249f40882198c3cefcd8bf"
+      }
+    },
+    {
+      "id": "03de5132-c6d2-40ef-bca9-e9ec30c15e8c",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "c4de922f711bf7c7e27c58ea866352c3f62c858c830fd89741cc2df72d869681",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T17:06:46.862Z",
+      "finishedAt": "2026-11-24T17:06:46.948Z",
+      "durationMs": 58.815875000000005,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rest-native-phone-proof-20261125.json",
+        "sha256": "3ed1815186540414aff2a69de592f359e69921042fa1dcde1c51f2c9de6a3a26"
+      }
+    },
+    {
+      "id": "e4839f22-340e-4fc1-82dd-ae139c4243b6",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "9c67ec1b3d9f89e6f1be51333524d2806b75bfa40412d3d47a0fe87a5de3e334",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T17:07:18.599Z",
+      "finishedAt": "2026-11-24T17:07:24.292Z",
+      "durationMs": 5661.858791000001,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rest-retention-after-phone-20261125.json",
+        "sha256": "999a187831f4c171d94224c5f94535294a3da52424ea6e5cb5d177765bdaa8b9"
+      }
+    },
+    {
+      "id": "63763d47-4d27-46a1-99c7-72cb018b95b0",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d5d288a5feb9d6ada4f612cc7e2e159284b6700f6f297ee06c2b71dced49a989",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-24T17:07:57.247Z",
+      "finishedAt": "2026-11-24T17:24:08.924Z",
+      "durationMs": 971626.228375,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rest-native-pad-20261125.json",
+        "sha256": "5ac649fa073f7510d01b79ec78630fd92aa23f41d88a9bdfcf22a242f7fd39c4"
+      }
+    },
+    {
+      "id": "92e3afb4-eac2-4a2d-8ea3-9a52b6ce9583",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "b6655103e5110a164694d56ead254d1ed6045e92a5ec545118ef59fb9ad8a6be",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T17:24:22.893Z",
+      "finishedAt": "2026-11-24T17:24:23.003Z",
+      "durationMs": 76.329792,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rest-native-pad-proof-20261125.json",
+        "sha256": "ed2b49269f49348e7b4c49cb5141e4c85e28a55961216eccc55acaff612e1e88"
+      }
+    },
+    {
+      "id": "316e470f-69a7-48ee-aa9c-e843aaf5e63c",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "9c67ec1b3d9f89e6f1be51333524d2806b75bfa40412d3d47a0fe87a5de3e334",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T17:24:26.086Z",
+      "finishedAt": "2026-11-24T17:24:31.813Z",
+      "durationMs": 5705.450792000001,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rest-retention-after-pad-20261125.json",
+        "sha256": "be63ddd6dffb5122b3c29989cb30a8b1d583e4de80222379342e43fe8d8ef85e"
+      }
+    },
+    {
+      "id": "231c014f-b38b-4d74-9150-1595b89f65ee",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "a77b236ddb194ae63797a17d0e16a26a04b771bdd93e096da431a2fd46dfabb7",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-24T17:24:52.118Z",
+      "finishedAt": "2026-11-24T17:25:00.306Z",
+      "durationMs": 8161.654499999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rest-reopen-20261125.json",
+        "sha256": "114f28ee32c7f4dbddbb1b708562ec5f9ac0b79c3409697b79eb316bc88bf89d"
+      }
+    },
+    {
+      "id": "3043e898-693c-4b1e-82ef-11d4977e10fd",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "f19e07c0e80004b4e278f5cab615c0f7f052be4582079441fd424c2323401c58",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T17:25:15.696Z",
+      "finishedAt": "2026-11-24T17:25:16.682Z",
+      "durationMs": 951.3512079999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rest-reopen-proof-20261125.json",
+        "sha256": "4ed8472ce836d1fd6295290b7af079b801c2e270c42a163386b535b923db70c1"
+      }
+    },
+    {
+      "id": "6a85145e-0b97-40e5-8b7a-40aac961ad9c",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "bb714160493a947abb92b098b1f304047a09e1a6ad0dca4c39cdd36f5dc38916",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T17:27:25.196Z",
+      "finishedAt": "2026-11-24T17:27:25.328Z",
+      "durationMs": 104.399583,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rest-final-audit-20261125.json",
+        "sha256": "1db2908ca3414710392f74491bee4875d9a0a1c39adced1de8e27386864ea55e"
+      }
+    },
+    {
+      "id": "84ae5a15-6b4c-41ba-b5c3-e3a2d6591fa8",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "a4a5e2324d81638e3a1d136659f041eed96f8bda7b24ef43305020eacb2c83ee",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T17:27:25.877Z",
+      "finishedAt": "2026-11-24T17:27:27.846Z",
+      "durationMs": 1944.768,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rest-final-public-checks-20261125.json",
+        "sha256": "5d2795f654a50eea5055475291c1aaee6e6776113ae2365d32fc95745d8d7798"
       }
     }
   ]

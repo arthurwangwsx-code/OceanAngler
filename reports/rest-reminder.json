@@ -1,0 +1,512 @@
+{
+  "status": "SCOPED_NATIVE_PASS_FULL_PRODUCT_PARTIAL",
+  "implementation": "IMPLEMENTED",
+  "wholeProduct": "PARTIAL",
+  "source": {
+    "sourceCommit": "7a96e4783175dcc3fa72a9a3f2c7e9b220c461e1",
+    "sourceDigest": "ab046d8634c8bf61089c9b89cf379af206d5045057e9ba5776adb958735789df",
+    "projectSettingsSha256": "d2c2c375cdcba9572547fe59ba58e891f70ceb67de995cc63995e8a53ff6d45c"
+  },
+  "appDigest": "df1f79685a182bccc2bb10bfad8cb60234e4603f779999f1b6818fc62d7916ab",
+  "architectures": [
+    "arm64"
+  ],
+  "distribution": "LOCAL_SIMULATOR_ONLY_NOT_TESTFLIGHT",
+  "playMode": {
+    "passed": 2,
+    "scope": "targeted current immersive navigation and in-memory boundary/learned-player fixture regression; not current full60/20 or real15-minute acceptance"
+  },
+  "phone": {
+    "status": "PASS",
+    "label": "rest20261125phone1",
+    "scope": "real approximately900-second active rest trigger plus native19-frame immersive EventSystem first-tutorial flow; no clock/RNG/points injection; not child, OS touch, full progression or physical20-minute qualification",
+    "source": {
+      "sourceCommit": "7a96e4783175dcc3fa72a9a3f2c7e9b220c461e1",
+      "sourceDigest": "ab046d8634c8bf61089c9b89cf379af206d5045057e9ba5776adb958735789df",
+      "projectSettingsSha256": "d2c2c375cdcba9572547fe59ba58e891f70ceb67de995cc63995e8a53ff6d45c"
+    },
+    "appDigest": "df1f79685a182bccc2bb10bfad8cb60234e4603f779999f1b6818fc62d7916ab",
+    "restTimer": {
+      "status": "PASS",
+      "scope": "real unmodified active timer on a QA player; not child or physical-device qualification",
+      "observedSeconds": 900.1500854492188,
+      "paused": false,
+      "reminderDue": true,
+      "acknowledged": true,
+      "progressUnchanged": true
+    },
+    "externalMeasurementDurationMs": 984216.361916,
+    "catches": 1,
+    "points": 226,
+    "fishId": "trevally",
+    "saveSha256": "1934e91295d151cd92fe3024d850c266ef642ef33be196066bb78ced734f6dab",
+    "maxHudRatio": 0.12227564305067062,
+    "samples": [
+      {
+        "phase": "Ready",
+        "leftHanded": false,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.0890224352478981
+      },
+      {
+        "phase": "Ready",
+        "leftHanded": false,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.0890224352478981
+      },
+      {
+        "phase": "Ready",
+        "leftHanded": false,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.0890224352478981
+      },
+      {
+        "phase": "Ready",
+        "leftHanded": false,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.0890224352478981
+      },
+      {
+        "phase": "Waiting",
+        "leftHanded": false,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.0890224352478981
+      },
+      {
+        "phase": "Bite",
+        "leftHanded": false,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.0890224352478981
+      },
+      {
+        "phase": "Fighting",
+        "leftHanded": false,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.12034111469984055
+      },
+      {
+        "phase": "Fighting",
+        "leftHanded": false,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.12034111469984055
+      },
+      {
+        "phase": "Landed",
+        "leftHanded": false,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.12227564305067062
+      },
+      {
+        "phase": "Ready",
+        "leftHanded": true,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.0890224352478981
+      },
+      {
+        "phase": "Waiting",
+        "leftHanded": true,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.0890224352478981
+      },
+      {
+        "phase": "Bite",
+        "leftHanded": true,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.0890224352478981
+      },
+      {
+        "phase": "Fighting",
+        "leftHanded": true,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.12034111469984055
+      }
+    ],
+    "capturedFrames": 19,
+    "renderProbe": {
+      "graphics": "Metal",
+      "quality": "Medium",
+      "hdrAfter": true,
+      "halfHdrSamples": 4,
+      "desiredSamples": 4
+    },
+    "checks": [
+      "immersive-isolated-save-root",
+      "immersive-ready-valid-save",
+      "rest-clock-starts-from-paused-new-process",
+      "visible-hit-target:继续探索",
+      "immersive-active-play",
+      "immersive-only-pause-and-current-action",
+      "immersive-no-global-chrome-or-panels",
+      "immersive-hud-under-15-percent-and-central-view-clear-Ready",
+      "immersive-meters-only-while-fighting",
+      "rest-clock-uninterrupted-ready-no-auto-pause",
+      "rest-real-quarter-hour-trigger-without-clock-injection",
+      "visible-hit-target:暂停",
+      "rest-visible-paused-context",
+      "visible-hit-target:休息好了，继续",
+      "rest-explicit-continue-clears-without-ledger-change",
+      "visible-hit-target:设置",
+      "visible-hit-target:出海",
+      "visible-hit-target:返回首页",
+      "visible-hit-target:海域与装备",
+      "immersive-separate-preparation",
+      "immersive-departure-visible-without-scrolling",
+      "immersive-departure-inside-safe-area",
+      "visible-hit-target:开始钓鱼",
+      "visible-hit-target:按住蓄力 · 松手抛竿",
+      "immersive-menu-cancels-cast-charge",
+      "immersive-hud-under-15-percent-and-central-view-clear-Waiting",
+      "immersive-normal-bite",
+      "immersive-hud-under-15-percent-and-central-view-clear-Bite",
+      "visible-hit-target:提竿",
+      "immersive-hud-under-15-percent-and-central-view-clear-Fighting",
+      "visible-hit-target:按住收线",
+      "immersive-pause-releases-held-reel",
+      "immersive-pause-freezes-current-fish",
+      "immersive-settings-retain-catch",
+      "visible-hit-target:上一级",
+      "immersive-back-does-not-resume",
+      "visible-hit-target:结束本次 · 返回准备",
+      "visible-hit-target:取消，继续留在这里",
+      "immersive-exit-cancel-keeps-current-fish",
+      "immersive-focus-loss-cancels-input",
+      "immersive-focus-return-awaits-continue",
+      "immersive-real-fish-landed",
+      "immersive-hud-under-15-percent-and-central-view-clear-Landed",
+      "visible-hit-target:记录并放流",
+      "immersive-one-real-record",
+      "visible-hit-target:左手操作    已关闭",
+      "visible-hit-target:确认结束并返回准备",
+      "immersive-confirm-exit-to-preparation",
+      "immersive-unrecorded-exit-preserves-existing-disk-ledger",
+      "visible-hit-target:左手操作    已开启",
+      "immersive-restored-settings-real-disk-ledger"
+    ]
+  },
+  "tablet": {
+    "status": "PASS",
+    "label": "rest20261125pad1",
+    "scope": "real approximately900-second active rest trigger plus native19-frame immersive EventSystem first-tutorial flow; no clock/RNG/points injection; not child, OS touch, full progression or physical20-minute qualification",
+    "source": {
+      "sourceCommit": "7a96e4783175dcc3fa72a9a3f2c7e9b220c461e1",
+      "sourceDigest": "ab046d8634c8bf61089c9b89cf379af206d5045057e9ba5776adb958735789df",
+      "projectSettingsSha256": "d2c2c375cdcba9572547fe59ba58e891f70ceb67de995cc63995e8a53ff6d45c"
+    },
+    "appDigest": "df1f79685a182bccc2bb10bfad8cb60234e4603f779999f1b6818fc62d7916ab",
+    "restTimer": {
+      "status": "PASS",
+      "scope": "real unmodified active timer on a QA player; not child or physical-device qualification",
+      "observedSeconds": 900.0672607421875,
+      "paused": false,
+      "reminderDue": true,
+      "acknowledged": true,
+      "progressUnchanged": true
+    },
+    "externalMeasurementDurationMs": 971626.228375,
+    "catches": 1,
+    "points": 207,
+    "fishId": "trevally",
+    "saveSha256": "bac67873e6efd9a385f441378ff9267675f631a61e0fca1e4accf083b813b99d",
+    "maxHudRatio": 0.045262712985277176,
+    "samples": [
+      {
+        "phase": "Ready",
+        "leftHanded": false,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.03295338898897171
+      },
+      {
+        "phase": "Ready",
+        "leftHanded": false,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.03295338898897171
+      },
+      {
+        "phase": "Ready",
+        "leftHanded": false,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.03295338898897171
+      },
+      {
+        "phase": "Ready",
+        "leftHanded": false,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.03295338898897171
+      },
+      {
+        "phase": "Waiting",
+        "leftHanded": false,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.03295338898897171
+      },
+      {
+        "phase": "Bite",
+        "leftHanded": false,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.03295338898897171
+      },
+      {
+        "phase": "Fighting",
+        "leftHanded": false,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.04454661160707474
+      },
+      {
+        "phase": "Fighting",
+        "leftHanded": false,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.04454661160707474
+      },
+      {
+        "phase": "Landed",
+        "leftHanded": false,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.045262712985277176
+      },
+      {
+        "phase": "Ready",
+        "leftHanded": true,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.03295338898897171
+      },
+      {
+        "phase": "Waiting",
+        "leftHanded": true,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.03295338898897171
+      },
+      {
+        "phase": "Bite",
+        "leftHanded": true,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.03295338898897171
+      },
+      {
+        "phase": "Fighting",
+        "leftHanded": true,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.04454661160707474
+      }
+    ],
+    "capturedFrames": 19,
+    "renderProbe": {
+      "graphics": "Metal",
+      "quality": "Medium",
+      "hdrAfter": true,
+      "halfHdrSamples": 4,
+      "desiredSamples": 4
+    },
+    "checks": [
+      "immersive-isolated-save-root",
+      "immersive-ready-valid-save",
+      "rest-clock-starts-from-paused-new-process",
+      "visible-hit-target:继续探索",
+      "immersive-active-play",
+      "immersive-only-pause-and-current-action",
+      "immersive-no-global-chrome-or-panels",
+      "immersive-hud-under-15-percent-and-central-view-clear-Ready",
+      "immersive-meters-only-while-fighting",
+      "rest-clock-uninterrupted-ready-no-auto-pause",
+      "rest-real-quarter-hour-trigger-without-clock-injection",
+      "visible-hit-target:暂停",
+      "rest-visible-paused-context",
+      "visible-hit-target:休息好了，继续",
+      "rest-explicit-continue-clears-without-ledger-change",
+      "visible-hit-target:设置",
+      "visible-hit-target:出海",
+      "visible-hit-target:返回首页",
+      "visible-hit-target:海域与装备",
+      "immersive-separate-preparation",
+      "immersive-departure-visible-without-scrolling",
+      "immersive-departure-inside-safe-area",
+      "visible-hit-target:开始钓鱼",
+      "visible-hit-target:按住蓄力 · 松手抛竿",
+      "immersive-menu-cancels-cast-charge",
+      "immersive-hud-under-15-percent-and-central-view-clear-Waiting",
+      "immersive-normal-bite",
+      "immersive-hud-under-15-percent-and-central-view-clear-Bite",
+      "visible-hit-target:提竿",
+      "immersive-hud-under-15-percent-and-central-view-clear-Fighting",
+      "visible-hit-target:按住收线",
+      "immersive-pause-releases-held-reel",
+      "immersive-pause-freezes-current-fish",
+      "immersive-settings-retain-catch",
+      "visible-hit-target:上一级",
+      "immersive-back-does-not-resume",
+      "visible-hit-target:结束本次 · 返回准备",
+      "visible-hit-target:取消，继续留在这里",
+      "immersive-exit-cancel-keeps-current-fish",
+      "immersive-focus-loss-cancels-input",
+      "immersive-focus-return-awaits-continue",
+      "immersive-real-fish-landed",
+      "immersive-hud-under-15-percent-and-central-view-clear-Landed",
+      "visible-hit-target:记录并放流",
+      "immersive-one-real-record",
+      "visible-hit-target:左手操作    已关闭",
+      "visible-hit-target:确认结束并返回准备",
+      "immersive-confirm-exit-to-preparation",
+      "immersive-unrecorded-exit-preserves-existing-disk-ledger",
+      "visible-hit-target:左手操作    已开启",
+      "immersive-restored-settings-real-disk-ledger"
+    ]
+  },
+  "retention": {
+    "status": "PASS",
+    "previousPrimaryFiles": 22,
+    "allByteIdentical": true
+  },
+  "reopened": {
+    "status": "PASS_WITH_SEPARATE_AGENT_IMAGE_REVIEW",
+    "catches": 26,
+    "points": 4622,
+    "saveBytesUnchanged": true,
+    "saveSha256": "e3913747a21f851fbee465ecb7d406d6bbdb7c78702e1f54f6e7d23dc64d0bec",
+    "frameSha256": "f48df0a473283aff0d6016c22e30a332bb946f5477c479b9ca5f586054d03efe",
+    "automaticFishingFlags": false,
+    "qaArguments": [
+      "--ocean-save-root",
+      "--ocean-simulator-probe"
+    ],
+    "captureCheckStatus": "BYTES_AND_SCREEN_CAPTURE_PASS_REQUIRES_VISUAL_REVIEW",
+    "agentReviewedVisiblePoints": 4622
+  },
+  "agentVisualReview": {
+    "status": "SELECTED_UI_IMAGES_REVIEWED_NOT_ART_ACCEPTED",
+    "frames": {
+      "phone-rest-ready": "e5b1038f9c900470e78ca73f2758f73b2e14cd25f8c1d1c7a3dee448089f2656",
+      "phone-rest-pause": "60f514e857a8416d17963ea062d26629c5814384524709d39c523000c44e3f57",
+      "tablet-rest-pause": "89b8de888cce533410a38c87af7509e1a935131d3871c1a256b17667405a36ad",
+      "tablet-landed": "60748aa2c61c1bcc8199846eb6f8e149cdbd920baed734c7a740028940777c16",
+      "reopened-home": "f48df0a473283aff0d6016c22e30a332bb946f5477c479b9ca5f586054d03efe"
+    },
+    "contactSheets": [
+      "contact-rest20261125phone1.png",
+      "contact-rest20261125pad1.png"
+    ],
+    "scope": "both19-frame contacts and these five original images viewed; no user, scientific, child, system-touch or physical20-minute acceptance"
+  },
+  "cacheRecovery": {
+    "initialNativeCompile": "FAIL_ENOSPC",
+    "failedLogsPreserved": true,
+    "conservativeOtherProjectBuildPreflight": "FAIL_BEFORE_ANY_DELETION",
+    "clearedOnlyCompletedOwnIntermediates": true,
+    "originalAppProducts": [
+      {
+        "appDigestBefore": "6264c9c16b60b008c14650161b972c179f952a8676a5d5ba7b01bc979e799514",
+        "appDigestAfter": "6264c9c16b60b008c14650161b972c179f952a8676a5d5ba7b01bc979e799514"
+      },
+      {
+        "appDigestBefore": "43ec7760b781aaaf2a055302f9f001efc59900e0ac64e6f3bfc93902a94fd5cd",
+        "appDigestAfter": "43ec7760b781aaaf2a055302f9f001efc59900e0ac64e6f3bfc93902a94fd5cd"
+      },
+      {
+        "appDigestBefore": "fb2f9a66211eb22c1986461aa2cecac7f746affa3906c0748e3a9ef0bc97d32f",
+        "appDigestAfter": "fb2f9a66211eb22c1986461aa2cecac7f746affa3906c0748e3a9ef0bc97d32f"
+      },
+      {
+        "appDigestBefore": "dfe2c8661d0e7f543de249a25a6bb03656385b56fabf55a6e31e21680987ad9b",
+        "appDigestAfter": "dfe2c8661d0e7f543de249a25a6bb03656385b56fabf55a6e31e21680987ad9b"
+      }
+    ]
+  },
+  "publishedFrames": [
+    {
+      "path": "art/previews/rest-reminder/phone-rest-ready.png",
+      "sha256": "e5b1038f9c900470e78ca73f2758f73b2e14cd25f8c1d1c7a3dee448089f2656"
+    },
+    {
+      "path": "art/previews/rest-reminder/phone-rest-pause.png",
+      "sha256": "60f514e857a8416d17963ea062d26629c5814384524709d39c523000c44e3f57"
+    },
+    {
+      "path": "art/previews/rest-reminder/tablet-rest-pause.png",
+      "sha256": "89b8de888cce533410a38c87af7509e1a935131d3871c1a256b17667405a36ad"
+    },
+    {
+      "path": "art/previews/rest-reminder/tablet-landed.png",
+      "sha256": "60748aa2c61c1bcc8199846eb6f8e149cdbd920baed734c7a740028940777c16"
+    },
+    {
+      "path": "art/previews/rest-reminder/reopened-home.png",
+      "sha256": "f48df0a473283aff0d6016c22e30a332bb946f5477c479b9ca5f586054d03efe"
+    }
+  ],
+  "artAcceptance": "NOT_ACCEPTED",
+  "userDirectionReview": "PENDING",
+  "scienceAcceptance": "PENDING",
+  "childrenAcceptance": "NOT_RUN",
+  "actualSystemTouch": "NOT_RUN",
+  "physical20MinuteQualification": "NOT_RUN",
+  "testFlight": {
+    "updated": false,
+    "currentBuild": "6",
+    "frozenSource": "648b4ce8d9c22f3e2a24ddf3bbe658d822023c2a"
+  },
+  "metrics": {
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "incrementAudit": {
+      "status": "NEW_RECORDS_INTEGRITY_PASS",
+      "historicalOverall": "INCOMPLETE",
+      "baselineCompleted": 1002,
+      "baselineStarts": 998,
+      "newCompleted": 22,
+      "newStarts": 22,
+      "totalCompleted": 1024,
+      "totalStarts": 1020,
+      "oldObjectsUnchanged": true,
+      "actualReceiptsAndBindingsVerified": true,
+      "newIntervalsDisjoint": true,
+      "overlaps": [],
+      "newFailures": [
+        {
+          "id": "7e9df8b0-9f04-4ed1-84df-259cd2a77597",
+          "receipt": "measurements/rest-menu-red-20261125.json",
+          "exitCode": 2
+        },
+        {
+          "id": "e32dc461-40e2-46fa-baad-851ae3339c86",
+          "receipt": "measurements/rest-menu-green-20261125.json",
+          "exitCode": 2
+        },
+        {
+          "id": "590fc35d-0d12-4e6a-af91-3dcbf4276ada",
+          "receipt": "measurements/rest-native-build-20261125.json",
+          "exitCode": 65
+        },
+        {
+          "id": "5728c82e-0010-434b-b99e-8c36be129571",
+          "receipt": "measurements/rest-cache-maintenance-20261125.json",
+          "exitCode": 1
+        }
+      ],
+      "scope": "actual local state/start/completion/receipt integrity for this increment only; not formal independent CLI compliance or product acceptance"
+    },
+    "historicalIndependentAudit": "INCOMPLETE"
+  }
+}

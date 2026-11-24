@@ -2287,6 +2287,40 @@
           "sha256": "ceef610f5d781f88e89df15b3280cd743281a7063a44520ff02ee5011a6570fa"
         }
       ]
+    },
+    {
+      "id": "rest-reminder-native-reviewed-frames",
+      "author": "OceanAngler contributors",
+      "source": "Own native Simulator Player frames frozen7a96e47 and reopened own QA save",
+      "license": "MIT",
+      "redistribution": true,
+      "sourceRedistribution": true,
+      "canModify": true,
+      "acquiredAt": "2026-11-25",
+      "status": "FUNCTIONAL_PASS_ART_REVIEW_PENDING",
+      "artifacts": [
+        {
+          "path": "art/previews/rest-reminder/phone-rest-ready.png",
+          "sha256": "e5b1038f9c900470e78ca73f2758f73b2e14cd25f8c1d1c7a3dee448089f2656"
+        },
+        {
+          "path": "art/previews/rest-reminder/phone-rest-pause.png",
+          "sha256": "60f514e857a8416d17963ea062d26629c5814384524709d39c523000c44e3f57"
+        },
+        {
+          "path": "art/previews/rest-reminder/tablet-rest-pause.png",
+          "sha256": "89b8de888cce533410a38c87af7509e1a935131d3871c1a256b17667405a36ad"
+        },
+        {
+          "path": "art/previews/rest-reminder/tablet-landed.png",
+          "sha256": "60748aa2c61c1bcc8199846eb6f8e149cdbd920baed734c7a740028940777c16"
+        },
+        {
+          "path": "art/previews/rest-reminder/reopened-home.png",
+          "sha256": "f48df0a473283aff0d6016c22e30a332bb946f5477c479b9ca5f586054d03efe"
+        }
+      ],
+      "note": "Both19-frame contacts and five selected original UI images reviewed by agent. Own game only; no personal photographs, device IDs or raw logs. Embedded font retains registered OFL notice. Models/world remain candidates; user/scientific/children/physical-device acceptance not implied."
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."
