@@ -1,0 +1,1660 @@
+{
+  "status": "PARTIAL",
+  "implementation": "IMPLEMENTED_DIAGNOSTIC_TOOLING",
+  "sourceBase": "7464af5231d36cdbb4226e28091646840764dc7c",
+  "scope": "Editor Metal only; explicit target is shader/texture configuration, not actual iOS execution",
+  "runs": [
+    {
+      "label": "channel14environment",
+      "receipt": {
+        "status": "PARTIAL_STATIC_RGB_DIFFERENCE",
+        "scope": "isolated Editor GPU water fixture; no player UI/device acceptance",
+        "staticMatchCheck": "PARTIAL_STATIC_RGB_DIFFERENCE",
+        "width": 1440,
+        "height": 900,
+        "reflectionPasses": 4,
+        "validatedMaterials": 32,
+        "initialChangedPixels": 12,
+        "repeatChangedPixels": 0,
+        "samples": 4,
+        "staticDraws": 3,
+        "reflectionVariance": 0.022745562717318535,
+        "waveDifference": 0.008043037727475166,
+        "graphics": "Metal",
+        "released": true,
+        "representedEachDraw": true,
+        "exactStaticMatch": false,
+        "initialDifference": 0.003921568393707275,
+        "repeatDifference": 0.0
+      },
+      "firstDrawEnvironment": {
+        "phase": "first-draw",
+        "buildTarget": "StandaloneOSX",
+        "colorSpace": "Gamma",
+        "quality": "Ultra",
+        "pipeline": "OceanURP",
+        "ambientMode": "Skybox",
+        "skyShader": "Skybox/Procedural",
+        "sun": "Sun",
+        "reflectionMode": "Skybox",
+        "qualityIndex": 5,
+        "pipelineSamples": 4,
+        "textureLimit": 0,
+        "ambientIntensity": 1.0,
+        "reflectionIntensity": 1.0,
+        "lodBias": 2.0,
+        "ambient": {
+          "r": 0.20000000298023224,
+          "g": 0.3199999928474426,
+          "b": 0.3799999952316284,
+          "a": 1.0
+        },
+        "sky": {
+          "r": 0.20000000298023224,
+          "g": 0.3199999928474426,
+          "b": 0.3799999952316284,
+          "a": 1.0
+        },
+        "equator": {
+          "r": 0.11400000005960464,
+          "g": 0.125,
+          "b": 0.13300000131130219,
+          "a": 1.0
+        },
+        "ground": {
+          "r": 0.04699999839067459,
+          "g": 0.0430000014603138,
+          "b": 0.03500000014901161,
+          "a": 1.0
+        },
+        "fog": {
+          "r": 0.5099999904632568,
+          "g": 0.699999988079071,
+          "b": 0.7900000214576721,
+          "a": 1.0
+        },
+        "sunColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "fogDensity": 0.006000000052154064,
+        "sunIntensity": 1.2999999523162842,
+        "sunEuler": {
+          "x": 45.0,
+          "y": 330.0,
+          "z": 0.0
+        },
+        "cameraPosition": {
+          "x": 0.0,
+          "y": 6.399999618530273,
+          "z": -8.999998092651367
+        },
+        "cameraRotation": {
+          "x": 0.03324952721595764,
+          "y": -0.01849876344203949,
+          "z": 0.000615521043073386,
+          "w": 0.9992756843566895
+        },
+        "fieldOfView": 58.0,
+        "ambientProbe": [
+          0.180283784866333,
+          -0.005682311486452818,
+          -0.012560680508613586,
+          0.007252015173435211,
+          0.0056999679654836655,
+          -0.00987242255359888,
+          0.010330158285796642,
+          -0.010436316952109337,
+          0.025035569444298744,
+          0.22571411728858948,
+          0.04134383052587509,
+          -0.019753262400627136,
+          0.011403260752558708,
+          0.009111973457038403,
+          -0.015783270820975304,
+          0.014379967004060745,
+          -0.015223595313727856,
+          0.03443606197834015,
+          0.3069228529930115,
+          0.12748494744300842,
+          -0.034053392708301544,
+          0.019656643271446228,
+          0.016365190967917442,
+          -0.028349149972200394,
+          0.01771555282175541,
+          -0.02208525687456131,
+          0.040465496480464935
+        ],
+        "shaderProbe": [
+          {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 0.0
+          }
+        ]
+      },
+      "allRecordedEnvironmentPhases": [
+        "scene-loaded",
+        "presented",
+        "first-draw",
+        "repeat-draw",
+        "third-draw"
+      ]
+    },
+    {
+      "label": "channel15environment",
+      "receipt": {
+        "status": "PARTIAL_STATIC_RGB_DIFFERENCE",
+        "scope": "isolated Editor GPU water fixture; no player UI/device acceptance",
+        "staticMatchCheck": "PARTIAL_STATIC_RGB_DIFFERENCE",
+        "width": 1440,
+        "height": 900,
+        "reflectionPasses": 4,
+        "validatedMaterials": 32,
+        "initialChangedPixels": 12,
+        "repeatChangedPixels": 0,
+        "samples": 4,
+        "staticDraws": 3,
+        "reflectionVariance": 0.022745562717318535,
+        "waveDifference": 0.008043037727475166,
+        "graphics": "Metal",
+        "released": true,
+        "representedEachDraw": true,
+        "exactStaticMatch": false,
+        "initialDifference": 0.003921568393707275,
+        "repeatDifference": 0.0
+      },
+      "firstDrawEnvironment": {
+        "phase": "first-draw",
+        "buildTarget": "StandaloneOSX",
+        "colorSpace": "Gamma",
+        "quality": "Ultra",
+        "pipeline": "OceanURP",
+        "ambientMode": "Skybox",
+        "skyShader": "Skybox/Procedural",
+        "sun": "Sun",
+        "reflectionMode": "Skybox",
+        "qualityIndex": 5,
+        "pipelineSamples": 4,
+        "textureLimit": 0,
+        "ambientIntensity": 1.0,
+        "reflectionIntensity": 1.0,
+        "lodBias": 2.0,
+        "ambient": {
+          "r": 0.20000000298023224,
+          "g": 0.3199999928474426,
+          "b": 0.3799999952316284,
+          "a": 1.0
+        },
+        "sky": {
+          "r": 0.20000000298023224,
+          "g": 0.3199999928474426,
+          "b": 0.3799999952316284,
+          "a": 1.0
+        },
+        "equator": {
+          "r": 0.11400000005960464,
+          "g": 0.125,
+          "b": 0.13300000131130219,
+          "a": 1.0
+        },
+        "ground": {
+          "r": 0.04699999839067459,
+          "g": 0.0430000014603138,
+          "b": 0.03500000014901161,
+          "a": 1.0
+        },
+        "fog": {
+          "r": 0.5099999904632568,
+          "g": 0.699999988079071,
+          "b": 0.7900000214576721,
+          "a": 1.0
+        },
+        "sunColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "fogDensity": 0.006000000052154064,
+        "sunIntensity": 1.2999999523162842,
+        "sunEuler": {
+          "x": 45.0,
+          "y": 330.0,
+          "z": 0.0
+        },
+        "cameraPosition": {
+          "x": 0.0,
+          "y": 6.399999618530273,
+          "z": -8.999998092651367
+        },
+        "cameraRotation": {
+          "x": 0.03324952721595764,
+          "y": -0.01849876344203949,
+          "z": 0.000615521043073386,
+          "w": 0.9992756843566895
+        },
+        "fieldOfView": 58.0,
+        "ambientProbe": [
+          0.180283784866333,
+          -0.005682311486452818,
+          -0.012560680508613586,
+          0.007252015173435211,
+          0.0056999679654836655,
+          -0.00987242255359888,
+          0.010330158285796642,
+          -0.010436316952109337,
+          0.025035569444298744,
+          0.22571411728858948,
+          0.04134383052587509,
+          -0.019753262400627136,
+          0.011403260752558708,
+          0.009111973457038403,
+          -0.015783270820975304,
+          0.014379967004060745,
+          -0.015223595313727856,
+          0.03443606197834015,
+          0.3069228529930115,
+          0.12748494744300842,
+          -0.034053392708301544,
+          0.019656643271446228,
+          0.016365190967917442,
+          -0.028349149972200394,
+          0.01771555282175541,
+          -0.02208525687456131,
+          0.040465496480464935
+        ],
+        "shaderProbe": [
+          {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 0.0
+          }
+        ]
+      },
+      "allRecordedEnvironmentPhases": [
+        "scene-loaded",
+        "presented",
+        "first-draw",
+        "repeat-draw",
+        "third-draw"
+      ]
+    },
+    {
+      "label": "channel16ios",
+      "receipt": {
+        "status": "PARTIAL_STATIC_RGB_DIFFERENCE",
+        "scope": "isolated Editor GPU water fixture; no player UI/device acceptance",
+        "staticMatchCheck": "PARTIAL_STATIC_RGB_DIFFERENCE",
+        "width": 1440,
+        "height": 900,
+        "reflectionPasses": 4,
+        "validatedMaterials": 32,
+        "initialChangedPixels": 27,
+        "repeatChangedPixels": 0,
+        "samples": 4,
+        "staticDraws": 3,
+        "reflectionVariance": 0.026356898248195648,
+        "waveDifference": 0.008927898481488228,
+        "graphics": "Metal",
+        "released": true,
+        "representedEachDraw": true,
+        "exactStaticMatch": false,
+        "initialDifference": 0.003921598196029663,
+        "repeatDifference": 0.0
+      },
+      "firstDrawEnvironment": {
+        "phase": "first-draw",
+        "buildTarget": "iOS",
+        "colorSpace": "Gamma",
+        "quality": "Ultra",
+        "pipeline": "OceanURP",
+        "ambientMode": "Skybox",
+        "skyShader": "Skybox/Procedural",
+        "sun": "Sun",
+        "reflectionMode": "Skybox",
+        "qualityIndex": 5,
+        "pipelineSamples": 4,
+        "textureLimit": 0,
+        "ambientIntensity": 1.0,
+        "reflectionIntensity": 1.0,
+        "lodBias": 2.0,
+        "ambient": {
+          "r": 0.20000000298023224,
+          "g": 0.3199999928474426,
+          "b": 0.3799999952316284,
+          "a": 1.0
+        },
+        "sky": {
+          "r": 0.20000000298023224,
+          "g": 0.3199999928474426,
+          "b": 0.3799999952316284,
+          "a": 1.0
+        },
+        "equator": {
+          "r": 0.11400000005960464,
+          "g": 0.125,
+          "b": 0.13300000131130219,
+          "a": 1.0
+        },
+        "ground": {
+          "r": 0.04699999839067459,
+          "g": 0.0430000014603138,
+          "b": 0.03500000014901161,
+          "a": 1.0
+        },
+        "fog": {
+          "r": 0.5099999904632568,
+          "g": 0.699999988079071,
+          "b": 0.7900000214576721,
+          "a": 1.0
+        },
+        "sunColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "fogDensity": 0.006000000052154064,
+        "sunIntensity": 1.2999999523162842,
+        "sunEuler": {
+          "x": 45.0,
+          "y": 330.0,
+          "z": 0.0
+        },
+        "cameraPosition": {
+          "x": 0.0,
+          "y": 6.399999618530273,
+          "z": -8.999998092651367
+        },
+        "cameraRotation": {
+          "x": 0.03324952721595764,
+          "y": -0.01849876344203949,
+          "z": 0.000615521043073386,
+          "w": 0.9992756843566895
+        },
+        "fieldOfView": 58.0,
+        "ambientProbe": [
+          0.180283784866333,
+          -0.005682311486452818,
+          -0.012560680508613586,
+          0.007252015173435211,
+          0.0056999679654836655,
+          -0.00987242255359888,
+          0.010330158285796642,
+          -0.010436316952109337,
+          0.025035569444298744,
+          0.22571411728858948,
+          0.04134383052587509,
+          -0.019753262400627136,
+          0.011403260752558708,
+          0.009111973457038403,
+          -0.015783270820975304,
+          0.014379967004060745,
+          -0.015223595313727856,
+          0.03443606197834015,
+          0.3069228529930115,
+          0.12748494744300842,
+          -0.034053392708301544,
+          0.019656643271446228,
+          0.016365190967917442,
+          -0.028349149972200394,
+          0.01771555282175541,
+          -0.02208525687456131,
+          0.040465496480464935
+        ]
+      },
+      "allRecordedEnvironmentPhases": [
+        "scene-loaded",
+        "presented",
+        "first-draw",
+        "repeat-draw",
+        "third-draw"
+      ]
+    },
+    {
+      "label": "channel17mac",
+      "receipt": {
+        "status": "PARTIAL_STATIC_RGB_DIFFERENCE",
+        "scope": "isolated Editor GPU water fixture; no player UI/device acceptance",
+        "staticMatchCheck": "PARTIAL_STATIC_RGB_DIFFERENCE",
+        "width": 1440,
+        "height": 900,
+        "reflectionPasses": 4,
+        "validatedMaterials": 32,
+        "initialChangedPixels": 0,
+        "repeatChangedPixels": 13,
+        "samples": 4,
+        "staticDraws": 3,
+        "reflectionVariance": 0.022950759157538414,
+        "waveDifference": 0.008083750493824482,
+        "graphics": "Metal",
+        "released": true,
+        "representedEachDraw": true,
+        "exactStaticMatch": false,
+        "initialDifference": 0.0,
+        "repeatDifference": 0.003921568393707275
+      },
+      "firstDrawEnvironment": {
+        "phase": "first-draw",
+        "buildTarget": "StandaloneOSX",
+        "colorSpace": "Gamma",
+        "quality": "Ultra",
+        "pipeline": "OceanURP",
+        "ambientMode": "Skybox",
+        "skyShader": "Skybox/Procedural",
+        "sun": "Sun",
+        "reflectionMode": "Skybox",
+        "qualityIndex": 5,
+        "pipelineSamples": 4,
+        "textureLimit": 0,
+        "ambientIntensity": 1.0,
+        "reflectionIntensity": 1.0,
+        "lodBias": 2.0,
+        "ambient": {
+          "r": 0.20000000298023224,
+          "g": 0.3199999928474426,
+          "b": 0.3799999952316284,
+          "a": 1.0
+        },
+        "sky": {
+          "r": 0.20000000298023224,
+          "g": 0.3199999928474426,
+          "b": 0.3799999952316284,
+          "a": 1.0
+        },
+        "equator": {
+          "r": 0.11400000005960464,
+          "g": 0.125,
+          "b": 0.13300000131130219,
+          "a": 1.0
+        },
+        "ground": {
+          "r": 0.04699999839067459,
+          "g": 0.0430000014603138,
+          "b": 0.03500000014901161,
+          "a": 1.0
+        },
+        "fog": {
+          "r": 0.5099999904632568,
+          "g": 0.699999988079071,
+          "b": 0.7900000214576721,
+          "a": 1.0
+        },
+        "sunColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "fogDensity": 0.006000000052154064,
+        "sunIntensity": 1.2999999523162842,
+        "sunEuler": {
+          "x": 45.0,
+          "y": 330.0,
+          "z": 0.0
+        },
+        "cameraPosition": {
+          "x": 0.0,
+          "y": 6.399999618530273,
+          "z": -8.999998092651367
+        },
+        "cameraRotation": {
+          "x": 0.03324952721595764,
+          "y": -0.01849876344203949,
+          "z": 0.000615521043073386,
+          "w": 0.9992756843566895
+        },
+        "fieldOfView": 58.0,
+        "ambientProbe": [
+          0.180283784866333,
+          -0.005682311486452818,
+          -0.012560680508613586,
+          0.007252015173435211,
+          0.0056999679654836655,
+          -0.00987242255359888,
+          0.010330158285796642,
+          -0.010436316952109337,
+          0.025035569444298744,
+          0.22571411728858948,
+          0.04134383052587509,
+          -0.019753262400627136,
+          0.011403260752558708,
+          0.009111973457038403,
+          -0.015783270820975304,
+          0.014379967004060745,
+          -0.015223595313727856,
+          0.03443606197834015,
+          0.3069228529930115,
+          0.12748494744300842,
+          -0.034053392708301544,
+          0.019656643271446228,
+          0.016365190967917442,
+          -0.028349149972200394,
+          0.01771555282175541,
+          -0.02208525687456131,
+          0.040465496480464935
+        ]
+      },
+      "allRecordedEnvironmentPhases": [
+        "scene-loaded",
+        "presented",
+        "first-draw",
+        "repeat-draw",
+        "third-draw"
+      ]
+    },
+    {
+      "label": "channel18macformats",
+      "receipt": {
+        "status": "PARTIAL_STATIC_RGB_DIFFERENCE",
+        "scope": "isolated Editor GPU water fixture; no player UI/device acceptance",
+        "staticMatchCheck": "PARTIAL_STATIC_RGB_DIFFERENCE",
+        "width": 1440,
+        "height": 900,
+        "reflectionPasses": 4,
+        "validatedMaterials": 32,
+        "initialChangedPixels": 12,
+        "repeatChangedPixels": 0,
+        "samples": 4,
+        "staticDraws": 3,
+        "reflectionVariance": 0.022745562717318535,
+        "waveDifference": 0.008043037727475166,
+        "graphics": "Metal",
+        "released": true,
+        "representedEachDraw": true,
+        "exactStaticMatch": false,
+        "initialDifference": 0.003921568393707275,
+        "repeatDifference": 0.0
+      },
+      "firstDrawEnvironment": {
+        "phase": "first-draw",
+        "buildTarget": "StandaloneOSX",
+        "colorSpace": "Gamma",
+        "quality": "Ultra",
+        "pipeline": "OceanURP",
+        "ambientMode": "Skybox",
+        "skyShader": "Skybox/Procedural",
+        "sun": "Sun",
+        "reflectionMode": "Skybox",
+        "defaultReflectionFormat": "R8G8B8A8_UNorm",
+        "qualityIndex": 5,
+        "pipelineSamples": 4,
+        "textureLimit": 0,
+        "ambientIntensity": 1.0,
+        "reflectionIntensity": 1.0,
+        "lodBias": 2.0,
+        "ambient": {
+          "r": 0.20000000298023224,
+          "g": 0.3199999928474426,
+          "b": 0.3799999952316284,
+          "a": 1.0
+        },
+        "sky": {
+          "r": 0.20000000298023224,
+          "g": 0.3199999928474426,
+          "b": 0.3799999952316284,
+          "a": 1.0
+        },
+        "equator": {
+          "r": 0.11400000005960464,
+          "g": 0.125,
+          "b": 0.13300000131130219,
+          "a": 1.0
+        },
+        "ground": {
+          "r": 0.04699999839067459,
+          "g": 0.0430000014603138,
+          "b": 0.03500000014901161,
+          "a": 1.0
+        },
+        "fog": {
+          "r": 0.5099999904632568,
+          "g": 0.699999988079071,
+          "b": 0.7900000214576721,
+          "a": 1.0
+        },
+        "sunColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "fogDensity": 0.006000000052154064,
+        "sunIntensity": 1.2999999523162842,
+        "sunEuler": {
+          "x": 45.0,
+          "y": 330.0,
+          "z": 0.0
+        },
+        "cameraPosition": {
+          "x": 0.0,
+          "y": 6.399999618530273,
+          "z": -8.999998092651367
+        },
+        "cameraRotation": {
+          "x": 0.03324952721595764,
+          "y": -0.01849876344203949,
+          "z": 0.000615521043073386,
+          "w": 0.9992756843566895
+        },
+        "fieldOfView": 58.0,
+        "ambientProbe": [
+          0.180283784866333,
+          -0.005682311486452818,
+          -0.012560680508613586,
+          0.007252015173435211,
+          0.0056999679654836655,
+          -0.00987242255359888,
+          0.010330158285796642,
+          -0.010436316952109337,
+          0.025035569444298744,
+          0.22571411728858948,
+          0.04134383052587509,
+          -0.019753262400627136,
+          0.011403260752558708,
+          0.009111973457038403,
+          -0.015783270820975304,
+          0.014379967004060745,
+          -0.015223595313727856,
+          0.03443606197834015,
+          0.3069228529930115,
+          0.12748494744300842,
+          -0.034053392708301544,
+          0.019656643271446228,
+          0.016365190967917442,
+          -0.028349149972200394,
+          0.01771555282175541,
+          -0.02208525687456131,
+          0.040465496480464935
+        ],
+        "reflectionDecode": {
+          "x": 5.0,
+          "y": 1.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "materialTextureFormats": [
+          "Channel_Stone:RGBA_BC7_UNorm:512x512",
+          "Channel_Stone_Normal:RGBA_BC7_UNorm:512x512",
+          "Channel_Stone_MetallicSmoothness:RGBA_BC7_UNorm:512x512",
+          "Channel_CoastalSoil:RGBA_BC7_UNorm:512x512",
+          "Channel_CoastalSoil_Normal:RGBA_BC7_UNorm:512x512",
+          "Channel_CoastalSoil_MetallicSmoothness:RGBA_BC7_UNorm:512x512"
+        ]
+      },
+      "allRecordedEnvironmentPhases": [
+        "scene-loaded",
+        "presented",
+        "first-draw",
+        "repeat-draw",
+        "third-draw"
+      ]
+    },
+    {
+      "label": "channel19iosformats",
+      "receipt": {
+        "status": "PASS",
+        "scope": "isolated Editor GPU water fixture; no player UI/device acceptance",
+        "staticMatchCheck": "PASS",
+        "width": 1440,
+        "height": 900,
+        "reflectionPasses": 4,
+        "validatedMaterials": 32,
+        "initialChangedPixels": 0,
+        "repeatChangedPixels": 0,
+        "samples": 4,
+        "staticDraws": 3,
+        "reflectionVariance": 0.026356898248195648,
+        "waveDifference": 0.008927898481488228,
+        "graphics": "Metal",
+        "released": true,
+        "representedEachDraw": true,
+        "exactStaticMatch": true,
+        "initialDifference": 0.0,
+        "repeatDifference": 0.0
+      },
+      "firstDrawEnvironment": {
+        "phase": "first-draw",
+        "buildTarget": "iOS",
+        "colorSpace": "Gamma",
+        "quality": "Ultra",
+        "pipeline": "OceanURP",
+        "ambientMode": "Skybox",
+        "skyShader": "Skybox/Procedural",
+        "sun": "Sun",
+        "reflectionMode": "Skybox",
+        "defaultReflectionFormat": "R8G8B8A8_UNorm",
+        "qualityIndex": 5,
+        "pipelineSamples": 4,
+        "textureLimit": 0,
+        "ambientIntensity": 1.0,
+        "reflectionIntensity": 1.0,
+        "lodBias": 2.0,
+        "ambient": {
+          "r": 0.20000000298023224,
+          "g": 0.3199999928474426,
+          "b": 0.3799999952316284,
+          "a": 1.0
+        },
+        "sky": {
+          "r": 0.20000000298023224,
+          "g": 0.3199999928474426,
+          "b": 0.3799999952316284,
+          "a": 1.0
+        },
+        "equator": {
+          "r": 0.11400000005960464,
+          "g": 0.125,
+          "b": 0.13300000131130219,
+          "a": 1.0
+        },
+        "ground": {
+          "r": 0.04699999839067459,
+          "g": 0.0430000014603138,
+          "b": 0.03500000014901161,
+          "a": 1.0
+        },
+        "fog": {
+          "r": 0.5099999904632568,
+          "g": 0.699999988079071,
+          "b": 0.7900000214576721,
+          "a": 1.0
+        },
+        "sunColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "fogDensity": 0.006000000052154064,
+        "sunIntensity": 1.2999999523162842,
+        "sunEuler": {
+          "x": 45.0,
+          "y": 330.0,
+          "z": 0.0
+        },
+        "cameraPosition": {
+          "x": 0.0,
+          "y": 6.399999618530273,
+          "z": -8.999998092651367
+        },
+        "cameraRotation": {
+          "x": 0.03324952721595764,
+          "y": -0.01849876344203949,
+          "z": 0.000615521043073386,
+          "w": 0.9992756843566895
+        },
+        "fieldOfView": 58.0,
+        "ambientProbe": [
+          0.180283784866333,
+          -0.005682311486452818,
+          -0.012560680508613586,
+          0.007252015173435211,
+          0.0056999679654836655,
+          -0.00987242255359888,
+          0.010330158285796642,
+          -0.010436316952109337,
+          0.025035569444298744,
+          0.22571411728858948,
+          0.04134383052587509,
+          -0.019753262400627136,
+          0.011403260752558708,
+          0.009111973457038403,
+          -0.015783270820975304,
+          0.014379967004060745,
+          -0.015223595313727856,
+          0.03443606197834015,
+          0.3069228529930115,
+          0.12748494744300842,
+          -0.034053392708301544,
+          0.019656643271446228,
+          0.016365190967917442,
+          -0.028349149972200394,
+          0.01771555282175541,
+          -0.02208525687456131,
+          0.040465496480464935
+        ],
+        "reflectionDecode": {
+          "x": 5.0,
+          "y": 1.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "materialTextureFormats": [
+          "Channel_Stone:RGBA_ASTC4X4_UNorm:512x512",
+          "Channel_Stone_Normal:RGBA_ASTC4X4_UNorm:512x512",
+          "Channel_Stone_MetallicSmoothness:RGBA_ASTC4X4_UNorm:512x512",
+          "Channel_CoastalSoil:RGBA_ASTC4X4_UNorm:512x512",
+          "Channel_CoastalSoil_Normal:RGBA_ASTC4X4_UNorm:512x512",
+          "Channel_CoastalSoil_MetallicSmoothness:RGBA_ASTC4X4_UNorm:512x512"
+        ]
+      },
+      "allRecordedEnvironmentPhases": [
+        "scene-loaded",
+        "presented",
+        "first-draw",
+        "repeat-draw",
+        "third-draw"
+      ]
+    },
+    {
+      "label": "channel20boatblocks",
+      "receipt": {
+        "status": "PARTIAL_STATIC_RGB_DIFFERENCE",
+        "scope": "isolated Editor GPU water fixture; no player UI/device acceptance",
+        "staticMatchCheck": "PARTIAL_STATIC_RGB_DIFFERENCE",
+        "width": 1440,
+        "height": 900,
+        "reflectionPasses": 4,
+        "validatedMaterials": 32,
+        "initialChangedPixels": 13,
+        "repeatChangedPixels": 0,
+        "samples": 4,
+        "staticDraws": 3,
+        "reflectionVariance": 0.02290571853518486,
+        "waveDifference": 0.008088525384664536,
+        "graphics": "Metal",
+        "released": true,
+        "representedEachDraw": true,
+        "exactStaticMatch": false,
+        "boatMaterialBlockControl": true,
+        "initialDifference": 0.003921568393707275,
+        "repeatDifference": 0.0
+      },
+      "firstDrawEnvironment": {
+        "phase": "first-draw",
+        "buildTarget": "StandaloneOSX",
+        "colorSpace": "Gamma",
+        "quality": "Ultra",
+        "pipeline": "OceanURP",
+        "ambientMode": "Skybox",
+        "skyShader": "Skybox/Procedural",
+        "sun": "Sun",
+        "reflectionMode": "Skybox",
+        "defaultReflectionFormat": "R8G8B8A8_UNorm",
+        "qualityIndex": 5,
+        "pipelineSamples": 4,
+        "textureLimit": 0,
+        "ambientIntensity": 1.0,
+        "reflectionIntensity": 1.0,
+        "lodBias": 2.0,
+        "ambient": {
+          "r": 0.20000000298023224,
+          "g": 0.3199999928474426,
+          "b": 0.3799999952316284,
+          "a": 1.0
+        },
+        "sky": {
+          "r": 0.20000000298023224,
+          "g": 0.3199999928474426,
+          "b": 0.3799999952316284,
+          "a": 1.0
+        },
+        "equator": {
+          "r": 0.11400000005960464,
+          "g": 0.125,
+          "b": 0.13300000131130219,
+          "a": 1.0
+        },
+        "ground": {
+          "r": 0.04699999839067459,
+          "g": 0.0430000014603138,
+          "b": 0.03500000014901161,
+          "a": 1.0
+        },
+        "fog": {
+          "r": 0.5099999904632568,
+          "g": 0.699999988079071,
+          "b": 0.7900000214576721,
+          "a": 1.0
+        },
+        "sunColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "fogDensity": 0.006000000052154064,
+        "sunIntensity": 1.2999999523162842,
+        "sunEuler": {
+          "x": 45.0,
+          "y": 330.0,
+          "z": 0.0
+        },
+        "cameraPosition": {
+          "x": 0.0,
+          "y": 6.399999618530273,
+          "z": -8.999998092651367
+        },
+        "cameraRotation": {
+          "x": 0.03324952721595764,
+          "y": -0.01849876344203949,
+          "z": 0.000615521043073386,
+          "w": 0.9992756843566895
+        },
+        "fieldOfView": 58.0,
+        "ambientProbe": [
+          0.180283784866333,
+          -0.005682311486452818,
+          -0.012560680508613586,
+          0.007252015173435211,
+          0.0056999679654836655,
+          -0.00987242255359888,
+          0.010330158285796642,
+          -0.010436316952109337,
+          0.025035569444298744,
+          0.22571411728858948,
+          0.04134383052587509,
+          -0.019753262400627136,
+          0.011403260752558708,
+          0.009111973457038403,
+          -0.015783270820975304,
+          0.014379967004060745,
+          -0.015223595313727856,
+          0.03443606197834015,
+          0.3069228529930115,
+          0.12748494744300842,
+          -0.034053392708301544,
+          0.019656643271446228,
+          0.016365190967917442,
+          -0.028349149972200394,
+          0.01771555282175541,
+          -0.02208525687456131,
+          0.040465496480464935
+        ],
+        "reflectionDecode": {
+          "x": 5.0,
+          "y": 1.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "materialTextureFormats": [
+          "Channel_Stone:RGBA_BC7_UNorm:512x512",
+          "Channel_Stone_Normal:RGBA_BC7_UNorm:512x512",
+          "Channel_Stone_MetallicSmoothness:RGBA_BC7_UNorm:512x512",
+          "Channel_CoastalSoil:RGBA_BC7_UNorm:512x512",
+          "Channel_CoastalSoil_Normal:RGBA_BC7_UNorm:512x512",
+          "Channel_CoastalSoil_MetallicSmoothness:RGBA_BC7_UNorm:512x512"
+        ]
+      },
+      "allRecordedEnvironmentPhases": [
+        "scene-loaded",
+        "presented",
+        "first-draw",
+        "repeat-draw",
+        "third-draw"
+      ]
+    },
+    {
+      "label": "channel21boatblocks",
+      "receipt": {
+        "status": "PARTIAL_STATIC_RGB_DIFFERENCE",
+        "scope": "isolated Editor GPU water fixture; no player UI/device acceptance",
+        "staticMatchCheck": "PARTIAL_STATIC_RGB_DIFFERENCE",
+        "width": 1440,
+        "height": 900,
+        "reflectionPasses": 4,
+        "validatedMaterials": 32,
+        "initialChangedPixels": 12,
+        "repeatChangedPixels": 0,
+        "samples": 4,
+        "staticDraws": 3,
+        "reflectionVariance": 0.02290571853518486,
+        "waveDifference": 0.00808852631598711,
+        "graphics": "Metal",
+        "released": true,
+        "representedEachDraw": true,
+        "exactStaticMatch": false,
+        "boatMaterialBlockControl": true,
+        "initialDifference": 0.003921568393707275,
+        "repeatDifference": 0.0
+      },
+      "firstDrawEnvironment": {
+        "phase": "first-draw",
+        "buildTarget": "StandaloneOSX",
+        "colorSpace": "Gamma",
+        "quality": "Ultra",
+        "pipeline": "OceanURP",
+        "ambientMode": "Skybox",
+        "skyShader": "Skybox/Procedural",
+        "sun": "Sun",
+        "reflectionMode": "Skybox",
+        "defaultReflectionFormat": "R8G8B8A8_UNorm",
+        "qualityIndex": 5,
+        "pipelineSamples": 4,
+        "textureLimit": 0,
+        "ambientIntensity": 1.0,
+        "reflectionIntensity": 1.0,
+        "lodBias": 2.0,
+        "ambient": {
+          "r": 0.20000000298023224,
+          "g": 0.3199999928474426,
+          "b": 0.3799999952316284,
+          "a": 1.0
+        },
+        "sky": {
+          "r": 0.20000000298023224,
+          "g": 0.3199999928474426,
+          "b": 0.3799999952316284,
+          "a": 1.0
+        },
+        "equator": {
+          "r": 0.11400000005960464,
+          "g": 0.125,
+          "b": 0.13300000131130219,
+          "a": 1.0
+        },
+        "ground": {
+          "r": 0.04699999839067459,
+          "g": 0.0430000014603138,
+          "b": 0.03500000014901161,
+          "a": 1.0
+        },
+        "fog": {
+          "r": 0.5099999904632568,
+          "g": 0.699999988079071,
+          "b": 0.7900000214576721,
+          "a": 1.0
+        },
+        "sunColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "fogDensity": 0.006000000052154064,
+        "sunIntensity": 1.2999999523162842,
+        "sunEuler": {
+          "x": 45.0,
+          "y": 330.0,
+          "z": 0.0
+        },
+        "cameraPosition": {
+          "x": 0.0,
+          "y": 6.399999618530273,
+          "z": -8.999998092651367
+        },
+        "cameraRotation": {
+          "x": 0.03324952721595764,
+          "y": -0.01849876344203949,
+          "z": 0.000615521043073386,
+          "w": 0.9992756843566895
+        },
+        "fieldOfView": 58.0,
+        "ambientProbe": [
+          0.180283784866333,
+          -0.005682311486452818,
+          -0.012560680508613586,
+          0.007252015173435211,
+          0.0056999679654836655,
+          -0.00987242255359888,
+          0.010330158285796642,
+          -0.010436316952109337,
+          0.025035569444298744,
+          0.22571411728858948,
+          0.04134383052587509,
+          -0.019753262400627136,
+          0.011403260752558708,
+          0.009111973457038403,
+          -0.015783270820975304,
+          0.014379967004060745,
+          -0.015223595313727856,
+          0.03443606197834015,
+          0.3069228529930115,
+          0.12748494744300842,
+          -0.034053392708301544,
+          0.019656643271446228,
+          0.016365190967917442,
+          -0.028349149972200394,
+          0.01771555282175541,
+          -0.02208525687456131,
+          0.040465496480464935
+        ],
+        "reflectionDecode": {
+          "x": 5.0,
+          "y": 1.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "materialTextureFormats": [
+          "Channel_Stone:RGBA_BC7_UNorm:512x512",
+          "Channel_Stone_Normal:RGBA_BC7_UNorm:512x512",
+          "Channel_Stone_MetallicSmoothness:RGBA_BC7_UNorm:512x512",
+          "Channel_CoastalSoil:RGBA_BC7_UNorm:512x512",
+          "Channel_CoastalSoil_Normal:RGBA_BC7_UNorm:512x512",
+          "Channel_CoastalSoil_MetallicSmoothness:RGBA_BC7_UNorm:512x512"
+        ]
+      },
+      "allRecordedEnvironmentPhases": [
+        "scene-loaded",
+        "presented",
+        "first-draw",
+        "repeat-draw",
+        "third-draw"
+      ]
+    },
+    {
+      "label": "channel22iosfinal",
+      "receipt": {
+        "status": "PASS",
+        "scope": "isolated Editor GPU water fixture; no player UI/device acceptance",
+        "staticMatchCheck": "PASS",
+        "width": 1440,
+        "height": 900,
+        "reflectionPasses": 4,
+        "validatedMaterials": 32,
+        "initialChangedPixels": 0,
+        "repeatChangedPixels": 0,
+        "samples": 4,
+        "staticDraws": 3,
+        "reflectionVariance": 0.026356898248195648,
+        "waveDifference": 0.008927898481488228,
+        "graphics": "Metal",
+        "buildTarget": "iOS",
+        "colorSpace": "Gamma",
+        "released": true,
+        "representedEachDraw": true,
+        "exactStaticMatch": true,
+        "boatMaterialBlockControl": false,
+        "initialDifference": 0.0,
+        "repeatDifference": 0.0
+      },
+      "firstDrawEnvironment": {
+        "phase": "first-draw",
+        "buildTarget": "iOS",
+        "colorSpace": "Gamma",
+        "quality": "Ultra",
+        "pipeline": "OceanURP",
+        "ambientMode": "Skybox",
+        "skyShader": "Skybox/Procedural",
+        "sun": "Sun",
+        "reflectionMode": "Skybox",
+        "defaultReflectionFormat": "R8G8B8A8_UNorm",
+        "qualityIndex": 5,
+        "pipelineSamples": 4,
+        "textureLimit": 0,
+        "ambientIntensity": 1.0,
+        "reflectionIntensity": 1.0,
+        "lodBias": 2.0,
+        "ambient": {
+          "r": 0.20000000298023224,
+          "g": 0.3199999928474426,
+          "b": 0.3799999952316284,
+          "a": 1.0
+        },
+        "sky": {
+          "r": 0.20000000298023224,
+          "g": 0.3199999928474426,
+          "b": 0.3799999952316284,
+          "a": 1.0
+        },
+        "equator": {
+          "r": 0.11400000005960464,
+          "g": 0.125,
+          "b": 0.13300000131130219,
+          "a": 1.0
+        },
+        "ground": {
+          "r": 0.04699999839067459,
+          "g": 0.0430000014603138,
+          "b": 0.03500000014901161,
+          "a": 1.0
+        },
+        "fog": {
+          "r": 0.5099999904632568,
+          "g": 0.699999988079071,
+          "b": 0.7900000214576721,
+          "a": 1.0
+        },
+        "sunColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "fogDensity": 0.006000000052154064,
+        "sunIntensity": 1.2999999523162842,
+        "sunEuler": {
+          "x": 45.0,
+          "y": 330.0,
+          "z": 0.0
+        },
+        "cameraPosition": {
+          "x": 0.0,
+          "y": 6.399999618530273,
+          "z": -8.999998092651367
+        },
+        "cameraRotation": {
+          "x": 0.03324952721595764,
+          "y": -0.01849876344203949,
+          "z": 0.000615521043073386,
+          "w": 0.9992756843566895
+        },
+        "fieldOfView": 58.0,
+        "ambientProbe": [
+          0.180283784866333,
+          -0.005682311486452818,
+          -0.012560680508613586,
+          0.007252015173435211,
+          0.0056999679654836655,
+          -0.00987242255359888,
+          0.010330158285796642,
+          -0.010436316952109337,
+          0.025035569444298744,
+          0.22571411728858948,
+          0.04134383052587509,
+          -0.019753262400627136,
+          0.011403260752558708,
+          0.009111973457038403,
+          -0.015783270820975304,
+          0.014379967004060745,
+          -0.015223595313727856,
+          0.03443606197834015,
+          0.3069228529930115,
+          0.12748494744300842,
+          -0.034053392708301544,
+          0.019656643271446228,
+          0.016365190967917442,
+          -0.028349149972200394,
+          0.01771555282175541,
+          -0.02208525687456131,
+          0.040465496480464935
+        ],
+        "reflectionDecode": {
+          "x": 5.0,
+          "y": 1.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "materialTextureFormats": [
+          "Channel_Stone:RGBA_ASTC4X4_UNorm:512x512",
+          "Channel_Stone_Normal:RGBA_ASTC4X4_UNorm:512x512",
+          "Channel_Stone_MetallicSmoothness:RGBA_ASTC4X4_UNorm:512x512",
+          "Channel_CoastalSoil:RGBA_ASTC4X4_UNorm:512x512",
+          "Channel_CoastalSoil_Normal:RGBA_ASTC4X4_UNorm:512x512",
+          "Channel_CoastalSoil_MetallicSmoothness:RGBA_ASTC4X4_UNorm:512x512"
+        ]
+      },
+      "allRecordedEnvironmentPhases": [
+        "scene-loaded",
+        "presented",
+        "first-draw",
+        "repeat-draw",
+        "third-draw"
+      ]
+    },
+    {
+      "label": "channel23macfinal",
+      "receipt": {
+        "status": "PARTIAL_STATIC_RGB_DIFFERENCE",
+        "scope": "isolated Editor GPU water fixture; no player UI/device acceptance",
+        "staticMatchCheck": "PARTIAL_STATIC_RGB_DIFFERENCE",
+        "width": 1440,
+        "height": 900,
+        "reflectionPasses": 4,
+        "validatedMaterials": 32,
+        "initialChangedPixels": 0,
+        "repeatChangedPixels": 13,
+        "samples": 4,
+        "staticDraws": 3,
+        "reflectionVariance": 0.022950759157538414,
+        "waveDifference": 0.008083750493824482,
+        "graphics": "Metal",
+        "buildTarget": "StandaloneOSX",
+        "colorSpace": "Gamma",
+        "released": true,
+        "representedEachDraw": true,
+        "exactStaticMatch": false,
+        "boatMaterialBlockControl": false,
+        "initialDifference": 0.0,
+        "repeatDifference": 0.003921568393707275
+      },
+      "firstDrawEnvironment": {
+        "phase": "first-draw",
+        "buildTarget": "StandaloneOSX",
+        "colorSpace": "Gamma",
+        "quality": "Ultra",
+        "pipeline": "OceanURP",
+        "ambientMode": "Skybox",
+        "skyShader": "Skybox/Procedural",
+        "sun": "Sun",
+        "reflectionMode": "Skybox",
+        "defaultReflectionFormat": "R8G8B8A8_UNorm",
+        "qualityIndex": 5,
+        "pipelineSamples": 4,
+        "textureLimit": 0,
+        "ambientIntensity": 1.0,
+        "reflectionIntensity": 1.0,
+        "lodBias": 2.0,
+        "ambient": {
+          "r": 0.20000000298023224,
+          "g": 0.3199999928474426,
+          "b": 0.3799999952316284,
+          "a": 1.0
+        },
+        "sky": {
+          "r": 0.20000000298023224,
+          "g": 0.3199999928474426,
+          "b": 0.3799999952316284,
+          "a": 1.0
+        },
+        "equator": {
+          "r": 0.11400000005960464,
+          "g": 0.125,
+          "b": 0.13300000131130219,
+          "a": 1.0
+        },
+        "ground": {
+          "r": 0.04699999839067459,
+          "g": 0.0430000014603138,
+          "b": 0.03500000014901161,
+          "a": 1.0
+        },
+        "fog": {
+          "r": 0.5099999904632568,
+          "g": 0.699999988079071,
+          "b": 0.7900000214576721,
+          "a": 1.0
+        },
+        "sunColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "fogDensity": 0.006000000052154064,
+        "sunIntensity": 1.2999999523162842,
+        "sunEuler": {
+          "x": 45.0,
+          "y": 330.0,
+          "z": 0.0
+        },
+        "cameraPosition": {
+          "x": 0.0,
+          "y": 6.399999618530273,
+          "z": -8.999998092651367
+        },
+        "cameraRotation": {
+          "x": 0.03324952721595764,
+          "y": -0.01849876344203949,
+          "z": 0.000615521043073386,
+          "w": 0.9992756843566895
+        },
+        "fieldOfView": 58.0,
+        "ambientProbe": [
+          0.180283784866333,
+          -0.005682311486452818,
+          -0.012560680508613586,
+          0.007252015173435211,
+          0.0056999679654836655,
+          -0.00987242255359888,
+          0.010330158285796642,
+          -0.010436316952109337,
+          0.025035569444298744,
+          0.22571411728858948,
+          0.04134383052587509,
+          -0.019753262400627136,
+          0.011403260752558708,
+          0.009111973457038403,
+          -0.015783270820975304,
+          0.014379967004060745,
+          -0.015223595313727856,
+          0.03443606197834015,
+          0.3069228529930115,
+          0.12748494744300842,
+          -0.034053392708301544,
+          0.019656643271446228,
+          0.016365190967917442,
+          -0.028349149972200394,
+          0.01771555282175541,
+          -0.02208525687456131,
+          0.040465496480464935
+        ],
+        "reflectionDecode": {
+          "x": 5.0,
+          "y": 1.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "materialTextureFormats": [
+          "Channel_Stone:RGBA_BC7_UNorm:512x512",
+          "Channel_Stone_Normal:RGBA_BC7_UNorm:512x512",
+          "Channel_Stone_MetallicSmoothness:RGBA_BC7_UNorm:512x512",
+          "Channel_CoastalSoil:RGBA_BC7_UNorm:512x512",
+          "Channel_CoastalSoil_Normal:RGBA_BC7_UNorm:512x512",
+          "Channel_CoastalSoil_MetallicSmoothness:RGBA_BC7_UNorm:512x512"
+        ]
+      },
+      "allRecordedEnvironmentPhases": [
+        "scene-loaded",
+        "presented",
+        "first-draw",
+        "repeat-draw",
+        "third-draw"
+      ]
+    }
+  ],
+  "comparisons": [
+    {
+      "left": "channel15environment",
+      "right": "channel16ios",
+      "frame": "surface.png",
+      "maximumByteDifference": 88,
+      "meanAbsoluteByteDifference": 6.0980977366255145,
+      "changedPixels": 1232284,
+      "bounds": [
+        0,
+        0,
+        1439,
+        899
+      ]
+    },
+    {
+      "left": "channel15environment",
+      "right": "channel17mac",
+      "frame": "surface.png",
+      "maximumByteDifference": 89,
+      "meanAbsoluteByteDifference": 0.056017489711934154,
+      "changedPixels": 3697,
+      "bounds": [
+        381,
+        491,
+        528,
+        543
+      ]
+    },
+    {
+      "left": "channel17mac",
+      "right": "channel18macformats",
+      "frame": "surface.png",
+      "maximumByteDifference": 89,
+      "meanAbsoluteByteDifference": 0.056017489711934154,
+      "changedPixels": 3697,
+      "bounds": [
+        381,
+        491,
+        528,
+        543
+      ]
+    },
+    {
+      "left": "channel20boatblocks",
+      "right": "channel21boatblocks",
+      "frame": "surface.png",
+      "maximumByteDifference": 0,
+      "meanAbsoluteByteDifference": 0.0,
+      "changedPixels": 0,
+      "bounds": null
+    },
+    {
+      "left": "channel20boatblocks",
+      "right": "channel21boatblocks",
+      "frame": "reflection.png",
+      "maximumByteDifference": 0,
+      "meanAbsoluteByteDifference": 0.0,
+      "changedPixels": 0,
+      "bounds": null
+    },
+    {
+      "left": "channel18macformats",
+      "right": "channel23macfinal",
+      "frame": "surface.png",
+      "maximumByteDifference": 89,
+      "meanAbsoluteByteDifference": 0.056017489711934154,
+      "changedPixels": 3697,
+      "bounds": [
+        381,
+        491,
+        528,
+        543
+      ]
+    },
+    {
+      "left": "channel19iosformats",
+      "right": "channel22iosfinal",
+      "frame": "surface.png",
+      "maximumByteDifference": 0,
+      "meanAbsoluteByteDifference": 0.0,
+      "changedPixels": 0,
+      "bounds": null
+    }
+  ],
+  "zeroThresholdRetained": true,
+  "defaultSamples": 4,
+  "runtimeChanged": false,
+  "phoneUpdated": false,
+  "phoneBuild": "5",
+  "testFlightBuild": "5",
+  "remaining": [
+    "Water exact static match remains intermittent",
+    "Same-target boat/default material differences remain unproven; opt-in block control is not runtime fix",
+    "Actual iPhone/iPad frames, touch, cost and 20-minute qualification",
+    "Full art/science/user/child gates"
+  ],
+  "metrics": {
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "independentReceiptAudit": "INCOMPLETE",
+    "measurements": [
+      "bf96c07a-5ac8-4e3c-8be6-a8e6eebb236e",
+      "06f09ffe-1d72-4460-8309-00db38bbacfb",
+      "67c27253-3ffe-4dc1-9229-3b1e69716a1b",
+      "bda493ad-754b-443c-8baa-9e64740568e1",
+      "78145161-6a1f-4bd1-921d-7b0a65df2221",
+      "57fb2c3a-fc22-4211-a43e-685c253f663b",
+      "e288d108-c88a-4576-90fd-44c10ecbd437",
+      "677f9225-4c26-425d-9791-723f8306c7d5",
+      "a033b495-bf8f-45c0-a362-fe9b6d315f23",
+      "cb6712f1-4dd3-4741-aece-d7f50d380c42",
+      "dde198d4-4960-48d5-8768-484d4c6dc64b",
+      "dd36c805-27c6-44c8-9285-87bf79785669",
+      "1cec5726-7df1-4585-9db1-9341f4f86e5f",
+      "7558e506-bafe-4ccc-a949-d6e3c1b1921e"
+    ],
+    "binding": "VERIFIED",
+    "nonzeroMeasurements": [
+      "bf96c07a-5ac8-4e3c-8be6-a8e6eebb236e",
+      "06f09ffe-1d72-4460-8309-00db38bbacfb",
+      "67c27253-3ffe-4dc1-9229-3b1e69716a1b",
+      "bda493ad-754b-443c-8baa-9e64740568e1",
+      "78145161-6a1f-4bd1-921d-7b0a65df2221",
+      "e288d108-c88a-4576-90fd-44c10ecbd437",
+      "677f9225-4c26-425d-9791-723f8306c7d5",
+      "cb6712f1-4dd3-4741-aece-d7f50d380c42"
+    ]
+  },
+  "editor": {
+    "result": "Passed",
+    "total": "51",
+    "passed": "51",
+    "failed": "0",
+    "end-time": "2026-11-24 01:53:42Z"
+  },
+  "sourceDigest": "f056e11bc1b593b86b07aa03888c11480a7fc482c772249614aa513b86b7c48e",
+  "releaseGuardTests": {
+    "total": 11,
+    "result": "PASS",
+    "scope": "release safety helpers; not new Unity CLI argument coverage"
+  },
+  "publicationAudit": {
+    "status": "PASS",
+    "trackedFiles": 721,
+    "issues": []
+  }
+}

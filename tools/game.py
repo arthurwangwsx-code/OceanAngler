@@ -3,7 +3,7 @@
 import argparse, os, subprocess, json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-p=argparse.ArgumentParser();p.add_argument('action',choices=['prepare','tests','ios','mac','bluefin','spinning-rig','coral-bay','nearshore-channel','shoal','water-review','fish-review','school-review','encounter-review','observation-review','channel-review']);p.add_argument('--build',type=int);p.add_argument('--label',default='a');p.add_argument('--test-platform',choices=['EditMode','PlayMode'],default='EditMode');a=p.parse_args()
+p=argparse.ArgumentParser();p.add_argument('action',choices=['prepare','tests','ios','mac','bluefin','spinning-rig','coral-bay','nearshore-channel','shoal','water-review','fish-review','school-review','encounter-review','observation-review','channel-review']);p.add_argument('--build',type=int);p.add_argument('--label',default='a');p.add_argument('--review-target',choices=['mac','ios'],default='mac');p.add_argument('--test-platform',choices=['EditMode','PlayMode'],default='EditMode');a=p.parse_args()
 editor=Path(os.environ.get('UNITY_EDITOR','/Applications/Unity/Hub/Editor/6000.3.29f1/Unity.app/Contents/MacOS/Unity'))
 local=ROOT/'.local';local.mkdir(exist_ok=True)
 if not editor.is_file():raise SystemExit('Unity Editor not found')
@@ -11,11 +11,12 @@ env=dict(os.environ);log=local/(a.action+'.log')
 reviews={'channel-review':('channel-runs','OCEAN_CHANNEL_REVIEW_OUTPUT','OceanAngler.Editor.WaterRenderReview.CaptureChannel'),'observation-review':('observation-runs','OCEAN_OBSERVATION_REVIEW_OUTPUT','OceanAngler.Editor.ObservationRenderReview.Capture'),'water-review':('water-runs','OCEAN_WATER_REVIEW_OUTPUT','OceanAngler.Editor.WaterRenderReview.Capture'),'fish-review':('fish-runs','OCEAN_FISH_REVIEW_OUTPUT','OceanAngler.Editor.FishRenderReview.Capture'),'school-review':('school-runs','OCEAN_SCHOOL_REVIEW_OUTPUT','OceanAngler.Editor.SchoolRenderReview.Capture'),'encounter-review':('encounter-runs','OCEAN_ENCOUNTER_REVIEW_OUTPUT','OceanAngler.Editor.EncounterRenderReview.Capture')}
 gpu_review=a.action in reviews
 if gpu_review:
+ env['OCEAN_REVIEW_TARGET']='iOS' if a.review_target=='ios' else 'StandaloneOSX'
  if not a.label.isalnum():raise SystemExit('simple review label required')
  folder=local/reviews[a.action][0]/a.label
  if folder.exists():raise SystemExit('Use a fresh review label; evidence is immutable')
  folder.mkdir(parents=True);log=folder/'review.log';env[reviews[a.action][1]]=str(folder)
-cmd=[str(editor),'-batchmode']+([] if gpu_review else ['-nographics'])+['-projectPath',str(ROOT/'game'),'-logFile',str(log)]
+cmd=[str(editor),'-batchmode']+(['-buildTarget','ios' if a.review_target=='ios' else 'osxuniversal'] if gpu_review else [])+([] if gpu_review else ['-nographics'])+['-projectPath',str(ROOT/'game'),'-logFile',str(log)]
 if a.action=='tests':
  cmd+=['-runTests','-testPlatform',a.test_platform,'-testResults',str(local/(a.test_platform.lower()+'.xml'))]
  if a.test_platform=='PlayMode':

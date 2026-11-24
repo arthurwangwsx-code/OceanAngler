@@ -1257,6 +1257,25 @@
           "sha256": "0038e3fcd6672d982cdf69adac0e2d1bd33ba54260edd317e379ba56c08a7272"
         }
       ]
+    },
+    {
+      "id": "render-platform-calibration-preview",
+      "author": "OceanAngler contributors",
+      "source": "game/Assets/OceanAngler/Editor/WaterRenderReview.cs",
+      "license": "MIT",
+      "redistribution": true,
+      "status": "DIAGNOSTIC_NOT_ART_ACCEPTANCE",
+      "note": "Original isolated Editor frames with explicit iOS/Mac target; not physical device output.",
+      "artifacts": [
+        {
+          "path": "reports/render-platform-calibration/ios-surface.png",
+          "sha256": "6966a7612b5ede4e579ab0917736435a5b174fdf69b0f08ed2088567a790045a"
+        },
+        {
+          "path": "reports/render-platform-calibration/mac-surface.png",
+          "sha256": "e60a22ad1288a855216bdce500de4535460db488c72ab6d368a86ef9a89a1912"
+        }
+      ]
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."

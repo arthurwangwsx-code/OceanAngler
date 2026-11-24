@@ -54,3 +54,5 @@ REQ-06近海航道后续：独立Blend/FBX/四组PBR、六组各三LOD、系泊�
 2026-11-24 build 5交付：0.1.0 (5)冻结a6bcf8e，50项Editor、10项无画面PlayMode、11项发布工具、源码CI、iOS导出/签名归档、内部专用IPA/静态元数据/上传及Apple VALID/INTERNAL_ONLY/IN_BETA_TESTING通过，本人授权两账号组和说明已读回，指定邮箱仍INVITED。见[发行回执](testflight-0.1.0-5.json)。同源码已用复用的单设备profile本地更新当前iPhone 17 Pro Max / iOS 27.3，从4到5未卸载/清档，安装构建号/启动和随后同进程查询通过，见[本地回执](iphone-local-0.1.0-5.md)。这不证明TestFlight来源安装、主界面/触控、个人进度或20分钟资格；首次成功观察记录升级存档后旧4不能读取，继续使用新版，不清档降级。保护观察/近海候选已纳入，但完整模型/海域、美术A1–A3、用户/科学/儿童和双设备仍未完成；独立receipt审计INCOMPLETE，3.4及完整产品出口保持未完成。
 
 REQ-06地形/材质后续：封闭高度场山脊、连续土层权重和世界三轴PBR已接入，近景发现的按面UV接缝修复；源三LOD、45处基座剖面及权重通过，51项Editor、10项无画面PlayMode与Mac编译通过。16张源/Metal原图含否决近景分别审阅；最新4×MSAA回执仍PARTIAL（12像素最大1/255），两次中间零差异不能覆盖该结果，独立进程环境/颜色还未校准。材质/倒影/波纹/释放检查与海湾控制完成；未降抗锯齿或放宽阈值，失败/撤回尝试保留。细裂纹/崖面与重复细节、科学/用户/双设备/A1–A3及完整内容未完成；本轮未进build 5，未修改个人存档，Mac仍锁定，没有新原生窗口。独立receipt审计INCOMPLETE，2.4、3.4、4.1–4.3和apply不勾选完成。见[本轮证据](nearshore-terrain.md)。
+
+渲染平台校准后续：GPU入口明确选择Mac/iOS，记录实际目标、Gamma/Ultra、太阳/雾/探针及BC7/ASTC格式，分离平台差异与船体区域差异。51项Editor通过；最终iOS配置严格三图PASS，Mac仍PARTIAL，中间成功不覆盖其他失败。船体各槽材质对照只用于默认关闭的Editor实验，运行时未改；无新移动包或原生/真机验收，build 5不变。完整产品与apply未完成，独立receipt审计INCOMPLETE，见[校准证据](render-platform-calibration.md)。

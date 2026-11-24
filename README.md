@@ -68,3 +68,5 @@ TestFlight 0.1.0 (5)冻结于a6bcf8e，在build 4基础上新增保护观察记�
 近海航道候选已接入共享水上/水下观察和按需海域切换：自有Blend/FBX/四组PBR、六组各三LOD、独立水面及复用自有系泊艇。50项Editor、10项无画面PlayMode、Mac编译和11项发布工具测试通过，12张工作室/Editor Metal原图逐张审阅。岛体轮廓、材质边界与重复岩石/叶片仍有明显样板感，不能认定拟真美术合格；当前Mac锁定，尚无本轮玩家窗口或设备画面。新候选已进入build 5。详见[近海航道证据](reports/nearshore-channel.md)。
 
 后续开发源码e9fe2a3已更新为封闭高度场山脊、连续土层与世界三轴PBR，51项Editor、10项无画面PlayMode、Mac编译及源码CI通过；最新图形稳定性仍PARTIAL，独立Editor进程环境/颜色尚未校准。该后续源码尚未进入已发布或已安装的build 5；上段build 5结果覆盖的是前一近海候选。完整美术和真机门槛仍未通过，详见[当前地形证据](reports/nearshore-terrain.md)。
+
+渲染平台校准后续：GPU入口明确选择Mac/iOS，记录实际目标、Gamma/Ultra、太阳/雾/探针及BC7/ASTC格式，分离平台差异与船体区域差异。51项Editor通过；最终iOS配置严格三图PASS，Mac仍PARTIAL，中间成功不覆盖其他失败。船体各槽材质对照只用于默认关闭的Editor实验，运行时未改；无新移动包或原生/真机验收，build 5不变。完整产品与apply未完成，独立receipt审计INCOMPLETE，见[校准证据](reports/render-platform-calibration.md)。
