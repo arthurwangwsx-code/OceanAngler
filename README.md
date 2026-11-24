@@ -4,7 +4,7 @@
 
 儿童与家庭向的 3D 海洋钓鱼探索游戏。真实比例鱼类、漂亮水下世界、易懂钓具、积分成长、图鉴与放流。正式名称待商标检查。
 
-**当前已具备可试玩的钓鱼/进度闭环。0.1.0 (4)已通过Apple处理并分配至本人授权账号的内部TestFlight组，累计纳入首鱼/首钓组/首海湾候选、图鉴/任务/音频/水面、环境鱼群、阶段钓鱼表现及鱼体/阴影改进；[发布回执](reports/testflight-0.1.0-4.json)与实际安装分别记录。美术、实际触控、真机与完整产品验收未完成。** 首发iPhone/iPad，最低iOS/iPadOS 17，Unity 6000.3.29f1 + URP 17.3.0 + C# + Blender；离线单人、无广告、无内购、无聊天。
+**当前已具备可试玩的钓鱼/进度闭环。0.1.0 (5)已通过Apple处理并分配至本人授权账号的内部TestFlight组，新增保护观察与近海航道候选；[发行回执](reports/testflight-0.1.0-5.json)和[iPhone本地更新/启动回执](reports/iphone-local-0.1.0-5.md)分开记录。美术、实际触控、真机20分钟与完整产品验收未完成。** 首发iPhone/iPad，最低iOS/iPadOS 17，Unity 6000.3.29f1 + URP 17.3.0 + C# + Blender；离线单人、无广告、无内购、无聊天。
 
 | 阅读目的 | 文件 |
 |---|---|
@@ -17,7 +17,7 @@
 | GitHub 开源流程 | [开源流程](docs/07-open-source.md) |
 | 保护观察后续源码与存档边界 | [交互说明](docs/14-protected-observation.md)、[A0工程证据](reports/protected-observation.md) |
 | App Store Connect 与本人 TestFlight | [发布流程](docs/08-testflight.md) |
-| 本次候选如何在设备上复核 | [build 4设备检查](docs/13-beta4-review.md) |
+| 本次候选如何在设备上复核 | [build 5设备检查](docs/16-beta5-review.md) |
 | 当前真实结果 | [完整总账](reports/acceptance-ledger.md)、[移动布局与发行](reports/mobile-layout.md)、[逻辑与Mac运行](reports/progression-validation.md) |
 | 首条独立源模型 | [蓝鳍鲹候选及验收边界](reports/bluefin-art.md)、[源资产重建](art/source/bluefin/README.md) |
 | 第一套完整钓组候选 | [纺车钓组与验证边界](reports/spinning-rig-art.md)、[源资产重建](art/source/spinning-rig/README.md) |
@@ -58,10 +58,10 @@ ASC_ENV_FILE=/path/to/private/asc.env python3 tools/asc.py status
 
 Mac构建入口为`python3 tools/game.py mac`；原生检查为`python3 tools/runtime_smoke.py --label uniquerun`，使用隔离存档，须在桌面窗口可用后实际运行并核对图像/回执。Editor离屏诊断为`python3 tools/game.py water-review --label uniquereview`，不能据此宣布玩家UI或设备通过。Unity和资产写入串行，每轮用新label保留证据；字体重建见tools/requirements.txt。
 
-TestFlight 0.1.0 (4)冻结于ee7ba50，包含三条环境鱼、阶段接近/收鱼、共享选择入口、重复抛竿保护及鱼体/阴影更新。[发行回执](reports/testflight-0.1.0-4.json)记录Apple VALID/INTERNAL_ONLY、本人两账号组和测试说明；指定邮箱邀请为INVITED，实际安装启动未验。按[build 4设备复核](docs/13-beta4-review.md)继续记录。历史[build 1](reports/testflight-0.1.0-1.json)、[build 2](reports/testflight-0.1.0-2.json)、[build 3](reports/testflight-0.1.0-3.json)产物与回执保留。新构建按[冻结源码发布流程](docs/08-testflight.md)使用新build号。ASC工具另需PyJWT与cryptography，凭据显式在本机配置，不进入公开仓库。
+TestFlight 0.1.0 (5)冻结于a6bcf8e，在build 4基础上新增保护观察记录/存档升级、近海源资产和共享海域切换。[发行回执](reports/testflight-0.1.0-5.json)记录Apple VALID/INTERNAL_ONLY/IN_BETA_TESTING、本人两账号组和测试说明；指定邮箱邀请仍为INVITED，TestFlight实际安装启动未验。本地单设备包已更新当前iPhone至同源码build 5，不能替代TestFlight设备来源证明。按[build 5设备复核](docs/16-beta5-review.md)记录，首次成功观察升级存档后旧build 4不可读取，保持新版且不清档降级。历史[build 1](reports/testflight-0.1.0-1.json)、[build 2](reports/testflight-0.1.0-2.json)、[build 3](reports/testflight-0.1.0-3.json)、[build 4](reports/testflight-0.1.0-4.json)产物与回执保留。新构建按[冻结源码发布流程](docs/08-testflight.md)使用新build号。ASC工具另需PyJWT与cryptography，凭据显式在本机配置，不进入公开仓库。
 
 保护观察后续源码已接入绿海龟、宽吻海豚和鲸鲨的独立观察/图鉴/存档闭环，形体仅为A0样板。首次记录才升级payload为schema 2，旧build 4会拒绝该版本以保护记录，不能以清档解决回退。此变化尚未进入上述TestFlight 0.1.0 (4)，详见[验证与限制](reports/protected-observation.md)。
 
-2026-11-24已按要求把冻结0.1.0 (4)以本地单设备测试包装到当前iPhone 17 Pro Max，并确认启动和运行进程；见[安装回执](reports/iphone-local-0.1.0-4.md)。它不等同于TestFlight设备安装，主界面/触控和20分钟仍未验，后续未发布源码不在该包内。
+2026-11-24已按要求把当前iPhone 17 Pro Max从本地build 4更新为冻结0.1.0 (5)，确认安装构建号、启动和随后同进程存活；未卸载或清档，见[当前安装回执](reports/iphone-local-0.1.0-5.md)。它不等同于TestFlight设备安装，主界面/触控、个人进度迁移和20分钟仍未验，原[build 4回执](reports/iphone-local-0.1.0-4.md)保留。
 
-近海航道候选已接入共享水上/水下观察和按需海域切换：自有Blend/FBX/四组PBR、六组各三LOD、独立水面及复用自有系泊艇。50项Editor、10项无画面PlayMode、Mac编译和11项发布工具测试通过，12张工作室/Editor Metal原图逐张审阅。岛体轮廓、材质边界与重复岩石/叶片仍有明显样板感，不能认定拟真美术合格；当前Mac锁定，尚无本轮玩家窗口或设备画面。新候选未进入已安装的build 4。详见[近海航道证据](reports/nearshore-channel.md)。
+近海航道候选已接入共享水上/水下观察和按需海域切换：自有Blend/FBX/四组PBR、六组各三LOD、独立水面及复用自有系泊艇。50项Editor、10项无画面PlayMode、Mac编译和11项发布工具测试通过，12张工作室/Editor Metal原图逐张审阅。岛体轮廓、材质边界与重复岩石/叶片仍有明显样板感，不能认定拟真美术合格；当前Mac锁定，尚无本轮玩家窗口或设备画面。新候选已进入build 5。详见[近海航道证据](reports/nearshore-channel.md)。

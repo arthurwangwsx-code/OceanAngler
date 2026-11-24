@@ -170,5 +170,15 @@
     "status": "SUCCESS",
     "url": "https://github.com/arthurwangwsx-code/OceanAngler/actions/runs/45296371726",
     "scope": "GitHub scope/hash/publication and release-tool tests; not Unity/device acceptance"
+  },
+  "headlessPlayModeScenario": {
+    "habitatRoundTrips": 3,
+    "habitats": [
+      "channel",
+      "bay",
+      "slope"
+    ],
+    "channelCatchRecords": 3,
+    "input": "UI events plus rule-driven line control; no touch/device acceptance"
   }
 }

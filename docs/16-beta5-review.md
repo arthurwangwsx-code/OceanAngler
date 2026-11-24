@@ -1,6 +1,6 @@
 # Build 5 设备复核
 
-目标版本OceanAngler 0.1.0 (5)，最低iOS/iPadOS 17。发行配置及prepare已完成，生成场景20对象按名称/组件及内部引用归一后与fd14dbb等价，仅iPhone构建号改为5；50项Editor、10项无画面PlayMode及11项发布工具测试通过，见[准备回执](../reports/beta5-preparation.json)。冻结、签名、上传、Apple处理、本人组及设备更新均须以随后回执为准，不推定已发布。现有iPhone本地安装仍为build 4。
+OceanAngler 0.1.0 (5)，最低iOS/iPadOS 17，冻结a6bcf8ee82b90fa1fd3b856873233b838c415189。生成场景20对象按名称/组件及内部引用归一后与fd14dbb等价，仅iPhone构建号改为5；50项Editor、10项无画面PlayMode及11项发布工具测试通过，见[准备回执](../reports/beta5-preparation.json)。iOS冻结导出、签名归档及当前iPhone本地更新/启动/进程读回已通过[本地回执](../reports/iphone-local-0.1.0-5.md)。Apple VALID/INTERNAL_ONLY/IN_BETA_TESTING、本人授权两账号组和测试说明已通过[发行回执](../reports/testflight-0.1.0-5.json)核实；指定邮箱邀请仍为INVITED，TestFlight实际安装需接受邀请后另验，本地安装不等于该来源证明。
 
 本版拟纳入保护观察和近海航道候选。三种观察对象仍是A0形体；近海有独立源文件/PBR/LOD，但岛形、材质边界和重复细节尚未达到拟真要求。陆坡及其余鱼种/钓具完整制作、美术A1–A3、儿童/科学/用户与双设备资格保持未完成。
 

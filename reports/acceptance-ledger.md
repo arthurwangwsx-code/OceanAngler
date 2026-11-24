@@ -7,15 +7,15 @@
 | REQ-01 完整钓鱼循环 | 规则层20次种子捕获，每次重读存档；Mac实际UI单次循环与导航通过；新增无画面场景检查覆盖4次记录放流、存档重读、失败重试与暂停/再抛竿 | PARTIAL | 真机界面连续20次无卡死；儿童首鱼3分钟观察记录；后续放流表现的实际画面 |
 | REQ-02 张力与辅助 | 规则测试覆盖松线/超载/辅助，Mac按住与松开输入通过 | PARTIAL | 实际设备触控、孩子对张力的理解及标准/辅助体验 |
 | REQ-03 幂等积分与恢复 | 真实文件测试覆盖重复catchId、损坏备份恢复、未来版本拒绝、写入失败 | PASS（规则/本地文件） | 真机后台/锁屏/重启后的行为仍随REQ-12验证 |
-| REQ-04 12鱼种与观察生物 | 12可钓数据与3独立观察目录；保护ID不能进入抛竿/结算。后续源码已有三种A0观察形体、独立图鉴/记录/存档、暂停和跨海域保护，46项Editor/9项无画面PlayMode及Editor Metal采样通过，见protected-observation.md | PARTIAL | 12成品鱼及3观察完整源资产/动画/LOD、美术/科学/用户和实际设备；新观察闭环未进build 4 |
+| REQ-04 12鱼种与观察生物 | 12可钓数据与3独立观察目录；保护ID不能进入抛竿/结算。三种A0观察形体、图鉴/记录/存档与暂停/跨海域保护已进build 5，50项Editor/10项无画面PlayMode及分开的Metal采样通过，见protected-observation.md | PARTIAL | 12成品鱼及3观察完整源资产/动画/LOD、美术/科学/用户、真实设备交互和存档迁移 |
 | REQ-05 完整3D资产 | 蓝鳍鲹独立源模型/PBR/12骨骼/七动作/三LOD候选已接入；纺车钓组九导环/11骨骼/七组件三LOD，源文件/机构检查、工作室近景/转台已生成；历史Mac原生三档核查过界面、动画、标题和卷线器 | PARTIAL | 英雄鱼与钓具A1–A3、口部/鳍条及局部材质完善、用户/科学审阅和真机预算，再批量制作；见bluefin-mouth-and-fins.md、bluefin-surface-and-ui.md、spinning-rig-art.md |
 | REQ-06 三海域 | 海湾和近海航道已有独立源资产/三LOD、水上水下观察与倒影候选；50项Editor、10项无画面PlayMode、Mac编译通过，包含三轮切换/记录/读档；近海12张工作室/Metal原图审阅，陆坡仍为运行时样板 | PARTIAL | 岛体轮廓/材质边界/重复细节、完整海域美术与陆坡制作、当前原生窗口/科学/用户/双设备；见nearshore-channel.md、bay-shoreline.md |
 | REQ-07 图鉴与18任务 | 尺寸/发现/任务数据与UI接入，Mac图鉴旋转/缩放可用；后续源码新增18任务指引和轻柔控线结果，初始装备20次确定性模拟/逐次重载完成全部条件与装备解锁，无画面检查覆盖任务指引和记录进度，见task-journey.json | PARTIAL | 实际随机遭遇/完整任务链试玩、科普内容审阅、任务新画面和设备图鉴交互；补丁未进build 2 |
 | REQ-08 手机/平板与无障碍 | 共享逻辑点UI、左右手/减弱动态，Mac两档点尺寸、触控命中和滚动通过 | PARTIAL | iPhone/iPad实际安全区/旋转/可读性/操作与无障碍体验 |
 | REQ-09 隐私与家长区 | 无广告/账号/分析；家长验证、清档二次确认及取消不丢档的Mac检查通过 | PARTIAL | 实际iOS包SDK/权限与系统网络行为核查；家长体验 |
 | REQ-10 开源流程 | 已公开独立仓库，MIT/OFL及资产登记，首轮CI通过 | PASS（已发布基线） | 每次新提交仍须审查许可、凭据及CI；不能由脚本证明全部资产合法性 |
-| REQ-11 本人TestFlight | 0.1.0 (4)冻结源码ee7ba50，签名归档/内部导出、包静态元数据、上传、Apple VALID/INTERNAL_ONLY、本人授权两账号组与测试说明读回通过；含指定测试邮箱，见testflight-0.1.0-4.json | PARTIAL | 发布回执记录指定邮箱为INVITED；TestFlight实际安装启动未验，按docs/13-beta4-review.md复核 |
-| REQ-12 真机性能与恢复 | build 4已本地安装至iPhone 17 Pro Max并验证启动和随后同进程存活；不是主界面或性能验收，后台自动暂停代码已实现 | NOT_RUN（20分钟资格） | iPhone/iPad各20分钟帧耗/内存/温升，后台/锁屏/恢复和持久化实际记录 |
+| REQ-11 本人TestFlight | 0.1.0 (5)冻结a6bcf8e，签名归档/内部导出、静态元数据、上传、Apple VALID/INTERNAL_ONLY/IN_BETA_TESTING、本人授权两账号组与说明读回通过，见testflight-0.1.0-5.json；同源码已本地更新当前iPhone | PARTIAL | 指定邮箱仍INVITED；TestFlight来源实际安装启动未验，本地更新不能替代，按docs/16-beta5-review.md复核 |
+| REQ-12 真机性能与恢复 | 当前iPhone 17 Pro Max已从本地build 4更新为5，验证构建号/启动和随后同进程存活，未卸载/清档；主界面、触控和个人进度仍未验 | NOT_RUN（20分钟资格） | iPhone/iPad各20分钟帧耗/内存/温升，后台/锁屏/恢复和持久化实际记录 |
 
 工程证据入口：reports/progression-validation.md、reports/mobile-layout.md、reports/runtime-phone-points.json、reports/runtime-tablet-points.json。发布回执以实际Apple查询和脱敏报告为准；本机原始日志、设备标识、密钥及签名产物不公开。
 
@@ -50,3 +50,5 @@ REQ-04/07保护观察后续：三种独立观察对象、图鉴、主动观察�
 2026-11-24按用户要求，冻结0.1.0 (4)/ee7ba50已通过本地Ad Hoc单设备包安装到iPhone 17 Pro Max / iOS 27.3，签名/范围、Unity Data一致性、安装读回、启动与后续同进程查询通过，见[本地回执](iphone-local-0.1.0-4.md)。它不证明TestFlight安装来源，也不证明主界面、实际触控或20分钟性能；REQ-11/12及完整产品出口保持未完成。后续保护观察/近海航道未进该安装包。
 
 REQ-06近海航道后续：独立Blend/FBX/四组PBR、六组各三LOD、系泊艇及共享海域观察/按需切换已接入。50项Editor、10项无画面PlayMode、Mac编译和11项发布工具测试通过；源网格封闭/朝向、45处基座剖面及Unity 198鱼体/384观察体积相对69144三角面包围盒有限采样通过。第一次圆石岛视觉否决与叶片几何失败均保留；首次交互用例名字断言错误修正后全量通过。12张工作室/Editor Metal原图审阅，岛形、材质边界、重复岩体/叶片及过亮工作室图仍为样板品质，不算拟真美术合格。当前CUA确认Mac锁定，没有新玩家窗口或设备画面；未进已安装/已发布build 4。独立receipt审计仍INCOMPLETE，完整内容/用户/科学/双设备/A1–A3及2.4、3.4、4.1–4.3/apply保持未完成。见[近海航道证据](nearshore-channel.md)。
+
+2026-11-24 build 5交付：0.1.0 (5)冻结a6bcf8e，50项Editor、10项无画面PlayMode、11项发布工具、源码CI、iOS导出/签名归档、内部专用IPA/静态元数据/上传及Apple VALID/INTERNAL_ONLY/IN_BETA_TESTING通过，本人授权两账号组和说明已读回，指定邮箱仍INVITED。见[发行回执](testflight-0.1.0-5.json)。同源码已用复用的单设备profile本地更新当前iPhone 17 Pro Max / iOS 27.3，从4到5未卸载/清档，安装构建号/启动和随后同进程查询通过，见[本地回执](iphone-local-0.1.0-5.md)。这不证明TestFlight来源安装、主界面/触控、个人进度或20分钟资格；首次成功观察记录升级存档后旧4不能读取，继续使用新版，不清档降级。保护观察/近海候选已纳入，但完整模型/海域、美术A1–A3、用户/科学/儿童和双设备仍未完成；独立receipt审计INCOMPLETE，3.4及完整产品出口保持未完成。

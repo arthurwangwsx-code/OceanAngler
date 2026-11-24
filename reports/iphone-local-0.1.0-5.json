@@ -1,0 +1,57 @@
+{
+  "status": "INSTALLED_LAUNCHED_AND_RUNNING",
+  "version": "0.1.0",
+  "build": "5",
+  "bundleId": "com.arthur.OceanAngler",
+  "sourceCommit": "a6bcf8ee82b90fa1fd3b856873233b838c415189",
+  "sourceDigest": "9b92ba1037a966603330f153f5c2f682306e457444231bc51b7d83ec36b3fc12",
+  "distribution": "LOCAL_AD_HOC_SINGLE_DEVICE",
+  "deviceModel": "iPhone 17 Pro Max",
+  "osVersion": "27.3",
+  "gameDataMatchesFrozenArchive": true,
+  "priorBuild": "4",
+  "uninstalled": false,
+  "mainScreenVisual": "NOT_RUN",
+  "actualTouchAcceptance": "NOT_RUN",
+  "processLaunch": "PASS",
+  "processReadback": "PASS",
+  "verifiedAt": "2026-11-24T00:31:37.252883+00:00",
+  "authorizedDeviceCount": 1,
+  "existingSigningCertificateReused": true,
+  "existingSingleDeviceProfileReused": true,
+  "newCertificateCreated": false,
+  "newProfileCreated": false,
+  "originalTestFlightArchiveUnchanged": true,
+  "unityGameDataUnchanged": true,
+  "unityDataFolderCount": 1,
+  "localIpaSha256": "1df0f1bc2d71b9510bf11c0daa397d5763f8ccd061f148254648c4f5c01ff300",
+  "localIpaBytes": 40606539,
+  "physical20MinuteQualification": "NOT_RUN",
+  "testFlightDeviceInstallation": "NOT_RUN",
+  "actualDeviceProgressMigration": "NOT_RUN; bundled game data equality does not verify personal save contents",
+  "newObservationAndChannelWorkIncluded": true,
+  "sourceCi": {
+    "status": "SUCCESS",
+    "url": "https://github.com/arthurwangwsx-code/OceanAngler/actions/runs/45297203783"
+  },
+  "metrics": {
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "binding": "VERIFIED",
+    "independentReceiptAudit": "INCOMPLETE",
+    "measurements": [
+      "278bd0d5-a14a-41bd-b107-a80ae1e0244f",
+      "1054dc73-0db7-48b4-8c13-8509cc11baa3",
+      "f7585552-0bd5-434f-88d4-d2a7b04af5ab",
+      "0813bafd-04f0-440f-9996-cdf8733f9857",
+      "8c3a38f3-8015-45fd-9406-58837938d172",
+      "478b33d8-3917-45fe-9247-7b902509047c",
+      "651f372f-2cd7-4ac3-b4fb-9aaa5a2bdb14",
+      "fbbe562d-502b-4513-b63a-e89fa0de35f4"
+    ]
+  },
+  "publicationAudit": {
+    "status": "PASS",
+    "trackedFiles": 688,
+    "issues": []
+  }
+}
