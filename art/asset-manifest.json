@@ -2611,6 +2611,44 @@
         }
       ],
       "note": "Side/top 4-second comparison videos encoded20fps, contact sheets, selected originals and rejected framing original. Not native Player or performance capture; not all source originals manually viewed. No reference photos or private media."
+    },
+    {
+      "id": "bluefin-periodic-motion-native-immersive-previews",
+      "author": "OceanAngler contributors",
+      "license": "MIT",
+      "redistribution": true,
+      "sourceRedistribution": true,
+      "canModify": true,
+      "acquiredAt": "2026-11-25",
+      "source": "Own isolated iPhone/iPad Simulator game rendering and native iPhone screen recording; game OFL font; no personal media or reference photographs",
+      "status": "SCOPED_SIMULATOR_UI_REVIEW_FULL_ART_PENDING",
+      "artifacts": [
+        {
+          "path": "art/previews/bluefin-periodic-motion/native-phone-home.png",
+          "sha256": "bc76b57cc4ce91f6d83e1701bd865c23e1c08d37b2e564805fb58b58747dbd87"
+        },
+        {
+          "path": "art/previews/bluefin-periodic-motion/native-tablet-fighting.png",
+          "sha256": "ec42a7dc3bf4239d330ceb2dc3afaeaaf3ea3dcabb7fe050a32974fc7fc1ef1a"
+        },
+        {
+          "path": "art/previews/bluefin-periodic-motion/native-phone-fighting.mp4",
+          "sha256": "df6bdd8cada491f5e3549ea6901602c3a2c768c2d5e7d369966fd116fbde31fd"
+        },
+        {
+          "path": "art/previews/bluefin-periodic-motion/native-phone-two-digit-progress.png",
+          "sha256": "82e7e4bfc6bfb8ba9333b8ba55aec7182cb99891ff3d6c38ffb0d1a33b78265b"
+        },
+        {
+          "path": "art/previews/bluefin-periodic-motion/native-phone-contact.png",
+          "sha256": "18f80423d1b3ebe8e95e977d4a9e625e7e94a078e7307842ffd288ade7fa3900"
+        },
+        {
+          "path": "art/previews/bluefin-periodic-motion/native-tablet-contact.png",
+          "sha256": "85fd680c966d4a94138472f50279ad8b10dd102bcaa179ce13a78053f35d86e7"
+        }
+      ],
+      "note": "Actual frozen5a5936c native player.15-frame contact sheets and selected full-size originals viewed.4-second screen recording with selected1s/3s frames reviewed, not full dynamic natural-art or performance qualification. No device identifiers or logs."
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-24T21:18:17.530Z",
+  "generatedAt": "2026-11-24T22:39:43.773Z",
   "source": {
     "change": "product-technical-foundation",
     "cliVersion": "1.0.20",
@@ -26,16 +26,16 @@
     "firstAttemptPassedCount": 1,
     "firstAttemptEvaluatedCount": 1,
     "firstAttemptPassRate": 1,
-    "elapsedMs": 150661625,
-    "observedStepWallMs": 117060071,
+    "elapsedMs": 155547918,
+    "observedStepWallMs": 121946364,
     "unattributedMs": 33601554,
-    "unattributedRate": 0.22302662672063972,
-    "commandMeasurementCount": 1180,
-    "commandSucceededCount": 1052,
-    "commandFailedCount": 128,
-    "commandSuccessRate": 0.8915254237288136,
-    "commandDurationMs": 45019378.06186902,
-    "gateCheckCount": 54,
+    "unattributedRate": 0.21602059630267761,
+    "commandMeasurementCount": 1220,
+    "commandSucceededCount": 1088,
+    "commandFailedCount": 132,
+    "commandSuccessRate": 0.8918032786885246,
+    "commandDurationMs": 46052216.36449702,
+    "gateCheckCount": 55,
     "repairCount": 0,
     "targetMs": 3600000,
     "targetMet": null,
@@ -52,7 +52,7 @@
     },
     "entryChecks": {
       "status": "complete",
-      "recorded": 54,
+      "recorded": 55,
       "expectedAtLeast": 2
     },
     "runAttribution": {
@@ -62,7 +62,7 @@
     },
     "commandMeasurements": {
       "status": "partial",
-      "recorded": 1180
+      "recorded": 1220
     },
     "waitingTime": {
       "status": "unavailable"
@@ -78,14 +78,14 @@
   "runs": [],
   "runMetrics": {
     "version": 1,
-    "generatedAt": "2026-11-24T21:18:17.530Z",
+    "generatedAt": "2026-11-24T22:39:43.773Z",
     "runs": [],
     "unattributed": {
       "unboundAttempts": 2,
       "unknownRunAttempts": 0,
-      "unboundCommands": 1180,
+      "unboundCommands": 1220,
       "unknownRunCommands": 0,
-      "unboundGateChecks": 54,
+      "unboundGateChecks": 55,
       "unknownRunGateChecks": 0,
       "repairsWithoutRunBinding": 0,
       "unknownRunRepairs": 0
@@ -19259,6 +19259,766 @@
         "path": "measurements/beta8-record-integrity-20261125.json",
         "sha256": "fcc8e57fd071f87037b8be231ebba50991f6573cc5d6b5cc7ba3cfeeec419f00"
       }
+    },
+    {
+      "id": "fdaf4b4e-07b0-4b1c-a6d2-6705dc9357e1",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "3d0d386a2c32b2da808bc3de7728ee471a54344d0ff9327863a29a5f76155227",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-24T21:22:12.489Z",
+      "finishedAt": "2026-11-24T21:22:18.986Z",
+      "durationMs": 6441.5376670000005,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-motion-source-baseline-20261125.json",
+        "sha256": "ff2fbe83867a8ce6451f554b32568aa60b961f5dd21f5b928ca05b31b396f997"
+      }
+    },
+    {
+      "id": "a22aa711-9abe-40f2-a828-35315d831853",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "fb6447a83370637b58b08c71befcc51277a82ce1f71d595d8e892c6dae0bf26e",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T21:25:31.552Z",
+      "finishedAt": "2026-11-24T21:25:37.210Z",
+      "durationMs": 5607.759625,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-motion-candidate-build-20261125.json",
+        "sha256": "c574441fc3ecc31206543c88e150b9a0271a9cfda985322a86bdc21e3854b0ea"
+      }
+    },
+    {
+      "id": "eb99ce21-f14e-48f9-9995-cf3775ee1dac",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "c224a8e10d23ec32a113edc8eb69e5b19ca7cc1cdc128f8eebddb350b00c3865",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-24T21:27:55.323Z",
+      "finishedAt": "2026-11-24T21:28:00.959Z",
+      "durationMs": 5599.249959,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-motion-source-identity-20261125.json",
+        "sha256": "85035f514cfacb353e9963a37e233abffdf97db67d3348b369289bfdf33d9408"
+      }
+    },
+    {
+      "id": "1ea90cad-5841-4052-bd74-87f44b320187",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "847f592d12fb861621e4cf7a132052eb7ee8c66316265464c0489bc3c993ffc9",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-24T21:28:17.378Z",
+      "finishedAt": "2026-11-24T21:28:19.323Z",
+      "durationMs": 1908.3421250000001,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-motion-saved-curves-20261125.json",
+        "sha256": "b4e94cb4c636541466e6b49e91e4791dc96db6a3984c355e598e57e047ab2adf"
+      }
+    },
+    {
+      "id": "ab4b2730-1473-478e-8fc2-f9c04841cdae",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "1bcf850a8da57724302cbb03c3e95dd16457633d2c57458e2ec0056a293daf5d",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T21:30:22.146Z",
+      "finishedAt": "2026-11-24T21:30:35.508Z",
+      "durationMs": 13331.554291,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-motion-unity-import-20261125.json",
+        "sha256": "4e87ac53aef1d4df0355593ad650ba2bc8d352eb4682547bfb42939cc049df5a"
+      }
+    },
+    {
+      "id": "634adbe5-6b27-4a33-ae59-af2fece506b5",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "f5d3ca6e0a41a9c89907fb5c327cdd8ab32fa59262641a7382de6c5c58f48a88",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T21:30:48.320Z",
+      "finishedAt": "2026-11-24T21:31:16.150Z",
+      "durationMs": 27793.129708,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-motion-imported-review-20261125.json",
+        "sha256": "16df8fa9bc446c09acaf838eb77ea8c4c934356a740fb417211b1adcff1a5a7b"
+      }
+    },
+    {
+      "id": "9104c7b2-4904-497a-baed-d11490cc988f",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "1bcf850a8da57724302cbb03c3e95dd16457633d2c57458e2ec0056a293daf5d",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T21:35:20.194Z",
+      "finishedAt": "2026-11-24T21:35:35.580Z",
+      "durationMs": 15355.35125,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-motion-playable-import-20261125.json",
+        "sha256": "9bb9b75851c35159a94dc8642b4b87c959ad07a31ff3fc4cd9c532633a295fff"
+      }
+    },
+    {
+      "id": "4aa0dba9-eadf-4870-a525-abacf386c029",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "ee7d50889ef5ff166e98f1349ecb40cfd68264715486029f5ace6422ca8c5b8f",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T21:37:13.682Z",
+      "finishedAt": "2026-11-24T21:37:40.870Z",
+      "durationMs": 27161.269666,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-motion-playable-review-20261125.json",
+        "sha256": "4cf33b530c0abd039698c83a150862817b69ee3cfb2f72a28bd0684b59b16115"
+      }
+    },
+    {
+      "id": "3e2c9eff-9aeb-4ab9-9000-861591a3ef9b",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "3f7d4e9c36e2f2739725748b35bc9ff88912f170fb4084958bf0a8d1140696c5",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T21:39:43.865Z",
+      "finishedAt": "2026-11-24T21:39:47.468Z",
+      "durationMs": 3573.293166,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-motion-source-validation-20261125.json",
+        "sha256": "2b7e97ed9a91da539303b579603cbef0945926024f4aa623b28d604e6d9ffe67"
+      }
+    },
+    {
+      "id": "ad47ae3e-b603-48d3-b80d-73d2321d28ee",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "a63be7a6be8dd80eea14af90195852b9bea936cc5d155779f4585902fc4fd3b3",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T21:41:38.343Z",
+      "finishedAt": "2026-11-24T21:41:49.390Z",
+      "durationMs": 11015.014875,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-motion-framed-review-20261125.json",
+        "sha256": "937c6daa109963642d6c20e2b31d27762d74ceedc3108b246f93596dfe2d47ce"
+      }
+    },
+    {
+      "id": "18d168c7-3061-483a-b4f8-1d1e3b0c96b0",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "8e03bad0f89de6ac216a419ad1fd3fff6af57b02ea402e323ccc9b126a3687a6",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T21:43:11.006Z",
+      "finishedAt": "2026-11-24T21:44:01.503Z",
+      "durationMs": 50463.450042000004,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-motion-framed-review-20261125b.json",
+        "sha256": "2e88792d03faedf5b53b1214c240dcfc53875b310a8a146fcacae1429c61b529"
+      }
+    },
+    {
+      "id": "8c8056f1-df7d-43ec-8b4c-f81a2d03fded",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "cda57d8751e01c9720010b488f698067c9bd2dd54a1877f6d3df1a69250adfdd",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T21:45:15.085Z",
+      "finishedAt": "2026-11-24T21:45:25.340Z",
+      "durationMs": 10218.308625,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-motion-editor-tests-20261125.json",
+        "sha256": "9dc24f68af8c59f109ac87aac7d759a906665014efe72ab26b503265efe6f6df"
+      }
+    },
+    {
+      "id": "0d9fd90a-0916-45dc-bbc4-6c842b4d1a30",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "9d2fffe346b871b162f0273b21d89095c005d1f076c41a8f4788380fd576fae9",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T21:46:19.300Z",
+      "finishedAt": "2026-11-24T21:46:32.089Z",
+      "durationMs": 12764.156042,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-motion-playmode-tests-20261125.json",
+        "sha256": "c52382f694e8df3844590babcf6a7736e7b741f8170327b86897fd9199f1152d"
+      }
+    },
+    {
+      "id": "5dc859dd-06d9-4a61-ad92-cd4decda022f",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "a559509face8a81a44269afea2d70d6fb4b1085a0766a9e01b862a4bc5bf9c9d",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T21:47:09.219Z",
+      "finishedAt": "2026-11-24T21:47:24.115Z",
+      "durationMs": 14872.465667,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-motion-integrated-world-20261125.json",
+        "sha256": "3c16e22d7c4d7f9e8c1876e09405dcb03ee29673e45658f77cc9c36aa6161624"
+      }
+    },
+    {
+      "id": "ee6f57ac-f4f4-42ac-b4c0-24b83d737d7f",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "a8bac321896b311564efbb3828ef9b2dc8a0eed968107054a8b49603e5f9ea60",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T21:48:15.181Z",
+      "finishedAt": "2026-11-24T21:48:15.737Z",
+      "durationMs": 512.8416249999998,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-motion-offline-previews-20261125.json",
+        "sha256": "07c75b065bc699086b26265656b925fae722acdb90a6e9f61054a6f415ddf5bd"
+      }
+    },
+    {
+      "id": "4af77416-ace2-4b58-88f5-55944b3aacb1",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "9389e38b1a0f51f645c752ffd8b831087356c3c33cdb8623217ac1ec2589f7aa",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T21:49:56.213Z",
+      "finishedAt": "2026-11-24T21:50:14.982Z",
+      "durationMs": 18731.676541999997,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-motion-offline-previews-20261125b.json",
+        "sha256": "fe5a25c05c08d7445a5d7a426fb9d0849c2f01685f1f6d6adbf7caa3b9f8c7bb"
+      }
+    },
+    {
+      "id": "324408cf-7907-41d7-b2a6-ad05cb8108ae",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "1510dfc74a1f8658ed6d246d916238be0483290420c81c1371396562f924944b",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T21:52:38.056Z",
+      "finishedAt": "2026-11-24T21:52:42.767Z",
+      "durationMs": 4683.20025,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-motion-cache-maintenance-20261125.json",
+        "sha256": "a51662f11290173110fbb6a343bb59843d2a77db6cc21039529b2c64cd7f7e68"
+      }
+    },
+    {
+      "id": "387832b9-23a3-4959-80e6-3f1899479e21",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "5fd0bfdddcc0b465f600b34249d67c796af41c6f549aadbfba39e327cc0f0de3",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T21:56:08.323Z",
+      "finishedAt": "2026-11-24T21:56:14.877Z",
+      "durationMs": 6529.237791,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-motion-retention-before-20261125.json",
+        "sha256": "15ef61156f5e34be9dcb8875c031951441b87811547dc8d354006ec426d39d45"
+      }
+    },
+    {
+      "id": "e0daeae9-c2f1-42f9-b561-068cbaf2afdc",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "023cf68165861e937c5c2951244554a0b0f6b75336521353b0d3d64cb6baf659",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T21:59:48.881Z",
+      "finishedAt": "2026-11-24T21:59:49.102Z",
+      "durationMs": 161.29904199999987,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-motion-source-report-20261125.json",
+        "sha256": "383434c5d31115d806a451a697c4d938443c37320dd7de2aefb14475bb6caeb4"
+      }
+    },
+    {
+      "id": "dd2d10cc-fa6a-4eb0-b34e-921d9033b4dc",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "e096314df911f04282d3fea49fbb52da5a0038e5907e7de04671ac787a458ebe",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T22:03:20.617Z",
+      "finishedAt": "2026-11-24T22:04:02.599Z",
+      "durationMs": 41903.964834,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-motion-final-integration-20261125.json",
+        "sha256": "710d7a1b509b38aeb2fea668d24d88c4c0c376b0363a3c8e59720f30f5907a02"
+      }
+    },
+    {
+      "id": "49d37fee-18e0-4b1b-8e9b-3c52c4441c6a",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "92b88d46c0b5545788a9a2ce5359954222ebde80f299018987788284e4627495",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T22:05:40.153Z",
+      "finishedAt": "2026-11-24T22:05:44.135Z",
+      "durationMs": 3902.7734579999997,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-motion-source-public-checks-20261125.json",
+        "sha256": "42767429f5f9b8ded00e726fae5bf3739e05e371ebe79e246d2078ae635ab173"
+      }
+    },
+    {
+      "id": "5b808b17-98aa-4d44-8ddc-207b8bb98201",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "92b88d46c0b5545788a9a2ce5359954222ebde80f299018987788284e4627495",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T22:07:09.948Z",
+      "finishedAt": "2026-11-24T22:07:12.322Z",
+      "durationMs": 2335.090209,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-motion-source-public-checks-20261125b.json",
+        "sha256": "1c9fa5e43d809e2f0e298e99683bc2db7f63c40e615101ebe73ddec19a2f1b0b"
+      }
+    },
+    {
+      "id": "8bf12dc7-cb7a-4dea-92d6-b416c1d1f7de",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "897faf21644efdbe5dc58ce15071aba1e2a3fb3b60800568d6b2fcd487d4089f",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T22:08:33.075Z",
+      "finishedAt": "2026-11-24T22:11:20.907Z",
+      "durationMs": 167794.53525,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-motion-native-build-20261125.json",
+        "sha256": "e9bfab485c0d67094852972ad79e4f7a20d0f2c1048ac4b8fc7859038e3cb36a"
+      }
+    },
+    {
+      "id": "9ed24c40-d5c6-491b-bf92-0ae8aa373437",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "41ee83627633fca26758822d860120115debb61d642d3eb32a52a37b569b3e80",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T22:11:53.613Z",
+      "finishedAt": "2026-11-24T22:14:01.183Z",
+      "durationMs": 127525.4955,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-motion-phone-20261125.json",
+        "sha256": "9466ce50f4875380c13f8d5ee503f20a404a9c2648185266c524c44eaa2abb01"
+      }
+    },
+    {
+      "id": "922b0fbb-900f-4e8c-b9ec-04338a6686f4",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "69a349d35c428a555dccbb3eaeb144a4b314301af3bcf8d30745cef483a88cc0",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T22:15:05.031Z",
+      "finishedAt": "2026-11-24T22:15:05.122Z",
+      "durationMs": 59.634416999999985,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-motion-phone-proof-20261125.json",
+        "sha256": "e646be13657e4486ef416a15c0c4a44046e45527bc5c20a0d34dba9aba67e1f5"
+      }
+    },
+    {
+      "id": "affcb1fc-9437-448a-b48a-601153da4363",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "c0ddc32843e761ab8dc8f6fa284b7c547a67acc89847c424d2b0749e15f0a492",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T22:15:12.212Z",
+      "finishedAt": "2026-11-24T22:16:40.356Z",
+      "durationMs": 88073.38249999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-motion-pad-20261125.json",
+        "sha256": "8eb3cc188b127a7dae5f29a43ffcc19ca8302abb0b7981710629c429d722bacd"
+      }
+    },
+    {
+      "id": "926448e7-b8db-4911-9f6d-6edc68b6fdf7",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "184a37cf8a9515f2f8d409ff80c43a8d5cca0cdab3bd0c70f5ceeef5cd0c53f5",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T22:17:00.744Z",
+      "finishedAt": "2026-11-24T22:17:00.907Z",
+      "durationMs": 132.36579099999994,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-motion-pad-proof-20261125.json",
+        "sha256": "e5230a897bf58ea972245141ed708cfb400ba9c070e09735acc666bae03e4315"
+      }
+    },
+    {
+      "id": "c13b9285-925e-47e8-b63a-fb46b665c878",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d68dee88ef17e9d5a4fc887544057442e7e44087654a8e442ae0e18115a0d46f",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T22:25:13.489Z",
+      "finishedAt": "2026-11-24T22:25:23.461Z",
+      "durationMs": 9937.797917,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-motion-retention-after-20261125.json",
+        "sha256": "1633416799bed8d18e35f66f90cb5c7bc3d9796be378b2e6e12dfa3f3db4504b"
+      }
+    },
+    {
+      "id": "6597fa41-290a-41e6-a5cb-f1db5a322db3",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "cf0462d4e1e868c99ea41728556a57fe5c928225e0bb20a0b7544dd6f3be712c",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T22:26:32.399Z",
+      "finishedAt": "2026-11-24T22:26:49.064Z",
+      "durationMs": 16620.938458999997,
+      "exitCode": 2,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-motion-hud-value-red-20261125.json",
+        "sha256": "41de5a32c55506a8d5c9876fcfeb7dbfcc775232c5fedd9618bc2e3c9817ae08"
+      }
+    },
+    {
+      "id": "2fde8d6a-3e16-4ad0-be79-d3f23e7b5c83",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d9fdd2e666a312583abbe304b35b52d48cb2b137aef3a060aa9944ef0aebc310",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T22:29:59.558Z",
+      "finishedAt": "2026-11-24T22:30:54.928Z",
+      "durationMs": 55336.42475,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-motion-hud-value-green-20261125.json",
+        "sha256": "82f797215a2e26998e174fc2a102e89a7191377eee0729adc97424e69f1681d9"
+      }
+    },
+    {
+      "id": "322b2813-fa41-4905-ac29-47544349f88e",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "585ae4135b9511eb189bd52a2a313c9ec829ed78a7ad871fbec927b06cae8cc5",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T22:31:15.098Z",
+      "finishedAt": "2026-11-24T22:31:23.538Z",
+      "durationMs": 8405.254500000001,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-motion-hud-retention-before-20261125.json",
+        "sha256": "890cdecd2b253eccf1eab098c36a8663296061ebec2dd47e857f40b6f1ae6d2b"
+      }
+    },
+    {
+      "id": "a36a1cc4-f602-423d-a67c-627bbe1ece2d",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "e69720ec1f95629b1f636124a6739da591dd6f5979f664002dca7b5bc1cf20fe",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T22:31:52.501Z",
+      "finishedAt": "2026-11-24T22:34:44.424Z",
+      "durationMs": 171896.124958,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-motion-hud-native-build-20261125.json",
+        "sha256": "945aefd22f6ac0a223505abf61f7f0d016bbe91f37c2eddd0d8562d6bca32787"
+      }
+    },
+    {
+      "id": "5a3b378a-972f-4a3c-a198-30255ad57173",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "c6553b78863a97aaffa105d864f6009f4d3cfd40addb04e238c0c0555223eb79",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-24T22:34:48.470Z",
+      "finishedAt": "2026-11-24T22:35:41.267Z",
+      "durationMs": 52720.404,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-motion-hud-phone-20261125.json",
+        "sha256": "501260f69bb6e598bd7e4a5f95f25c6205abfd2b06863e551413cc8b7bd5263f"
+      }
+    },
+    {
+      "id": "1272afcf-534d-43a4-b77e-4e1b7d0e317c",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "c6b88af05ab6f5d73f64e4f6ab6026b591ed1c775b691b606b71e59eb0990db2",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T22:35:48.591Z",
+      "finishedAt": "2026-11-24T22:35:48.689Z",
+      "durationMs": 62.46283399999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-motion-hud-phone-proof-20261125.json",
+        "sha256": "40dc1d38f7517afdb283d1850bc27be835460ca6a96107ca594600ccf4abae32"
+      }
+    },
+    {
+      "id": "afa23836-8570-48e8-a75e-37c5d4541fe2",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "180eec12bf962f3e8dff3f97508ba9f31f0a763c705d278ce4021b09d49bcfa8",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-24T22:36:02.629Z",
+      "finishedAt": "2026-11-24T22:36:43.102Z",
+      "durationMs": 40444.111542,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-motion-hud-pad-20261125.json",
+        "sha256": "49240f3e09f953c8b4205404a3fb7eabf9585eb7d1714acdaa3ca2a889bde7aa"
+      }
+    },
+    {
+      "id": "dfd78981-9bcc-4718-b0b6-86d29f3d1f61",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "53d0277e1d536a5164ffc41a795cdd58ea744b7fc1046a6739aeffdb2e1dc1ea",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T22:37:01.769Z",
+      "finishedAt": "2026-11-24T22:37:01.888Z",
+      "durationMs": 66.89216700000003,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-motion-hud-pad-proof-20261125.json",
+        "sha256": "1dec8dc02f2284c6d38e4e2dd3bc6211364f34621b3158b4209794b799d928f7"
+      }
+    },
+    {
+      "id": "e06981da-01d4-4fcd-98aa-8b7e5eb684d7",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d728cfa983f0a08af7cbf54fae9b65da3a8e8fe475d9f1f16ab9a855b4b65035",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T22:37:08.036Z",
+      "finishedAt": "2026-11-24T22:37:15.265Z",
+      "durationMs": 7201.092,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-motion-hud-retention-after-20261125.json",
+        "sha256": "6edecdb11d0d03966f064c95a5d2d8fc795fd7b2645f3f483f1891b91d981b13"
+      }
+    },
+    {
+      "id": "32212306-a737-4d4d-aee6-86fbfd2ab6c9",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "1b9b750d007c851f920bb86ccb95b6c8d0649e1d11d26d4708a2736b0478955e",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-24T22:39:25.480Z",
+      "finishedAt": "2026-11-24T22:39:26.342Z",
+      "durationMs": 835.1981249999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-motion-hud-public-validate-20261125.json",
+        "sha256": "46fb75f0f8ce38712a1fab96e5df3d49ea20f3b8a6dc2b00a8aeb6052b175297"
+      }
+    },
+    {
+      "id": "e183ded7-d2dc-41d3-8680-309aa99a6d8e",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d89602c770c16a35b6c5da9a9da4ae967807390aa462f4349604d0463de12f51",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-24T22:39:26.895Z",
+      "finishedAt": "2026-11-24T22:39:27.711Z",
+      "durationMs": 777.3666249999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-motion-hud-public-audit-20261125.json",
+        "sha256": "6b20eac66c94460ec28b40df558e14f48438d4c66fbee547eaae23d218e763d1"
+      }
+    },
+    {
+      "id": "fa70a934-3208-467b-89f7-73ec5950b9a5",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "1608a2425b8a50a4a9f3039ce18f355d9c2e491733fb5e563ed0ebc91250eb79",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T22:39:28.196Z",
+      "finishedAt": "2026-11-24T22:39:28.305Z",
+      "durationMs": 83.85483400000004,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-motion-final-record-integrity-20261125.json",
+        "sha256": "f6117a0d377d0732d85dda87bfa8e1da55767429335a04b34d05fce41912213c"
+      }
     }
   ],
   "measurementAudit": {
@@ -19266,8 +20026,8 @@
     "scope": "declared-command-receipts-only",
     "runId": null,
     "complete": false,
-    "registered": 1175,
-    "completed": 1180,
+    "registered": 1215,
+    "completed": 1220,
     "unfinishedIds": [],
     "legacyMeasurementIds": [],
     "legacyPolicy": "unverified-format-without-start-records-not-reconstructed",
@@ -22560,35 +23320,35 @@
   "commands": [
     {
       "category": "test",
-      "count": 471,
-      "succeededCount": 402,
-      "failedCount": 69,
-      "successRate": 0.8535031847133758,
-      "durationMs": 15662587.644446997
+      "count": 499,
+      "succeededCount": 427,
+      "failedCount": 72,
+      "successRate": 0.8557114228456913,
+      "durationMs": 16202735.822991997
     },
     {
       "category": "compile",
-      "count": 277,
-      "succeededCount": 266,
-      "failedCount": 11,
-      "successRate": 0.9602888086642599,
-      "durationMs": 11976597.672047999
+      "count": 285,
+      "succeededCount": 273,
+      "failedCount": 12,
+      "successRate": 0.9578947368421052,
+      "durationMs": 12374510.715839
     },
     {
       "category": "e2e",
-      "count": 266,
-      "succeededCount": 219,
+      "count": 268,
+      "succeededCount": 221,
       "failedCount": 47,
-      "successRate": 0.8233082706766918,
-      "durationMs": 17312066.486170005
+      "successRate": 0.8246268656716418,
+      "durationMs": 17405231.001712006
     },
     {
       "category": "lint",
-      "count": 166,
-      "succeededCount": 165,
+      "count": 168,
+      "succeededCount": 167,
       "failedCount": 1,
-      "successRate": 0.9939759036144579,
-      "durationMs": 68126.25920399999
+      "successRate": 0.9940476190476191,
+      "durationMs": 69738.82395399998
     }
   ],
   "gateChecks": [
@@ -23023,6 +23783,14 @@
       "checkedAt": "2026-11-24T20:35:05.239Z",
       "durationMs": 161.96054199999992,
       "outcome": "accepted"
+    },
+    {
+      "stageId": "apply",
+      "runId": null,
+      "operation": "start",
+      "checkedAt": "2026-11-24T21:21:24.796Z",
+      "durationMs": 139.94191700000005,
+      "outcome": "accepted"
     }
   ],
   "timing": {
@@ -23030,8 +23798,8 @@
     "finishedAt": null,
     "status": "in_progress",
     "measurementBasis": "before-first-entry-gate",
-    "elapsedMs": 150661625,
-    "observedStepWallMs": 117060071,
+    "elapsedMs": 155547918,
+    "observedStepWallMs": 121946364,
     "unattributedMs": 33601554,
     "waitingMs": null,
     "retryAttemptMs": 0,

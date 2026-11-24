@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "e06981da-01d4-4fcd-98aa-8b7e5eb684d7",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "d728cfa983f0a08af7cbf54fae9b65da3a8e8fe475d9f1f16ab9a855b4b65035",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-24T22:37:08.036Z",
+    "finishedAt": "2026-11-24T22:37:15.265Z",
+    "durationMs": 7201.092,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/fish-motion-qa/retention-b.py",
+      "after"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/fish-motion-qa/retention-b.py",
+    "after"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T22:37:08.036Z",
+  "finishedAt": "2026-11-24T22:37:15.265Z",
+  "durationMs": 7201.092
+}

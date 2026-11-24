@@ -6,7 +6,7 @@ REQ-05/2.4后续，实施IN_PROGRESS。当前源动画在奇数尾摆周期中�
 
 新增`python3 tools/art.py build --asset bluefin --motions-only --label unique --no-preview`，读取已保存Blend并更新动作和FBX，不重新减面或生成纹理。全量制作也复用同一动作配方。保存前后全部三档几何/UV/权重与九PNG字节、骨架结构独立比对；实际源曲线与Unity导入曲线分开检查，尤其循环接缝速度、尾摆相位、嘴部与鳍根。导入压缩若破坏连续性须继续修正，不以源文件通过代替导入通过。
 
-需要查看当前/候选固定镜头动作序列，保留首次绘制与失败，使用生产Medium/Metal/Half HDR/4×MSAA。暂停、减弱动态、七动作切换和放流结束另验；不更改积分、概率、存档、UI或已发布的build8。源/Editor/原生/人工与最终美术分别验收。用户首套方向未确认前不批量生产其他鱼种，2.4与apply不勾选完成。
+需要查看当前/候选固定镜头动作序列，保留首次绘制与失败，使用生产Medium/Metal/Half HDR/4×MSAA。暂停、减弱动态、七动作切换和放流结束另验；不更改积分、概率、存档或已发布的build8。源/Editor/原生/人工与最终美术分别验收。用户首套方向未确认前不批量生产其他鱼种，2.4与apply不勾选完成。
 
 实际源检查已通过：全部三LOD几何/UV/权重、12骨骼静态矩阵和九PNG保持，三档24664/9864/3698；七动作端点值闭合、解析切线检查通过，原189条件/72处薄壁及35姿态检查通过。
 
@@ -16,4 +16,8 @@ REQ-05/2.4后续，实施IN_PROGRESS。当前源动画在奇数尾摆周期中�
 
 固定镜头D生成640帧序列、八张首次图及八张重复图，八组重复RGB差0。此前A/B俯视镜头裁尾被人工否决，C的新检查又发现诊断将缩放计算两次，非零失败保留；按[BakeMesh缩放契约](https://docs.unity.com/en-us/engine/6000.3/script-reference/unityengine/skinnedmeshrenderer/bakemesh)修正后，每帧同时检查变形网格投影与实际像素边界，至少留约12.8%边距，旧俯视控制负边距约-23%。这些是离线Clip采样，尚不能替代实际Animator、Player运行及自然观感审阅。
 
-复核入口：从已发布build8冻结提交`1bdfa785237701ab2c7675031142d526f66c0e28`取出自有FBX到本机忽略目录，再运行`python3 tools/game.py motion-review --label unique --review-target ios --motion-reference .local/previous-bluefin.fbx`。对照序列按20fps编码四秒视频，编码帧率不是游戏性能。完整结果和原图见[动作记录](../reports/bluefin-periodic-motion.md)。本轮新的模拟器包仍待冻结和验证，已发TestFlight8保持独立证据。
+复核入口：从已发布build8冻结提交`1bdfa785237701ab2c7675031142d526f66c0e28`取出自有FBX到本机忽略目录，再运行`python3 tools/game.py motion-review --label unique --review-target ios --motion-reference .local/previous-bluefin.fbx`。对照序列按20fps编码四秒视频，编码帧率不是游戏性能。完整结果和原图见[动作记录](../reports/bluefin-periodic-motion.md)。本轮模拟器包与已发TestFlight8分别冻结和验证，发行保持独立证据。
+
+原生A包已完成双端各15帧正常教学流程，但实际iPhone模拟器屏录发现进度到两位数时换行截断；自动布局采样只覆盖早期值，不能据此判定全程可读。新增无画面回归先复现10%需要78点、原容器只有74点的真实失败，随后在原228×48点内把张力/收鱼宽度调整为128/92、间距仍8点、字号仍17，危险刻度保持80%。六项定向PlayMode已通过，包含左右手各101种整数值且夹具不写入合成进度。原生回归新增正常控线中的实际文字尺寸记录，要求真正经过两位数进度；不向Player注入进度或积分。修正后的源码冻结为`5a5936c3e8c3bafc22ac5256977de002ca7c37ba`，模拟器B包另验，不将A的流程PASS当作最终视觉PASS。
+
+最终B包双端各15帧与正常放流232/180分通过，实际文字观测含两位数进度、HUD最高12.228%/4.526%，更新前34份旧QA主文件字节保留通过。实际七动作/循环标记已读回，双接触表、首页/平板控线原图及屏录1秒/3秒的7%/22%已查看。仅本地模拟器，完整动态自然观感、儿童、真实触控和双真机20分钟仍未验收。
