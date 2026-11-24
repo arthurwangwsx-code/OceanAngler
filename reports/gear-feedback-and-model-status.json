@@ -147,6 +147,8 @@
   "measurementBindingAudit": {
     "committedRecordsPreserved": 761,
     "newRecordsBound": true,
-    "historicalOverall": "INCOMPLETE"
-  }
+    "historicalOverall": "INCOMPLETE",
+    "scope": "state-journal start/completion/binding only; not independent CLI receipt compliance"
+  },
+  "independentMeasurementAudit": "INCOMPLETE"
 }

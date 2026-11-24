@@ -379,6 +379,8 @@
     "note": "Historical missing starts/output-only gaps unchanged; no records fabricated",
     "auditCompletionVerified": true,
     "newCompletedIncludingAudit": 52,
-    "actualIntervalsDisjoint": true
-  }
+    "actualIntervalsDisjoint": true,
+    "scope": "state-journal start/completion/binding only; not independent CLI receipt compliance"
+  },
+  "independentMeasurementAudit": "INCOMPLETE"
 }
