@@ -1472,6 +1472,52 @@
         }
       ],
       "note": "All included images actually reviewed. rejected-cheek-clipping is a rejected intermediate, not final geometry. Editor Metal is not native Player evidence. No external photography, UI/sidebar or device logs. Turntable 36 source views inspected as contact sheet, encoded960x640/12fps/3seconds and decoded frame-count checked; not game performance."
+    },
+    {
+      "id": "bluefin-iris-native-simulator-frames",
+      "author": "OceanAngler contributors",
+      "source": "Frozen fd23c2b unsigned native Simulator app; own game captures and contact sheets only",
+      "license": "MIT",
+      "redistribution": true,
+      "sourceRedistribution": true,
+      "canModify": true,
+      "acquiredAt": "2026-11-24",
+      "status": "ART_REVIEW_PENDING",
+      "artifacts": [
+        {
+          "path": "art/previews/bluefin-iris/phone-catch.png",
+          "sha256": "de2528080f4db7d988b8807f8fb4bb070720d61de9247c68a66161bb35aef0f6"
+        },
+        {
+          "path": "art/previews/bluefin-iris/phone-manual-landed.png",
+          "sha256": "4d3588cfab9e82400c779a224196724cce91441dfb6a0f0dbc29ba4cad050198"
+        },
+        {
+          "path": "art/previews/bluefin-iris/phone-manual-resumed.png",
+          "sha256": "97971c7ab7dce3d596aaae09c396d78512ee22b3219d775be5b6239893259e59"
+        },
+        {
+          "path": "art/previews/bluefin-iris/tablet-catch.png",
+          "sha256": "785027aa7046f516d72a9d8df09a2beec76945121b8eb681528b4ddbc8689bb7"
+        },
+        {
+          "path": "art/previews/bluefin-iris/tablet-journal.png",
+          "sha256": "19c9e76a34c6f5bcd2484e97e2c46f5181e9caab1ed312e0303df47d4ebcbaa8"
+        },
+        {
+          "path": "art/previews/bluefin-iris/tablet-gear.png",
+          "sha256": "177bd42562f3fc55e5f9e37a4f9d883242bac1f48c41dd2e4694c542195c0085"
+        },
+        {
+          "path": "art/previews/bluefin-iris/phone-contact.png",
+          "sha256": "a03c0da63a233eb910b3c30aa7dfece37477a46581fb27a4766765d24e6f0a34"
+        },
+        {
+          "path": "art/previews/bluefin-iris/tablet-contact.png",
+          "sha256": "1f0b42777e584f23125b6b27545b89cdd0ed2d62fe3e47d25f323071fbcdafb5"
+        }
+      ],
+      "note": "All included artifacts actually viewed. Contacts inspect32generated frames; selected full-size photos separately recorded, not all32full-size. Manual OS mouse assisted first catch/new process restore205points, not child or physical touchscreen qualification. No personal media, device identifiers, OS home/sidebar or raw logs. Registered OFL font appears in own UI."
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."

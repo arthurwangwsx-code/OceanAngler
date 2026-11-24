@@ -1,0 +1,647 @@
+{
+  "status": "PARTIAL",
+  "scope": "Existing authored hero only; no gameplay changes or full product acceptance",
+  "artAcceptance": "ART_REVIEW_PENDING",
+  "source": {
+    "lodTriangles": [
+      24860,
+      9944,
+      3728
+    ],
+    "priorLodTriangles": [
+      24284,
+      9712,
+      3642
+    ],
+    "unchangedLod0TriangleLimit": 25000,
+    "materialSlots": 6,
+    "bones": 12,
+    "semanticActions": 7,
+    "iris": {
+      "width": 256,
+      "height": 256,
+      "colorSpace": "sRGB",
+      "sourcePngBytes": 69342,
+      "sha256": "5a514c9eb1cabe880c1ad2e001fa2ca87616b3c117f1da3d9ae62f36bab4d247"
+    }
+  },
+  "validation": {
+    "status": "PASS",
+    "measurementId": "505d61e7-4f5b-48a7-9f2d-ac455ebf6f12",
+    "lodTriangles": [
+      24860,
+      9944,
+      3728
+    ]
+  },
+  "editor": {
+    "status": "PASS",
+    "total": 52,
+    "measurementId": "ba1fd539-535d-4d51-b737-f2e290e902ac"
+  },
+  "gpu": {
+    "status": "PASS_ENGINEERING_RENDER",
+    "measurementId": "428a772a-5e27-4d36-a9a3-8dcdf2bf804e",
+    "reviewed": [
+      "bite-fin.png",
+      "idle-eye-opposite.png",
+      "initial-idle-side.png",
+      "bite-side.png",
+      "idle-fin.png",
+      "initial-bite-side.png",
+      "idle-side.png",
+      "idle-eye.png",
+      "bite-mouth.png",
+      "idle-mouth.png"
+    ],
+    "scope": "iOS target imported EditorMetal, notnativePlayer",
+    "irisTextureWidth": 256,
+    "firstRepeatRgbDifference": [
+      0,
+      0
+    ],
+    "visualRemaining": [
+      "Uniform smoothpupil stillstylized",
+      "Brightliprim andnose shape remaincandidate",
+      "No art/science/userqualification"
+    ],
+    "reviewedSha256": {
+      "bite-fin.png": "5d1e327615c5ef7b4ae425d5a417730c310460bc2143f154ed6f6197bbb166d8",
+      "bite-mouth.png": "449b08ba55f0340714d663338894f3a7a2b1b1dd8b5c38d8680169f289ee99eb",
+      "bite-side.png": "9de1b0b1dee67634246d66d6dadc75eb8dd3202b36257546a95cf1c0e46d00ec",
+      "idle-eye-opposite.png": "834ce18d6a9b5fd55a5d0bec660e087ebdccc2c4f99bffdbc34992b7500eb357",
+      "idle-eye.png": "617f1e431dc80a4bc8b793c79d4e78ee4298008864cca25789260d39001d1b28",
+      "idle-fin.png": "7fb5264e631bebe588bb65a75bd800e720a65ad7cb1e460366411b615ad2372c",
+      "idle-mouth.png": "0e049543e415e5454ab95a2f50ece19678978d7c20f8dbf1978f537c8647465e",
+      "idle-side.png": "5d0c0519d281879c18056e6957cc42a57f27acdcd6ff38712c75336ffc9f8b37",
+      "initial-bite-side.png": "9de1b0b1dee67634246d66d6dadc75eb8dd3202b36257546a95cf1c0e46d00ec",
+      "initial-idle-side.png": "5d0c0519d281879c18056e6957cc42a57f27acdcd6ff38712c75336ffc9f8b37"
+    }
+  },
+  "studio": {
+    "measurementId": "9ae7efea-180c-489b-8eca-f9a5ed0359f2",
+    "images": 8,
+    "actualReviewedImages": [
+      "eye-close-opposite.png",
+      "eye-close.png",
+      "fin-close.png",
+      "front.png",
+      "mouth-close.png",
+      "side.png",
+      "three-quarter.png",
+      "top.png"
+    ],
+    "reviewedSha256": {
+      "eye-close-opposite.png": "b388695e399451ca3139ec5167831356747f1fa8006f6234a10b3cc741b786be",
+      "eye-close.png": "efffd5d54546a58bbe3f81f461cb565a4344e468584fda1265d7b230be6f82d4",
+      "fin-close.png": "cab942eece6206fc1e6cc1754e4a3e7c4d5592933a161d118c25b32081cc17d4",
+      "front.png": "efe7d572286696e47ac19e64376f79412f5d40720c253fae05dfa4e3aa9b4e89",
+      "mouth-close.png": "933f04d1d5bef7c5322116131603da5bfd56cae5a618ace1d66fbaeb57ec5bd0",
+      "side.png": "131a8f3ea54bb501e210f5168ed7e85c0301730f41e8315431b00eb1f2f3e843",
+      "three-quarter.png": "f836fcbd269ff7efb68116a432fd654c2e7ccdc09f3aecf738e71831a88bb320",
+      "top.png": "e47663a76a6c62b3044f06ad2e9a0a29eca7d6124de2ef946d2eb861918c3a5a"
+    }
+  },
+  "turntable": {
+    "status": "PASS_RENDER_AND_ENCODING_CANDIDATE",
+    "renderMeasurementId": "4b82d535-61ae-4543-8f39-7a983f1cd043",
+    "encodingMeasurementId": "9ce1761f-1722-4761-8fc0-161430c6a185",
+    "frames": 36,
+    "width": 960,
+    "height": 640,
+    "encodedFps": 12,
+    "durationSeconds": 3,
+    "actualReview": "All36views inspected via contact sheet; not game FPS or user acceptance"
+  },
+  "playMode": {
+    "status": "PASS",
+    "measurementId": "10e96ad0-04d1-486d-937c-4a266d010441",
+    "total": 12,
+    "passed": 12,
+    "failed": 0,
+    "testNames": [
+      "OceanAngler.Tests.ChannelVisitTests.SharedViewsAndFishingSurviveRepeatedAuthoredAndPrototypeSwitches",
+      "OceanAngler.Tests.CompactPreparationTests.PausedInspectionRemainsTappableForEitherHand",
+      "OceanAngler.Tests.ContinuousJourneyTests.TwentyUiCatchesPersistAcrossNaturalUnlocksAndSceneRestart",
+      "OceanAngler.Tests.FishAnimationTests.ReleaseUsesImportedNonLoopingMotionAndFreezesTheActualTail",
+      "OceanAngler.Tests.IntegratedWorldTests.ObservationGearDemoAndFishingShareOnePausedWorld",
+      "OceanAngler.Tests.ObservationVisitTests.ProtectedVisitsRecordSeparatelyPersistAndStopOnNavigationOrBackground",
+      "OceanAngler.Tests.SpinningRigTests.CastingOpensActualBailAndClosingRestoresIt",
+      "OceanAngler.Tests.SpinningRigTests.ImportedAssembliesHaveOneLodOwnerAndRealMechanicalParents",
+      "OceanAngler.Tests.SpinningRigTests.LoadedSkinMovesWithGuideAnchorsAndLineReachesHookTarget",
+      "OceanAngler.Tests.SpinningRigTests.LureNoseAndHookedLineFollowActualAnimatedMouth",
+      "OceanAngler.Tests.SpinningRigTests.PauseStopAndReducedMotionFreezeActualMechanisms",
+      "OceanAngler.Tests.SpinningRigTests.WindingMovesActualCrankRotorAndOscillatingSpool"
+    ],
+    "requestedFilter": "^(?!.*ContinuousJourneyTests).*",
+    "actualScope": "Filter also matches ancestor suites; actual XML contains full12 includingContinuousJourneyTests, not targeted11",
+    "headlessJourney": {
+      "status": "PASS",
+      "rounds": 20,
+      "points": 3446,
+      "elapsedSeconds": 382.49066162109375,
+      "captureEnabled": false
+    }
+  },
+  "native": {
+    "status": "PASS_LOCAL_SIMULATOR_CHECKS_PRODUCT_PARTIAL",
+    "old20RoundEvidence": "Historical dbaccb4 source and journey2 binary only; cannot claim new iris native acceptance",
+    "source": {
+      "sourceCommit": "fd23c2bae9a8f08d5f2944f50124b5c95f662d05",
+      "sourceDigest": "c33f259e91ba24c866c68393a2ae6ae5dcbd22eecc44f64b9a9431ed0aca6e54",
+      "projectSettingsSha256": "487dd5cc37a763cb9f23702f91a10b6680094d7b2165050d05327b1376c0d54d"
+    },
+    "appDigest": "b3181ad7d66744d35f3884531d2bfcf5ed21cf722117f78476c9d52cfe3e5bf4",
+    "architectures": [
+      "arm64"
+    ],
+    "deviceFamilies": [
+      1,
+      2
+    ],
+    "distribution": "LOCAL_SIMULATOR_ONLY_NOT_TESTFLIGHT",
+    "buildMeasurementId": "f978230d-f7c4-4cbf-b589-333c93e22aa4",
+    "projectSettingsRestored": true,
+    "phone": {
+      "status": "PASS",
+      "measurementId": "554469e2-eda8-483f-9896-9b823e64894a",
+      "catches": 1,
+      "points": 180,
+      "framesProduced": 16,
+      "fullSizeFramesActuallyViewed": [
+        "01-fishing.png",
+        "08-bay-underwater.png",
+        "02-catch.png",
+        "09-release.png"
+      ],
+      "contactSheetAll16Viewed": true,
+      "checks": [
+        "authored-spinning-rig-loaded",
+        "rig-guides-and-bend-bones",
+        "rig-single-lod-owner",
+        "rig-line-through-guides",
+        "authored-bluefin-loaded",
+        "authored-three-lods-single-owner",
+        "authored-seven-motion-states",
+        "authored-hook-at-mouth",
+        "authored-swim-actually-deforms-tail",
+        "authored-renderer-materials",
+        "authored-bay-loaded",
+        "visible-hit-target:海域与装备",
+        "visible-hit-target:看看海湾",
+        "rendered-inspection-title:bay-surface",
+        "observation-pauses-fishing",
+        "surface-camera-above-water",
+        "real-planar-reflection-ready",
+        "reflection-texture-resolution-capped",
+        "reflection-contains-rendered-scene-detail",
+        "static-view-reuses-reflection",
+        "visible-hit-target:换个角度",
+        "rendered-inspection-title:bay-pier",
+        "new-view-refreshes-reflection",
+        "visible-hit-target:潜入水下",
+        "rendered-inspection-title:bay-underwater",
+        "underwater-camera-below-water",
+        "underwater-skips-reflection-render",
+        "reef-camera-actually-changes",
+        "visible-hit-target:返回钓鱼",
+        "observation-return-keeps-pause",
+        "visible-hit-target:收起准备",
+        "visible-hit-target:继续探索",
+        "fishing-camera-restored",
+        "visible-hit-target:按住蓄力 · 松手抛竿",
+        "cast-to-bite",
+        "visible-hit-target:提竿",
+        "strike-to-fighting",
+        "visible-hit-target:按住收线",
+        "controlled-catch",
+        "rig-crank-rotor-drive",
+        "rig-spool-stroke-bounded",
+        "rig-loaded-line-through-guides",
+        "visible-hit-target:记录并放流",
+        "release-and-persist",
+        "visible-hit-target:图鉴",
+        "visible-hit-target:未发现 · 大西洋庸鲽",
+        "journal-full-scientific-name",
+        "journal-habitat-rendered-after-scroll",
+        "journal-does-not-award-or-discover",
+        "visible-hit-target:钓具",
+        "visible-hit-target:观察入门钓组",
+        "rendered-inspection-title:gear-preview",
+        "gear-view-pauses-fishing",
+        "visible-hit-target:近看卷线器",
+        "rendered-inspection-title:gear-closeup",
+        "visible-hit-target:试摇卷线器",
+        "gear-preview-real-winding",
+        "gear-preview-spool-actually-oscillates",
+        "visible-hit-target:停止收线演示",
+        "gear-demo-stops-on-release",
+        "visible-hit-target:旋转钓组",
+        "visible-hit-target:查看全竿",
+        "visible-hit-target:返回钓具",
+        "visible-hit-target:任务",
+        "visible-hit-target:设置",
+        "visible-hit-target:左手操作    已关闭",
+        "left-hand-setting",
+        "visible-hit-target:家长区与隐私",
+        "visible-hit-target:15",
+        "visible-hit-target:查看隐私与字体许可",
+        "visible-hit-target:返回家长区",
+        "visible-hit-target:清除游戏进度",
+        "reset-first-confirm-does-not-delete",
+        "visible-hit-target:取消并返回设置",
+        "cancel-reset-keeps-catches",
+        "visible-hit-target:出海",
+        "navigation-clears-held-input",
+        "reflection-dispose-releases-target"
+      ],
+      "failures": [],
+      "renderProbe": {
+        "scope": "explicit development-player diagnostic, not device qualification",
+        "graphics": "Metal",
+        "deviceType": "Handheld",
+        "quality": "Medium",
+        "nativeSamples": 4,
+        "desiredSamples": 4,
+        "ldrSamples": 4,
+        "packedHdrSamples": 4,
+        "halfHdrSamples": 4,
+        "hdrBefore": true,
+        "hdrAfter": true,
+        "ldrControl": false
+      },
+      "allProducedFrameSha256": {
+        "00-water-reflection.png": "15c98e82558ac6e06e94a94e9f4e8037c0ef78f3c25e4684295bb315be720635",
+        "01-fishing.png": "e285e1bf2c60df28d3c77b732b43cea1c387d8a1612334a7e0bfb429a32a2e58",
+        "02-catch.png": "de2528080f4db7d988b8807f8fb4bb070720d61de9247c68a66161bb35aef0f6",
+        "03-journal.png": "82d436b7b9e574bf01b4b0ad94aa016aca131b190bab6255ae97e6fcffe46363",
+        "04-gear.png": "7e274f229b87afb631f4ddc1f926ee9dbb671c8cb7eca7c86c71465962453895",
+        "05-tasks.png": "12856cb29c669c5a6938da2b212e371eb53eb776ed81a194ac1a21d6d37dc968",
+        "06-left-handed.png": "1c372cac7c3c6940f09eee19bd3e827250f0545663afdbb55bdea7aacf6fe7a7",
+        "07-bay-surface.png": "866ddfe3a50e2cdd5003db77eab8e10c6dde55043d7b45b621f33e1cf78d7831",
+        "07-gear-whole.png": "1059e9626dbc8b8e5f664765246bd3b16eb7702bf8474b5bd3eb605fa0adac84",
+        "08-bay-underwater.png": "2a59ef18cb2c7d6ca4a219d42999dad0875a8872375fdc08dc9606d547d4f80e",
+        "09-release.png": "e61839949c93059ada7a593c578e79737d97f595ef6f0b74baccac6f9577e554",
+        "10-settings.png": "cbf8288c6ab66f361b4522457c552289256a8a563679dc0b2f5e09b0ae47beb5",
+        "11-bay-reef.png": "1b95fbe8245b7b0e64c0adc6625d0642fd9ab800b5f0ece617551ba13af64054",
+        "12-bay-pier.png": "e7140a98bf79193d00546e84878e6b914a3b49f118fc1823e861daf6a457dfea",
+        "13-species-details.png": "8e937d5a24d41fee0b3369f5afc220d4b48c886b5445215aba967ae8b119c5ee",
+        "14-species-habitat.png": "71e688e2f528734e7bb55195818ec71a5d0eb1bf422a31ee30615f0df7a953a3"
+      },
+      "pixelsPerPoint": 3.0,
+      "safeWidthPoints": 832.0,
+      "safeHeightPoints": 420.0
+    },
+    "manualPhone": {
+      "status": "PASS_DISK_AFTER_OBSERVED_OS_MOUSE_JOURNEY",
+      "scope": "Agent OS mouse, dedicated Simulator; assisted mode, not child/human usability or physical touchscreen qualification",
+      "autoGameplayArguments": false,
+      "recordCount": 1,
+      "points": 205,
+      "released": true,
+      "checksumValid": true,
+      "mode": "assisted",
+      "tutorialComplete": true,
+      "actualWindowObserved": [
+        "Ready0points",
+        "Bite",
+        "Fighting",
+        "Landed100percent",
+        "Released205pointsReady"
+      ],
+      "frameSha256": {
+        "manual-landed.png": "4d3588cfab9e82400c779a224196724cce91441dfb6a0f0dbc29ba4cad050198",
+        "manual-released.png": "a60e023b5010ea06b8b6f098316a9a34f448dccc643803854aaed370bf67f36c"
+      },
+      "elapsedSinceAgentTimerSeconds": 126.608,
+      "readbackMeasurementId": "fc38f4ea-635f-404a-9ddb-3f608220ad6e",
+      "launcherMeasurementId": "3b5abe57-c3e2-4b19-859b-c595c80227ff"
+    },
+    "tablet": {
+      "status": "PASS",
+      "measurementId": "8cb168c8-d27f-4c01-8359-36ef01fda900",
+      "catches": 1,
+      "points": 256,
+      "framesProduced": 16,
+      "fullSizeFramesActuallyViewed": [
+        "02-catch.png",
+        "03-journal.png",
+        "04-gear.png"
+      ],
+      "contactSheetAll16Viewed": true,
+      "checks": [
+        "authored-spinning-rig-loaded",
+        "rig-guides-and-bend-bones",
+        "rig-single-lod-owner",
+        "rig-line-through-guides",
+        "authored-bluefin-loaded",
+        "authored-three-lods-single-owner",
+        "authored-seven-motion-states",
+        "authored-hook-at-mouth",
+        "authored-swim-actually-deforms-tail",
+        "authored-renderer-materials",
+        "authored-bay-loaded",
+        "visible-hit-target:看看海湾",
+        "rendered-inspection-title:bay-surface",
+        "observation-pauses-fishing",
+        "surface-camera-above-water",
+        "real-planar-reflection-ready",
+        "reflection-texture-resolution-capped",
+        "reflection-contains-rendered-scene-detail",
+        "static-view-reuses-reflection",
+        "visible-hit-target:换个角度",
+        "rendered-inspection-title:bay-pier",
+        "new-view-refreshes-reflection",
+        "visible-hit-target:潜入水下",
+        "rendered-inspection-title:bay-underwater",
+        "underwater-camera-below-water",
+        "underwater-skips-reflection-render",
+        "reef-camera-actually-changes",
+        "visible-hit-target:返回钓鱼",
+        "observation-return-keeps-pause",
+        "visible-hit-target:继续探索",
+        "fishing-camera-restored",
+        "visible-hit-target:按住蓄力 · 松手抛竿",
+        "cast-to-bite",
+        "visible-hit-target:提竿",
+        "strike-to-fighting",
+        "visible-hit-target:按住收线",
+        "controlled-catch",
+        "rig-crank-rotor-drive",
+        "rig-spool-stroke-bounded",
+        "rig-loaded-line-through-guides",
+        "visible-hit-target:记录并放流",
+        "release-and-persist",
+        "visible-hit-target:图鉴",
+        "visible-hit-target:未发现 · 大西洋庸鲽",
+        "journal-full-scientific-name",
+        "journal-habitat-rendered-after-scroll",
+        "journal-does-not-award-or-discover",
+        "visible-hit-target:钓具",
+        "visible-hit-target:观察入门钓组",
+        "rendered-inspection-title:gear-preview",
+        "gear-view-pauses-fishing",
+        "visible-hit-target:近看卷线器",
+        "rendered-inspection-title:gear-closeup",
+        "visible-hit-target:试摇卷线器",
+        "gear-preview-real-winding",
+        "gear-preview-spool-actually-oscillates",
+        "visible-hit-target:停止收线演示",
+        "gear-demo-stops-on-release",
+        "visible-hit-target:旋转钓组",
+        "visible-hit-target:查看全竿",
+        "visible-hit-target:返回钓具",
+        "visible-hit-target:任务",
+        "visible-hit-target:设置",
+        "visible-hit-target:左手操作    已关闭",
+        "left-hand-setting",
+        "visible-hit-target:家长区与隐私",
+        "visible-hit-target:14",
+        "visible-hit-target:查看隐私与字体许可",
+        "visible-hit-target:返回家长区",
+        "visible-hit-target:清除游戏进度",
+        "reset-first-confirm-does-not-delete",
+        "visible-hit-target:取消并返回设置",
+        "cancel-reset-keeps-catches",
+        "visible-hit-target:出海",
+        "navigation-clears-held-input",
+        "reflection-dispose-releases-target"
+      ],
+      "failures": [],
+      "renderProbe": {
+        "scope": "explicit development-player diagnostic, not device qualification",
+        "graphics": "Metal",
+        "deviceType": "Handheld",
+        "quality": "Medium",
+        "nativeSamples": 4,
+        "desiredSamples": 4,
+        "ldrSamples": 4,
+        "packedHdrSamples": 4,
+        "halfHdrSamples": 4,
+        "hdrBefore": true,
+        "hdrAfter": true,
+        "ldrControl": false
+      },
+      "allProducedFrameSha256": {
+        "00-water-reflection.png": "601cfd1338b0b8b6abb074741fc7bbb892eef07649d91bb6d6759e80ae744087",
+        "01-fishing.png": "38ba08840d6a2f4c777bab745033c06277c9797cbbc6861250ca8c6c1ff6762f",
+        "02-catch.png": "785027aa7046f516d72a9d8df09a2beec76945121b8eb681528b4ddbc8689bb7",
+        "03-journal.png": "19c9e76a34c6f5bcd2484e97e2c46f5181e9caab1ed312e0303df47d4ebcbaa8",
+        "04-gear.png": "177bd42562f3fc55e5f9e37a4f9d883242bac1f48c41dd2e4694c542195c0085",
+        "05-tasks.png": "34033eb69c5ebf96f3a42d1908b5b9ad45224a30d38c4230a23bf88f3c2d3695",
+        "06-left-handed.png": "110f283b5ea05a2de503bb5ff4c4568771c6db0a01bac11ca94c5b61b21338d7",
+        "07-bay-surface.png": "0c28d773d4983ddb51dbba7517ed58155d2f17f584a2eedf91eaca5de1a57ec6",
+        "07-gear-whole.png": "6adc64bcb2c7c295c7f20c93244d5018b1fcf4aa81903470980f0ef275b033ed",
+        "08-bay-underwater.png": "f25484f67d9bcd8128a7c10ded2e5a02863dd88f3873f36683b2af8dd3b57425",
+        "09-release.png": "0e44a872f8206ee01d9dc9d522dc6581917e409835079895165a593350c78f78",
+        "10-settings.png": "4584a64fe4a3f79112c61d6b718c4cb79b23c3123846d409371d212f09c78416",
+        "11-bay-reef.png": "2fc803947b5bbb6a9c988e39963c1ac2401ac307a33204391a20337c8685498f",
+        "12-bay-pier.png": "62e9833ff973c1bc6fa4bd82cafdbfc0faea4c32139372733a5fdd8f7dcd850f",
+        "13-species-details.png": "b71911fb4d8e5c7f238104f085591bfeb185f7ae023663dc7fd378688255bc78",
+        "14-species-habitat.png": "7024edd7af5e2e08ba483a0c6ff6f2219a45507186de8ee365b15d5e57fe6d88"
+      },
+      "pixelsPerPoint": 2.0,
+      "safeWidthPoints": 1180.0,
+      "safeHeightPoints": 790.0
+    },
+    "manualPhoneRestart": {
+      "status": "PASS",
+      "newProcessIdentity": true,
+      "explicitSameQaSaveRoot": true,
+      "checksumValid": true,
+      "catches": 1,
+      "points": 205,
+      "released": true,
+      "actualWindowObserved": "New process main Ready UI205points",
+      "frameSha256": "97971c7ab7dce3d596aaae09c396d78512ee22b3219d775be5b6239893259e59",
+      "launchMeasurementId": "ebe1f446-06b4-4e1f-9dd5-7a0f0a875b35",
+      "readbackMeasurementId": "c69a44b6-6918-40bd-af82-51c9a5215188"
+    },
+    "priorQaRetention": {
+      "journeyphone20b": {
+        "status": "PRESERVED_AFTER_UPDATE",
+        "catches": 20,
+        "observations": 3,
+        "points": 3333,
+        "checksumValid": true
+      },
+      "journeypad20b": {
+        "status": "PRESERVED_AFTER_UPDATE",
+        "catches": 20,
+        "observations": 3,
+        "points": 3444,
+        "checksumValid": true
+      }
+    },
+    "priorQaRetentionMeasurementId": "de06c731-1e67-42ab-93f6-6730671b8370",
+    "retentionInitialFailure": {
+      "measurementId": "f3bc4cb3-a853-4e71-b621-7828ef90c584",
+      "status": "FAIL_STALE_ABSOLUTE_DATA_CONTAINER_PATH",
+      "resolution": "Resolve current bundle data container; existing relative QA files found and checksums/counts/scores passed; no recreation or restore"
+    },
+    "simulatorsFinalState": {
+      "phone": "Booted",
+      "tablet": "Shutdown"
+    },
+    "visualConclusion": "New hero visible in native fishing/landing/journal; no missing iris map or prior clipping notch visible at these gameplay views. Pupil/cheek/lip shape and other assets remain art candidates; native UI frames cannot qualify scientific accuracy."
+  },
+  "failures": [
+    {
+      "label": "iris1studio",
+      "reason": "Angular eye macro silhouette; only two eye frames reviewed"
+    },
+    {
+      "label": "iris3source",
+      "reason": "31004 LOD0 triangles exceed unchanged 25000 limit",
+      "status": "FAIL"
+    },
+    {
+      "label": "iris2studio",
+      "reason": "Overbudget candidate render stopped; two available partial frames not viewed",
+      "status": "STOPPED_NONZERO"
+    },
+    {
+      "label": "iris3studio",
+      "reason": "Both eye macro frames show cheek clipping pupil",
+      "status": "REJECTED"
+    }
+  ],
+  "measurementLedgerRecovery": {
+    "status": "RESTORED_COMMITTED_HISTORY_WITH_ACTUAL_ORPHAN_COMPLETIONS",
+    "baselineCommit": "bcf74643a5fd7e87df1af6a73b308848b402c9e4",
+    "baselineMeasurements": 682,
+    "actualCompletionsRecovered": 2,
+    "newStartsFabricated": 0,
+    "missingNewIntentRecords": "Preserved as audit gap; final commands must rerun serially",
+    "cause": "Non-profile ChangesStateFile.write uses direct writeFileSync and ChangesStateManager.read returns empty stages on parse failure; parallel measurement writes were unsafe",
+    "schedulingCorrection": "All iSpec mutation and measurement commands serial from now on",
+    "independentReceiptAudit": "INCOMPLETE",
+    "baselineRetention": {
+      "baseCount": 682,
+      "baselineAllPreserved": true,
+      "baselineRecordsUnchanged": true
+    }
+  },
+  "observedLostMeasurements": {
+    "scope": "Verbatim IDs and exits observed in tool outputs; original starts lost; not reconstructed or presented as complete journal records",
+    "observed": [
+      {
+        "id": "c0888114-8971-4d49-8841-74a7d0c1daeb",
+        "label": "build iris1",
+        "exitCode": 0
+      },
+      {
+        "id": "14cb1e70-1ff1-4c75-8fc1-04b209077ee8",
+        "label": "validate iris1source",
+        "exitCode": 0
+      },
+      {
+        "id": "44b829e6-f02f-4cf6-bcc0-f9ddf02c6ccb",
+        "label": "review iris1studio",
+        "exitCode": 0
+      },
+      {
+        "id": "16a96a0d-79e0-40b0-87a5-b80189131117",
+        "label": "validate iris2source",
+        "exitCode": 0
+      },
+      {
+        "id": "7b7086da-e154-44df-a3a8-34875e7ecd03",
+        "label": "build iris2",
+        "exitCode": 0
+      },
+      {
+        "id": "98315b46-62b0-43ca-abbf-8492429e0e66",
+        "label": "validate iris3source",
+        "exitCode": 1
+      },
+      {
+        "id": "b3b3f05c-55a8-42f7-ac2e-16809aaecc25",
+        "label": "review overbudget iris2studio, childterminated",
+        "exitCode": 1
+      },
+      {
+        "id": "6e5728f4-5c42-4448-bc3b-129c9275da61",
+        "label": "build iris3",
+        "exitCode": 0
+      },
+      {
+        "id": "b676d1e1-cc2b-4a1d-afa5-4e96c18ec2b4",
+        "label": "validate iris4source",
+        "exitCode": 0
+      }
+    ]
+  },
+  "sourceReference": {
+    "url": "https://australian.museum/learn/animals/fishes/bluefin-trevally-caranx-melampygus-cuvier-1833/",
+    "scope": "Body/fin color description only; eye numeric choices are artistic, not scientific measurements",
+    "imageAccess403": true,
+    "thirdPartyPhotographyCopied": false
+  },
+  "gatesRemaining": [
+    "Art A1-A3",
+    "User and scientific review",
+    "Other 11 catch-species complete assets",
+    "Other gear and habitats",
+    "Child first-fish usability",
+    "Real system touch",
+    "Dual physical-device 20 minute qualification",
+    "Independent receipt audit"
+  ],
+  "testFlightChanged": false,
+  "personalPhoneChanged": false,
+  "masterPromoted": false,
+  "finalMeasurementBindingAudit": {
+    "status": "FINAL20_REPLAY_BINDINGS_PASS_WITH_HISTORICAL_GAPS",
+    "baselineMeasurements": 682,
+    "baselineRecordsUnchanged": true,
+    "finalSuccessfulMeasurements": 20,
+    "finalMeasurementIds": [
+      "db13051d-63c1-41da-9530-b8624d5072ef",
+      "505d61e7-4f5b-48a7-9f2d-ac455ebf6f12",
+      "f733ca77-ca79-48e2-9e44-c1e5aabe3593",
+      "ba1fd539-535d-4d51-b737-f2e290e902ac",
+      "428a772a-5e27-4d36-a9a3-8dcdf2bf804e",
+      "9ae7efea-180c-489b-8eca-f9a5ed0359f2",
+      "4b82d535-61ae-4543-8f39-7a983f1cd043",
+      "9ce1761f-1722-4761-8fc0-161430c6a185",
+      "10e96ad0-04d1-486d-937c-4a266d010441",
+      "f978230d-f7c4-4cbf-b589-333c93e22aa4",
+      "554469e2-eda8-483f-9896-9b823e64894a",
+      "8cb168c8-d27f-4c01-8359-36ef01fda900",
+      "3b5abe57-c3e2-4b19-859b-c595c80227ff",
+      "fc38f4ea-635f-404a-9ddb-3f608220ad6e",
+      "ebe1f446-06b4-4e1f-9dd5-7a0f0a875b35",
+      "c69a44b6-6918-40bd-af82-51c9a5215188",
+      "de06c731-1e67-42ab-93f6-6730671b8370",
+      "992e4498-fb71-4c95-a3ae-719f4677a3fb",
+      "e2c62fc7-066e-4f3e-9691-132843eb61ee",
+      "d2662d1c-0f49-4a6d-989c-7fdd648d4a04"
+    ],
+    "knownOrphanCompletions": [
+      "09111884-2a73-4e87-ad34-64b14fb6a03c",
+      "551ab2d5-6c82-43b9-9e79-dc7be2a6f53e"
+    ],
+    "observedLostNewMeasurements": 9,
+    "independentReceiptAudit": "INCOMPLETE",
+    "apply": "IN_PROGRESS_NOT_COMPLETED",
+    "knownReadbackFailureRetained": true,
+    "measurementId": "ae927b01-706f-417f-8476-aaa225598dff"
+  },
+  "finalChecks": {
+    "scopeAndAssets": {
+      "status": "PASS",
+      "measurementId": "992e4498-fb71-4c95-a3ae-719f4677a3fb"
+    },
+    "publicationAudit": {
+      "status": "PASS",
+      "trackedFiles": 784,
+      "measurementId": "e2c62fc7-066e-4f3e-9691-132843eb61ee"
+    },
+    "releaseGuardUnitTests": {
+      "status": "PASS",
+      "total": 11,
+      "measurementId": "d2662d1c-0f49-4a6d-989c-7fdd648d4a04"
+    }
+  }
+}

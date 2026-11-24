@@ -75,8 +75,10 @@ TestFlight 0.1.0 (5)冻结于a6bcf8e，在build 4基础上新增保护观察记�
 
 渲染平台校准后续：GPU入口明确选择Mac/iOS，记录实际目标、Gamma/Ultra、太阳/雾/探针及BC7/ASTC格式，分离平台差异与船体区域差异。51项Editor通过；最终iOS配置严格三图PASS，Mac仍PARTIAL，中间成功不覆盖其他失败。船体各槽材质对照只用于默认关闭的Editor实验，运行时未改；无新移动包或原生/真机验收，build 5不变。完整产品与apply未完成，独立receipt审计INCOMPLETE，见[校准证据](reports/render-platform-calibration.md)。
 
-模拟器当前结果：冻结dbaccb4，52项Editor及12项完整PlayMode通过；同一个ARM64原生包在iPhone 17 Pro Max/iPad Air 11 M3的iOS/iPadOS 27.2各完成20轮、三项保护观察、两种退出及新进程恢复，分别3333/3444分。20张长流程和两张重启主界面逐张审阅，11张代表性原图及所有测量摘要见[连续流程证据](reports/continuous-journey.md)。修复了暂停准备页及宽布局观察页两处真实按钮遮挡，失败回执保留。
+模拟器20轮结果（冻结dbaccb4）：52项Editor及12项完整PlayMode通过；同一个ARM64原生包在iPhone 17 Pro Max/iPad Air 11 M3的iOS/iPadOS 27.2各完成20轮、三项保护观察、两种退出及新进程恢复，分别3333/3444分。20张长流程和两张重启主界面逐张审阅，11张代表性原图及所有测量摘要见[连续流程证据](reports/continuous-journey.md)。修复了暂停准备页及宽布局观察页两处真实按钮遮挡，失败回执保留。
 
 历史sim4各一次流程及32帧见[旧模拟器记录](reports/ios-simulator.md)；早期黑屏、参数、客户端超时与会话绑定失败均不删除。后续通过Device Hub只启动项目QA模拟器，新包默认无QA参数启动等待后已确认主界面。保留HDR和4×MSAA，未清档或操作其他项目设备。
 
 模拟器包沿用配置0.1.0 (5)，源码与a6bcf8e冻结的TestFlight/Ad Hoc build 5不同，本轮无新个人手机安装或TestFlight上传。完整鱼模/钓具/海域、美术A1–A3、科学/用户/儿童、完整18任务实玩、系统触摸、最低OS及双真机20分钟仍未完成。独立receipt审计INCOMPLETE，整体及apply继续PARTIAL。
+
+眼部新候选冻结fd23c2b：原创虹膜贴图、48段轮廓与鱼颊法线贴合，LOD0为24860三角面，未放宽25000预算。52项Editor、12项完整无画面PlayMode、八棚拍/十Editor Metal图及36帧转台检查通过。irisa新原生包两端各一次自动钓鱼/多页流程通过；手机窗口另用鼠标完成一条鱼并放流获205分，新进程恢复一致，旧双端20条/3观察/3333与3444分仍保留。原图、否决候选及状态记录竞态恢复的审计缺口见[眼部与原生证据](reports/bluefin-iris.md)；复核入口见[流程说明](docs/21-bluefin-eye-review.md)。这些检查不构成完整拟真美术、儿童或双真机验收。
