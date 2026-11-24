@@ -734,6 +734,33 @@
       "category": "lint",
       "durationMs": 35.07925,
       "exitCode": 0
+    },
+    {
+      "name": "recovery1",
+      "id": "2cf2808e-1d3e-430c-af94-aca361b7284d",
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "category": "e2e",
+      "durationMs": 94245.259834,
+      "exitCode": 1
+    },
+    {
+      "name": "finalRecoveryDocs",
+      "id": "af43d63d-8d15-442e-b74a-b11596356453",
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "category": "lint",
+      "durationMs": 306.89145800000006,
+      "exitCode": 0
+    },
+    {
+      "name": "finalRecoveryWhitespace",
+      "id": "00623105-66a1-4c5b-ba90-640e5b34b19c",
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "category": "lint",
+      "durationMs": 30.704999999999927,
+      "exitCode": 0
     }
   ],
   "independentReceiptAudit": "INCOMPLETE",
@@ -773,5 +800,29 @@
       "status": "NOT_CONFIRMED",
       "measurementId": "c8e1a0b5-fde7-417c-bfd4-2c26faff3faa"
     }
-  ]
+  ],
+  "verifiedMatchingCommit": "2942d5640678aa7e9330e4f69cc72d2afc2b5eb7",
+  "recovery": {
+    "status": "FAIL",
+    "scope": "Only two owned QA simulators shut down; phone boot attempted",
+    "measurementId": "2cf2808e-1d3e-430c-af94-aca361b7284d",
+    "errorDomains": [
+      {
+        "domain": "NSPOSIXErrorDomain",
+        "code": 60
+      },
+      {
+        "domain": "com.apple.SimLaunchHostService.RequestError",
+        "code": 4
+      }
+    ],
+    "diagnosis": "launchd_sim could not bind to the session or respond",
+    "finalStates": {
+      "phone": "Shutdown",
+      "tablet": "Shutdown"
+    },
+    "erased": false,
+    "reinstalled": false,
+    "otherDevices": "Untouched"
+  }
 }

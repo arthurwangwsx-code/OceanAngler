@@ -73,3 +73,5 @@ TestFlight 0.1.0 (5)冻结于a6bcf8e，在build 4基础上新增保护观察记�
 渲染平台校准后续：GPU入口明确选择Mac/iOS，记录实际目标、Gamma/Ultra、太阳/雾/探针及BC7/ASTC格式，分离平台差异与船体区域差异。51项Editor通过；最终iOS配置严格三图PASS，Mac仍PARTIAL，中间成功不覆盖其他失败。船体各槽材质对照只用于默认关闭的Editor实验，运行时未改；无新移动包或原生/真机验收，build 5不变。完整产品与apply未完成，独立receipt审计INCOMPLETE，见[校准证据](reports/render-platform-calibration.md)。
 
 按用户要求继续模拟器验证：后续开发源码已在iOS27.2的iPhone 17 Pro Max和iPad Air 11 M3模拟器实际安装、渲染并各完成一次钓鱼/放流、多页UI程序输入流程，32帧逐张审阅；52项Editor和10项无画面PlayMode通过。修复移动启动原生采样与URP不一致造成的黑屏，以及iOS托管测试参数缺失，保留HDR与4×MSAA。另一次不带QA参数的普通启动客户端180秒超时，不能据此宣布默认启动通过。源摘要/失败和12张代表性自有原图见[模拟器证据](reports/ios-simulator.md)。本轮只验证海湾基础流程，未覆盖新航道/保护观察原生流程、实际20轮UI、系统触摸或真机20分钟，拟真美术和完整产品仍PARTIAL。此模拟器包沿用配置build 5但不是a6bcf8e的TestFlight包；没有新发行或个人手机变更。
+
+终态补充：普通启动后续的只读容器查询也超时；仅重启两台项目QA模拟器时，launchd_sim会话绑定失败，实际读回两台均Shutdown。默认启动仍未确认，需恢复模拟器会话后继续；原数据与所有成功/失败证据保留，未重装或清档。

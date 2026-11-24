@@ -68,3 +68,5 @@ REQ-06地形/材质后续：封闭高度场山脊、连续土层权重和世界�
 渲染平台校准后续：GPU入口明确选择Mac/iOS，记录实际目标、Gamma/Ultra、太阳/雾/探针及BC7/ASTC格式，分离平台差异与船体区域差异。51项Editor通过；最终iOS配置严格三图PASS，Mac仍PARTIAL，中间成功不覆盖其他失败。船体各槽材质对照只用于默认关闭的Editor实验，运行时未改；无新移动包或原生/真机验收，build 5不变。完整产品与apply未完成，独立receipt审计INCOMPLETE，见[校准证据](../../../reports/render-platform-calibration.md)。
 
 2026-11-24模拟器后续：按用户要求用iOS27.2的iPhone 17 Pro Max/iPad Air 11 M3继续，52项Editor、10项无画面PlayMode、sim4导出/原生编译及各一次EventSystem钓鱼/放流、多页UI流程通过，32帧审阅。移动默认质量档原生AA/URP不一致的黑屏与托管参数读取已修复，保留HDR/4×MSAA；六次早期非零运行和另一次普通启动客户端超时均保留，默认无QA启动未确认。海湾基础流程可运行，不代表新航道/保护观察原生流程、实际20轮UI、系统触摸、完整18任务/内容、美术A1–A3、科学/用户/儿童或真实双设备20分钟通过。无个人手机或TestFlight更新；模拟器配置号5不等于冻结build 5。2.4、3.4、4.1–4.3及apply继续未完成，独立receipt审计INCOMPLETE。见[当前模拟器证据](../../../reports/ios-simulator.md)。
+
+普通启动终态补充：只读安装容器查询90秒超时；仅重启项目QA设备又报launchd_sim会话绑定失败（NSPOSIX60/RequestError4），终态均Shutdown。没有清档、重装或操作其他项目模拟器；普通启动仍未确认，完整产品/apply不勾选完成。
