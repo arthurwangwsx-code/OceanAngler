@@ -267,7 +267,8 @@
       "note": "Original bluefin trevally mesh, UV, PBR maps, 12-bone rig, seven animation clips and three LODs. Scientific/visual/user/device acceptance remains open. No third-party photographs or models included.",
       "modifiedAt": "2026-11-25",
       "modifications": "Fin membranes rebuilt with tapered closed shells in all three LODs; original RGBA, normal, roughness and packed maps; separate opaque rays. Material slots6->7 explicitly; triangles24664/9864/3699 within unchanged25000 LOD0 budget,12bones/7motions retained. Actual source checks and isolated HDR Metal controls pass; source/Player visual, scientific, user and device gates remain separate. Pectoral trailing-edge curve candidate B after visibly rejecting A; existing maps unchanged, LOD0 non-pectoral geometry/UV/weights/material roles normalized-identical. Art/science/user/Player qualification pending. Distance fin meshes retain16 complete opaque outline-ray components, closed tapered membrane and original PBR. Entire nearLOD0 geometry/UV/weights unchanged at six-decimal canonical identity; all original PNG bytes unchanged. LOD budgets24664/9864/3698 unchanged. Screen-size thresholds revised;58 Metal diagnostic frames and auto-vs-forced selected LOD pixel identity checked. Art/science/user/native followup pending. Neutral silver/grey-brass body albedo; actual saved allLOD geometry,UV,weights and material roles retained; FBX and eight other PNG bytes unchanged. maps-only entry preserves existing authored/reduced meshes. Local128 reflection probe remains an unadopted Editor diagnostic; no production reflection asset. Source189 checks,linked image pixels and three-view stable controls qualified; full art/science/user/native followup pending.",
-      "nativeFollowup": "reports/bluefin-distance-fins.json; d50f1c3 scoped dual15-frame flow; selected visuals reviewed; full art remains partial"
+      "nativeFollowup": "reports/bluefin-distance-fins.json; d50f1c3 scoped dual15-frame flow; selected visuals reviewed; full art remains partial",
+      "neutralAlbedoNativeFollowup": "reports/bluefin-neutral-albedo.json; source-specific scoped dual15-frame flow and selected originals; full art remains partial"
     },
     {
       "id": "complete-spinning-rig-candidate",
@@ -2462,6 +2463,44 @@
         }
       ],
       "note": "Three reviewed isolated originals and four reviewed native originals. Before image deliberately forced close mesh at16%; candidate images use automatic LOD. Own models and existing OFL game font; no private media, logs or credentials. Overall realism and user/science/child/device acceptance remain pending."
+    },
+    {
+      "id": "bluefin-neutral-albedo-reviewed-frames",
+      "author": "OceanAngler contributors",
+      "source": "Own original body palette and own scene controls plus current native Simulator game",
+      "license": "MIT",
+      "redistribution": true,
+      "sourceRedistribution": true,
+      "canModify": true,
+      "acquiredAt": "2026-11-25",
+      "status": "SCOPED_PALETTE_REVIEW_PASS_FULL_ART_PENDING",
+      "artifacts": [
+        {
+          "path": "art/previews/bluefin-neutral-albedo/near-albedo-before.png",
+          "sha256": "8e9231a86d55b196236b3e077f60cad1c60850bd71f55def6bca15a49d5dba24"
+        },
+        {
+          "path": "art/previews/bluefin-neutral-albedo/near-albedo-candidate.png",
+          "sha256": "c5aafaf9b86b69c5fff1aa6bb40cb0f739f4791a282de7edf7e3cc8c0c0f8a40"
+        },
+        {
+          "path": "art/previews/bluefin-neutral-albedo/phone-fighting.png",
+          "sha256": "2dfc88f41143e83c922e48489ff4bf2983064a3228f9678c391b911f0ab5e255"
+        },
+        {
+          "path": "art/previews/bluefin-neutral-albedo/phone-landed.png",
+          "sha256": "f08b9ce27326d981e3992273162b93d510c10909b34f440aada96cc0ff7db7ec"
+        },
+        {
+          "path": "art/previews/bluefin-neutral-albedo/tablet-fighting.png",
+          "sha256": "34092fd90037470c788f763bd1191bad4ea11b8201abccfd21be1a7fa466f7f6"
+        },
+        {
+          "path": "art/previews/bluefin-neutral-albedo/tablet-landed.png",
+          "sha256": "2f115992ad29f30b8761959001518ca84eaf9ac1a8e36b356e6b9623ec49aa60"
+        }
+      ],
+      "note": "Two reviewed source-control originals and four native originals. Own models/OFL game font; no reference photos sampled or redistributed. Probe controls are not production assets; art,science,user,child and physical qualification remain pending."
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."

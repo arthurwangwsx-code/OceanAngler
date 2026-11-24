@@ -12214,6 +12214,116 @@
       "executable": "python3",
       "commandDigest": "92b88d46c0b5545788a9a2ce5359954222ebde80f299018987788284e4627495",
       "receiptPath": "measurements/fish-lighting-source-public-checks-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "238541fa-79e9-4fe8-996d-7c9256a4bd1c",
+      "startedAt": "2026-11-24T20:21:07.478Z",
+      "executable": "python3",
+      "commandDigest": "3b5ef6b9192d71533b6055e6f8707cd002c214865a1a7ec2761cb1f8b1e13f39",
+      "receiptPath": "measurements/fish-lighting-retention-before-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "0696ac5e-4aa4-43ac-a052-765a43acf2a8",
+      "startedAt": "2026-11-24T20:22:06.382Z",
+      "executable": "python3",
+      "commandDigest": "41ada4229ce84f48a8f6fe5314a22fd98adb5d6f6b88741107068ab45d789d53",
+      "receiptPath": "measurements/fish-lighting-native-build-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "82ebba2d-2eab-4529-a4c2-d60e5185d52c",
+      "startedAt": "2026-11-24T20:25:58.609Z",
+      "executable": "python3",
+      "commandDigest": "9a1f7e94b4f8053473720ae5048fb1b96690f52f72604c62034f0470d8e3ddd3",
+      "receiptPath": "measurements/fish-lighting-phone-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "371167e3-9cb3-45d2-bebf-3afd91900426",
+      "startedAt": "2026-11-24T20:27:15.928Z",
+      "executable": "python3",
+      "commandDigest": "27aa38c45f52dfb0258b7ee39c134c4bc58b3fb408853026e4681bdc0a5e00a4",
+      "receiptPath": "measurements/fish-lighting-phone-proof-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "86cb9dc9-81d3-4a6a-b554-7a5854fd2b14",
+      "startedAt": "2026-11-24T20:27:16.455Z",
+      "executable": "python3",
+      "commandDigest": "ed4eb68d80a7ccb2e904fc92dfacc81e2c9064d2923cb11da6ceced0f0a31df8",
+      "receiptPath": "measurements/fish-lighting-pad-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "7ff288e6-7205-4087-947c-c161ef1bd521",
+      "startedAt": "2026-11-24T20:28:20.684Z",
+      "executable": "python3",
+      "commandDigest": "9ea5cb991fe1d44357db19f523af83d0129e070cb7e2fd0cb5826adf68ec186d",
+      "receiptPath": "measurements/fish-lighting-pad-proof-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "72c1a0bd-e276-421d-9fce-aae39af6b78b",
+      "startedAt": "2026-11-24T20:28:21.250Z",
+      "executable": "python3",
+      "commandDigest": "529d6e85ec1579cabe0c7e63e5daf451640f3a0db507c25affafc2126a6eae82",
+      "receiptPath": "measurements/fish-lighting-retention-after-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "11bd7410-4993-4e41-830a-85d58bb80e2a",
+      "startedAt": "2026-11-24T20:31:42.375Z",
+      "executable": "python3",
+      "commandDigest": "b5d43f9c9467c75b73cf3f05088c1967334b86cadb83a13486c0fc61f61eb33f",
+      "receiptPath": "measurements/fish-lighting-report-proof-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "fc2a79a7-0fdb-4d54-91f9-d97e0d656f27",
+      "startedAt": "2026-11-24T20:32:35.009Z",
+      "executable": "python3",
+      "commandDigest": "92b88d46c0b5545788a9a2ce5359954222ebde80f299018987788284e4627495",
+      "receiptPath": "measurements/fish-lighting-final-public-checks-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "87f9edcc-d384-4b80-929c-b5229752e0ec",
+      "startedAt": "2026-11-24T20:32:42.668Z",
+      "executable": "python3",
+      "commandDigest": "b449cedf77939af44b83932d535bac005c2b75d463bda0af2e37b802c56237f0",
+      "receiptPath": "measurements/fish-lighting-record-integrity-20261125.json"
     }
   ],
   "runMeasurements": [
@@ -30718,6 +30828,196 @@
       "receipt": {
         "path": "measurements/fish-lighting-source-public-checks-20261125.json",
         "sha256": "3c2b3f9cda964c406e23eb5cf631bbb428f4105b1d6fa59412a42fad27862f2f"
+      }
+    },
+    {
+      "id": "238541fa-79e9-4fe8-996d-7c9256a4bd1c",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "3b5ef6b9192d71533b6055e6f8707cd002c214865a1a7ec2761cb1f8b1e13f39",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:21:07.478Z",
+      "finishedAt": "2026-11-24T20:21:14.548Z",
+      "durationMs": 7038.57425,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-retention-before-20261125.json",
+        "sha256": "b9da1a7f405fd69877e7eafe9db846fe91c16955533067fa49c02fecb21dff06"
+      }
+    },
+    {
+      "id": "0696ac5e-4aa4-43ac-a052-765a43acf2a8",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "41ada4229ce84f48a8f6fe5314a22fd98adb5d6f6b88741107068ab45d789d53",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:22:06.382Z",
+      "finishedAt": "2026-11-24T20:25:47.925Z",
+      "durationMs": 221496.10795900002,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-native-build-20261125.json",
+        "sha256": "d1cc2c138c586c47d1a903c83e0dc73eddb717ed94d98bcac3f26223e1f64234"
+      }
+    },
+    {
+      "id": "82ebba2d-2eab-4529-a4c2-d60e5185d52c",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "9a1f7e94b4f8053473720ae5048fb1b96690f52f72604c62034f0470d8e3ddd3",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:25:58.609Z",
+      "finishedAt": "2026-11-24T20:27:15.141Z",
+      "durationMs": 76498.658875,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-phone-20261125.json",
+        "sha256": "d5c1f30baa276a36a888f2d4852e67feb92390ab8137481fe5b11cec685ed0e6"
+      }
+    },
+    {
+      "id": "371167e3-9cb3-45d2-bebf-3afd91900426",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "27aa38c45f52dfb0258b7ee39c134c4bc58b3fb408853026e4681bdc0a5e00a4",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:27:15.928Z",
+      "finishedAt": "2026-11-24T20:27:16.035Z",
+      "durationMs": 81.96754199999998,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-phone-proof-20261125.json",
+        "sha256": "f72ce64d1436b7e4cdacc1d2ac4ffa1017fdd1a49aea6f7362da87463bc18c95"
+      }
+    },
+    {
+      "id": "86cb9dc9-81d3-4a6a-b554-7a5854fd2b14",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "ed4eb68d80a7ccb2e904fc92dfacc81e2c9064d2923cb11da6ceced0f0a31df8",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:27:16.455Z",
+      "finishedAt": "2026-11-24T20:28:19.377Z",
+      "durationMs": 62904.78125,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-pad-20261125.json",
+        "sha256": "3faeb1ae59883d2761d8cf8550330660d8684ef6d711754fba3ad2bf66987c87"
+      }
+    },
+    {
+      "id": "7ff288e6-7205-4087-947c-c161ef1bd521",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "9ea5cb991fe1d44357db19f523af83d0129e070cb7e2fd0cb5826adf68ec186d",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:28:20.684Z",
+      "finishedAt": "2026-11-24T20:28:20.799Z",
+      "durationMs": 86.33662500000014,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-pad-proof-20261125.json",
+        "sha256": "21dfb3aaca35bc32919b48b35e220abc07312f05a76a0cd3d477857fdeb4a70c"
+      }
+    },
+    {
+      "id": "72c1a0bd-e276-421d-9fce-aae39af6b78b",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "529d6e85ec1579cabe0c7e63e5daf451640f3a0db507c25affafc2126a6eae82",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:28:21.250Z",
+      "finishedAt": "2026-11-24T20:28:31.716Z",
+      "durationMs": 10439.972083,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-retention-after-20261125.json",
+        "sha256": "06082e348c657ec30574c7f3bdca4c0157879e5618ecdb820f0c9b6d29c7d1ff"
+      }
+    },
+    {
+      "id": "11bd7410-4993-4e41-830a-85d58bb80e2a",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "b5d43f9c9467c75b73cf3f05088c1967334b86cadb83a13486c0fc61f61eb33f",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:31:42.375Z",
+      "finishedAt": "2026-11-24T20:31:42.792Z",
+      "durationMs": 383.0435829999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-report-proof-20261125.json",
+        "sha256": "2705cbbb6e335ba2051ac076cb07506aab639b1262b227dd9fa00df01cfbd32f"
+      }
+    },
+    {
+      "id": "fc2a79a7-0fdb-4d54-91f9-d97e0d656f27",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "92b88d46c0b5545788a9a2ce5359954222ebde80f299018987788284e4627495",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:32:35.009Z",
+      "finishedAt": "2026-11-24T20:32:36.787Z",
+      "durationMs": 1732.1326669999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-final-public-checks-20261125.json",
+        "sha256": "42f260d47a53b342233f89698c566383c12869b7360c1f1947303762d3eb8b1c"
+      }
+    },
+    {
+      "id": "87f9edcc-d384-4b80-929c-b5229752e0ec",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "b449cedf77939af44b83932d535bac005c2b75d463bda0af2e37b802c56237f0",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:32:42.668Z",
+      "finishedAt": "2026-11-24T20:32:42.768Z",
+      "durationMs": 75.97758299999998,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fish-lighting-record-integrity-20261125.json",
+        "sha256": "679818ca7ba94ba3a46d7b90bdd0b914ac8b8e4034ef3f0edd7b3a8b0ea02f40"
       }
     }
   ]
