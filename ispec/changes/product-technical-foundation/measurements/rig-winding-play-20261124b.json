@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "5707296d-5626-43bc-9c1a-5953602854db",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "4ad105151d1f65bdc3aa4c1ffe6a78d60a663ccd4679484721cf624d52d539e9",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-24T15:08:47.886Z",
+    "finishedAt": "2026-11-24T15:09:55.920Z",
+    "durationMs": 68003.538208,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      "tools/game.py",
+      "tests",
+      "--test-platform",
+      "PlayMode",
+      "--label",
+      "rigwindingplay20261124b",
+      "--test-filter",
+      "OceanAngler.Tests.SpinningRigTests;OceanAngler.Tests.RollerMechanismTests;OceanAngler.Tests.IntegratedWorldTests;OceanAngler.Tests.ImmersiveNavigationTests;OceanAngler.Tests.RigDetailReviewTests"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    "tools/game.py",
+    "tests",
+    "--test-platform",
+    "PlayMode",
+    "--label",
+    "rigwindingplay20261124b",
+    "--test-filter",
+    "OceanAngler.Tests.SpinningRigTests;OceanAngler.Tests.RollerMechanismTests;OceanAngler.Tests.IntegratedWorldTests;OceanAngler.Tests.ImmersiveNavigationTests;OceanAngler.Tests.RigDetailReviewTests"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T15:08:47.886Z",
+  "finishedAt": "2026-11-24T15:09:55.920Z",
+  "durationMs": 68003.538208
+}

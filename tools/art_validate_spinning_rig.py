@@ -37,5 +37,8 @@ report['detail']=detail_scope['inspect']();checks.extend(report['detail']['check
 winding_scope={'__file__':str(ROOT/'tools/art_validate_rig_winding.py'),'__name__':'rig_winding_module'}
 exec(compile((ROOT/'tools/art_validate_rig_winding.py').read_text(),winding_scope['__file__'],'exec'),winding_scope)
 report['winding']=winding_scope['inspect']();checks.extend(report['winding']['checks']);failures.extend(report['winding']['failures'])
+shaft_scope={'__file__':str(ROOT/'tools/art_validate_rig_shaft.py'),'__name__':'rig_shaft_module'}
+exec(compile((ROOT/'tools/art_validate_rig_shaft.py').read_text(),shaft_scope['__file__'],'exec'),shaft_scope)
+report['shaft']=shaft_scope['inspect']();checks.extend(report['shaft']['checks']);failures.extend(report['shaft']['failures'])
 report['status']='FAIL' if failures else 'ENGINEERING_CHECKS_PASS';out=ROOT/'.local/art/spinning-rig/validation.json';out.parent.mkdir(parents=True,exist_ok=True);out.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n');print(json.dumps(report,ensure_ascii=False,indent=2))
 if failures:raise RuntimeError('Spinning rig asset validation failed')

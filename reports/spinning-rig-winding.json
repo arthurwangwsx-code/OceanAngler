@@ -124,8 +124,8 @@
     "failures": [],
     "triangles": [
       43412,
-      19034,
-      8526
+      19056,
+      8556
     ],
     "budgets": [
       43420,
@@ -204,7 +204,7 @@
       }
     ]
   },
-  "lod0Invariants": {
+  "windingOnlyLod0Invariants": {
     "status": "GEOMETRY_INVARIANTS_PASS_WITH_UV_DIFFERENCES",
     "scope": "actual oriented polygon geometry, positions/weights/world matrices and sharp flags unchanged; all raw UV differences retained; not full buffer/UV identity or human art acceptance",
     "geometryDifferences": [],
@@ -912,7 +912,7 @@
           {
             "name": "turn-019",
             "angleDegrees": 190,
-            "minX": 0.3119029104709625,
+            "minX": 0.31190288066864014,
             "maxX": 0.710762619972229,
             "minY": 0.060000550001859665,
             "maxY": 0.9399997591972351
@@ -952,7 +952,7 @@
           {
             "name": "turn-024",
             "angleDegrees": 240,
-            "minX": 0.2621890902519226,
+            "minX": 0.2621890604496002,
             "maxX": 0.7493181824684143,
             "minY": 0.06000005081295967,
             "maxY": 0.9399992823600769
@@ -1051,7 +1051,7 @@
     "videos": [
       {
         "name": "reel-turntable",
-        "sha256": "a8d8599b4a8113213d27255055e88fa5991d705d3be55961e8805354201d469d",
+        "sha256": "b7881c7187c061e608e50999707d10aa38cd6759517d3f5b0162a06f76fce56e",
         "video": {
           "width": 960,
           "height": 640,
@@ -1062,153 +1062,153 @@
         "sourceFrames": [
           {
             "name": "turn-000.png",
-            "sha256": "76f8489d947ee3b86a5ebb5f409227f02af62c3a0894e28dcf5aed3fb821c7fc"
+            "sha256": "f9e70b3aac223b8d1eb4f2a53cd0b276e24705ee7483bbeff71d5162fabd5081"
           },
           {
             "name": "turn-001.png",
-            "sha256": "e7b2462a7632c2a84d684dcb166c67c4f53bddd92acf11cef0ef343d020ca30b"
+            "sha256": "0c83711b7b1ae5c6e6329c6eb65304edd93041ab28b39dec51a9fd39d46991aa"
           },
           {
             "name": "turn-002.png",
-            "sha256": "88078684ea8d9290a6a72cd1f0f15f99c1c783615c20ff367e6b250ec1a64f60"
+            "sha256": "5295225f4e5ec41520b8c9d86341051d62bf40e655f936af2b3b779bc9c5d6b7"
           },
           {
             "name": "turn-003.png",
-            "sha256": "37fe4ee157ecfc48cfd309e69b392d501c73e924c18f224299903131acb704ab"
+            "sha256": "749830b4d830eadadad185d8fc5080b51148899a25a4824be54801752f435ae8"
           },
           {
             "name": "turn-004.png",
-            "sha256": "02a5121bcbbe0cf35065adfa5b81567d809f8eae180172215766e0ca50d00f50"
+            "sha256": "826cf952ec41c37849b6a78af8605528be2a7704c5a95c216ed300da2769da49"
           },
           {
             "name": "turn-005.png",
-            "sha256": "a2153f4803e778fdf25c3e8db44754173526899af8fd190ca2d2b5ce20d7d254"
+            "sha256": "a10a5f7bf47a84fcd4b77496d1ce7bea2a4a085a8cd51ae1ea412cc498e5b688"
           },
           {
             "name": "turn-006.png",
-            "sha256": "6966eaf4601112c9a8da8335f29c09bc0379e61d4e25f7246a6d132ae25eb47f"
+            "sha256": "eaceabe9b40f2332968057e5b37ddce9c8ea74d63652cbc22298d25b01959ad5"
           },
           {
             "name": "turn-007.png",
-            "sha256": "684946ea895b3be4b84ea39cd940ca377f7e2a3cff503d114d855e4c7da5eff6"
+            "sha256": "f35e29c76188a80abcf894e4eb620a0f418536663129365537c66cf76b6b6604"
           },
           {
             "name": "turn-008.png",
-            "sha256": "7e1aaf35c77cf2d30f4f2d5d01d617c60bcec54530e8ed43884abb6e075e5628"
+            "sha256": "7295e9b2de5c48da382e2f4aaab6462fcac2d8c47157df1df80780e7dec4a393"
           },
           {
             "name": "turn-009.png",
-            "sha256": "a3f5d677c20fe73b61c3751ff22d567cc26ac099323e17a410e58ecc6f82b55d"
+            "sha256": "75730decb2b85fec0cf813631d0cde907befd7b5bca0e55a893f670a8e387427"
           },
           {
             "name": "turn-010.png",
-            "sha256": "18eac45c37438e27ec2fd4f3d309e26539bacebcc4d7fcc948e32a3e1b90ebba"
+            "sha256": "5e1be23ba881844f2ec28f0ec37e5b6fdc568e9b4cfece68d83156166e0bc758"
           },
           {
             "name": "turn-011.png",
-            "sha256": "959aa98e8338ac8e305b07d33468ef6f901471dabfdf7b63f7e99b99403ff4f1"
+            "sha256": "68e1b8da0af2f24d202c0fda8b6ae8579528112e9cd4fe99e3ea1268355f7b02"
           },
           {
             "name": "turn-012.png",
-            "sha256": "b9b25edc168a103ec294ecde254a0cf2535afc97ecb70cd3a675547293b63598"
+            "sha256": "9d2e3aff4ba6d960da6aa58a2996ab39a977dcd4e110e65334c392b80be325b5"
           },
           {
             "name": "turn-013.png",
-            "sha256": "5d68626e836dea70786175e6949c093c0d0a7ee242e582087938cbfac7e07c8d"
+            "sha256": "70c4368c0a633c2da3d9952208b2a72914a1344335dcf8aa599ec4f29509582c"
           },
           {
             "name": "turn-014.png",
-            "sha256": "86e024568abbc02b76b7d2d2da8c59bd0c9ee4c9d9947ad1f93c3ac76a3ef9e9"
+            "sha256": "e32772e1a9f7dabb6f372239f83f688ed3ade16ee0b8aba4cd9311adea4b3ad5"
           },
           {
             "name": "turn-015.png",
-            "sha256": "738c24c3c5bb4ffb1fabbf87f05fb32a40d054502fbd707c03964d3a931eec13"
+            "sha256": "cb8269b8a7ebf8f852b567d46c9743f1d59d8c39bb574b38eb4c189d3c9d4767"
           },
           {
             "name": "turn-016.png",
-            "sha256": "245d5c05eb7f3eeceef212ae985e2b8febf74aab99bec279e1f4423a81a1794d"
+            "sha256": "2c3aefbf92c6c926acf884dc05146646ba248f8b1cfc88eed577e70a2560c12a"
           },
           {
             "name": "turn-017.png",
-            "sha256": "27b3d0d9154794b2837ef5edfdd92e991e0110e274577ba95974640786c0ecba"
+            "sha256": "c2af8830a236efa1992d908c01282f4a9be3d55feaecf850a3d995582e453b15"
           },
           {
             "name": "turn-018.png",
-            "sha256": "fe954ffd99b0422f463e3ba4cebc77933a0772d4a5834d355037c0219e9238be"
+            "sha256": "0305b9b5f3631a33c35905e5bc848242bdfb1b66a2c685bb0c65688e35b3482c"
           },
           {
             "name": "turn-019.png",
-            "sha256": "c649783f046f98186a1d2ea9bb7eebb34046cee8d666530268c4c74a327e2f7d"
+            "sha256": "d04c0722f687fd0b244a3493e6c478ef53472da24dd4d5a51cf08f01c1711da0"
           },
           {
             "name": "turn-020.png",
-            "sha256": "7bb77c934b76192924ab8afe400b55c56032a49e96f4f50d271e2659635aeebf"
+            "sha256": "2819a77382cf29947c86b5fca68b93c212d667694f22649d7b6a7934070d53f1"
           },
           {
             "name": "turn-021.png",
-            "sha256": "bd727b42c0afbac605ea04bd5cd2f4830be0663faacc55897f672192b6cc61e5"
+            "sha256": "f6c6488edd4e31b73504756018ad4c53d7ee258608dbadf0701ce36d04d56c4e"
           },
           {
             "name": "turn-022.png",
-            "sha256": "c154e4cd041199a7fa049390b09487d2cc5cd37e7ecec5302ee1ea955b78935f"
+            "sha256": "db05c0bc373e8e80b776d9741b97ac40f78bf88c8bea2e460da8c42f04bf4a1f"
           },
           {
             "name": "turn-023.png",
-            "sha256": "d31a1ca6a826273d29c62f7950117af4aeed51df59fc45c7fdcf93dfcf554051"
+            "sha256": "8dfdefe9dea5bf68bf845fe9665bc578fcaf10c0697bf0c385e2de7bdc2f35b2"
           },
           {
             "name": "turn-024.png",
-            "sha256": "91c5ad34679ab686250f6c34ccf659b76e6fa9c6b9bfa24efcce649430bce6c6"
+            "sha256": "390a168d6bb5007912eafc1b26dd3cd19cd6ea1f7cebe6fc65ed582b477f388b"
           },
           {
             "name": "turn-025.png",
-            "sha256": "8d0bed61b59142e119c9b60c669c45a3e29f80a4ffb5bf4f1609880b7e05778c"
+            "sha256": "86b2d62c705ca5fc7132854b23ffc0970eb467e3b5fddcbc4893734892df082e"
           },
           {
             "name": "turn-026.png",
-            "sha256": "d4eccc68584650e83954b610adb76e23f4fa902680286ce19c2e52b2916f9dbc"
+            "sha256": "3d0a67184ec8a2d9b8b944f2a58532da9d738ba034e3fa4167a4f854049545be"
           },
           {
             "name": "turn-027.png",
-            "sha256": "607e4bf312880026ae8cde7e3454fe84c0730d12f3e88d50b5d48d514e21afef"
+            "sha256": "5335605f508a7b8d78a90f923e2a26d49f3e7bd176175138ecd94f18a814b242"
           },
           {
             "name": "turn-028.png",
-            "sha256": "5fbfb6bc34294ca312a683899baba1c157f0d354fec8fd904a244e4ff98a03dd"
+            "sha256": "4e0c6c0fc3a78a50693c74ed076cfbac84b53f0945e3c6a209624b51fa1a1d57"
           },
           {
             "name": "turn-029.png",
-            "sha256": "a23ca182c04619a1071f96bc9c9262bcbde41817e11e9af2a1916e7ef208c252"
+            "sha256": "1620f78fae30bc5d1520cc3d8786ab580d73ad4a6c5e423857c5f223681f27da"
           },
           {
             "name": "turn-030.png",
-            "sha256": "40bf68924ef66543e0ed79feb12f39ae3c6d90baeb3eb391a67aab1999bdc4d9"
+            "sha256": "8a06ba28c4d2dda00ea03fad3df7e3bfa1dcec8cf743ae7b5402540f1823e9fb"
           },
           {
             "name": "turn-031.png",
-            "sha256": "3ee3e3455d18d66260e35eabb4063e688af2276f94eab248f4edb6dcd65d8f2e"
+            "sha256": "588b8f31b90c452db4ad9dee1c45c6c59aad01cddf3d10abc076dd143a238547"
           },
           {
             "name": "turn-032.png",
-            "sha256": "a571e289d6d704dbfe3da6f3ddd8c9e58604caff99618ccf7e88e4919e13a727"
+            "sha256": "8297db3fb4161934f293e17bcb29edb1a76c280766b1e77f103aa271ed3d8a4e"
           },
           {
             "name": "turn-033.png",
-            "sha256": "263e7593be7daaa1ba7be4bca9e43ae6b8108f4ee630d584c9e548146c193357"
+            "sha256": "8c8d4eefea554bf351a2812a9af92836731f65af2038de031684e9e5c7d5f4b3"
           },
           {
             "name": "turn-034.png",
-            "sha256": "4c79f2d90eeb62513e78736270b2278006a8d8f4a53a8d4689cf3a3676032e5f"
+            "sha256": "0e1d88e07136e34ace31cbf4212c54ba899ac635b6add7a166d5a6021d0c7e71"
           },
           {
             "name": "turn-035.png",
-            "sha256": "ea50bfa69ab34893b3c331fbbd4ea68822edfc7c0cab347a1cc5ea1007a0178d"
+            "sha256": "94353d5a275e191ee6c8d42239a604e26aa929aedb3980f341d37c7273df10d4"
           }
         ]
       },
       {
         "name": "whole-turntable",
-        "sha256": "d0e4fe95440079fcb23dfd513ab662317c2bb8e0a960125fedc95e306bbec943",
+        "sha256": "3053bf62a06b2dc74fe079aaec361ccd749a5305394a74c1fdbe637ee75f1ec9",
         "video": {
           "width": 960,
           "height": 640,
@@ -1219,147 +1219,147 @@
         "sourceFrames": [
           {
             "name": "whole-turn-000.png",
-            "sha256": "b41abcda7364bfc25d0a2a38876a8846bcefa631d6577fa88726b52e81520ab1"
+            "sha256": "58b1a2d2b814ab81df54ec51b48f67371ad058e64af931cc7e84c9918f27d516"
           },
           {
             "name": "whole-turn-001.png",
-            "sha256": "1fbb4c711f98f4c6b8ee0054433272348b38ec16f54f72e62a12d06fcadb203e"
+            "sha256": "1b33d71b9a859b84f5aba9c969ab3c6dab78cbb18ee822fb454a6674ec0482d3"
           },
           {
             "name": "whole-turn-002.png",
-            "sha256": "eff3606eed667566192ecce7ef127120b1570c71a742dc0ee529a217e2db1e64"
+            "sha256": "3f41b2c86eeb2f2c534d8cf42318ea8e294039308b3d54dc35e3f77aa20a225d"
           },
           {
             "name": "whole-turn-003.png",
-            "sha256": "49357d369adbded2e8f35466988c99e831760b3818fe4a76621a5e2ad59d2c2d"
+            "sha256": "894525c3fc713806b84701c05526a537791a81651f192c39c8c36bdb56894aca"
           },
           {
             "name": "whole-turn-004.png",
-            "sha256": "edc9103b8faab37c431c86d968bf54288ac47a572cc7d9dc8f1ebc15e509f24b"
+            "sha256": "ce7aeea64abe19dfcde419b01fa6e888a70338f20c822485e8767a70c799d6b4"
           },
           {
             "name": "whole-turn-005.png",
-            "sha256": "0ad6cf50f57b9bb395506251179d4de6dbb57286c1f0b7bb2909f66a4b190f00"
+            "sha256": "39ae93b211389017c519b43692b7b3361bfdcbff5df3e79041a234f1bc7f535c"
           },
           {
             "name": "whole-turn-006.png",
-            "sha256": "7059aab4e6d434816a2daec1ba00f29cd701c1b7204b1c85093ec9741550cd19"
+            "sha256": "5e7243fc0e5e36fe35110d6c818b10e8c1be2567d93c8442e69a3c682874fe19"
           },
           {
             "name": "whole-turn-007.png",
-            "sha256": "2e3e55bcf8f0a0074a9fb9c331361c9676fd2c44878cff135f1828735df0ddf2"
+            "sha256": "21f073cdb7c08ec27b0c5267b777fb80f56db9342d17c83d33fc09dd0c9d1919"
           },
           {
             "name": "whole-turn-008.png",
-            "sha256": "2dea96bcc3a66232b1e0ebf5d6c178a0f2ba3219d2e3207e49a579479a91d1a0"
+            "sha256": "905c6d8d33fb10ea2add252763ba77d81e9f26de16087da2ad8fd8dfdae3b098"
           },
           {
             "name": "whole-turn-009.png",
-            "sha256": "1489178c7411b7deb2546a3ebf833c599470e908c499f52c83aa525fb02ab3f4"
+            "sha256": "df27680613a0a3d338b7d23c9ffe51665dfc10e8539e73afa88411053f9d5536"
           },
           {
             "name": "whole-turn-010.png",
-            "sha256": "42c57aeb5b467e68e477b94765e14442325b7fb2875af002f6daed01001c4fbe"
+            "sha256": "517a7a9ce15f320bf4873d79c52a5007ea3cbc8fa4bedfd7f786b7e0b674e576"
           },
           {
             "name": "whole-turn-011.png",
-            "sha256": "f405d79d1c44b41c32e2fd1181cbe099ab6eafd6abe8b86578406fc30213a806"
+            "sha256": "933a56a1424967ef647ee0dac85475d890cc075da6fafc37070e11a05e513d89"
           },
           {
             "name": "whole-turn-012.png",
-            "sha256": "24aeed8e4eeb63e8152add4148e3d89d2794eccb657b7c1c0fc2eef5c3b71bcf"
+            "sha256": "1da63ff75e6dfd0145e4d86b25db2e28b14d23f979ae0e73161408752e3e53b8"
           },
           {
             "name": "whole-turn-013.png",
-            "sha256": "a20ef7532454c2da6ece0790087fa71da2fc9e4f6cbbb4e952caa122f6749195"
+            "sha256": "41fc9929887c0e47d90beb6d124f684ee0e36457705f38ad4e14a41da42a8cf7"
           },
           {
             "name": "whole-turn-014.png",
-            "sha256": "d28ee7be5afe407adab0cd1c78d4a8cd5175919d5044239a32fef926398e954e"
+            "sha256": "78bbbf652b5f020a0059fa3729c1f03210fd921bc37ad5ef96722a2ef5b5893a"
           },
           {
             "name": "whole-turn-015.png",
-            "sha256": "bc657c2de5301cbd4492fcb7674b01fd0fd27de9f74176dd7638504a89a6b903"
+            "sha256": "1803c6303b80cd1d611ee22add0c4b5e3fd992cbc0a2d4d89ce6b7e01c0e9b2a"
           },
           {
             "name": "whole-turn-016.png",
-            "sha256": "9bbf8203f83423e0e329a8491246b598432ac8918a248310ec834553434e7d4a"
+            "sha256": "ba240bf741816a637607f16caab31b2055d58e31fc52732fa0ea59b08d97502f"
           },
           {
             "name": "whole-turn-017.png",
-            "sha256": "8ffbad2179a18311d4dd5cf07ea12cc9189ec46658050f4a0544a5c7f4362895"
+            "sha256": "e2806fc0c766bc442e98a6c38c139a77c180537fa66100ec13255206f33709b9"
           },
           {
             "name": "whole-turn-018.png",
-            "sha256": "a5abc869dd39b2a3ca983447325a19648ff4a706d0996a3fab91325871774048"
+            "sha256": "e3d20458955faa65cb0bc0a0482939f83b54e399a906169ca70745f2ac057e03"
           },
           {
             "name": "whole-turn-019.png",
-            "sha256": "173c2573265ee44dc7fa04411cb8ee1c1614f90e04a2b266548059271d684176"
+            "sha256": "83e103bb938b24a8fc9bbf0969f7bae7755d639692665ecb387e506dc278ab83"
           },
           {
             "name": "whole-turn-020.png",
-            "sha256": "92a5555ecb14a6bcde225393e913c9e3baaec6648afe920c42b5dbd21ea59593"
+            "sha256": "dbd6d23604092552a223c6e65e55e016c24b69969817cf6eef4c5798017740bb"
           },
           {
             "name": "whole-turn-021.png",
-            "sha256": "9ebd6d5eb344cfffa40411693946356db27e5437629a493935cbd931dfceaf90"
+            "sha256": "f7f5d3b62e52c8258fe1c0059dee624ecbcc117743a7c4e54ed19d64229614ee"
           },
           {
             "name": "whole-turn-022.png",
-            "sha256": "14f8adf07e3efd61a74c5b786d7114945a59d19822e685f8a1fc358661c3626d"
+            "sha256": "589f73059d4f335edcd6b336fb6e048e0f1e3b11dcdb4deb41507e7c0363a4ca"
           },
           {
             "name": "whole-turn-023.png",
-            "sha256": "0528792a2903de7c763492672d834042e4c5ec3bc67bf9d06f14e188deed81af"
+            "sha256": "2684f6aa2d9b34393865980df3c8faac4009b5a8c70b89b0dc617e3fafc0f6a0"
           },
           {
             "name": "whole-turn-024.png",
-            "sha256": "337414f48b4b749906898acadfb7ff9bda4a1173930c55927a8dd6289ebe2bc6"
+            "sha256": "f38218d02c4206b237fb5513b322ae3526093d224f8ce8f1cb4451c0ee4d1cb4"
           },
           {
             "name": "whole-turn-025.png",
-            "sha256": "084a87c4761032704db5668796b021887e8504409a6881c847046047dc362e6e"
+            "sha256": "db3de109c581fdde6b8c84ebce3bb5021b96c0a2512beec850170fe8f1e46e5f"
           },
           {
             "name": "whole-turn-026.png",
-            "sha256": "3a4e3bedbda1e46bbd34395aa2f76ad52920397fcd47fc513826ead7a1dca9e1"
+            "sha256": "15114944dc40c72530e725c4be931b73fc180303449799a25fd126c893544d08"
           },
           {
             "name": "whole-turn-027.png",
-            "sha256": "3a0ee9028523911fc807e16732336d2d8f78d88566364db98f75f9ee71d39b1f"
+            "sha256": "40dca34af6d193d4f985528f18743633c9d71f33bb37a69b16f13724d697d42d"
           },
           {
             "name": "whole-turn-028.png",
-            "sha256": "8a1a0cd4b56776f311f2e144ea47634dd34ddf113b1e164d66e4bd60dd869fed"
+            "sha256": "dd7efad4ce839d5e394efc2d875ec55a38daa931f47e9721f21e6cfd32530b78"
           },
           {
             "name": "whole-turn-029.png",
-            "sha256": "18a71aa214b65934fb34d9e9ea87f421e8344a20df7482e02abc82c0e430aab4"
+            "sha256": "9f3cec2a4352fd6b5f1d88ab0991b01cab89cc8903129cb941e66e1cd256b3d5"
           },
           {
             "name": "whole-turn-030.png",
-            "sha256": "77d8455b2429b7623259560b52d45ebf2be02896b50ce25ef120b3f166d33f71"
+            "sha256": "6dab892047f48563505d8b4712f4efd6ea55421806dfe563a5d5f414c57dd004"
           },
           {
             "name": "whole-turn-031.png",
-            "sha256": "1c4e73a1e56933f8d209507052a5bf28cf55ce7feea8ddecadc8e00d1cfdc820"
+            "sha256": "bac2e936e1cc808f8e9a84152bebc0928a8187153ead3afd1d006d16c828cfa4"
           },
           {
             "name": "whole-turn-032.png",
-            "sha256": "3c1f216aee18492f640e1718e000a5445f621451a92805852387537334324baf"
+            "sha256": "6016d39279aef025b4e0eb184f132b88c0c794430c69387f43e2413b5958c42d"
           },
           {
             "name": "whole-turn-033.png",
-            "sha256": "c53e26a9e8d747129546944711984cdded96d5660c7dc8515c5ef6aaf3ceb891"
+            "sha256": "d2cf2d9abc2e5d4c62fbf6ca31780dd744dc7deb8c97616804bdd9f3c5c1909f"
           },
           {
             "name": "whole-turn-034.png",
-            "sha256": "6962662b3b27774eeebf6b507e8455ccc500a1cc5fe0a17569d5d0ada340132b"
+            "sha256": "b42e827c7f7831b84220409cac4740c3ffef86bcb6b86ad352f26f03803310f2"
           },
           {
             "name": "whole-turn-035.png",
-            "sha256": "f31d4ac554360a0c39a04e525a7327230ae6a54b03a3b28afb67b1423badbfbc"
+            "sha256": "44e7385fe9a02a1ca1ef1bf5c4f21adb0a5baee12344691367d8ea64a7262004"
           }
         ]
       }
@@ -1370,10 +1370,264 @@
   },
   "artAcceptance": "NOT_ACCEPTED",
   "distribution": "NO_PERSONAL_DEVICE_OR_TESTFLIGHT_UPDATE",
+  "shaft": {
+    "status": "ENGINEERING_CHECKS_PASS",
+    "scope": "actual source rotor/spool axial faces and72radial metal-shaft samples across authored+/-6mm spool stroke; not internal gears, CAD, manufacturing or physical-device acceptance",
+    "checks": [
+      "\u771f\u5b9e\u8f6c\u5b50\u4e0e\u7ebf\u676f\u8f74\u5411\u754c\u9762 0",
+      "\u5f80\u590d\u5168\u8de8\u5ea6\u6709\u771f\u5b9e\u91d1\u5c5e\u4e3b\u8f74 0",
+      "\u771f\u5b9e\u8f6c\u5b50\u4e0e\u7ebf\u676f\u8f74\u5411\u754c\u9762 1",
+      "\u5f80\u590d\u5168\u8de8\u5ea6\u6709\u771f\u5b9e\u91d1\u5c5e\u4e3b\u8f74 1",
+      "\u771f\u5b9e\u8f6c\u5b50\u4e0e\u7ebf\u676f\u8f74\u5411\u754c\u9762 2",
+      "\u5f80\u590d\u5168\u8de8\u5ea6\u6709\u771f\u5b9e\u91d1\u5c5e\u4e3b\u8f74 2"
+    ],
+    "failures": [],
+    "samples": [
+      {
+        "lod": 0,
+        "visibleGapsAtStroke": [
+          0.011000007390975952,
+          0.017000019550323486,
+          0.02300003170967102
+        ],
+        "shaftRadii": [
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.003999999767576803,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155
+        ],
+        "missingSamples": 0
+      },
+      {
+        "lod": 1,
+        "visibleGapsAtStroke": [
+          0.010994255542755127,
+          0.01699426770210266,
+          0.022994279861450195
+        ],
+        "shaftRadii": [
+          0.003999999767576803,
+          0.004000000222324155,
+          0.003999999767576803,
+          0.003999999767576803,
+          0.003999999767576803,
+          0.003999999767576803,
+          0.004000000222324155,
+          0.003999999767576803,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.003999999767576803,
+          0.003999999767576803,
+          0.003999999767576803,
+          0.004000000222324155,
+          0.003999999767576803,
+          0.004000000222324155,
+          0.003999999767576803,
+          0.003999999767576803,
+          0.003999999767576803,
+          0.004000000222324155,
+          0.003999999767576803,
+          0.004000000222324155
+        ],
+        "missingSamples": 0
+      },
+      {
+        "lod": 2,
+        "visibleGapsAtStroke": [
+          0.011338889598846436,
+          0.01733890175819397,
+          0.023338913917541504
+        ],
+        "shaftRadii": [
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155
+        ],
+        "missingSamples": 0
+      }
+    ]
+  },
+  "shaftLod0Change": {
+    "status": "EXPECTED_HOUSING_CHANGE_OTHER7_EXACT",
+    "scope": "all8 savedLOD0 assemblies: exact world matrix, position/weight/edge multisets and oriented material/smooth/corner-UV polygons; explicit shaft repair changes Housing; other7 assemblies retain exact canonical geometry/weights/UV/sharp flags; no numeric tolerance",
+    "before": {
+      "BailWire_LOD0": {
+        "matrix": "eba91ea447c2a18c1510229bb460a99bcd030ed6bde4091c466992e0dbafb3d1",
+        "positions": "c0329c898025ff05f221c2d345413adffe5f47230ffad0454cc49c082486ed0d",
+        "weights": "96a38eb47a20b3d2f71c7a59cff2d4942b6e2abc9815b3775fc285d29dd37306",
+        "orientedFacesWithCornerUV": "31a324585ea1ef1d1dd5c2fa0e9159f72340847af49e62514ed37e779edce3cc",
+        "edgesWithSharpFlags": "9758de6d92291005fce87f9b57a97a7465359efa3095eff3a39001d9725489c7"
+      },
+      "Crank_LOD0": {
+        "matrix": "eba91ea447c2a18c1510229bb460a99bcd030ed6bde4091c466992e0dbafb3d1",
+        "positions": "64f1f7ff000ee53d5a7a7355fa3437559d1915a4ea07fc722a6a27cb3585345a",
+        "weights": "65d1d24ae68aea1519e9b2ef5e2448d0d4d2b45d4702336dd5edda29147fb8d7",
+        "orientedFacesWithCornerUV": "ca30e660f1eca8cc2d0181ba2b28d46d61d24b4c86a91e8211c094ebbcaa9a41",
+        "edgesWithSharpFlags": "623ffedccfaa65d2a531e32427b0488b21b5afee6951f83b2626bed8238fc9a7"
+      },
+      "Housing_LOD0": {
+        "matrix": "eba91ea447c2a18c1510229bb460a99bcd030ed6bde4091c466992e0dbafb3d1",
+        "positions": "a1ac9352085f212a69c6df9a09308f6f05429090047787e8326a47aecce20126",
+        "weights": "02fd3a4999d42b14b53ac2ef2d00fd4c8cb3298b88f5fd7bb58721159a2c22fd",
+        "orientedFacesWithCornerUV": "420b56cbaee452acc3f6c605ebabad4ceccc69bca339f57838939541b01e6c86",
+        "edgesWithSharpFlags": "fbc8db1ec0652d82f49227c674a345af05e3c03ddf1d948b7cc8ec78b59700a8"
+      },
+      "LineRoller_LOD0": {
+        "matrix": "eba91ea447c2a18c1510229bb460a99bcd030ed6bde4091c466992e0dbafb3d1",
+        "positions": "d0539f708ff2166b236c1c8c5d283ac49f4291268850a4b78222d9d6e61ecda4",
+        "weights": "05d61830016b7c022dd67795b459c063f4f227898cd508003099d7c9e3919106",
+        "orientedFacesWithCornerUV": "4635a49b3a043ada4c60101432e2b9714603e08efe6d56203b6d1e8b5c40c2c1",
+        "edgesWithSharpFlags": "9e58e051b0e6b3894fd390092e54ae3ae26c558f09eb141757ad2a40c2132486"
+      },
+      "Lure_LOD0": {
+        "matrix": "eba91ea447c2a18c1510229bb460a99bcd030ed6bde4091c466992e0dbafb3d1",
+        "positions": "b7ecf4a771131cb3fd1e1595934534d38e8cd3fae03f725396ceaa9dadf2c1bf",
+        "weights": "237df576aa7e60c14959851de0fae0b53ee4c623c9648ffa1ee15165ddf02c75",
+        "orientedFacesWithCornerUV": "d176d80788ae7af9639e1c2284a67bcb1a95d7186671b348ac0f51f677e86c49",
+        "edgesWithSharpFlags": "d247b779e67acd02860ad1362a7d64b680b1fbc7c829759db539f880468c1d9e"
+      },
+      "Rod_LOD0": {
+        "matrix": "eba91ea447c2a18c1510229bb460a99bcd030ed6bde4091c466992e0dbafb3d1",
+        "positions": "6ad630f2bcc88ea4cf83f5378b15362306a6e438679533f2aa49abeb7963fd7c",
+        "weights": "7c1583cdb041405a501370d9bf5682c6089770297ce9a9ac37b6aca488a90c09",
+        "orientedFacesWithCornerUV": "82a0517796675e04006d255325603a295883dd48099d3ad1f9f1ab586f3892c1",
+        "edgesWithSharpFlags": "7c2fe93a48565e7c71ede03b5dd0dd16d6acbc6b674f1813622aa86436db9356"
+      },
+      "Rotor_LOD0": {
+        "matrix": "eba91ea447c2a18c1510229bb460a99bcd030ed6bde4091c466992e0dbafb3d1",
+        "positions": "9bfce3603c7067f4c44ab87e2ed713d7095ca11de428a297ba370ee74ee528eb",
+        "weights": "e88b6a890c8dc963f6471d409c4952d3d2200a19c61d66bcc832e0141f3f4515",
+        "orientedFacesWithCornerUV": "e6ea1b1f2ac11f1d5de30ba6be85f6a9cae9312c057c160d6a65bc94c6c76fbc",
+        "edgesWithSharpFlags": "f58ec8f142fd18f8133c4924027f4d609800df7120025edf5be13d06c6cad08c"
+      },
+      "Spool_LOD0": {
+        "matrix": "eba91ea447c2a18c1510229bb460a99bcd030ed6bde4091c466992e0dbafb3d1",
+        "positions": "638f035d89368562fc1fe2cf9562361e6c59bf21797cddf415b1e6dad9accdb3",
+        "weights": "230587b0646d39c67def863da0c352ef1f59d1eeca1f7058ba90cd16b6ea4028",
+        "orientedFacesWithCornerUV": "370510ae46603633e8e62f278b3485e4695a2f0b4574ec3ce5f0a13d1cfc4a78",
+        "edgesWithSharpFlags": "d445d6f54dda3c60d85d17e0b510ece8198fea8312907a73b07529835ee39197"
+      }
+    },
+    "after": {
+      "BailWire_LOD0": {
+        "matrix": "eba91ea447c2a18c1510229bb460a99bcd030ed6bde4091c466992e0dbafb3d1",
+        "positions": "c0329c898025ff05f221c2d345413adffe5f47230ffad0454cc49c082486ed0d",
+        "weights": "96a38eb47a20b3d2f71c7a59cff2d4942b6e2abc9815b3775fc285d29dd37306",
+        "orientedFacesWithCornerUV": "31a324585ea1ef1d1dd5c2fa0e9159f72340847af49e62514ed37e779edce3cc",
+        "edgesWithSharpFlags": "9758de6d92291005fce87f9b57a97a7465359efa3095eff3a39001d9725489c7"
+      },
+      "Crank_LOD0": {
+        "matrix": "eba91ea447c2a18c1510229bb460a99bcd030ed6bde4091c466992e0dbafb3d1",
+        "positions": "64f1f7ff000ee53d5a7a7355fa3437559d1915a4ea07fc722a6a27cb3585345a",
+        "weights": "65d1d24ae68aea1519e9b2ef5e2448d0d4d2b45d4702336dd5edda29147fb8d7",
+        "orientedFacesWithCornerUV": "ca30e660f1eca8cc2d0181ba2b28d46d61d24b4c86a91e8211c094ebbcaa9a41",
+        "edgesWithSharpFlags": "623ffedccfaa65d2a531e32427b0488b21b5afee6951f83b2626bed8238fc9a7"
+      },
+      "Housing_LOD0": {
+        "matrix": "eba91ea447c2a18c1510229bb460a99bcd030ed6bde4091c466992e0dbafb3d1",
+        "positions": "cca1dc37f993bd5b46fcc712cbcf158fda34f25ebf784a9b9a95bf1533e0f962",
+        "weights": "81d88d194eec0c39cada52c3a328b73e8c64170cfb9f0e4f006fdf3b28553981",
+        "orientedFacesWithCornerUV": "5b619f68c4353b08936c101dc4b33d6f684ef13dbc8767611d5b6b865158e5b4",
+        "edgesWithSharpFlags": "726fae507d88dd9a910725095c12647f8bcea196a336202cf1b03c1d0ab19550"
+      },
+      "LineRoller_LOD0": {
+        "matrix": "eba91ea447c2a18c1510229bb460a99bcd030ed6bde4091c466992e0dbafb3d1",
+        "positions": "d0539f708ff2166b236c1c8c5d283ac49f4291268850a4b78222d9d6e61ecda4",
+        "weights": "05d61830016b7c022dd67795b459c063f4f227898cd508003099d7c9e3919106",
+        "orientedFacesWithCornerUV": "4635a49b3a043ada4c60101432e2b9714603e08efe6d56203b6d1e8b5c40c2c1",
+        "edgesWithSharpFlags": "9e58e051b0e6b3894fd390092e54ae3ae26c558f09eb141757ad2a40c2132486"
+      },
+      "Lure_LOD0": {
+        "matrix": "eba91ea447c2a18c1510229bb460a99bcd030ed6bde4091c466992e0dbafb3d1",
+        "positions": "b7ecf4a771131cb3fd1e1595934534d38e8cd3fae03f725396ceaa9dadf2c1bf",
+        "weights": "237df576aa7e60c14959851de0fae0b53ee4c623c9648ffa1ee15165ddf02c75",
+        "orientedFacesWithCornerUV": "d176d80788ae7af9639e1c2284a67bcb1a95d7186671b348ac0f51f677e86c49",
+        "edgesWithSharpFlags": "d247b779e67acd02860ad1362a7d64b680b1fbc7c829759db539f880468c1d9e"
+      },
+      "Rod_LOD0": {
+        "matrix": "eba91ea447c2a18c1510229bb460a99bcd030ed6bde4091c466992e0dbafb3d1",
+        "positions": "6ad630f2bcc88ea4cf83f5378b15362306a6e438679533f2aa49abeb7963fd7c",
+        "weights": "7c1583cdb041405a501370d9bf5682c6089770297ce9a9ac37b6aca488a90c09",
+        "orientedFacesWithCornerUV": "82a0517796675e04006d255325603a295883dd48099d3ad1f9f1ab586f3892c1",
+        "edgesWithSharpFlags": "7c2fe93a48565e7c71ede03b5dd0dd16d6acbc6b674f1813622aa86436db9356"
+      },
+      "Rotor_LOD0": {
+        "matrix": "eba91ea447c2a18c1510229bb460a99bcd030ed6bde4091c466992e0dbafb3d1",
+        "positions": "9bfce3603c7067f4c44ab87e2ed713d7095ca11de428a297ba370ee74ee528eb",
+        "weights": "e88b6a890c8dc963f6471d409c4952d3d2200a19c61d66bcc832e0141f3f4515",
+        "orientedFacesWithCornerUV": "e6ea1b1f2ac11f1d5de30ba6be85f6a9cae9312c057c160d6a65bc94c6c76fbc",
+        "edgesWithSharpFlags": "f58ec8f142fd18f8133c4924027f4d609800df7120025edf5be13d06c6cad08c"
+      },
+      "Spool_LOD0": {
+        "matrix": "eba91ea447c2a18c1510229bb460a99bcd030ed6bde4091c466992e0dbafb3d1",
+        "positions": "638f035d89368562fc1fe2cf9562361e6c59bf21797cddf415b1e6dad9accdb3",
+        "weights": "230587b0646d39c67def863da0c352ef1f59d1eeca1f7058ba90cd16b6ea4028",
+        "orientedFacesWithCornerUV": "370510ae46603633e8e62f278b3485e4695a2f0b4574ec3ce5f0a13d1cfc4a78",
+        "edgesWithSharpFlags": "d445d6f54dda3c60d85d17e0b510ece8198fea8312907a73b07529835ee39197"
+      }
+    },
+    "differences": {
+      "Housing_LOD0": [
+        "positions",
+        "weights",
+        "orientedFacesWithCornerUV",
+        "edgesWithSharpFlags"
+      ]
+    },
+    "identical": false
+  },
+  "supersededBeforeInstall": {
+    "sourceCommit": "33cf4dd42d1a62b4f6c0d30ce78449d3e4a0a83b",
+    "app": "6264c9c16b60b008c14650161b972c179f952a8676a5d5ba7b01bc979e799514",
+    "reason": "visible shaft absent in source turntable; sourceA compiled only, never installed"
+  },
   "agentVisualReview": {
     "sourceFramesViaContactSheets": 72,
-    "gpuViewsViaContactSheet": 15,
-    "originalLod2Viewed": true,
+    "gpuFirstRepeatPairs": 15,
+    "originalLod0AndLod2Viewed": true,
     "userArtAcceptance": "NOT_RUN"
   }
 }

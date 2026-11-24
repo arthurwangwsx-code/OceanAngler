@@ -10049,6 +10049,127 @@
       "executable": "python3",
       "commandDigest": "7b56fc0d9f92597bd88d1f03721d1a5e865efaa657f47caf76bde47bd036f627",
       "receiptPath": "measurements/rig-winding-preflight-20261124a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "9c9961b6-8ec7-46ef-9fcb-85564aff70d2",
+      "startedAt": "2026-11-24T14:56:59.173Z",
+      "executable": "python3",
+      "commandDigest": "e9c8b48790a14bdca262b9ae3082633d9acb7f7c5de8782906fc1cbcb452755f",
+      "receiptPath": "measurements/rig-winding-native-build-20261124a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "995a309b-dde0-477d-8704-02ad7b5f4336",
+      "startedAt": "2026-11-24T15:02:08.664Z",
+      "executable": "python3",
+      "commandDigest": "f8ed73be2079fa4b348cf41d26e9311e7f2b85c13c68ba2bab6b1e9a7f435f30",
+      "receiptPath": "measurements/rig-winding-shaft-red-20261124b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "a3343c3a-52ab-4178-a03b-5e2e32165c49",
+      "startedAt": "2026-11-24T15:03:39.613Z",
+      "executable": "python3",
+      "commandDigest": "bc05cec95248420e1c346b63acf28cfac41880ccc4fa78c782c489f535c39b3b",
+      "receiptPath": "measurements/rig-winding-author-20261124b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "76bffafa-33a8-4585-9b40-b20eabb8c2d3",
+      "startedAt": "2026-11-24T15:05:25.034Z",
+      "executable": "python3",
+      "commandDigest": "89dc21b198d81fd67656a4157ef3f6d360fdb3f758826ec602e0215c5a0a0c63",
+      "receiptPath": "measurements/rig-winding-source-20261124b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "2d97358d-90df-4544-833d-fd4f8a22d191",
+      "startedAt": "2026-11-24T15:06:43.865Z",
+      "executable": "Blender",
+      "commandDigest": "becd07aa9228ae2688026c164201b977f96b538fb172cd952ba0f67244647720",
+      "receiptPath": "measurements/rig-winding-shaft-identity-20261124b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "76d71609-466c-4c57-acda-f4ea49e6aa9c",
+      "startedAt": "2026-11-24T15:08:18.323Z",
+      "executable": "python3",
+      "commandDigest": "6c99d7a44e1088975d4a1e33982604756a14889669727c4c6a576341299540a2",
+      "receiptPath": "measurements/rig-winding-import-20261124b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "5707296d-5626-43bc-9c1a-5953602854db",
+      "startedAt": "2026-11-24T15:08:47.886Z",
+      "executable": "python3",
+      "commandDigest": "4ad105151d1f65bdc3aa4c1ffe6a78d60a663ccd4679484721cf624d52d539e9",
+      "receiptPath": "measurements/rig-winding-play-20261124b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "4110ed0f-370f-4240-b999-662101cbc899",
+      "startedAt": "2026-11-24T15:10:19.966Z",
+      "executable": "python3",
+      "commandDigest": "f38ecad106321ba21ea1571479955607ec3c0bc8ce7bc5a7affaaa05d77ac18c",
+      "receiptPath": "measurements/rig-winding-gpu-20261124b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "4e6337be-fbd8-44ef-8823-a0fdae91c9a6",
+      "startedAt": "2026-11-24T15:11:21.659Z",
+      "executable": "python3",
+      "commandDigest": "75444bd06095af3171bb22d95df6e813e6086f6802adddec7c1b7e7a36f87e2f",
+      "receiptPath": "measurements/rig-winding-turntable-20261124b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "6da8cc36-780c-428f-9d04-2d2afd8633f8",
+      "startedAt": "2026-11-24T15:15:44.319Z",
+      "executable": "python3",
+      "commandDigest": "d61140f85e1cedde0353dbeda406d1bf1a1f46b38b1b8ba98a4bf1859036fe42",
+      "receiptPath": "measurements/rig-winding-media-20261124b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "22c7f0ac-d142-4df0-a135-9a166094ed9c",
+      "startedAt": "2026-11-24T15:16:41.883Z",
+      "executable": "python3",
+      "commandDigest": "7b56fc0d9f92597bd88d1f03721d1a5e865efaa657f47caf76bde47bd036f627",
+      "receiptPath": "measurements/rig-winding-preflight-20261124b.json"
     }
   ],
   "runMeasurements": [
@@ -24905,6 +25026,215 @@
       "receipt": {
         "path": "measurements/rig-winding-preflight-20261124a.json",
         "sha256": "b4021f73a27d9973c21d6ee38c6dea2f8f2dbea2d40aa64456c946f9b437547a"
+      }
+    },
+    {
+      "id": "9c9961b6-8ec7-46ef-9fcb-85564aff70d2",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "e9c8b48790a14bdca262b9ae3082633d9acb7f7c5de8782906fc1cbcb452755f",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T14:56:59.173Z",
+      "finishedAt": "2026-11-24T15:00:12.235Z",
+      "durationMs": 193024.16600000003,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rig-winding-native-build-20261124a.json",
+        "sha256": "b06d90d564f9f84fa8193d4a683f1963cf300f98537f82f5f85b0a04246e8b67"
+      }
+    },
+    {
+      "id": "995a309b-dde0-477d-8704-02ad7b5f4336",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "f8ed73be2079fa4b348cf41d26e9311e7f2b85c13c68ba2bab6b1e9a7f435f30",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T15:02:08.664Z",
+      "finishedAt": "2026-11-24T15:02:13.691Z",
+      "durationMs": 4982.796584000001,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rig-winding-shaft-red-20261124b.json",
+        "sha256": "14a60db5b7749d4cb08ec350fce1c519b9b38b56393c4d9cc60a69eac43f325a"
+      }
+    },
+    {
+      "id": "a3343c3a-52ab-4178-a03b-5e2e32165c49",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "bc05cec95248420e1c346b63acf28cfac41880ccc4fa78c782c489f535c39b3b",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T15:03:39.613Z",
+      "finishedAt": "2026-11-24T15:03:47.528Z",
+      "durationMs": 7871.7456250000005,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rig-winding-author-20261124b.json",
+        "sha256": "890f8e1f81521adf72bb6a239612fd4286b1a47b76761a0ef5d95023f187460d"
+      }
+    },
+    {
+      "id": "76bffafa-33a8-4585-9b40-b20eabb8c2d3",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "89dc21b198d81fd67656a4157ef3f6d360fdb3f758826ec602e0215c5a0a0c63",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T15:05:25.034Z",
+      "finishedAt": "2026-11-24T15:05:31.258Z",
+      "durationMs": 6144.5935420000005,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rig-winding-source-20261124b.json",
+        "sha256": "903a463683024f98150f5e916cc6a5cfa611aff936ccbd4977e2a2dc7b21ea34"
+      }
+    },
+    {
+      "id": "2d97358d-90df-4544-833d-fd4f8a22d191",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "becd07aa9228ae2688026c164201b977f96b538fb172cd952ba0f67244647720",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-24T15:06:43.865Z",
+      "finishedAt": "2026-11-24T15:07:02.134Z",
+      "durationMs": 18147.17475,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rig-winding-shaft-identity-20261124b.json",
+        "sha256": "9433fffc60703a4230e2f77c3bbc62f7165837004d0a3c03a64044a8328c36c8"
+      }
+    },
+    {
+      "id": "76d71609-466c-4c57-acda-f4ea49e6aa9c",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "6c99d7a44e1088975d4a1e33982604756a14889669727c4c6a576341299540a2",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T15:08:18.323Z",
+      "finishedAt": "2026-11-24T15:08:33.254Z",
+      "durationMs": 14892.71925,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rig-winding-import-20261124b.json",
+        "sha256": "50e6a2033901385b7d834d96a90c590e9d5767d49b20fb0af7c2a4c513c6dfcf"
+      }
+    },
+    {
+      "id": "5707296d-5626-43bc-9c1a-5953602854db",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "4ad105151d1f65bdc3aa4c1ffe6a78d60a663ccd4679484721cf624d52d539e9",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T15:08:47.886Z",
+      "finishedAt": "2026-11-24T15:09:55.920Z",
+      "durationMs": 68003.538208,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rig-winding-play-20261124b.json",
+        "sha256": "0c93d3672c358c718bc8f3e624eb7dce24068814455f6e4a105b90e88f347ea4"
+      }
+    },
+    {
+      "id": "4110ed0f-370f-4240-b999-662101cbc899",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "f38ecad106321ba21ea1571479955607ec3c0bc8ce7bc5a7affaaa05d77ac18c",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T15:10:19.966Z",
+      "finishedAt": "2026-11-24T15:10:35.870Z",
+      "durationMs": 15774.932042,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rig-winding-gpu-20261124b.json",
+        "sha256": "ac6be17e06d0618b1c9e2ff68a40329048d44f640f70804121e43f9aee94d63f"
+      }
+    },
+    {
+      "id": "4e6337be-fbd8-44ef-8823-a0fdae91c9a6",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "75444bd06095af3171bb22d95df6e813e6086f6802adddec7c1b7e7a36f87e2f",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T15:11:21.659Z",
+      "finishedAt": "2026-11-24T15:14:19.542Z",
+      "durationMs": 177839.37787499998,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rig-winding-turntable-20261124b.json",
+        "sha256": "0bc07232ef53796c309b44c6903108cc35206eb15706bbf89b76764b6bbcd6cc"
+      }
+    },
+    {
+      "id": "6da8cc36-780c-428f-9d04-2d2afd8633f8",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d61140f85e1cedde0353dbeda406d1bf1a1f46b38b1b8ba98a4bf1859036fe42",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T15:15:44.319Z",
+      "finishedAt": "2026-11-24T15:15:46.642Z",
+      "durationMs": 2271.374959,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rig-winding-media-20261124b.json",
+        "sha256": "6befd01b83c7e1156b8386930c1c507d6cb559fc329920e4cfce29b0a1952ecd"
+      }
+    },
+    {
+      "id": "22c7f0ac-d142-4df0-a135-9a166094ed9c",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "7b56fc0d9f92597bd88d1f03721d1a5e865efaa657f47caf76bde47bd036f627",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T15:16:41.883Z",
+      "finishedAt": "2026-11-24T15:16:58.261Z",
+      "durationMs": 16231.547165999998,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rig-winding-preflight-20261124b.json",
+        "sha256": "c32c6f5e3f94cbdbf0ffb1b9930838c48a7fc14edab5e742d807040bbe2fc5b8"
       }
     }
   ]

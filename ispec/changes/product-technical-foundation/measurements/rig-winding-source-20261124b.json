@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "76bffafa-33a8-4585-9b40-b20eabb8c2d3",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "89dc21b198d81fd67656a4157ef3f6d360fdb3f758826ec602e0215c5a0a0c63",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-24T15:05:25.034Z",
+    "finishedAt": "2026-11-24T15:05:31.258Z",
+    "durationMs": 6144.5935420000005,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      "tools/art.py",
+      "validate",
+      "--asset",
+      "spinning-rig",
+      "--label",
+      "rigwindingsource20261124b"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    "tools/art.py",
+    "validate",
+    "--asset",
+    "spinning-rig",
+    "--label",
+    "rigwindingsource20261124b"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T15:05:25.034Z",
+  "finishedAt": "2026-11-24T15:05:31.258Z",
+  "durationMs": 6144.5935420000005
+}

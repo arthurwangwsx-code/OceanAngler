@@ -164,7 +164,8 @@ box('SidePlate',(-.034,-.137,.38),(.009,.050,.089),'Metal','Housing',.004)
 box('RearProtection',(0,-.138,.315),(.044,.040,.022),'Black','Housing',.006)
 for z in [.345,.407]:
  for side in [-1,1]:ellipsoid('CaseFastener',(side*.040,-.142,z),(.003,.003,.003),'Black','Housing')
-lathe('Pinion',[(.417,.018),(.470,.018)],(0,-.145),'Metal','Housing',sides=24)
+pinion_profile=[(.417,.018),(.469,.018),(.471,.004),(.522,.004)]
+lathe('Pinion',pinion_profile,(0,-.145),'Metal','Housing',sides=12)
 for i in range(4):box('CaseVent'+str(i),(.004,-.169,.35+i*.013),(.027,.0015,.003),'Black','Housing',.0005)
 
 rotor=empty('RotorPivot',(0,-.145,.47),source);spool=empty('SpoolPivot',(0,-.145,.52),source);crank=empty('CrankPivot',(-.045,-.142,.38),source)
@@ -247,6 +248,7 @@ for stem,source_objects,pivot in assemblies:
  pieces=[objects]
  for level,ratio in [(1,.43),(2,.17)]:
   if stem=='LineRoller':current=[axle_shell('GroovedRollerDistance'+str(level),roller_profile,roller_center,'LineRoller',20 if level==1 else 12,True)]
+  elif stem=='Housing':current=[lathe('PinionDistance'+str(level),pinion_profile,(0,-.145),'Metal','Housing',sides=8 if level==1 else 6) if o.name=='Pinion' else reduce_piece(o,ratio) for o in objects]
   elif stem=='Spool':
    current=[]
    for original in objects:

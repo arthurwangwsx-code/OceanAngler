@@ -279,15 +279,15 @@
       "acquiredAt": "2026-11-23",
       "status": "ART_REVIEW_PENDING",
       "path": "art/source/spinning-rig/SpinningRig.blend",
-      "sha256": "b49a839a04ce25f0109fce35fd82694d9451760e4f4f67d3c331061e108d0d47",
+      "sha256": "c627e431e7609bd943f78cedeadd89879e61a0d7b9941709924f4f8a76334d8c",
       "artifacts": [
         {
           "path": "art/source/spinning-rig/SpinningRig.blend",
-          "sha256": "b49a839a04ce25f0109fce35fd82694d9451760e4f4f67d3c331061e108d0d47"
+          "sha256": "c627e431e7609bd943f78cedeadd89879e61a0d7b9941709924f4f8a76334d8c"
         },
         {
           "path": "game/Assets/OceanAngler/Art/SpinningRig/SpinningRig.fbx",
-          "sha256": "74fd167df5bd7c98a7e6fe899fdcc623bb7b2ac3249e5ab1d4d85d5daadbb803"
+          "sha256": "0a3eb301ba8885d3c7b734b6c15f0e6dbf8a0c33f0adbd9d7eabc65ee3e2f45b"
         },
         {
           "path": "game/Assets/OceanAngler/Art/SpinningRig/Rig_Carbon.png",
@@ -484,6 +484,58 @@
         {
           "path": "art/previews/rig-winding/whole-turntable.mp4",
           "sha256": "d0e4fe95440079fcb23dfd513ab662317c2bb8e0a960125fedc95e306bbec943"
+        },
+        {
+          "path": "art/previews/rig-winding-shaft/gpu-lod0.png",
+          "sha256": "5734794385ebfe500b5302a1504eb3ce601a7f7de1f7eed3b10dab8726911dce"
+        },
+        {
+          "path": "art/previews/rig-winding-shaft/gpu-lod1.png",
+          "sha256": "d92371b7d956427e50b100df00ab196844b6a691fb6499a5c2543d0a2d41ce62"
+        },
+        {
+          "path": "art/previews/rig-winding-shaft/gpu-lod2.png",
+          "sha256": "491ed02968ba1cf6f01b43c0cf7e80cb2503e972a56ea6e3cd9f573006670bd6"
+        },
+        {
+          "path": "art/previews/rig-winding-shaft/reel-000.png",
+          "sha256": "f9e70b3aac223b8d1eb4f2a53cd0b276e24705ee7483bbeff71d5162fabd5081"
+        },
+        {
+          "path": "art/previews/rig-winding-shaft/reel-090.png",
+          "sha256": "75730decb2b85fec0cf813631d0cde907befd7b5bca0e55a893f670a8e387427"
+        },
+        {
+          "path": "art/previews/rig-winding-shaft/reel-180.png",
+          "sha256": "0305b9b5f3631a33c35905e5bc848242bdfb1b66a2c685bb0c65688e35b3482c"
+        },
+        {
+          "path": "art/previews/rig-winding-shaft/reel-270.png",
+          "sha256": "5335605f508a7b8d78a90f923e2a26d49f3e7bd176175138ecd94f18a814b242"
+        },
+        {
+          "path": "art/previews/rig-winding-shaft/reel-turntable.mp4",
+          "sha256": "b7881c7187c061e608e50999707d10aa38cd6759517d3f5b0162a06f76fce56e"
+        },
+        {
+          "path": "art/previews/rig-winding-shaft/whole-000.png",
+          "sha256": "58b1a2d2b814ab81df54ec51b48f67371ad058e64af931cc7e84c9918f27d516"
+        },
+        {
+          "path": "art/previews/rig-winding-shaft/whole-090.png",
+          "sha256": "df27680613a0a3d338b7d23c9ffe51665dfc10e8539e73afa88411053f9d5536"
+        },
+        {
+          "path": "art/previews/rig-winding-shaft/whole-180.png",
+          "sha256": "e3d20458955faa65cb0bc0a0482939f83b54e399a906169ca70745f2ac057e03"
+        },
+        {
+          "path": "art/previews/rig-winding-shaft/whole-270.png",
+          "sha256": "40dca34af6d193d4f985528f18743633c9d71f33bb37a69b16f13724d697d42d"
+        },
+        {
+          "path": "art/previews/rig-winding-shaft/whole-turntable.mp4",
+          "sha256": "3053bf62a06b2dc74fe079aaec361ccd749a5305394a74c1fdbe637ee75f1ec9"
         }
       ],
       "note": "Original spinning rig candidate, eight assemblies and three LODs. Uniform distance winding/core profiles; two current-source36-frame whole/reel orbits. Source/GPU checks do not qualify human art or physical devices. Earlier spinning-rig and rig-detail media remain historical. No third-party media or meshes."
