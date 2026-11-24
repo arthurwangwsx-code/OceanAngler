@@ -1,0 +1,670 @@
+{
+  "status": "PARTIAL",
+  "implementation": "IN_PROGRESS",
+  "wholeProduct": "INCOMPLETE",
+  "sourceStatus": "ENGINEERING_CHECKS_PASS",
+  "gpu": {
+    "status": "PASS",
+    "scope": "isolated imported-hero Metal HDR fixture; not Player UI, biological transmission or device qualification",
+    "graphics": "Metal",
+    "target": "R16G16B16A16_SFloat",
+    "quality": "Medium",
+    "samples": 4,
+    "width": 1440,
+    "height": 960,
+    "images": 21,
+    "measurements": [
+      {
+        "lod": 0,
+        "interiorPixels": 75669,
+        "transmittedPixels": 50625,
+        "opaqueChangedPixels": 0,
+        "staticChangedPixels": 0,
+        "meanBackgroundTransfer": 0.23607444763183594
+      },
+      {
+        "lod": 1,
+        "interiorPixels": 76382,
+        "transmittedPixels": 50827,
+        "opaqueChangedPixels": 0,
+        "staticChangedPixels": 0,
+        "meanBackgroundTransfer": 0.2370195984840393
+      },
+      {
+        "lod": 2,
+        "interiorPixels": 77532,
+        "transmittedPixels": 52618,
+        "opaqueChangedPixels": 0,
+        "staticChangedPixels": 0,
+        "meanBackgroundTransfer": 0.236164391040802
+      }
+    ]
+  },
+  "settingsRestoration": {
+    "before": {
+      "game/ProjectSettings/QualitySettings.asset": "abebac834787e63425b147d6e02589440cd5134d66fafbd862fb5d237424c573",
+      "game/ProjectSettings/GraphicsSettings.asset": "012fa87054bf6e9fbb0607568cfa287968396f9d3a27d3376432024e8684340d"
+    },
+    "after": {
+      "game/ProjectSettings/QualitySettings.asset": "abebac834787e63425b147d6e02589440cd5134d66fafbd862fb5d237424c573",
+      "game/ProjectSettings/GraphicsSettings.asset": "012fa87054bf6e9fbb0607568cfa287968396f9d3a27d3376432024e8684340d"
+    },
+    "identical": true
+  },
+  "editor": {
+    "status": "PASS",
+    "passed": 59,
+    "failed": 0,
+    "scope": "full current Editor suite; no rendered or device claim"
+  },
+  "native": "NOT_RUN",
+  "scope": "first hero only; no new species, points, HUD or save changes",
+  "art": "NOT_ACCEPTED",
+  "scientific": "NOT_ACCEPTED",
+  "user": "NOT_ACCEPTED",
+  "physicalDevice": "NOT_RUN",
+  "sourceFinTissue": {
+    "status": "ENGINEERING_CHECKS_PASS",
+    "scope": "saved source mesh wall rays, material roles and real texture data; not art or device acceptance",
+    "checks": [
+      "八片鳍各三处独立壁厚取样入口",
+      "鳍膜与实体鳍条材质分离",
+      "膜的实际透明度来自纹理而非固定不透明常量",
+      "实体鳍条仍完全不透明",
+      "实际鳍膜PNG保留RGBA而非RGB",
+      "膜色素透明度有限且保留浓淡",
+      "膜中真实透光区域与较密实根部均存在",
+      "实际PBR尺寸 Bluefin_Fin_Normal",
+      "技术图线性色彩空间 Bluefin_Fin_Normal",
+      "实际PBR尺寸 Bluefin_Fin_Roughness",
+      "技术图线性色彩空间 Bluefin_Fin_Roughness",
+      "实际PBR尺寸 Bluefin_Fin_MetallicSmoothness",
+      "技术图线性色彩空间 Bluefin_Fin_MetallicSmoothness",
+      "三LOD均保留透明膜与实体鳍条 0",
+      "实际双壁厚度 (0, 'FirstDorsal_8Spines', 0.25)",
+      "实际双壁厚度 (0, 'FirstDorsal_8Spines', 0.58)",
+      "实际双壁厚度 (0, 'FirstDorsal_8Spines', 0.92)",
+      "实际双壁厚度 (0, 'SecondDorsal_23Rays', 0.25)",
+      "实际双壁厚度 (0, 'SecondDorsal_23Rays', 0.58)",
+      "实际双壁厚度 (0, 'SecondDorsal_23Rays', 0.92)",
+      "实际双壁厚度 (0, 'Anal_19Rays', 0.25)",
+      "实际双壁厚度 (0, 'Anal_19Rays', 0.58)",
+      "实际双壁厚度 (0, 'Anal_19Rays', 0.92)",
+      "实际双壁厚度 (0, 'Caudal_DeepFork', 0.25)",
+      "实际双壁厚度 (0, 'Caudal_DeepFork', 0.58)",
+      "实际双壁厚度 (0, 'Caudal_DeepFork', 0.92)",
+      "实际双壁厚度 (0, 'Pectoral_L', 0.25)",
+      "实际双壁厚度 (0, 'Pectoral_L', 0.58)",
+      "实际双壁厚度 (0, 'Pectoral_L', 0.92)",
+      "实际双壁厚度 (0, 'Pelvic_L', 0.25)",
+      "实际双壁厚度 (0, 'Pelvic_L', 0.58)",
+      "实际双壁厚度 (0, 'Pelvic_L', 0.92)",
+      "实际双壁厚度 (0, 'Pectoral_R', 0.25)",
+      "实际双壁厚度 (0, 'Pectoral_R', 0.58)",
+      "实际双壁厚度 (0, 'Pectoral_R', 0.92)",
+      "实际双壁厚度 (0, 'Pelvic_R', 0.25)",
+      "实际双壁厚度 (0, 'Pelvic_R', 0.58)",
+      "实际双壁厚度 (0, 'Pelvic_R', 0.92)",
+      "保存网格根部至末端渐薄 (0, 'Caudal_DeepFork')",
+      "保存网格根部至末端渐薄 (0, 'Pelvic_L')",
+      "保存网格根部至末端渐薄 (0, 'SecondDorsal_23Rays')",
+      "保存网格根部至末端渐薄 (0, 'Pelvic_R')",
+      "保存网格根部至末端渐薄 (0, 'FirstDorsal_8Spines')",
+      "保存网格根部至末端渐薄 (0, 'Pectoral_R')",
+      "保存网格根部至末端渐薄 (0, 'Anal_19Rays')",
+      "保存网格根部至末端渐薄 (0, 'Pectoral_L')",
+      "三LOD均保留透明膜与实体鳍条 1",
+      "实际双壁厚度 (1, 'FirstDorsal_8Spines', 0.25)",
+      "实际双壁厚度 (1, 'FirstDorsal_8Spines', 0.58)",
+      "实际双壁厚度 (1, 'FirstDorsal_8Spines', 0.92)",
+      "实际双壁厚度 (1, 'SecondDorsal_23Rays', 0.25)",
+      "实际双壁厚度 (1, 'SecondDorsal_23Rays', 0.58)",
+      "实际双壁厚度 (1, 'SecondDorsal_23Rays', 0.92)",
+      "实际双壁厚度 (1, 'Anal_19Rays', 0.25)",
+      "实际双壁厚度 (1, 'Anal_19Rays', 0.58)",
+      "实际双壁厚度 (1, 'Anal_19Rays', 0.92)",
+      "实际双壁厚度 (1, 'Caudal_DeepFork', 0.25)",
+      "实际双壁厚度 (1, 'Caudal_DeepFork', 0.58)",
+      "实际双壁厚度 (1, 'Caudal_DeepFork', 0.92)",
+      "实际双壁厚度 (1, 'Pectoral_L', 0.25)",
+      "实际双壁厚度 (1, 'Pectoral_L', 0.58)",
+      "实际双壁厚度 (1, 'Pectoral_L', 0.92)",
+      "实际双壁厚度 (1, 'Pelvic_L', 0.25)",
+      "实际双壁厚度 (1, 'Pelvic_L', 0.58)",
+      "实际双壁厚度 (1, 'Pelvic_L', 0.92)",
+      "实际双壁厚度 (1, 'Pectoral_R', 0.25)",
+      "实际双壁厚度 (1, 'Pectoral_R', 0.58)",
+      "实际双壁厚度 (1, 'Pectoral_R', 0.92)",
+      "实际双壁厚度 (1, 'Pelvic_R', 0.25)",
+      "实际双壁厚度 (1, 'Pelvic_R', 0.58)",
+      "实际双壁厚度 (1, 'Pelvic_R', 0.92)",
+      "保存网格根部至末端渐薄 (1, 'Caudal_DeepFork')",
+      "保存网格根部至末端渐薄 (1, 'Pelvic_L')",
+      "保存网格根部至末端渐薄 (1, 'SecondDorsal_23Rays')",
+      "保存网格根部至末端渐薄 (1, 'Pelvic_R')",
+      "保存网格根部至末端渐薄 (1, 'FirstDorsal_8Spines')",
+      "保存网格根部至末端渐薄 (1, 'Pectoral_R')",
+      "保存网格根部至末端渐薄 (1, 'Anal_19Rays')",
+      "保存网格根部至末端渐薄 (1, 'Pectoral_L')",
+      "三LOD均保留透明膜与实体鳍条 2",
+      "实际双壁厚度 (2, 'FirstDorsal_8Spines', 0.25)",
+      "实际双壁厚度 (2, 'FirstDorsal_8Spines', 0.58)",
+      "实际双壁厚度 (2, 'FirstDorsal_8Spines', 0.92)",
+      "实际双壁厚度 (2, 'SecondDorsal_23Rays', 0.25)",
+      "实际双壁厚度 (2, 'SecondDorsal_23Rays', 0.58)",
+      "实际双壁厚度 (2, 'SecondDorsal_23Rays', 0.92)",
+      "实际双壁厚度 (2, 'Anal_19Rays', 0.25)",
+      "实际双壁厚度 (2, 'Anal_19Rays', 0.58)",
+      "实际双壁厚度 (2, 'Anal_19Rays', 0.92)",
+      "实际双壁厚度 (2, 'Caudal_DeepFork', 0.25)",
+      "实际双壁厚度 (2, 'Caudal_DeepFork', 0.58)",
+      "实际双壁厚度 (2, 'Caudal_DeepFork', 0.92)",
+      "实际双壁厚度 (2, 'Pectoral_L', 0.25)",
+      "实际双壁厚度 (2, 'Pectoral_L', 0.58)",
+      "实际双壁厚度 (2, 'Pectoral_L', 0.92)",
+      "实际双壁厚度 (2, 'Pelvic_L', 0.25)",
+      "实际双壁厚度 (2, 'Pelvic_L', 0.58)",
+      "实际双壁厚度 (2, 'Pelvic_L', 0.92)",
+      "实际双壁厚度 (2, 'Pectoral_R', 0.25)",
+      "实际双壁厚度 (2, 'Pectoral_R', 0.58)",
+      "实际双壁厚度 (2, 'Pectoral_R', 0.92)",
+      "实际双壁厚度 (2, 'Pelvic_R', 0.25)",
+      "实际双壁厚度 (2, 'Pelvic_R', 0.58)",
+      "实际双壁厚度 (2, 'Pelvic_R', 0.92)",
+      "保存网格根部至末端渐薄 (2, 'Caudal_DeepFork')",
+      "保存网格根部至末端渐薄 (2, 'Pelvic_L')",
+      "保存网格根部至末端渐薄 (2, 'SecondDorsal_23Rays')",
+      "保存网格根部至末端渐薄 (2, 'Pelvic_R')",
+      "保存网格根部至末端渐薄 (2, 'FirstDorsal_8Spines')",
+      "保存网格根部至末端渐薄 (2, 'Pectoral_R')",
+      "保存网格根部至末端渐薄 (2, 'Anal_19Rays')",
+      "保存网格根部至末端渐薄 (2, 'Pectoral_L')"
+    ],
+    "failures": [],
+    "alpha": {
+      "minimum": 0.6313725709915161,
+      "maximum": 0.9686275124549866,
+      "translucentFraction": 0.8288803100585938,
+      "denseFraction": 0.04416656494140625
+    },
+    "faces": {
+      "0": {
+        "membraneFaces": 1594,
+        "opaqueRayFaces": 2530
+      },
+      "1": {
+        "membraneFaces": 904,
+        "opaqueRayFaces": 2287
+      },
+      "2": {
+        "membraneFaces": 444,
+        "opaqueRayFaces": 729
+      }
+    },
+    "wallProfiles": [
+      {
+        "lod": 0,
+        "fin": "FirstDorsal_8Spines",
+        "t": 0.25,
+        "thickness": 0.0013675199633560373
+      },
+      {
+        "lod": 0,
+        "fin": "FirstDorsal_8Spines",
+        "t": 0.58,
+        "thickness": 0.0008643983405628041
+      },
+      {
+        "lod": 0,
+        "fin": "FirstDorsal_8Spines",
+        "t": 0.92,
+        "thickness": 0.0005077501789897059
+      },
+      {
+        "lod": 0,
+        "fin": "SecondDorsal_23Rays",
+        "t": 0.25,
+        "thickness": 0.0013587281713140081
+      },
+      {
+        "lod": 0,
+        "fin": "SecondDorsal_23Rays",
+        "t": 0.58,
+        "thickness": 0.0008575818072343662
+      },
+      {
+        "lod": 0,
+        "fin": "SecondDorsal_23Rays",
+        "t": 0.92,
+        "thickness": 0.0005042890881271744
+      },
+      {
+        "lod": 0,
+        "fin": "Anal_19Rays",
+        "t": 0.25,
+        "thickness": 0.001359165257523047
+      },
+      {
+        "lod": 0,
+        "fin": "Anal_19Rays",
+        "t": 0.58,
+        "thickness": 0.0008579664167676014
+      },
+      {
+        "lod": 0,
+        "fin": "Anal_19Rays",
+        "t": 0.92,
+        "thickness": 0.0005045687153619224
+      },
+      {
+        "lod": 0,
+        "fin": "Caudal_DeepFork",
+        "t": 0.25,
+        "thickness": 0.001353574789483185
+      },
+      {
+        "lod": 0,
+        "fin": "Caudal_DeepFork",
+        "t": 0.58,
+        "thickness": 0.0008542339897697595
+      },
+      {
+        "lod": 0,
+        "fin": "Caudal_DeepFork",
+        "t": 0.92,
+        "thickness": 0.0005023606150552003
+      },
+      {
+        "lod": 0,
+        "fin": "Pectoral_L",
+        "t": 0.25,
+        "thickness": 0.0013568864361864824
+      },
+      {
+        "lod": 0,
+        "fin": "Pectoral_L",
+        "t": 0.58,
+        "thickness": 0.0008570761339873258
+      },
+      {
+        "lod": 0,
+        "fin": "Pectoral_L",
+        "t": 0.92,
+        "thickness": 0.0005026610395169697
+      },
+      {
+        "lod": 0,
+        "fin": "Pelvic_L",
+        "t": 0.25,
+        "thickness": 0.0013386442379856721
+      },
+      {
+        "lod": 0,
+        "fin": "Pelvic_L",
+        "t": 0.58,
+        "thickness": 0.0008378566342658451
+      },
+      {
+        "lod": 0,
+        "fin": "Pelvic_L",
+        "t": 0.92,
+        "thickness": 0.0004945418445939662
+      },
+      {
+        "lod": 0,
+        "fin": "Pectoral_R",
+        "t": 0.25,
+        "thickness": 0.001357717104738869
+      },
+      {
+        "lod": 0,
+        "fin": "Pectoral_R",
+        "t": 0.58,
+        "thickness": 0.0008562269398967734
+      },
+      {
+        "lod": 0,
+        "fin": "Pectoral_R",
+        "t": 0.92,
+        "thickness": 0.0005024834205266246
+      },
+      {
+        "lod": 0,
+        "fin": "Pelvic_R",
+        "t": 0.25,
+        "thickness": 0.0013424951734025763
+      },
+      {
+        "lod": 0,
+        "fin": "Pelvic_R",
+        "t": 0.58,
+        "thickness": 0.0008402166314187794
+      },
+      {
+        "lod": 0,
+        "fin": "Pelvic_R",
+        "t": 0.92,
+        "thickness": 0.0004953711995372406
+      },
+      {
+        "lod": 1,
+        "fin": "FirstDorsal_8Spines",
+        "t": 0.25,
+        "thickness": 0.0013759602982978895
+      },
+      {
+        "lod": 1,
+        "fin": "FirstDorsal_8Spines",
+        "t": 0.58,
+        "thickness": 0.0008759650871432071
+      },
+      {
+        "lod": 1,
+        "fin": "FirstDorsal_8Spines",
+        "t": 0.92,
+        "thickness": 0.0005266175069345562
+      },
+      {
+        "lod": 1,
+        "fin": "SecondDorsal_23Rays",
+        "t": 0.25,
+        "thickness": 0.0013636824076334957
+      },
+      {
+        "lod": 1,
+        "fin": "SecondDorsal_23Rays",
+        "t": 0.58,
+        "thickness": 0.0008662916239035409
+      },
+      {
+        "lod": 1,
+        "fin": "SecondDorsal_23Rays",
+        "t": 0.92,
+        "thickness": 0.0005215378122593555
+      },
+      {
+        "lod": 1,
+        "fin": "Anal_19Rays",
+        "t": 0.25,
+        "thickness": 0.0013641789089829832
+      },
+      {
+        "lod": 1,
+        "fin": "Anal_19Rays",
+        "t": 0.58,
+        "thickness": 0.0008667852298487636
+      },
+      {
+        "lod": 1,
+        "fin": "Anal_19Rays",
+        "t": 0.92,
+        "thickness": 0.000521870349651138
+      },
+      {
+        "lod": 1,
+        "fin": "Caudal_DeepFork",
+        "t": 0.25,
+        "thickness": 0.001359144388197868
+      },
+      {
+        "lod": 1,
+        "fin": "Caudal_DeepFork",
+        "t": 0.58,
+        "thickness": 0.0008625396916473215
+      },
+      {
+        "lod": 1,
+        "fin": "Caudal_DeepFork",
+        "t": 0.92,
+        "thickness": 0.0005191473473971939
+      },
+      {
+        "lod": 1,
+        "fin": "Pectoral_L",
+        "t": 0.25,
+        "thickness": 0.0013650530704180932
+      },
+      {
+        "lod": 1,
+        "fin": "Pectoral_L",
+        "t": 0.58,
+        "thickness": 0.0008623977573570203
+      },
+      {
+        "lod": 1,
+        "fin": "Pectoral_L",
+        "t": 0.92,
+        "thickness": 0.0005196699875467385
+      },
+      {
+        "lod": 1,
+        "fin": "Pelvic_L",
+        "t": 0.25,
+        "thickness": 0.0013495917544249854
+      },
+      {
+        "lod": 1,
+        "fin": "Pelvic_L",
+        "t": 0.58,
+        "thickness": 0.0008440818368116317
+      },
+      {
+        "lod": 1,
+        "fin": "Pelvic_L",
+        "t": 0.92,
+        "thickness": 0.0005106134565809354
+      },
+      {
+        "lod": 1,
+        "fin": "Pectoral_R",
+        "t": 0.25,
+        "thickness": 0.0013657441811248756
+      },
+      {
+        "lod": 1,
+        "fin": "Pectoral_R",
+        "t": 0.58,
+        "thickness": 0.0008623341837664497
+      },
+      {
+        "lod": 1,
+        "fin": "Pectoral_R",
+        "t": 0.92,
+        "thickness": 0.0005187761266405604
+      },
+      {
+        "lod": 1,
+        "fin": "Pelvic_R",
+        "t": 0.25,
+        "thickness": 0.0013537176513042164
+      },
+      {
+        "lod": 1,
+        "fin": "Pelvic_R",
+        "t": 0.58,
+        "thickness": 0.000849473216608266
+      },
+      {
+        "lod": 1,
+        "fin": "Pelvic_R",
+        "t": 0.92,
+        "thickness": 0.0005120874085686484
+      },
+      {
+        "lod": 2,
+        "fin": "FirstDorsal_8Spines",
+        "t": 0.25,
+        "thickness": 0.0014978691043065798
+      },
+      {
+        "lod": 2,
+        "fin": "FirstDorsal_8Spines",
+        "t": 0.58,
+        "thickness": 0.0010813261891384211
+      },
+      {
+        "lod": 2,
+        "fin": "FirstDorsal_8Spines",
+        "t": 0.92,
+        "thickness": 0.0005773507092036712
+      },
+      {
+        "lod": 2,
+        "fin": "SecondDorsal_23Rays",
+        "t": 0.25,
+        "thickness": 0.0014751709087976786
+      },
+      {
+        "lod": 2,
+        "fin": "SecondDorsal_23Rays",
+        "t": 0.58,
+        "thickness": 0.0010376276678571363
+      },
+      {
+        "lod": 2,
+        "fin": "SecondDorsal_23Rays",
+        "t": 0.92,
+        "thickness": 0.0005692577828147761
+      },
+      {
+        "lod": 2,
+        "fin": "Anal_19Rays",
+        "t": 0.25,
+        "thickness": 0.0014765414983166987
+      },
+      {
+        "lod": 2,
+        "fin": "Anal_19Rays",
+        "t": 0.58,
+        "thickness": 0.001040717314429432
+      },
+      {
+        "lod": 2,
+        "fin": "Anal_19Rays",
+        "t": 0.92,
+        "thickness": 0.00057017247550272
+      },
+      {
+        "lod": 2,
+        "fin": "Caudal_DeepFork",
+        "t": 0.25,
+        "thickness": 0.0014580761181149109
+      },
+      {
+        "lod": 2,
+        "fin": "Caudal_DeepFork",
+        "t": 0.58,
+        "thickness": 0.001014812277057808
+      },
+      {
+        "lod": 2,
+        "fin": "Caudal_DeepFork",
+        "t": 0.92,
+        "thickness": 0.0005592274883023323
+      },
+      {
+        "lod": 2,
+        "fin": "Pectoral_L",
+        "t": 0.25,
+        "thickness": 0.001443237230890326
+      },
+      {
+        "lod": 2,
+        "fin": "Pectoral_L",
+        "t": 0.58,
+        "thickness": 0.001018823753612499
+      },
+      {
+        "lod": 2,
+        "fin": "Pectoral_L",
+        "t": 0.92,
+        "thickness": 0.0005544002164444179
+      },
+      {
+        "lod": 2,
+        "fin": "Pelvic_L",
+        "t": 0.25,
+        "thickness": 0.0014171593222128567
+      },
+      {
+        "lod": 2,
+        "fin": "Pelvic_L",
+        "t": 0.58,
+        "thickness": 0.001011576482765301
+      },
+      {
+        "lod": 2,
+        "fin": "Pelvic_L",
+        "t": 0.92,
+        "thickness": 0.0005511203820800296
+      },
+      {
+        "lod": 2,
+        "fin": "Pectoral_R",
+        "t": 0.25,
+        "thickness": 0.0014400946992713009
+      },
+      {
+        "lod": 2,
+        "fin": "Pectoral_R",
+        "t": 0.58,
+        "thickness": 0.0010304589673446874
+      },
+      {
+        "lod": 2,
+        "fin": "Pectoral_R",
+        "t": 0.92,
+        "thickness": 0.0005570208357673399
+      },
+      {
+        "lod": 2,
+        "fin": "Pelvic_R",
+        "t": 0.25,
+        "thickness": 0.0014903746821666615
+      },
+      {
+        "lod": 2,
+        "fin": "Pelvic_R",
+        "t": 0.58,
+        "thickness": 0.0010316559136184888
+      },
+      {
+        "lod": 2,
+        "fin": "Pelvic_R",
+        "t": 0.92,
+        "thickness": 0.0005557215225871143
+      }
+    ]
+  },
+  "triangles": [
+    24664,
+    9864,
+    3699
+  ],
+  "materialSlots": 7,
+  "measurements": [
+    "measurements/fin-all-editor-20261124d.json",
+    "measurements/fin-author-20261124a.json",
+    "measurements/fin-author-20261124b.json",
+    "measurements/fin-author-20261124c.json",
+    "measurements/fin-editor-20261124c.json",
+    "measurements/fin-gpu-20261124a.json",
+    "measurements/fin-gpu-20261124b.json",
+    "measurements/fin-gpu-20261124c.json",
+    "measurements/fin-gpu-20261124d.json",
+    "measurements/fin-import-20261124c.json",
+    "measurements/fin-source-20261124a.json",
+    "measurements/fin-source-20261124b.json",
+    "measurements/fin-source-20261124c.json",
+    "measurements/fin-source-red-20261124a.json",
+    "measurements/fin-studio-20261124c.json"
+  ],
+  "playMode": {
+    "result": "Passed",
+    "total": "3",
+    "passed": "3",
+    "failed": "0",
+    "duration": "33.1199177",
+    "scope": "FishAnimationTests, IntegratedWorldTests and ImmersiveNavigationTests only; no GPU or full progression claim"
+  }
+}

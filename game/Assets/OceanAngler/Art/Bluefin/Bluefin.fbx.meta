@@ -32,6 +32,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Bluefin_Rays
+    second: {fileID: 2100000, guid: d5dfd523f50b14493b63c209b79d607a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Bluefin_Skin
     second: {fileID: 2100000, guid: e47981e13c4c14417bbeb2036c1272ab, type: 2}
   materials:

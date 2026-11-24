@@ -64,7 +64,7 @@ if rig and all(lods):
     atlas=bpy.data.images.get('Bluefin_Fin');check(atlas is not None and tuple(atlas.size)==(1024,512),'鳍色分区共用一张1024x512纹理')
     palette_counts={'blue':0,'pale':0};anatomy_counts={'firstDorsal':0,'paired':0,'secondDorsal':0,'caudal':0}
     for face in data.polygons:
-        if data.materials[face.material_index].name!='Bluefin_Fins':continue
+        if data.materials[face.material_index].name not in ('Bluefin_Fins','Bluefin_Rays'):continue
         values=[data.uv_layers.active.data[i].uv.x for i in face.loop_indices];blue=max(values)<.5;pale=min(values)>.5
         check(blue or pale,'鳍面UV不横跨色区边界：'+str(face.index)) if not (blue or pale) else None
         if blue:palette_counts['blue']+=1
@@ -79,7 +79,7 @@ if rig and all(lods):
             if not expected:check(False,'实际几何鳍色区错误：'+region+' face='+str(face.index))
     check(all(n>0 for n in palette_counts.values()),'实际鳍面使用蓝色与灰铜色两个区域')
     check(all(n>0 for n in anatomy_counts.values()),'第一背鳍/成对鳍/第二背鳍/尾鳍均有独立几何颜色核验')
-    check(len(data.materials)==6,'鳍色分区保持六个源材质槽')
+    check(len(data.materials)==7,'七个源材质槽分离实体鳍条与透明鳍膜')
     report['finPalette']={'faces':palette_counts,'anatomySamples':anatomy_counts,'materialSlots':len(data.materials)}
     eye_material=data.materials.get('Bluefin_Iris')
     eye_maps=[node.image for node in eye_material.node_tree.nodes if node.type=='TEX_IMAGE' and node.image] if eye_material else []
@@ -140,6 +140,7 @@ if rig and all(lods):
         corner_drift=max(((p-corner_positions[0][i]).length for pose in corner_positions for i,p in enumerate(pose)),default=float('inf'))
         check(corner_drift<.001,'动作中实际嘴角皮肤无明显漂移：'+name)
         report['motion'][name]={'tailRotationRange':spread,'jawRotationRange':jaw_spread,'maximumGillDistanceToBody':max(gill_clearance),'maximumMouthCornerDrift':corner_drift}
+tissue_path=ROOT/'tools/art_validate_fin_tissue.py';scope={'__file__':str(tissue_path),'__name__':'fin_tissue_validation'};exec(compile(tissue_path.read_text(),str(tissue_path),'exec'),scope);report['finTissue']=scope['inspect']();checks.extend(report['finTissue']['checks']);failures.extend(report['finTissue']['failures'])
 report['status']='FAIL' if failures else 'ENGINEERING_CHECKS_PASS'
 path=ROOT/'.local/art/bluefin/validation.json';path.parent.mkdir(parents=True,exist_ok=True);path.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
 print(json.dumps(report,ensure_ascii=False,indent=2))

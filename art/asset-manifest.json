@@ -50,11 +50,11 @@
       "acquiredAt": "2026-11-23",
       "status": "ART_REVIEW_PENDING",
       "path": "art/source/bluefin/Bluefin.blend",
-      "sha256": "7089763c300f9dbd50fa7e01a2d4d716bd23b970189b147f39f529615b361748",
+      "sha256": "974d6a6e929541647edbb0afa5976eb3b9ce9779c0f40eb1b402df6c26217e02",
       "artifacts": [
         {
           "path": "art/source/bluefin/Bluefin.blend",
-          "sha256": "7089763c300f9dbd50fa7e01a2d4d716bd23b970189b147f39f529615b361748"
+          "sha256": "974d6a6e929541647edbb0afa5976eb3b9ce9779c0f40eb1b402df6c26217e02"
         },
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin_BaseColor.png",
@@ -62,7 +62,7 @@
         },
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin_Fin.png",
-          "sha256": "ca13d306992e6f98da2b1cf8cba588cba97480d040c74ddbfaa86992e253ee06"
+          "sha256": "455e948892fce6278a7b5fbd1a8a20352272c6e4d6f4454f77eeb909790a5fa8"
         },
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin_MetallicSmoothness.png",
@@ -78,7 +78,7 @@
         },
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin.fbx",
-          "sha256": "87534d1d4a21c64809347103cd5132fcf497dead17b4364fe102c830ac0158f7"
+          "sha256": "7b87ea9c137f1ab657f876a493592ab29d0f066090196393df2224190f66e445"
         },
         {
           "path": "art/previews/bluefin/bite.png",
@@ -124,11 +124,39 @@
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin_Iris.mat",
           "sha256": "bfcb92708ddc8ec368b6c82129b3da321f197bc0629cd380fbca0bb82514ec57"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin_Fin_Normal.png",
+          "sha256": "0484cee7df56545813b2635ec14ae9e5a6fae5d1203d36452ede2d44cbc1ab30"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin_Fin_Roughness.png",
+          "sha256": "2d142ea0a0708ee8855c44ec0d135e067abe524c624da414bc68ef947dd1e89e"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin_Fin_MetallicSmoothness.png",
+          "sha256": "35aeee5a17e984ecc81683eb944c9ec6d310171856149635f130cfb88e4ca72c"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin_Rays.mat",
+          "sha256": "a30ef89c70a13b4e69c8bf705b70320a051982e35581d45eb7b9aabb05456528"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin_Fins.mat",
+          "sha256": "9bb2409161d9336be1c870495545a7616ceeaa6efb5bdbc001048377cd47ef67"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Resources/Models/Bluefin.prefab",
+          "sha256": "29235acbb68724cf3530dd507f93106825591e75da78103b699b5e9fb9eeeee1"
+        },
+        {
+          "path": "art/source/bluefin/build-report.json",
+          "sha256": "7e54bdedb221d3363178bc4aa3f4fc88ed761ba4497034cea73c9857d772ae0b"
         }
       ],
       "note": "Original bluefin trevally mesh, UV, PBR maps, 12-bone rig, seven animation clips and three LODs. Scientific/visual/user/device acceptance remains open. No third-party photographs or models included.",
       "modifiedAt": "2026-11-24",
-      "modifications": "Lip rim flattened and tapered; jaw corner anchored to head; mandible rings aligned with body and posterior skin actually welded, replacing overlapping thin cheek cover. Actual LOD triangles24664/9864/3698; unchanged6materials/12bones/7actions and all6sourcePNGmaps. Saved-mesh corner and scoped posterior-edge regression checks pass; full art/science/user/device gates remain open."
+      "modifications": "Fin membranes rebuilt with tapered closed shells in all three LODs; original RGBA, normal, roughness and packed maps; separate opaque rays. Material slots6->7 explicitly; triangles24664/9864/3699 within unchanged25000 LOD0 budget,12bones/7motions retained. Actual source checks and isolated HDR Metal controls pass; source/Player visual, scientific, user and device gates remain separate."
     },
     {
       "id": "complete-spinning-rig-candidate",

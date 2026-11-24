@@ -19,7 +19,7 @@ scene.render.engine='CYCLES';scene.cycles.samples=48;scene.cycles.use_denoising=
 scene.render.resolution_x=1440;scene.render.resolution_y=960;scene.render.resolution_percentage=100
 scene.view_settings.view_transform='AgX'
 scene.world.color=(.18,.18,.18)
-parts=[]
+parts=[];fin_samples=[];fin_recipes=[]
 # X longitudinal, Y lateral, Z vertical; shared by geometry and map metrics.
 profile=[(-1.04,.027,-.018,.028),(-.97,.085,-.10,.055),(-.84,.22,-.21,.095),(-.67,.34,-.28,.135),(-.43,.405,-.32,.172),(-.16,.39,-.315,.178),(.12,.315,-.27,.154),(.38,.225,-.19,.115),(.63,.13,-.105,.070),(.84,.055,-.045,.030),(.96,.040,-.035,.021)]
 
@@ -29,7 +29,7 @@ def image(name,data,noncolor=False):
     if data.ndim==2:data=np.repeat(data[:,:,None],3,axis=2)
     rgba=np.ones((*data.shape[:2],4),dtype=np.float32);rgba[:,:,:data.shape[2]]=np.clip(data,0,1)
     im=bpy.data.images.new(name,width=data.shape[1],height=data.shape[0],alpha=data.shape[2]==4)
-    im.colorspace_settings.name='Non-Color' if noncolor else 'sRGB'
+    im.use_fake_user=True;im.colorspace_settings.name='Non-Color' if noncolor else 'sRGB'
     im.pixels.foreach_set(rgba.ravel());im.filepath_raw=str(GAME/(name+'.png'));im.file_format='PNG';im.save()
     return im
 
@@ -68,9 +68,18 @@ def make_maps():
     # second dorsal/anal/caudal; muted grey-bronze for first dorsal and paired fins.
     fy,fx=np.mgrid[0:512,0:512];fu=np.clip((fx-4)/503,0,1);fv=fy/511
     rays=(.5+.5*np.cos(fu*math.tau))**9
-    fc=np.zeros((512,512,3));fc[:]=[.025,.12,.23];fc+=fv[:,:,None]*np.array([.012,.12,.20]);fc+=rays[:,:,None]*np.array([.007,.018,.022])
-    pale=np.zeros_like(fc);pale[:]=[.22,.26,.20];pale+=fv[:,:,None]*np.array([.07,.09,.06]);pale+=rays[:,:,None]*np.array([.009,.01,.007])
-    fin=image('Bluefin_Fin',np.concatenate((fc,pale),axis=1))
+    grain=np.random.default_rng(4819).normal(0,.002,(512,512))
+    fc=np.zeros((512,512,3));fc[:]=[.025,.15,.29];fc+=fv[:,:,None]*np.array([.018,.13,.20]);fc+=(rays*.018+grain)[:,:,None]
+    pale=np.zeros_like(fc);pale[:]=[.27,.29,.21];pale+=fv[:,:,None]*np.array([.10,.10,.065]);pale+=(rays*.015+grain)[:,:,None]
+    # Membrane pigment varies between each actual pair of geometric rays.
+    # Solid rays use a separate opaque material; their opacity is not this map.
+    alpha=np.clip(.87-.24*fv+.10*rays,.58,.98)
+    fin=image('Bluefin_Fin',np.concatenate((np.dstack((fc,alpha)),np.dstack((pale,alpha))),axis=1))
+    fold=(.00030*np.sin(math.pi*fu)*(1-.4*fv)+.00003*np.sin(fv*55+fu*math.tau*2)*np.sin(math.pi*fu))
+    gy,gx=np.gradient(fold,1/511,1/511);fn=np.stack((-gx/.025,-gy/.20,np.ones_like(gx)),axis=2);fn/=np.linalg.norm(fn,axis=2)[:,:,None]
+    fin_normal=image('Bluefin_Fin_Normal',np.concatenate((fn*.5+.5,fn*.5+.5),axis=1),True)
+    fr=np.clip(.51+.05*fv-.055*rays+grain,.43,.59);fin_rough=image('Bluefin_Fin_Roughness',np.concatenate((fr,fr),axis=1),True)
+    packed=np.zeros((512,1024,4));packed[:,:,3]=1-np.concatenate((fr,fr),axis=1);image('Bluefin_Fin_MetallicSmoothness',packed,True)
     # Original iris pigmentation, projected onto each eye's X/Z face below.
     # Radial fibres and uneven bronze/grey mottling avoid a uniform metal rim.
     iy,ix=np.mgrid[0:256,0:256];ex=(ix-127.5)/127.5;ez=(iy-127.5)/127.5
@@ -83,9 +92,9 @@ def make_maps():
     edge=np.clip((radius-.78)/.20,0,1);edge=edge*edge*(3-2*edge)
     iris_color=iris_color*(1-edge[:,:,None])+np.array([.14,.19,.18])*edge[:,:,None]
     iris_map=image('Bluefin_Iris',iris_color)
-    return base,normal,rough,fin,iris_map
+    return base,normal,rough,fin,iris_map,fin_normal,fin_rough
 
-base,normal,rough,finmap,irismap=make_maps()
+base,normal,rough,finmap,irismap,finnormal,finrough=make_maps()
 def material(name,color,roughness=.3,texture=None):
     m=bpy.data.materials.new(name);m.diffuse_color=(*color,1);m.use_nodes=True;p=m.node_tree.nodes.get('Principled BSDF')
     p.inputs['Base Color'].default_value=(*color,1);p.inputs['Roughness'].default_value=roughness
@@ -98,6 +107,12 @@ p=skin.node_tree.nodes.get('Principled BSDF');p.inputs['Coat Weight'].default_va
 t=skin.node_tree.nodes.new('ShaderNodeTexImage');t.image=rough;skin.node_tree.links.new(t.outputs['Color'],p.inputs['Roughness'])
 t=skin.node_tree.nodes.new('ShaderNodeTexImage');t.image=normal;n=skin.node_tree.nodes.new('ShaderNodeNormalMap');n.inputs['Strength'].default_value=.35;skin.node_tree.links.new(t.outputs['Color'],n.inputs['Color']);skin.node_tree.links.new(n.outputs['Normal'],p.inputs['Normal'])
 finmat=material('Bluefin_Fins',(.04,.3,.58),.50,finmap)
+p=finmat.node_tree.nodes['Principled BSDF'];p.inputs['Coat Weight'].default_value=.06;p.inputs['Coat Roughness'].default_value=.35
+color_node=next(n for n in finmat.node_tree.nodes if n.type=='TEX_IMAGE' and n.image==finmap);finmat.node_tree.links.new(color_node.outputs['Alpha'],p.inputs['Alpha'])
+for im,prop in [(finrough,'Roughness')]:
+ t=finmat.node_tree.nodes.new('ShaderNodeTexImage');t.image=im;finmat.node_tree.links.new(t.outputs['Color'],p.inputs[prop])
+t=finmat.node_tree.nodes.new('ShaderNodeTexImage');t.image=finnormal;n=finmat.node_tree.nodes.new('ShaderNodeNormalMap');n.inputs['Strength'].default_value=.6;finmat.node_tree.links.new(t.outputs['Color'],n.inputs['Color']);finmat.node_tree.links.new(n.outputs['Normal'],p.inputs['Normal'])
+finray=material('Bluefin_Rays',(.04,.3,.58),.48,finmap);finray.node_tree.nodes['Principled BSDF'].inputs['Coat Weight'].default_value=.08
 gill=material('Bluefin_Gill',(.10,.18,.17),.58);gill.node_tree.nodes.get('Principled BSDF').inputs['Coat Weight'].default_value=0
 oral=material('Bluefin_Oral',(.065,.043,.037),.78);oral.node_tree.nodes.get('Principled BSDF').inputs['Coat Weight'].default_value=0
 iris=material('Bluefin_Iris',(1,1,1),.40,irismap);iris.node_tree.nodes.get('Principled BSDF').inputs['Coat Weight'].default_value=.05
@@ -204,8 +219,9 @@ def tube(name,points,radius,mat,bone=None,segments=6,taper=True,fin_ray=False,pa
     fs.append(tuple(range(segments-1,-1,-1)));fs.append(tuple((len(points)-1)*segments+j for j in range(segments)))
     return mesh(name,vs,fs,mat,uv if fin_ray else None,bone=bone)
 
-def fin(name,roots,tips,bone=None,rays=True,palette='blue'):
-    vs=[];fs=[];uv=[];steps=6
+def fin(name,roots,tips,bone=None,rays=True,palette='blue',steps=6,record_samples=True):
+    if record_samples:fin_recipes.append(dict(name=name,roots=list(roots),tips=list(tips),bone=bone,palette=palette))
+    vs=[];fs=[];uv=[]
     for i,(a,b) in enumerate(zip(roots,tips)):
         for j in range(steps+1):
             t=j/steps;p=Vector(a).lerp(Vector(b),t);p.y+=math.sin(t*math.pi)*.004
@@ -220,13 +236,22 @@ def fin(name,roots,tips,bone=None,rays=True,palette='blue'):
         for li in face.loop_indices:
             vi=obj.data.loops[li].vertex_index;obj.data.uv_layers.active.data[li].uv=fin_uv(vi//(steps+1)-strip,(vi%(steps+1))/steps,palette)
     # Thin closed membrane; real geometry prevents single-sided disappearing fins.
-    bpy.context.view_layer.objects.active=obj;obj.select_set(True);solid=obj.modifiers.new('MembraneThickness','SOLIDIFY');solid.thickness=.0018;solid.offset=0;bpy.ops.object.modifier_apply(modifier=solid.name);obj.select_set(False)
+    # Temporary manufacturing weights are removed after the actual shell is
+    # applied, so they cannot corrupt normalized skeletal weights on export.
+    gauge=obj.vertex_groups.new(name='MembraneGauge')
+    for index in range(len(vs)):gauge.add([index],(1-(index%(steps+1))/steps)**1.4,'REPLACE')
+    bpy.context.view_layer.objects.active=obj;obj.select_set(True);solid=obj.modifiers.new('MembraneThickness','SOLIDIFY');solid.thickness=.0018;solid.offset=0;solid.vertex_group=gauge.name;solid.thickness_vertex_group=.25;bpy.ops.object.modifier_apply(modifier=solid.name);obj.vertex_groups.remove(obj.vertex_groups['MembraneGauge']);obj.select_set(False)
+    # Landmark rays are diagnostic inputs; the validator measures both saved
+    # shell surfaces rather than trusting this author's nominal thickness.
+    ri=(len(roots)-1)//2
+    for t in ([.25,.58,.92] if record_samples else []):
+        j=min(steps-1,int(t*steps));v=t*steps-j;a=Vector(vs[ri*(steps+1)+j]).lerp(Vector(vs[ri*(steps+1)+j+1]),v);b=Vector(vs[(ri+1)*(steps+1)+j]).lerp(Vector(vs[(ri+1)*(steps+1)+j+1]),v);point=(a+b)*.5;along=Vector(vs[ri*(steps+1)+j+1])-Vector(vs[ri*(steps+1)+j]);normal=(b-a).cross(along).normalized();fin_samples.append(dict(fin=name,t=t,point=list(point),normal=list(normal)))
     if rays:
         for i,(a,b) in enumerate(zip(roots,tips)):
             curve=[]
             for step in range(5):
                 t=step/4;p=Vector(a).lerp(Vector(b),t);p.y+=math.sin(t*math.pi)*.004;curve.append(tuple(p))
-            tube(name+'Ray'+str(i),curve,.0012,finmat,bone,5,fin_ray=True,palette=palette)
+            tube(name+'Ray'+str(i),curve,.0012,finray,bone,5,fin_ray=True,palette=palette)
 
 # Eight first-dorsal spines, then a separate long-lobed second dorsal with 23 rays.
 roots=[];tips=[]
@@ -250,7 +275,7 @@ for sign,label in [(1,'L'),(-1,'R')]:
     roots=[];tips=[]
     for i in range(15):
         t=i/14;length=(1-t)**.65
-        roots.append((-.48,.16*sign,.035-.14*t));tips.append((-.44+.77*length,sign*(.16+.17*math.sin(length*math.pi*.65)),-.03-.16*length))
+        roots.append((-.48,.16*sign,.035-.14*t));tips.append((-.44+.77*length,sign*(.16+.17*math.sin(length*math.pi*.65)),-.18-.045*t))
     fin('Pectoral_'+label,roots,tips,'pectoral'+label,palette='pale')
     roots=[];tips=[]
     for i in range(7):
@@ -380,7 +405,24 @@ bpy.ops.object.mode_set(mode='OBJECT');rig.show_in_front=True
 lods=[body]
 for level,ratio in [(1,.4),(2,.15)]:
     obj=body.copy();obj.data=body.data.copy();scene.collection.objects.link(obj);obj.name='Bluefin_LOD'+str(level)
-    bpy.context.view_layer.objects.active=obj;mod=obj.modifiers.new('AuthoredReduction','DECIMATE');mod.ratio=ratio;bpy.ops.object.modifier_apply(modifier=mod.name);lods.append(obj)
+    # Collapse-based decimation of an already thin shell can flatten opposite
+    # walls. Reduce the solid body/rays separately and rebuild low-resolution
+    # membrane grids with every boundary ray retained, then apply their real
+    # tapered thickness afterward. Distance reduction removes longitudinal
+    # curvature samples, not the small fin's silhouette peaks.
+    bm=bmesh.new();bm.from_mesh(obj.data);membrane_index=list(obj.data.materials).index(finmat);bmesh.ops.delete(bm,geom=[f for f in bm.faces if f.material_index==membrane_index],context='FACES');bmesh.ops.delete(bm,geom=[v for v in bm.verts if not v.link_faces],context='VERTS');bm.to_mesh(obj.data);bm.free();obj.data.update()
+    membranes=[]
+    for recipe in fin_recipes:
+        indices=list(range(len(recipe['roots'])))
+        fin(recipe['name']+'Distance'+str(level),[recipe['roots'][i] for i in indices],[recipe['tips'][i] for i in indices],recipe['bone'],rays=False,palette=recipe['palette'],steps=3 if level==1 else 1,record_samples=False);membranes.append(parts[-1])
+    body.data.calc_loop_triangles();obj.data.calc_loop_triangles();membrane_triangles=0
+    for membrane in membranes:membrane.data.calc_loop_triangles();membrane_triangles+=len(membrane.data.loop_triangles)
+    target=int(len(body.data.loop_triangles)*ratio);remaining=target-membrane_triangles
+    if remaining<=0:raise RuntimeError('Membrane LOD consumes the distance budget')
+    bpy.context.view_layer.objects.active=obj;mod=obj.modifiers.new('AuthoredReduction','DECIMATE');mod.ratio=min(1,remaining/len(obj.data.loop_triangles));bpy.ops.object.modifier_apply(modifier=mod.name)
+    bpy.ops.object.select_all(action='DESELECT');obj.select_set(True)
+    for membrane in membranes:membrane.select_set(True)
+    bpy.context.view_layer.objects.active=obj;bpy.ops.object.join();lods.append(obj)
     for layer in obj.data.uv_layers:
         for loop in layer.data:loop.uv=(max(0,min(1,loop.uv.x)),max(0,min(1,loop.uv.y)))
 for obj in lods:
@@ -419,9 +461,10 @@ camera=bpy.data.cameras.new('ReviewCamera');cam=bpy.data.objects.new('ReviewCame
 def view(loc,target=(.15,0,0)):
     cam.location=loc;cam.rotation_euler=(Vector(target)-cam.location).to_track_quat('-Z','Y').to_euler()
 view((-1.2,-5,1.05));scene.render.filepath='//previews/three-quarter.png'
-for im in [base,normal,rough,finmap,irismap]:im.filepath=bpy.path.relpath(im.filepath,start=str(OUT))
+for im in bpy.data.images:
+    if im.filepath and (GAME/Path(im.filepath).name).is_file():im.filepath=bpy.path.relpath(im.filepath,start=str(OUT))
 bpy.ops.wm.save_as_mainfile(filepath=str(OUT/'Bluefin.blend'))
-report={'status':'CANDIDATE','species':'Caranx melampygus','source':'tools/art_bluefin.py','blender':bpy.app.version_string,'lods':{},'actions':[a.name for a in bpy.data.actions],'bones':[b.name for b in rig.data.bones],'maps':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in GAME.glob('*.png')},'artAcceptance':'NOT_ACCEPTED','note':'Original authoring candidate; scientific, runtime, deformation, LOD and human visual gates remain separate.'}
+report={'status':'CANDIDATE','species':'Caranx melampygus','source':'tools/art_bluefin.py','blender':bpy.app.version_string,'lods':{},'actions':[a.name for a in bpy.data.actions],'bones':[b.name for b in rig.data.bones],'maps':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in GAME.glob('*.png')},'artAcceptance':'NOT_ACCEPTED','finTissueSamples':fin_samples,'finTissue':dict(membraneMaterial='Bluefin_Fins',rayMaterial='Bluefin_Rays',nominalRootThickness=.0018,nominalTipThickness=.00045,opacity='authored pigment alpha, not measured biological transmission',shadow='opaque geometric rays; runtime transparent membrane shadow disabled'),'note':'Original authoring candidate; scientific, runtime, deformation, LOD and human visual gates remain separate.'}
 for o in lods:
     o.data.calc_loop_triangles();report['lods'][o.name]={'triangles':len(o.data.loop_triangles),'vertices':len(o.data.vertices),'uvLayers':len(o.data.uv_layers)}
 (OUT/'build-report.json').write_text(json.dumps(report,indent=2)+'\n')
