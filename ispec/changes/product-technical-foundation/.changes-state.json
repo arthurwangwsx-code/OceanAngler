@@ -9722,6 +9722,182 @@
       "executable": "python3",
       "commandDigest": "c7c935e1ba437ae7729f6ab91f81bc25ffeba9b54f0e4cfe8a4d89028a8747a4",
       "receiptPath": "measurements/rig-detail-tool-tests-20261124a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "d3439b64-dc8e-41ad-94cf-16606e1ff1ce",
+      "startedAt": "2026-11-24T14:03:32.221Z",
+      "executable": "python3",
+      "commandDigest": "0b450c65b726eadcf694e165202b5475e1598d7ea2f63172b215d539af62ccc5",
+      "receiptPath": "measurements/rig-detail-native-build-20261124a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "0bc226dd-52b8-4a45-9dfc-06000a3db656",
+      "startedAt": "2026-11-24T14:07:56.078Z",
+      "executable": "python3",
+      "commandDigest": "ae81ab465c74e85bf528ab523e34b8716a4f0b3b7ab28fac26da6be407c409fb",
+      "receiptPath": "measurements/rig-detail-native-phone-20261124a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "9b500d7c-2db9-4603-8cd0-9ee485b1f3fc",
+      "startedAt": "2026-11-24T14:09:55.724Z",
+      "executable": "python3",
+      "commandDigest": "d10d16915dfda8fce7d60fb782f71172fabdb47bcc673274d279f8a2a2eb85cb",
+      "receiptPath": "measurements/rig-detail-native-phone-proof-20261124a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "e46188e8-236f-4d76-8884-cad8f5f086d3",
+      "startedAt": "2026-11-24T14:10:02.137Z",
+      "executable": "python3",
+      "commandDigest": "5ecc87c55fee9b24ee1806051412221f8e511d96170a6257a62cdd41e7bb4f19",
+      "receiptPath": "measurements/rig-detail-native-pad-20261124a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "8c460f2a-ad0e-44f5-8aef-a28540f47428",
+      "startedAt": "2026-11-24T14:12:05.429Z",
+      "executable": "python3",
+      "commandDigest": "037fbdf1a70da789d505ab7b6c32856d8616723c7e2b59f4fcbc8544ed9d2123",
+      "receiptPath": "measurements/rig-detail-native-pad-proof-20261124a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "2b68b7d4-5e5e-49e3-9523-b2adc0c1b634",
+      "startedAt": "2026-11-24T14:12:06.009Z",
+      "executable": "python3",
+      "commandDigest": "265867c2b60b639c8fc66fea9ed157bf7cf05d267165ab2f605e5911ab2cfb5b",
+      "receiptPath": "measurements/rig-detail-immersive-phone-20261124a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "b895b5aa-25d2-44dc-a8a0-af44c814819d",
+      "startedAt": "2026-11-24T14:13:48.440Z",
+      "executable": "python3",
+      "commandDigest": "f70fd7e8faf6b37c13c94be9ad4786c5fe9dd31ede23983723d4bed3619b1567",
+      "receiptPath": "measurements/rig-detail-immersive-phone-proof-20261124a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "920b1b84-bfcc-42d1-b5a5-c7f8888ec937",
+      "startedAt": "2026-11-24T14:13:48.584Z",
+      "executable": "python3",
+      "commandDigest": "aeaa4a348f5078377cf0a1ad46634f7c5bb8816958c5183109fd8578c701511e",
+      "receiptPath": "measurements/rig-detail-immersive-pad-20261124a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "6677e71f-9b42-4d0f-a193-e2e3a3a689b1",
+      "startedAt": "2026-11-24T14:15:21.557Z",
+      "executable": "python3",
+      "commandDigest": "e84b022fde689822354888dc8e3076666f1e7a34ad740819dcb00aa8fdcb3268",
+      "receiptPath": "measurements/rig-detail-immersive-phone-proof-20261124b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "e197f021-4c57-4176-9ca8-91bcd0964cec",
+      "startedAt": "2026-11-24T14:15:31.276Z",
+      "executable": "python3",
+      "commandDigest": "0246f2e243238c8854313c47044e320895ff58d0510f932763c4422987a8585f",
+      "receiptPath": "measurements/rig-detail-immersive-pad-20261124b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "02536e59-04f1-449f-9c89-5fd86254ba82",
+      "startedAt": "2026-11-24T14:21:07.247Z",
+      "executable": "python3",
+      "commandDigest": "3745458c1d3a395c0117b9d1cb27b907abf45987ea38b4f229c2957818aa6e79",
+      "receiptPath": "measurements/rig-detail-immersive-pad-proof-20261124b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "9dd4ddbc-58a7-4a75-9520-82dacb0bf393",
+      "startedAt": "2026-11-24T14:21:16.082Z",
+      "executable": "python3",
+      "commandDigest": "c8cdc77e110b80629400486e8e9e940ef7abdb009b23d1226db5c667bb479a9d",
+      "receiptPath": "measurements/rig-detail-retention-after-20261124a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "68391923-e3d8-461f-93b4-d1d2d9661791",
+      "startedAt": "2026-11-24T14:21:37.333Z",
+      "executable": "python3",
+      "commandDigest": "8c08036bf8900daacaff30503b67e555d8a4b7f460e8556a31813339181b5008",
+      "receiptPath": "measurements/rig-detail-reopen-20261124a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "a153e4cd-a7fe-4fa7-8c83-1d3db260d250",
+      "startedAt": "2026-11-24T14:22:50.775Z",
+      "executable": "python3",
+      "commandDigest": "e6bad27a93054ac246d7f280f9afb4a25039c71ce4574c19e2172c8c48be0cbe",
+      "receiptPath": "measurements/rig-detail-reopen-proof-20261124a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "23a8c9b4-1aae-406f-9345-4e532e083015",
+      "startedAt": "2026-11-24T14:24:16.180Z",
+      "executable": "python3",
+      "commandDigest": "482274c481a13ebc0dc6069c063fa4dc03be7eb2aeb7de361d01674c732f6562",
+      "receiptPath": "measurements/rig-detail-record-audit-20261124a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "648df5bd-350e-487d-9b47-38b334b82f36",
+      "startedAt": "2026-11-24T14:24:38.718Z",
+      "executable": "python3",
+      "commandDigest": "361e67b99fe2bbd22dd315b9419779d8c65729819b35d79aa876dd8b5b8e2c12",
+      "receiptPath": "measurements/rig-detail-public-final-20261124a.json"
     }
   ],
   "runMeasurements": [
@@ -24027,6 +24203,310 @@
       "receipt": {
         "path": "measurements/rig-detail-tool-tests-20261124a.json",
         "sha256": "e9bc472fcd2b85bfd5d9564c5d2c864123a439f62cae3069b45f61ebbf48965c"
+      }
+    },
+    {
+      "id": "d3439b64-dc8e-41ad-94cf-16606e1ff1ce",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "0b450c65b726eadcf694e165202b5475e1598d7ea2f63172b215d539af62ccc5",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T14:03:32.221Z",
+      "finishedAt": "2026-11-24T14:07:48.126Z",
+      "durationMs": 255870.213833,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rig-detail-native-build-20261124a.json",
+        "sha256": "d801f00cd2b41bee566864ff69d3a2aae39d0d84ba7c616d6c0d05d5fffd3a4c"
+      }
+    },
+    {
+      "id": "0bc226dd-52b8-4a45-9dfc-06000a3db656",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "ae81ab465c74e85bf528ab523e34b8716a4f0b3b7ab28fac26da6be407c409fb",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T14:07:56.078Z",
+      "finishedAt": "2026-11-24T14:09:41.948Z",
+      "durationMs": 105827.493416,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rig-detail-native-phone-20261124a.json",
+        "sha256": "5df1c10779ac089a2c4b4dbc740e3682895cf16a0286c7764dba27b1d7efe6fa"
+      }
+    },
+    {
+      "id": "9b500d7c-2db9-4603-8cd0-9ee485b1f3fc",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d10d16915dfda8fce7d60fb782f71172fabdb47bcc673274d279f8a2a2eb85cb",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T14:09:55.724Z",
+      "finishedAt": "2026-11-24T14:09:55.841Z",
+      "durationMs": 68.16983300000004,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rig-detail-native-phone-proof-20261124a.json",
+        "sha256": "efd651e9fcdad25eaa69e11ac07709974e98f7737b2a74dbee50310b1c488227"
+      }
+    },
+    {
+      "id": "e46188e8-236f-4d76-8884-cad8f5f086d3",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "5ecc87c55fee9b24ee1806051412221f8e511d96170a6257a62cdd41e7bb4f19",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T14:10:02.137Z",
+      "finishedAt": "2026-11-24T14:11:54.499Z",
+      "durationMs": 112328.696417,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rig-detail-native-pad-20261124a.json",
+        "sha256": "4493ae306395d11ec842058261fdd439cf270f26cc051364ffb42fe839ae650a"
+      }
+    },
+    {
+      "id": "8c460f2a-ad0e-44f5-8aef-a28540f47428",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "037fbdf1a70da789d505ab7b6c32856d8616723c7e2b59f4fcbc8544ed9d2123",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T14:12:05.429Z",
+      "finishedAt": "2026-11-24T14:12:05.541Z",
+      "durationMs": 66.27137499999998,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rig-detail-native-pad-proof-20261124a.json",
+        "sha256": "5311be3c9621dc441545ba47fbdbcb7fb17cd961675313416796e78edf6d5e46"
+      }
+    },
+    {
+      "id": "2b68b7d4-5e5e-49e3-9523-b2adc0c1b634",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "265867c2b60b639c8fc66fea9ed157bf7cf05d267165ab2f605e5911ab2cfb5b",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T14:12:06.009Z",
+      "finishedAt": "2026-11-24T14:13:01.046Z",
+      "durationMs": 55013.718875,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rig-detail-immersive-phone-20261124a.json",
+        "sha256": "ececdcf2c70fa01c28fc5a8ff1bf07bb22388440bc638b8486a1ed0c09ba31ab"
+      }
+    },
+    {
+      "id": "b895b5aa-25d2-44dc-a8a0-af44c814819d",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "f70fd7e8faf6b37c13c94be9ad4786c5fe9dd31ede23983723d4bed3619b1567",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T14:13:48.440Z",
+      "finishedAt": "2026-11-24T14:13:48.675Z",
+      "durationMs": 124.52750000000015,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rig-detail-immersive-phone-proof-20261124a.json",
+        "sha256": "af69e01a87f1bc2bc9f833f11bb1e65a3d7ceca5b1beea0f74cdc551c358a5e2"
+      }
+    },
+    {
+      "id": "920b1b84-bfcc-42d1-b5a5-c7f8888ec937",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "aeaa4a348f5078377cf0a1ad46634f7c5bb8816958c5183109fd8578c701511e",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T14:13:48.584Z",
+      "finishedAt": "2026-11-24T14:15:02.943Z",
+      "durationMs": 74321.317459,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rig-detail-immersive-pad-20261124a.json",
+        "sha256": "8ea7a3bb4874d3304e2b15053b9320aa8cc877bc163d696bfc81397c1f8bc054"
+      }
+    },
+    {
+      "id": "6677e71f-9b42-4d0f-a193-e2e3a3a689b1",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "e84b022fde689822354888dc8e3076666f1e7a34ad740819dcb00aa8fdcb3268",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T14:15:21.557Z",
+      "finishedAt": "2026-11-24T14:15:21.784Z",
+      "durationMs": 146.66179099999954,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rig-detail-immersive-phone-proof-20261124b.json",
+        "sha256": "4e88d4e80bb61a6f93c3cfbed66bf22707f4db5d4b3b574cb84dad3de4669893"
+      }
+    },
+    {
+      "id": "e197f021-4c57-4176-9ca8-91bcd0964cec",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "0246f2e243238c8854313c47044e320895ff58d0510f932763c4422987a8585f",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T14:15:31.276Z",
+      "finishedAt": "2026-11-24T14:20:44.792Z",
+      "durationMs": 313468.451084,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rig-detail-immersive-pad-20261124b.json",
+        "sha256": "1cd5fd41720ce089e554f328cef0e26cb1df3aa7270ee73633ac6bafe8013544"
+      }
+    },
+    {
+      "id": "02536e59-04f1-449f-9c89-5fd86254ba82",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "3745458c1d3a395c0117b9d1cb27b907abf45987ea38b4f229c2957818aa6e79",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T14:21:07.247Z",
+      "finishedAt": "2026-11-24T14:21:07.365Z",
+      "durationMs": 91.67441599999995,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rig-detail-immersive-pad-proof-20261124b.json",
+        "sha256": "a76823b22139fee80a2e037597b4858ac7eb4e84f5a84c446bf2b777b50c304b"
+      }
+    },
+    {
+      "id": "9dd4ddbc-58a7-4a75-9520-82dacb0bf393",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "c8cdc77e110b80629400486e8e9e940ef7abdb009b23d1226db5c667bb479a9d",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T14:21:16.082Z",
+      "finishedAt": "2026-11-24T14:21:20.516Z",
+      "durationMs": 4400.8555,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rig-detail-retention-after-20261124a.json",
+        "sha256": "bb7424a73bb59ec7c7cf2f0253c55cd249e55d1c374ddebaffff8f773aa46b99"
+      }
+    },
+    {
+      "id": "68391923-e3d8-461f-93b4-d1d2d9661791",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "8c08036bf8900daacaff30503b67e555d8a4b7f460e8556a31813339181b5008",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T14:21:37.333Z",
+      "finishedAt": "2026-11-24T14:22:35.776Z",
+      "durationMs": 58411.030249999996,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rig-detail-reopen-20261124a.json",
+        "sha256": "d9c9f1b70a5eeab3e7285922fe61579e0ca23b0370d7cf92cf229d2ef2919976"
+      }
+    },
+    {
+      "id": "a153e4cd-a7fe-4fa7-8c83-1d3db260d250",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "e6bad27a93054ac246d7f280f9afb4a25039c71ce4574c19e2172c8c48be0cbe",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T14:22:50.775Z",
+      "finishedAt": "2026-11-24T14:22:52.647Z",
+      "durationMs": 1835.4492089999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rig-detail-reopen-proof-20261124a.json",
+        "sha256": "d16e53abdba036ee67f89e46264284c2e3a351ddd87371be8768134230a0872c"
+      }
+    },
+    {
+      "id": "23a8c9b4-1aae-406f-9345-4e532e083015",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "482274c481a13ebc0dc6069c063fa4dc03be7eb2aeb7de361d01674c732f6562",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T14:24:16.180Z",
+      "finishedAt": "2026-11-24T14:24:16.391Z",
+      "durationMs": 179.110458,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rig-detail-record-audit-20261124a.json",
+        "sha256": "386c59eea220e54e767be30f0b87b9f3f1f6817abd3ae8594aa9556d5397022d"
+      }
+    },
+    {
+      "id": "648df5bd-350e-487d-9b47-38b334b82f36",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "361e67b99fe2bbd22dd315b9419779d8c65729819b35d79aa876dd8b5b8e2c12",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T14:24:38.718Z",
+      "finishedAt": "2026-11-24T14:24:40.777Z",
+      "durationMs": 2020.53825,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rig-detail-public-final-20261124a.json",
+        "sha256": "58733b8d9a16699b1c7cb399e661965c3bb6c488ee46c85e5c26d054bdd2d900"
       }
     }
   ]

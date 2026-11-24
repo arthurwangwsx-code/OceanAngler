@@ -396,6 +396,42 @@
         {
           "path": "art/previews/rig-detail/studio-whole.png",
           "sha256": "daf003c3f571cdbb9d5d78e3c3951a313c9d754717b19bc40d8c43bcb1ca4f1b"
+        },
+        {
+          "path": "art/previews/rig-detail/native-phone-cast.png",
+          "sha256": "c9822c1c22feb08e3305cb93b001f28b47ad9260462e221b3c27e1ab986029d0"
+        },
+        {
+          "path": "art/previews/rig-detail/native-phone-exit.png",
+          "sha256": "be671256dbf59386f2d329886c2c0af2f21b127d30f80d387bf8cfb328babc38"
+        },
+        {
+          "path": "art/previews/rig-detail/native-phone-fighting.png",
+          "sha256": "11a115d78dd57ac60ed4ef1046192e0ddf5ed73dc14b46caf440641df614f54a"
+        },
+        {
+          "path": "art/previews/rig-detail/native-phone-landed.png",
+          "sha256": "bc985acc0d31233c4c1b0f59d9ade954dc482f7fd37519c844b8e36ff878ec72"
+        },
+        {
+          "path": "art/previews/rig-detail/native-phone-reel.png",
+          "sha256": "622c79ae3e98748429bd6ad00dc182db92711e65ae188b87d4343a1ec83c8d1c"
+        },
+        {
+          "path": "art/previews/rig-detail/native-phone-settings.png",
+          "sha256": "65148f1b67d8251f39e6cb9043ae9e6296fdd4e4c6c641669629e019a20ef32d"
+        },
+        {
+          "path": "art/previews/rig-detail/native-preserved-home.png",
+          "sha256": "f1313a40ddeee40ef63b978f49718c9445d8b51407c7b776ae624938ce786c9f"
+        },
+        {
+          "path": "art/previews/rig-detail/native-tablet-landed.png",
+          "sha256": "8cbf7e7d60aa87f32389c561fb12159b3af47e68e1b487cddae669597f15284c"
+        },
+        {
+          "path": "art/previews/rig-detail/native-tablet-reel.png",
+          "sha256": "e728258771d97e43443a21ef6ae5389ba83f76ae804cc270d9db2a1722175c42"
         }
       ],
       "note": "Original 2.35m spinning rig, eight assemblies and three LODs. Independent hollow line roller, continuous visible winding and articulated bail carrier. Source/GPU checks pass; human/device art qualification open. Earlier spinning-rig previews remain historical. No third-party photographs or meshes."
