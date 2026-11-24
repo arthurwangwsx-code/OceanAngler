@@ -1586,6 +1586,44 @@
         }
       ],
       "note": "All3 included original images actually viewed. Contacts for32other generated frames checked privately; not all32 full-size. Only own game images, no OS/sidebar, identifiers, private photography or raw logs; registered OFL font in own UI. Not art/child/physical-device qualification."
+    },
+    {
+      "id": "complete-content-native-reviewed-frames",
+      "author": "OceanAngler contributors",
+      "source": "Frozen0bea41d own Simulator renders, and own OS-mouse18/18 pages reopened in new processes",
+      "license": "MIT",
+      "redistribution": true,
+      "sourceRedistribution": true,
+      "canModify": true,
+      "acquiredAt": "2026-11-24",
+      "status": "FUNCTIONAL_PASS_ART_REVIEW_PENDING",
+      "artifacts": [
+        {
+          "path": "art/previews/complete-content-journey/phone-resumed-tasks18.png",
+          "sha256": "e10fe5a8021fa48e55ab295d9be27cd0d4f3152aa40ba283772687e251b9c827"
+        },
+        {
+          "path": "art/previews/complete-content-journey/tablet-resumed-tasks18.png",
+          "sha256": "e26ee888c9feade038037c57eb7dcf5923c67643b707639aef6d93d5b5a7e905"
+        },
+        {
+          "path": "art/previews/complete-content-journey/phone-tasks-species12.png",
+          "sha256": "754a16b96038a3a4b45210de2473a2f9c5194b2ab103f6264d7e8c6c313245ee"
+        },
+        {
+          "path": "art/previews/complete-content-journey/tablet-tasks-points.png",
+          "sha256": "185d949d8ee76028de1561fb22f9ed14b30daff4542383f5b8bbeada29e3d892"
+        },
+        {
+          "path": "art/previews/complete-content-journey/phone-gear-scroll-reset.png",
+          "sha256": "cf145faee4b7e010e5a9fb271e0dec6163db4a7a3db3e4b962ff0d8b890d5e2b"
+        },
+        {
+          "path": "art/previews/complete-content-journey/tablet-halibut-prototype.png",
+          "sha256": "fbd4bc4b8217aec6e5c32c5e10a51691f912074f40ec89784ab3926abac4d4b0"
+        }
+      ],
+      "note": "All6 selected original images actually viewed. All72 generated frames checked via4 private contact sheets;15 selected original frames viewed, not all72 full-size. Own QA game only, with registered OFL font. Halibut remains A0 and scientifically mismatched; not finished art, child or physical-device acceptance. No OS/sidebar, device IDs, private photos or raw logs."
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."

@@ -1,0 +1,323 @@
+{
+  "status": "FUNCTIONAL_SIMULATOR_JOURNEY_PASS_FULL_PRODUCT_PARTIAL",
+  "source": {
+    "sourceCommit": "0bea41d0df348c0256a33dfbd8701119ff2b1e63",
+    "sourceDigest": "7531f0dff16f3a8cb7f4a2ae0530670684559d7e2989a2495f2ef70f240fd2e3",
+    "projectSettingsSha256": "487dd5cc37a763cb9f23702f91a10b6680094d7b2165050d05327b1376c0d54d"
+  },
+  "appDigest": "a671481c855c163b0a508b275fdcb6d164b03a55ab7ae903df18154618f5e829",
+  "distribution": "LOCAL_SIMULATOR_ONLY_NOT_TESTFLIGHT",
+  "nativeConfiguration": {
+    "platform": "iphonesimulator",
+    "architectures": [
+      "arm64"
+    ],
+    "deviceFamilies": [
+      1,
+      2
+    ],
+    "version": "0.1.0",
+    "build": "5",
+    "renderProbe": {
+      "phone": {
+        "graphics": "Metal",
+        "quality": "Medium",
+        "nativeSamples": 4,
+        "desiredSamples": 4,
+        "hdrBefore": true,
+        "hdrAfter": true,
+        "ldrControl": false
+      },
+      "tablet": {
+        "graphics": "Metal",
+        "quality": "Medium",
+        "nativeSamples": 4,
+        "desiredSamples": 4,
+        "hdrBefore": true,
+        "hdrAfter": true,
+        "ldrControl": false
+      }
+    }
+  },
+  "editor": {
+    "total": 52,
+    "passed": 52,
+    "failed": 0,
+    "xmlSha256": "fa8bd74961570537196b2125dc49351c87411405af03c2b3cce7b642ce9ac922"
+  },
+  "headlessPlayMode": {
+    "total": 2,
+    "passed": 2,
+    "failed": 0,
+    "scope": "two targeted ContinuousJourneyTests; not a new full13-case suite",
+    "contentRounds": 20,
+    "contentPoints": 3820,
+    "fixed20Points": 3622,
+    "runtimeHashesUnchangedAfterTests": true,
+    "postRunChange": "test-only originals.Clear cleanup map reset compiled by final Editor52; Player Runtime unchanged",
+    "xmlSha256": "d1c4bcbec54bbfabf84743d39e770da559f0a18c5c4517ff395da5dcad9f42b5"
+  },
+  "native": {
+    "phone": {
+      "label": "content20261124phone1",
+      "status": "PASS",
+      "scope": "independent persisted ledger/catalog validation; native automatic EventSystem, not OS touch",
+      "rounds": 25,
+      "points": 4455,
+      "species": 12,
+      "tasks": 18,
+      "gear": 20,
+      "observations": 3,
+      "duplicateReleaseTaps": 25,
+      "firstRoundSeconds": 22.815120697021484,
+      "totalSeconds": 491.41412353515625,
+      "renderedFrames": 36,
+      "saveSha256": "e0732947026735bab64f2f84354b984788df2a4a7d759a8fbf752e83e14ef339",
+      "source": {
+        "sourceCommit": "0bea41d0df348c0256a33dfbd8701119ff2b1e63",
+        "sourceDigest": "7531f0dff16f3a8cb7f4a2ae0530670684559d7e2989a2495f2ef70f240fd2e3",
+        "projectSettingsSha256": "487dd5cc37a763cb9f23702f91a10b6680094d7b2165050d05327b1376c0d54d"
+      },
+      "appDigest": "a671481c855c163b0a508b275fdcb6d164b03a55ab7ae903df18154618f5e829",
+      "taskValues": {
+        "task-01": 25,
+        "task-02": 25,
+        "task-03": 25,
+        "task-04": 25,
+        "task-05": 12,
+        "task-06": 12,
+        "task-07": 12,
+        "task-08": 12,
+        "task-09": 9,
+        "task-10": 11,
+        "task-11": 5,
+        "task-12": 25,
+        "task-13": 25,
+        "task-14": 25,
+        "task-15": 15,
+        "task-16": 15,
+        "task-17": 4455,
+        "task-18": 4455
+      },
+      "habitatCounts": {
+        "bay": 9,
+        "channel": 11,
+        "slope": 5
+      },
+      "modeCounts": {
+        "assisted": 10,
+        "standard": 15
+      }
+    },
+    "tablet": {
+      "label": "content20261124pad1",
+      "status": "PASS",
+      "scope": "independent persisted ledger/catalog validation; native automatic EventSystem, not OS touch",
+      "rounds": 20,
+      "points": 3703,
+      "species": 12,
+      "tasks": 18,
+      "gear": 20,
+      "observations": 3,
+      "duplicateReleaseTaps": 20,
+      "firstRoundSeconds": 22.018814086914062,
+      "totalSeconds": 390.2463684082031,
+      "renderedFrames": 36,
+      "saveSha256": "4478f13dfe86006428506b1200d0557d845040120946d158f493bb5fc9b6325f",
+      "source": {
+        "sourceCommit": "0bea41d0df348c0256a33dfbd8701119ff2b1e63",
+        "sourceDigest": "7531f0dff16f3a8cb7f4a2ae0530670684559d7e2989a2495f2ef70f240fd2e3",
+        "projectSettingsSha256": "487dd5cc37a763cb9f23702f91a10b6680094d7b2165050d05327b1376c0d54d"
+      },
+      "appDigest": "a671481c855c163b0a508b275fdcb6d164b03a55ab7ae903df18154618f5e829",
+      "taskValues": {
+        "task-01": 20,
+        "task-02": 20,
+        "task-03": 20,
+        "task-04": 20,
+        "task-05": 12,
+        "task-06": 12,
+        "task-07": 12,
+        "task-08": 12,
+        "task-09": 10,
+        "task-10": 4,
+        "task-11": 6,
+        "task-12": 20,
+        "task-13": 20,
+        "task-14": 20,
+        "task-15": 10,
+        "task-16": 10,
+        "task-17": 3703,
+        "task-18": 3703
+      },
+      "habitatCounts": {
+        "bay": 10,
+        "channel": 4,
+        "slope": 6
+      },
+      "modeCounts": {
+        "assisted": 10,
+        "standard": 10
+      }
+    }
+  },
+  "newProcessRestore": {
+    "phone": {
+      "status": "NEW_PROCESS_UNCHANGED_SAVE_CAPTURED",
+      "device": "phone",
+      "points": 4455,
+      "catches": 25,
+      "species": 12,
+      "tasks": 18,
+      "observations": 3,
+      "newProcessIdDiffers": true,
+      "saveByteIdentical": true,
+      "saveSha256": "e0732947026735bab64f2f84354b984788df2a4a7d759a8fbf752e83e14ef339",
+      "tasksFrameSha256": "e10fe5a8021fa48e55ab295d9be27cd0d4f3152aa40ba283772687e251b9c827",
+      "scope": "Cua OS mouse opened18/18 task page; no new catch, capture not physical touch"
+    },
+    "tablet": {
+      "status": "NEW_PROCESS_UNCHANGED_SAVE_CAPTURED",
+      "device": "tablet",
+      "points": 3703,
+      "catches": 20,
+      "species": 12,
+      "tasks": 18,
+      "observations": 3,
+      "newProcessIdDiffers": true,
+      "saveByteIdentical": true,
+      "saveSha256": "4478f13dfe86006428506b1200d0557d845040120946d158f493bb5fc9b6325f",
+      "tasksFrameSha256": "e26ee888c9feade038037c57eb7dcf5923c67643b707639aef6d93d5b5a7e905",
+      "scope": "Cua OS mouse opened18/18 task page; no new catch, capture not physical touch"
+    }
+  },
+  "oldQARetention": {
+    "status": "PASS",
+    "scope": "three original QA files after app update; current successful launch maps and MCM owner verified; no reconstructed progress",
+    "files": [
+      {
+        "label": "journeyphone20b",
+        "byteIdentical": true,
+        "checksumValid": true,
+        "catches": 20,
+        "points": 3333,
+        "observations": 3,
+        "sha256": "dc70f508b5864e6cdc6023b4dc072a82f66ff597514a7a438f2a7e077544d249"
+      },
+      {
+        "label": "irismanual1",
+        "byteIdentical": true,
+        "checksumValid": true,
+        "catches": 1,
+        "points": 205,
+        "observations": 0,
+        "sha256": "fa0f36bbd8cd270015f5d27e99f32111bdf3b42c4f6eb5b79203abfc64c31520"
+      },
+      {
+        "label": "journeypad20b",
+        "byteIdentical": true,
+        "checksumValid": true,
+        "catches": 20,
+        "points": 3444,
+        "observations": 3,
+        "sha256": "48a974861099ef885791c545c4691f14d69642a733a486144ea80333671d7e3e"
+      }
+    ],
+    "personalPhoneTouched": false,
+    "testFlightChangedByThisTurn": false
+  },
+  "visualReview": {
+    "fullSizeViewed": {
+      "content20261124phone1": [
+        "round-01-landed.png",
+        "round-10-landed.png",
+        "content-tasks-header.png",
+        "content-tasks-row-04.png",
+        "content-tasks-row-09.png",
+        "content-gear-rod.png",
+        "content-species-halibut.png"
+      ],
+      "content20261124phoneresume1": [
+        "tasks18.png"
+      ],
+      "content20261124pad1": [
+        "round-01-landed.png",
+        "content-tasks-header.png",
+        "content-tasks-row-04.png",
+        "content-tasks-row-09.png",
+        "content-gear-rod.png",
+        "content-species-halibut.png"
+      ],
+      "content20261124padresume1": [
+        "tasks18.png"
+      ]
+    },
+    "contactSheetsViewed": [
+      "content20261124phone1/contact-1.jpg",
+      "content20261124phone1/contact-2.jpg",
+      "content20261124pad1/contact-1.jpg",
+      "content20261124pad1/contact-2.jpg"
+    ],
+    "findings": [
+      "Phone landed text and action visible in both viewed frames.",
+      "Authored hero still has angular nose/jaw shading; A1-A3 not passed.",
+      "Nonhero mackerel remains obvious polygonal A0 with flat fins; twelve collected records do not mean twelve finished models.",
+      "Gear selection rebuild returns list to top; equipped bottom item and confirmation are offscreen/stale. Selection ledger is correct, UX remains open.",
+      "Halibut A0 body is symmetric/deep-fish placeholder despite right-eyed flatfish text. This fails scientific/art model acceptance; do not treat12/12 collected as12 finished assets.",
+      "Wide halibut framing also clips the A0 tail/right edge.",
+      "Pad Device Hub was portrait while game rendered landscape; one Rotate Left aligned it, then OS mouse opened18/18/3703 page. This is one Simulator rotation, not full orientation qualification."
+    ],
+    "scope": "actual own screenshots; not child/science/physical-device acceptance"
+  },
+  "selectedPublicImages": [
+    {
+      "path": "art/previews/complete-content-journey/phone-resumed-tasks18.png",
+      "sha256": "e10fe5a8021fa48e55ab295d9be27cd0d4f3152aa40ba283772687e251b9c827"
+    },
+    {
+      "path": "art/previews/complete-content-journey/tablet-resumed-tasks18.png",
+      "sha256": "e26ee888c9feade038037c57eb7dcf5923c67643b707639aef6d93d5b5a7e905"
+    },
+    {
+      "path": "art/previews/complete-content-journey/phone-tasks-species12.png",
+      "sha256": "754a16b96038a3a4b45210de2473a2f9c5194b2ab103f6264d7e8c6c313245ee"
+    },
+    {
+      "path": "art/previews/complete-content-journey/tablet-tasks-points.png",
+      "sha256": "185d949d8ee76028de1561fb22f9ed14b30daff4542383f5b8bbeada29e3d892"
+    },
+    {
+      "path": "art/previews/complete-content-journey/phone-gear-scroll-reset.png",
+      "sha256": "cf145faee4b7e010e5a9fb271e0dec6163db4a7a3db3e4b962ff0d8b890d5e2b"
+    },
+    {
+      "path": "art/previews/complete-content-journey/tablet-halibut-prototype.png",
+      "sha256": "fbd4bc4b8217aec6e5c32c5e10a51691f912074f40ec89784ab3926abac4d4b0"
+    }
+  ],
+  "openIssues": [
+    "Gear selection rebuild resets scroll to top; phone equipped bottom item disappears and stale catch notice remains.",
+    "Halibut A0 shape is a symmetric deep fish, inconsistent with right-eyed flatfish information; model scientific/art acceptance FAIL.",
+    "Wide halibut tail/right edge framing clipped; final model/camera framing incomplete.",
+    "Hero nose/jaw shading, remaining authored fish/observation models, full gear/habitats and A1-A3 remain incomplete.",
+    "Child first-fish and understanding, science/user review, minimum OS, physical iPhone/iPad20-minute performance/recovery, TestFlight-source install still open."
+  ],
+  "userArtReview": "REQUESTED_PENDING_NO_APPROVAL_INFERRED",
+  "physicalPhoneActionsThisTurn": false,
+  "testFlightActionsThisTurn": false,
+  "independentReceiptAudit": "INCOMPLETE_EXISTING_HISTORY_GAPS",
+  "apply": "IN_PROGRESS",
+  "measurementAudit": {
+    "status": "NEW_BINDINGS_PASS_HISTORY_GAPS_REMAIN",
+    "baseCommit": "47bf0bcb1aff72e6e391a9168d05c23a7058dad0",
+    "priorCommittedRecordsUnchanged": 741,
+    "newCompletedBeforeAudit": 19,
+    "newPassedBeforeAudit": 19,
+    "newNonzeroRetained": [],
+    "newOrphanCompletions": 0,
+    "independentReceiptAudit": "INCOMPLETE",
+    "apply": "IN_PROGRESS",
+    "ownAuditCompletionBoundAndPassed": true,
+    "newCompletedIncludingAudit": 20
+  }
+}
