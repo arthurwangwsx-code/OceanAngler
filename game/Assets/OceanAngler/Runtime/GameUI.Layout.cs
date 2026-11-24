@@ -10,7 +10,7 @@ namespace OceanAngler
         {
             var header=At(pageRoot,"Header",Navy,0,0,0,Compact?44:80);
             IconButton(header,"上一级",TouchSymbol.Kind.Back,8,0,92,Compact?44:70,GoBack,32);
-            Label(header,page=="准备"?"出海准备":page,Compact?20:30,Color.white,100,Compact?6:14,260,Compact?32:46);
+            Label(header,page=="准备"?"出海准备":page=="海湾观察"?"海域观察":page,Compact?20:30,Color.white,100,Compact?6:14,260,Compact?32:46);
             pointsText=Label(header,game.Progress.RequiresRecovery?"存档需要恢复":"研究积分  "+game.Progress.Data.totalPoints,Compact?17:22,Gold,Compact?-260:-310,Compact?9:22,Compact?145:280,Compact?28:36,true);
             if(!game.Progress.RequiresRecovery)IconButton(header,"菜单",TouchSymbol.Kind.Home,-78,0,72,Compact?44:70,()=>Navigate("首页"),32);
             var nav=At(pageRoot,"Navigation",Navy,0,Compact?44:82,0,Compact?52:60);

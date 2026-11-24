@@ -34,6 +34,15 @@ namespace OceanAngler
         IEnumerator SlopeFrame(string name)
         {
             var habitat=GetComponent<OceanWorld>().ActiveHabitat;var sun=FindObjectsByType<Light>(FindObjectsSortMode.None).First(l=>l.type==LightType.Directional&&l.isActiveAndEnabled);
+            var ui=GetComponent<GameUI>();
+            JourneyRequire(FindObjectsByType<UnityEngine.UI.Text>(FindObjectsSortMode.None).Any(t=>t.isActiveAndEnabled&&t.text=="海域观察"),"slope-generic-preview-title");
+            if(game.Progress.Data.habitatId=="slope"&&!ui.HabitatSurfaceView&&ui.HabitatAngle%2!=0)
+            {
+                var bounds=habitat.GetComponentsInChildren<Renderer>(true).Single(r=>r.name=="ROV_LOD0").bounds;float left=float.PositiveInfinity,right=float.NegativeInfinity;
+                for(int i=0;i<8;i++){var point=Camera.main.WorldToScreenPoint(bounds.center+Vector3.Scale(bounds.extents,new Vector3((i&1)==0?-1:1,(i&2)==0?-1:1,(i&4)==0?-1:1)));JourneyRequire(point.z>0,"slope-rov-in-front-of-preview-camera");left=Mathf.Min(left,point.x);right=Mathf.Max(right,point.x);}
+                var panel=FindObjectsByType<RectTransform>(FindObjectsSortMode.None).Single(t=>t.name=="HabitatDetails");var corners=new Vector3[4];panel.GetWorldCorners(corners);float padding=8*DisplayMetrics.PixelsPerPoint;
+                JourneyRequire(left>=DisplayMetrics.SafeArea.xMin+padding&&right<=corners[0].x-padding,"slope-rov-bounds-clear-of-preview-panel-and-safe-edge");
+            }
             slopeViews.Add(new SlopeView{frame=name,habitat=game.Progress.Data.habitatId,camera=Camera.main.transform.position,fog=RenderSettings.fogColor,sun=sun.color,sunIntensity=sun.intensity,seaLevel=habitat.SeaLevel,above=GetComponent<GameUI>().HabitatSurfaceView});
             yield return JourneyFrame(name);
         }
@@ -62,7 +71,7 @@ namespace OceanAngler
                 yield return JourneyClick("换个角度",true);yield return null;yield return null;yield return SlopeFrame(prefix+"-alternate");
                 yield return JourneyClick("返回钓鱼",true);yield return null;yield return null;yield return JourneyClick("海域与装备",true);yield return null;yield return null;
             }
-            yield return JourneyClick("开始钓鱼",true);yield return null;yield return null;CheckImmersiveHud();yield return JourneyFrame("slope-ready");
+            yield return JourneyClick("开始钓鱼",true);yield return null;yield return null;JourneyRequire(Mathf.Abs(Camera.main.projectionMatrix.m02)<.0001f,"slope-play-restores-centered-projection");CheckImmersiveHud();yield return JourneyFrame("slope-ready");
             var cast=Find("按住蓄力");Pointer(cast,true);yield return new WaitForSecondsRealtime(.3f);Pointer(cast,false);
             float deadline=Time.realtimeSinceStartup+20;while(game.Session.Phase!=FishingPhase.Bite&&Time.realtimeSinceStartup<deadline)yield return null;
             JourneyRequire(game.Session.Phase==FishingPhase.Bite,"slope-normal-bite");yield return null;yield return null;CheckImmersiveHud();yield return JourneyClick("提竿",true);yield return null;yield return null;CheckImmersiveHud();yield return JourneyFrame("slope-fighting");

@@ -6,6 +6,15 @@ namespace OceanAngler
         public bool InspectingHabitat=>page=="海湾观察";
         public bool HabitatSurfaceView {get;private set;}=true;
         public int HabitatAngle {get;private set;}
+        public float HabitatCompositionOffset
+        {
+            get
+            {
+                float panel=Mathf.Min(300,Width*.35f),pixels=DisplayMetrics.PixelsPerPoint;
+                float center=DisplayMetrics.SafeArea.xMin+(Width-panel-24)*pixels*.5f;
+                return 1-2*center/Screen.width;
+            }
+        }
         void BuildHabitatPreview()
         {
             float width=Mathf.Min(300,Width*.35f);

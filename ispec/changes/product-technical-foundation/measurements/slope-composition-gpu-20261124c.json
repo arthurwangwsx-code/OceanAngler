@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "59d1bce8-e14d-4558-908b-5b7d73e97ad5",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "778a1a10a1d749bb7d7b67b4b34756064be5689ad832f08f6d55bdc391007120",
+    "category": "e2e",
+    "executable": "python3",
+    "startedAt": "2026-11-24T10:59:23.768Z",
+    "finishedAt": "2026-11-24T10:59:36.386Z",
+    "durationMs": 12586.109875,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      "tools/game.py",
+      "slope-review",
+      "--label",
+      "slopegpu20261124c",
+      "--review-target",
+      "ios"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    "tools/game.py",
+    "slope-review",
+    "--label",
+    "slopegpu20261124c",
+    "--review-target",
+    "ios"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T10:59:23.768Z",
+  "finishedAt": "2026-11-24T10:59:36.386Z",
+  "durationMs": 12586.109875
+}

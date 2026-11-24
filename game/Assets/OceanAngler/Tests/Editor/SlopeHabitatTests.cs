@@ -41,6 +41,17 @@ namespace OceanAngler.Tests
             habitat.Present(camera,true,true,0,true,false);Assert.That(light.color,Is.EqualTo(originalColor));Assert.That(light.intensity,Is.EqualTo(intensity));Assert.That(RenderSettings.ambientMode,Is.EqualTo(originalMode));Assert.That(RenderSettings.ambientLight,Is.EqualTo(originalAmbient));Assert.That(habitat.lighting.inspectionLights.All(l=>!l.enabled),Is.True);Assert.That(habitat.suspendedParticles.gameObject.activeSelf,Is.False);
             habitat.Present(camera,true,false,1,true,true);Assert.That(Vector3.Distance(camera.transform.position,habitat.reefCamera.position),Is.LessThan(.001f));Assert.That(habitat.suspendedParticles.gameObject.activeSelf,Is.False);habitat.lighting.Restore();habitat.lighting.Restore();root.SetActive(false);Assert.That(light.intensity,Is.EqualTo(intensity));Assert.That(light.color,Is.EqualTo(originalColor));Assert.That(RenderSettings.ambientLight,Is.EqualTo(originalAmbient));
         }
+        [Test] public void PreviewProjectionClearsRovFromRightPanelAndRestoresCenteredPlay()
+        {
+            camera.aspect=2.17f;var bounds=root.GetComponentsInChildren<Renderer>(true).Single(r=>r.name=="ROV_LOD0").bounds;
+            float RightEdge()
+            {
+                float right=float.NegativeInfinity;for(int i=0;i<8;i++)right=Mathf.Max(right,camera.WorldToViewportPoint(bounds.center+Vector3.Scale(bounds.extents,new Vector3((i&1)==0?-1:1,(i&2)==0?-1:1,(i&4)==0?-1:1))).x);return right;
+            }
+            habitat.Present(camera,true,false,1,true,false);Assert.That(RightEdge(),Is.GreaterThan(.62f),"Old centered view reproduces the panel obstruction");
+            habitat.Present(camera,true,false,1,true,false,true,.33f);Assert.That(RightEdge(),Is.LessThan(.62f));Assert.That(camera.WorldToViewportPoint(habitat.reefTarget.position).x,Is.EqualTo(.335f).Within(.001f));
+            habitat.Present(camera,false,false,0,true,false);Assert.That(camera.WorldToViewportPoint(habitat.underwaterTarget.position).x,Is.EqualTo(.5f).Within(.001f));
+        }
         [Test] public void ImportedSlopeClearsFishingAndWhaleSharkVisitVolumesAtAllLods()
         {
             var triangles=new List<Bounds>();

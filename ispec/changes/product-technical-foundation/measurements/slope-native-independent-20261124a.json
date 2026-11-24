@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "7e2f0dce-aea6-4070-9836-a4d60dddc7f3",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "a1937cd6d9e496c07f8b0f6f4014a48206a9e4d31addc8e29bf5c03fc6acac60",
+    "category": "e2e",
+    "executable": "python3",
+    "startedAt": "2026-11-24T10:54:56.158Z",
+    "finishedAt": "2026-11-24T10:54:56.344Z",
+    "durationMs": 127.06566699999985,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/slope-qa/verify-native.py",
+      "slope20261124phone1",
+      "slope20261124pad1"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/slope-qa/verify-native.py",
+    "slope20261124phone1",
+    "slope20261124pad1"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T10:54:56.158Z",
+  "finishedAt": "2026-11-24T10:54:56.344Z",
+  "durationMs": 127.06566699999985
+}

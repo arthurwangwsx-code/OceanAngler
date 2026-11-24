@@ -14,7 +14,7 @@ namespace OceanAngler
         public static string ResourceFor(string id)=>id=="bay"?"Models/CoralBay":id=="channel"?"Models/NearshoreChannel":id=="slope"?"Models/ContinentalSlope":null;
         protected virtual void PresentAmbient(bool paused,bool reduced,bool visible){}
         float waterTime;MaterialPropertyBlock waterProperties;
-        public void Present(Camera camera,bool observing,bool above,int angle,bool paused,bool reduced,bool showAmbient=true)
+        public void Present(Camera camera,bool observing,bool above,int angle,bool paused,bool reduced,bool showAmbient=true,float compositionOffset=0)
         {
             PresentAmbient(paused,reduced,showAmbient);
             if(lighting!=null)lighting.Present(above);
@@ -29,6 +29,10 @@ namespace OceanAngler
             // Explicit destinations make mode changes reversible and keep the fishing camera stable.
             camera.transform.SetPositionAndRotation(from.position,Quaternion.LookRotation(target.position-from.position,Vector3.up));
             camera.fieldOfView=observing?58:42;camera.depthTextureMode|=DepthTextureMode.Depth;
+            // Reserve the actual preview panel width without moving the subject
+            // or adding more play HUD. Reflection uses this same projection.
+            camera.ResetProjectionMatrix();
+            if(compositionOffset!=0){var projection=camera.projectionMatrix;projection.m02=compositionOffset;camera.projectionMatrix=projection;}
             RenderSettings.fog=true;RenderSettings.fogMode=FogMode.ExponentialSquared;
             RenderSettings.fogDensity=above?surfaceDensity:underwaterDensity;
             RenderSettings.fogColor=above?surfaceColor:underwaterColor;
