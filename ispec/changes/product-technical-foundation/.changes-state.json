@@ -501,6 +501,14 @@
       "checkedAt": "2026-11-24T22:42:02.998Z",
       "durationMs": 135.96320799999995,
       "outcome": "accepted"
+    },
+    {
+      "stageId": "apply",
+      "runId": null,
+      "operation": "start",
+      "checkedAt": "2026-11-24T23:32:03.953Z",
+      "durationMs": 131.776584,
+      "outcome": "accepted"
     }
   ],
   "measurementJournal": {
@@ -13448,6 +13456,39 @@
       "executable": "python3",
       "commandDigest": "b444b2c840c2c4bf19e33f62288a9bff57f4e8fce2e25faa8392fcec9e9fe37a",
       "receiptPath": "measurements/waterline-final-record-integrity-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "b1579735-217a-40c4-82a5-552924bbe4c6",
+      "startedAt": "2026-11-24T23:35:31.665Z",
+      "executable": "python3",
+      "commandDigest": "fe1a1ea3671fb8eb53f477b051e3ab5d29ed634405aa2eb4f1588dabddec075f",
+      "receiptPath": "measurements/immersive-copy-play-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "validation",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "a4b87cd6-0d86-4efe-9162-de59cd4f6e0b",
+      "startedAt": "2026-11-24T23:37:32.174Z",
+      "executable": "python3",
+      "commandDigest": "1b9b750d007c851f920bb86ccb95b6c8d0649e1d11d26d4708a2736b0478955e",
+      "receiptPath": "measurements/immersive-copy-validation-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "publication-audit",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "e8c3aa41-9736-4219-9af3-5634aa255ed2",
+      "startedAt": "2026-11-24T23:37:40.473Z",
+      "executable": "python3",
+      "commandDigest": "d89602c770c16a35b6c5da9a9da4ae967807390aa462f4349604d0463de12f51",
+      "receiptPath": "measurements/immersive-copy-publication-20261125.json"
     }
   ],
   "runMeasurements": [
@@ -34023,6 +34064,63 @@
       "receipt": {
         "path": "measurements/waterline-final-record-integrity-20261125.json",
         "sha256": "bb3bd4dac593ec0e972b19cfe166efa0cfc14935d05ee95cde320d36121f9e03"
+      }
+    },
+    {
+      "id": "b1579735-217a-40c4-82a5-552924bbe4c6",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "fe1a1ea3671fb8eb53f477b051e3ab5d29ed634405aa2eb4f1588dabddec075f",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T23:35:31.665Z",
+      "finishedAt": "2026-11-24T23:36:35.139Z",
+      "durationMs": 63449.081541,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-copy-play-20261125.json",
+        "sha256": "952a3b873b6eca13a52f2bc52d2b0855ea89ebeeec9d60d4fa219c25227fe5ea"
+      }
+    },
+    {
+      "id": "a4b87cd6-0d86-4efe-9162-de59cd4f6e0b",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "1b9b750d007c851f920bb86ccb95b6c8d0649e1d11d26d4708a2736b0478955e",
+      "category": "validation",
+      "executable": "python3",
+      "startedAt": "2026-11-24T23:37:32.174Z",
+      "finishedAt": "2026-11-24T23:37:32.924Z",
+      "durationMs": 714.057291,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-copy-validation-20261125.json",
+        "sha256": "8e35ebec22ae70c675e8282d1463d2b6acea4fb81db8486694517589989a7bbf"
+      }
+    },
+    {
+      "id": "e8c3aa41-9736-4219-9af3-5634aa255ed2",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d89602c770c16a35b6c5da9a9da4ae967807390aa462f4349604d0463de12f51",
+      "category": "publication-audit",
+      "executable": "python3",
+      "startedAt": "2026-11-24T23:37:40.473Z",
+      "finishedAt": "2026-11-24T23:37:41.124Z",
+      "durationMs": 624.754958,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-copy-publication-20261125.json",
+        "sha256": "70f8a390a4933a52ebe46040c2bcf83dafef4969a830000e35f4f44596e3492d"
       }
     }
   ]

@@ -174,9 +174,9 @@ namespace OceanAngler
         string Hint()
         {
             if(game.Session.Paused)return "进度已保留。准备好后点继续，游戏才会恢复。";
-            switch(game.Session.Phase) {case FishingPhase.Ready:return "按住蓄力，松手抛竿。轻点也能抛出。首次探索有辅助陪伴。";case FishingPhase.Casting:return "观察拟饵落水，寻找鱼群。";case FishingPhase.Waiting:return "观察海面，等咬钩提示再提竿。";case FishingPhase.Bite:return "点一下提竿，让鱼线轻轻绷紧。";case FishingPhase.Fighting:return game.Session.Assisted?"按住收线，松手降张力。张力过高时，辅助会帮你松线。":"按住收线，松手降张力。看到警戒提示就及时松手。";case FishingPhase.Landed:return "记录体长和重量，再把它放回海里。积分会和记录一起保存。";default:return "已有积分不会减少，随时可以再试一次。";}
+            switch(game.Session.Phase) {case FishingPhase.Ready:return "按住蓄力，松手抛竿。轻点也能抛出。首次探索有辅助陪伴。";case FishingPhase.Casting:return "观察拟饵落水，寻找鱼群。";case FishingPhase.Waiting:return "观察拟饵，等咬钩提示再提竿。";case FishingPhase.Bite:return "点一下提竿，让鱼线轻轻绷紧。";case FishingPhase.Fighting:return game.Session.Assisted?"按住收线，松手降张力。张力过高时，辅助会帮你松线。":"按住收线，松手降张力。看到警戒提示就及时松手。";case FishingPhase.Landed:return "记录体长和重量，再把它放回海里。积分会和记录一起保存。";default:return "已有积分不会减少，随时可以再试一次。";}
         }
-        string ActionName() => game.Session.Paused?"继续探索":game.Session.Phase==FishingPhase.Ready?"按住蓄力 · 松手抛竿":game.Session.Phase==FishingPhase.Fighting?"按住收线":game.Session.Phase==FishingPhase.Bite?"提竿":game.Session.Phase==FishingPhase.Landed?"记录并放流":game.Session.Phase==FishingPhase.Escaped?"再试一次":"观察海面";
+        string ActionName() => game.Session.Paused?"继续探索":game.Session.Phase==FishingPhase.Ready?"按住蓄力 · 松手抛竿":game.Session.Phase==FishingPhase.Fighting?"按住收线":game.Session.Phase==FishingPhase.Bite?"提竿":game.Session.Phase==FishingPhase.Landed?"记录并放流":game.Session.Phase==FishingPhase.Escaped?"再试一次":game.Session.Phase==FishingPhase.Casting?"等待落水":"等待咬钩";
         void BuildJournal()
         {
             if(Compact){BuildCompactJournal();return;}

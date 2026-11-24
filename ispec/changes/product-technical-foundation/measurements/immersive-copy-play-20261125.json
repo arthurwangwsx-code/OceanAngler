@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "b1579735-217a-40c4-82a5-552924bbe4c6",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "fe1a1ea3671fb8eb53f477b051e3ab5d29ed634405aa2eb4f1588dabddec075f",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-24T23:35:31.665Z",
+    "finishedAt": "2026-11-24T23:36:35.139Z",
+    "durationMs": 63449.081541,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/immersive-copy-qa/run-play.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/immersive-copy-qa/run-play.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T23:35:31.665Z",
+  "finishedAt": "2026-11-24T23:36:35.139Z",
+  "durationMs": 63449.081541
+}

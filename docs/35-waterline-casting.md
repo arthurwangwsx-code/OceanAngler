@@ -11,3 +11,5 @@ REQ-03/05/06/08后续，实施IN_PROGRESS。当前游玩钓具根部y=-0.3，低
 淡入绘制依据[Unity 6.3 GUI.DrawTexture](https://docs.unity.com/en-us/engine/6000.3/script-reference/unityengine/gui/drawtexture)的透明混合契约，仅过渡期间绘制海色，不接收输入。
 
 当前1317bc4完成38项定向Editor、6项定向PlayMode与同包双端各19帧／正常放流195和220分；278份原模型／源资产字节保持，38份旧QA主文件字节保留。实际首包平色水面由无穷时间进入Shader引起，红测复现后改为有限关闭参数，Player读回验证及修正版首屏已审阅。三海域E轮24姿态／48图、关键部件构图通过，但首个首绘／重绘232像素差、最大14/255仍PARTIAL。磁盘中断及未写入的测量完成记录如实保留，历史整体审计INCOMPLETE；不是完整美术／儿童／真机通过。范围、真实失败与原图见[本轮记录](../reports/waterline-casting.md)。
+
+后续提示修正：等待阶段的长提示改为“观察拟饵”，动作短标签按阶段显示“等待落水／等待咬钩”，适用于水面和固定水下镜头，不增加HUD或触控入口。当前提示源码的三项既有沉浸导航PlayMode回归通过，包含仪表文字边界、分层菜单/暂停/退出保护、休息确认；这是无画面Editor验证。前述双端原生画面属于1317bc4，尚未重建本提示修正版原生包或更新TestFlight；完整美术、儿童与真机结论不变，见[提示修正回执](../reports/immersive-waiting-copy.json)。
