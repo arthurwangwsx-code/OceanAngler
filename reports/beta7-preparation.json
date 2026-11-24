@@ -1,5 +1,5 @@
 {
-  "status": "PREPARATION_PASS_NOT_YET_RELEASED",
+  "status": "PREPARATION_PASS_RELEASE_READBACK_PASS",
   "preparedAt": "2026-11-24T17:50:31.010227+00:00",
   "version": "0.1.0",
   "build": "7",
@@ -29,9 +29,9 @@
   },
   "previousSimulatorEvidence": "reports/rest-reminder.json",
   "scope": "Release build/notes preparation for verified rest reminder game implementation; no new physical-device or art acceptance",
-  "freeze": "PENDING",
-  "archive": "PENDING",
-  "upload": "PENDING",
+  "freeze": "PASS",
+  "archive": "PASS",
+  "upload": "PASS",
   "actualInstallation": "NOT_RUN",
   "actualSystemTouch": "NOT_RUN",
   "artAcceptance": "PARTIAL",
@@ -91,5 +91,10 @@
     "overlaps": [],
     "newFailures": [],
     "scope": "actual local state/start/completion/receipt integrity for this increment only; not formal independent CLI compliance or product acceptance"
-  }
+  },
+  "releaseReport": "reports/testflight-0.1.0-7.json",
+  "frozenSource": "653d3a793626962ed899fac96254eb9594353c63",
+  "sourceDigest": "9a1e8c6957de4f35345421f3afbd1363c1300edd85147c101c07411a49ee4951",
+  "appleProcessing": "VALID",
+  "internalGroup": "VERIFIED"
 }

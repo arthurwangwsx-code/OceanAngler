@@ -1,5 +1,7 @@
 # 完整产品验收总账
 
+2026-11-25 build 7交付：0.1.0 (7)冻结653d3a7，60项Editor、21项无画面PlayMode及12项发布保护通过；完整成长20轮覆盖12鱼/20装备/18任务，场景重建恢复3915分/20条/3观察，另一组连续20轮恢复3167分/20条/3观察。iOS原生冻结、签名/身份归档、内部专用IPA与静态元数据、单次上传和Apple VALID/INTERNAL_ONLY/IN_BETA_TESTING通过，本人授权两账号组和测试说明已读回，指定邮箱状态INVITED。900秒休息提醒通过原边缘提示及暂停/首页继续按钮确认，没有新增常驻HUD；保留沉浸式分层页面、左右手和图形操作，积分/随机概率/存档格式未变。本轮未更新个人手机，TestFlight来源安装、真实触控/双设备20分钟、拟真美术/其他完整模型、用户/科学/儿童验收仍未完成；历史独立记录审计仍INCOMPLETE，完整产品及apply保持未完成。见[build 7回执](testflight-0.1.0-7.json)及[设备复核](../docs/29-beta7-review.md)。
+
 REQ-08休息闭环后续：2项定向PlayMode与7a96e47/df1f7968同包双端各19帧通过，实际900.150/900.067秒到时并主动确认，正常教学鱼226/207分；HUD最高12.228%/4.526%，Metal/HDR4×MSAA通过。22份原文件字节不变，新进程原26条/4622分一致，38帧接触表和五原图审阅。原红测/夹具时序/ENOSPC及缓存占用预检失败保留；四份原App哈希不变。未替代儿童/系统触摸/真机20分钟或完整美术；未更新已发布build 6，见[本轮范围](rest-reminder.md)。
 
 2026-11-25 build 6交付：0.1.0 (6)冻结648b4ce，完整60项Editor、20项无画面PlayMode及12项发布保护通过；两组长流程分别34轮完整成长/20轮连续钓鱼，场景重建恢复另验。源码CI、iOS导出、签名归档、内部专用IPA与静态元数据、上传及Apple VALID/INTERNAL_ONLY/IN_BETA_TESTING通过，本人授权两账号组和说明已读回，指定邮箱状态INVITED。新增沉浸页面/底部收鱼、陆坡环境候选、鱼体眼口/薄鳍及钓组滚轮/绕线/主轴；积分和随机概率未改。未更新个人手机，本版TestFlight来源安装/实际触控/真实双设备20分钟未验，其他完整模型/科学/用户/儿童/美术A1–A3仍未完成。首次入口解析失败及直接执行红/绿修复保留；历史独立记录审计INCOMPLETE，apply及完整产品保持未完成。见[build 6回执](testflight-0.1.0-6.json)和[设备复核](../docs/27-beta6-review.md)。
@@ -28,7 +30,7 @@ REQ-08沉浸首版：df6b580双端各15帧、左右手/暂停退出/固定出发
 | REQ-08 手机/平板与无障碍 | df6b580共享沉浸UI各15帧、左右手/暂停退出/固定出发通过，HUD最高12.034%/4.455%，新进程首页4661分文件不变；此前0bea41d全成长与OS鼠标任务页另留档，见immersive-interface.md | PARTIAL | 钓具反馈在8583697定向通过，系统拖动未确认；宽屏庸鲽构图、真机安全区/完整旋转、触控/无障碍、图标理解与儿童可读性 |
 | REQ-09 隐私与家长区 | 无广告/账号/分析；历史sim4的iPhone/iPad原生Player程序输入检查家长验证、清档二次确认及取消不丢档通过 | PARTIAL | 实际发行包SDK/权限与系统网络行为核查；家长体验 |
 | REQ-10 开源流程 | 已公开独立仓库，MIT/OFL及资产登记，首轮CI通过 | PASS（已发布基线） | 每次新提交仍须审查许可、凭据及CI；不能由脚本证明全部资产合法性 |
-| REQ-11 本人TestFlight | 0.1.0 (6)冻结648b4ce，签名归档/内部导出、静态元数据、上传、Apple VALID/INTERNAL_ONLY/IN_BETA_TESTING、本人授权两账号组与说明读回通过，见testflight-0.1.0-6.json；个人设备仍保留先前build 5安装证据 | PARTIAL | 当前指定邮箱为INVITED；本版TestFlight来源实际安装启动未验，按docs/27-beta6-review.md复核 |
+| REQ-11 本人TestFlight | 0.1.0 (7)冻结653d3a7，签名归档/内部导出、静态元数据、上传、Apple VALID/INTERNAL_ONLY/IN_BETA_TESTING、本人授权两账号组与说明读回通过，见testflight-0.1.0-7.json；个人设备保留先前build 5本地安装证据 | PARTIAL | 指定邮箱为INVITED；本版TestFlight来源实际安装启动未验，按docs/29-beta7-review.md复核 |
 | REQ-12 真机性能与恢复 | 历史安装回执：iPhone 17 Pro Max已从本地build 4更新为5，验证构建号/启动和随后同进程存活，未卸载/清档；主界面、触控和个人进度仍未验 | NOT_RUN（20分钟资格） | iPhone/iPad各20分钟帧耗/内存/温升，后台/锁屏/恢复和持久化实际记录 |
 
 工程证据入口：reports/progression-validation.md、reports/mobile-layout.md、reports/runtime-phone-points.json、reports/runtime-tablet-points.json。发布回执以实际Apple查询和脱敏报告为准；本机原始日志、设备标识、密钥及签名产物不公开。

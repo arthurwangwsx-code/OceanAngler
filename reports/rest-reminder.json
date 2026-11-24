@@ -508,5 +508,14 @@
       "scope": "actual local state/start/completion/receipt integrity for this increment only; not formal independent CLI compliance or product acceptance"
     },
     "historicalIndependentAudit": "INCOMPLETE"
+  },
+  "laterRelease": {
+    "build": "7",
+    "frozenSource": "653d3a793626962ed899fac96254eb9594353c63",
+    "report": "reports/testflight-0.1.0-7.json",
+    "appleProcessing": "VALID",
+    "internalGroup": "VERIFIED",
+    "actualInstallation": "NOT_RUN",
+    "scope": "Later signed release includes rest fix; original Simulator app/proof and increment-time TestFlight6 observations above stay immutable"
   }
 }
