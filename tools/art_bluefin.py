@@ -126,7 +126,10 @@ def weights_for_x(x):
             t=(x-centers[i])/(centers[i+1]-centers[i]);return [(names[i],1-t),(names[i+1],t)]
     return [('tail',1)]
 def jaw_weights(x):
-    t=max(0,min(1,(x+.90)/.14));t=t*t*(3-2*t)
+    # The visible commissure is at x=-.87, just ahead of the hinge. Anchor it
+    # to the head; a blend extending to -.76 left the lip corner moving as a
+    # rigid rod while the adjoining cheek was already stationary.
+    t=max(0,min(1,(x+.94)/.07));t=t*t*(3-2*t)
     return [('jaw',1-t),('head',t)]
 def mesh(name,verts,faces,mat,uv=None,bone=None,vertex_weights=None):
     data=bpy.data.meshes.new(name);data.from_pydata(verts,[],faces);data.update();obj=bpy.data.objects.new(name,data);scene.collection.objects.link(obj);data.materials.append(mat)
@@ -167,7 +170,7 @@ body.data.materials.append(dark)
 # Weld the body's UV seam before adding the mandible, so the mouth seam stays split.
 bpy.ops.object.select_all(action='DESELECT');body.select_set(True);bpy.context.view_layer.objects.active=body
 bpy.ops.object.mode_set(mode='EDIT');bpy.ops.mesh.select_all(action='SELECT');bpy.ops.mesh.remove_doubles(threshold=.00001);bpy.ops.object.mode_set(mode='OBJECT');body.select_set(False)
-vs=[];fs=[];jaw_rings=16;jaw_sides=24
+vs=[];fs=[];jaw_rings=14;jaw_sides=24
 for i in range(jaw_rings+1):
     x=-1.04+.28*i/jaw_rings;top,bottom,w=section(x);cut=math.acos(max(-1,min(1,gape_z(x)/-bottom)))
     for j in range(jaw_sides+1):vs.append(surface(x,cut+(math.tau-2*cut)*j/jaw_sides))
@@ -180,15 +183,8 @@ mandible=mesh('LowerJaw',vs,fs,skin,bone='mandible');mandible.data.materials.app
 for face in mandible.data.polygons:
     if face.index>=skin_faces:face.material_index=1
 
-# Living cheek skin bridges head/jaw edges behind the mouth corner. The mouth
-# remains open in front; the chin must not split into a long exposed hinge seam.
-for sign in [-1,1]:
-    cheek=[];faces=[];cheek_weights=[]
-    for i in range(13):
-        x=-.875+.115*i/12;z=gape_z(x);top,bottom,w=section(x);y=sign*w*math.sqrt(max(0,1-(z/-bottom)**2))
-        cheek.extend([(x,y,z+.001),(x,y,z-.001)]);cheek_weights.extend([[('head',1)],jaw_weights(x)])
-    for i in range(12):q=i*2;faces.append((q,q+1,q+3,q+2) if sign==1 else (q+2,q+3,q+1,q))
-    mesh('CheekSkin',cheek,faces,skin,vertex_weights=cheek_weights)
+# The jaw uses the body's .02-unit ring spacing. Its posterior edge will be
+# welded to the head after joining, so no thin overlapping cheek cover is needed.
 
 def fin_uv(u,v,palette):
     low,high=(.004,.496) if palette=='blue' else (.504,.996)
@@ -317,8 +313,28 @@ for i in range(1,13):
     t=i/12;path.append((-1.04-.004*math.sin(t*math.pi),-width+2*width*t,-.006))
 path+= [(p[0],-p[1],p[2]) for p in path[:14][::-1]]
 upper=[(x,y,z+.001) for x,y,z in path];lower=[(x,y,z-.001) for x,y,z in path]
-tube('UpperLip',upper,.0017,skin,'head',6,taper=False)
-tube('LowerLip',lower,.0016,skin,'mandible',6,taper=False)
+def lip(name,points,bone):
+    # A shallow fleshy rim lies against the muzzle, rather than a round wire.
+    # Preserve six cross-section edges and existing slots/budget; taper both
+    # ends into the mouth corners and keep the leading lower lip jaw-bound.
+    verts=[];faces=[];segments=6
+    for i,point in enumerate(points):
+        p=Vector(point);tangent=(Vector(points[min(i+1,len(points)-1)])-Vector(points[max(0,i-1)])).normalized()
+        front=max(0,min(1,(-p.x-1.025)/.019));normal=Vector((-front,math.copysign(1-front,p.y),0))
+        normal-=tangent*normal.dot(tangent)
+        if normal.length<.0001:normal=Vector((0,0,1))
+        normal.normalize();across=tangent.cross(normal).normalized()
+        taper=.15+.85*math.sin(math.pi*i/(len(points)-1))**.4
+        center=p-normal*.00035
+        for j in range(segments):
+            theta=j/segments*math.tau
+            verts.append(tuple(center+(normal*math.cos(theta)*.00055+across*math.sin(theta)*.00155)*taper))
+    for i in range(len(points)-1):
+        for j in range(segments):a=i*segments+j;b=i*segments+(j+1)%segments;faces.append((a,b,b+segments,a+segments))
+    faces.append(tuple(range(segments-1,-1,-1)));faces.append(tuple((len(points)-1)*segments+j for j in range(segments)))
+    return mesh(name,verts,faces,skin,bone=bone)
+lip('UpperLip',upper,'head')
+lip('LowerLip',lower,'mandible')
 ring=upper+lower[::-1];vs=[];fs=[];weights=[];count=len(ring)
 for row in range(4):
     t=row/3
@@ -340,8 +356,14 @@ bpy.ops.object.select_all(action='DESELECT')
 for o in parts:o.select_set(True)
 bpy.context.view_layer.objects.active=body;bpy.ops.object.join();body.name='Bluefin_LOD0'
 bpy.ops.object.transform_apply(location=True,rotation=True,scale=True)
-# Weld seam duplicates; preserve UV seam loops and material boundaries.
-bpy.ops.object.mode_set(mode='EDIT');bpy.ops.mesh.select_all(action='SELECT');bpy.ops.mesh.normals_make_consistent(inside=False);bpy.ops.object.mode_set(mode='OBJECT')
+# Join the head/jaw skin behind the actual mouth corner. The anterior aperture
+# stays split for jaw animation; posterior vertices already share head weights.
+# UVs remain per-loop, including the texture seam. Collapsed end-ring faces are
+# removed by the merge rather than left as zero-area jaw caps.
+bm=bmesh.new();bm.from_mesh(body.data)
+posterior_skin={v for f in bm.faces if body.data.materials[f.material_index]==skin for v in f.verts if -.875<=v.co.x<=-.755}
+bmesh.ops.remove_doubles(bm,verts=list(posterior_skin),dist=.00001)
+bmesh.ops.recalc_face_normals(bm,faces=list(bm.faces));bm.to_mesh(body.data);bm.free();body.data.update()
 # Mouth walls surround a void: their visible side faces inward. Keep them
 # single-sided in game, rather than hiding an outward lining with Cull Off.
 bm=bmesh.new();bm.from_mesh(body.data);bmesh.ops.reverse_faces(bm,faces=[f for f in bm.faces if body.data.materials[f.material_index]==oral]);bm.to_mesh(body.data);bm.free();body.data.update()

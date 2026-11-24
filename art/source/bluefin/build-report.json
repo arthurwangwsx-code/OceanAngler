@@ -5,18 +5,18 @@
   "blender": "5.3.0",
   "lods": {
     "Bluefin_LOD0": {
-      "triangles": 24860,
-      "vertices": 12912,
+      "triangles": 24664,
+      "vertices": 12775,
       "uvLayers": 1
     },
     "Bluefin_LOD1": {
-      "triangles": 9944,
-      "vertices": 5446,
+      "triangles": 9864,
+      "vertices": 5367,
       "uvLayers": 1
     },
     "Bluefin_LOD2": {
-      "triangles": 3728,
-      "vertices": 2326,
+      "triangles": 3698,
+      "vertices": 2277,
       "uvLayers": 1
     }
   },

@@ -35,6 +35,9 @@ if rig and all(lods):
     jaw_index=lods[0].vertex_groups['jaw'].index
     lip_weights=[sum(g.weight for g in data.vertices[i].groups if g.group==jaw_index) for i in lower_lip]
     check(bool(lip_weights) and sum(lip_weights)/len(lip_weights)>.9,'前下唇实际绑定下颌而非头骨')
+    corners=[v.index for v in data.vertices if v.index in skin_vertices and -.874<v.co.x<-.866 and abs(v.co.y)>.025 and -.12<v.co.z<-.02]
+    corner_weights=[sum(g.weight for g in data.vertices[i].groups if g.group==jaw_index) for i in corners]
+    check(len(corners)>=4 and max(corner_weights,default=1)<.025,'实际嘴角皮肤保持头骨锚定而非随下颌漂移')
     oral={v for p in data.polygons if data.materials[p.material_index].name=='Bluefin_Oral' for v in p.vertices}
     oral_depth=max((data.vertices[i].co.x for i in oral),default=0)-min((data.vertices[i].co.x for i in oral),default=0)
     check(oral_depth>.12,'口腔是有纵深的内壁而非单片盖板')
@@ -49,7 +52,15 @@ if rig and all(lods):
         # Each strip occupies one ray interval inside its padded atlas half.
         if abs(max(p.x for p in uv)-min(p.x for p in uv)-.492)<.001 and max(p.y for p in uv)-min(p.y for p in uv)>.1:strips+=1
     check(strips>=600,'鳍膜条段使用单个鳍条间隔UV')
-    report['mouth']={'lowerLipVertices':len(lower_lip),'meanJawWeight':sum(lip_weights)/max(1,len(lip_weights)),'liningDepth':oral_depth,'throatNormalX':throat_normal};report['finUvStripFaces']=strips
+    report['mouth']={'lowerLipVertices':len(lower_lip),'meanJawWeight':sum(lip_weights)/max(1,len(lip_weights)),'cornerVertices':len(corners),'maximumCornerJawWeight':max(corner_weights,default=1),'liningDepth':oral_depth,'throatNormalX':throat_normal};report['finUvStripFaces']=strips
+    skin_edge_faces={tuple(sorted(edge.vertices)):0 for edge in data.edges}
+    for face in data.polygons:
+        if data.materials[face.material_index].name=='Bluefin_Skin':
+            for key in face.edge_keys:skin_edge_faces[tuple(sorted(key))]+=1
+    posterior_edges=[edge for edge in data.edges if skin_edge_faces[tuple(sorted(edge.vertices))]>0 and all(-.855<data.vertices[i].co.x<-.765 and data.vertices[i].co.z<-.05 and abs(data.vertices[i].co.y)>.005 for i in edge.vertices)]
+    open_posterior=sum(skin_edge_faces[tuple(sorted(edge.vertices))]==1 for edge in posterior_edges)
+    check(bool(posterior_edges) and open_posterior==0,'嘴角后方颌部皮肤拓扑闭合而非重叠分离边')
+    report['mouth'].update(posteriorSkinEdges=len(posterior_edges),openPosteriorSkinEdges=open_posterior)
     atlas=bpy.data.images.get('Bluefin_Fin');check(atlas is not None and tuple(atlas.size)==(1024,512),'鳍色分区共用一张1024x512纹理')
     palette_counts={'blue':0,'pale':0};anatomy_counts={'firstDorsal':0,'paired':0,'secondDorsal':0,'caudal':0}
     for face in data.polygons:
@@ -95,7 +106,7 @@ if rig and all(lods):
     for name in ['idle','swim','turn','burst','bite','hooked','release']:
         action=bpy.data.actions.get(name);check(action is not None,'语义动作存在：'+name)
         if action is None:continue
-        rig.animation_data.action=action;poses=[];jaw=[];gill_clearance=[];lip_positions=[]
+        rig.animation_data.action=action;poses=[];jaw=[];gill_clearance=[];lip_positions=[];corner_positions=[]
         for frame in [1,16,31,46,61]:
             bpy.context.scene.frame_set(frame);bpy.context.view_layer.update()
             poses.append(tuple(rig.pose.bones['tail'].rotation_euler));jaw.append(tuple(rig.pose.bones['jaw'].rotation_euler))
@@ -103,6 +114,7 @@ if rig and all(lods):
             try:
                 vertices=[v.co.copy() for v in deformed.vertices]
                 if lower_lip:lip_positions.append(sum((vertices[i] for i in lower_lip),vertices[lower_lip[0]]*0)/len(lower_lip))
+                corner_positions.append([vertices[i] for i in corners])
                 skin=[tuple(p.vertices) for p in deformed.polygons if deformed.materials[p.material_index].name=='Bluefin_Skin']
                 gills={v for p in deformed.polygons if deformed.materials[p.material_index].name=='Bluefin_Gill' for v in p.vertices}
                 tree=BVHTree.FromPolygons(vertices,skin)
@@ -125,7 +137,9 @@ if rig and all(lods):
             check(down<-.015,'咬钩下唇向下张开而非转入头部');check(side<.003,'咬钩下唇无明显横向扭转')
             report['mouth'].update(biteLipVerticalDisplacement=down,biteLipSidewaysDrift=side)
         check(all(math.isfinite(d) and d<.006 for d in gill_clearance),'变形后鳃缘紧贴鱼体：'+name)
-        report['motion'][name]={'tailRotationRange':spread,'jawRotationRange':jaw_spread,'maximumGillDistanceToBody':max(gill_clearance)}
+        corner_drift=max(((p-corner_positions[0][i]).length for pose in corner_positions for i,p in enumerate(pose)),default=float('inf'))
+        check(corner_drift<.001,'动作中实际嘴角皮肤无明显漂移：'+name)
+        report['motion'][name]={'tailRotationRange':spread,'jawRotationRange':jaw_spread,'maximumGillDistanceToBody':max(gill_clearance),'maximumMouthCornerDrift':corner_drift}
 report['status']='FAIL' if failures else 'ENGINEERING_CHECKS_PASS'
 path=ROOT/'.local/art/bluefin/validation.json';path.parent.mkdir(parents=True,exist_ok=True);path.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
 print(json.dumps(report,ensure_ascii=False,indent=2))

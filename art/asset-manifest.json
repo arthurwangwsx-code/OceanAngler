@@ -50,11 +50,11 @@
       "acquiredAt": "2026-11-23",
       "status": "ART_REVIEW_PENDING",
       "path": "art/source/bluefin/Bluefin.blend",
-      "sha256": "5beced804af5c01b7256cbced387622cd5b50176f49f48efb2d0fb7c45e407c4",
+      "sha256": "7089763c300f9dbd50fa7e01a2d4d716bd23b970189b147f39f529615b361748",
       "artifacts": [
         {
           "path": "art/source/bluefin/Bluefin.blend",
-          "sha256": "5beced804af5c01b7256cbced387622cd5b50176f49f48efb2d0fb7c45e407c4"
+          "sha256": "7089763c300f9dbd50fa7e01a2d4d716bd23b970189b147f39f529615b361748"
         },
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin_BaseColor.png",
@@ -78,7 +78,7 @@
         },
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin.fbx",
-          "sha256": "b1da26f3799cc9c714e1c2c0446aab2d7d1a9dff5bec908bd0b71efede2ae712"
+          "sha256": "87534d1d4a21c64809347103cd5132fcf497dead17b4364fe102c830ac0158f7"
         },
         {
           "path": "art/previews/bluefin/bite.png",
@@ -128,7 +128,7 @@
       ],
       "note": "Original bluefin trevally mesh, UV, PBR maps, 12-bone rig, seven animation clips and three LODs. Scientific/visual/user/device acceptance remains open. No third-party photographs or models included.",
       "modifiedAt": "2026-11-24",
-      "modifications": "Original 256x256 radial iris, projected eye-face UV, shallower pupil and actual cheek-normal orientation. Final LOD triangles 24860/9944/3728; unchanged 25000 validation budget, six materials, 12 bones and seven actions. Final source validation, eight studio images and ten imported iOS-target Editor Metal frames reviewed. Native Player and full art/science/user gates remain separate."
+      "modifications": "Lip rim flattened and tapered; jaw corner anchored to head; mandible rings aligned with body and posterior skin actually welded, replacing overlapping thin cheek cover. Actual LOD triangles24664/9864/3698; unchanged6materials/12bones/7actions and all6sourcePNGmaps. Saved-mesh corner and scoped posterior-edge regression checks pass; full art/science/user/device gates remain open."
     },
     {
       "id": "complete-spinning-rig-candidate",
@@ -1518,6 +1518,40 @@
         }
       ],
       "note": "All included artifacts actually viewed. Contacts inspect32generated frames; selected full-size photos separately recorded, not all32full-size. Manual OS mouse assisted first catch/new process restore205points, not child or physical touchscreen qualification. No personal media, device identifiers, OS home/sidebar or raw logs. Registered OFL font appears in own UI."
+    },
+    {
+      "id": "bluefin-jaw-continuity-reviewed-previews",
+      "author": "OceanAngler contributors",
+      "source": "Own saved Blender model and same-camera iOS-target Editor Metal renders; before irisgpu1 and after corner20261124b",
+      "license": "MIT",
+      "redistribution": true,
+      "sourceRedistribution": true,
+      "canModify": true,
+      "acquiredAt": "2026-11-24",
+      "status": "ART_REVIEW_PENDING",
+      "artifacts": [
+        {
+          "path": "art/previews/bluefin-jaw-continuity/after-bite-mouth.png",
+          "sha256": "40954cb1a67c5738b9a5d27d734bc0600886c21fda737ede24f4c46875666a42"
+        },
+        {
+          "path": "art/previews/bluefin-jaw-continuity/after-idle-mouth.png",
+          "sha256": "d20b936edc4cddc6d7942871c5ff57879acd0a5d31f835f2f8a281ee68c56d7e"
+        },
+        {
+          "path": "art/previews/bluefin-jaw-continuity/before-bite-mouth.png",
+          "sha256": "449b08ba55f0340714d663338894f3a7a2b1b1dd8b5c38d8680169f289ee99eb"
+        },
+        {
+          "path": "art/previews/bluefin-jaw-continuity/before-idle-mouth.png",
+          "sha256": "0e049543e415e5454ab95a2f50ece19678978d7c20f8dbf1978f537c8647465e"
+        },
+        {
+          "path": "art/previews/bluefin-jaw-continuity/studio-three-quarter.png",
+          "sha256": "e85a756fa8ee8ce666b9e643fb0aaeab96573cc3e04bb259079a7caba25979bc"
+        }
+      ],
+      "note": "All included originals actually viewed. Before and after are own assets, not museum photography; same imported-camera fixture. This is not native Player or art qualification. Private museum reference is not redistributed or texture-sampled."
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."
