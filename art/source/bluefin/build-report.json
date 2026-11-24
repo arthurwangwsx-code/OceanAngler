@@ -11,12 +11,12 @@
     },
     "Bluefin_LOD1": {
       "triangles": 9864,
-      "vertices": 5367,
+      "vertices": 5171,
       "uvLayers": 1
     },
     "Bluefin_LOD2": {
       "triangles": 3698,
-      "vertices": 2276,
+      "vertices": 2078,
       "uvLayers": 1
     }
   },

@@ -248,6 +248,10 @@ def fin(name,roots,tips,bone=None,rays=True,palette='blue',steps=6,record_sample
         j=min(steps-1,int(t*steps));v=t*steps-j;a=Vector(vs[ri*(steps+1)+j]).lerp(Vector(vs[ri*(steps+1)+j+1]),v);b=Vector(vs[(ri+1)*(steps+1)+j]).lerp(Vector(vs[(ri+1)*(steps+1)+j+1]),v);point=(a+b)*.5;along=Vector(vs[ri*(steps+1)+j+1])-Vector(vs[ri*(steps+1)+j]);normal=(b-a).cross(along).normalized();fin_samples.append(dict(fin=name,t=t,point=list(point),normal=list(normal)))
     if rays:
         for i,(a,b) in enumerate(zip(roots,tips)):
+            # At distance, subpixel internal cylinders become dotted coverage.
+            # Keep the two silhouette rays; the filtered membrane UV/PBR still
+            # represents every internal interval. Close LOD keeps all cylinders.
+            if rays=='outline' and i not in (0,len(roots)-1):continue
             curve=[]
             for step in range(5):
                 t=step/4;p=Vector(a).lerp(Vector(b),t);p.y+=math.sin(t*math.pi)*.004;curve.append(tuple(p))
@@ -408,16 +412,15 @@ bpy.ops.object.mode_set(mode='OBJECT');rig.show_in_front=True
 lods=[body]
 for level,ratio in [(1,.4),(2,.15)]:
     obj=body.copy();obj.data=body.data.copy();scene.collection.objects.link(obj);obj.name='Bluefin_LOD'+str(level)
-    # Collapse-based decimation of an already thin shell can flatten opposite
-    # walls. Reduce the solid body/rays separately and rebuild low-resolution
-    # membrane grids with every boundary ray retained, then apply their real
-    # tapered thickness afterward. Distance reduction removes longitudinal
-    # curvature samples, not the small fin's silhouette peaks.
-    bm=bmesh.new();bm.from_mesh(obj.data);membrane_index=list(obj.data.materials).index(finmat);bmesh.ops.delete(bm,geom=[f for f in bm.faces if f.material_index==membrane_index],context='FACES');bmesh.ops.delete(bm,geom=[v for v in bm.verts if not v.link_faces],context='VERTS');bm.to_mesh(obj.data);bm.free();obj.data.update()
+    # Rebuild distance fins after body reduction: keep the closed tapered shell,
+    # every silhouette peak and two fully opaque, shadow-casting boundary rays.
+    # Internal ray detail uses the existing mip-filtered membrane PBR rather
+    # than cylinders narrower than a screen pixel. Near LOD0 is unchanged.
+    bm=bmesh.new();bm.from_mesh(obj.data);fin_indices={list(obj.data.materials).index(m) for m in (finmat,finray)};bmesh.ops.delete(bm,geom=[f for f in bm.faces if f.material_index in fin_indices],context='FACES');bmesh.ops.delete(bm,geom=[v for v in bm.verts if not v.link_faces],context='VERTS');bm.to_mesh(obj.data);bm.free();obj.data.update()
     membranes=[]
     for recipe in fin_recipes:
         indices=list(range(len(recipe['roots'])))
-        fin(recipe['name']+'Distance'+str(level),[recipe['roots'][i] for i in indices],[recipe['tips'][i] for i in indices],recipe['bone'],rays=False,palette=recipe['palette'],steps=3 if level==1 else 1,record_samples=False);membranes.append(parts[-1])
+        first=len(parts);fin(recipe['name']+'Distance'+str(level),[recipe['roots'][i] for i in indices],[recipe['tips'][i] for i in indices],recipe['bone'],rays='outline',palette=recipe['palette'],steps=3 if level==1 else 1,record_samples=False);membranes.extend(parts[first:])
     body.data.calc_loop_triangles();obj.data.calc_loop_triangles();membrane_triangles=0
     for membrane in membranes:membrane.data.calc_loop_triangles();membrane_triangles+=len(membrane.data.loop_triangles)
     target=int(len(body.data.loop_triangles)*ratio);remaining=target-membrane_triangles

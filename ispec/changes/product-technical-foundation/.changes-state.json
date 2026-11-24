@@ -461,6 +461,14 @@
       "checkedAt": "2026-11-24T19:12:03.812Z",
       "durationMs": 162.6133339999999,
       "outcome": "accepted"
+    },
+    {
+      "stageId": "apply",
+      "runId": null,
+      "operation": "start",
+      "checkedAt": "2026-11-24T19:27:56.357Z",
+      "durationMs": 135.58574999999996,
+      "outcome": "accepted"
     }
   ],
   "measurementJournal": {
@@ -11692,6 +11700,138 @@
       "executable": "python3",
       "commandDigest": "f35ed888f405b7e530dd568129bf7cdd431ebea5d49ee6760bff57ac9c25ebbf",
       "receiptPath": "measurements/hud-contrast-record-audit-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "3380343f-d5f9-454f-a02e-1418241ff5ee",
+      "startedAt": "2026-11-24T19:28:45.731Z",
+      "executable": "python3",
+      "commandDigest": "590a9eabf74cdb36db75d82b837bff29290f1c3a61e0ad131f4d1751072d9bf6",
+      "receiptPath": "measurements/fin-screen-baseline-gpu-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "3f2adf03-8039-48fb-be46-270645cc6f28",
+      "startedAt": "2026-11-24T19:30:27.428Z",
+      "executable": "python3",
+      "commandDigest": "7f119f19d6a552cbd36a9d25db7189f29702ddabcb03010d8485ec1e02bab170",
+      "receiptPath": "measurements/fin-screen-specular-gpu-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "0e0ee450-c562-4020-bcaa-335781bb25c0",
+      "startedAt": "2026-11-24T19:33:24.129Z",
+      "executable": "python3",
+      "commandDigest": "86a0c857bae0749c1ddd6da3b5501e1a446f54cbc47dc7fddb69e86125a9796a",
+      "receiptPath": "measurements/fin-screen-source-build-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "b0d3a367-889e-43ba-9c41-fc673e645017",
+      "startedAt": "2026-11-24T19:34:20.417Z",
+      "executable": "python3",
+      "commandDigest": "678dca6e439650092016e373d99b86f8b41c30371dedf5f1cc02e7a196778ed6",
+      "receiptPath": "measurements/fin-screen-source-validation-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "c1fcc305-027f-457a-8c5a-78e766bec3df",
+      "startedAt": "2026-11-24T19:34:23.696Z",
+      "executable": "python3",
+      "commandDigest": "1bcf850a8da57724302cbb03c3e95dd16457633d2c57458e2ec0056a293daf5d",
+      "receiptPath": "measurements/fin-screen-unity-import-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "86b85ea8-da3b-4a85-ad7e-7e21854297d9",
+      "startedAt": "2026-11-24T19:35:01.515Z",
+      "executable": "Blender",
+      "commandDigest": "b19ab0fa1695ca2fa6153b6c2810b5cfaafa8bc191f5f8bd54836f9e094bf862",
+      "receiptPath": "measurements/fin-screen-source-identity-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "f9fc11a6-386b-4246-ab11-888bde0bbec4",
+      "startedAt": "2026-11-24T19:35:05.654Z",
+      "executable": "python3",
+      "commandDigest": "e382996d804250cd1858ce30b58e727ca2a5ec41927205b253d124b3220fd1cd",
+      "receiptPath": "measurements/fin-screen-candidate-gpu-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "7538b984-862a-430e-9aa5-8951d2a12b99",
+      "startedAt": "2026-11-24T19:36:24.510Z",
+      "executable": "python3",
+      "commandDigest": "cdb377ed2ef55b1bd874afb1d373853d337c1c1a7dca4ee501a3e8f58d53146e",
+      "receiptPath": "measurements/fin-screen-editor-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "ef14c726-fcba-46f9-a552-c83bd2d08345",
+      "startedAt": "2026-11-24T19:37:11.025Z",
+      "executable": "python3",
+      "commandDigest": "b3f4adbec0d18697515025917cd00b89922ed34598cc3b386a34115816ae7471",
+      "receiptPath": "measurements/fin-screen-playmode-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "df3f3014-f82b-43e2-86f0-d01d700bf6a8",
+      "startedAt": "2026-11-24T19:37:26.737Z",
+      "executable": "python3",
+      "commandDigest": "d012b89cd41f5bc68cbe1feaf37580bcd2201537c7bc35ce77044e93430914e6",
+      "receiptPath": "measurements/fin-screen-transmission-gpu-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "770525d2-d5b5-429d-a896-8b75a9bce023",
+      "startedAt": "2026-11-24T19:38:18.401Z",
+      "executable": "python3",
+      "commandDigest": "eb471c4733794ae823f341c8612e1264546cd90a55866102f4e96ad06f063573",
+      "receiptPath": "measurements/fin-screen-cache-maintenance-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "36a9d88e-c6c4-41cb-a390-e3875459e320",
+      "startedAt": "2026-11-24T19:39:14.660Z",
+      "executable": "python3",
+      "commandDigest": "92b88d46c0b5545788a9a2ce5359954222ebde80f299018987788284e4627495",
+      "receiptPath": "measurements/fin-screen-source-public-checks-20261125.json"
     }
   ],
   "runMeasurements": [
@@ -29322,6 +29462,234 @@
       "receipt": {
         "path": "measurements/hud-contrast-record-audit-20261125.json",
         "sha256": "0dc301c604c26a8849dc9201cdc5064f66078dcc587f1a89c0b9ee6b11e68f2e"
+      }
+    },
+    {
+      "id": "3380343f-d5f9-454f-a02e-1418241ff5ee",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "590a9eabf74cdb36db75d82b837bff29290f1c3a61e0ad131f4d1751072d9bf6",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:28:45.731Z",
+      "finishedAt": "2026-11-24T19:28:59.502Z",
+      "durationMs": 13725.153125,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fin-screen-baseline-gpu-20261125.json",
+        "sha256": "fcfc145b31d6d84072591be51abd947f1c875b4ebc6e92075d894cb3047600b0"
+      }
+    },
+    {
+      "id": "3f2adf03-8039-48fb-be46-270645cc6f28",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "7f119f19d6a552cbd36a9d25db7189f29702ddabcb03010d8485ec1e02bab170",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:30:27.428Z",
+      "finishedAt": "2026-11-24T19:30:43.443Z",
+      "durationMs": 15977.04325,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fin-screen-specular-gpu-20261125.json",
+        "sha256": "8acb98c0f41766ab48126452ab8756cd028797354c68c6da1f1ee92d7217e358"
+      }
+    },
+    {
+      "id": "0e0ee450-c562-4020-bcaa-335781bb25c0",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "86a0c857bae0749c1ddd6da3b5501e1a446f54cbc47dc7fddb69e86125a9796a",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:33:24.129Z",
+      "finishedAt": "2026-11-24T19:33:28.492Z",
+      "durationMs": 4332.842209,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fin-screen-source-build-20261125.json",
+        "sha256": "2b06a5f836b47cf2412db4bad11880be7dd08286e76f685016040af96f85b41e"
+      }
+    },
+    {
+      "id": "b0d3a367-889e-43ba-9c41-fc673e645017",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "678dca6e439650092016e373d99b86f8b41c30371dedf5f1cc02e7a196778ed6",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:34:20.417Z",
+      "finishedAt": "2026-11-24T19:34:23.283Z",
+      "durationMs": 2844.0932080000002,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fin-screen-source-validation-20261125.json",
+        "sha256": "e7c4a5df6b54e422647b5aa6543d6a2fa2c92114b6ae0570e840116dfd3fde1d"
+      }
+    },
+    {
+      "id": "c1fcc305-027f-457a-8c5a-78e766bec3df",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "1bcf850a8da57724302cbb03c3e95dd16457633d2c57458e2ec0056a293daf5d",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:34:23.696Z",
+      "finishedAt": "2026-11-24T19:34:34.232Z",
+      "durationMs": 10508.941042,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fin-screen-unity-import-20261125.json",
+        "sha256": "7063c721b90f01c9a18b9bd3bdcde1eedf4c76956d090637d16728c1aba024e5"
+      }
+    },
+    {
+      "id": "86b85ea8-da3b-4a85-ad7e-7e21854297d9",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "b19ab0fa1695ca2fa6153b6c2810b5cfaafa8bc191f5f8bd54836f9e094bf862",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-24T19:35:01.515Z",
+      "finishedAt": "2026-11-24T19:35:05.111Z",
+      "durationMs": 3572.7652080000003,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fin-screen-source-identity-20261125.json",
+        "sha256": "fc3888e4a510db5e764300c6ed466431e56bd8abf70c74f2242546aac858e845"
+      }
+    },
+    {
+      "id": "f9fc11a6-386b-4246-ab11-888bde0bbec4",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "e382996d804250cd1858ce30b58e727ca2a5ec41927205b253d124b3220fd1cd",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:35:05.654Z",
+      "finishedAt": "2026-11-24T19:35:18.458Z",
+      "durationMs": 12783.707083,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fin-screen-candidate-gpu-20261125.json",
+        "sha256": "d78cdbe0dba28c22715abbbb9b93033d00b52b765b0e715ff3ea2eed641aa16c"
+      }
+    },
+    {
+      "id": "7538b984-862a-430e-9aa5-8951d2a12b99",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "cdb377ed2ef55b1bd874afb1d373853d337c1c1a7dca4ee501a3e8f58d53146e",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:36:24.510Z",
+      "finishedAt": "2026-11-24T19:36:35.729Z",
+      "durationMs": 11181.990709,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fin-screen-editor-20261125.json",
+        "sha256": "b8733e34f3fbf9f9899683ab68fc1cc06ff476c2a966553340546c33c38cfedc"
+      }
+    },
+    {
+      "id": "ef14c726-fcba-46f9-a552-c83bd2d08345",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "b3f4adbec0d18697515025917cd00b89922ed34598cc3b386a34115816ae7471",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:37:11.025Z",
+      "finishedAt": "2026-11-24T19:37:26.307Z",
+      "durationMs": 15257.451708,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fin-screen-playmode-20261125.json",
+        "sha256": "eab817cc70f6347eb8705c173379b1a647774828ae4618e90a0c74ad8586813d"
+      }
+    },
+    {
+      "id": "df3f3014-f82b-43e2-86f0-d01d700bf6a8",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d012b89cd41f5bc68cbe1feaf37580bcd2201537c7bc35ce77044e93430914e6",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:37:26.737Z",
+      "finishedAt": "2026-11-24T19:37:35.456Z",
+      "durationMs": 8692.364667,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fin-screen-transmission-gpu-20261125.json",
+        "sha256": "1cd5fed4d2561d2e8deb4ada71ee00377e5d34dc0dfd0fcf608c932edb864c0c"
+      }
+    },
+    {
+      "id": "770525d2-d5b5-429d-a896-8b75a9bce023",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "eb471c4733794ae823f341c8612e1264546cd90a55866102f4e96ad06f063573",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:38:18.401Z",
+      "finishedAt": "2026-11-24T19:38:21.786Z",
+      "durationMs": 3360.806834,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fin-screen-cache-maintenance-20261125.json",
+        "sha256": "7d0cff03b08ac14b2c7abeb9dd7a44514c0ce586f7dad42a3906881a98dd9932"
+      }
+    },
+    {
+      "id": "36a9d88e-c6c4-41cb-a390-e3875459e320",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "92b88d46c0b5545788a9a2ce5359954222ebde80f299018987788284e4627495",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:39:14.660Z",
+      "finishedAt": "2026-11-24T19:39:16.392Z",
+      "durationMs": 1709.675084,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fin-screen-source-public-checks-20261125.json",
+        "sha256": "0d2810c47813b6f749d672883484b68fe79633c2dac4be9e4f690f92db17469b"
       }
     }
   ]

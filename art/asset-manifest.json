@@ -50,11 +50,11 @@
       "acquiredAt": "2026-11-23",
       "status": "ART_REVIEW_PENDING",
       "path": "art/source/bluefin/Bluefin.blend",
-      "sha256": "837884b5f2cc31cc631fdf0dde5255b2c0d17b0e484c42daa481ec3c143d7615",
+      "sha256": "29ba74536a45ba30d19d46f49b6f13908ea91a1e5bb3eead18d2698f3f3625ad",
       "artifacts": [
         {
           "path": "art/source/bluefin/Bluefin.blend",
-          "sha256": "837884b5f2cc31cc631fdf0dde5255b2c0d17b0e484c42daa481ec3c143d7615"
+          "sha256": "29ba74536a45ba30d19d46f49b6f13908ea91a1e5bb3eead18d2698f3f3625ad"
         },
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin_BaseColor.png",
@@ -78,7 +78,7 @@
         },
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin.fbx",
-          "sha256": "d41481de0a85ac31214e4f6b863b13394367871251ad69394e02fb9f5482bae7"
+          "sha256": "8048670eab4421ab324a7df9a15d394aeb6418e8bc727ed39d66fe702102f7dc"
         },
         {
           "path": "art/previews/bluefin/bite.png",
@@ -147,11 +147,11 @@
         },
         {
           "path": "game/Assets/OceanAngler/Resources/Models/Bluefin.prefab",
-          "sha256": "51b7fa2942132ad68348f2e5644d067b2889c2e87c03038fcd0e335683da3470"
+          "sha256": "b5e1741d389e1c21ba6975e00e60f16a7f23c505992d3116000197ce10624f4b"
         },
         {
           "path": "art/source/bluefin/build-report.json",
-          "sha256": "e4068e83850ac32ad71255876c449ceed98c5d612347f6b4438642994eae06f3"
+          "sha256": "9db07edd33eab2cab618d533fb673dc6049170bf419724d3b107fd8007d348bf"
         },
         {
           "path": "art/previews/bluefin-fin-tissue/first-native-phone-exit.png",
@@ -266,7 +266,7 @@
       ],
       "note": "Original bluefin trevally mesh, UV, PBR maps, 12-bone rig, seven animation clips and three LODs. Scientific/visual/user/device acceptance remains open. No third-party photographs or models included.",
       "modifiedAt": "2026-11-25",
-      "modifications": "Fin membranes rebuilt with tapered closed shells in all three LODs; original RGBA, normal, roughness and packed maps; separate opaque rays. Material slots6->7 explicitly; triangles24664/9864/3699 within unchanged25000 LOD0 budget,12bones/7motions retained. Actual source checks and isolated HDR Metal controls pass; source/Player visual, scientific, user and device gates remain separate. Pectoral trailing-edge curve candidate B after visibly rejecting A; existing maps unchanged, LOD0 non-pectoral geometry/UV/weights/material roles normalized-identical. Art/science/user/Player qualification pending."
+      "modifications": "Fin membranes rebuilt with tapered closed shells in all three LODs; original RGBA, normal, roughness and packed maps; separate opaque rays. Material slots6->7 explicitly; triangles24664/9864/3699 within unchanged25000 LOD0 budget,12bones/7motions retained. Actual source checks and isolated HDR Metal controls pass; source/Player visual, scientific, user and device gates remain separate. Pectoral trailing-edge curve candidate B after visibly rejecting A; existing maps unchanged, LOD0 non-pectoral geometry/UV/weights/material roles normalized-identical. Art/science/user/Player qualification pending. Distance fin meshes retain16 complete opaque outline-ray components, closed tapered membrane and original PBR. Entire nearLOD0 geometry/UV/weights unchanged at six-decimal canonical identity; all original PNG bytes unchanged. LOD budgets24664/9864/3698 unchanged. Screen-size thresholds revised;58 Metal diagnostic frames and auto-vs-forced selected LOD pixel identity checked. Art/science/user/native followup pending."
     },
     {
       "id": "complete-spinning-rig-candidate",

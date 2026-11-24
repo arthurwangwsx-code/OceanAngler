@@ -68,7 +68,10 @@ namespace OceanAngler.Editor
                 for(int i=0;i<3;i++)
                 {
                     var renderer=renderers.Single(r=>r.name=="Bluefin_LOD"+i);renderer.enabled=true;renderer.gameObject.SetActive(true);
-                    renderer.updateWhenOffscreen=false;lods[i]=new LOD(i==0?.08f:i==1?.03f:.008f,new Renderer[]{renderer});
+                    // The group's bounding size is its longest dimension.
+                    // Reserve complete internal cylinders for close views;
+                    // distance meshes retain opaque outline rays and fin PBR.
+                    renderer.updateWhenOffscreen=false;lods[i]=new LOD(i==0?.70f:i==1?.16f:.008f,new Renderer[]{renderer});
                 }
                 var group=root.GetComponent<LODGroup>();if(group==null)group=root.AddComponent<LODGroup>();group.SetLODs(lods);group.RecalculateBounds();
                 var visual=root.AddComponent<AuthoredFishVisual>();

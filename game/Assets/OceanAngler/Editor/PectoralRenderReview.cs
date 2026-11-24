@@ -13,9 +13,10 @@ namespace OceanAngler.Editor
     // Material controls are private diagnostic clones, never candidate assets.
     public static class PectoralRenderReview
     {
-        [Serializable] sealed class Sample {public int lod,repeatChangedPixels;public Vector3 center,size;public List<Control> controls=new List<Control>();}
+        [Serializable] sealed class Sample {public int lod,repeatChangedPixels;public float nominalViewportWidth;public string framing="pectoral-close";public Vector3 center,size;public List<Control> controls=new List<Control>();}
         [Serializable] sealed class Control {public string name;public int changedPixels;}
-        [Serializable] sealed class Receipt {public string status="IN_PROGRESS",scope="imported pectoral shading controls; not Player, scientific or art acceptance",graphics,quality,target,platform;public int samples,images;public List<Sample> measurements=new List<Sample>();}
+        [Serializable] sealed class AutomaticSample {public float nominalViewportWidth,lodBias;public int expectedLod,repeatChangedPixels,forcedChangedPixels;}
+        [Serializable] sealed class Receipt {public string status="IN_PROGRESS",scope="imported pectoral shading and screen-size LOD controls; not Player, scientific or art acceptance",graphics,quality,target,platform;public int samples,images;public List<Sample> measurements=new List<Sample>();public List<AutomaticSample> automatic=new List<AutomaticSample>();}
         static IEnumerator job;
         public static void Capture(){job=Run();EditorApplication.update+=Step;}
         static void Step()
@@ -105,7 +106,53 @@ namespace OceanAngler.Editor
                         var whole=renderer.bounds;camera.orthographicSize=Mathf.Max(whole.extents.y,whole.extents.x/camera.aspect)*1.2f;
                         foreach(var view in new[]{("side",new Vector3(0,.1f,-6)),("quarter",new Vector3(-2.5f,1.1f,-5)),("reverse",new Vector3(0,.1f,6))})
                         {camera.transform.position=whole.center+view.Item2;camera.transform.LookAt(whole.center);Draw("production-whole-"+view.Item1);}
+                        // Native play captures put the whole fish at roughly
+                        // 14-20% of screen width. Keep these controls separate
+                        // from near-fin diagnosis; they are not Player captures.
+                        foreach(float coverage in new[]{.16f,.32f})
+                        {
+                            string prefix="screen"+Mathf.RoundToInt(coverage*100);camera.orthographicSize=whole.extents.x/(camera.aspect*coverage);camera.transform.position=whole.center+new Vector3(0,.1f,-6);camera.transform.LookAt(whole.center);
+                            var screen=new Sample{lod=0,framing=prefix,nominalViewportWidth=coverage,center=whole.center,size=whole.size};receipt.measurements.Add(screen);var production=Draw(prefix+"-production");
+                            foreach(string variant in new[]{"no-normal","no-ray-shadow","no-shadow","opaque-membrane","no-membrane","no-ray-forward","no-rays","rough-rays","no-ray-specular"})
+                            {
+                                var clones=original.Select(m=>new Material(m)).ToArray();var casting=renderer.shadowCastingMode;
+                                try
+                                {
+                                    foreach(var m in clones)
+                                    {
+                                        if(m.name.StartsWith("Bluefin_Rays"))
+                                        {
+                                            if(variant=="no-ray-shadow"||variant=="no-rays")m.SetShaderPassEnabled("ShadowCaster",false);
+                                            if(variant=="no-ray-forward"||variant=="no-rays")m.SetShaderPassEnabled("UniversalForward",false);
+                                            if(variant=="no-ray-specular"){m.SetFloat("_SpecularHighlights",0);m.EnableKeyword("_SPECULARHIGHLIGHTS_OFF");}
+                                        }
+                                        if(!m.name.StartsWith("Bluefin_Fins"))continue;
+                                        if(variant=="no-normal"){m.SetFloat("_BumpScale",0);m.DisableKeyword("_NORMALMAP");}
+                                        if(variant=="opaque-membrane"){m.SetFloat("_Surface",0);BaseShaderGUI.SetupMaterialBlendMode(m);}
+                                        if(variant=="no-membrane")m.SetShaderPassEnabled("UniversalForward",false);
+                                    }
+                                    if(variant=="no-shadow")renderer.shadowCastingMode=ShadowCastingMode.Off;
+                                    if(variant=="rough-rays")for(int i=0;i<original.Length;i++)if(original[i].name.StartsWith("Bluefin_Rays")){var block=new MaterialPropertyBlock();renderer.GetPropertyBlock(block,i);block.SetFloat("_Smoothness",.15f);renderer.SetPropertyBlock(block,i);}
+                                    renderer.sharedMaterials=clones;yield return null;yield return null;var pixels=Draw(prefix+"-diagnostic-"+variant);screen.controls.Add(new Control{name=variant,changedPixels=pixels.Where((p,i)=>Difference(p,production[i])>2).Count()});
+                                }
+                                finally
+                                {
+                                    renderer.sharedMaterials=original;renderer.shadowCastingMode=casting;foreach(var m in clones)UnityEngine.Object.DestroyImmediate(m);
+                                    if(variant=="rough-rays")for(int i=0;i<original.Length;i++)if(original[i].name.StartsWith("Bluefin_Rays")){var block=new MaterialPropertyBlock();renderer.GetPropertyBlock(block,i);block.SetFloat("_Smoothness",original[i].GetFloat("_Smoothness"));renderer.SetPropertyBlock(block,i);}
+                                }
+                            }
+                            yield return null;yield return null;var restored=Draw(prefix+"-production-repeat");screen.repeatChangedPixels=restored.Where((p,i)=>Difference(p,production[i])!=0).Count();
+                            if(screen.repeatChangedPixels!=0||screen.controls.Single(c=>c.name=="no-membrane").changedPixels<20)throw new InvalidOperationException("Screen-scale membrane visibility or restore failed at "+prefix);
+                        }
                     }
+                }
+                var group=root.GetComponent<LODGroup>();var wholeBounds=renderers.Single(r=>r.name.EndsWith("_LOD0")).bounds;
+                foreach(var view in new[]{(.06f,2),(.16f,1),(.32f,1),(.80f,0)})
+                {
+                    string prefix="auto"+Mathf.RoundToInt(view.Item1*100);camera.orthographicSize=wholeBounds.extents.x/(camera.aspect*view.Item1);camera.transform.position=wholeBounds.center+new Vector3(0,.1f,-6);camera.transform.LookAt(wholeBounds.center);group.ForceLOD(-1);yield return null;yield return null;
+                    var baseline=Draw(prefix+"-production");var repeat=Draw(prefix+"-production-repeat");group.ForceLOD(view.Item2);yield return null;yield return null;var forced=Draw(prefix+"-diagnostic-forced-lod"+view.Item2);
+                    var sample=new AutomaticSample{nominalViewportWidth=view.Item1,lodBias=QualitySettings.lodBias,expectedLod=view.Item2,repeatChangedPixels=repeat.Where((p,i)=>Difference(p,baseline[i])!=0).Count(),forcedChangedPixels=forced.Where((p,i)=>Difference(p,baseline[i])!=0).Count()};receipt.automatic.Add(sample);
+                    if(sample.repeatChangedPixels!=0||sample.forcedChangedPixels!=0)throw new InvalidOperationException("Automatic LOD render does not match expected distance mesh at "+prefix+": "+JsonUtility.ToJson(sample));
                 }
                 receipt.status="PASS";
             }
