@@ -1,0 +1,62 @@
+{
+  "status": "PREPARATION_PASS",
+  "version": "0.1.0",
+  "build": "6",
+  "sourceBase": "dbea63125ebd8cf70bbf62fa7c12675367d7f8af",
+  "sceneComparison": {
+    "status": "PASS",
+    "scope": "Generated scene semantic comparison; game object names, component class/script identity and internal references normalized; all other serialized values compared",
+    "baseCommit": "dbea63125ebd8cf70bbf62fa7c12675367d7f8af",
+    "blocks": 20,
+    "changedSemanticObjects": [],
+    "canonicalSha256": "053ede9f9dc4b5125737c7376200291c15baf2a13f04f05e7670c04c27408c1a"
+  },
+  "editorTests": {
+    "result": "Passed",
+    "total": "60",
+    "passed": "60",
+    "failed": "0",
+    "end-time": "2026-11-24 15:42:47Z"
+  },
+  "fullPlayMode": {
+    "result": "Passed",
+    "total": "20",
+    "passed": "20",
+    "failed": "0",
+    "end-time": "2026-11-24 16:00:50Z"
+  },
+  "completedContentSubtest": {
+    "status": "PASS",
+    "scope": "headless EventSystem input and scene/controller reconstruction; not OS process restart or physical touch",
+    "rounds": 34,
+    "points": 6229,
+    "catches": 34,
+    "observations": 3,
+    "inspectedSpecies": 12,
+    "equippedGear": 20,
+    "duplicateReleaseTaps": 34
+  },
+  "freeze": "NOT_RUN",
+  "archive": "NOT_RUN",
+  "upload": "NOT_RUN",
+  "actualTestFlightInstallation": "NOT_RUN",
+  "overallProduct": "PARTIAL",
+  "art": "PARTIAL",
+  "physical20MinuteQualification": "NOT_RUN",
+  "releaseGuardTests": 11,
+  "continuousSubtest": {
+    "status": "PASS",
+    "completedRounds": 20,
+    "catches": 20,
+    "points": 3443,
+    "failures": [],
+    "sceneRestart": {
+      "status": "PASS",
+      "scope": "headless scene/controller reload, not OS process restart",
+      "points": 3443,
+      "catches": 20,
+      "observations": 3
+    }
+  },
+  "scope": "Complete current Editor/PlayMode suite and release guards before freeze; headless EventSystem input, not signed release Player, physical touch or art acceptance"
+}

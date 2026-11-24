@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "2a040b89-0ed0-4c6b-8825-a0dc2be4ffd8",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "53ca07fd799af8a56e77aba124a09895c4f0c67ff3131e2e64d08d09d4331d67",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-24T15:37:06.508Z",
+    "finishedAt": "2026-11-24T15:37:07.071Z",
+    "durationMs": 498.4245000000001,
+    "exitCode": 1,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/beta6-qa/preflight.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/beta6-qa/preflight.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 1,
+  "startedAt": "2026-11-24T15:37:06.508Z",
+  "finishedAt": "2026-11-24T15:37:07.071Z",
+  "durationMs": 498.4245000000001
+}
