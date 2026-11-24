@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "25255390-b36c-4d6c-ad65-fb7d7e85b2b7",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "4d38acdfcc3b4dc3a87fbf0f33e2795a7a9686c05ed7d238f2699e79f72bd841",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-24T14:47:46.565Z",
+    "finishedAt": "2026-11-24T14:51:16.679Z",
+    "durationMs": 210076.281167,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      "tools/art.py",
+      "review",
+      "--asset",
+      "spinning-rig",
+      "--label",
+      "rigwindingturntable20261124a",
+      "--turntable"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    "tools/art.py",
+    "review",
+    "--asset",
+    "spinning-rig",
+    "--label",
+    "rigwindingturntable20261124a",
+    "--turntable"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T14:47:46.565Z",
+  "finishedAt": "2026-11-24T14:51:16.679Z",
+  "durationMs": 210076.281167
+}

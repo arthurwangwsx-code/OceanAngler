@@ -1,0 +1,1379 @@
+{
+  "status": "PARTIAL",
+  "implementation": "IN_PROGRESS",
+  "wholeProduct": "INCOMPLETE",
+  "sourceStatus": "ENGINEERING_CHECKS_PASS",
+  "beforeWinding": {
+    "status": "FAIL",
+    "scope": "actual saved triangle radial envelope and8008BVH rays perLOD; conservative diagnostic clearances, not CAD tolerances or human art acceptance",
+    "checks": [
+      "\u4fdd\u7559\u65e2\u6709\u4e09\u6863\u9762\u9884\u7b97 0",
+      "\u5b9e\u9645\u7ebf\u6750\u4e0e\u7ebf\u676f\u7f51\u683c\u5b58\u5728 0",
+      "\u771f\u5b9e\u7ed5\u7ebf\u4e09\u89d2\u9762\u4e0e\u7ebf\u676f\u81f3\u5c1110\u5fae\u7c73\u8bca\u65ad\u95f4\u9699 0",
+      "\u516b\u7ecf\u7ebf\u5b9e\u9645\u53ef\u8fa825\u5708\u53ca\u7aef\u70b9 0",
+      "\u4fdd\u7559\u65e2\u6709\u4e09\u6863\u9762\u9884\u7b97 1",
+      "\u5b9e\u9645\u7ebf\u6750\u4e0e\u7ebf\u676f\u7f51\u683c\u5b58\u5728 1",
+      "\u516b\u7ecf\u7ebf\u5b9e\u9645\u53ef\u8fa825\u5708\u53ca\u7aef\u70b9 1",
+      "\u4fdd\u7559\u65e2\u6709\u4e09\u6863\u9762\u9884\u7b97 2",
+      "\u5b9e\u9645\u7ebf\u6750\u4e0e\u7ebf\u676f\u7f51\u683c\u5b58\u5728 2"
+    ],
+    "failures": [
+      "\u771f\u5b9e\u7ed5\u7ebf\u4e09\u89d2\u9762\u4e0e\u7ebf\u676f\u81f3\u5c1110\u5fae\u7c73\u8bca\u65ad\u95f4\u9699 1",
+      "\u771f\u5b9e\u7ed5\u7ebf\u4e09\u89d2\u9762\u4e0e\u7ebf\u676f\u81f3\u5c1110\u5fae\u7c73\u8bca\u65ad\u95f4\u9699 2",
+      "\u516b\u7ecf\u7ebf\u5b9e\u9645\u53ef\u8fa825\u5708\u53ca\u7aef\u70b9 2"
+    ],
+    "triangles": [
+      43412,
+      19090,
+      8368
+    ],
+    "budgets": [
+      43420,
+      19533,
+      8678
+    ],
+    "samples": [
+      {
+        "lod": 0,
+        "materialTriangles": {
+          "Rig_Metal": 572,
+          "Rig_Line": 7208,
+          "Rig_Black": 252,
+          "Rig_Accent": 576
+        },
+        "minimumLineRadius": 0.03102988534599515,
+        "maximumLineRadius": 0.03240001201629639,
+        "maximumClippedBarrelRadius": 0.031000007999037564,
+        "minimumRadialClearance": 2.987734695758526e-05,
+        "meridianRidges": [
+          26,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25
+        ]
+      },
+      {
+        "lod": 1,
+        "materialTriangles": {
+          "Rig_Metal": 244,
+          "Rig_Line": 3098,
+          "Rig_Black": 108,
+          "Rig_Accent": 246
+        },
+        "minimumLineRadius": 0.030485266030300936,
+        "maximumLineRadius": 0.032361301646927076,
+        "maximumClippedBarrelRadius": 0.031168872735926233,
+        "minimumRadialClearance": -0.0006836067056252976,
+        "meridianRidges": [
+          26,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25
+        ]
+      },
+      {
+        "lod": 2,
+        "materialTriangles": {
+          "Rig_Metal": 96,
+          "Rig_Line": 1838,
+          "Rig_Black": 42,
+          "Rig_Accent": 96
+        },
+        "minimumLineRadius": 0.02977912549373341,
+        "maximumLineRadius": 0.03255546357932563,
+        "maximumClippedBarrelRadius": 0.03247284782554944,
+        "minimumRadialClearance": -0.002693722331816032,
+        "meridianRidges": [
+          24,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25
+        ]
+      }
+    ]
+  },
+  "winding": {
+    "status": "ENGINEERING_CHECKS_PASS",
+    "scope": "actual saved triangle radial envelope and8008BVH rays perLOD; conservative diagnostic clearances, not CAD tolerances or human art acceptance",
+    "checks": [
+      "\u4fdd\u7559\u65e2\u6709\u4e09\u6863\u9762\u9884\u7b97 0",
+      "\u5b9e\u9645\u7ebf\u6750\u4e0e\u7ebf\u676f\u7f51\u683c\u5b58\u5728 0",
+      "\u771f\u5b9e\u7ed5\u7ebf\u4e09\u89d2\u9762\u4e0e\u7ebf\u676f\u81f3\u5c1110\u5fae\u7c73\u8bca\u65ad\u95f4\u9699 0",
+      "\u516b\u7ecf\u7ebf\u5b9e\u9645\u53ef\u8fa825\u5708\u53ca\u7aef\u70b9 0",
+      "\u4fdd\u7559\u65e2\u6709\u4e09\u6863\u9762\u9884\u7b97 1",
+      "\u5b9e\u9645\u7ebf\u6750\u4e0e\u7ebf\u676f\u7f51\u683c\u5b58\u5728 1",
+      "\u771f\u5b9e\u7ed5\u7ebf\u4e09\u89d2\u9762\u4e0e\u7ebf\u676f\u81f3\u5c1110\u5fae\u7c73\u8bca\u65ad\u95f4\u9699 1",
+      "\u516b\u7ecf\u7ebf\u5b9e\u9645\u53ef\u8fa825\u5708\u53ca\u7aef\u70b9 1",
+      "\u4fdd\u7559\u65e2\u6709\u4e09\u6863\u9762\u9884\u7b97 2",
+      "\u5b9e\u9645\u7ebf\u6750\u4e0e\u7ebf\u676f\u7f51\u683c\u5b58\u5728 2",
+      "\u771f\u5b9e\u7ed5\u7ebf\u4e09\u89d2\u9762\u4e0e\u7ebf\u676f\u81f3\u5c1110\u5fae\u7c73\u8bca\u65ad\u95f4\u9699 2",
+      "\u516b\u7ecf\u7ebf\u5b9e\u9645\u53ef\u8fa825\u5708\u53ca\u7aef\u70b9 2"
+    ],
+    "failures": [],
+    "triangles": [
+      43412,
+      19034,
+      8526
+    ],
+    "budgets": [
+      43420,
+      19533,
+      8678
+    ],
+    "samples": [
+      {
+        "lod": 0,
+        "materialTriangles": {
+          "Rig_Metal": 572,
+          "Rig_Line": 7208,
+          "Rig_Black": 252,
+          "Rig_Accent": 576
+        },
+        "minimumLineRadius": 0.03102988534599515,
+        "maximumLineRadius": 0.03240001201629639,
+        "maximumClippedBarrelRadius": 0.031000007999037564,
+        "minimumRadialClearance": 2.987734695758526e-05,
+        "meridianRidges": [
+          26,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25
+        ]
+      },
+      {
+        "lod": 1,
+        "materialTriangles": {
+          "Rig_Metal": 284,
+          "Rig_Line": 3002,
+          "Rig_Black": 108,
+          "Rig_Accent": 246
+        },
+        "minimumLineRadius": 0.031184333825582503,
+        "maximumLineRadius": 0.03240001201629639,
+        "maximumClippedBarrelRadius": 0.031000007457010256,
+        "minimumRadialClearance": 0.00018432636857224766,
+        "meridianRidges": [
+          26,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25
+        ]
+      },
+      {
+        "lod": 2,
+        "materialTriangles": {
+          "Rig_Metal": 140,
+          "Rig_Line": 1952,
+          "Rig_Black": 42,
+          "Rig_Accent": 96
+        },
+        "minimumLineRadius": 0.031187158222466264,
+        "maximumLineRadius": 0.03295000703448806,
+        "maximumClippedBarrelRadius": 0.031000007457010256,
+        "minimumRadialClearance": 0.00018715076545600812,
+        "meridianRidges": [
+          26,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25
+        ]
+      }
+    ]
+  },
+  "lod0Invariants": {
+    "status": "GEOMETRY_INVARIANTS_PASS_WITH_UV_DIFFERENCES",
+    "scope": "actual oriented polygon geometry, positions/weights/world matrices and sharp flags unchanged; all raw UV differences retained; not full buffer/UV identity or human art acceptance",
+    "geometryDifferences": [],
+    "otherDifferences": [],
+    "uvDifferences": [
+      {
+        "part": "Housing_LOD0",
+        "material": "Rig_Metal",
+        "maxComponentDelta": 5.960464477539063e-08,
+        "shaderNodeTypes": [
+          "BSDF_PRINCIPLED",
+          "OUTPUT_MATERIAL"
+        ],
+        "constantShader": true
+      },
+      {
+        "part": "Housing_LOD0",
+        "material": "Rig_Metal",
+        "maxComponentDelta": 5.960464477539063e-08,
+        "shaderNodeTypes": [
+          "BSDF_PRINCIPLED",
+          "OUTPUT_MATERIAL"
+        ],
+        "constantShader": true
+      },
+      {
+        "part": "Housing_LOD0",
+        "material": "Rig_Metal",
+        "maxComponentDelta": 5.960464477539063e-08,
+        "shaderNodeTypes": [
+          "BSDF_PRINCIPLED",
+          "OUTPUT_MATERIAL"
+        ],
+        "constantShader": true
+      },
+      {
+        "part": "Housing_LOD0",
+        "material": "Rig_Metal",
+        "maxComponentDelta": 5.960464477539063e-08,
+        "shaderNodeTypes": [
+          "BSDF_PRINCIPLED",
+          "OUTPUT_MATERIAL"
+        ],
+        "constantShader": true
+      },
+      {
+        "part": "Housing_LOD0",
+        "material": "Rig_Black",
+        "maxComponentDelta": 5.960464477539063e-08,
+        "shaderNodeTypes": [
+          "BSDF_PRINCIPLED",
+          "OUTPUT_MATERIAL"
+        ],
+        "constantShader": true
+      },
+      {
+        "part": "Housing_LOD0",
+        "material": "Rig_Black",
+        "maxComponentDelta": 5.960464477539063e-08,
+        "shaderNodeTypes": [
+          "BSDF_PRINCIPLED",
+          "OUTPUT_MATERIAL"
+        ],
+        "constantShader": true
+      },
+      {
+        "part": "Housing_LOD0",
+        "material": "Rig_Black",
+        "maxComponentDelta": 5.960464477539063e-08,
+        "shaderNodeTypes": [
+          "BSDF_PRINCIPLED",
+          "OUTPUT_MATERIAL"
+        ],
+        "constantShader": true
+      },
+      {
+        "part": "Housing_LOD0",
+        "material": "Rig_Black",
+        "maxComponentDelta": 5.960464477539063e-08,
+        "shaderNodeTypes": [
+          "BSDF_PRINCIPLED",
+          "OUTPUT_MATERIAL"
+        ],
+        "constantShader": true
+      },
+      {
+        "part": "Housing_LOD0",
+        "material": "Rig_Black",
+        "maxComponentDelta": 5.960464477539063e-08,
+        "shaderNodeTypes": [
+          "BSDF_PRINCIPLED",
+          "OUTPUT_MATERIAL"
+        ],
+        "constantShader": true
+      },
+      {
+        "part": "Housing_LOD0",
+        "material": "Rig_Black",
+        "maxComponentDelta": 5.960464477539063e-08,
+        "shaderNodeTypes": [
+          "BSDF_PRINCIPLED",
+          "OUTPUT_MATERIAL"
+        ],
+        "constantShader": true
+      },
+      {
+        "part": "Housing_LOD0",
+        "material": "Rig_Black",
+        "maxComponentDelta": 5.960464477539063e-08,
+        "shaderNodeTypes": [
+          "BSDF_PRINCIPLED",
+          "OUTPUT_MATERIAL"
+        ],
+        "constantShader": true
+      },
+      {
+        "part": "Housing_LOD0",
+        "material": "Rig_Black",
+        "maxComponentDelta": 5.960464477539063e-08,
+        "shaderNodeTypes": [
+          "BSDF_PRINCIPLED",
+          "OUTPUT_MATERIAL"
+        ],
+        "constantShader": true
+      }
+    ]
+  },
+  "strictFullIdentityTests": {
+    "first": "FAIL_RAW_BUFFER_ORDER",
+    "second": "FAIL_HOUSING_UV_TAIL_DIFFERENCES",
+    "preserved": true
+  },
+  "play": {
+    "status": "PASS",
+    "passed": 13,
+    "failed": 0,
+    "scope": "13selected headlessPlayMode tests including16-frame QA flow; not rendered or full-suite qualification"
+  },
+  "gpu": {
+    "status": "PASS",
+    "scope": "isolated imported rig Metal HDR/manual presentation; not Player UI or device qualification",
+    "graphics": "Metal",
+    "target": "R16G16B16A16_SFloat",
+    "quality": "Medium",
+    "width": 1440,
+    "height": 1000,
+    "samples": 4,
+    "images": 31,
+    "shots": [
+      {
+        "name": "lod0-rest",
+        "changedPixels": 0
+      },
+      {
+        "name": "lod0-winding-a",
+        "changedPixels": 0
+      },
+      {
+        "name": "lod0-winding-b",
+        "changedPixels": 0
+      },
+      {
+        "name": "lod0-open-bail",
+        "changedPixels": 0
+      },
+      {
+        "name": "production-reverse",
+        "changedPixels": 0
+      },
+      {
+        "name": "production-roller",
+        "changedPixels": 0
+      },
+      {
+        "name": "production-whole",
+        "changedPixels": 0
+      },
+      {
+        "name": "lod1-rest",
+        "changedPixels": 0
+      },
+      {
+        "name": "lod1-winding-a",
+        "changedPixels": 0
+      },
+      {
+        "name": "lod1-winding-b",
+        "changedPixels": 0
+      },
+      {
+        "name": "lod1-open-bail",
+        "changedPixels": 0
+      },
+      {
+        "name": "lod2-rest",
+        "changedPixels": 0
+      },
+      {
+        "name": "lod2-winding-a",
+        "changedPixels": 0
+      },
+      {
+        "name": "lod2-winding-b",
+        "changedPixels": 0
+      },
+      {
+        "name": "lod2-open-bail",
+        "changedPixels": 0
+      }
+    ]
+  },
+  "settingsRestoration": {
+    "before": {
+      "game/ProjectSettings/QualitySettings.asset": "abebac834787e63425b147d6e02589440cd5134d66fafbd862fb5d237424c573",
+      "game/ProjectSettings/GraphicsSettings.asset": "012fa87054bf6e9fbb0607568cfa287968396f9d3a27d3376432024e8684340d"
+    },
+    "after": {
+      "game/ProjectSettings/QualitySettings.asset": "abebac834787e63425b147d6e02589440cd5134d66fafbd862fb5d237424c573",
+      "game/ProjectSettings/GraphicsSettings.asset": "012fa87054bf6e9fbb0607568cfa287968396f9d3a27d3376432024e8684340d"
+    },
+    "identical": true
+  },
+  "turntable": {
+    "status": "PASS",
+    "scope": "two actual36-frame source orbits, full rig8 assemblies and reel6 assemblies; fixed per-orbit camera scale and required bounding boxes inside4percent margin; not native gameplay or user art acceptance",
+    "orbits": [
+      {
+        "name": "whole-turn",
+        "assemblies": [
+          "BailWire",
+          "Crank",
+          "Housing",
+          "LineRoller",
+          "Lure",
+          "Rod",
+          "Rotor",
+          "Spool"
+        ],
+        "center": [
+          -0.03508913889527321,
+          -0.08749999105930328,
+          1.1896473169326782
+        ],
+        "fixedOrthoScale": 4.055617885155811,
+        "frames": [
+          {
+            "name": "whole-turn-000",
+            "angleDegrees": 0,
+            "minX": 0.47795382142066956,
+            "maxX": 0.5220461487770081,
+            "minY": 0.0599999725818634,
+            "maxY": 0.939999520778656
+          },
+          {
+            "name": "whole-turn-001",
+            "angleDegrees": 10,
+            "minX": 0.4737716317176819,
+            "maxX": 0.5221519470214844,
+            "minY": 0.0599999725818634,
+            "maxY": 0.939999520778656
+          },
+          {
+            "name": "whole-turn-002",
+            "angleDegrees": 20,
+            "minX": 0.4703863561153412,
+            "maxX": 0.5243761539459229,
+            "minY": 0.06000032648444176,
+            "maxY": 0.9399998784065247
+          },
+          {
+            "name": "whole-turn-003",
+            "angleDegrees": 30,
+            "minX": 0.4679008722305298,
+            "maxX": 0.526991069316864,
+            "minY": 0.06000019237399101,
+            "maxY": 0.9399996995925903
+          },
+          {
+            "name": "whole-turn-004",
+            "angleDegrees": 40,
+            "minX": 0.46639078855514526,
+            "maxX": 0.5290910601615906,
+            "minY": 0.06000019237399101,
+            "maxY": 0.9399996995925903
+          },
+          {
+            "name": "whole-turn-005",
+            "angleDegrees": 50,
+            "minX": 0.46590179204940796,
+            "maxX": 0.5303071141242981,
+            "minY": 0.060000017285346985,
+            "maxY": 0.939999520778656
+          },
+          {
+            "name": "whole-turn-006",
+            "angleDegrees": 60,
+            "minX": 0.4664488136768341,
+            "maxX": 0.5306021571159363,
+            "minY": 0.06000015139579773,
+            "maxY": 0.9399996995925903
+          },
+          {
+            "name": "whole-turn-007",
+            "angleDegrees": 70,
+            "minX": 0.4680151045322418,
+            "maxX": 0.5299672484397888,
+            "minY": 0.06000037118792534,
+            "maxY": 0.9399998784065247
+          },
+          {
+            "name": "whole-turn-008",
+            "angleDegrees": 80,
+            "minX": 0.47055384516716003,
+            "maxX": 0.5284223556518555,
+            "minY": 0.06000015139579773,
+            "maxY": 0.9399996995925903
+          },
+          {
+            "name": "whole-turn-009",
+            "angleDegrees": 90,
+            "minX": 0.47398674488067627,
+            "maxX": 0.5260133147239685,
+            "minY": 0.06000019237399101,
+            "maxY": 0.9399996995925903
+          },
+          {
+            "name": "whole-turn-010",
+            "angleDegrees": 100,
+            "minX": 0.47320982813835144,
+            "maxX": 0.5254174470901489,
+            "minY": 0.06000032648444176,
+            "maxY": 0.9399998784065247
+          },
+          {
+            "name": "whole-turn-011",
+            "angleDegrees": 110,
+            "minX": 0.47078099846839905,
+            "maxX": 0.5240489840507507,
+            "minY": 0.0599999725818634,
+            "maxY": 0.939999520778656
+          },
+          {
+            "name": "whole-turn-012",
+            "angleDegrees": 120,
+            "minX": 0.4692402184009552,
+            "maxX": 0.5219501256942749,
+            "minY": 0.06000019237399101,
+            "maxY": 0.9399996995925903
+          },
+          {
+            "name": "whole-turn-013",
+            "angleDegrees": 130,
+            "minX": 0.4686339497566223,
+            "maxX": 0.5191841721534729,
+            "minY": 0.06000015139579773,
+            "maxY": 0.9399996995925903
+          },
+          {
+            "name": "whole-turn-014",
+            "angleDegrees": 140,
+            "minX": 0.4689807593822479,
+            "maxX": 0.5158353447914124,
+            "minY": 0.06000032648444176,
+            "maxY": 0.9399998784065247
+          },
+          {
+            "name": "whole-turn-015",
+            "angleDegrees": 150,
+            "minX": 0.4702700078487396,
+            "maxX": 0.5131131410598755,
+            "minY": 0.06000019237399101,
+            "maxY": 0.9399996995925903
+          },
+          {
+            "name": "whole-turn-016",
+            "angleDegrees": 160,
+            "minX": 0.47246262431144714,
+            "maxX": 0.5166264772415161,
+            "minY": 0.060000017285346985,
+            "maxY": 0.939999520778656
+          },
+          {
+            "name": "whole-turn-017",
+            "angleDegrees": 170,
+            "minX": 0.47549188137054443,
+            "maxX": 0.519634485244751,
+            "minY": 0.06000032648444176,
+            "maxY": 0.9399998784065247
+          },
+          {
+            "name": "whole-turn-018",
+            "angleDegrees": 180,
+            "minX": 0.47795364260673523,
+            "maxX": 0.5220459699630737,
+            "minY": 0.060000017285346985,
+            "maxY": 0.939999520778656
+          },
+          {
+            "name": "whole-turn-019",
+            "angleDegrees": 190,
+            "minX": 0.47784823179244995,
+            "maxX": 0.5262285470962524,
+            "minY": 0.06000032648444176,
+            "maxY": 0.9399998784065247
+          },
+          {
+            "name": "whole-turn-020",
+            "angleDegrees": 200,
+            "minX": 0.4756239056587219,
+            "maxX": 0.529613733291626,
+            "minY": 0.060000017285346985,
+            "maxY": 0.939999520778656
+          },
+          {
+            "name": "whole-turn-021",
+            "angleDegrees": 210,
+            "minX": 0.4730089604854584,
+            "maxX": 0.532099187374115,
+            "minY": 0.06000019237399101,
+            "maxY": 0.9399996995925903
+          },
+          {
+            "name": "whole-turn-022",
+            "angleDegrees": 220,
+            "minX": 0.4709090292453766,
+            "maxX": 0.5336093306541443,
+            "minY": 0.06000032648444176,
+            "maxY": 0.9399998784065247
+          },
+          {
+            "name": "whole-turn-023",
+            "angleDegrees": 230,
+            "minX": 0.46969303488731384,
+            "maxX": 0.5340983271598816,
+            "minY": 0.06000015139579773,
+            "maxY": 0.9399996995925903
+          },
+          {
+            "name": "whole-turn-024",
+            "angleDegrees": 240,
+            "minX": 0.4693978726863861,
+            "maxX": 0.5335512161254883,
+            "minY": 0.06000019237399101,
+            "maxY": 0.9399996995925903
+          },
+          {
+            "name": "whole-turn-025",
+            "angleDegrees": 250,
+            "minX": 0.4700326919555664,
+            "maxX": 0.531984806060791,
+            "minY": 0.0599999725818634,
+            "maxY": 0.939999520778656
+          },
+          {
+            "name": "whole-turn-026",
+            "angleDegrees": 260,
+            "minX": 0.4715777337551117,
+            "maxX": 0.5294463038444519,
+            "minY": 0.06000037118792534,
+            "maxY": 0.9399998784065247
+          },
+          {
+            "name": "whole-turn-027",
+            "angleDegrees": 270,
+            "minX": 0.4739866554737091,
+            "maxX": 0.5260132551193237,
+            "minY": 0.06000019237399101,
+            "maxY": 0.9399996995925903
+          },
+          {
+            "name": "whole-turn-028",
+            "angleDegrees": 280,
+            "minX": 0.4745824635028839,
+            "maxX": 0.5267900824546814,
+            "minY": 0.06000015139579773,
+            "maxY": 0.9399996995925903
+          },
+          {
+            "name": "whole-turn-029",
+            "angleDegrees": 290,
+            "minX": 0.47595107555389404,
+            "maxX": 0.5292190909385681,
+            "minY": 0.06000037118792534,
+            "maxY": 0.9399998784065247
+          },
+          {
+            "name": "whole-turn-030",
+            "angleDegrees": 300,
+            "minX": 0.4780498445034027,
+            "maxX": 0.5307597517967224,
+            "minY": 0.06000015139579773,
+            "maxY": 0.9399996995925903
+          },
+          {
+            "name": "whole-turn-031",
+            "angleDegrees": 310,
+            "minX": 0.48081567883491516,
+            "maxX": 0.5313659310340881,
+            "minY": 0.060000017285346985,
+            "maxY": 0.939999520778656
+          },
+          {
+            "name": "whole-turn-032",
+            "angleDegrees": 320,
+            "minX": 0.48416459560394287,
+            "maxX": 0.5310191512107849,
+            "minY": 0.06000019237399101,
+            "maxY": 0.9399996995925903
+          },
+          {
+            "name": "whole-turn-033",
+            "angleDegrees": 330,
+            "minX": 0.48688676953315735,
+            "maxX": 0.5297299027442932,
+            "minY": 0.06000019237399101,
+            "maxY": 0.9399996995925903
+          },
+          {
+            "name": "whole-turn-034",
+            "angleDegrees": 340,
+            "minX": 0.4833734333515167,
+            "maxX": 0.5275372862815857,
+            "minY": 0.06000032648444176,
+            "maxY": 0.9399998784065247
+          },
+          {
+            "name": "whole-turn-035",
+            "angleDegrees": 350,
+            "minX": 0.4803653359413147,
+            "maxX": 0.5245079398155212,
+            "minY": 0.0599999725818634,
+            "maxY": 0.939999520778656
+          }
+        ]
+      },
+      {
+        "name": "turn",
+        "assemblies": [
+          "BailWire",
+          "Crank",
+          "Housing",
+          "LineRoller",
+          "Rotor",
+          "Spool"
+        ],
+        "center": [
+          -0.03508913889527321,
+          -0.10299999266862869,
+          0.44830000400543213
+        ],
+        "fixedOrthoScale": 0.4919323731552364,
+        "frames": [
+          {
+            "name": "turn-000",
+            "angleDegrees": 0,
+            "minX": 0.31824561953544617,
+            "maxX": 0.6817543506622314,
+            "minY": 0.06000009551644325,
+            "maxY": 0.9399993419647217
+          },
+          {
+            "name": "turn-001",
+            "angleDegrees": 10,
+            "minX": 0.2892376780509949,
+            "maxX": 0.6880972981452942,
+            "minY": 0.06000009551644325,
+            "maxY": 0.9399993419647217
+          },
+          {
+            "name": "turn-002",
+            "angleDegrees": 20,
+            "minX": 0.2666335105895996,
+            "maxX": 0.711739718914032,
+            "minY": 0.060000594705343246,
+            "maxY": 0.9399998188018799
+          },
+          {
+            "name": "turn-003",
+            "angleDegrees": 30,
+            "minX": 0.251120001077652,
+            "maxX": 0.7289484143257141,
+            "minY": 0.06000068411231041,
+            "maxY": 0.9399998784065247
+          },
+          {
+            "name": "turn-004",
+            "angleDegrees": 40,
+            "minX": 0.24316877126693726,
+            "maxX": 0.7392008304595947,
+            "minY": 0.06000027805566788,
+            "maxY": 0.9399994611740112
+          },
+          {
+            "name": "turn-005",
+            "angleDegrees": 50,
+            "minX": 0.2430211901664734,
+            "maxX": 0.7421851754188538,
+            "minY": 0.06000000238418579,
+            "maxY": 0.9399992823600769
+          },
+          {
+            "name": "turn-006",
+            "angleDegrees": 60,
+            "minX": 0.2506818175315857,
+            "maxX": 0.7378109097480774,
+            "minY": 0.06000027805566788,
+            "maxY": 0.9399994611740112
+          },
+          {
+            "name": "turn-007",
+            "angleDegrees": 70,
+            "minX": 0.26591750979423523,
+            "maxX": 0.7262105941772461,
+            "minY": 0.06000063940882683,
+            "maxY": 0.9399998188018799
+          },
+          {
+            "name": "turn-008",
+            "angleDegrees": 80,
+            "minX": 0.28826627135276794,
+            "maxX": 0.7077374458312988,
+            "minY": 0.060000229626894,
+            "maxY": 0.9399994611740112
+          },
+          {
+            "name": "turn-009",
+            "angleDegrees": 90,
+            "minX": 0.3170481026172638,
+            "maxX": 0.6829520463943481,
+            "minY": 0.06000036746263504,
+            "maxY": 0.939999520778656
+          },
+          {
+            "name": "turn-010",
+            "angleDegrees": 100,
+            "minX": 0.3101639747619629,
+            "maxX": 0.6829651594161987,
+            "minY": 0.06000063940882683,
+            "maxY": 0.9399998784065247
+          },
+          {
+            "name": "turn-011",
+            "angleDegrees": 110,
+            "minX": 0.28871938586235046,
+            "maxX": 0.6774183511734009,
+            "minY": 0.06000041216611862,
+            "maxY": 0.9399996399879456
+          },
+          {
+            "name": "turn-012",
+            "angleDegrees": 120,
+            "minX": 0.2736953794956207,
+            "maxX": 0.6664817333221436,
+            "minY": 0.06000005081295967,
+            "maxY": 0.9399993419647217
+          },
+          {
+            "name": "turn-013",
+            "angleDegrees": 130,
+            "minX": 0.2655467092990875,
+            "maxX": 0.6504858136177063,
+            "minY": 0.0600004568696022,
+            "maxY": 0.9399996399879456
+          },
+          {
+            "name": "turn-014",
+            "angleDegrees": 140,
+            "minX": 0.2645224630832672,
+            "maxX": 0.6299182176589966,
+            "minY": 0.060000229626894,
+            "maxY": 0.9399994611740112
+          },
+          {
+            "name": "turn-015",
+            "angleDegrees": 150,
+            "minX": 0.2706526517868042,
+            "maxX": 0.623862624168396,
+            "minY": 0.06000032275915146,
+            "maxY": 0.939999520778656
+          },
+          {
+            "name": "turn-016",
+            "angleDegrees": 160,
+            "minX": 0.28375184535980225,
+            "maxX": 0.6478499174118042,
+            "minY": 0.06000032275915146,
+            "maxY": 0.939999520778656
+          },
+          {
+            "name": "turn-017",
+            "angleDegrees": 170,
+            "minX": 0.3034209907054901,
+            "maxX": 0.6673442125320435,
+            "minY": 0.060000550001859665,
+            "maxY": 0.9399997591972351
+          },
+          {
+            "name": "turn-018",
+            "angleDegrees": 180,
+            "minX": 0.31824544072151184,
+            "maxX": 0.6817541718482971,
+            "minY": 0.06000009551644325,
+            "maxY": 0.9399993419647217
+          },
+          {
+            "name": "turn-019",
+            "angleDegrees": 190,
+            "minX": 0.3119029104709625,
+            "maxX": 0.710762619972229,
+            "minY": 0.060000550001859665,
+            "maxY": 0.9399997591972351
+          },
+          {
+            "name": "turn-020",
+            "angleDegrees": 200,
+            "minX": 0.2882603704929352,
+            "maxX": 0.7333665490150452,
+            "minY": 0.060000550001859665,
+            "maxY": 0.9399997591972351
+          },
+          {
+            "name": "turn-021",
+            "angleDegrees": 210,
+            "minX": 0.2710516154766083,
+            "maxX": 0.7488800287246704,
+            "minY": 0.06000032275915146,
+            "maxY": 0.939999520778656
+          },
+          {
+            "name": "turn-022",
+            "angleDegrees": 220,
+            "minX": 0.2607991695404053,
+            "maxX": 0.756831169128418,
+            "minY": 0.060000229626894,
+            "maxY": 0.9399994611740112
+          },
+          {
+            "name": "turn-023",
+            "angleDegrees": 230,
+            "minX": 0.25781476497650146,
+            "maxX": 0.7569787502288818,
+            "minY": 0.06000036746263504,
+            "maxY": 0.9399995803833008
+          },
+          {
+            "name": "turn-024",
+            "angleDegrees": 240,
+            "minX": 0.2621890902519226,
+            "maxX": 0.7493181824684143,
+            "minY": 0.06000005081295967,
+            "maxY": 0.9399992823600769
+          },
+          {
+            "name": "turn-025",
+            "angleDegrees": 250,
+            "minX": 0.2737896144390106,
+            "maxX": 0.7340826392173767,
+            "minY": 0.06000050529837608,
+            "maxY": 0.9399996995925903
+          },
+          {
+            "name": "turn-026",
+            "angleDegrees": 260,
+            "minX": 0.292262464761734,
+            "maxX": 0.7117337584495544,
+            "minY": 0.06000063940882683,
+            "maxY": 0.9399998784065247
+          },
+          {
+            "name": "turn-027",
+            "angleDegrees": 270,
+            "minX": 0.31704795360565186,
+            "maxX": 0.6829519271850586,
+            "minY": 0.06000036746263504,
+            "maxY": 0.939999520778656
+          },
+          {
+            "name": "turn-028",
+            "angleDegrees": 280,
+            "minX": 0.31703490018844604,
+            "maxX": 0.6898360848426819,
+            "minY": 0.060000229626894,
+            "maxY": 0.9399994611740112
+          },
+          {
+            "name": "turn-029",
+            "angleDegrees": 290,
+            "minX": 0.3225814998149872,
+            "maxX": 0.7112804651260376,
+            "minY": 0.06000063940882683,
+            "maxY": 0.9399998188018799
+          },
+          {
+            "name": "turn-030",
+            "angleDegrees": 300,
+            "minX": 0.33351826667785645,
+            "maxX": 0.7263046503067017,
+            "minY": 0.06000027805566788,
+            "maxY": 0.9399994611740112
+          },
+          {
+            "name": "turn-031",
+            "angleDegrees": 310,
+            "minX": 0.3495137691497803,
+            "maxX": 0.7344529032707214,
+            "minY": 0.06000000238418579,
+            "maxY": 0.9399992823600769
+          },
+          {
+            "name": "turn-032",
+            "angleDegrees": 320,
+            "minX": 0.3700817823410034,
+            "maxX": 0.7354775071144104,
+            "minY": 0.06000027805566788,
+            "maxY": 0.9399994611740112
+          },
+          {
+            "name": "turn-033",
+            "angleDegrees": 330,
+            "minX": 0.376137375831604,
+            "maxX": 0.7293473482131958,
+            "minY": 0.06000068411231041,
+            "maxY": 0.9399998784065247
+          },
+          {
+            "name": "turn-034",
+            "angleDegrees": 340,
+            "minX": 0.3521502614021301,
+            "maxX": 0.7162483334541321,
+            "minY": 0.060000594705343246,
+            "maxY": 0.9399997591972351
+          },
+          {
+            "name": "turn-035",
+            "angleDegrees": 350,
+            "minX": 0.33265557885169983,
+            "maxX": 0.6965787410736084,
+            "minY": 0.06000009551644325,
+            "maxY": 0.9399993419647217
+          }
+        ]
+      }
+    ],
+    "videos": [
+      {
+        "name": "reel-turntable",
+        "sha256": "a8d8599b4a8113213d27255055e88fa5991d705d3be55961e8805354201d469d",
+        "video": {
+          "width": 960,
+          "height": 640,
+          "r_frame_rate": "12/1",
+          "duration": "3.000000",
+          "nb_read_frames": "36"
+        },
+        "sourceFrames": [
+          {
+            "name": "turn-000.png",
+            "sha256": "76f8489d947ee3b86a5ebb5f409227f02af62c3a0894e28dcf5aed3fb821c7fc"
+          },
+          {
+            "name": "turn-001.png",
+            "sha256": "e7b2462a7632c2a84d684dcb166c67c4f53bddd92acf11cef0ef343d020ca30b"
+          },
+          {
+            "name": "turn-002.png",
+            "sha256": "88078684ea8d9290a6a72cd1f0f15f99c1c783615c20ff367e6b250ec1a64f60"
+          },
+          {
+            "name": "turn-003.png",
+            "sha256": "37fe4ee157ecfc48cfd309e69b392d501c73e924c18f224299903131acb704ab"
+          },
+          {
+            "name": "turn-004.png",
+            "sha256": "02a5121bcbbe0cf35065adfa5b81567d809f8eae180172215766e0ca50d00f50"
+          },
+          {
+            "name": "turn-005.png",
+            "sha256": "a2153f4803e778fdf25c3e8db44754173526899af8fd190ca2d2b5ce20d7d254"
+          },
+          {
+            "name": "turn-006.png",
+            "sha256": "6966eaf4601112c9a8da8335f29c09bc0379e61d4e25f7246a6d132ae25eb47f"
+          },
+          {
+            "name": "turn-007.png",
+            "sha256": "684946ea895b3be4b84ea39cd940ca377f7e2a3cff503d114d855e4c7da5eff6"
+          },
+          {
+            "name": "turn-008.png",
+            "sha256": "7e1aaf35c77cf2d30f4f2d5d01d617c60bcec54530e8ed43884abb6e075e5628"
+          },
+          {
+            "name": "turn-009.png",
+            "sha256": "a3f5d677c20fe73b61c3751ff22d567cc26ac099323e17a410e58ecc6f82b55d"
+          },
+          {
+            "name": "turn-010.png",
+            "sha256": "18eac45c37438e27ec2fd4f3d309e26539bacebcc4d7fcc948e32a3e1b90ebba"
+          },
+          {
+            "name": "turn-011.png",
+            "sha256": "959aa98e8338ac8e305b07d33468ef6f901471dabfdf7b63f7e99b99403ff4f1"
+          },
+          {
+            "name": "turn-012.png",
+            "sha256": "b9b25edc168a103ec294ecde254a0cf2535afc97ecb70cd3a675547293b63598"
+          },
+          {
+            "name": "turn-013.png",
+            "sha256": "5d68626e836dea70786175e6949c093c0d0a7ee242e582087938cbfac7e07c8d"
+          },
+          {
+            "name": "turn-014.png",
+            "sha256": "86e024568abbc02b76b7d2d2da8c59bd0c9ee4c9d9947ad1f93c3ac76a3ef9e9"
+          },
+          {
+            "name": "turn-015.png",
+            "sha256": "738c24c3c5bb4ffb1fabbf87f05fb32a40d054502fbd707c03964d3a931eec13"
+          },
+          {
+            "name": "turn-016.png",
+            "sha256": "245d5c05eb7f3eeceef212ae985e2b8febf74aab99bec279e1f4423a81a1794d"
+          },
+          {
+            "name": "turn-017.png",
+            "sha256": "27b3d0d9154794b2837ef5edfdd92e991e0110e274577ba95974640786c0ecba"
+          },
+          {
+            "name": "turn-018.png",
+            "sha256": "fe954ffd99b0422f463e3ba4cebc77933a0772d4a5834d355037c0219e9238be"
+          },
+          {
+            "name": "turn-019.png",
+            "sha256": "c649783f046f98186a1d2ea9bb7eebb34046cee8d666530268c4c74a327e2f7d"
+          },
+          {
+            "name": "turn-020.png",
+            "sha256": "7bb77c934b76192924ab8afe400b55c56032a49e96f4f50d271e2659635aeebf"
+          },
+          {
+            "name": "turn-021.png",
+            "sha256": "bd727b42c0afbac605ea04bd5cd2f4830be0663faacc55897f672192b6cc61e5"
+          },
+          {
+            "name": "turn-022.png",
+            "sha256": "c154e4cd041199a7fa049390b09487d2cc5cd37e7ecec5302ee1ea955b78935f"
+          },
+          {
+            "name": "turn-023.png",
+            "sha256": "d31a1ca6a826273d29c62f7950117af4aeed51df59fc45c7fdcf93dfcf554051"
+          },
+          {
+            "name": "turn-024.png",
+            "sha256": "91c5ad34679ab686250f6c34ccf659b76e6fa9c6b9bfa24efcce649430bce6c6"
+          },
+          {
+            "name": "turn-025.png",
+            "sha256": "8d0bed61b59142e119c9b60c669c45a3e29f80a4ffb5bf4f1609880b7e05778c"
+          },
+          {
+            "name": "turn-026.png",
+            "sha256": "d4eccc68584650e83954b610adb76e23f4fa902680286ce19c2e52b2916f9dbc"
+          },
+          {
+            "name": "turn-027.png",
+            "sha256": "607e4bf312880026ae8cde7e3454fe84c0730d12f3e88d50b5d48d514e21afef"
+          },
+          {
+            "name": "turn-028.png",
+            "sha256": "5fbfb6bc34294ca312a683899baba1c157f0d354fec8fd904a244e4ff98a03dd"
+          },
+          {
+            "name": "turn-029.png",
+            "sha256": "a23ca182c04619a1071f96bc9c9262bcbde41817e11e9af2a1916e7ef208c252"
+          },
+          {
+            "name": "turn-030.png",
+            "sha256": "40bf68924ef66543e0ed79feb12f39ae3c6d90baeb3eb391a67aab1999bdc4d9"
+          },
+          {
+            "name": "turn-031.png",
+            "sha256": "3ee3e3455d18d66260e35eabb4063e688af2276f94eab248f4edb6dcd65d8f2e"
+          },
+          {
+            "name": "turn-032.png",
+            "sha256": "a571e289d6d704dbfe3da6f3ddd8c9e58604caff99618ccf7e88e4919e13a727"
+          },
+          {
+            "name": "turn-033.png",
+            "sha256": "263e7593be7daaa1ba7be4bca9e43ae6b8108f4ee630d584c9e548146c193357"
+          },
+          {
+            "name": "turn-034.png",
+            "sha256": "4c79f2d90eeb62513e78736270b2278006a8d8f4a53a8d4689cf3a3676032e5f"
+          },
+          {
+            "name": "turn-035.png",
+            "sha256": "ea50bfa69ab34893b3c331fbbd4ea68822edfc7c0cab347a1cc5ea1007a0178d"
+          }
+        ]
+      },
+      {
+        "name": "whole-turntable",
+        "sha256": "d0e4fe95440079fcb23dfd513ab662317c2bb8e0a960125fedc95e306bbec943",
+        "video": {
+          "width": 960,
+          "height": 640,
+          "r_frame_rate": "12/1",
+          "duration": "3.000000",
+          "nb_read_frames": "36"
+        },
+        "sourceFrames": [
+          {
+            "name": "whole-turn-000.png",
+            "sha256": "b41abcda7364bfc25d0a2a38876a8846bcefa631d6577fa88726b52e81520ab1"
+          },
+          {
+            "name": "whole-turn-001.png",
+            "sha256": "1fbb4c711f98f4c6b8ee0054433272348b38ec16f54f72e62a12d06fcadb203e"
+          },
+          {
+            "name": "whole-turn-002.png",
+            "sha256": "eff3606eed667566192ecce7ef127120b1570c71a742dc0ee529a217e2db1e64"
+          },
+          {
+            "name": "whole-turn-003.png",
+            "sha256": "49357d369adbded2e8f35466988c99e831760b3818fe4a76621a5e2ad59d2c2d"
+          },
+          {
+            "name": "whole-turn-004.png",
+            "sha256": "edc9103b8faab37c431c86d968bf54288ac47a572cc7d9dc8f1ebc15e509f24b"
+          },
+          {
+            "name": "whole-turn-005.png",
+            "sha256": "0ad6cf50f57b9bb395506251179d4de6dbb57286c1f0b7bb2909f66a4b190f00"
+          },
+          {
+            "name": "whole-turn-006.png",
+            "sha256": "7059aab4e6d434816a2daec1ba00f29cd701c1b7204b1c85093ec9741550cd19"
+          },
+          {
+            "name": "whole-turn-007.png",
+            "sha256": "2e3e55bcf8f0a0074a9fb9c331361c9676fd2c44878cff135f1828735df0ddf2"
+          },
+          {
+            "name": "whole-turn-008.png",
+            "sha256": "2dea96bcc3a66232b1e0ebf5d6c178a0f2ba3219d2e3207e49a579479a91d1a0"
+          },
+          {
+            "name": "whole-turn-009.png",
+            "sha256": "1489178c7411b7deb2546a3ebf833c599470e908c499f52c83aa525fb02ab3f4"
+          },
+          {
+            "name": "whole-turn-010.png",
+            "sha256": "42c57aeb5b467e68e477b94765e14442325b7fb2875af002f6daed01001c4fbe"
+          },
+          {
+            "name": "whole-turn-011.png",
+            "sha256": "f405d79d1c44b41c32e2fd1181cbe099ab6eafd6abe8b86578406fc30213a806"
+          },
+          {
+            "name": "whole-turn-012.png",
+            "sha256": "24aeed8e4eeb63e8152add4148e3d89d2794eccb657b7c1c0fc2eef5c3b71bcf"
+          },
+          {
+            "name": "whole-turn-013.png",
+            "sha256": "a20ef7532454c2da6ece0790087fa71da2fc9e4f6cbbb4e952caa122f6749195"
+          },
+          {
+            "name": "whole-turn-014.png",
+            "sha256": "d28ee7be5afe407adab0cd1c78d4a8cd5175919d5044239a32fef926398e954e"
+          },
+          {
+            "name": "whole-turn-015.png",
+            "sha256": "bc657c2de5301cbd4492fcb7674b01fd0fd27de9f74176dd7638504a89a6b903"
+          },
+          {
+            "name": "whole-turn-016.png",
+            "sha256": "9bbf8203f83423e0e329a8491246b598432ac8918a248310ec834553434e7d4a"
+          },
+          {
+            "name": "whole-turn-017.png",
+            "sha256": "8ffbad2179a18311d4dd5cf07ea12cc9189ec46658050f4a0544a5c7f4362895"
+          },
+          {
+            "name": "whole-turn-018.png",
+            "sha256": "a5abc869dd39b2a3ca983447325a19648ff4a706d0996a3fab91325871774048"
+          },
+          {
+            "name": "whole-turn-019.png",
+            "sha256": "173c2573265ee44dc7fa04411cb8ee1c1614f90e04a2b266548059271d684176"
+          },
+          {
+            "name": "whole-turn-020.png",
+            "sha256": "92a5555ecb14a6bcde225393e913c9e3baaec6648afe920c42b5dbd21ea59593"
+          },
+          {
+            "name": "whole-turn-021.png",
+            "sha256": "9ebd6d5eb344cfffa40411693946356db27e5437629a493935cbd931dfceaf90"
+          },
+          {
+            "name": "whole-turn-022.png",
+            "sha256": "14f8adf07e3efd61a74c5b786d7114945a59d19822e685f8a1fc358661c3626d"
+          },
+          {
+            "name": "whole-turn-023.png",
+            "sha256": "0528792a2903de7c763492672d834042e4c5ec3bc67bf9d06f14e188deed81af"
+          },
+          {
+            "name": "whole-turn-024.png",
+            "sha256": "337414f48b4b749906898acadfb7ff9bda4a1173930c55927a8dd6289ebe2bc6"
+          },
+          {
+            "name": "whole-turn-025.png",
+            "sha256": "084a87c4761032704db5668796b021887e8504409a6881c847046047dc362e6e"
+          },
+          {
+            "name": "whole-turn-026.png",
+            "sha256": "3a4e3bedbda1e46bbd34395aa2f76ad52920397fcd47fc513826ead7a1dca9e1"
+          },
+          {
+            "name": "whole-turn-027.png",
+            "sha256": "3a0ee9028523911fc807e16732336d2d8f78d88566364db98f75f9ee71d39b1f"
+          },
+          {
+            "name": "whole-turn-028.png",
+            "sha256": "8a1a0cd4b56776f311f2e144ea47634dd34ddf113b1e164d66e4bd60dd869fed"
+          },
+          {
+            "name": "whole-turn-029.png",
+            "sha256": "18a71aa214b65934fb34d9e9ea87f421e8344a20df7482e02abc82c0e430aab4"
+          },
+          {
+            "name": "whole-turn-030.png",
+            "sha256": "77d8455b2429b7623259560b52d45ebf2be02896b50ce25ef120b3f166d33f71"
+          },
+          {
+            "name": "whole-turn-031.png",
+            "sha256": "1c4e73a1e56933f8d209507052a5bf28cf55ce7feea8ddecadc8e00d1cfdc820"
+          },
+          {
+            "name": "whole-turn-032.png",
+            "sha256": "3c1f216aee18492f640e1718e000a5445f621451a92805852387537334324baf"
+          },
+          {
+            "name": "whole-turn-033.png",
+            "sha256": "c53e26a9e8d747129546944711984cdded96d5660c7dc8515c5ef6aaf3ceb891"
+          },
+          {
+            "name": "whole-turn-034.png",
+            "sha256": "6962662b3b27774eeebf6b507e8455ccc500a1cc5fe0a17569d5d0ada340132b"
+          },
+          {
+            "name": "whole-turn-035.png",
+            "sha256": "f31d4ac554360a0c39a04e525a7327230ae6a54b03a3b28afb67b1423badbfbc"
+          }
+        ]
+      }
+    ]
+  },
+  "native": {
+    "status": "NOT_RUN_FOR_CURRENT_SOURCE"
+  },
+  "artAcceptance": "NOT_ACCEPTED",
+  "distribution": "NO_PERSONAL_DEVICE_OR_TESTFLIGHT_UPDATE",
+  "agentVisualReview": {
+    "sourceFramesViaContactSheets": 72,
+    "gpuViewsViaContactSheet": 15,
+    "originalLod2Viewed": true,
+    "userArtAcceptance": "NOT_RUN"
+  }
+}

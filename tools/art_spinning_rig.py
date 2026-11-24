@@ -182,9 +182,12 @@ pickup=tube('RollerSpindle',[(.035,-.145,.565),(.054,-.145,.565)],.0015,'Metal',
 for side in [-1,1]:
  x=.043+side*.006
  pickup=axle_shell('RollerBearingCheek',[(-.0005,.0068),(.0005,.0068),(.0005,.0016),(-.0005,.0016)],(x,-.145,.565),'Rotor',24);groups['Rotor'].remove(pickup);bail_parts.append(pickup)
-lathe('SpoolCore',[(.497,.020),(.501,.031),(.538,.031),(.543,.034),(.548,.035),(.551,.033)],(0,-.145),'Metal','Spool',sides=48)
-points=[(.03185*math.cos(a),-.145+.03185*math.sin(a),.504+a/math.tau*.00125) for a in np.linspace(0,math.tau*25,25*24+1)]
-tube('ContinuousWoundLine',points,.00055,'Line','Spool',sides=6)
+spool_profile=[(.497,.020),(.501,.031),(.538,.031),(.543,.034),(.548,.035),(.551,.033)]
+lathe('SpoolCore',spool_profile,(0,-.145),'Metal','Spool',sides=48)
+def wound_line(name,steps_per_turn,sides,radius):
+ points=[(radius*math.cos(a),-.145+radius*math.sin(a),.504+a/math.tau*.00125) for a in np.linspace(0,math.tau*25,25*steps_per_turn+1)]
+ return tube(name,points,.00055,'Line','Spool',sides=sides)
+wound_line('ContinuousWoundLine',24,6,.03185)
 lathe('DragKnob',[(.549,.023),(.555,.024),(.560,.021),(.563,.019)],(0,-.145),'Black','Spool',sides=32)
 vs=[];fs=[]
 for z,outer in [(.552,True),(.558,True),(.558,False),(.552,False)]:
@@ -243,7 +246,18 @@ for stem,source_objects,pivot in assemblies:
  objects=list(source_objects)
  pieces=[objects]
  for level,ratio in [(1,.43),(2,.17)]:
-  pieces.append([axle_shell('GroovedRollerDistance'+str(level),roller_profile,roller_center,'LineRoller',20 if level==1 else 12,True)] if stem=='LineRoller' else [reduce_piece(o,ratio) for o in objects])
+  if stem=='LineRoller':current=[axle_shell('GroovedRollerDistance'+str(level),roller_profile,roller_center,'LineRoller',20 if level==1 else 12,True)]
+  elif stem=='Spool':
+   current=[]
+   for original in objects:
+    if original.name=='ContinuousWoundLine':
+     # Uniform angular samples keep all25 turns. The coarse path receives a
+     # small outward offset so its chords cannot sink into the preserved core.
+     current.append(wound_line('ContinuousWoundLineDistance'+str(level),20 if level==1 else 13,3,.03185 if level==1 else .0324))
+    elif original.name=='SpoolCore':current.append(lathe('SpoolCoreDistance'+str(level),spool_profile,(0,-.145),'Metal','Spool',sides=24 if level==1 else 12))
+    else:current.append(reduce_piece(original,ratio))
+  else:current=[reduce_piece(o,ratio) for o in objects]
+  pieces.append(current)
  for level,current in enumerate(pieces):
   obj=join_group(current,stem+'_LOD'+str(level),pivot);assembled[stem,level]=obj
   for layer in obj.data.uv_layers:

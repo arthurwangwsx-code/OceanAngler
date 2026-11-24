@@ -13,8 +13,8 @@
     "Rotor_LOD1": 608,
     "Rotor_LOD2": 234,
     "Spool_LOD0": 8608,
-    "Spool_LOD1": 3696,
-    "Spool_LOD2": 2072,
+    "Spool_LOD1": 3640,
+    "Spool_LOD2": 2230,
     "Crank_LOD0": 1156,
     "Crank_LOD1": 494,
     "Crank_LOD2": 192,
@@ -186,12 +186,6 @@
       },
       {
         "part": "GuideBinding6",
-        "requested": 0.17,
-        "retained": 0.255,
-        "retries": 1
-      },
-      {
-        "part": "ContinuousWoundLine",
         "requested": 0.17,
         "retained": 0.255,
         "retries": 1

@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "ebebcc5d-3704-4a89-9e8a-7662c71c6df8",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "5adc0c556ea9704f9ac522ca21429c6ae4218379cdcb566476dc6dc417ee6f95",
+    "category": "test",
+    "executable": "Blender",
+    "startedAt": "2026-11-24T14:38:15.075Z",
+    "finishedAt": "2026-11-24T14:38:33.660Z",
+    "durationMs": 18480.601708000002,
+    "exitCode": 1,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "/Applications/Blender.app/Contents/MacOS/Blender",
+    "args": [
+      "--background",
+      "--factory-startup",
+      "--threads",
+      "4",
+      "--python-exit-code",
+      "1",
+      "--python",
+      ".local/rig-winding-qa/compare-lod0.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "/Applications/Blender.app/Contents/MacOS/Blender",
+    "--background",
+    "--factory-startup",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "1",
+    "--python",
+    ".local/rig-winding-qa/compare-lod0.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 1,
+  "startedAt": "2026-11-24T14:38:15.075Z",
+  "finishedAt": "2026-11-24T14:38:33.660Z",
+  "durationMs": 18480.601708000002
+}
