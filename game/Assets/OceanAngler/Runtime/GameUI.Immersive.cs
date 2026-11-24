@@ -51,6 +51,8 @@ namespace OceanAngler
             {
                 var meters=HudRegion("FightHUD",left?Width-242:14,Height-62,228,48);
                 tensionText=Label(meters,"",17,Color.white,0,0,146,26);progressText=Label(meters,"",17,Color.white,154,0,74,26);
+                // Keep values legible against sunlit sand without a HUD panel.
+                foreach(var text in new[]{tensionText,progressText}){var outline=text.gameObject.AddComponent<Outline>();outline.effectColor=new Color(.01f,.05f,.08f,.95f);outline.effectDistance=new Vector2(1,-1);}
                 var tension=FixedBox(meters,"TensionTrack",Navy,0,28,146,8);tensionFill=Box(tension,"Fill",Teal,Vector2.zero,Vector2.one,Vector2.zero,Vector2.zero).GetComponent<Image>();
                 // A stationary notch and the !/松手 label encode danger without
                 // relying on red/green or a color-only boundary.
