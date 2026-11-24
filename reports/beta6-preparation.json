@@ -43,7 +43,7 @@
   "overallProduct": "PARTIAL",
   "art": "PARTIAL",
   "physical20MinuteQualification": "NOT_RUN",
-  "releaseGuardTests": 11,
+  "releaseGuardTests": 12,
   "continuousSubtest": {
     "status": "PASS",
     "completedRounds": 20,
@@ -58,5 +58,13 @@
       "observations": 3
     }
   },
-  "scope": "Complete current Editor/PlayMode suite and release guards before freeze; headless EventSystem input, not signed release Player, physical touch or art acceptance"
+  "scope": "Complete current Editor/PlayMode suite and release guards before freeze; headless EventSystem input, not signed release Player, physical touch or art acceptance",
+  "entrypointRegression": {
+    "status": "PASS",
+    "red": "direct execution failed while import passed; source UTF-8 bytes matched rejected commit",
+    "fix": "explicit UTF-8 declaration",
+    "gameSourceUnchangedSinceFullTests": true,
+    "rejectedSourceCommit": "d8e928b21a567dc1e5e210a1126322e69cd2e118",
+    "noExportOrUploadBeforeFix": true
+  }
 }

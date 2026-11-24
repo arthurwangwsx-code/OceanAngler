@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """Frozen-source, app-scoped OceanAngler internal beta delivery."""
 import argparse,hashlib,json,os,plistlib,re,subprocess,urllib.parse,zipfile
 from pathlib import Path
