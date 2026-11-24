@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "c45a2407-584a-45a6-9017-77c7a85b6c5c",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "19f82f524484b252010cf1b29d0253f9fb8d86ea00d2a047b73863ec1e5afed8",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-24T19:44:22.972Z",
+    "finishedAt": "2026-11-24T19:44:32.346Z",
+    "durationMs": 9349.658,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/fin-screen-qa/retention.py",
+      "after"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/fin-screen-qa/retention.py",
+    "after"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T19:44:22.972Z",
+  "finishedAt": "2026-11-24T19:44:32.346Z",
+  "durationMs": 9349.658
+}

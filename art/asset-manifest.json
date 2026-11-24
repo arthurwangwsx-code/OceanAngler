@@ -266,7 +266,8 @@
       ],
       "note": "Original bluefin trevally mesh, UV, PBR maps, 12-bone rig, seven animation clips and three LODs. Scientific/visual/user/device acceptance remains open. No third-party photographs or models included.",
       "modifiedAt": "2026-11-25",
-      "modifications": "Fin membranes rebuilt with tapered closed shells in all three LODs; original RGBA, normal, roughness and packed maps; separate opaque rays. Material slots6->7 explicitly; triangles24664/9864/3699 within unchanged25000 LOD0 budget,12bones/7motions retained. Actual source checks and isolated HDR Metal controls pass; source/Player visual, scientific, user and device gates remain separate. Pectoral trailing-edge curve candidate B after visibly rejecting A; existing maps unchanged, LOD0 non-pectoral geometry/UV/weights/material roles normalized-identical. Art/science/user/Player qualification pending. Distance fin meshes retain16 complete opaque outline-ray components, closed tapered membrane and original PBR. Entire nearLOD0 geometry/UV/weights unchanged at six-decimal canonical identity; all original PNG bytes unchanged. LOD budgets24664/9864/3698 unchanged. Screen-size thresholds revised;58 Metal diagnostic frames and auto-vs-forced selected LOD pixel identity checked. Art/science/user/native followup pending."
+      "modifications": "Fin membranes rebuilt with tapered closed shells in all three LODs; original RGBA, normal, roughness and packed maps; separate opaque rays. Material slots6->7 explicitly; triangles24664/9864/3699 within unchanged25000 LOD0 budget,12bones/7motions retained. Actual source checks and isolated HDR Metal controls pass; source/Player visual, scientific, user and device gates remain separate. Pectoral trailing-edge curve candidate B after visibly rejecting A; existing maps unchanged, LOD0 non-pectoral geometry/UV/weights/material roles normalized-identical. Art/science/user/Player qualification pending. Distance fin meshes retain16 complete opaque outline-ray components, closed tapered membrane and original PBR. Entire nearLOD0 geometry/UV/weights unchanged at six-decimal canonical identity; all original PNG bytes unchanged. LOD budgets24664/9864/3698 unchanged. Screen-size thresholds revised;58 Metal diagnostic frames and auto-vs-forced selected LOD pixel identity checked. Art/science/user/native followup pending.",
+      "nativeFollowup": "reports/bluefin-distance-fins.json; d50f1c3 scoped dual15-frame flow; selected visuals reviewed; full art remains partial"
     },
     {
       "id": "complete-spinning-rig-candidate",
@@ -2419,6 +2420,48 @@
         }
       ],
       "note": "Own game models and OFL font; existing notices retained. No private logs, media or credentials; no child or physical-device acceptance."
+    },
+    {
+      "id": "bluefin-distance-fins-reviewed-frames",
+      "author": "OceanAngler contributors",
+      "source": "Own imported-model Metal controls and actual d50f1c3 native Simulator gameplay",
+      "license": "MIT",
+      "redistribution": true,
+      "sourceRedistribution": true,
+      "canModify": true,
+      "acquiredAt": "2026-11-25",
+      "status": "SCOPED_DISTANCE_REVIEW_PASS_FULL_ART_PARTIAL",
+      "artifacts": [
+        {
+          "path": "art/previews/bluefin-distance-fins/before-forced-close-mesh-at16.png",
+          "sha256": "f177db8dc3c2b85d7f6b67f5c8479fc1a48e9897795274cac4ecd2d4dd4cfbbf"
+        },
+        {
+          "path": "art/previews/bluefin-distance-fins/automatic-distance-at16.png",
+          "sha256": "991aba2f45c3960c2125bb36985795877553d5748044b2326d30be0da0a44c5f"
+        },
+        {
+          "path": "art/previews/bluefin-distance-fins/automatic-close-at80.png",
+          "sha256": "4415fdf6fa39ee3807a76c9ef6bd4b22bcedb2a8111551c26b6d4db424771e75"
+        },
+        {
+          "path": "art/previews/bluefin-distance-fins/phone-fighting.png",
+          "sha256": "cfcf0233e1ee372daf3e26aa4f99e26779cce133d874b9f9c5ad426fc7ebe859"
+        },
+        {
+          "path": "art/previews/bluefin-distance-fins/phone-landed.png",
+          "sha256": "364f64209efafb7473513f45aa5c7a6c80d12fea948ea46eba2e820fe44aa199"
+        },
+        {
+          "path": "art/previews/bluefin-distance-fins/tablet-fighting.png",
+          "sha256": "e4caf4ca3de86e660de8e08137ff3ae15bf84aa4ab4e494ed7ba24708640896a"
+        },
+        {
+          "path": "art/previews/bluefin-distance-fins/tablet-landed.png",
+          "sha256": "cdaef518d530890d435ed57a109848feb9ea424b6f101bad23a8a66e6ab9365b"
+        }
+      ],
+      "note": "Three reviewed isolated originals and four reviewed native originals. Before image deliberately forced close mesh at16%; candidate images use automatic LOD. Own models and existing OFL game font; no private media, logs or credentials. Overall realism and user/science/child/device acceptance remain pending."
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."
