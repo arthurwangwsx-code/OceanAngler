@@ -22,6 +22,39 @@ namespace OceanAngler.Tests
             if(root!=null)foreach(string suffix in new[]{"",".bak",".tmp"}){string file=Path.Combine(root,"ocean-progress.json")+suffix;if(File.Exists(file))File.Move(file,Path.Combine(archive,"after"+suffix+".json"));}
             foreach(var pair in originals)File.Move(pair.Value,pair.Key);originals.Clear();
         }
+        [UnityTest,Timeout(90000)] public IEnumerator EveryMeterValueFitsTheUnchangedHudRegion()
+        {
+            var args=LaunchArguments.Get();int index=Array.IndexOf(args,"--ocean-save-root");Assert.That(index,Is.GreaterThanOrEqualTo(0));root=Path.GetFullPath(args[index+1]);Assert.That(root,Does.Contain("unity-test-saves"));
+            archive=Path.Combine(root,"meter-values-before-after");Assert.That(Directory.Exists(archive),Is.False);Directory.CreateDirectory(archive);
+            foreach(string suffix in new[]{"",".bak",".tmp"}){string file=Path.Combine(root,"ocean-progress.json")+suffix;if(File.Exists(file)){string saved=Path.Combine(archive,"before"+suffix+".json");File.Move(file,saved);originals.Add(file,saved);}}
+            yield return SceneManager.LoadSceneAsync("Bay",LoadSceneMode.Single);scene=SceneManager.GetSceneByName("Bay");yield return null;yield return null;game=UnityEngine.Object.FindFirstObjectByType<GameController>();
+            yield return RestTap("海域与装备");yield return RestTap("开始钓鱼");game.Cast(.6f);float deadline=Time.realtimeSinceStartup+20;
+            while(game.Session.Phase!=FishingPhase.Bite&&Time.realtimeSinceStartup<deadline)yield return null;Assert.That(game.Session.Phase,Is.EqualTo(FishingPhase.Bite));game.Strike();yield return null;yield return null;
+            var ui=game.GetComponent<GameUI>();var flags=System.Reflection.BindingFlags.Instance|System.Reflection.BindingFlags.NonPublic;
+            var progress=typeof(FishingSession).GetField("<Progress>k__BackingField",flags);var tension=typeof(FishingSession).GetField("<Tension>k__BackingField",flags);Assert.That(progress,Is.Not.Null);Assert.That(tension,Is.Not.Null);
+            foreach(bool left in new[]{false,true})
+            {
+                game.Configure(s=>s.leftHanded=left);yield return null;yield return null;
+                float originalProgress=game.Session.Progress,originalTension=game.Session.Tension;bool enabled=game.enabled;byte[] saved=File.ReadAllBytes(Path.Combine(root,"ocean-progress.json"));game.enabled=false;
+                try
+                {
+                    // Headless in-memory boundary fixture only. Never tick the
+                    // fishing model or save synthetic progress/tension values.
+                    for(int value=0;value<=100;value++)
+                    {
+                        progress.SetValue(game.Session,value/100f);tension.SetValue(game.Session,value/100f);ui.SendMessage("Update");Canvas.ForceUpdateCanvases();
+                        foreach(string field in new[]{"tensionText","progressText"})
+                        {
+                            var text=(Text)typeof(GameUI).GetField(field,flags).GetValue(ui);Assert.That(text,Is.Not.Null);string label=field+" value="+value+" left="+left;
+                            Assert.That(text.fontSize,Is.EqualTo(17),label);Assert.That(text.preferredWidth,Is.LessThanOrEqualTo(text.rectTransform.rect.width+.1f),label+" "+text.text);
+                            Assert.That(text.preferredHeight,Is.LessThanOrEqualTo(text.rectTransform.rect.height+.1f),label);Assert.That(text.rectTransform.parent.GetComponent<RectTransform>().rect.size,Is.EqualTo(new Vector2(228,48)));
+                        }
+                    }
+                }
+                finally{progress.SetValue(game.Session,originalProgress);tension.SetValue(game.Session,originalTension);game.enabled=enabled;ui.SendMessage("Update");}
+                CollectionAssert.AreEqual(saved,File.ReadAllBytes(Path.Combine(root,"ocean-progress.json")),"Meter boundary fixture must not rewrite the save");
+            }
+        }
         [UnityTest,Timeout(240000)] public IEnumerator MinimalHudAndHierarchicalMenusPreserveFishingAndPersistOnlyRecordedFish()
         {
             var args=LaunchArguments.Get();int index=Array.IndexOf(args,"--ocean-save-root");Assert.That(index,Is.GreaterThanOrEqualTo(0));root=Path.GetFullPath(args[index+1]);Assert.That(root,Does.Contain("unity-test-saves"));

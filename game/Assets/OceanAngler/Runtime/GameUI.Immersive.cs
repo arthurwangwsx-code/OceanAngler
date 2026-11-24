@@ -50,14 +50,15 @@ namespace OceanAngler
             if(fighting)
             {
                 var meters=HudRegion("FightHUD",left?Width-242:14,Height-62,228,48);
-                tensionText=Label(meters,"",17,Color.white,0,0,146,26);progressText=Label(meters,"",17,Color.white,154,0,74,26);
+                const float tensionWidth=128,progressX=tensionWidth+8,progressWidth=228-progressX;
+                tensionText=Label(meters,"",17,Color.white,0,0,tensionWidth,26);progressText=Label(meters,"",17,Color.white,progressX,0,progressWidth,26);
                 // Keep values legible against sunlit sand without a HUD panel.
                 foreach(var text in new[]{tensionText,progressText}){var outline=text.gameObject.AddComponent<Outline>();outline.effectColor=new Color(.01f,.05f,.08f,.95f);outline.effectDistance=new Vector2(1,-1);}
-                var tension=FixedBox(meters,"TensionTrack",Navy,0,28,146,8);tensionFill=Box(tension,"Fill",Teal,Vector2.zero,Vector2.one,Vector2.zero,Vector2.zero).GetComponent<Image>();
+                var tension=FixedBox(meters,"TensionTrack",Navy,0,28,tensionWidth,8);tensionFill=Box(tension,"Fill",Teal,Vector2.zero,Vector2.one,Vector2.zero,Vector2.zero).GetComponent<Image>();
                 // A stationary notch and the !/松手 label encode danger without
                 // relying on red/green or a color-only boundary.
-                FixedBox(tension,"WarningNotch",Color.white,115,-4,3,16);
-                var progress=FixedBox(meters,"ProgressTrack",Navy,154,28,74,8);progressFill=Box(progress,"Fill",Gold,Vector2.zero,Vector2.one,Vector2.zero,Vector2.zero).GetComponent<Image>();
+                FixedBox(tension,"WarningNotch",Color.white,tensionWidth*.8f-1.5f,-4,3,16);
+                var progress=FixedBox(meters,"ProgressTrack",Navy,progressX,28,progressWidth,8);progressFill=Box(progress,"Fill",Gold,Vector2.zero,Vector2.one,Vector2.zero,Vector2.zero).GetComponent<Image>();
             }
             if(hintPhase!=phase){hintPhase=phase;hintBegan=Time.unscaledTime;}
         }

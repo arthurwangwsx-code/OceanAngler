@@ -10,14 +10,17 @@ namespace OceanAngler
     public sealed partial class RuntimeSmoke
     {
         [Serializable] sealed class HudSample { public string phase;public bool leftHanded,centralClear;public int buttons;public float occupiedRatio; }
+        [Serializable] sealed class MeterLabelSample { public string text;public float preferredWidth,availableWidth,preferredHeight,availableHeight;public bool fits; }
         [Serializable] sealed class RestTimerResult { public string status="RUNNING",scope="real unmodified active timer on a QA player; not child or physical-device qualification";public float observedSeconds;public bool paused,reminderDue,acknowledged,progressUnchanged; }
-        [Serializable] sealed class ImmersiveResult { public string status,scope;public string[] failures;public List<HudSample> samples;public int catchesBefore,catchesAfter,pointsBefore,pointsAfter;public bool unfinishedExitPreservedLedger,settingsRestored;public RestTimerResult restTimer; }
+        [Serializable] sealed class ImmersiveResult { public string status,scope;public string[] failures;public List<HudSample> samples;public List<MeterLabelSample> meterLabels;public int catchesBefore,catchesAfter,pointsBefore,pointsAfter;public bool unfinishedExitPreservedLedger,settingsRestored;public RestTimerResult restTimer; }
         RestTimerResult restTimer;
         readonly List<HudSample> hudSamples=new List<HudSample>();
+        readonly List<MeterLabelSample> meterLabels=new List<MeterLabelSample>();
+        readonly HashSet<string> seenMeterLabels=new HashSet<string>();
         public IEnumerator RunImmersiveReview(string outputFolder,bool captureFrames,bool quitProcess=false)
         {
             folder=Path.GetFullPath(outputFolder);Directory.CreateDirectory(folder);if(File.Exists(Path.Combine(folder,"receipt.json")))throw new InvalidOperationException("Use a new review folder");
-            game=GetComponent<GameController>();began=Time.realtimeSinceStartup;finished=false;journeyMode=true;gearReviewMode=!LaunchArguments.Get().Contains("--ocean-rest-timer");journeyQuit=quitProcess;completeContent=false;hudSamples.Clear();restTimer=null;
+            game=GetComponent<GameController>();began=Time.realtimeSinceStartup;finished=false;journeyMode=true;gearReviewMode=!LaunchArguments.Get().Contains("--ocean-rest-timer");journeyQuit=quitProcess;completeContent=false;hudSamples.Clear();meterLabels.Clear();seenMeterLabels.Clear();restTimer=null;
             receipt=new Receipt{captureEnabled=captureFrames,scope=captureFrames?"native focused immersive UI EventSystem review; not OS touch, child or full progression":"headless immersive UI regression; no rendered acceptance"};
             var before=game.Progress.Data.Clone();var stack=new Stack<IEnumerator>();stack.Push(ImmersiveReview());
             while(stack.Count>0&&!finished)
@@ -29,7 +32,18 @@ namespace OceanAngler
             }
             while(stack.Count>0)(stack.Pop() as IDisposable)?.Dispose();
             if(!finished)FinishJourney();
-            File.WriteAllText(Path.Combine(folder,"immersive.json"),JsonUtility.ToJson(new ImmersiveResult{status=receipt.status,scope=receipt.scope,failures=receipt.failures.ToArray(),samples=new List<HudSample>(hudSamples),catchesBefore=before.catches.Count,catchesAfter=game.Progress.Data.catches.Count,pointsBefore=before.totalPoints,pointsAfter=game.Progress.Data.totalPoints,unfinishedExitPreservedLedger=game.Progress.Data.catches.Count==before.catches.Count+1,settingsRestored=JsonUtility.ToJson(before.settings)==JsonUtility.ToJson(game.Progress.Data.settings),restTimer=restTimer},true));
+            File.WriteAllText(Path.Combine(folder,"immersive.json"),JsonUtility.ToJson(new ImmersiveResult{status=receipt.status,scope=receipt.scope,failures=receipt.failures.ToArray(),samples=new List<HudSample>(hudSamples),meterLabels=new List<MeterLabelSample>(meterLabels),catchesBefore=before.catches.Count,catchesAfter=game.Progress.Data.catches.Count,pointsBefore=before.totalPoints,pointsAfter=game.Progress.Data.totalPoints,unfinishedExitPreservedLedger=game.Progress.Data.catches.Count==before.catches.Count+1,settingsRestored=JsonUtility.ToJson(before.settings)==JsonUtility.ToJson(game.Progress.Data.settings),restTimer=restTimer},true));
+        }
+        void CheckLiveMeterLabels()
+        {
+            Canvas.ForceUpdateCanvases();
+            foreach(var text in FindObjectsByType<Text>(FindObjectsSortMode.None).Where(t=>t.isActiveAndEnabled&&t.transform.parent.name=="FightHUD"))
+            {
+                if(!seenMeterLabels.Add(text.text))continue;
+                var rect=text.rectTransform.rect;var sample=new MeterLabelSample{text=text.text,preferredWidth=text.preferredWidth,availableWidth=rect.width,preferredHeight=text.preferredHeight,availableHeight=rect.height};
+                sample.fits=sample.preferredWidth<=sample.availableWidth+.1f&&sample.preferredHeight<=sample.availableHeight+.1f;meterLabels.Add(sample);
+                JourneyRequire(sample.fits,"immersive-live-meter-label-fits-"+text.text);
+            }
         }
         void CheckImmersiveHud()
         {
@@ -108,7 +122,8 @@ namespace OceanAngler
                 reel=Find("按住收线");Pointer(reel,true);game.gameObject.SendMessage("OnApplicationFocus",false);yield return null;yield return null;
                 JourneyRequire(game.Session.Paused&&!game.Reeling,"immersive-focus-loss-cancels-input");game.gameObject.SendMessage("OnApplicationFocus",true);yield return null;yield return null;JourneyRequire(game.Session.Paused,"immersive-focus-return-awaits-continue");
                 yield return JourneyClick("继续探索",true);yield return null;yield return null;reel=Find("按住收线");bool held=false;deadline=Time.realtimeSinceStartup+90;
-                while(game.Session.Phase==FishingPhase.Fighting&&Time.realtimeSinceStartup<deadline){bool desired=game.Session.Tension<.65f;if(desired!=held){held=desired;Pointer(reel,held);}yield return null;}
+                while(game.Session.Phase==FishingPhase.Fighting&&Time.realtimeSinceStartup<deadline){CheckLiveMeterLabels();bool desired=game.Session.Tension<.65f;if(desired!=held){held=desired;Pointer(reel,held);}yield return null;}
+                JourneyRequire(meterLabels.Any(s=>s.text.StartsWith("收鱼")&&System.Text.RegularExpressions.Regex.IsMatch(s.text,@"\b[1-9][0-9]%")),"immersive-observed-real-two-digit-progress");
                 if(held)Pointer(reel,false);yield return null;yield return null;JourneyRequire(game.Session.Phase==FishingPhase.Landed,"immersive-real-fish-landed");CheckImmersiveHud();yield return JourneyFrame("landed");
                 yield return JourneyClick("记录并放流",true);yield return null;yield return null;JourneyRequire(game.Progress.Data.catches.Count==original.catches.Count+1,"immersive-one-real-record");
             }
