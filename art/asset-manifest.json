@@ -1549,9 +1549,43 @@
         {
           "path": "art/previews/bluefin-jaw-continuity/studio-three-quarter.png",
           "sha256": "e85a756fa8ee8ce666b9e643fb0aaeab96573cc3e04bb259079a7caba25979bc"
+        },
+        {
+          "path": "art/previews/bluefin-jaw-continuity/turntable.mp4",
+          "sha256": "150d82cea931c83813fe92993b1e4a53bcdc8bdf74e6dcfc21adc0c59d172c73"
+        },
+        {
+          "path": "art/previews/bluefin-jaw-continuity/contact.png",
+          "sha256": "8285b4da4872b05329241e3c9093537d26142abc6506503c81e8f211897ccb60"
         }
       ],
-      "note": "All included originals actually viewed. Before and after are own assets, not museum photography; same imported-camera fixture. This is not native Player or art qualification. Private museum reference is not redistributed or texture-sampled."
+      "note": "All included originals actually viewed. Before and after are own assets, not museum photography; same imported-camera fixture. This is not native Player or art qualification. Private museum reference is not redistributed or texture-sampled. Current36view turntable contact inspected, encoded960x640/12fps/3seconds and decoded36frames checked; not gameperformance."
+    },
+    {
+      "id": "bluefin-jaw-continuity-native-reviewed-frames",
+      "author": "OceanAngler contributors",
+      "source": "Frozen72f0cea native Simulator app, own EventSystem catch/journal and OS-mouse reopened205point journal",
+      "license": "MIT",
+      "redistribution": true,
+      "sourceRedistribution": true,
+      "canModify": true,
+      "acquiredAt": "2026-11-24",
+      "status": "ART_REVIEW_PENDING",
+      "artifacts": [
+        {
+          "path": "art/previews/bluefin-jaw-continuity/phone-native-catch.png",
+          "sha256": "32750a2690a3af181687d616a2a53f2f117a15fc446633290299e9f0d6874032"
+        },
+        {
+          "path": "art/previews/bluefin-jaw-continuity/tablet-native-journal.png",
+          "sha256": "ea081be153abae34a2e12fb06a482073aaa8ff1bc2524f116de8affba07735cb"
+        },
+        {
+          "path": "art/previews/bluefin-jaw-continuity/phone-preserved-journal205.png",
+          "sha256": "b07532626fcb341d8e90b39b1e27612af9cab350793703387ee3142ff9c988d7"
+        }
+      ],
+      "note": "All3 included original images actually viewed. Contacts for32other generated frames checked privately; not all32 full-size. Only own game images, no OS/sidebar, identifiers, private photography or raw logs; registered OFL font in own UI. Not art/child/physical-device qualification."
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."

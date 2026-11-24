@@ -1,5 +1,13 @@
 # 第一套纺车轮钓组候选
 
+2026-11-24集成状态补充：该钓组已进入共享游戏，当前分支为integration/art-candidates。源模型与fd23c2b保持一致；较新的iPhone/iPad原生卷线器鉴赏、试摇/停止、鱼线与导环检查见[眼部版本的原生记录](bluefin-iris.md)。下文2026-11-23的分支、锁屏和TestFlight build 1描述为当时历史，较新发行记录另见[TestFlight build 5回执](testflight-0.1.0-5.json)。用户美术审阅及真实双设备20分钟仍未通过。
+
+| 共有源模型的全竿图 | 原生iPad卷线器鉴赏（fd23c2b） |
+|---|---|
+| ![完整钓组源预览](../art/previews/spinning-rig/whole.png) | ![原生卷线器鉴赏](../art/previews/bluefin-iris/tablet-gear.png) |
+
+[查看钓具360度转台](../art/previews/spinning-rig/turntable.mp4)
+
 2026-11-23。独立源模型、Unity导入和无画面运行检查已完成；游戏内新界面、美术成品与真机尚未验收。当前在feature/complete-spinning-rig，master保留此前已验证基线。
 
 ## 已制作
