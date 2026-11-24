@@ -17,6 +17,8 @@ namespace OceanAngler.Tests
         Scene scene;GameController game;
         void Click(string text)
         {
+            if(UnityEngine.Object.FindFirstObjectByType<GameUI>().Playing&&new[]{"出海","图鉴","钓具","任务","设置","海域与装备"}.Contains(text))
+                UnityEngine.Object.FindObjectsByType<Button>(FindObjectsSortMode.None).Single(b=>b.isActiveAndEnabled&&b.GetComponentInChildren<Text>()?.text=="暂停").onClick.Invoke();
             var button=UnityEngine.Object.FindObjectsByType<Button>(FindObjectsSortMode.None).Single(b=>b.isActiveAndEnabled&&b.interactable&&b.GetComponentInChildren<Text>()?.text==text);
             button.onClick.Invoke();
         }
@@ -54,7 +56,7 @@ namespace OceanAngler.Tests
             var frozenSchool=school.Members.Select(f=>f.transform.localPosition).ToArray();yield return new WaitForSeconds(.15f);
             CollectionAssert.AreEqual(frozenSchool,school.Members.Select(f=>f.transform.localPosition).ToArray());Assert.That(school.Members.All(f=>f.paused),Is.True);
             var rodRest=gear.rodBones.Last().localRotation;
-            if(ui.Compact){Click("海域与装备");yield return null;yield return null;}
+            Click("海域与装备");yield return null;yield return null;
             Click("看看海湾");yield return null;yield return null;
             Assert.That(ui.InspectingHabitat&&game.Session.Paused,Is.True);Assert.That(gear.gameObject.activeSelf||fish.gameObject.activeSelf,Is.False);Assert.That(Camera.main.transform.position.y,Is.GreaterThan(bay.SeaLevel));
             Click("潜入水下");yield return null;yield return null;Assert.That(Camera.main.transform.position.y,Is.LessThan(bay.SeaLevel));
@@ -67,7 +69,7 @@ namespace OceanAngler.Tests
             Click("出海");yield return null;yield return null;var stopped=gear.crank.localRotation;yield return new WaitForSeconds(.15f);
             Assert.That(ui.GearReelingDemo,Is.False);Assert.That(game.Session.Paused,Is.True);Assert.That(Quaternion.Angle(stopped,gear.crank.localRotation),Is.LessThan(.02f));
             Assert.That(Vector3.Distance(Camera.main.transform.position,bay.underwaterCamera.position),Is.LessThan(.001f));
-            if(ui.Compact){Click("收起准备");yield return null;yield return null;}
+
             Click("继续探索");yield return null;yield return null;Assert.That(game.Session.Paused,Is.False);
             var priorSchool=school.Members.Select(f=>f.transform.localPosition).ToArray();yield return new WaitForSeconds(.2f);
             Assert.That(school.gameObject.activeSelf,Is.True);Assert.That(Vector3.Distance(priorSchool[0],school.Members[0].transform.localPosition),Is.GreaterThan(.01f));

@@ -30,6 +30,7 @@ namespace OceanAngler.Tests
         }
         IEnumerator Tap(string text)
         {
+            if(UnityEngine.Object.FindFirstObjectByType<GameUI>().Playing&&new[]{"出海","图鉴","钓具","任务","设置","海域与装备"}.Contains(text))yield return Tap("暂停");
             var b=UnityEngine.Object.FindObjectsByType<Button>(FindObjectsSortMode.None).Single(x=>x.isActiveAndEnabled&&x.interactable&&x.GetComponentInChildren<Text>().text.StartsWith(text));
             var scroll=b.GetComponentInParent<ScrollRect>();Canvas.ForceUpdateCanvases();
             if(scroll!=null&&scroll.content.rect.height>scroll.viewport.rect.height)
@@ -67,7 +68,7 @@ namespace OceanAngler.Tests
                 yield return Tap("设置");if(game.Progress.Data.settings.leftHanded!=left)yield return Tap("左手操作");
                 yield return Tap("钓具");yield return Tap("出海");Assert.That(game.Session.Paused,Is.True);
                 yield return Tap("海域与装备");yield return Tap("看看海湾");Assert.That(ui.InspectingHabitat,Is.True);Assert.That(game.Session.Paused,Is.True);
-                yield return Tap("返回钓鱼");yield return Tap("收起准备");
+                yield return Tap("返回钓鱼");
             }
             Assert.That(evidence.hands.Count,Is.EqualTo(2));Assert.That(evidence.hands.Select(h=>h.leftHanded),Is.EquivalentTo(new[]{false,true}));
         }

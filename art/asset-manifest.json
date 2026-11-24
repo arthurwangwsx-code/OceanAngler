@@ -8,7 +8,7 @@
       "license": "SIL Open Font License 1.1",
       "redistribution": true,
       "status": "LICENSE_VERIFIED",
-      "sha256": "f6d36150757ab8411d8f4fd94a8cacbdfe224e8fc7c8d9b92f73b0e13e87d1fb",
+      "sha256": "10f581a4fb00e3ad1ea9608b9b711b3c6d269945fec825e83ea98e85301bd51b",
       "path": "game/Assets/OceanAngler/Resources/UIFont.ttf"
     },
     {
@@ -1624,6 +1624,44 @@
         }
       ],
       "note": "All6 selected original images actually viewed. All72 generated frames checked via4 private contact sheets;15 selected original frames viewed, not all72 full-size. Own QA game only, with registered OFL font. Halibut remains A0 and scientifically mismatched; not finished art, child or physical-device acceptance. No OS/sidebar, device IDs, private photos or raw logs."
+    },
+    {
+      "id": "gear-feedback-prototype-status-reviewed-frames",
+      "author": "OceanAngler contributors",
+      "source": "Frozen8583697 own Simulator renders from genuine save copies; two own OS-mouse frames",
+      "license": "MIT",
+      "redistribution": true,
+      "sourceRedistribution": true,
+      "canModify": true,
+      "acquiredAt": "2026-11-24",
+      "status": "FUNCTIONAL_PASS_ART_REVIEW_PENDING",
+      "artifacts": [
+        {
+          "path": "art/previews/gear-feedback-and-model-status/phone-gear-selected-rod.png",
+          "sha256": "fb154628f2bbb561289231ca83cd4b540f2d776f23da5ce3a8580e1a8e3357bb"
+        },
+        {
+          "path": "art/previews/gear-feedback-and-model-status/phone-prototype-halibut.png",
+          "sha256": "ee496a911b098cf80d6bb34a1fa3ce9f6c26df02a2cbe1fcbf2e3ed0432e2a80"
+        },
+        {
+          "path": "art/previews/gear-feedback-and-model-status/tablet-gear-selected-rod.png",
+          "sha256": "af20d2975aa5e5a1f75db20013682c083eceb3cee40c408eeb48b02555ba02db"
+        },
+        {
+          "path": "art/previews/gear-feedback-and-model-status/tablet-prototype-trevally.png",
+          "sha256": "47963ea6d631470bc7743860c5761bc7567e8cf41ac356ed711d19734a1fe130"
+        },
+        {
+          "path": "art/previews/gear-feedback-and-model-status/phone-manual-gear.png",
+          "sha256": "6573c3f1b1ce5240faa1a1736225612382ffc426c33e88e68374075aade3a254"
+        },
+        {
+          "path": "art/previews/gear-feedback-and-model-status/phone-manual-prototype.png",
+          "sha256": "d6f8baeaa10fb8f65c9368ba9aaf639e9089976cb1d5640f93f31c42e1e20af4"
+        }
+      ],
+      "note": "All6 included original frames viewed;12 native frames via2 private contacts plus6 native and2 manual originals. Own game with registered OFL font; no OS/sidebar, device IDs, personal media or raw logs. OS visible rod2 click confirmed; OS scroll not confirmed. Prototype labels do not fix incorrect halibut model."
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."

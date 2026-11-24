@@ -15,7 +15,12 @@ namespace OceanAngler.Tests
     public sealed class ObservationVisitTests
     {
         Scene scene;GameController game;string root,archive;readonly Dictionary<string,string> originals=new Dictionary<string,string>();
-        void Click(string text)=>UnityEngine.Object.FindObjectsByType<Button>(FindObjectsSortMode.None).Single(b=>b.isActiveAndEnabled&&b.interactable&&b.GetComponentInChildren<Text>().text==text).onClick.Invoke();
+        void Click(string text)
+        {
+            if(UnityEngine.Object.FindFirstObjectByType<GameUI>().Playing&&new[]{"出海","图鉴","钓具","任务","设置","海域与装备"}.Contains(text))
+                UnityEngine.Object.FindObjectsByType<Button>(FindObjectsSortMode.None).Single(b=>b.isActiveAndEnabled&&b.GetComponentInChildren<Text>()?.text=="暂停").onClick.Invoke();
+            UnityEngine.Object.FindObjectsByType<Button>(FindObjectsSortMode.None).Single(b=>b.isActiveAndEnabled&&b.interactable&&b.GetComponentInChildren<Text>()?.text==text).onClick.Invoke();
+        }
         [UnityTearDown] public IEnumerator Cleanup()
         {
             if(game!=null)game.Pause(true);
@@ -34,6 +39,7 @@ namespace OceanAngler.Tests
             foreach(string suffix in new[]{"",".bak",".tmp"}){string file=Path.Combine(root,"ocean-progress.json")+suffix;if(File.Exists(file)){string saved=Path.Combine(archive,"before"+suffix+".json");File.Move(file,saved);originals.Add(file,saved);}}
             yield return SceneManager.LoadSceneAsync("Bay",LoadSceneMode.Single);scene=SceneManager.GetSceneByName("Bay");yield return null;yield return null;
             game=UnityEngine.Object.FindFirstObjectByType<GameController>();var ui=game.GetComponent<GameUI>();var world=game.GetComponent<OceanWorld>();var encounter=world.Observations;game.gameObject.SendMessage("OnApplicationFocus",true);
+            Click("继续探索");yield return null;yield return null;
             game.Cast(.5f);for(int i=0;i<1200&&game.Session.Phase!=FishingPhase.Bite;i++)game.Session.Tick(1f/30,false);game.Strike();game.HoldReel(true);Assert.That(game.Session.Phase,Is.EqualTo(FishingPhase.Fighting));
             Click("图鉴");yield return null;yield return null;var activeCatch=game.Session.Catch;float heldTension=game.Session.Tension;Click("保护观察  0 / 3");yield return null;yield return null;
             Assert.That(game.Progress.Data.observations,Is.Empty);Assert.That(game.Session.Paused&&!game.Reeling,Is.True);

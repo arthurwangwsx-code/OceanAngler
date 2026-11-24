@@ -17,7 +17,9 @@ namespace OceanAngler
         GameController game;string folder;Receipt receipt;bool finished,journeyMode,journeyQuit,completeContent,gearReviewMode;float began;
         IEnumerator Start()
         {
-            var args=LaunchArguments.Get();int gearReview=Array.IndexOf(args,"--ocean-gear-review");
+            var args=LaunchArguments.Get();int immersive=Array.IndexOf(args,"--ocean-immersive-review");
+            if(immersive>=0&&immersive+1<args.Length){yield return RunImmersiveReview(args[immersive+1],true,true);yield break;}
+            int gearReview=Array.IndexOf(args,"--ocean-gear-review");
             if(gearReview>=0&&gearReview+1<args.Length){yield return RunGearReview(args[gearReview+1],true,true);yield break;}
             int content=Array.IndexOf(args,"--ocean-content-journey");
             if(content>=0&&content+1<args.Length){yield return RunJourney20(args[content+1],true,true,true);yield break;}
@@ -45,11 +47,7 @@ namespace OceanAngler
             CheckLayout("fishing");yield return Snapshot("01-fishing");
             var bay=FindFirstObjectByType<BayHabitat>();Require(bay!=null,"authored-bay-loaded");
             var ui=GetComponent<GameUI>();
-            if(ui.Compact)
-            {
-                Click("海域与装备",true);yield return null;yield return null;
-                var preparation=FindObjectsByType<ScrollRect>(FindObjectsSortMode.None).First(s=>s.name=="Preparation");preparation.verticalNormalizedPosition=0;yield return null;yield return null;
-            }
+            yield return JourneyClick("海域与装备",true);yield return null;yield return null;
             Click("看看海湾",true);yield return null;yield return null;CheckLayout("bay-surface");
             Require(ui.InspectingHabitat&&game.Session.Paused,"observation-pauses-fishing");Require(Camera.main.transform.position.y>bay.SeaLevel,"surface-camera-above-water");yield return Snapshot("07-bay-surface");
             Require(bay.reflection.Ready,"real-planar-reflection-ready");CaptureReflection(bay.reflection);
@@ -60,7 +58,6 @@ namespace OceanAngler
             Require(!bay.reflection.Ready&&bay.reflection.RenderCount==captures,"underwater-skips-reflection-render");
             Click("换个角度",true);yield return null;yield return null;Require(Vector3.Distance(Camera.main.transform.position,bay.reefCamera.position)<.01f,"reef-camera-actually-changes");yield return Snapshot("11-bay-reef");
             Click("返回钓鱼",true);yield return null;yield return null;Require(game.Session.Paused,"observation-return-keeps-pause");
-            if(ui.Compact){Click("收起准备",true);yield return null;yield return null;}
             Click("继续探索",true);yield return null;yield return null;Require(Vector3.Distance(Camera.main.transform.position,bay.underwaterCamera.position)<.01f,"fishing-camera-restored");
             int before=game.Progress.Data.catches.Count;
             var cast=Find("按住蓄力");Pointer(cast,true);yield return new WaitForSecondsRealtime(.4f);Pointer(cast,false);
@@ -81,7 +78,7 @@ namespace OceanAngler
             Click("记录并放流");yield return null;yield return null;
             Require(game.Progress.Data.catches.Count==before+1&&game.Progress.Data.totalPoints>0,"release-and-persist");
             yield return new WaitForSecondsRealtime(.65f);yield return Snapshot("09-release");
-            Click("图鉴",true);yield return null;yield return null;CheckLayout("journal");yield return Snapshot("03-journal");
+            yield return JourneyClick("图鉴",true);yield return null;yield return null;CheckLayout("journal");yield return Snapshot("03-journal");
             int journalPoints=game.Progress.Data.totalPoints;
             Click("未发现 · 大西洋庸鲽",true);yield return null;yield return null;CheckLayout("species-details");
             var details=FindObjectsByType<ScrollRect>(FindObjectsSortMode.None).Single(s=>s.content.name=="SpeciesContent");
@@ -158,7 +155,9 @@ namespace OceanAngler
             var button=Find(text,exact);
             // Scrolling changes clipping/culling in the next canvas update.
             // A callback before that update is not a valid visible UI tap.
-            if(button.GetComponentInParent<ScrollRect>()!=null){yield return null;yield return null;}
+            // Find may have opened the visible pause menu. Give newly created
+            // graphics the same two layout/render frames as scrolled content.
+            yield return null;yield return null;
             Click(text,exact);
         }
         IEnumerator Journey20()
@@ -188,7 +187,7 @@ namespace OceanAngler
                 if(round==11){yield return JourneyClick("设置",true);yield return null;yield return null;yield return JourneyClick("初学辅助");yield return null;yield return null;JourneyRequire(!game.Progress.Data.settings.assisted,"journey-standard-mode-enabled");}
                 yield return JourneyClick("出海",true);yield return null;yield return null;
                 JourneyRequire(game.Session.Phase==FishingPhase.Ready&&!game.Reeling,"round-"+round+"-ready-with-no-held-input");
-                if(ui.Compact){yield return JourneyClick("海域与装备",true);yield return null;yield return null;}
+                yield return JourneyClick("海域与装备",true);yield return null;yield return null;
                 var available=game.Content.habitats.Where(h=>h.unlockPoints<=game.Progress.Data.totalPoints).ToArray();
                 var habitat=completeContent?available.OrderByDescending(h=>game.Content.fish.Count(f=>f.habitatId==h.id&&!game.Progress.Data.catches.Any(c=>c.fishId==f.id))).First():available.FirstOrDefault(h=>!receipt.rounds.Any(r=>r.habitatId==h.id))??available[(round-1)%available.Length];
                 yield return JourneyClick(habitat.name,true);yield return null;yield return null;
@@ -205,7 +204,7 @@ namespace OceanAngler
                     yield return JourneyFrame("habitat-"+habitat.id+"-underwater");
                     yield return JourneyClick("返回钓鱼",true);yield return null;yield return null;
                 }
-                if(ui.Compact){yield return JourneyClick("收起准备",true);yield return null;yield return null;}
+                if(GetComponent<GameUI>().PageName=="准备"){yield return JourneyClick("出海",true);yield return null;yield return null;}
                 if(game.Session.Paused){yield return JourneyClick("继续探索",true);yield return null;yield return null;}
                 int beforePoints=game.Progress.Data.totalPoints,beforeCount=game.Progress.Data.catches.Count;
                 var cast=Find("按住蓄力");Pointer(cast,true);yield return new WaitForSecondsRealtime(.35f);Pointer(cast,false);
@@ -284,6 +283,13 @@ namespace OceanAngler
         Button Find(string text,bool exact=false)
         {
             var button=FindObjectsByType<Button>(FindObjectsSortMode.None).FirstOrDefault(b=>b.isActiveAndEnabled&&b.interactable&&(exact?b.GetComponentInChildren<Text>()?.text==text:b.GetComponentInChildren<Text>()?.text.StartsWith(text)==true));
+            // The playable HUD intentionally has no global tabs. Reach them
+            // through the real, raycast-checked pause button, not a hidden route.
+            if(button==null&&GetComponent<GameUI>().Playing&&new[]{"出海","图鉴","钓具","任务","设置","海域与装备"}.Contains(text))
+            {
+                Click("暂停",true);
+                button=FindObjectsByType<Button>(FindObjectsSortMode.None).FirstOrDefault(b=>b.isActiveAndEnabled&&b.interactable&&(exact?b.GetComponentInChildren<Text>()?.text==text:b.GetComponentInChildren<Text>()?.text.StartsWith(text)==true));
+            }
             if(button==null)throw new InvalidOperationException("Missing button "+text);
             var scroll=button.GetComponentInParent<ScrollRect>();
             if(scroll!=null&&scroll.content.rect.height>scroll.viewport.rect.height)

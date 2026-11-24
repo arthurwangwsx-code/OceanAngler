@@ -23,10 +23,12 @@ namespace OceanAngler
         Image tensionFill, progressFill;
         Canvas canvas;
         public bool Compact { get; private set; }
+        public string PageName => page;
+        public bool Playing => page=="出海"&&!game.Session.Paused;
         public bool CompactViewer => Compact && page=="鱼类详情";
         float Width => DisplayMetrics.SafeArea.width/DisplayMetrics.PixelsPerPoint;
         float Height => DisplayMetrics.SafeArea.height/DisplayMetrics.PixelsPerPoint;
-        string page = "出海", gearTab = "rod", focusedFish;
+        string page = "首页", gearTab = "rod", focusedFish;
         string selectedFish;
         ScrollRect gearScroll;
         string renderedGearTab;
@@ -57,6 +59,7 @@ namespace OceanAngler
             safe = Box(canvasObject.transform, "SafeArea", Color.clear, Vector2.zero, Vector2.one, Vector2.zero, Vector2.zero);
             if (FindFirstObjectByType<EventSystem>() == null) new GameObject("EventSystem", typeof(EventSystem), typeof(StandaloneInputModule));
             game.Changed += Dirty;
+            game.Pause(true);
             Rebuild();
         }
         void Dirty() { dirty = true; }
@@ -72,30 +75,41 @@ namespace OceanAngler
             if (phaseText != null)
             {
                 phaseText.text = PhaseName();
-                hintText.text = Compact?CompactHint():Hint();
-                tensionFill.rectTransform.anchorMax = new Vector2(game.Session.Tension,1); progressFill.rectTransform.anchorMax = new Vector2(game.Session.Progress,1);
-                tensionFill.color = game.Session.Tension > .8f ? Gold : Teal;
-                tensionText.text = (Compact?"张力  ":"鱼线张力  ") + Mathf.RoundToInt(game.Session.Tension*100) + "%" + (game.Session.Tension > .8f ? (Compact?"  松手":"  松手降张力") : "  安全");
-                progressText.text = "收鱼进度  " + Mathf.RoundToInt(game.Session.Progress*100) + "%";
+                hintText.text = game.Session.Phase==FishingPhase.Fighting&&game.Session.Tension>.8f?"！张力过高，请松手。":CompactHint();
+                if(tensionFill!=null)
+                {
+                    tensionFill.rectTransform.anchorMax = new Vector2(game.Session.Tension,1); progressFill.rectTransform.anchorMax = new Vector2(game.Session.Progress,1);
+                    tensionFill.color = game.Session.Tension > .8f ? Gold : Teal;
+                    tensionText.text = "张力  " + Mathf.RoundToInt(game.Session.Tension*100) + "%" + (game.Session.Tension > .8f ? "  ！" : "  安全");
+                    progressText.text = "收鱼  " + Mathf.RoundToInt(game.Session.Progress*100) + "%";
+                }
                 if (charging && actionText != null) actionText.text = "松手抛竿  " + Mathf.RoundToInt(Mathf.Clamp01((Time.unscaledTime-chargeStart)/1.5f)*100) + "%";
+                UpdateImmersiveHint();
             }
             UpdateObservationUI();
             if (noticeText != null) noticeText.text = InspectingObservation?game.Notice??"安静观察，不投饵、不挂钩。":InspectingGear?"转动钓组，看看收线过程。":InspectingHabitat?"观察时暂停钓鱼，返回后点继续。":game.Notice ?? (page=="钓具"?"选择已解锁的钓具，研究积分不会扣除。":game.RestReminder ? (Compact?"探索一会儿了，和家人休息一下吧。":"已经探索一会儿了，和家人休息一下吧。进度已保存。") : (Compact?"记录后放流 · 随时暂停":"鱼获记录后放流 · 不消耗鱼饵 · 随时可以暂停"));
         }
         void Rebuild()
         {
+            charging=false;
             if(gearScroll!=null)gearScrollPositions[renderedGearTab]=gearScroll.verticalNormalizedPosition;
             gearScroll=null;
             if (pageRoot != null) { pageRoot.gameObject.SetActive(false); Destroy(pageRoot.gameObject); }
             pageRoot = Box(safe,"Page",Color.clear,Vector2.zero,Vector2.one,Vector2.zero,Vector2.zero);
-            phaseText = hintText = tensionText = progressText = actionText = null; charging = false;
+            phaseText = hintText = tensionText = progressText = actionText = noticeText = pointsText = null; tensionFill=progressFill=null;charging = false;
             observationRecord=null;observationStatus=observationPlayback=null;
             lastPhase = game.Session.Phase; lastPause = game.Session.Paused;
+            if(!game.Progress.RequiresRecovery&&page=="出海")
+            {
+                if(game.Session.Paused)BuildPauseMenu(false);else BuildFishing();return;
+            }
+            if(!game.Progress.RequiresRecovery&&page=="首页"){BuildPauseMenu(true);return;}
+            if(!game.Progress.RequiresRecovery&&page=="退出确认"){BuildExitConfirmation();return;}
             BuildChrome();
             if (game.Progress.RequiresRecovery) { BuildRecovery(); return; }
             switch(page)
             {
-                case "出海": BuildFishing(); break;
+                case "准备": BuildPreparation(); break;
                 case "图鉴": BuildJournal(); break;
                 case "保护观察": BuildObservations(); break;
                 case "观察生物": BuildObservationVisit(); break;
@@ -123,37 +137,9 @@ namespace OceanAngler
             // 返回钓鱼页仍显示继续界面，避免导航触发自动输入。
             page=target; focusedFish=target=="图鉴"?(selectedFish??game.Content.fish[0].id):null; dirty=true;
             if(target!="钓组预览")GearReelingDemo=false;
-        }
-        void BuildFishing()
-        {
-            if(Compact){BuildCompactFishing();return;}
-            bool left = game.Progress.Data.settings.leftHanded;
-            var info=Box(pageRoot,"Info",Panel,new Vector2(left?.69f:.02f,.12f),new Vector2(left?.98f:.31f,.81f),Vector2.zero,Vector2.zero);
-            Label(info,"今日出海",19,Muted,20,16,-40,28);
-            Label(info,game.Content.Habitat(game.Progress.Data.habitatId).name,30,Color.white,20,50,-40,50);
-            Label(info,game.Content.Habitat(game.Progress.Data.habitatId).description,20,Muted,20,110,-40,65);
-            Label(info,"选择研究海域",20,Gold,20,170,-40,30);
-            for(int i=0;i<game.Content.habitats.Length;i++)
-            {
-                var h=game.Content.habitats[i];bool unlocked=game.Progress.Data.totalPoints>=h.unlockPoints;
-                var b=Button(info,h.name+(unlocked?"":" · "+h.unlockPoints+"分"),20,208+i*52,-40,44,()=>game.SelectHabitat(h.id),h.id==game.Progress.Data.habitatId?Teal:Navy);
-                b.interactable=unlocked && game.Session.Phase==FishingPhase.Ready;
-            }
-            Label(info,"已装备\n"+game.Content.Gear(game.Progress.Data.rodId).name+" · "+game.Content.Gear(game.Progress.Data.reelId).name+"\n"+game.Content.Gear(game.Progress.Data.lineId).name+" · "+game.Content.Gear(game.Progress.Data.lureId).name,19,Muted,20,368,-40,90);
-            if(MarineHabitat.ResourceFor(game.Progress.Data.habitatId)!=null)Button(info,game.Progress.Data.habitatId=="bay"?"看看海湾":"看看海域",20,460,-40,44,()=>Navigate("海湾观察"),Navy).GetComponentInChildren<Text>().fontSize=19;
-            var controls=Box(pageRoot,"Controls",Panel,new Vector2(left?.02f:.69f,.12f),new Vector2(left?.31f:.98f,.81f),Vector2.zero,Vector2.zero);
-            phaseText=Label(controls,"",Mathf.Min(32,Mathf.FloorToInt((Width*.29f-48)/9)),Color.white,24,22,-48,48);
-            hintText=Label(controls,"",21,Muted,24,86,-48,116);
-            tensionText=Label(controls,"",20,Color.white,24,217,-48,32);tensionFill=Bar(controls,258,Teal);
-            progressText=Label(controls,"",20,Color.white,24,288,-48,32);progressFill=Bar(controls,329,Gold);
-            var action=Button(controls,ActionName(),24,385,-48,88,MainAction,Teal);actionText=action.GetComponentInChildren<Text>();
-            BindFishingInput(action);
-            Button(controls,game.Session.Paused?(Width<1150?"返回准备":"结束本次 · 返回准备"):"暂停",24,487,-48,44,()=>{if(game.Session.Paused)game.ReturnToPreparation();else game.Pause(true);},Navy);
-            if (game.Session.Phase==FishingPhase.Landed && game.Session.Catch!=null)
-            {
-                var c=game.Session.Catch;
-                Label(pageRoot,game.Content.Fish(c.fishId).name+"\n"+c.length.ToString("F1")+"厘米 · "+c.weight.ToString("F2")+"千克\n"+GentleResult(c),30,Color.white,0,190,0,136,false,TextAnchor.UpperCenter);
-            }
+            // Navigation is visible in the same event frame; the old page is
+            // disabled before destruction so releasing a hold cannot recast.
+            dirty=false;Rebuild();
         }
         void BindFishingInput(Button action)
         {

@@ -31,6 +31,7 @@ namespace OceanAngler.Tests
         }
         IEnumerator Tap(string text,bool exact=false)
         {
+            if(UnityEngine.Object.FindFirstObjectByType<GameUI>().Playing&&new[]{"出海","图鉴","钓具","任务","设置","海域与装备"}.Contains(text))yield return Tap("暂停",true);
             var b=UnityEngine.Object.FindObjectsByType<Button>(FindObjectsSortMode.None).Single(x=>x.isActiveAndEnabled&&x.interactable&&(exact?x.GetComponentInChildren<Text>().text==text:x.GetComponentInChildren<Text>().text.StartsWith(text)));
             var scroll=b.GetComponentInParent<ScrollRect>();Canvas.ForceUpdateCanvases();
             if(scroll!=null&&scroll.content.rect.height>scroll.viewport.rect.height)

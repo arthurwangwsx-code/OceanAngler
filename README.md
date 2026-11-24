@@ -4,7 +4,7 @@
 
 儿童与家庭向的 3D 海洋钓鱼探索游戏。真实比例鱼类、漂亮水下世界、易懂钓具、积分成长、图鉴与放流。正式名称待商标检查。
 
-最新完整成长验证：冻结0bea41d，同一原生包在iPhone/iPad分别25/20轮自然收齐12种鱼、完成18任务并逐一装备20件钓具，4455/3703分；新进程与OS鼠标18/18页、原三份QA文件逐字节保留通过。52项Editor及2项定向PlayMode通过，72帧接触表与15张原尺寸检查，见[完整成长和实际画面](reports/complete-content-journey.md)。非英雄鱼仍有明显A0形体，庸鲽形状/文字不符、钓具滚动反馈待修；功能收集不等于拟真模型、儿童或真机20分钟合格。
+最新完整成长验证：冻结0bea41d，同一原生包在iPhone/iPad分别25/20轮自然收齐12种鱼、完成18任务并逐一装备20件钓具，4455/3703分；新进程与OS鼠标18/18页、原三份QA文件逐字节保留通过。52项Editor及2项定向PlayMode通过，72帧接触表与15张原尺寸检查，见[完整成长和实际画面](reports/complete-content-journey.md)。非英雄鱼仍有明显A0形体，庸鲽形状/文字不符；钓具滚动/反馈随后已定向修复，见[反馈与制作提示](reports/gear-feedback-and-model-status.md)；功能收集不等于拟真模型、儿童或真机20分钟合格。
 
 **当前已具备可试玩的钓鱼/进度闭环。0.1.0 (5)已通过Apple处理并分配至本人授权账号的内部TestFlight组，新增保护观察与近海航道候选；[发行回执](reports/testflight-0.1.0-5.json)和[iPhone本地更新/启动回执](reports/iphone-local-0.1.0-5.md)分开记录。美术、实际触控、真机20分钟与完整产品验收未完成。** 首发iPhone/iPad，最低iOS/iPadOS 17，Unity 6000.3.29f1 + URP 17.3.0 + C# + Blender；离线单人、无广告、无内购、无聊天。
 
@@ -23,6 +23,8 @@
 | 当前真实结果 | [完整总账](reports/acceptance-ledger.md)、[移动布局与发行](reports/mobile-layout.md)、[逻辑与Mac运行](reports/progression-validation.md) |
 | 当前iOS模拟器运行 | [iPhone/iPad实际流程与原图](reports/ios-simulator.md)、[重建和数据隔离](docs/19-ios-simulator-verification.md) |
 | 连续游玩和暂停准备面板 | [20轮UI流程、左右手命中及读档](reports/continuous-journey.md)、[复现入口](docs/20-continuous-journey.md) |
+| 沉浸式游玩与分层页面 | [页面/交互约束](docs/23-immersive-interface.md) |
+| 钓具滚动与模型制作提示 | [定向双端检查及系统滚动边界](reports/gear-feedback-and-model-status.md) |
 | 随机收齐全部鱼种、18任务和装备 | [双端完整成长与未通过项](reports/complete-content-journey.md)、[复现入口](docs/22-complete-content-journey.md) |
 | 首条独立源模型 | [蓝鳍鲹候选及验收边界](reports/bluefin-art.md)、[源资产重建](art/source/bluefin/README.md) |
 | 第一套完整钓组候选 | [纺车钓组与验证边界](reports/spinning-rig-art.md)、[源资产重建](art/source/spinning-rig/README.md) |
