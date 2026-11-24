@@ -10170,6 +10170,116 @@
       "executable": "python3",
       "commandDigest": "7b56fc0d9f92597bd88d1f03721d1a5e865efaa657f47caf76bde47bd036f627",
       "receiptPath": "measurements/rig-winding-preflight-20261124b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "0c6c02f4-ec60-4db1-a475-78c8f981198b",
+      "startedAt": "2026-11-24T15:18:19.771Z",
+      "executable": "python3",
+      "commandDigest": "a1d42cb691c32b6540fa25d7113cf165ee875fe2cfbbac6d0907e5c6d02d11ff",
+      "receiptPath": "measurements/rig-winding-native-build-20261124b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "e07d5573-d5d9-49cd-a901-3cef70e1c5db",
+      "startedAt": "2026-11-24T15:21:12.664Z",
+      "executable": "python3",
+      "commandDigest": "c6aa8432cf717c62e5e78a4bcc8111c3c5baa32dcfe60cb766324538a354e418",
+      "receiptPath": "measurements/rig-winding-native-phone-20261124b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "973f4498-da86-4fff-bd4f-0c31c3fc416a",
+      "startedAt": "2026-11-24T15:23:20.970Z",
+      "executable": "python3",
+      "commandDigest": "ae1ee6e7b92358e7eec18b6cc4c9dd82dba7425854991a3a75b0481664494db8",
+      "receiptPath": "measurements/rig-winding-native-phone-proof-20261124b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "cad72e48-79b8-4542-b021-0f1ed3bc6b30",
+      "startedAt": "2026-11-24T15:24:21.352Z",
+      "executable": "python3",
+      "commandDigest": "f873c5a309db7402f6cb014d3be857ae72fd61d1dbb558421cfb4015b3f55649",
+      "receiptPath": "measurements/rig-winding-native-pad-20261124b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "33eeadd3-4119-47e0-b051-8dc9b85756d1",
+      "startedAt": "2026-11-24T15:27:09.125Z",
+      "executable": "python3",
+      "commandDigest": "a429776b946d7d2160c51fb10e052b2f1a9828013bfac9d2eb9c279a0093772e",
+      "receiptPath": "measurements/rig-winding-native-pad-proof-20261124b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "566f295b-facf-46d7-b26d-f59be1ae98a1",
+      "startedAt": "2026-11-24T15:27:40.950Z",
+      "executable": "python3",
+      "commandDigest": "24188bbc11b9ffb404cc75ca9cbc68358f51ba1eda224008a010fa20aabd9ac9",
+      "receiptPath": "measurements/rig-winding-retention-after-20261124b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "6d0b3edf-ef51-4092-846f-e1a9d945184e",
+      "startedAt": "2026-11-24T15:28:08.617Z",
+      "executable": "python3",
+      "commandDigest": "dd55bc6e2931dd006c2ddbb1bf9cab07266541bc7e42f04eecd1ac06378034bd",
+      "receiptPath": "measurements/rig-winding-reopen-20261124b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "9d8e83eb-510e-40d8-aa38-40b3538a194e",
+      "startedAt": "2026-11-24T15:29:55.367Z",
+      "executable": "python3",
+      "commandDigest": "43a92028fe117604fcdfb1c5b12920d27138c4a3227ab7cb9bedd774b63f84ce",
+      "receiptPath": "measurements/rig-winding-reopen-proof-20261124b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "0add4f12-f516-40cd-85c0-7cbfb3eb1fef",
+      "startedAt": "2026-11-24T15:33:30.258Z",
+      "executable": "python3",
+      "commandDigest": "ef285348b2a54b62525baca49f1ba77696d7824395ceaa0dc486aef1a3c25d69",
+      "receiptPath": "measurements/rig-winding-record-audit-20261124b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "25b856fb-39d3-4f93-8a5e-be91e44a03c0",
+      "startedAt": "2026-11-24T15:33:38.438Z",
+      "executable": "python3",
+      "commandDigest": "7b56fc0d9f92597bd88d1f03721d1a5e865efaa657f47caf76bde47bd036f627",
+      "receiptPath": "measurements/rig-winding-public-checks-20261124b.json"
     }
   ],
   "runMeasurements": [
@@ -25235,6 +25345,196 @@
       "receipt": {
         "path": "measurements/rig-winding-preflight-20261124b.json",
         "sha256": "c32c6f5e3f94cbdbf0ffb1b9930838c48a7fc14edab5e742d807040bbe2fc5b8"
+      }
+    },
+    {
+      "id": "0c6c02f4-ec60-4db1-a475-78c8f981198b",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "a1d42cb691c32b6540fa25d7113cf165ee875fe2cfbbac6d0907e5c6d02d11ff",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T15:18:19.771Z",
+      "finishedAt": "2026-11-24T15:20:26.442Z",
+      "durationMs": 126636.001916,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rig-winding-native-build-20261124b.json",
+        "sha256": "d7d43e7641716ed0209c74eca733db4def88604e005a75fe8b22b40e916de467"
+      }
+    },
+    {
+      "id": "e07d5573-d5d9-49cd-a901-3cef70e1c5db",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "c6aa8432cf717c62e5e78a4bcc8111c3c5baa32dcfe60cb766324538a354e418",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-24T15:21:12.664Z",
+      "finishedAt": "2026-11-24T15:22:54.755Z",
+      "durationMs": 102083.593208,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rig-winding-native-phone-20261124b.json",
+        "sha256": "da245d80b97a923141cc5aa7239afea7870b3920c134f0e901bbf11951237e16"
+      }
+    },
+    {
+      "id": "973f4498-da86-4fff-bd4f-0c31c3fc416a",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "ae1ee6e7b92358e7eec18b6cc4c9dd82dba7425854991a3a75b0481664494db8",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T15:23:20.970Z",
+      "finishedAt": "2026-11-24T15:23:22.034Z",
+      "durationMs": 595.0903330000001,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rig-winding-native-phone-proof-20261124b.json",
+        "sha256": "76ef28d7c696068b6ec94c4fbf49d4d9cc8fb120ac5fac47619735c804e03ac1"
+      }
+    },
+    {
+      "id": "cad72e48-79b8-4542-b021-0f1ed3bc6b30",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "f873c5a309db7402f6cb014d3be857ae72fd61d1dbb558421cfb4015b3f55649",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-24T15:24:21.352Z",
+      "finishedAt": "2026-11-24T15:26:17.201Z",
+      "durationMs": 115778.509917,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rig-winding-native-pad-20261124b.json",
+        "sha256": "2cae2f9a7c9acd5e71e2b1d39990be60f4a015d11edbaab8ca40aae22ff38219"
+      }
+    },
+    {
+      "id": "33eeadd3-4119-47e0-b051-8dc9b85756d1",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "a429776b946d7d2160c51fb10e052b2f1a9828013bfac9d2eb9c279a0093772e",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T15:27:09.125Z",
+      "finishedAt": "2026-11-24T15:27:09.421Z",
+      "durationMs": 245.87566700000002,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rig-winding-native-pad-proof-20261124b.json",
+        "sha256": "f86a5dcd96d529aedd14e2d85035960a1bb321ea47e5a9414bac0726afa8ed6e"
+      }
+    },
+    {
+      "id": "566f295b-facf-46d7-b26d-f59be1ae98a1",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "24188bbc11b9ffb404cc75ca9cbc68358f51ba1eda224008a010fa20aabd9ac9",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T15:27:40.950Z",
+      "finishedAt": "2026-11-24T15:27:46.024Z",
+      "durationMs": 5030.94575,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rig-winding-retention-after-20261124b.json",
+        "sha256": "e2f7ab366959b6107d653a7991aa69edde9cc2eb56c233338943733de2d38329"
+      }
+    },
+    {
+      "id": "6d0b3edf-ef51-4092-846f-e1a9d945184e",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "dd55bc6e2931dd006c2ddbb1bf9cab07266541bc7e42f04eecd1ac06378034bd",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-24T15:28:08.617Z",
+      "finishedAt": "2026-11-24T15:28:51.814Z",
+      "durationMs": 43148.079708000005,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rig-winding-reopen-20261124b.json",
+        "sha256": "18e1b3a0d2aa04ebd7d758db9827d0d90e2c736bad611f87c9208d7ab7ceaee7"
+      }
+    },
+    {
+      "id": "9d8e83eb-510e-40d8-aa38-40b3538a194e",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "43a92028fe117604fcdfb1c5b12920d27138c4a3227ab7cb9bedd774b63f84ce",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T15:29:55.367Z",
+      "finishedAt": "2026-11-24T15:29:56.048Z",
+      "durationMs": 633.2168340000001,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rig-winding-reopen-proof-20261124b.json",
+        "sha256": "138b6e0b2a0dc2aefe6a888908b21be8d2964b1c13069f748b0485e0e2d04449"
+      }
+    },
+    {
+      "id": "0add4f12-f516-40cd-85c0-7cbfb3eb1fef",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "ef285348b2a54b62525baca49f1ba77696d7824395ceaa0dc486aef1a3c25d69",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T15:33:30.258Z",
+      "finishedAt": "2026-11-24T15:33:30.461Z",
+      "durationMs": 156.36079099999984,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rig-winding-record-audit-20261124b.json",
+        "sha256": "1e56e2ef40d25ad9cd8c8a8dc56cf81c58b84eb851304d0194fe6d1cbc667541"
+      }
+    },
+    {
+      "id": "25b856fb-39d3-4f93-8a5e-be91e44a03c0",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "7b56fc0d9f92597bd88d1f03721d1a5e865efaa657f47caf76bde47bd036f627",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T15:33:38.438Z",
+      "finishedAt": "2026-11-24T15:33:40.370Z",
+      "durationMs": 1905.1715000000002,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/rig-winding-public-checks-20261124b.json",
+        "sha256": "f8ae4f0a78cade7c24f75869de4854df9a17fc8aa4178b16df2b5d181a6ff52f"
       }
     }
   ]

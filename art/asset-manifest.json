@@ -536,6 +536,30 @@
         {
           "path": "art/previews/rig-winding-shaft/whole-turntable.mp4",
           "sha256": "3053bf62a06b2dc74fe079aaec361ccd749a5305394a74c1fdbe637ee75f1ec9"
+        },
+        {
+          "path": "art/previews/rig-winding-shaft/native-phone-landed.png",
+          "sha256": "b9c7604e7a2862f152d9c80d70348f2663ff6fbad32e4340111b16503bcfff3a"
+        },
+        {
+          "path": "art/previews/rig-winding-shaft/native-phone-lod2.png",
+          "sha256": "f3b35ac45aa15a83be2ad10d9b62626c1cc8a26348bc487931838cdd2769fb0b"
+        },
+        {
+          "path": "art/previews/rig-winding-shaft/native-phone-reel.png",
+          "sha256": "c8bdaadf4d2bac7c5d6cc42455c44498c52969547b6eb5dca05a82e02e3ab4aa"
+        },
+        {
+          "path": "art/previews/rig-winding-shaft/native-preserved-home.png",
+          "sha256": "d664dfe8dbb22dab8056eaf30bea3efe4664dcf23ea241437c0439417cef3eb5"
+        },
+        {
+          "path": "art/previews/rig-winding-shaft/native-tablet-lod2.png",
+          "sha256": "1325c1dc74ea32e8a1945f69cd28969e0b223f710bd598d7b5ab810ec014abc1"
+        },
+        {
+          "path": "art/previews/rig-winding-shaft/native-tablet-reel.png",
+          "sha256": "afb05ec34d59af036b7c34d9b9b57bc5275cd741a30e2f0b5b5226632d0e9bfc"
         }
       ],
       "note": "Original spinning rig candidate, eight assemblies and three LODs. Uniform distance winding/core profiles; two current-source36-frame whole/reel orbits. Source/GPU checks do not qualify human art or physical devices. Earlier spinning-rig and rig-detail media remain historical. No third-party media or meshes."

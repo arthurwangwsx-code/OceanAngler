@@ -22,4 +22,14 @@
 
 ![修补后卷线器反向](../art/previews/rig-winding-shaft/reel-180.png)
 
-当前源原生Player另验。运行时只扩展显式开发复核，增加强制LOD1/2两帧、finally恢复自动选择，不新增玩家HUD、入口或积分规则。此前9e2b9dd的双端15帧沉浸结果保留其冻结范围。本轮美术/科学/用户/儿童、自动LOD过渡、真实触控/双设备20分钟及其余成品内容未通过；整体和apply保持未完成，个人手机/TestFlight未更新。
+冻结源码3fe4504bd928dc227fc70626fc38c30e4832cb25（源摘要ddc45c28942042da7e19257184ed82b91d4e0a6c6996ac2b06c13f9ac0345db8）导出并编译ARM64 iOS Simulator包，手机/平板使用同一实际包，App摘要43ec7760b781aaaf2a055302f9f001efc59900e0ac64e6f3bfc93902a94fd5cd。双端各16帧钓组/正常教学流程和独立落盘核验通过，分别记录放流一条蓝鳍鲹185/258分；Metal、Medium、Half HDR、4×MSAA实读通过。两套接触表及手机卷线器/LOD2/收鱼、平板LOD2原图已查看；源棚拍不能替代这些Player截图。
+
+20份先前QA主存档更新前后逐字节相同。新进程只带隔离存档及渲染探针参数，重开原26条/4622分；文件SHA e3913747a21f851fbee465ecb7d406d6bbdb7c78702e1f54f6e7d23dc64d0bec不变，实际暂停首页4622分已查看。未卸载、清档或回放旧自动钓鱼。
+
+![手机原生收鱼](../art/previews/rig-winding-shaft/native-phone-landed.png)
+
+[手机原生卷线器](../art/previews/rig-winding-shaft/native-phone-reel.png) · [手机强制LOD2诊断](../art/previews/rig-winding-shaft/native-phone-lod2.png) · [平板强制LOD2诊断](../art/previews/rig-winding-shaft/native-tablet-lod2.png) · [原4622分暂停首页](../art/previews/rig-winding-shaft/native-preserved-home.png)
+
+运行时只扩展显式开发复核，增加强制LOD1/2两帧、finally恢复自动选择，不新增玩家HUD、入口或积分规则。程序EventSystem输入不等于OS触摸；强制LOD诊断不证明自动距离过渡。此前9e2b9dd的双端15帧沉浸覆盖率结果保留其冻结范围，本轮未重跑该15帧或完整45轮成长/60项Editor。本轮美术/科学/用户/儿童、自动LOD过渡、真实触控/双设备20分钟及其余成品内容未通过；整体和apply保持未完成，个人手机/TestFlight未更新。
+
+本轮34条完成与34条启动的回执SHA、测量/attempt绑定及时间区间已核对，新增区间无重叠；940条旧完成和936条旧启动对象完全未变。四个真实失败（旧绕线、两次严格身份检查、缺轴）保留。724字体/公开许可与登记/需求/分支及差异检查通过。历史正式独立审计仍INCOMPLETE，不能以本轮增量核对修补旧缺口。
