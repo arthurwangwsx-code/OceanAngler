@@ -477,6 +477,14 @@
       "checkedAt": "2026-11-24T19:53:29.156Z",
       "durationMs": 110.89745800000003,
       "outcome": "accepted"
+    },
+    {
+      "stageId": "apply",
+      "runId": null,
+      "operation": "start",
+      "checkedAt": "2026-11-24T20:35:05.239Z",
+      "durationMs": 161.96054199999992,
+      "outcome": "accepted"
     }
   ],
   "measurementJournal": {
@@ -12324,6 +12332,127 @@
       "executable": "python3",
       "commandDigest": "b449cedf77939af44b83932d535bac005c2b75d463bda0af2e37b802c56237f0",
       "receiptPath": "measurements/fish-lighting-record-integrity-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "e8614a10-92ac-4a79-8bdd-5c09ce091611",
+      "startedAt": "2026-11-24T20:36:11.001Z",
+      "executable": "python3",
+      "commandDigest": "a068d9bd92e7ba3f4be883fff1508c56c2b0082252a19584b4877106987364c6",
+      "receiptPath": "measurements/beta8-preflight-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "09a78d52-4c6b-4dce-9f8e-ea7dfaae3625",
+      "startedAt": "2026-11-24T20:36:28.237Z",
+      "executable": "python3",
+      "commandDigest": "68ce109728f7410636e38b1530e77916bfc0fab5dacf31879b3924392099bfc3",
+      "receiptPath": "measurements/beta8-cache-maintenance-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "37b096fa-e9a2-4dbd-96fa-b7b90bf20fd2",
+      "startedAt": "2026-11-24T20:37:28.274Z",
+      "executable": "python3",
+      "commandDigest": "d1551e8281ca318cdb989f8c165e492140123abce8033264e0141bf4686cf564",
+      "receiptPath": "measurements/beta8-prepare-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "9569df02-a981-4929-a7d9-99675bd9aa1e",
+      "startedAt": "2026-11-24T20:37:44.206Z",
+      "executable": "python3",
+      "commandDigest": "cf2bd67b177809788fcda0c1c3f844573565bee32477487c3499e4545a0ae912",
+      "receiptPath": "measurements/beta8-scene-comparison-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "c9b5b556-cd07-40ae-9406-62c802324df0",
+      "startedAt": "2026-11-24T20:37:57.105Z",
+      "executable": "python3",
+      "commandDigest": "66528cb0c09cc150af43d10dbf21d4b5a97d9e6527f8983a1a0b43ebaf2f8298",
+      "receiptPath": "measurements/beta8-editmode-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "e5fbf851-04ec-4720-9d8c-5159348d3530",
+      "startedAt": "2026-11-24T20:40:17.725Z",
+      "executable": "python3",
+      "commandDigest": "02438434d4318e60ca1e3f136b9a608e992ef406b17a39e5c510a7d9a0b32b2a",
+      "receiptPath": "measurements/beta8-playmode-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "131f6162-7d06-42b1-9acb-6affb43e7184",
+      "startedAt": "2026-11-24T20:57:33.930Z",
+      "executable": "python3",
+      "commandDigest": "9c86a069bf24f003fcd41bfe74eeead2e6ffacde4a739bdc440339ac2330a82c",
+      "receiptPath": "measurements/beta8-test-results-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "d92313dd-5887-4b9a-9d3e-0b506aea80c4",
+      "startedAt": "2026-11-24T20:57:45.820Z",
+      "executable": "python3",
+      "commandDigest": "c7c935e1ba437ae7729f6ab91f81bc25ffeba9b54f0e4cfe8a4d89028a8747a4",
+      "receiptPath": "measurements/beta8-release-guards-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "ff933522-a383-496f-989d-64517f44385b",
+      "startedAt": "2026-11-24T20:58:01.701Z",
+      "executable": "python3",
+      "commandDigest": "09d786baa15c819a35a746c64683fc1ff4ce768d17668c9aaf4dab0c8eed9ee1",
+      "receiptPath": "measurements/beta8-cache-maintenance-second-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "995a558f-18ff-45e9-89da-0e444cbe6280",
+      "startedAt": "2026-11-24T20:58:15.826Z",
+      "executable": "python3",
+      "commandDigest": "a308abfc1cde2ad120049559acf20b453c11fc383673cfa27175ef6174c4da9f",
+      "receiptPath": "measurements/beta8-preparation-proof-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "9732703a-80bb-4461-8cbc-8f2c97c22119",
+      "startedAt": "2026-11-24T20:58:24.279Z",
+      "executable": "python3",
+      "commandDigest": "92b88d46c0b5545788a9a2ce5359954222ebde80f299018987788284e4627495",
+      "receiptPath": "measurements/beta8-source-public-checks-20261125.json"
     }
   ],
   "runMeasurements": [
@@ -31018,6 +31147,215 @@
       "receipt": {
         "path": "measurements/fish-lighting-record-integrity-20261125.json",
         "sha256": "679818ca7ba94ba3a46d7b90bdd0b914ac8b8e4034ef3f0edd7b3a8b0ea02f40"
+      }
+    },
+    {
+      "id": "e8614a10-92ac-4a79-8bdd-5c09ce091611",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "a068d9bd92e7ba3f4be883fff1508c56c2b0082252a19584b4877106987364c6",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:36:11.001Z",
+      "finishedAt": "2026-11-24T20:36:24.347Z",
+      "durationMs": 13309.786958,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/beta8-preflight-20261125.json",
+        "sha256": "a481ae45b22ae0e1c6c7bb92a58d3ce77daeb0de10c35f299e1263c781562381"
+      }
+    },
+    {
+      "id": "09a78d52-4c6b-4dce-9f8e-ea7dfaae3625",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "68ce109728f7410636e38b1530e77916bfc0fab5dacf31879b3924392099bfc3",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:36:28.237Z",
+      "finishedAt": "2026-11-24T20:36:52.187Z",
+      "durationMs": 23921.827708,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/beta8-cache-maintenance-20261125.json",
+        "sha256": "4c38d53584e46a3e0c02b04d70e0c05af330c634a8b1ed4b0a52df9fac54fca7"
+      }
+    },
+    {
+      "id": "37b096fa-e9a2-4dbd-96fa-b7b90bf20fd2",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d1551e8281ca318cdb989f8c165e492140123abce8033264e0141bf4686cf564",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:37:28.274Z",
+      "finishedAt": "2026-11-24T20:37:39.777Z",
+      "durationMs": 11441.161542,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/beta8-prepare-20261125.json",
+        "sha256": "d35e876ea4980651175e7b8edc63b21c0ea2c3f0d2e4b89e52b5e4b38d56615e"
+      }
+    },
+    {
+      "id": "9569df02-a981-4929-a7d9-99675bd9aa1e",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "cf2bd67b177809788fcda0c1c3f844573565bee32477487c3499e4545a0ae912",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:37:44.206Z",
+      "finishedAt": "2026-11-24T20:37:44.391Z",
+      "durationMs": 153.32624999999996,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/beta8-scene-comparison-20261125.json",
+        "sha256": "50f546d38ec1b462933079778c6c12a105684524b3e5f8fc01559d4e897f465d"
+      }
+    },
+    {
+      "id": "c9b5b556-cd07-40ae-9406-62c802324df0",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "66528cb0c09cc150af43d10dbf21d4b5a97d9e6527f8983a1a0b43ebaf2f8298",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:37:57.105Z",
+      "finishedAt": "2026-11-24T20:40:11.688Z",
+      "durationMs": 134511.242875,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/beta8-editmode-20261125.json",
+        "sha256": "625bf971676b5ffe38719071f32c92e38bc4a1654d9ee3ec03d2de4eea6b64c5"
+      }
+    },
+    {
+      "id": "e5fbf851-04ec-4720-9d8c-5159348d3530",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "02438434d4318e60ca1e3f136b9a608e992ef406b17a39e5c510a7d9a0b32b2a",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:40:17.725Z",
+      "finishedAt": "2026-11-24T20:57:24.826Z",
+      "durationMs": 1027061.337666,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/beta8-playmode-20261125.json",
+        "sha256": "38425a9133828d94824e8bbccb86e260b43322b47bebb72dc0d9d759a883a977"
+      }
+    },
+    {
+      "id": "131f6162-7d06-42b1-9acb-6affb43e7184",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "9c86a069bf24f003fcd41bfe74eeead2e6ffacde4a739bdc440339ac2330a82c",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:57:33.930Z",
+      "finishedAt": "2026-11-24T20:57:34.326Z",
+      "durationMs": 321.750458,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/beta8-test-results-20261125.json",
+        "sha256": "a3f8279918f7edb53fb318d5f6f57c8db2450aa09316da1c43d9608001a91425"
+      }
+    },
+    {
+      "id": "d92313dd-5887-4b9a-9d3e-0b506aea80c4",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "c7c935e1ba437ae7729f6ab91f81bc25ffeba9b54f0e4cfe8a4d89028a8747a4",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:57:45.820Z",
+      "finishedAt": "2026-11-24T20:57:46.428Z",
+      "durationMs": 436.6211249999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/beta8-release-guards-20261125.json",
+        "sha256": "c98151b795cec088fc0ad4f9aa4323297d59a158cec6e3e57bbf8d9f1ebf05fc"
+      }
+    },
+    {
+      "id": "ff933522-a383-496f-989d-64517f44385b",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "09d786baa15c819a35a746c64683fc1ff4ce768d17668c9aaf4dab0c8eed9ee1",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:58:01.701Z",
+      "finishedAt": "2026-11-24T20:58:11.144Z",
+      "durationMs": 9378.175125,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/beta8-cache-maintenance-second-20261125.json",
+        "sha256": "a48a03fa8651729093f2f2afe871753f2ecdfc76f2d3c9e081f37f5020d1c81f"
+      }
+    },
+    {
+      "id": "995a558f-18ff-45e9-89da-0e444cbe6280",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "a308abfc1cde2ad120049559acf20b453c11fc383673cfa27175ef6174c4da9f",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:58:15.826Z",
+      "finishedAt": "2026-11-24T20:58:16.122Z",
+      "durationMs": 251.86020800000006,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/beta8-preparation-proof-20261125.json",
+        "sha256": "bb6e37a06f53ba177a281140d083ed150beb5bcdad34baba94400e9277e38059"
+      }
+    },
+    {
+      "id": "9732703a-80bb-4461-8cbc-8f2c97c22119",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "92b88d46c0b5545788a9a2ce5359954222ebde80f299018987788284e4627495",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T20:58:24.279Z",
+      "finishedAt": "2026-11-24T20:58:27.772Z",
+      "durationMs": 3449.2457090000007,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/beta8-source-public-checks-20261125.json",
+        "sha256": "482a1c4e7a2791a7add36a9b6bb93e675549f2c5b7670cc37a44d97ffbee7213"
       }
     }
   ]
