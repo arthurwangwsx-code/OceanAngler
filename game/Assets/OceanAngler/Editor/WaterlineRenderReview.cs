@@ -52,7 +52,7 @@ namespace OceanAngler.Editor
                             OceanWorld.PoseGearAtWaterline(rig,habitat.SeaLevel,left);var pose=FishingEncounter.Evaluate(frame.Item2,frame.Item3,.6f,hook,rig.CastOrigin,0,0,false,habitat.SeaLevel);
                             fish.transform.SetPositionAndRotation(pose.fishPosition,pose.fishRotation);clips.Single(c=>c.name==(frame.Item2==FishingPhase.Fighting?"hooked":"swim")).SampleAnimation(animator.gameObject,.2f);
                             rig.Drive(frame.Item2==FishingPhase.Fighting?.45f:0,false,false,false,frame.Item2==FishingPhase.Casting,pose.lurePosition,false,frame.Item2==FishingPhase.Fighting,frame.Item2==FishingPhase.Fighting?fish:null);rig.Present(.1f);
-                            habitat.SetFishingSplash(pose.lurePosition,frame.Item1=="impact"?.15f:-1);habitat.Present(camera,false,frame.Item4,0,true,false,true,0,frame.Item4);
+                            habitat.SetFishingSplash(pose.lurePosition,frame.Item1=="impact"?.15f:frame.Item1=="ready"?float.PositiveInfinity:-1);habitat.Present(camera,false,frame.Item4,0,true,false,true,0,frame.Item4);
                             yield return null;yield return null;
                             string name=id+"-"+(left?"left":"right")+"-"+frame.Item1;RenderPipeline.SubmitRenderRequest(camera,request);var first=Save(target,Path.Combine(folder,name+".png"));receipt.images++;
                             RenderPipeline.SubmitRenderRequest(camera,request);var second=Save(target,Path.Combine(folder,name+"-repeat.png"));receipt.images++;

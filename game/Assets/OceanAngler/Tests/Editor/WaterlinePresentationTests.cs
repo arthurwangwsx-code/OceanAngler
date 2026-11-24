@@ -4,6 +4,21 @@ namespace OceanAngler.Tests
 {
     public sealed class WaterlinePresentationTests
     {
+        [Test] public void IdleAndExpiredSplashNeverUploadNonFiniteShaderInputs()
+        {
+            var habitat=Object.Instantiate(Resources.Load<GameObject>("Models/CoralBay")).GetComponent<MarineHabitat>();var cameraObject=new GameObject("SplashBoundaryCamera");var camera=cameraObject.AddComponent<Camera>();camera.enabled=false;
+            try
+            {
+                foreach(float age in new[]{float.PositiveInfinity,float.NegativeInfinity,float.NaN,-1,1.4f,10000,0,.15f})
+                {
+                    habitat.SetFishingSplash(new Vector3(1,habitat.SeaLevel,2),age);habitat.Present(camera,false,false,0,true,false);
+                    var block=new MaterialPropertyBlock();habitat.waterSurface.GetPropertyBlock(block);var value=block.GetVector("_FishingSplash");
+                    for(int i=0;i<4;i++)Assert.That(float.IsNaN(value[i])||float.IsInfinity(value[i]),Is.False,"GPU input must be finite, age="+age);
+                    Assert.That(value.w,Is.EqualTo(age>=0&&age<1.4f?1:0));
+                }
+            }
+            finally{var bay=habitat as BayHabitat;if(bay!=null&&bay.school!=null)bay.school.ReleasePresentation();Object.DestroyImmediate(habitat.gameObject);Object.DestroyImmediate(cameraObject);}
+        }
         [Test] public void ActualRigMechanismsStayAboveEachHabitatWaterlineForBothHands()
         {
             var rig=Object.Instantiate(Resources.Load<GameObject>("Models/SpinningRig")).GetComponent<AuthoredSpinningRig>();

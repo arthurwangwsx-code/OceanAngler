@@ -11,7 +11,7 @@ namespace OceanAngler
     {
         [Serializable] sealed class HudSample { public string phase;public bool leftHanded,centralClear;public int buttons;public float occupiedRatio; }
         [Serializable] sealed class MeterLabelSample { public string text;public float preferredWidth,availableWidth,preferredHeight,availableHeight;public bool fits; }
-        [Serializable] sealed class WaterlineSample { public string stage,phase;public bool leftHanded,surface;public float seaLevel,cameraY,rigY,lureY,fade,guideError; }
+        [Serializable] sealed class WaterlineSample { public string stage,phase;public bool leftHanded,surface;public float seaLevel,cameraY,rigY,lureY,fade,guideError,splashAge; }
         [Serializable] sealed class RestTimerResult { public string status="RUNNING",scope="real unmodified active timer on a QA player; not child or physical-device qualification";public float observedSeconds;public bool paused,reminderDue,acknowledged,progressUnchanged; }
         [Serializable] sealed class ImmersiveResult { public string status,scope;public string[] failures;public List<HudSample> samples;public List<MeterLabelSample> meterLabels;public List<WaterlineSample> waterline;public int catchesBefore,catchesAfter,pointsBefore,pointsAfter;public bool unfinishedExitPreservedLedger,settingsRestored;public RestTimerResult restTimer; }
         RestTimerResult restTimer;
@@ -40,6 +40,8 @@ namespace OceanAngler
         void CheckWaterline(string stage,bool surface)
         {
             var world=GetComponent<OceanWorld>();var rig=FindFirstObjectByType<AuthoredSpinningRig>();var sample=new WaterlineSample{stage=stage,phase=game.Session.Phase.ToString(),leftHanded=game.Progress.Data.settings.leftHanded,surface=world.FishingSurfaceView,seaLevel=world.ActiveHabitat.SeaLevel,cameraY=Camera.main.transform.position.y,rigY=rig.transform.position.y,lureY=rig.lureNose.position.y,fade=world.CameraFade,guideError=rig.MaximumGuideLineError()};waterlineSamples.Add(sample);
+            var block=new MaterialPropertyBlock();world.ActiveHabitat.waterSurface.GetPropertyBlock(block);sample.splashAge=block.GetVector("_FishingSplash").z;
+            JourneyRequire(!float.IsNaN(sample.splashAge)&&!float.IsInfinity(sample.splashAge),"waterline-finite-shader-input-"+stage);
             JourneyRequire(sample.surface==surface&&(surface?sample.cameraY>sample.seaLevel:sample.cameraY<sample.seaLevel)&&sample.rigY>sample.seaLevel&&sample.guideError<.0001f,"waterline-"+stage+"-actual-camera-rig-and-guides");
         }
         IEnumerator WaterlineClick(string label)

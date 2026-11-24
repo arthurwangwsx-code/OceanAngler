@@ -16,7 +16,12 @@ namespace OceanAngler
         float waterTime;MaterialPropertyBlock waterProperties;
         Vector4 fishingSplash=new Vector4(0,0,-1,0);
         public void SetFishingSplash(Vector3 position,float age)
-        {fishingSplash=new Vector4(position.x,position.z,age,age>=0&&age<1.4f?1:0);}
+        {
+            // An inactive effect still participates in shader arithmetic:
+            // cos(infinity)*0 is NaN, so never upload a non-finite sentinel.
+            bool active=!float.IsNaN(age)&&!float.IsInfinity(age)&&age>=0&&age<1.4f;
+            fishingSplash=active?new Vector4(position.x,position.z,age,1):new Vector4(0,0,-1,0);
+        }
         public void Present(Camera camera,bool observing,bool above,int angle,bool paused,bool reduced,bool showAmbient=true,float compositionOffset=0,bool fishingSurface=false)
         {
             PresentAmbient(paused,reduced,showAmbient);
