@@ -143,5 +143,10 @@
   "physicalDevice": "NOT_RUN",
   "testFlight": "UNCHANGED",
   "fullProduct": "PARTIAL",
-  "historicalMeasurementAudit": "INCOMPLETE"
+  "historicalMeasurementAudit": "INCOMPLETE",
+  "measurementBindingAudit": {
+    "committedRecordsPreserved": 761,
+    "newRecordsBound": true,
+    "historicalOverall": "INCOMPLETE"
+  }
 }

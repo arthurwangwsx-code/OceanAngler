@@ -1662,6 +1662,61 @@
         }
       ],
       "note": "All6 included original frames viewed;12 native frames via2 private contacts plus6 native and2 manual originals. Own game with registered OFL font; no OS/sidebar, device IDs, personal media or raw logs. OS visible rod2 click confirmed; OS scroll not confirmed. Prototype labels do not fix incorrect halibut model."
+    },
+    {
+      "id": "original-touch-symbol-code",
+      "author": "OceanAngler contributors",
+      "source": "game/Assets/OceanAngler/Runtime/TouchSymbol.cs",
+      "license": "MIT",
+      "redistribution": true,
+      "status": "IMPLEMENTED_USER_COMPREHENSION_PENDING",
+      "note": "Original line/disc meshes for fishing, reel, pause, home, journal, tasks, settings and release; no emoji, external icons or raster assets."
+    },
+    {
+      "id": "immersive-interface-reviewed-frames",
+      "author": "OceanAngler contributors",
+      "source": "Own Simulator renders: before5184472, finaldf6b580, plus new-process own home4661",
+      "license": "MIT",
+      "redistribution": true,
+      "sourceRedistribution": true,
+      "canModify": true,
+      "acquiredAt": "2026-11-24",
+      "status": "FUNCTIONAL_PASS_ART_REVIEW_PENDING",
+      "artifacts": [
+        {
+          "path": "art/previews/immersive-interface/phone-preparation-before.png",
+          "sha256": "428de1a52228e10e8adb94e29f00e7997f9bdbd325887a0d68ae547d13ec041f"
+        },
+        {
+          "path": "art/previews/immersive-interface/phone-fighting.png",
+          "sha256": "5d1a02f12f378a9b9a4b4e140435b5f5e3045f879f475ffd45ad51c048d24c93"
+        },
+        {
+          "path": "art/previews/immersive-interface/phone-preparation.png",
+          "sha256": "32376a86273b3e5625c8c61cdca58b7e2af210083df80cb88cfb536c2ab6a684"
+        },
+        {
+          "path": "art/previews/immersive-interface/phone-exit.png",
+          "sha256": "233631c657d50becfd028cdb8bca2e510a587c32dbc1c0aca361030a356b8b90"
+        },
+        {
+          "path": "art/previews/immersive-interface/tablet-fighting.png",
+          "sha256": "1fc7175ba4c096d5652a7fb0f3f90d1494aa050b3448f73df5b82e258aeffc1b"
+        },
+        {
+          "path": "art/previews/immersive-interface/tablet-preparation.png",
+          "sha256": "da69ae37cc4d28797166757bb331c48749f1a0f56dedc4a1112a7fc5c3fda0b1"
+        },
+        {
+          "path": "art/previews/immersive-interface/tablet-pause.png",
+          "sha256": "992b5aafe396ede088d66b64c304cb897d5450176fb79b74a5754b3ed9f46a27"
+        },
+        {
+          "path": "art/previews/immersive-interface/phone-reopened-home.png",
+          "sha256": "78338ed53b55f1527dfa6c234230f9c07d2225d5347aa463d5d8f532f79544e8"
+        }
+      ],
+      "note": "All8 included original frames viewed. Initial30 and final30 through4 private contacts;4 initial plus9 final originals, and2 reopening originals viewed. Only own game; no personal photography, device IDs, raw logs or OS/sidebar. Embedded font has registered OFL notice. Models/world are candidates; no finished art, child or physical-touch acceptance."
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."

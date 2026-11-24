@@ -8,6 +8,8 @@
 
 **当前已具备可试玩的钓鱼/进度闭环。0.1.0 (5)已通过Apple处理并分配至本人授权账号的内部TestFlight组，新增保护观察与近海航道候选；[发行回执](reports/testflight-0.1.0-5.json)和[iPhone本地更新/启动回执](reports/iphone-local-0.1.0-5.md)分开记录。美术、实际触控、真机20分钟与完整产品验收未完成。** 首发iPhone/iPad，最低iOS/iPadOS 17，Unity 6000.3.29f1 + URP 17.3.0 + C# + Blender；离线单人、无广告、无内购、无聊天。
 
+沉浸式界面首版：实际钓鱼仅保留暂停、当前动作和收线仪表，准备/图鉴/设置移到分层页面，结束本次先确认。df6b580最终包在手机/平板各15帧定向流程通过，普通HUD占安全区最高12.034%/4.455%，准备出发按钮固定可见；原五份QA存档字节保留，新进程首页4661分一致。见[实际画面与验收范围](reports/immersive-interface.md)。图标理解、儿童/真实触控及完整美术仍待验，本轮没有更新个人手机/TestFlight。
+
 | 阅读目的 | 文件 |
 |---|---|
 | 完整产品、玩法、范围与交互 | [产品方案](docs/01-product.md) |
@@ -23,7 +25,7 @@
 | 当前真实结果 | [完整总账](reports/acceptance-ledger.md)、[移动布局与发行](reports/mobile-layout.md)、[逻辑与Mac运行](reports/progression-validation.md) |
 | 当前iOS模拟器运行 | [iPhone/iPad实际流程与原图](reports/ios-simulator.md)、[重建和数据隔离](docs/19-ios-simulator-verification.md) |
 | 连续游玩和暂停准备面板 | [20轮UI流程、左右手命中及读档](reports/continuous-journey.md)、[复现入口](docs/20-continuous-journey.md) |
-| 沉浸式游玩与分层页面 | [页面/交互约束](docs/23-immersive-interface.md) |
+| 沉浸式游玩与分层页面 | [页面/交互约束](docs/23-immersive-interface.md)、[双端实际画面](reports/immersive-interface.md) |
 | 钓具滚动与模型制作提示 | [定向双端检查及系统滚动边界](reports/gear-feedback-and-model-status.md) |
 | 随机收齐全部鱼种、18任务和装备 | [双端完整成长与未通过项](reports/complete-content-journey.md)、[复现入口](docs/22-complete-content-journey.md) |
 | 首条独立源模型 | [蓝鳍鲹候选及验收边界](reports/bluefin-art.md)、[源资产重建](art/source/bluefin/README.md) |
