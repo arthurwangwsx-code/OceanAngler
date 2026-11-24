@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "658af26e-cee7-4dfe-907f-b365aa9efd69",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "f35ed888f405b7e530dd568129bf7cdd431ebea5d49ee6760bff57ac9c25ebbf",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-24T19:24:56.518Z",
+    "finishedAt": "2026-11-24T19:24:56.673Z",
+    "durationMs": 121.60849999999994,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/hud-contrast-qa/audit-records.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/hud-contrast-qa/audit-records.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T19:24:56.518Z",
+  "finishedAt": "2026-11-24T19:24:56.673Z",
+  "durationMs": 121.60849999999994
+}

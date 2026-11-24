@@ -2397,6 +2397,28 @@
         }
       ],
       "note": "Six reviewed original game captures; own models and OFL game font with existing notices retained. No device logs, private media or credentials. Art and meter text contrast remain partial."
+    },
+    {
+      "id": "hud-meter-contrast-native-frames",
+      "author": "OceanAngler contributors",
+      "source": "Own6523edf native Simulator app; two reviewed original fighting frames",
+      "license": "MIT",
+      "redistribution": true,
+      "sourceRedistribution": true,
+      "canModify": true,
+      "acquiredAt": "2026-11-25",
+      "status": "SCOPED_UI_REVIEW_PASS_ART_PENDING",
+      "artifacts": [
+        {
+          "path": "art/previews/hud-meter-contrast/phone-fighting.png",
+          "sha256": "04a7ae29669d14122882afb28b86b47e35a175e94d3a10d2de803aa474c2e231"
+        },
+        {
+          "path": "art/previews/hud-meter-contrast/tablet-fighting.png",
+          "sha256": "3925a90e6df4eace5545263e29c8f0d880a5d38ec49a694ac4fb0b3c235c3e75"
+        }
+      ],
+      "note": "Own game models and OFL font; existing notices retained. No private logs, media or credentials; no child or physical-device acceptance."
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."

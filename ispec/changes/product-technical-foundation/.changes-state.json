@@ -11571,6 +11571,127 @@
       "executable": "python3",
       "commandDigest": "6de03ec0e92598c1a77f984fe728b74b5ec0048d99162fe663c08f36d7a2a024",
       "receiptPath": "measurements/pectoral-native-record-audit-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "81b0f911-148c-4401-a346-aae7f606cf6f",
+      "startedAt": "2026-11-24T19:13:56.982Z",
+      "executable": "python3",
+      "commandDigest": "f1ea0a411c1329adf712c26a3bb57443190d38c93e68730a7969c8ee66f54b75",
+      "receiptPath": "measurements/hud-contrast-playmode-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "04e54f08-5634-4820-a50b-8a871852f91b",
+      "startedAt": "2026-11-24T19:15:14.796Z",
+      "executable": "python3",
+      "commandDigest": "e66bb6e3f4414b8b8737390c7b55145a6675b69e91484977174c2f7616dc612e",
+      "receiptPath": "measurements/hud-contrast-retention-before-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "5f275c28-7573-41d8-a94d-565212090df8",
+      "startedAt": "2026-11-24T19:15:31.421Z",
+      "executable": "python3",
+      "commandDigest": "94f4186f2b2a0a86cdb5a1a45b90b1446b1017bcd2ea299678b5ccc7b4ffe9c1",
+      "receiptPath": "measurements/hud-contrast-native-build-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "f94117c4-b521-47f7-b17d-62a8f9c87048",
+      "startedAt": "2026-11-24T19:19:33.019Z",
+      "executable": "python3",
+      "commandDigest": "9241d91c1f38926e3a433896d58c4b99c780718befee53190d35ab7ccf5d5dad",
+      "receiptPath": "measurements/hud-contrast-phone-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "235dad5e-6438-4996-9240-5b0a0252e3a6",
+      "startedAt": "2026-11-24T19:20:24.745Z",
+      "executable": "python3",
+      "commandDigest": "166cac9171c47f9b5906bb556f5fa3f7fd2bef3379d2702676ad98176b74055e",
+      "receiptPath": "measurements/hud-contrast-phone-proof-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "a3fb58ea-0d8a-41f9-83c6-5a74c1fa85d6",
+      "startedAt": "2026-11-24T19:20:26.075Z",
+      "executable": "python3",
+      "commandDigest": "2ea2ea7266d5ca541e407b2cc48799588a269a4c7976d6231fe8333d1537a8c2",
+      "receiptPath": "measurements/hud-contrast-pad-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "bf51e972-4588-43b9-bd19-7b9740f8e036",
+      "startedAt": "2026-11-24T19:22:53.920Z",
+      "executable": "python3",
+      "commandDigest": "ec8f95af13878a66a8f3ffe265ab8363a25f61fcde4ae1398e736690e5d15d50",
+      "receiptPath": "measurements/hud-contrast-pad-proof-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "51be8990-e7a2-458a-965a-50394b402045",
+      "startedAt": "2026-11-24T19:22:54.660Z",
+      "executable": "python3",
+      "commandDigest": "df94a608e5bfe15ea7b115e4b8bf2378fc6b907c29b8df1c785f5e0c1ab6928c",
+      "receiptPath": "measurements/hud-contrast-retention-after-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "a5e9a658-0719-4715-b06f-89879a06f777",
+      "startedAt": "2026-11-24T19:23:40.423Z",
+      "executable": "python3",
+      "commandDigest": "c491fa58f54b2c9413da01956031affc12ddd3ba0f03f2c4dd41f9bab8066bd6",
+      "receiptPath": "measurements/hud-contrast-report-proof-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "59f7082c-83c6-45bc-bf01-43ac670336fe",
+      "startedAt": "2026-11-24T19:24:34.096Z",
+      "executable": "python3",
+      "commandDigest": "92b88d46c0b5545788a9a2ce5359954222ebde80f299018987788284e4627495",
+      "receiptPath": "measurements/hud-contrast-public-checks-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "658af26e-cee7-4dfe-907f-b365aa9efd69",
+      "startedAt": "2026-11-24T19:24:56.518Z",
+      "executable": "python3",
+      "commandDigest": "f35ed888f405b7e530dd568129bf7cdd431ebea5d49ee6760bff57ac9c25ebbf",
+      "receiptPath": "measurements/hud-contrast-record-audit-20261125.json"
     }
   ],
   "runMeasurements": [
@@ -28992,6 +29113,215 @@
       "receipt": {
         "path": "measurements/pectoral-native-record-audit-20261125.json",
         "sha256": "3e9b993e39cc4a7bc177ae4fa6f8b0e0ad0b66f8c0e5e97c0915ac6fa58d6cf6"
+      }
+    },
+    {
+      "id": "81b0f911-148c-4401-a346-aae7f606cf6f",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "f1ea0a411c1329adf712c26a3bb57443190d38c93e68730a7969c8ee66f54b75",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:13:56.982Z",
+      "finishedAt": "2026-11-24T19:14:57.150Z",
+      "durationMs": 60124.543125000004,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hud-contrast-playmode-20261125.json",
+        "sha256": "1350a5f7a9b35ba56045b8eb7e4994649aa9387d10f4b19c1687c0fd769e2f9f"
+      }
+    },
+    {
+      "id": "04e54f08-5634-4820-a50b-8a871852f91b",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "e66bb6e3f4414b8b8737390c7b55145a6675b69e91484977174c2f7616dc612e",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:15:14.796Z",
+      "finishedAt": "2026-11-24T19:15:26.830Z",
+      "durationMs": 11968.440375,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hud-contrast-retention-before-20261125.json",
+        "sha256": "3b54accbeb49cd4b47d6f7c0d6709b34c90ce897ec10250200c860581ec8a5eb"
+      }
+    },
+    {
+      "id": "5f275c28-7573-41d8-a94d-565212090df8",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "94f4186f2b2a0a86cdb5a1a45b90b1446b1017bcd2ea299678b5ccc7b4ffe9c1",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:15:31.421Z",
+      "finishedAt": "2026-11-24T19:19:12.188Z",
+      "durationMs": 220727.922666,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hud-contrast-native-build-20261125.json",
+        "sha256": "dd3e6347de698d86252d916f4b12ee656a56063d00b8c5a8db60e968e8a509ae"
+      }
+    },
+    {
+      "id": "f94117c4-b521-47f7-b17d-62a8f9c87048",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "9241d91c1f38926e3a433896d58c4b99c780718befee53190d35ab7ccf5d5dad",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:19:33.019Z",
+      "finishedAt": "2026-11-24T19:20:23.276Z",
+      "durationMs": 50208.702041000004,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hud-contrast-phone-20261125.json",
+        "sha256": "95f6e7329c297fd6ca9ad924c595e5a0896a78c06ff812dd761f287d804f1f8e"
+      }
+    },
+    {
+      "id": "235dad5e-6438-4996-9240-5b0a0252e3a6",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "166cac9171c47f9b5906bb556f5fa3f7fd2bef3379d2702676ad98176b74055e",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:20:24.745Z",
+      "finishedAt": "2026-11-24T19:20:24.928Z",
+      "durationMs": 147.36566600000015,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hud-contrast-phone-proof-20261125.json",
+        "sha256": "fc8ca439fc0509f4e7f402fae3859a703afae6980b8f2e9da1d764dfb199c8ad"
+      }
+    },
+    {
+      "id": "a3fb58ea-0d8a-41f9-83c6-5a74c1fa85d6",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "2ea2ea7266d5ca541e407b2cc48799588a269a4c7976d6231fe8333d1537a8c2",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:20:26.075Z",
+      "finishedAt": "2026-11-24T19:22:52.868Z",
+      "durationMs": 146695.885417,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hud-contrast-pad-20261125.json",
+        "sha256": "ec6a001f005f79428bb7a59fcebb8bcca37a9f17bdfc5abe53b0b6afa35d72e6"
+      }
+    },
+    {
+      "id": "bf51e972-4588-43b9-bd19-7b9740f8e036",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "ec8f95af13878a66a8f3ffe265ab8363a25f61fcde4ae1398e736690e5d15d50",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:22:53.920Z",
+      "finishedAt": "2026-11-24T19:22:54.068Z",
+      "durationMs": 110.63387499999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hud-contrast-pad-proof-20261125.json",
+        "sha256": "f68199a0845752daa2df12aaa68795e19a5ed2a8a0411df9e39fcfddea3af16e"
+      }
+    },
+    {
+      "id": "51be8990-e7a2-458a-965a-50394b402045",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "df94a608e5bfe15ea7b115e4b8bf2378fc6b907c29b8df1c785f5e0c1ab6928c",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:22:54.660Z",
+      "finishedAt": "2026-11-24T19:23:02.285Z",
+      "durationMs": 7599.86125,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hud-contrast-retention-after-20261125.json",
+        "sha256": "d1529ca6c2633e6f25eb7266a11b366dd39a5515a13ad8cc2120d78392c329da"
+      }
+    },
+    {
+      "id": "a5e9a658-0719-4715-b06f-89879a06f777",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "c491fa58f54b2c9413da01956031affc12ddd3ba0f03f2c4dd41f9bab8066bd6",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:23:40.423Z",
+      "finishedAt": "2026-11-24T19:23:40.626Z",
+      "durationMs": 158.51566700000012,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hud-contrast-report-proof-20261125.json",
+        "sha256": "48bc4fd306d4b2911f0a153412fb1bb3dec98247d85f06bf6bab119a4adfd374"
+      }
+    },
+    {
+      "id": "59f7082c-83c6-45bc-bf01-43ac670336fe",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "92b88d46c0b5545788a9a2ce5359954222ebde80f299018987788284e4627495",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:24:34.096Z",
+      "finishedAt": "2026-11-24T19:24:36.261Z",
+      "durationMs": 2138.981792,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hud-contrast-public-checks-20261125.json",
+        "sha256": "a503a83ce8dc596fbc5bf882dd7f8dd9899e891b8849ee527ae7afda16d09cde"
+      }
+    },
+    {
+      "id": "658af26e-cee7-4dfe-907f-b365aa9efd69",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "f35ed888f405b7e530dd568129bf7cdd431ebea5d49ee6760bff57ac9c25ebbf",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T19:24:56.518Z",
+      "finishedAt": "2026-11-24T19:24:56.673Z",
+      "durationMs": 121.60849999999994,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hud-contrast-record-audit-20261125.json",
+        "sha256": "0dc301c604c26a8849dc9201cdc5064f66078dcc587f1a89c0b9ee6b11e68f2e"
       }
     }
   ]

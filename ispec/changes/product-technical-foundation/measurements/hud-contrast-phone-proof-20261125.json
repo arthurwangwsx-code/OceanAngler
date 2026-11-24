@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "235dad5e-6438-4996-9240-5b0a0252e3a6",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "166cac9171c47f9b5906bb556f5fa3f7fd2bef3379d2702676ad98176b74055e",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-24T19:20:24.745Z",
+    "finishedAt": "2026-11-24T19:20:24.928Z",
+    "durationMs": 147.36566600000015,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/hud-contrast-qa/verify-native.py",
+      "hudcontrast20261125phone1",
+      "hud-contrast-phone-20261125.json"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/hud-contrast-qa/verify-native.py",
+    "hudcontrast20261125phone1",
+    "hud-contrast-phone-20261125.json"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T19:20:24.745Z",
+  "finishedAt": "2026-11-24T19:20:24.928Z",
+  "durationMs": 147.36566600000015
+}
