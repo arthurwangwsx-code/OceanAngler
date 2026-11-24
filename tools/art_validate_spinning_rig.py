@@ -18,7 +18,7 @@ for stem in ['Rod','Housing','Rotor','Spool','Crank','Lure','BailWire']:
  check(all(report['lods'][stem+'_LOD'+str(i)]['triangles']>report['lods'][stem+'_LOD'+str(i+1)]['triangles'] for i in range(2)),'LOD实际递减：'+stem)
 butt=bpy.data.objects['ButtAnchor'].matrix_world.translation;tip=bpy.data.objects['TipAnchor'].matrix_world.translation
 check(abs((tip-butt).length-2.35)<.0001,'全竿物理长度2.35米')
-for name,pos in [('RotorPivot',(0,-.145,.47)),('SpoolPivot',(0,-.145,.52)),('CrankPivot',(-.045,-.142,.38)),('BailPivot',(0,-.145,.505))]:check((bpy.data.objects[name].matrix_world.translation-Vector(pos)).length<.0001,'机构中心正确：'+name)
+for name,pos in [('RotorPivot',(0,-.145,.47)),('SpoolPivot',(0,-.145,.52)),('CrankPivot',(-.045,-.142,.38)),('BailPivot',(0,-.145,.551))]:check((bpy.data.objects[name].matrix_world.translation-Vector(pos)).length<.0001,'机构中心正确：'+name)
 for label,bend in [('rest',0),('loaded',.05)]:
  for i in range(10):p=rig.pose.bones['RodBone'+str(i)];p.rotation_mode='XYZ';p.rotation_euler.x=bend*(i/9)**1.3
  bpy.context.view_layer.update();obj=bpy.data.objects['Rod_LOD0'];ev=obj.evaluated_get(bpy.context.evaluated_depsgraph_get());mesh=ev.to_mesh();errors=[]
@@ -31,5 +31,8 @@ for label,bend in [('rest',0),('loaded',.05)]:
  ev.to_mesh_clear();report['guideErrors'][label]=errors
 for im in bpy.data.images:
  if im.source=='FILE':check(Path(bpy.path.abspath(im.filepath)).is_file(),'贴图可解析：'+im.name)
+detail_scope={'__file__':str(ROOT/'tools/art_validate_rig_detail.py'),'__name__':'rig_detail_module'}
+exec(compile((ROOT/'tools/art_validate_rig_detail.py').read_text(),detail_scope['__file__'],'exec'),detail_scope)
+report['detail']=detail_scope['inspect']();checks.extend(report['detail']['checks']);failures.extend(report['detail']['failures'])
 report['status']='FAIL' if failures else 'ENGINEERING_CHECKS_PASS';out=ROOT/'.local/art/spinning-rig/validation.json';out.parent.mkdir(parents=True,exist_ok=True);out.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n');print(json.dumps(report,ensure_ascii=False,indent=2))
 if failures:raise RuntimeError('Spinning rig asset validation failed')

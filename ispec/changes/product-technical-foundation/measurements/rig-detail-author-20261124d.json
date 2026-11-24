@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "7557b968-2cdd-46a2-8733-59c96c26f479",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "dd4bd8321df37f7e07d9d3af7ae295dfb9588afa49a6be8521d4d7e2016e57f4",
+    "category": "compile",
+    "executable": "python3",
+    "startedAt": "2026-11-24T13:41:10.351Z",
+    "finishedAt": "2026-11-24T13:41:26.433Z",
+    "durationMs": 16032.587125,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      "tools/art.py",
+      "build",
+      "--asset",
+      "spinning-rig",
+      "--label",
+      "rigdetailauthor20261124d",
+      "--no-preview"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    "tools/art.py",
+    "build",
+    "--asset",
+    "spinning-rig",
+    "--label",
+    "rigdetailauthor20261124d",
+    "--no-preview"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T13:41:10.351Z",
+  "finishedAt": "2026-11-24T13:41:26.433Z",
+  "durationMs": 16032.587125
+}

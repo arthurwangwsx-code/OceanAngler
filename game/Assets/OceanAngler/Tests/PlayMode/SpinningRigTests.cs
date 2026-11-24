@@ -35,9 +35,9 @@ namespace OceanAngler.Tests
             Assert.That(rig.rodBones.Length,Is.EqualTo(10));Assert.That(rig.guides.Length,Is.EqualTo(9));
             var groups=rig.GetComponentsInChildren<LODGroup>(true);Assert.That(groups.Length,Is.EqualTo(1));
             var lods=groups[0].GetLODs();Assert.That(lods.Length,Is.EqualTo(3));
-            var all=lods.SelectMany(l=>l.renderers).ToArray();Assert.That(all.Length,Is.EqualTo(21));Assert.That(all.Distinct().Count(),Is.EqualTo(21));
-            foreach(var lod in lods)Assert.That(lod.renderers.Length,Is.EqualTo(7));
-            foreach(var part in new[]{("Rotor",rig.rotor),("Spool",rig.spool),("Crank",rig.crank),("BailWire",rig.bail)})
+            var all=lods.SelectMany(l=>l.renderers).ToArray();Assert.That(all.Length,Is.EqualTo(24));Assert.That(all.Distinct().Count(),Is.EqualTo(24));
+            foreach(var lod in lods)Assert.That(lod.renderers.Length,Is.EqualTo(8));
+            foreach(var part in new[]{("Rotor",rig.rotor),("Spool",rig.spool),("Crank",rig.crank),("BailWire",rig.bail),("LineRoller",rig.roller)})
                 foreach(var renderer in all.Where(r=>r.name.StartsWith(part.Item1+"_LOD")))Assert.That(renderer.transform.IsChildOf(part.Item2),Is.True,renderer.name);
             var tip=rig.transform.InverseTransformPoint(rig.guides[8].position);
             Assert.That(tip.y,Is.EqualTo(2.35f).Within(.001f));

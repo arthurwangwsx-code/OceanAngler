@@ -1,0 +1,387 @@
+{
+  "status": "PARTIAL",
+  "implementation": "IN_PROGRESS",
+  "wholeProduct": "INCOMPLETE",
+  "sourceStatus": "ENGINEERING_CHECKS_PASS",
+  "triangles": {
+    "0": 43412,
+    "1": 19090,
+    "2": 8368
+  },
+  "parts": {
+    "Rod_LOD0": {
+      "faces": 11144,
+      "components": 79,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 1.0334736800898446e-08
+    },
+    "Rod_LOD1": {
+      "faces": 7320,
+      "components": 79,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 4.979254489871072e-09
+    },
+    "Rod_LOD2": {
+      "faces": 3328,
+      "components": 79,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 2.079506184581257e-09
+    },
+    "Housing_LOD0": {
+      "faces": 2178,
+      "components": 14,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 1.0990520752096773e-07
+    },
+    "Housing_LOD1": {
+      "faces": 1288,
+      "components": 14,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 1.0745966452436612e-07
+    },
+    "Housing_LOD2": {
+      "faces": 556,
+      "components": 14,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 9.664759647737738e-08
+    },
+    "Rotor_LOD0": {
+      "faces": 718,
+      "components": 5,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 7.693366548936549e-07
+    },
+    "Rotor_LOD1": {
+      "faces": 415,
+      "components": 5,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 7.579234247453175e-07
+    },
+    "Rotor_LOD2": {
+      "faces": 206,
+      "components": 5,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 7.364625675618243e-07
+    },
+    "Spool_LOD0": {
+      "faces": 4230,
+      "components": 4,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 1.9166990032739077e-06
+    },
+    "Spool_LOD1": {
+      "faces": 2238,
+      "components": 4,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 1.9293282162644024e-06
+    },
+    "Spool_LOD2": {
+      "faces": 1468,
+      "components": 4,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 1.5593949581546576e-06
+    },
+    "Crank_LOD0": {
+      "faces": 612,
+      "components": 4,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 5.698776384662186e-07
+    },
+    "Crank_LOD1": {
+      "faces": 354,
+      "components": 4,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 5.610512217983291e-07
+    },
+    "Crank_LOD2": {
+      "faces": 170,
+      "components": 4,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 5.391419612035646e-07
+    },
+    "Lure_LOD0": {
+      "faces": 1704,
+      "components": 9,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 2.022788017635228e-08
+    },
+    "Lure_LOD1": {
+      "faces": 997,
+      "components": 9,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 1.952741837439223e-08
+    },
+    "Lure_LOD2": {
+      "faces": 466,
+      "components": 9,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 1.2826042582325894e-08
+    },
+    "BailWire_LOD0": {
+      "faces": 540,
+      "components": 5,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 1.2824978806725862e-07
+    },
+    "BailWire_LOD1": {
+      "faces": 344,
+      "components": 5,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 1.1844615920945473e-07
+    },
+    "BailWire_LOD2": {
+      "faces": 168,
+      "components": 5,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 6.783785511407155e-08
+    },
+    "LineRoller_LOD0": {
+      "faces": 448,
+      "components": 1,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 6.882334923289258e-07
+    },
+    "LineRoller_LOD1": {
+      "faces": 280,
+      "components": 1,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 6.813367007000783e-07
+    },
+    "LineRoller_LOD2": {
+      "faces": 168,
+      "components": 1,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 6.614570423310456e-07
+    }
+  },
+  "continuousLine": {
+    "0": {
+      "faces": 3602,
+      "components": 1,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 3.8860448705209575e-06
+    },
+    "1": {
+      "faces": 1805,
+      "components": 1,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 2.3465305706977616e-06
+    },
+    "2": {
+      "faces": 1270,
+      "components": 1,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 1.8337470776633186e-06
+    }
+  },
+  "actualBoreGrooveSamples": 72,
+  "gpu": {
+    "status": "PASS",
+    "scope": "isolated imported rig Metal HDR/manual presentation; not Player UI or device qualification",
+    "graphics": "Metal",
+    "target": "R16G16B16A16_SFloat",
+    "quality": "Medium",
+    "width": 1440,
+    "height": 1000,
+    "samples": 4,
+    "images": 31,
+    "shots": [
+      {
+        "name": "lod0-rest",
+        "changedPixels": 0
+      },
+      {
+        "name": "lod0-winding-a",
+        "changedPixels": 0
+      },
+      {
+        "name": "lod0-winding-b",
+        "changedPixels": 0
+      },
+      {
+        "name": "lod0-open-bail",
+        "changedPixels": 0
+      },
+      {
+        "name": "production-reverse",
+        "changedPixels": 0
+      },
+      {
+        "name": "production-roller",
+        "changedPixels": 0
+      },
+      {
+        "name": "production-whole",
+        "changedPixels": 0
+      },
+      {
+        "name": "lod1-rest",
+        "changedPixels": 0
+      },
+      {
+        "name": "lod1-winding-a",
+        "changedPixels": 0
+      },
+      {
+        "name": "lod1-winding-b",
+        "changedPixels": 0
+      },
+      {
+        "name": "lod1-open-bail",
+        "changedPixels": 0
+      },
+      {
+        "name": "lod2-rest",
+        "changedPixels": 0
+      },
+      {
+        "name": "lod2-winding-a",
+        "changedPixels": 0
+      },
+      {
+        "name": "lod2-winding-b",
+        "changedPixels": 0
+      },
+      {
+        "name": "lod2-open-bail",
+        "changedPixels": 0
+      }
+    ]
+  },
+  "settingsRestoration": {
+    "before": {
+      "game/ProjectSettings/QualitySettings.asset": "abebac834787e63425b147d6e02589440cd5134d66fafbd862fb5d237424c573",
+      "game/ProjectSettings/GraphicsSettings.asset": "012fa87054bf6e9fbb0607568cfa287968396f9d3a27d3376432024e8684340d"
+    },
+    "after": {
+      "game/ProjectSettings/QualitySettings.asset": "abebac834787e63425b147d6e02589440cd5134d66fafbd862fb5d237424c573",
+      "game/ProjectSettings/GraphicsSettings.asset": "012fa87054bf6e9fbb0607568cfa287968396f9d3a27d3376432024e8684340d"
+    },
+    "identical": true
+  },
+  "editor": {
+    "status": "PASS",
+    "passed": 60,
+    "failed": 0,
+    "scope": "Editor automated checks, not physical-device acceptance"
+  },
+  "targetedPlay": {
+    "status": "PASS",
+    "passed": 13,
+    "failed": 0,
+    "scope": "Editor automated checks, not physical-device acceptance"
+  },
+  "native": {
+    "status": "NOT_RUN_FOR_CURRENT_SOURCE"
+  },
+  "artAcceptance": "NOT_ACCEPTED",
+  "distribution": "NO_PERSONAL_DEVICE_OR_TESTFLIGHT_UPDATE"
+}

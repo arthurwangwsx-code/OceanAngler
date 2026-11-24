@@ -279,15 +279,15 @@
       "acquiredAt": "2026-11-23",
       "status": "ART_REVIEW_PENDING",
       "path": "art/source/spinning-rig/SpinningRig.blend",
-      "sha256": "5a4e22f6fedeb7d8883c1c232ca6284bacf02d3ab3154ebf0970c4927e2d680d",
+      "sha256": "fde8cb524f27c2220b8b2b988bd78faf161deab6b76aea8d3e25933af771f915",
       "artifacts": [
         {
           "path": "art/source/spinning-rig/SpinningRig.blend",
-          "sha256": "5a4e22f6fedeb7d8883c1c232ca6284bacf02d3ab3154ebf0970c4927e2d680d"
+          "sha256": "fde8cb524f27c2220b8b2b988bd78faf161deab6b76aea8d3e25933af771f915"
         },
         {
           "path": "game/Assets/OceanAngler/Art/SpinningRig/SpinningRig.fbx",
-          "sha256": "9baae6d5555cdb9c083866c4f077a3b7542b4197f168af2b198efa2f1b829378"
+          "sha256": "516cd4af32ebd85c8febd8947b7e012794316040d1f28fea85190ca2ee600825"
         },
         {
           "path": "game/Assets/OceanAngler/Art/SpinningRig/Rig_Carbon.png",
@@ -332,9 +332,73 @@
         {
           "path": "art/previews/spinning-rig/whole.png",
           "sha256": "a5fb4594606b733610c20fa52e1e2216e6558e3cbf7791d6908ecae5d1961b06"
+        },
+        {
+          "path": "art/previews/rig-detail/gpu-lod0-open-bail.png",
+          "sha256": "1de93db80ad304e5dd09dd868626931fbdedf6c93291e93d19368dcd7f93a221"
+        },
+        {
+          "path": "art/previews/rig-detail/gpu-lod0-rest.png",
+          "sha256": "1b84483e7801e9c3e501c22d4162f2f52ecf9ac745633e08a27f86195400ac9e"
+        },
+        {
+          "path": "art/previews/rig-detail/gpu-lod0-winding-a.png",
+          "sha256": "1b3526e2be210f4324f7bd51e117c11bd4836779a48d275578392453903c1e8f"
+        },
+        {
+          "path": "art/previews/rig-detail/gpu-lod0-winding-b.png",
+          "sha256": "5553c37b6cf15f216f694ce907c3d878cf687b9b464c674e0cce61eb83df59ba"
+        },
+        {
+          "path": "art/previews/rig-detail/gpu-lod2-rest.png",
+          "sha256": "5214f8008c4208373a17552f5277dddccf6eaa5b4ce865d166bcfd1d8eb9386b"
+        },
+        {
+          "path": "art/previews/rig-detail/gpu-production-reverse.png",
+          "sha256": "9836c6ed6a83d6500b86897bb9f27d1cba246c8488419b6d9fc02336ba2c2c25"
+        },
+        {
+          "path": "art/previews/rig-detail/gpu-production-roller.png",
+          "sha256": "d3cf88c4dbcba23a4d1ccfa432aa6ee8d6db8923d827aa0d3b9d2d3dda07ba06"
+        },
+        {
+          "path": "art/previews/rig-detail/gpu-production-whole.png",
+          "sha256": "5f84d5ea28abd2acf52a0c110b55e3624b23b86858979acc33a81bcacb0b1e67"
+        },
+        {
+          "path": "art/previews/rig-detail/studio-guides.png",
+          "sha256": "83870b8566a717a6200040d43c70d254fecfb298f2ac14496fabd92df69b98c4"
+        },
+        {
+          "path": "art/previews/rig-detail/studio-lure.png",
+          "sha256": "692314ebcdfff4cda795697d0a6ca20a0c0f8c1fc3ef58e72dc9341ab7334c7a"
+        },
+        {
+          "path": "art/previews/rig-detail/studio-reel-back.png",
+          "sha256": "9895402cdca4dfe16f6151054dd48a858fbe35581a67ab6b257958ac6b680bd2"
+        },
+        {
+          "path": "art/previews/rig-detail/studio-reel.png",
+          "sha256": "91a30198f99dc3db92cf5f2568b070b1183857f7d6dd934253617521f447f425"
+        },
+        {
+          "path": "art/previews/rig-detail/studio-roller.png",
+          "sha256": "c43bd8830d12a75cadd5268505720bf480dd503049e36ffe366f10fdb2236b93"
+        },
+        {
+          "path": "art/previews/rig-detail/studio-seat.png",
+          "sha256": "9b5cfd32b3a0a015b7759961e73642bc4425f507c16cdf7a5b145cd37d330cbe"
+        },
+        {
+          "path": "art/previews/rig-detail/studio-spool.png",
+          "sha256": "368cd58abc5d086d43824ad7ba5863d54c424065b0572bdaed1a2a75899926a5"
+        },
+        {
+          "path": "art/previews/rig-detail/studio-whole.png",
+          "sha256": "daf003c3f571cdbb9d5d78e3c3951a313c9d754717b19bc40d8c43bcb1ca4f1b"
         }
       ],
-      "note": "Original 2.35 metre spinning rig: rod, nine guides, cork/carbon PBR maps, housing, rotor, spool, crank, bail and barbless minnow. Editable source and three LODs per functional assembly; studio renders are not runtime or device acceptance. Other gear variants remain incomplete."
+      "note": "Original 2.35m spinning rig, eight assemblies and three LODs. Independent hollow line roller, continuous visible winding and articulated bail carrier. Source/GPU checks pass; human/device art qualification open. Earlier spinning-rig previews remain historical. No third-party photographs or meshes."
     },
     {
       "id": "coral-bay-authored-candidate",

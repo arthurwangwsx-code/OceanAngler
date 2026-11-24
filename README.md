@@ -2,6 +2,8 @@
 
 英雄鱼薄鳍已独立制作闭合渐薄壳、原创RGBA/PBR与实体鳍条，仍属待审候选。手机原生实图发现的收鱼结果卡遮挡已修正为底部三行；d99cd12新包双端各15帧、一条正常教学鱼与13份旧QA主文件保留通过，包含收鱼的HUD最高12.228%/4.526%。鱼模拟真、科学/用户/儿童与双真机仍未验收，本轮未更新TestFlight，见[薄鳍及沉浸收鱼原图](reports/hero-fin-tissue.md)。
 
+首套钓组进一步改为独立凹槽滚轮、连续螺旋绕线及翻开支架，源网格与实际旋转出线检查通过，60项Editor/13项定向PlayMode、31张Metal图通过。三LOD为43412/19090/8368，保留43420预算；当前源的原生与美术仍分验，见[细部证据与未通过项](reports/spinning-rig-detail.md)。
+
 [GitHub 开源仓库](https://github.com/arthurwangwsx-code/OceanAngler) · [完整验收总账](reports/acceptance-ledger.md)
 
 儿童与家庭向的 3D 海洋钓鱼探索游戏。真实比例鱼类、漂亮水下世界、易懂钓具、积分成长、图鉴与放流。正式名称待商标检查。

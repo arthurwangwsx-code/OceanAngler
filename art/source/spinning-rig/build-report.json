@@ -3,27 +3,30 @@
   "units": "metres",
   "length": 2.35,
   "lods": {
-    "Rod_LOD0": 24844,
-    "Rod_LOD1": 11178,
-    "Rod_LOD2": 4967,
-    "Housing_LOD0": 4118,
-    "Housing_LOD1": 1853,
-    "Housing_LOD2": 823,
-    "Rotor_LOD0": 1950,
-    "Rotor_LOD1": 876,
-    "Rotor_LOD2": 390,
-    "Spool_LOD0": 7472,
-    "Spool_LOD1": 3362,
-    "Spool_LOD2": 1494,
+    "Rod_LOD0": 22888,
+    "Rod_LOD1": 10128,
+    "Rod_LOD2": 4136,
+    "Housing_LOD0": 4116,
+    "Housing_LOD1": 1756,
+    "Housing_LOD2": 674,
+    "Rotor_LOD0": 1420,
+    "Rotor_LOD1": 608,
+    "Rotor_LOD2": 234,
+    "Spool_LOD0": 8608,
+    "Spool_LOD1": 3696,
+    "Spool_LOD2": 2072,
     "Crank_LOD0": 1156,
-    "Crank_LOD1": 520,
-    "Crank_LOD2": 230,
-    "Lure_LOD0": 3228,
-    "Lure_LOD1": 1452,
-    "Lure_LOD2": 644,
-    "BailWire_LOD0": 652,
-    "BailWire_LOD1": 292,
-    "BailWire_LOD2": 130
+    "Crank_LOD1": 494,
+    "Crank_LOD2": 192,
+    "Lure_LOD0": 3212,
+    "Lure_LOD1": 1372,
+    "Lure_LOD2": 534,
+    "BailWire_LOD0": 1116,
+    "BailWire_LOD1": 476,
+    "BailWire_LOD2": 190,
+    "LineRoller_LOD0": 896,
+    "LineRoller_LOD1": 560,
+    "LineRoller_LOD2": 336
   },
   "bones": [
     "Butt",
@@ -135,8 +138,66 @@
     "SpoolPivot",
     "CrankPivot",
     "BailPivot",
-    "LurePivot"
+    "LurePivot",
+    "LineRollerPivot"
   ],
+  "detail": {
+    "components": 8,
+    "lod0Budget": 43420,
+    "winding": "one visible continuous25-turn layer, not dynamic line volume",
+    "roller": "hollow grooved shell, independent pivot and bearing spindle",
+    "optics": "stock original materials; human/device acceptance open",
+    "solidReductionGuards": [
+      {
+        "part": "GuideBinding1",
+        "requested": 0.43,
+        "retained": 0.645,
+        "retries": 1
+      },
+      {
+        "part": "GuideBinding1.001",
+        "requested": 0.43,
+        "retained": 0.645,
+        "retries": 1
+      },
+      {
+        "part": "GuideBinding2",
+        "requested": 0.43,
+        "retained": 0.645,
+        "retries": 1
+      },
+      {
+        "part": "GuideBinding2.001",
+        "requested": 0.43,
+        "retained": 0.645,
+        "retries": 1
+      },
+      {
+        "part": "GuideBinding3",
+        "requested": 0.17,
+        "retained": 0.255,
+        "retries": 1
+      },
+      {
+        "part": "GuideBinding3.001",
+        "requested": 0.17,
+        "retained": 0.255,
+        "retries": 1
+      },
+      {
+        "part": "GuideBinding6",
+        "requested": 0.17,
+        "retained": 0.255,
+        "retries": 1
+      },
+      {
+        "part": "ContinuousWoundLine",
+        "requested": 0.17,
+        "retained": 0.255,
+        "retries": 1
+      }
+    ]
+  },
   "artAcceptance": "NOT_ACCEPTED",
   "source": "tools/art_spinning_rig.py"
 }

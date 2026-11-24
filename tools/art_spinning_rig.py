@@ -1,7 +1,7 @@
 """原创纺车轮钓组候选：外壳、导环、绑线、线杯、转子、摇柄和无倒刺拟饵。
 Blender几何与程序贴图；不包含第三方模型、商标或照片。
 """
-import bpy,math,json,hashlib,sys
+import bpy,bmesh,math,json,hashlib,sys
 from pathlib import Path
 from mathutils import Vector,Matrix
 import numpy as np
@@ -10,7 +10,7 @@ for p in [OUT,GAME,PREVIEW]:p.mkdir(parents=True,exist_ok=True)
 bpy.ops.object.select_all(action='SELECT');bpy.ops.object.delete(use_global=False)
 bpy.context.preferences.filepaths.save_version=0;scene=bpy.context.scene;scene.unit_settings.system='METRIC';scene.render.engine='CYCLES';scene.cycles.samples=32;scene.cycles.use_denoising=True
 scene.render.resolution_x=1440;scene.render.resolution_y=1000;scene.render.resolution_percentage=100;scene.view_settings.view_transform='AgX';scene.world.color=(.17,.17,.17)
-groups={k:[] for k in ['Rod','Housing','Rotor','Spool','Crank','Lure']}
+groups={k:[] for k in ['Rod','Housing','Rotor','Spool','Crank','Lure','LineRoller']}
 def empty(name,pos=(0,0,0),parent=None):
  o=bpy.data.objects.new(name,None);scene.collection.objects.link(o);o.location=pos
  if parent:o.parent=parent
@@ -38,7 +38,12 @@ def material(name,color,metallic=0,rough=.35,texture=None,normal=None):
  if normal:
   t=m.node_tree.nodes.new('ShaderNodeTexImage');t.image=normal;n=m.node_tree.nodes.new('ShaderNodeNormalMap');n.inputs['Strength'].default_value=.5;m.node_tree.links.new(t.outputs['Color'],n.inputs['Color']);m.node_tree.links.new(n.outputs['Normal'],p.inputs['Normal'])
  return m
-mats={'Carbon':material('Rig_Carbon',(.03,.05,.06),.15,.3,carbon,carbonnormal),'Cork':material('Rig_Cork',(.48,.32,.16),0,.65,corkmap,corknormal),'Metal':material('Rig_Metal',(.56,.64,.67),.82,.25),'Black':material('Rig_Black',(.025,.033,.037),.15,.42),'Accent':material('Rig_Accent',(.13,.42,.41),.65,.26),'Line':material('Rig_Line',(.59,.68,.43),0,.55),'Lure':material('Rig_Lure',(.23,.63,.65),.25,.23)}
+mats={'Carbon':material('Rig_Carbon',(.03,.05,.06),.15,.3,carbon,carbonnormal),'Cork':material('Rig_Cork',(.48,.32,.16),0,.65,corkmap,corknormal),'Metal':material('Rig_Metal',(.56,.64,.67),.82,.36),'Black':material('Rig_Black',(.025,.033,.037),.15,.42),'Accent':material('Rig_Accent',(.13,.42,.41),.65,.33),'Line':material('Rig_Line',(.59,.68,.43),0,.55),'Lure':material('Rig_Lure',(.23,.63,.65),.25,.23)}
+def finish_normals(data,soft_edges=False):
+ bm=bmesh.new();bm.from_mesh(data);bmesh.ops.recalc_face_normals(bm,faces=list(bm.faces))
+ for edge in bm.edges:
+  if edge.is_manifold:edge.smooth=soft_edges or edge.calc_face_angle()<math.radians(55)
+ bm.to_mesh(data);bm.free();data.update()
 def rod_weights(z):
  if z<.58:return [('Butt',1)]
  f=max(0,min(9,(z-.58)/1.77*10));i=min(8,int(f));t=f-i;return [('RodBone'+str(i),1-t),('RodBone'+str(i+1),t)]
@@ -52,29 +57,44 @@ def mesh(name,vs,fs,mat,group,uv=None,bone=None):
   for i,p in enumerate(vs):
    for b,w in ([(bone,1)] if bone else rod_weights(p[2])):
     vg=obj.vertex_groups.get(b) or obj.vertex_groups.new(name=b);vg.add([i],w,'REPLACE')
- groups[group].append(obj);return obj
+ finish_normals(data);groups[group].append(obj);return obj
 def lathe(name,profile,center,mat,group,bone=None,sides=32):
  vs=[];uv=[];fs=[];lo=profile[0][0];hi=profile[-1][0]
  for z,r in profile:
-  for j in range(sides+1):
+  for j in range(sides):
    a=j/sides*math.tau;vs.append((center[0]+r*math.cos(a),center[1]+r*math.sin(a),z));uv.append((j/sides,(z-lo)/max(.001,hi-lo)))
  for i in range(len(profile)-1):
-  for j in range(sides):a=i*(sides+1)+j;fs.append((a,a+1,a+sides+2,a+sides+1))
- fs.append(tuple(range(sides,-1,-1)));fs.append(tuple((len(profile)-1)*(sides+1)+j for j in range(sides+1)))
- return mesh(name,vs,fs,mat,group,uv,bone)
-def tube(name,points,radius,mat,group,bone=None,sides=6):
+  for j in range(sides):a=i*sides+j;b=i*sides+(j+1)%sides;fs.append((a,b,b+sides,a+sides))
+ fs.append(tuple(range(sides-1,-1,-1)));fs.append(tuple((len(profile)-1)*sides+j for j in range(sides)))
+ obj=mesh(name,vs,fs,mat,group,uv,bone)
+ for p in obj.data.polygons:
+  if abs(p.normal.z)>.9999:p.use_smooth=False
+  if p.index<(len(profile)-1)*sides and p.index%sides==sides-1:
+   for li in p.loop_indices:
+    if obj.data.loops[li].vertex_index%sides==0:obj.data.uv_layers.active.data[li].uv.x=1
+ return obj
+def tube(name,points,radius,mat,group,bone=None,sides=6,closed=False):
  vs=[];fs=[];uv=[]
  for i,pt in enumerate(points):
-  p=Vector(pt);d=Vector(points[min(len(points)-1,i+1)])-Vector(points[max(0,i-1)]);d.normalize();a=d.cross(Vector((0,0,1)))
+  p=Vector(pt);d=Vector(points[(i+1)%len(points) if closed else min(len(points)-1,i+1)])-Vector(points[(i-1)%len(points) if closed else max(0,i-1)]);d.normalize();a=d.cross(Vector((0,0,1)))
   if a.length<.01:a=d.cross(Vector((0,1,0)))
   a.normalize();b=d.cross(a).normalized()
-  for j in range(sides):vs.append(tuple(p+(a*math.cos(j/sides*math.tau)+b*math.sin(j/sides*math.tau))*radius));uv.append((j/sides,i/max(1,len(points)-1)))
- for i in range(len(points)-1):
-  for j in range(sides):a=i*sides+j;b=i*sides+(j+1)%sides;fs.append((a,b,b+sides,a+sides))
- fs.append(tuple(range(sides-1,-1,-1)));fs.append(tuple((len(points)-1)*sides+j for j in range(sides)))
- return mesh(name,vs,fs,mat,group,uv,bone)
+  for j in range(sides):vs.append(tuple(p+(a*math.cos(j/sides*math.tau)+b*math.sin(j/sides*math.tau))*radius));uv.append((j/sides,i/(len(points) if closed else max(1,len(points)-1))))
+ for i in range(len(points) if closed else len(points)-1):
+  for j in range(sides):a=i*sides+j;b=i*sides+(j+1)%sides;nextrow=(i+1)%len(points)*sides;fs.append((a,b,nextrow+(j+1)%sides,nextrow+j))
+ if not closed:fs+=[tuple(range(sides-1,-1,-1)),tuple((len(points)-1)*sides+j for j in range(sides))]
+ obj=mesh(name,vs,fs,mat,group,uv,bone)
+ if not closed:
+  for p in list(obj.data.polygons)[-2:]:p.use_smooth=False
+ for p in list(obj.data.polygons)[:(len(points) if closed else len(points)-1)*sides]:
+  for li in p.loop_indices:
+   index=obj.data.loops[li].vertex_index;entry=obj.data.uv_layers.active.data[li]
+   if p.index%sides==sides-1 and index%sides==0:entry.uv.x=1
+   if closed and p.index//sides==len(points)-1 and index<sides:entry.uv.y=1
+ obj['SmoothTubeSurface']=True;finish_normals(obj.data,True)
+ return obj
 def ring(name,c,r,t,mat,group,bone=None,n=32):
- return tube(name,[(c[0]+r*math.cos(i/n*math.tau),c[1]+r*math.sin(i/n*math.tau),c[2]) for i in range(n+1)],t,mat,group,bone)
+ return tube(name,[(c[0]+r*math.cos(i/n*math.tau),c[1]+r*math.sin(i/n*math.tau),c[2]) for i in range(n)],t,mat,group,bone,closed=True)
 def box(name,center,scale,mat,group,bevel=.003):
  bpy.ops.mesh.primitive_cube_add(size=1,location=center);o=bpy.context.object;o.name=name;o.scale=scale;bpy.ops.object.transform_apply(location=False,rotation=False,scale=True)
  mod=o.modifiers.new('EdgeMachining','BEVEL');mod.width=bevel;mod.segments=3;bpy.ops.object.modifier_apply(modifier=mod.name)
@@ -82,7 +102,8 @@ def box(name,center,scale,mat,group,bevel=.003):
  o.location=(0,0,0);o.data.materials.append(mats[mat]);groups[group].append(o)
  # Projection UVs are sufficient for untextured machined metal parts.
  if not o.data.uv_layers:o.data.uv_layers.new(name='UVMap')
- for p in o.data.polygons:p.use_smooth=True
+ for p in o.data.polygons:p.use_smooth=max(abs(v) for v in p.normal)<.9999
+ finish_normals(o.data)
  return o
 def ellipsoid(name,center,scale,mat,group):
  bpy.ops.mesh.primitive_uv_sphere_add(segments=24,ring_count=12,location=center);o=bpy.context.object;o.name=name;o.scale=scale;bpy.ops.object.transform_apply(location=False,rotation=False,scale=True)
@@ -90,6 +111,22 @@ def ellipsoid(name,center,scale,mat,group):
  o.location=(0,0,0);o.data.materials.append(mats[mat]);groups[group].append(o)
  for p in o.data.polygons:p.use_smooth=True
  return o
+
+roller_center=(.043,-.145,.565)
+roller_profile=[(-.0045,.004),(-.0042,.006),(-.0035,.0062),(-.0027,.0058),(-.0015,.0047),(-.001,.0045),(.001,.0045),(.0015,.0047),(.0027,.0058),(.0035,.0062),(.0042,.006),(.0045,.004),(.0045,.0019),(-.0045,.0019)]
+def axle_shell(name,profile,center,group,sides=32,indicator=False):
+ vs=[];fs=[];uv=[]
+ for i,(axial,radius) in enumerate(profile):
+  for j in range(sides):
+   a=j/sides*math.tau;vs.append((center[0]+axial,center[1]+radius*math.cos(a),center[2]+radius*math.sin(a)));uv.append((j/sides,i/len(profile)))
+ for i in range(len(profile)):
+  for j in range(sides):fs.append((i*sides+j,i*sides+(j+1)%sides,((i+1)%len(profile))*sides+(j+1)%sides,((i+1)%len(profile))*sides+j))
+ obj=mesh(name,vs,fs,'Metal',group,uv)
+ if indicator:obj.data.materials.append(mats['Accent'])
+ for p in obj.data.polygons:
+  if abs(p.normal.x)>.9999:p.use_smooth=False
+  if indicator and p.index//sides==11 and p.index%sides<max(1,sides//12):p.material_index=1
+ return obj
 
 # Actual grip, seat, collar threads and tapered blank; measurements in metres.
 lathe('ContinuousGripCore',[(.016,.0105),(.58,.0095),(.605,.0082)],(0,0),'Carbon','Rod','Butt')
@@ -101,8 +138,8 @@ lathe('ReelSeat',[(.28,.014),(.30,.015),(.48,.015),(.50,.013)],(0,0),'Carbon','R
 for z in [.30,.46]:lathe('SeatCollar',[(z,.015),(z+.003,.018),(z+.018,.018),(z+.021,.015)],(0,0),'Metal','Rod','Butt')
 for i in range(15):ring('SeatThread',(0,0,.472+i*.0017),.0145,.00065,'Black','Rod','Butt',24)
 lathe('ForeCork',[(.51,.012),(.52,.016),(.57,.015),(.59,.010)],(0,0),'Cork','Rod','Butt')
-profile=[(.58+i/72*1.77,.0085*(1-i/72)**1.1+.0012) for i in range(73)]
-lathe('CarbonBlank',profile,(0,0),'Carbon','Rod',sides=20)
+profile=[(.58+i/38*1.77,.0085*(1-i/38)**1.1+.0012) for i in range(39)]
+lathe('CarbonBlank',profile,(0,0),'Carbon','Rod',sides=16)
 
 guide_specs=[(.72,.053,.028),(1.03,.038,.022),(1.31,.027,.016),(1.55,.020,.011),(1.76,.015,.0085),(1.94,.012,.0065),(2.10,.009,.005),(2.23,.007,.004),(2.35,.005,.003)]
 guide_bones=[]
@@ -131,24 +168,30 @@ lathe('Pinion',[(.417,.018),(.470,.018)],(0,-.145),'Metal','Housing',sides=24)
 for i in range(4):box('CaseVent'+str(i),(.004,-.169,.35+i*.013),(.027,.0015,.003),'Black','Housing',.0005)
 
 rotor=empty('RotorPivot',(0,-.145,.47),source);spool=empty('SpoolPivot',(0,-.145,.52),source);crank=empty('CrankPivot',(-.045,-.142,.38),source)
-bail=empty('BailPivot',(0,0,.035),rotor);bail_parts=[]
+bail=empty('BailPivot',(0,0,.081),rotor);bail_parts=[]
 lathe('RotorCup',[(.448,.020),(.456,.036),(.475,.038),(.480,.034)],(0,-.145),'Carbon','Rotor')
 for s in [-1,1]:
- tube('RotorArm',[(s*.031,-.145,.469),(s*.041,-.145,.495),(s*.042,-.145,.511)],.004,'Metal','Rotor',sides=10)
- ellipsoid('BailHinge',(s*.042,-.145,.509),(.006,.008,.008),'Black','Rotor')
-wire=[(.042*math.cos(t),-.145+.035*math.sin(t),.505+.057*math.sin(t)) for t in np.linspace(0,math.pi,41)]
+ tube('RotorArm',[(s*.031,-.145,.469),(s*.041,-.145,.533),(s*.042,-.145,.551)],.004,'Metal','Rotor',sides=10)
+ ellipsoid('BailHinge',(s*.042,-.145,.551),(.007,.006,.0045) if s>0 else (.006,.008,.008),'Black','Rotor')
+wire=[(.042*math.cos(t),-.145+.025*math.sin(t),.551+.040*math.sin(t)) for t in np.linspace(0,math.pi,41)]
 bail_mesh=tube('BailWire',wire,.0016,'Metal','Rotor',sides=8);groups['Rotor'].remove(bail_mesh);bail_parts.append(bail_mesh)
-ellipsoid('LineRoller',( .040,-.144,.515),(.007,.007,.006),'Accent','Rotor')
+bpy.context.view_layer.update();roller=empty('LineRollerPivot',roller_center,bail);roller.matrix_world=Matrix.Translation(roller_center)
+axle_shell('GroovedLineRoller',roller_profile,roller_center,'LineRoller',32,True)
+pickup=tube('PickupFork',[(.042,-.145,.551),(.052,-.145,.565)],.003,'Metal','Rotor',sides=10);groups['Rotor'].remove(pickup);bail_parts.append(pickup)
+pickup=tube('RollerSpindle',[(.035,-.145,.565),(.054,-.145,.565)],.0015,'Metal','Rotor',sides=12);groups['Rotor'].remove(pickup);bail_parts.append(pickup)
+for side in [-1,1]:
+ x=.043+side*.006
+ pickup=axle_shell('RollerBearingCheek',[(-.0005,.0068),(.0005,.0068),(.0005,.0016),(-.0005,.0016)],(x,-.145,.565),'Rotor',24);groups['Rotor'].remove(pickup);bail_parts.append(pickup)
 lathe('SpoolCore',[(.497,.020),(.501,.031),(.538,.031),(.543,.034),(.548,.035),(.551,.033)],(0,-.145),'Metal','Spool',sides=48)
-for i in range(25):
- points=[(.0315*math.cos(a),-.145+.0315*math.sin(a),.504+i*.00125) for a in np.linspace(0,math.tau,33)]
- tube('WoundLine',points,.00055,'Line','Spool',sides=4)
+points=[(.03185*math.cos(a),-.145+.03185*math.sin(a),.504+a/math.tau*.00125) for a in np.linspace(0,math.tau*25,25*24+1)]
+tube('ContinuousWoundLine',points,.00055,'Line','Spool',sides=6)
 lathe('DragKnob',[(.549,.023),(.555,.024),(.560,.021),(.563,.019)],(0,-.145),'Black','Spool',sides=32)
 vs=[];fs=[]
-for z in [.552,.558]:
- for i in range(73):
-  a=i/72*math.tau;r=.023+.0015*(.5+.5*math.cos(a*18));vs.append((r*math.cos(a),-.145+r*math.sin(a),z))
-for i in range(72):fs.append((i,i+1,i+74,i+73))
+for z,outer in [(.552,True),(.558,True),(.558,False),(.552,False)]:
+ for i in range(72):
+  a=i/72*math.tau;r=.023+.0015*(.5+.5*math.cos(a*18)) if outer else .0215;vs.append((r*math.cos(a),-.145+r*math.sin(a),z))
+for ring_index in range(4):
+ for i in range(72):fs.append((ring_index*72+i,ring_index*72+(i+1)%72,(ring_index+1)%4*72+(i+1)%72,(ring_index+1)%4*72+i))
 mesh('DragKnurl',vs,fs,'Accent','Spool')
 tube('CrankShaft',[(-.045,-.142,.38),(-.074,-.142,.38)],.006,'Metal','Crank',sides=12)
 tube('CrankArm',[(-.074,-.142,.38),(-.085,-.167,.405),(-.094,-.182,.43)],.004,'Metal','Crank',sides=10)
@@ -174,24 +217,39 @@ def join_group(objects,name,pivot):
  bpy.context.view_layer.objects.active=objects[0];bpy.ops.object.join();o=bpy.context.object;o.name=name
  o.parent=pivot;o.matrix_parent_inverse=pivot.matrix_world.inverted()
  return o
-rod=join_group(groups['Rod'],'Rod_LOD0',source)
-housing=join_group(groups['Housing'],'Housing_LOD0',source)
-rotor_mesh=join_group(groups['Rotor'],'Rotor_LOD0',rotor)
-spool_mesh=join_group(groups['Spool'],'Spool_LOD0',spool)
-crank_mesh=join_group(groups['Crank'],'Crank_LOD0',crank)
-lure_mesh=join_group(groups['Lure'],'Lure_LOD0',lure)
-bail_obj=join_group(bail_parts,'BailWire_LOD0',bail)
-all_lods=[];lod_report={}
-for base in [rod,housing,rotor_mesh,spool_mesh,crank_mesh,lure_mesh,bail_obj]:
- lods=[base]
- for i,ratio in [(1,.45),(2,.20)]:
-  o=base.copy();o.data=base.data.copy();scene.collection.objects.link(o);o.name=base.name.replace('LOD0','LOD'+str(i));bpy.context.view_layer.objects.active=o;m=o.modifiers.new('CandidateReduction','DECIMATE');m.ratio=ratio;bpy.ops.object.modifier_apply(modifier=m.name)
-  for layer in o.data.uv_layers:
+def solid_volume(data):
+ bm=bmesh.new();bm.from_mesh(data);bm.verts.ensure_lookup_table();origin=bm.verts[0].co.copy() if bm.verts else Vector()
+ for v in bm.verts:v.co-=origin
+ valid=all(e.is_manifold and e.is_contiguous for e in bm.edges) and all(f.calc_area()>1e-14 for f in bm.faces)
+ volume=bm.calc_volume(signed=True);genus=(2-(len(bm.verts)-len(bm.edges)+len(bm.faces)))//2;bm.free();return valid,volume,genus
+reduction_guards=[]
+def reduce_piece(original,ratio):
+ original.data.calc_loop_triangles();count=len(original.data.loop_triangles);_,volume,genus=solid_volume(original.data);minimum=24 if genus>0 else 8
+ trial=min(1,max(ratio,(minimum+.01)/count));attempts=0
+ while True:
+  obj=original.copy();obj.data=original.data.copy();scene.collection.objects.link(obj)
+  if trial<.9999:
+   bpy.context.view_layer.objects.active=obj;m=obj.modifiers.new('SolidDistanceReduction','DECIMATE');m.ratio=trial;bpy.ops.object.modifier_apply(modifier=m.name);finish_normals(obj.data,bool(original.get('SmoothTubeSurface',False)))
+  valid,result,_=solid_volume(obj.data)
+  if valid and result>max(1e-15,volume*.1):break
+  bpy.data.objects.remove(obj,do_unlink=True);attempts+=1
+  if trial>=1:raise RuntimeError('Source fitting is not a positive solid: '+original.name)
+  trial=min(1,trial*1.5)
+ if attempts:reduction_guards.append(dict(part=original.name,requested=ratio,retained=trial,retries=attempts))
+ return obj
+all_lods=[];lod_report={};assembled={}
+assemblies=[('Rod',groups['Rod'],source),('Housing',groups['Housing'],source),('Rotor',groups['Rotor'],rotor),('Spool',groups['Spool'],spool),('Crank',groups['Crank'],crank),('Lure',groups['Lure'],lure),('BailWire',bail_parts,bail),('LineRoller',groups['LineRoller'],roller)]
+for stem,source_objects,pivot in assemblies:
+ objects=list(source_objects)
+ pieces=[objects]
+ for level,ratio in [(1,.43),(2,.17)]:
+  pieces.append([axle_shell('GroovedRollerDistance'+str(level),roller_profile,roller_center,'LineRoller',20 if level==1 else 12,True)] if stem=='LineRoller' else [reduce_piece(o,ratio) for o in objects])
+ for level,current in enumerate(pieces):
+  obj=join_group(current,stem+'_LOD'+str(level),pivot);assembled[stem,level]=obj
+  for layer in obj.data.uv_layers:
    for loop in layer.data:loop.uv=(max(0,min(1,loop.uv.x)),max(0,min(1,loop.uv.y)))
-  lods.append(o)
- for i,o in enumerate(lods):
-  o.hide_render=i>0;o.hide_set(i>0);o.data.calc_loop_triangles();lod_report[o.name]=len(o.data.loop_triangles)
- all_lods+=lods
+  obj.hide_render=level>0;obj.hide_set(level>0);obj.data.calc_loop_triangles();lod_report[obj.name]=len(obj.data.loop_triangles);all_lods.append(obj)
+rod=assembled['Rod',0]
 
 arm=bpy.data.armatures.new('RodSkeleton');rig=bpy.data.objects.new('RodRig',arm);scene.collection.objects.link(rig);rig.parent=source;bpy.context.view_layer.objects.active=rig;bpy.ops.object.select_all(action='DESELECT');rig.select_set(True);bpy.ops.object.mode_set(mode='EDIT')
 b=arm.edit_bones.new('Butt');b.head=(0,0,0);b.tail=(0,0,.58)
@@ -204,9 +262,11 @@ for o in all_lods:
   m=o.modifiers.new('RodBend','ARMATURE');m.object=rig;o.parent=rig
 for i,(z,offset,r) in enumerate(guide_specs):
  marker=empty('Guide'+str(i),(0,-offset,z));marker.parent=rig;marker.parent_type='BONE';marker.parent_bone=guide_bones[i];marker.matrix_world=Matrix.Translation((0,-offset,z))
-for name,pos,parent in [('ButtAnchor',(0,0,0),source),('TipAnchor',(0,0,2.35),source),('FrontAnchor',(0,-.1,.5),source),('RotorAxis',(0,-.145,.52),rotor),('CrankAxis',(-.065,-.142,.38),crank),('BailAxis',(.02,-.145,.505),bail),('LineExit',(.040,-.144,.515),rotor),('LureNose',(0,-.13,2.162),lure)]:
+direction=Vector((0,guide_specs[0][1]*-1-roller_center[1],guide_specs[0][0]-roller_center[2]));distance=direction.length;direction.normalize();r=.0045+.00035
+normal=direction*(r/distance)+Vector((1,0,0)).cross(direction)*math.sqrt(1-(r/distance)**2);line_exit=Vector(roller_center)+normal*r
+for name,pos,parent in [('ButtAnchor',(0,0,0),source),('TipAnchor',(0,0,2.35),source),('FrontAnchor',(0,-.1,.5),source),('RotorAxis',(0,-.145,.52),rotor),('CrankAxis',(-.065,-.142,.38),crank),('BailAxis',(.02,-.145,.551),bail),('LineExit',line_exit,bail),('LineRollerAxis',(.053,-.145,.565),roller),('RollerSurface',(.043,-.1495,.565),roller),('SpoolLineRadius',(.03185,-.145,.52),spool),('SpoolLipCenter',(0,-.145,.548),spool),('SpoolLipSurface',(.035,-.145,.548),spool),('LureNose',(0,-.13,2.162),lure)]:
  o=empty(name);o.parent=parent;o.matrix_world=Matrix.Translation(pos)
-curve=bpy.data.curves.new('StudioLine','CURVE');curve.dimensions='3D';curve.bevel_depth=.00035;curve.bevel_resolution=2;curve.use_fill_caps=True;spline=curve.splines.new('POLY');points=[(.040,-.144,.515)]+[(0,-s[1],s[0]) for s in guide_specs]+[(0,-.13,2.162)];spline.points.add(len(points)-1)
+curve=bpy.data.curves.new('StudioLine','CURVE');curve.dimensions='3D';curve.bevel_depth=.00035;curve.bevel_resolution=2;curve.use_fill_caps=True;spline=curve.splines.new('POLY');points=[line_exit]+[(0,-s[1],s[0]) for s in guide_specs]+[(0,-.13,2.162)];spline.points.add(len(points)-1)
 for p,co in zip(spline.points,points):p.co=(*co,1)
 studio=bpy.data.objects.new('StudioLine',curve);scene.collection.objects.link(studio);studio.parent=source;curve.materials.append(mats['Line'])
 
@@ -224,6 +284,6 @@ floor=material('ReviewFloor',(.025,.045,.052),0,.65);bpy.ops.mesh.primitive_plan
 d=bpy.data.cameras.new('ReviewCamera');cam=bpy.data.objects.new('ReviewCamera',d);scene.collection.objects.link(cam);scene.camera=cam;d.type='ORTHO';d.ortho_scale=3.8;cam.location=(-2,-4,1.6);cam.rotation_euler=(Vector((0,0,1.16))-cam.location).to_track_quat('-Z','Y').to_euler();scene.render.filepath='//previews/whole-rig.png'
 for im in [carbon,corkmap,carbonnormal,corknormal]:im.filepath=bpy.path.relpath(im.filepath,start=str(OUT))
 bpy.ops.wm.save_as_mainfile(filepath=str(OUT/'SpinningRig.blend'))
-report=dict(status='CANDIDATE',units='metres',length=2.35,lods=lod_report,bones=[b.name for b in arm.bones],guides=[dict(name='Guide'+str(i),bone=guide_bones[i],position=[0,-s[1],s[0]],radius=s[2]) for i,s in enumerate(guide_specs)],pivots=['RotorPivot','SpoolPivot','CrankPivot','BailPivot','LurePivot'],artAcceptance='NOT_ACCEPTED',source='tools/art_spinning_rig.py')
+report=dict(status='CANDIDATE',units='metres',length=2.35,lods=lod_report,bones=[b.name for b in arm.bones],guides=[dict(name='Guide'+str(i),bone=guide_bones[i],position=[0,-s[1],s[0]],radius=s[2]) for i,s in enumerate(guide_specs)],pivots=['RotorPivot','SpoolPivot','CrankPivot','BailPivot','LurePivot','LineRollerPivot'],detail=dict(components=8,lod0Budget=43420,winding='one visible continuous25-turn layer, not dynamic line volume',roller='hollow grooved shell, independent pivot and bearing spindle',optics='stock original materials; human/device acceptance open',solidReductionGuards=reduction_guards),artAcceptance='NOT_ACCEPTED',source='tools/art_spinning_rig.py')
 (OUT/'build-report.json').write_text(json.dumps(report,indent=2)+'\n')
 print('SPINNING_RIG_BUILD_OK '+json.dumps({str(i):sum(n for k,n in lod_report.items() if k.endswith('LOD'+str(i))) for i in range(3)}))
