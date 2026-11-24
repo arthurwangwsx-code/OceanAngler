@@ -50,11 +50,11 @@
       "acquiredAt": "2026-11-23",
       "status": "ART_REVIEW_PENDING",
       "path": "art/source/bluefin/Bluefin.blend",
-      "sha256": "2778aaf6cf711c7b8631c7068205908fffb3873905cd9cf9d68330f426615085",
+      "sha256": "fe9945e630bd9c9764d4c436a5e2911eaea851333462057add1461d614908bc5",
       "artifacts": [
         {
           "path": "art/source/bluefin/Bluefin.blend",
-          "sha256": "2778aaf6cf711c7b8631c7068205908fffb3873905cd9cf9d68330f426615085"
+          "sha256": "fe9945e630bd9c9764d4c436a5e2911eaea851333462057add1461d614908bc5"
         },
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin_BaseColor.png",
@@ -78,7 +78,7 @@
         },
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin.fbx",
-          "sha256": "8048670eab4421ab324a7df9a15d394aeb6418e8bc727ed39d66fe702102f7dc"
+          "sha256": "582891ce6aee35690b5d07f3b829b44c4cb368276f79a4f5e6a93adb87f173e0"
         },
         {
           "path": "art/previews/bluefin/bite.png",
@@ -147,11 +147,11 @@
         },
         {
           "path": "game/Assets/OceanAngler/Resources/Models/Bluefin.prefab",
-          "sha256": "b5e1741d389e1c21ba6975e00e60f16a7f23c505992d3116000197ce10624f4b"
+          "sha256": "9a6ddc2d9943fd45aaf6d235510183cfb42138cfcb95690ea7de3339c233b935"
         },
         {
           "path": "art/source/bluefin/build-report.json",
-          "sha256": "ec31a76b35372af412786fa42d0311cd5bdd5445dd0dcd6d50d15e48c95c1ce7"
+          "sha256": "101f927d9c71151da0c52d49639a3c951c782690b4bf9738ac3b4b4baae020aa"
         },
         {
           "path": "art/previews/bluefin-fin-tissue/first-native-phone-exit.png",
@@ -266,9 +266,28 @@
       ],
       "note": "Original bluefin trevally mesh, UV, PBR maps, 12-bone rig, seven animation clips and three LODs. Scientific/visual/user/device acceptance remains open. No third-party photographs or models included.",
       "modifiedAt": "2026-11-25",
-      "modifications": "Fin membranes rebuilt with tapered closed shells in all three LODs; original RGBA, normal, roughness and packed maps; separate opaque rays. Material slots6->7 explicitly; triangles24664/9864/3699 within unchanged25000 LOD0 budget,12bones/7motions retained. Actual source checks and isolated HDR Metal controls pass; source/Player visual, scientific, user and device gates remain separate. Pectoral trailing-edge curve candidate B after visibly rejecting A; existing maps unchanged, LOD0 non-pectoral geometry/UV/weights/material roles normalized-identical. Art/science/user/Player qualification pending. Distance fin meshes retain16 complete opaque outline-ray components, closed tapered membrane and original PBR. Entire nearLOD0 geometry/UV/weights unchanged at six-decimal canonical identity; all original PNG bytes unchanged. LOD budgets24664/9864/3698 unchanged. Screen-size thresholds revised;58 Metal diagnostic frames and auto-vs-forced selected LOD pixel identity checked. Art/science/user/native followup pending. Neutral silver/grey-brass body albedo; actual saved allLOD geometry,UV,weights and material roles retained; FBX and eight other PNG bytes unchanged. maps-only entry preserves existing authored/reduced meshes. Local128 reflection probe remains an unadopted Editor diagnostic; no production reflection asset. Source189 checks,linked image pixels and three-view stable controls qualified; full art/science/user/native followup pending.",
+      "modifications": "Fin membranes rebuilt with tapered closed shells in all three LODs; original RGBA, normal, roughness and packed maps; separate opaque rays. Material slots6->7 explicitly; triangles24664/9864/3699 within unchanged25000 LOD0 budget,12bones/7motions retained. Actual source checks and isolated HDR Metal controls pass; source/Player visual, scientific, user and device gates remain separate. Pectoral trailing-edge curve candidate B after visibly rejecting A; existing maps unchanged, LOD0 non-pectoral geometry/UV/weights/material roles normalized-identical. Art/science/user/Player qualification pending. Distance fin meshes retain16 complete opaque outline-ray components, closed tapered membrane and original PBR. Entire nearLOD0 geometry/UV/weights unchanged at six-decimal canonical identity; all original PNG bytes unchanged. LOD budgets24664/9864/3698 unchanged. Screen-size thresholds revised;58 Metal diagnostic frames and auto-vs-forced selected LOD pixel identity checked. Art/science/user/native followup pending. Neutral silver/grey-brass body albedo; actual saved allLOD geometry,UV,weights and material roles retained; FBX and eight other PNG bytes unchanged. maps-only entry preserves existing authored/reduced meshes. Local128 reflection probe remains an unadopted Editor diagnostic; no production reflection asset. Source189 checks,linked image pixels and three-view stable controls qualified; full art/science/user/native followup pending. Periodic motion update: saved source geometry/UV/weights/rest rig and nine PNGs independently retained; source actions and re-exported FBX updated. Native controller uses seven own editable derived clips, six periodic endpoint tangents and non-loop release. Source and Editor scoped checks pass; Player and full natural/scientific/user/physical art qualification separate.",
       "nativeFollowup": "reports/bluefin-distance-fins.json; d50f1c3 scoped dual15-frame flow; selected visuals reviewed; full art remains partial",
-      "neutralAlbedoNativeFollowup": "reports/bluefin-neutral-albedo.json; source-specific scoped dual15-frame flow and selected originals; full art remains partial"
+      "neutralAlbedoNativeFollowup": "reports/bluefin-neutral-albedo.json; source-specific scoped dual15-frame flow and selected originals; full art remains partial",
+      "periodicMotionFollowup": "reports/bluefin-periodic-motion.json; source/Editor scoped only, native and full art acceptance separate",
+      "periodicMotionBeforeArtifacts": [
+        {
+          "path": "art/source/bluefin/Bluefin.blend",
+          "sha256": "2778aaf6cf711c7b8631c7068205908fffb3873905cd9cf9d68330f426615085"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin.fbx",
+          "sha256": "8048670eab4421ab324a7df9a15d394aeb6418e8bc727ed39d66fe702102f7dc"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Resources/Models/Bluefin.prefab",
+          "sha256": "b5e1741d389e1c21ba6975e00e60f16a7f23c505992d3116000197ce10624f4b"
+        },
+        {
+          "path": "art/source/bluefin/build-report.json",
+          "sha256": "ec31a76b35372af412786fa42d0311cd5bdd5445dd0dcd6d50d15e48c95c1ce7"
+        }
+      ]
     },
     {
       "id": "complete-spinning-rig-candidate",
@@ -2501,6 +2520,97 @@
         }
       ],
       "note": "Two reviewed source-control originals and four native originals. Own models/OFL game font; no reference photos sampled or redistributed. Probe controls are not production assets; art,science,user,child and physical qualification remain pending."
+    },
+    {
+      "author": "OceanAngler contributors",
+      "license": "MIT",
+      "redistribution": true,
+      "sourceRedistribution": true,
+      "canModify": true,
+      "acquiredAt": "2026-11-25",
+      "id": "bluefin-periodic-motion-playables",
+      "source": "Own saved BluefinRig seven actions and FBX; tools/art_bluefin_motions.py and BluefinMotionCurves.cs native derivatives",
+      "status": "SOURCE_AND_EDITOR_ENGINEERING_PASS_ART_PARTIAL",
+      "artifacts": [
+        {
+          "path": "game/Assets/OceanAngler/Art/Bluefin/Motions/release.anim",
+          "sha256": "5a22c2ae155800f0b5ee369f1412c1efc592a109dd5f2c0455177c8bb24f8dba",
+          "bytes": 58075
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/Bluefin/Motions/turn.anim",
+          "sha256": "e59f6821341e48c294b7edc9f05dfce99a1b66fda665a2c4b94307181eaa8556",
+          "bytes": 190180
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/Bluefin/Motions/bite.anim",
+          "sha256": "3a17b016957c32c01a3b7806cd109dba793964f827c9df02888792cce12c4c1a",
+          "bytes": 194837
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/Bluefin/Motions/hooked.anim",
+          "sha256": "044af84ecc10a7df0b4f9ccf7ac645f38553e0b77e21e396d9da1a41fb927161",
+          "bytes": 309391
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/Bluefin/Motions/burst.anim",
+          "sha256": "97b16b45ee05a4ebd4965db4ab61a33288de220b3255091dde1148307f8c0781",
+          "bytes": 262981
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/Bluefin/Motions/swim.anim",
+          "sha256": "ad69509d50a9b6068b714874780d2d77b6a816e737314dddcc017fc3ad13bc99",
+          "bytes": 217551
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/Bluefin/Motions/idle.anim",
+          "sha256": "dcca07a53dbfb92e1b7611d5abef36e3fe7f12a1da30ece8c2cdaa9fb460a4d1",
+          "bytes": 183577
+        }
+      ],
+      "note": "Six periodic clips and one non-looping release. Geometry, rest rig, UV, weights and nine maps retained. Serialized bytes are not runtime memory qualification."
+    },
+    {
+      "author": "OceanAngler contributors",
+      "license": "MIT",
+      "redistribution": true,
+      "sourceRedistribution": true,
+      "canModify": true,
+      "acquiredAt": "2026-11-25",
+      "id": "bluefin-periodic-motion-reviewed-previews",
+      "source": "Own source clips and own candidate mesh; isolated Unity Metal offline capture with OFL game font labels",
+      "status": "OFFLINE_POSE_REVIEW_ONLY_FULL_ART_PENDING",
+      "artifacts": [
+        {
+          "path": "art/previews/bluefin-periodic-motion/comparison-side.mp4",
+          "sha256": "2a59ce8939cf412366f43e269ce25bf638305f159dbaaf52800223945510699e"
+        },
+        {
+          "path": "art/previews/bluefin-periodic-motion/comparison-top.mp4",
+          "sha256": "edc39dfaf76035c324506c59247a1963fd59f82461049738243e448efce2ad6e"
+        },
+        {
+          "path": "art/previews/bluefin-periodic-motion/contact-side.png",
+          "sha256": "e5d604fd5beb27c348d13abe4402611d2746cdbb32c4a6e3ab6943cf9f5d6d3f"
+        },
+        {
+          "path": "art/previews/bluefin-periodic-motion/contact-top.png",
+          "sha256": "909f67896a4d464d78087a98a2b1f97a227b7636cb712d7af8fc98475b24c22b"
+        },
+        {
+          "path": "art/previews/bluefin-periodic-motion/candidate-swim-top.png",
+          "sha256": "3bf769c97f2c6bec9fee7aa720a20bd1bd757995d7cfb66c4b336b88a8928c1b"
+        },
+        {
+          "path": "art/previews/bluefin-periodic-motion/candidate-hooked-side.png",
+          "sha256": "174d5f8436ff2ba08c4e474586f6795af0512674ea639f982233b78aeaa00fc9"
+        },
+        {
+          "path": "art/previews/bluefin-periodic-motion/rejected-top-framing.png",
+          "sha256": "d345e8c7f5c5d9eab8b8a299b670a77fb1ebf28db31b55cdac9afa24f3394875"
+        }
+      ],
+      "note": "Side/top 4-second comparison videos encoded20fps, contact sheets, selected originals and rejected framing original. Not native Player or performance capture; not all source originals manually viewed. No reference photos or private media."
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."

@@ -402,5 +402,7 @@
     "shadow": "opaque geometric rays; runtime transparent membrane shadow disabled"
   },
   "note": "Original authoring candidate; scientific, runtime, deformation, LOD and human visual gates remain separate.",
-  "mapUpdateMode": "Existing blend image datablocks only; geometry,rig,UV,actions and external-texture FBX retained"
+  "mapUpdateMode": "Existing blend image datablocks only; geometry,rig,UV,actions and external-texture FBX retained",
+  "motionRecipe": "periodic-analytic-tangents-v1",
+  "motionUpdateScope": "Saved actions and FBX update only; no geometry, UV, weights, rig rest structure or texture regeneration"
 }

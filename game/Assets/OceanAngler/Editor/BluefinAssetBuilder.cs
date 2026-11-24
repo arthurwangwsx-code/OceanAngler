@@ -54,7 +54,7 @@ namespace OceanAngler.Editor
                 if(clip==null)throw new InvalidOperationException("Missing imported motion "+semantic+"; found "+string.Join(",",clips.Select(c=>c.name)));
                 var settings=AnimationUtility.GetAnimationClipSettings(clip);settings.loopTime=semantic!="release";AnimationUtility.SetAnimationClipSettings(clip,settings);
                 var state=stateMachine.states.Select(s=>s.state).FirstOrDefault(s=>s.name==semantic)??stateMachine.AddState(semantic);
-                state.motion=clip;if(semantic=="swim")stateMachine.defaultState=state;
+                state.motion=BluefinMotionCurves.Build(clip,semantic);if(semantic=="swim")stateMachine.defaultState=state;
             }
             var source=AssetDatabase.LoadAssetAtPath<GameObject>(Folder+"/Bluefin.fbx");var root=new GameObject("BluefinCandidate");
             var alignment=new GameObject("CoordinateAlignment");alignment.transform.SetParent(root.transform,false);alignment.transform.localRotation=Quaternion.Euler(0,180,0);

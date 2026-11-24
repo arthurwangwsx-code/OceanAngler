@@ -1,0 +1,1777 @@
+{
+  "status": "SOURCE_AND_EDITOR_SCOPED_PASS_NATIVE_PENDING",
+  "wholeProduct": "PARTIAL",
+  "sourceFreeze": "PENDING",
+  "sourceIdentity": {
+    "status": "ALL_LOD_IDENTITY_AND_NINE_TEXTURES_UNCHANGED_PASS",
+    "before": {
+      "lods": {
+        "0": {
+          "triangles": 24664,
+          "allFacesUvWeightsSha256": "c1f8843a12cfee15597eb1ae4111a5fa0a99c271d5c0f7b73df8388d59912680",
+          "rayComponents": 115,
+          "rayComponentDigests": [
+            "01562a43f2e043a5a4fe964420dc75d1e668f605f4748c965a8f5c02ecbbc990",
+            "07dbed4dff1351ae2ced5d646774fb242f8ab65bfe3c2028d555609023def98e",
+            "0859ad8238d238bfa42ad1cc9818df19ed4b728baf723f8cd0335bce3820f3c8",
+            "0bec4f17686953bc4fcf8eaedf7c700b45f46b2024f4e10a7a47589780271ff5",
+            "0db4fae604d0d5e2396314eb714be7b7bc5a8dfdfe7041e53826ada0c0f568d5",
+            "0e18fa4dfaaaaa34d9e9504ebfcb3a1aa612fae8c5e1a62a9bd3880892c23c41",
+            "0f2606bf441f13e86342d9a576fd0abab7742d577a95fd5e1f0bacf8c5156003",
+            "1159834ebf0b850cdeda75af0a06ec801a78de6b1a71c857ea738d8447f28c1a",
+            "133d6cef69d155bc1c3c286498dfd49dfebbb5a9e7698d0dfb6c22e5b37ca70b",
+            "15b4b28753c149644f47e0cf12367a66c8da06e2fad03cec5515b4470bd63696",
+            "185c5ca98a1bf88641ca9c4e37e8a399d6e5adf2336c7a54fa41d1ef1b85d0af",
+            "198c8d8e7c3a6c824bbcf6e3f77713425f8d8881821a4f516763e911a1c439a4",
+            "1a39cf2322023cf819aba3de4529d533461c8415f25ba67b927cc3f2506abd98",
+            "1d4057133ed1fb083888f45f011fa700bee4e0c37aa9373b2b7ed46492204d3d",
+            "1f113f9adf0f6856770f8a900011e5713eb4646815c0b68174d08825df2b4c48",
+            "1fae85d2e4baa98730ad57722a28d5695765b97b6f892fb7b015f64134582a7a",
+            "289c7c013acd0569703a8ef5ecfd56b50c1699ad5a973a1e713de51066799c80",
+            "2c26ac27293fd2496b4020751acf0a2b676db0cfb9e1cc05df4b03ef24aacdeb",
+            "2c4d35ba27b307135b5b8ca1b04621faca72d74995672ae32f794b45843746ac",
+            "34ca499bbc1769686c2da1ccebd903d4791a5655fc647217ea544081b69ed778",
+            "3bcfd95677985689896f4bf8e5ab8fc9447a1a5871a604b2be6855acace61d0c",
+            "3fe52d1e92886b8af7f46da14c7c943bb759b99d7f33056fb8bedc8b6509a9b1",
+            "41a329cfd919f109d43a619cc5709c62e2916d66c447319109240b7f64811328",
+            "41b445fc1954cb78d34d9523dd31a690f703fb7276dbcd42aaf40a7203d5e568",
+            "4410a737ef11cd6b87c78044e85b4be452711b9af76f7fda52f09b1b0c599344",
+            "48b8c2a24ef1a2d5547949a9283c4973993a6d7c867dfde79e43d231be61422e",
+            "4913c9f54e6150a986ad0ca13510b646ff93a952f0329522b7236c40742e8827",
+            "4c050e7864c922fe119043441a1bf48db96b3bb8c5f575985d80e262b2076055",
+            "4d1c5001868ce6582bd58e5df4f5d16dfa1f4e1a7e531c91309fae5c8cd9c2f7",
+            "4e53a41502660411d9c28ee304ca8838a114420498cb60755c17dc962cf252e9",
+            "4ff32fee66f015267ad85fd8a21cbd5ab7b174ad6d2fa032e627237ecdc45269",
+            "526a31144aaf20ed5a16505b686c193da0005140c02c01a1db0a0cd8f95943d8",
+            "52818ed32a0a6cc6aaaddb4b4c46f2831909cfd16d72174c58d93e12f83f475c",
+            "53e8fbe10d3603d3bdcf7bc7bba090931031f4ae4eadae300f0b1db777b32039",
+            "547e8de340a175964c95dfb89cac5f09e2baa722be873e686024e0e51aa12e99",
+            "58351d3d50e59cb9dcb0c12bd1fd1000d4bd05776e73642957ffbb1f849d37e1",
+            "5866c5316412ab9517bfad600f9c0c570491595450105d3097bcdd7d73472a7f",
+            "5a4b1d7802a50a75563160b51d21fa52dba300f4dbde6de697e43b53be334093",
+            "64b3411dfef0443ee83e82109408b4d025d463ce7c988ad73df7ba638832040a",
+            "66a11345dc65c11ae485ed31e53974d7b97c11771fed6267a8c29e3830931ded",
+            "6742ed6a5f40df8415673c0413fb4305952d12d96e3913ff86dd2deb56419ab3",
+            "675c7c33cdc7794b82f217e619d2a17c3e2ebeb50fe5063e3e161925fb539f5d",
+            "690dde74c86dd37903ea2aa6b83c01b235ebf57041928b39ffe5e1dac9e583a4",
+            "6b0e7b2b9577a1140e63e6ec9abcbedd709c9d17adecdc8f553da83dcd37431b",
+            "6e5d7a89bc74d39cf8aa17206815ae969ac113e4b2521b9ab93a2e36aee85db8",
+            "6f04b14a83b221c9e73a27bf5eeda46a434af5e4b8d2a1656d1beb5e3415c4e9",
+            "6ff36631acc6f1f588c90b2aaea5ef3de1a9a0a0a19e642bc233888aca0fca64",
+            "71a51a8c5026efaca5606e823810b332d135a074f954a22d74062a20a9f5d12f",
+            "743915f6036e4be39ec2578e7b24c9a19345f0d5ebd7fa39ea86c13024ee81f0",
+            "75a894610357fffeee90e72de72c827bcd00b4267f1bed69898254a3818a5cc3",
+            "7729bdc78366730673adf720024f91fad104ea32be8226d03423e8fb2b30b37e",
+            "79aba8b4b1c4c80c586056315305acea5f5f3d91acc33a7799be5ebb8e97f7b1",
+            "7a003d1d829e6015b3df6efbedf0a28ea1c3a662479cf05a1e91025c41710898",
+            "7d2a5a1c4c630ead1dcd86f850e4d9cdb781946c1c0ed5219b34694a4f6cac7e",
+            "80683e7621420f7150d9c3b6fddc94cc9189e8c0721b9c1fd19fbb40f704c642",
+            "834158e14f0ccc04085baa9802261f213f75d05e0fda08e211951e9b2c3b63ab",
+            "8354c1a768f9cb423c42cdca95485f76e255c07d0a02bdbdc4162e3f7383f0d9",
+            "87bb9ab97543845bfa555e6bb721f2d20f69773d8523754e8210032041fc4ba6",
+            "87f0e50dbe473e2b4001228ed8646b362c1cea9b0be3f26541fd6a7a72be1cb0",
+            "8bf9c501194291e7af6c61eeac26298c9491df149553ef273b0469ac811e82d6",
+            "8dbc5bf0680895f69d5579002530c497878f1f4e490aa91d52a6807324d5b639",
+            "8e8408543dda0aff31e8c3ce666f21dabc9c1be80f75d4ccf33251b9bfcfad65",
+            "8f22b783413ae3d1893ef654ecceb5330beede11208fa936d2ebcf4ddacc09c5",
+            "9120561cca1ca7ceea40aa55bbcef70e33d15a7946c939d525724928af301c2a",
+            "9127f0634af0845fc71d1f0a84ac2666e4863ab7f64b02365422f3b3df3eba37",
+            "937e97a9c369498b17f9d67eab3504c96b993d81733c42ee733aeceb05ec0728",
+            "93bdfd37665ee1e9ae05665ff7ac778571362bdba0b732f4c80033d6e17f202b",
+            "94a849af29f7718e421b3760fd913ff2b07ff5e88e79c3b24b6896d3e69e201f",
+            "9b5c79c896d4017b850a674004d4fb3f082205774aecdb4170bba07f6601e750",
+            "9f1e3f6f320e69549ec202680e7dc09c0358f78bfc91773316daa3e632d7431f",
+            "a61bd16a29d59337b94813ea7cb9fe4a891789b88304c63d387318167bff4409",
+            "a6b42ad0e6113e8f599f4b18d5f7f34ef3b189782aca31f1f8669bfb8a38fa6f",
+            "a761dbba2f2c5be1a0a25c8ac2d10f89fb028478dc8c732b6459f54a69f61272",
+            "a76728d460d61e4230909a9adb4c40ccc5c5c41571c8a4222012a381343aeddd",
+            "a9b39d8947d1a22322ff1785b9f4565fd77e3c03a66cec5bcbb8ec420c374261",
+            "b1bbed6b9862af4e6f8d787bffc21a787630f72d5bfc5ae11f7d72e16df9f437",
+            "b1d22e1fbba3278221593359bee91a16fa9e08ed894ff0f0859333e4c4c52fae",
+            "b35a7699f27e1e9dfdb8aa49302ae07506ba1dda2f5157cbdea8d0ee75bd0850",
+            "b3acd60f7430a30e07ccffb5b0d53d4f2e05cd174340644b0d61c43872ec44e4",
+            "b4585940d4e0302ed888390471d4e88bdde181c091192206a82860ac4b025515",
+            "b9ffbc60d1f74f00005f7b1bc3f472024bf7165a4e863ffb0225e4673f25ace6",
+            "bc8b71be9176bd1680e562af73897bc73a3be3859332d6fa4e55269da0fa891b",
+            "c05d75ff3f651d39af6caa3b8d6b8fab783b57ca418cf4a979a5572c1b8e189f",
+            "c220cce9a14e326fe5c65d8525dec506aea1eefc4de5e107e2a8f3afae9e59f9",
+            "c3120769ff61e278542edce25c3a0361835d85ba0931b3685b3cc5b742aeb1dd",
+            "c345cf37ca6a60501dedd51c4390133536cb24875a661171faf1d21a5b6a6b8e",
+            "c5ebeb74f676146bc2e550d39db7260df372c61380f66055862d23a83d4c3e44",
+            "c632e1e24c737102f736646db18f3d7d3f6091d189e3d2421f0e0acc05a95e12",
+            "c7a9f54439858354d2cffcfbd85cb078a4807be5b25d9ebea8737be09dc86111",
+            "ccf4dfd4680078d4cd969682ecd4eb73b0a1e7e8e14ca3647ce0164080e02f38",
+            "cdcf850d8dc5f80335ed7caaa810a83ad0ddacede00cf753651c1fb5a952ef48",
+            "ce1dfe82b34fc3a5de949d9810816a25dc83c2dc4b0c9a5601212f584f356eba",
+            "d1078cdf91ef2788090dd31b75d49bb169c86fc66cfae7c7e61c42b9a67aacd4",
+            "d3da08385f0615696e511cc0f23381c154955073c01f803fe613e37bb9f3204e",
+            "d5ba9baae82ab34cb4ebfbb989bf374565a94ce91664cdc785503d4b941b2d77",
+            "d78323bdef7f933d094e830059481f67151e05963dd6894726b9ed2fa1bc4b7e",
+            "d7d11068b7245eb8539283449f920ee8be37770e0b9e0cc40aa92358710ce7bf",
+            "dfd35cc3e3b4a7d98d21095449c9f7aeff1972b1de086f9a1371afb3eeee688c",
+            "e0def4561a84ee3d258126021ccc7c6169a5deec8b655c9e4a69d26927da25d0",
+            "e2c93eb9e190aa7bfd157de1563a8bf12d8536ecf569847e857968988aeccf9f",
+            "e347e8beddef13cb9f16913121cc95c0782ba312a39ac8c2fa546918093fc6ba",
+            "e48ad2f85cf94e9f79f3dfdc9e6d08eb5b4c4838d511bbc300787bdf5f559e5b",
+            "e7fd31f1488fd1c2a8e736721bb3a0c6dcf812295d2e52843860a55434ee7cc9",
+            "e88a06b369571002e1b84d85ca6de26c037d4c6bc6e785c425d20dc19e265604",
+            "ea16b0808cc0f546ecd8c5043bd2e8b774105936c1f09ce007e7cb014d696397",
+            "ea79bf0ff40237cf5391540439dd6f29129b994acfd88d752d9f94e0eeabfaf3",
+            "ecb134313832d1538c5d31640d899ce34760a0061076055b02d8a65007439be2",
+            "efa80f5e02498cb65a5220e430905116bde1e4364b12cf36a6b1fe6e2cb31d8e",
+            "f0a89be1cb89fdc490536589a3ef1d8f6ea5ee93a482407d4e48452651f21878",
+            "f317e2a8e5901732590ff3002c6f17ecb035d0e47c965298919b22184712fbdc",
+            "f863b704b2124c672e04e6744a256789fbbb363e9af58f19b8a70b0b36516c58",
+            "fa928e81cf9bd2b85c809d99f688cea44c80c12a0cb77e27b8e847d1932ef5b1",
+            "faf9ac542cd5742c946e6727616ee8c3253af12819eff306d816521a7db2cc81",
+            "fb0de95707d7b952bffc480db9c45e385d5d8a181fe8efabdf423285aa703c2b",
+            "fc20a228f42a1146e7a0b7904137e4b1c7c96ea9a16e7370013426dd8bb26976"
+          ]
+        },
+        "1": {
+          "triangles": 9864,
+          "allFacesUvWeightsSha256": "041cfca584eb635adefd401b63d3986a5322b2633862ec6b956551f80d20e864",
+          "rayComponents": 16,
+          "rayComponentDigests": [
+            "15b4b28753c149644f47e0cf12367a66c8da06e2fad03cec5515b4470bd63696",
+            "198c8d8e7c3a6c824bbcf6e3f77713425f8d8881821a4f516763e911a1c439a4",
+            "1a39cf2322023cf819aba3de4529d533461c8415f25ba67b927cc3f2506abd98",
+            "2c26ac27293fd2496b4020751acf0a2b676db0cfb9e1cc05df4b03ef24aacdeb",
+            "2c4d35ba27b307135b5b8ca1b04621faca72d74995672ae32f794b45843746ac",
+            "41b445fc1954cb78d34d9523dd31a690f703fb7276dbcd42aaf40a7203d5e568",
+            "4c050e7864c922fe119043441a1bf48db96b3bb8c5f575985d80e262b2076055",
+            "52818ed32a0a6cc6aaaddb4b4c46f2831909cfd16d72174c58d93e12f83f475c",
+            "675c7c33cdc7794b82f217e619d2a17c3e2ebeb50fe5063e3e161925fb539f5d",
+            "7729bdc78366730673adf720024f91fad104ea32be8226d03423e8fb2b30b37e",
+            "87f0e50dbe473e2b4001228ed8646b362c1cea9b0be3f26541fd6a7a72be1cb0",
+            "9120561cca1ca7ceea40aa55bbcef70e33d15a7946c939d525724928af301c2a",
+            "c5ebeb74f676146bc2e550d39db7260df372c61380f66055862d23a83d4c3e44",
+            "e7fd31f1488fd1c2a8e736721bb3a0c6dcf812295d2e52843860a55434ee7cc9",
+            "efa80f5e02498cb65a5220e430905116bde1e4364b12cf36a6b1fe6e2cb31d8e",
+            "f317e2a8e5901732590ff3002c6f17ecb035d0e47c965298919b22184712fbdc"
+          ]
+        },
+        "2": {
+          "triangles": 3698,
+          "allFacesUvWeightsSha256": "5083d1174a62df3b02bd68eb4577a040d60113ae2d3a9d557b6271dad3870024",
+          "rayComponents": 16,
+          "rayComponentDigests": [
+            "15b4b28753c149644f47e0cf12367a66c8da06e2fad03cec5515b4470bd63696",
+            "198c8d8e7c3a6c824bbcf6e3f77713425f8d8881821a4f516763e911a1c439a4",
+            "1a39cf2322023cf819aba3de4529d533461c8415f25ba67b927cc3f2506abd98",
+            "2c26ac27293fd2496b4020751acf0a2b676db0cfb9e1cc05df4b03ef24aacdeb",
+            "2c4d35ba27b307135b5b8ca1b04621faca72d74995672ae32f794b45843746ac",
+            "41b445fc1954cb78d34d9523dd31a690f703fb7276dbcd42aaf40a7203d5e568",
+            "4c050e7864c922fe119043441a1bf48db96b3bb8c5f575985d80e262b2076055",
+            "52818ed32a0a6cc6aaaddb4b4c46f2831909cfd16d72174c58d93e12f83f475c",
+            "675c7c33cdc7794b82f217e619d2a17c3e2ebeb50fe5063e3e161925fb539f5d",
+            "7729bdc78366730673adf720024f91fad104ea32be8226d03423e8fb2b30b37e",
+            "87f0e50dbe473e2b4001228ed8646b362c1cea9b0be3f26541fd6a7a72be1cb0",
+            "9120561cca1ca7ceea40aa55bbcef70e33d15a7946c939d525724928af301c2a",
+            "c5ebeb74f676146bc2e550d39db7260df372c61380f66055862d23a83d4c3e44",
+            "e7fd31f1488fd1c2a8e736721bb3a0c6dcf812295d2e52843860a55434ee7cc9",
+            "efa80f5e02498cb65a5220e430905116bde1e4364b12cf36a6b1fe6e2cb31d8e",
+            "f317e2a8e5901732590ff3002c6f17ecb035d0e47c965298919b22184712fbdc"
+          ]
+        }
+      },
+      "blendSha256": "2778aaf6cf711c7b8631c7068205908fffb3873905cd9cf9d68330f426615085"
+    },
+    "after": {
+      "lods": {
+        "0": {
+          "triangles": 24664,
+          "allFacesUvWeightsSha256": "c1f8843a12cfee15597eb1ae4111a5fa0a99c271d5c0f7b73df8388d59912680",
+          "rayComponents": 115,
+          "rayComponentDigests": [
+            "01562a43f2e043a5a4fe964420dc75d1e668f605f4748c965a8f5c02ecbbc990",
+            "07dbed4dff1351ae2ced5d646774fb242f8ab65bfe3c2028d555609023def98e",
+            "0859ad8238d238bfa42ad1cc9818df19ed4b728baf723f8cd0335bce3820f3c8",
+            "0bec4f17686953bc4fcf8eaedf7c700b45f46b2024f4e10a7a47589780271ff5",
+            "0db4fae604d0d5e2396314eb714be7b7bc5a8dfdfe7041e53826ada0c0f568d5",
+            "0e18fa4dfaaaaa34d9e9504ebfcb3a1aa612fae8c5e1a62a9bd3880892c23c41",
+            "0f2606bf441f13e86342d9a576fd0abab7742d577a95fd5e1f0bacf8c5156003",
+            "1159834ebf0b850cdeda75af0a06ec801a78de6b1a71c857ea738d8447f28c1a",
+            "133d6cef69d155bc1c3c286498dfd49dfebbb5a9e7698d0dfb6c22e5b37ca70b",
+            "15b4b28753c149644f47e0cf12367a66c8da06e2fad03cec5515b4470bd63696",
+            "185c5ca98a1bf88641ca9c4e37e8a399d6e5adf2336c7a54fa41d1ef1b85d0af",
+            "198c8d8e7c3a6c824bbcf6e3f77713425f8d8881821a4f516763e911a1c439a4",
+            "1a39cf2322023cf819aba3de4529d533461c8415f25ba67b927cc3f2506abd98",
+            "1d4057133ed1fb083888f45f011fa700bee4e0c37aa9373b2b7ed46492204d3d",
+            "1f113f9adf0f6856770f8a900011e5713eb4646815c0b68174d08825df2b4c48",
+            "1fae85d2e4baa98730ad57722a28d5695765b97b6f892fb7b015f64134582a7a",
+            "289c7c013acd0569703a8ef5ecfd56b50c1699ad5a973a1e713de51066799c80",
+            "2c26ac27293fd2496b4020751acf0a2b676db0cfb9e1cc05df4b03ef24aacdeb",
+            "2c4d35ba27b307135b5b8ca1b04621faca72d74995672ae32f794b45843746ac",
+            "34ca499bbc1769686c2da1ccebd903d4791a5655fc647217ea544081b69ed778",
+            "3bcfd95677985689896f4bf8e5ab8fc9447a1a5871a604b2be6855acace61d0c",
+            "3fe52d1e92886b8af7f46da14c7c943bb759b99d7f33056fb8bedc8b6509a9b1",
+            "41a329cfd919f109d43a619cc5709c62e2916d66c447319109240b7f64811328",
+            "41b445fc1954cb78d34d9523dd31a690f703fb7276dbcd42aaf40a7203d5e568",
+            "4410a737ef11cd6b87c78044e85b4be452711b9af76f7fda52f09b1b0c599344",
+            "48b8c2a24ef1a2d5547949a9283c4973993a6d7c867dfde79e43d231be61422e",
+            "4913c9f54e6150a986ad0ca13510b646ff93a952f0329522b7236c40742e8827",
+            "4c050e7864c922fe119043441a1bf48db96b3bb8c5f575985d80e262b2076055",
+            "4d1c5001868ce6582bd58e5df4f5d16dfa1f4e1a7e531c91309fae5c8cd9c2f7",
+            "4e53a41502660411d9c28ee304ca8838a114420498cb60755c17dc962cf252e9",
+            "4ff32fee66f015267ad85fd8a21cbd5ab7b174ad6d2fa032e627237ecdc45269",
+            "526a31144aaf20ed5a16505b686c193da0005140c02c01a1db0a0cd8f95943d8",
+            "52818ed32a0a6cc6aaaddb4b4c46f2831909cfd16d72174c58d93e12f83f475c",
+            "53e8fbe10d3603d3bdcf7bc7bba090931031f4ae4eadae300f0b1db777b32039",
+            "547e8de340a175964c95dfb89cac5f09e2baa722be873e686024e0e51aa12e99",
+            "58351d3d50e59cb9dcb0c12bd1fd1000d4bd05776e73642957ffbb1f849d37e1",
+            "5866c5316412ab9517bfad600f9c0c570491595450105d3097bcdd7d73472a7f",
+            "5a4b1d7802a50a75563160b51d21fa52dba300f4dbde6de697e43b53be334093",
+            "64b3411dfef0443ee83e82109408b4d025d463ce7c988ad73df7ba638832040a",
+            "66a11345dc65c11ae485ed31e53974d7b97c11771fed6267a8c29e3830931ded",
+            "6742ed6a5f40df8415673c0413fb4305952d12d96e3913ff86dd2deb56419ab3",
+            "675c7c33cdc7794b82f217e619d2a17c3e2ebeb50fe5063e3e161925fb539f5d",
+            "690dde74c86dd37903ea2aa6b83c01b235ebf57041928b39ffe5e1dac9e583a4",
+            "6b0e7b2b9577a1140e63e6ec9abcbedd709c9d17adecdc8f553da83dcd37431b",
+            "6e5d7a89bc74d39cf8aa17206815ae969ac113e4b2521b9ab93a2e36aee85db8",
+            "6f04b14a83b221c9e73a27bf5eeda46a434af5e4b8d2a1656d1beb5e3415c4e9",
+            "6ff36631acc6f1f588c90b2aaea5ef3de1a9a0a0a19e642bc233888aca0fca64",
+            "71a51a8c5026efaca5606e823810b332d135a074f954a22d74062a20a9f5d12f",
+            "743915f6036e4be39ec2578e7b24c9a19345f0d5ebd7fa39ea86c13024ee81f0",
+            "75a894610357fffeee90e72de72c827bcd00b4267f1bed69898254a3818a5cc3",
+            "7729bdc78366730673adf720024f91fad104ea32be8226d03423e8fb2b30b37e",
+            "79aba8b4b1c4c80c586056315305acea5f5f3d91acc33a7799be5ebb8e97f7b1",
+            "7a003d1d829e6015b3df6efbedf0a28ea1c3a662479cf05a1e91025c41710898",
+            "7d2a5a1c4c630ead1dcd86f850e4d9cdb781946c1c0ed5219b34694a4f6cac7e",
+            "80683e7621420f7150d9c3b6fddc94cc9189e8c0721b9c1fd19fbb40f704c642",
+            "834158e14f0ccc04085baa9802261f213f75d05e0fda08e211951e9b2c3b63ab",
+            "8354c1a768f9cb423c42cdca95485f76e255c07d0a02bdbdc4162e3f7383f0d9",
+            "87bb9ab97543845bfa555e6bb721f2d20f69773d8523754e8210032041fc4ba6",
+            "87f0e50dbe473e2b4001228ed8646b362c1cea9b0be3f26541fd6a7a72be1cb0",
+            "8bf9c501194291e7af6c61eeac26298c9491df149553ef273b0469ac811e82d6",
+            "8dbc5bf0680895f69d5579002530c497878f1f4e490aa91d52a6807324d5b639",
+            "8e8408543dda0aff31e8c3ce666f21dabc9c1be80f75d4ccf33251b9bfcfad65",
+            "8f22b783413ae3d1893ef654ecceb5330beede11208fa936d2ebcf4ddacc09c5",
+            "9120561cca1ca7ceea40aa55bbcef70e33d15a7946c939d525724928af301c2a",
+            "9127f0634af0845fc71d1f0a84ac2666e4863ab7f64b02365422f3b3df3eba37",
+            "937e97a9c369498b17f9d67eab3504c96b993d81733c42ee733aeceb05ec0728",
+            "93bdfd37665ee1e9ae05665ff7ac778571362bdba0b732f4c80033d6e17f202b",
+            "94a849af29f7718e421b3760fd913ff2b07ff5e88e79c3b24b6896d3e69e201f",
+            "9b5c79c896d4017b850a674004d4fb3f082205774aecdb4170bba07f6601e750",
+            "9f1e3f6f320e69549ec202680e7dc09c0358f78bfc91773316daa3e632d7431f",
+            "a61bd16a29d59337b94813ea7cb9fe4a891789b88304c63d387318167bff4409",
+            "a6b42ad0e6113e8f599f4b18d5f7f34ef3b189782aca31f1f8669bfb8a38fa6f",
+            "a761dbba2f2c5be1a0a25c8ac2d10f89fb028478dc8c732b6459f54a69f61272",
+            "a76728d460d61e4230909a9adb4c40ccc5c5c41571c8a4222012a381343aeddd",
+            "a9b39d8947d1a22322ff1785b9f4565fd77e3c03a66cec5bcbb8ec420c374261",
+            "b1bbed6b9862af4e6f8d787bffc21a787630f72d5bfc5ae11f7d72e16df9f437",
+            "b1d22e1fbba3278221593359bee91a16fa9e08ed894ff0f0859333e4c4c52fae",
+            "b35a7699f27e1e9dfdb8aa49302ae07506ba1dda2f5157cbdea8d0ee75bd0850",
+            "b3acd60f7430a30e07ccffb5b0d53d4f2e05cd174340644b0d61c43872ec44e4",
+            "b4585940d4e0302ed888390471d4e88bdde181c091192206a82860ac4b025515",
+            "b9ffbc60d1f74f00005f7b1bc3f472024bf7165a4e863ffb0225e4673f25ace6",
+            "bc8b71be9176bd1680e562af73897bc73a3be3859332d6fa4e55269da0fa891b",
+            "c05d75ff3f651d39af6caa3b8d6b8fab783b57ca418cf4a979a5572c1b8e189f",
+            "c220cce9a14e326fe5c65d8525dec506aea1eefc4de5e107e2a8f3afae9e59f9",
+            "c3120769ff61e278542edce25c3a0361835d85ba0931b3685b3cc5b742aeb1dd",
+            "c345cf37ca6a60501dedd51c4390133536cb24875a661171faf1d21a5b6a6b8e",
+            "c5ebeb74f676146bc2e550d39db7260df372c61380f66055862d23a83d4c3e44",
+            "c632e1e24c737102f736646db18f3d7d3f6091d189e3d2421f0e0acc05a95e12",
+            "c7a9f54439858354d2cffcfbd85cb078a4807be5b25d9ebea8737be09dc86111",
+            "ccf4dfd4680078d4cd969682ecd4eb73b0a1e7e8e14ca3647ce0164080e02f38",
+            "cdcf850d8dc5f80335ed7caaa810a83ad0ddacede00cf753651c1fb5a952ef48",
+            "ce1dfe82b34fc3a5de949d9810816a25dc83c2dc4b0c9a5601212f584f356eba",
+            "d1078cdf91ef2788090dd31b75d49bb169c86fc66cfae7c7e61c42b9a67aacd4",
+            "d3da08385f0615696e511cc0f23381c154955073c01f803fe613e37bb9f3204e",
+            "d5ba9baae82ab34cb4ebfbb989bf374565a94ce91664cdc785503d4b941b2d77",
+            "d78323bdef7f933d094e830059481f67151e05963dd6894726b9ed2fa1bc4b7e",
+            "d7d11068b7245eb8539283449f920ee8be37770e0b9e0cc40aa92358710ce7bf",
+            "dfd35cc3e3b4a7d98d21095449c9f7aeff1972b1de086f9a1371afb3eeee688c",
+            "e0def4561a84ee3d258126021ccc7c6169a5deec8b655c9e4a69d26927da25d0",
+            "e2c93eb9e190aa7bfd157de1563a8bf12d8536ecf569847e857968988aeccf9f",
+            "e347e8beddef13cb9f16913121cc95c0782ba312a39ac8c2fa546918093fc6ba",
+            "e48ad2f85cf94e9f79f3dfdc9e6d08eb5b4c4838d511bbc300787bdf5f559e5b",
+            "e7fd31f1488fd1c2a8e736721bb3a0c6dcf812295d2e52843860a55434ee7cc9",
+            "e88a06b369571002e1b84d85ca6de26c037d4c6bc6e785c425d20dc19e265604",
+            "ea16b0808cc0f546ecd8c5043bd2e8b774105936c1f09ce007e7cb014d696397",
+            "ea79bf0ff40237cf5391540439dd6f29129b994acfd88d752d9f94e0eeabfaf3",
+            "ecb134313832d1538c5d31640d899ce34760a0061076055b02d8a65007439be2",
+            "efa80f5e02498cb65a5220e430905116bde1e4364b12cf36a6b1fe6e2cb31d8e",
+            "f0a89be1cb89fdc490536589a3ef1d8f6ea5ee93a482407d4e48452651f21878",
+            "f317e2a8e5901732590ff3002c6f17ecb035d0e47c965298919b22184712fbdc",
+            "f863b704b2124c672e04e6744a256789fbbb363e9af58f19b8a70b0b36516c58",
+            "fa928e81cf9bd2b85c809d99f688cea44c80c12a0cb77e27b8e847d1932ef5b1",
+            "faf9ac542cd5742c946e6727616ee8c3253af12819eff306d816521a7db2cc81",
+            "fb0de95707d7b952bffc480db9c45e385d5d8a181fe8efabdf423285aa703c2b",
+            "fc20a228f42a1146e7a0b7904137e4b1c7c96ea9a16e7370013426dd8bb26976"
+          ]
+        },
+        "1": {
+          "triangles": 9864,
+          "allFacesUvWeightsSha256": "041cfca584eb635adefd401b63d3986a5322b2633862ec6b956551f80d20e864",
+          "rayComponents": 16,
+          "rayComponentDigests": [
+            "15b4b28753c149644f47e0cf12367a66c8da06e2fad03cec5515b4470bd63696",
+            "198c8d8e7c3a6c824bbcf6e3f77713425f8d8881821a4f516763e911a1c439a4",
+            "1a39cf2322023cf819aba3de4529d533461c8415f25ba67b927cc3f2506abd98",
+            "2c26ac27293fd2496b4020751acf0a2b676db0cfb9e1cc05df4b03ef24aacdeb",
+            "2c4d35ba27b307135b5b8ca1b04621faca72d74995672ae32f794b45843746ac",
+            "41b445fc1954cb78d34d9523dd31a690f703fb7276dbcd42aaf40a7203d5e568",
+            "4c050e7864c922fe119043441a1bf48db96b3bb8c5f575985d80e262b2076055",
+            "52818ed32a0a6cc6aaaddb4b4c46f2831909cfd16d72174c58d93e12f83f475c",
+            "675c7c33cdc7794b82f217e619d2a17c3e2ebeb50fe5063e3e161925fb539f5d",
+            "7729bdc78366730673adf720024f91fad104ea32be8226d03423e8fb2b30b37e",
+            "87f0e50dbe473e2b4001228ed8646b362c1cea9b0be3f26541fd6a7a72be1cb0",
+            "9120561cca1ca7ceea40aa55bbcef70e33d15a7946c939d525724928af301c2a",
+            "c5ebeb74f676146bc2e550d39db7260df372c61380f66055862d23a83d4c3e44",
+            "e7fd31f1488fd1c2a8e736721bb3a0c6dcf812295d2e52843860a55434ee7cc9",
+            "efa80f5e02498cb65a5220e430905116bde1e4364b12cf36a6b1fe6e2cb31d8e",
+            "f317e2a8e5901732590ff3002c6f17ecb035d0e47c965298919b22184712fbdc"
+          ]
+        },
+        "2": {
+          "triangles": 3698,
+          "allFacesUvWeightsSha256": "5083d1174a62df3b02bd68eb4577a040d60113ae2d3a9d557b6271dad3870024",
+          "rayComponents": 16,
+          "rayComponentDigests": [
+            "15b4b28753c149644f47e0cf12367a66c8da06e2fad03cec5515b4470bd63696",
+            "198c8d8e7c3a6c824bbcf6e3f77713425f8d8881821a4f516763e911a1c439a4",
+            "1a39cf2322023cf819aba3de4529d533461c8415f25ba67b927cc3f2506abd98",
+            "2c26ac27293fd2496b4020751acf0a2b676db0cfb9e1cc05df4b03ef24aacdeb",
+            "2c4d35ba27b307135b5b8ca1b04621faca72d74995672ae32f794b45843746ac",
+            "41b445fc1954cb78d34d9523dd31a690f703fb7276dbcd42aaf40a7203d5e568",
+            "4c050e7864c922fe119043441a1bf48db96b3bb8c5f575985d80e262b2076055",
+            "52818ed32a0a6cc6aaaddb4b4c46f2831909cfd16d72174c58d93e12f83f475c",
+            "675c7c33cdc7794b82f217e619d2a17c3e2ebeb50fe5063e3e161925fb539f5d",
+            "7729bdc78366730673adf720024f91fad104ea32be8226d03423e8fb2b30b37e",
+            "87f0e50dbe473e2b4001228ed8646b362c1cea9b0be3f26541fd6a7a72be1cb0",
+            "9120561cca1ca7ceea40aa55bbcef70e33d15a7946c939d525724928af301c2a",
+            "c5ebeb74f676146bc2e550d39db7260df372c61380f66055862d23a83d4c3e44",
+            "e7fd31f1488fd1c2a8e736721bb3a0c6dcf812295d2e52843860a55434ee7cc9",
+            "efa80f5e02498cb65a5220e430905116bde1e4364b12cf36a6b1fe6e2cb31d8e",
+            "f317e2a8e5901732590ff3002c6f17ecb035d0e47c965298919b22184712fbdc"
+          ]
+        }
+      },
+      "blendSha256": "fe9945e630bd9c9764d4c436a5e2911eaea851333462057add1461d614908bc5"
+    },
+    "unchangedMaps": 9
+  },
+  "curveVerification": {
+    "before": [
+      {
+        "action": "idle",
+        "endpointRadians": 1.714505527444786e-17,
+        "endpointVelocityMismatchRadPerSecond": 0,
+        "expectedStartVelocityErrorRadPerSecond": 0.2827433388230814,
+        "pairedXRange": [
+          0.0,
+          0.09000000357627869
+        ]
+      },
+      {
+        "action": "swim",
+        "endpointRadians": 3.429011054889572e-17,
+        "endpointVelocityMismatchRadPerSecond": 0,
+        "expectedStartVelocityErrorRadPerSecond": 0.9994081558688784,
+        "pairedXRange": [
+          -0.09000000357627869,
+          0.09000000357627869
+        ]
+      },
+      {
+        "action": "turn",
+        "endpointRadians": 1.714505527444786e-17,
+        "endpointVelocityMismatchRadPerSecond": 0,
+        "expectedStartVelocityErrorRadPerSecond": 0.4372410681926343,
+        "pairedXRange": [
+          0.0,
+          0.09000000357627869
+        ]
+      },
+      {
+        "action": "burst",
+        "endpointRadians": 5.143516582334358e-17,
+        "endpointVelocityMismatchRadPerSecond": 0,
+        "expectedStartVelocityErrorRadPerSecond": 2.342362865317684,
+        "pairedXRange": [
+          -0.09000000357627869,
+          0.08889195322990417
+        ]
+      },
+      {
+        "action": "bite",
+        "endpointRadians": 1.714505527444786e-17,
+        "endpointVelocityMismatchRadPerSecond": 0,
+        "expectedStartVelocityErrorRadPerSecond": 0.3123150487090245,
+        "pairedXRange": [
+          0.0,
+          0.09000000357627869
+        ]
+      },
+      {
+        "action": "hooked",
+        "endpointRadians": 5.143516582334358e-17,
+        "endpointVelocityMismatchRadPerSecond": 0,
+        "expectedStartVelocityErrorRadPerSecond": 2.8108354383812206,
+        "pairedXRange": [
+          -0.09000000357627869,
+          0.08889195322990417
+        ]
+      },
+      {
+        "action": "release",
+        "endpointRadians": 3.429011054889572e-17,
+        "endpointVelocityMismatchRadPerSecond": 0,
+        "expectedStartVelocityErrorRadPerSecond": 1.124334175352488,
+        "pairedXRange": [
+          -0.09000000357627869,
+          0.09000000357627869
+        ]
+      }
+    ],
+    "before_rig": {
+      "root": {
+        "parent": null,
+        "matrix": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "head": {
+        "parent": "root",
+        "matrix": [
+          0.0,
+          0.9999999,
+          0.0,
+          -0.74,
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "spine1": {
+        "parent": "head",
+        "matrix": [
+          0.0,
+          0.9999999,
+          0.0,
+          -0.25,
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "spine2": {
+        "parent": "spine1",
+        "matrix": [
+          0.0,
+          0.9999999,
+          0.0,
+          0.1499999,
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "spine3": {
+        "parent": "spine2",
+        "matrix": [
+          0.0,
+          0.9999999,
+          0.0,
+          0.4899999,
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "peduncle": {
+        "parent": "spine3",
+        "matrix": [
+          0.0,
+          0.9999999,
+          0.0,
+          0.7799999,
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "tail": {
+        "parent": "peduncle",
+        "matrix": [
+          0.0,
+          0.9999999,
+          0.0,
+          0.9599999,
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "pelvicL": {
+        "parent": "spine1",
+        "matrix": [
+          0.3861746,
+          0.8741045,
+          0.2946362,
+          -0.28,
+          -0.8741045,
+          0.2447492,
+          0.4195702,
+          0.08,
+          0.2946362,
+          -0.4195702,
+          0.8585746,
+          -0.28,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "pelvicR": {
+        "parent": "spine1",
+        "matrix": [
+          -0.0116622,
+          0.8741044,
+          0.4855979,
+          -0.28,
+          -0.8741045,
+          -0.2447492,
+          0.4195702,
+          -0.08,
+          0.4855979,
+          -0.4195702,
+          0.766913,
+          -0.28,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "jaw": {
+        "parent": "head",
+        "matrix": [
+          -0.0,
+          -0.9475947,
+          0.319475,
+          -0.86,
+          1.0,
+          -0.0,
+          1e-07,
+          0.0,
+          -1e-07,
+          0.3194748,
+          0.9475949,
+          -0.065,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "pectoralL": {
+        "parent": "head",
+        "matrix": [
+          0.271723,
+          0.9425763,
+          0.1942071,
+          -0.48,
+          -0.9425763,
+          0.2199344,
+          0.2513537,
+          0.16,
+          0.1942072,
+          -0.2513536,
+          0.9482115,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "pectoralR": {
+        "parent": "head",
+        "matrix": [
+          -0.138943,
+          0.9425763,
+          0.3037181,
+          -0.48,
+          -0.9425762,
+          -0.2199345,
+          0.2513537,
+          -0.16,
+          0.3037182,
+          -0.2513537,
+          0.9190084,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      }
+    },
+    "candidate": [
+      {
+        "action": "idle",
+        "endpointRadians": 2.204364202304404e-17,
+        "endpointVelocityMismatchRadPerSecond": 2.6193447411060333e-09,
+        "expectedStartVelocityErrorRadPerSecond": 1.036436431817167e-08,
+        "pairedXRange": [
+          -0.09000000357627869,
+          0.09000000357627869
+        ]
+      },
+      {
+        "action": "swim",
+        "endpointRadians": 3.429011054889572e-17,
+        "endpointVelocityMismatchRadPerSecond": 1.1175870895385742e-07,
+        "expectedStartVelocityErrorRadPerSecond": 7.167047424982975e-08,
+        "pairedXRange": [
+          -0.09000000357627869,
+          0.09000000357627869
+        ]
+      },
+      {
+        "action": "turn",
+        "endpointRadians": 2.204364202304404e-17,
+        "endpointVelocityMismatchRadPerSecond": 1.7462298274040222e-08,
+        "expectedStartVelocityErrorRadPerSecond": 4.517899676592663e-08,
+        "pairedXRange": [
+          -0.09000000357627869,
+          0.09000000357627869
+        ]
+      },
+      {
+        "action": "burst",
+        "endpointRadians": 5.143516582334358e-17,
+        "endpointVelocityMismatchRadPerSecond": 2.2351741790771484e-07,
+        "expectedStartVelocityErrorRadPerSecond": 1.9702173092994713e-07,
+        "pairedXRange": [
+          -0.08996371179819107,
+          0.08996371179819107
+        ]
+      },
+      {
+        "action": "bite",
+        "endpointRadians": 2.204364202304404e-17,
+        "endpointVelocityMismatchRadPerSecond": 5.587935447692871e-08,
+        "expectedStartVelocityErrorRadPerSecond": 4.82362418341431e-08,
+        "pairedXRange": [
+          -0.09000000357627869,
+          0.09000000357627869
+        ]
+      },
+      {
+        "action": "hooked",
+        "endpointRadians": 5.143516582334358e-17,
+        "endpointVelocityMismatchRadPerSecond": 2.2351741790771484e-07,
+        "expectedStartVelocityErrorRadPerSecond": 2.1060875865508422e-07,
+        "pairedXRange": [
+          -0.08996371179819107,
+          0.08996371179819107
+        ]
+      },
+      {
+        "action": "release",
+        "endpointRadians": 3.429011054889572e-17,
+        "endpointVelocityMismatchRadPerSecond": 1.1175870895385742e-07,
+        "expectedStartVelocityErrorRadPerSecond": 8.42435033954203e-08,
+        "pairedXRange": [
+          -0.09000000357627869,
+          0.09000000357627869
+        ]
+      }
+    ],
+    "candidate_rig": {
+      "root": {
+        "parent": null,
+        "matrix": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "head": {
+        "parent": "root",
+        "matrix": [
+          0.0,
+          0.9999999,
+          0.0,
+          -0.74,
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "spine1": {
+        "parent": "head",
+        "matrix": [
+          0.0,
+          0.9999999,
+          0.0,
+          -0.25,
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "spine2": {
+        "parent": "spine1",
+        "matrix": [
+          0.0,
+          0.9999999,
+          0.0,
+          0.1499999,
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "spine3": {
+        "parent": "spine2",
+        "matrix": [
+          0.0,
+          0.9999999,
+          0.0,
+          0.4899999,
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "peduncle": {
+        "parent": "spine3",
+        "matrix": [
+          0.0,
+          0.9999999,
+          0.0,
+          0.7799999,
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "tail": {
+        "parent": "peduncle",
+        "matrix": [
+          0.0,
+          0.9999999,
+          0.0,
+          0.9599999,
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "pelvicL": {
+        "parent": "spine1",
+        "matrix": [
+          0.3861746,
+          0.8741045,
+          0.2946362,
+          -0.28,
+          -0.8741045,
+          0.2447492,
+          0.4195702,
+          0.08,
+          0.2946362,
+          -0.4195702,
+          0.8585746,
+          -0.28,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "pelvicR": {
+        "parent": "spine1",
+        "matrix": [
+          -0.0116622,
+          0.8741044,
+          0.4855979,
+          -0.28,
+          -0.8741045,
+          -0.2447492,
+          0.4195702,
+          -0.08,
+          0.4855979,
+          -0.4195702,
+          0.766913,
+          -0.28,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "jaw": {
+        "parent": "head",
+        "matrix": [
+          -0.0,
+          -0.9475947,
+          0.319475,
+          -0.86,
+          1.0,
+          -0.0,
+          1e-07,
+          0.0,
+          -1e-07,
+          0.3194748,
+          0.9475949,
+          -0.065,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "pectoralL": {
+        "parent": "head",
+        "matrix": [
+          0.271723,
+          0.9425763,
+          0.1942071,
+          -0.48,
+          -0.9425763,
+          0.2199344,
+          0.2513537,
+          0.16,
+          0.1942072,
+          -0.2513536,
+          0.9482115,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "pectoralR": {
+        "parent": "head",
+        "matrix": [
+          -0.138943,
+          0.9425763,
+          0.3037181,
+          -0.48,
+          -0.9425762,
+          -0.2199345,
+          0.2513537,
+          -0.16,
+          0.3037182,
+          -0.2513537,
+          0.9190084,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      }
+    },
+    "status": "SAVED_SOURCE_CLOSED_CURVES_AND_ANALYTIC_TANGENTS_PASS",
+    "scope": "All seven actual saved action channels; not imported motion, rendering, biological or complete art qualification"
+  },
+  "sourceChecks": {
+    "status": "ENGINEERING_CHECKS_PASS",
+    "checks": 189,
+    "motions": 7,
+    "poses": 35,
+    "wallSamples": 72
+  },
+  "tests": {
+    "editmode": {
+      "result": "Passed",
+      "total": "10",
+      "passed": "10",
+      "failed": "0",
+      "start-time": "2026-11-24 21:45:23Z",
+      "end-time": "2026-11-24 21:45:24Z"
+    },
+    "playmode-animation": {
+      "result": "Passed",
+      "total": "2",
+      "passed": "2",
+      "failed": "0",
+      "start-time": "2026-11-24 21:46:27Z",
+      "end-time": "2026-11-24 21:46:30Z"
+    },
+    "playmode-world": {
+      "result": "Passed",
+      "total": "1",
+      "passed": "1",
+      "failed": "0",
+      "start-time": "2026-11-24 21:47:17Z",
+      "end-time": "2026-11-24 21:47:23Z"
+    },
+    "playmode-final": {
+      "result": "Passed",
+      "total": "3",
+      "passed": "3",
+      "failed": "0",
+      "start-time": "2026-11-24 22:03:47Z",
+      "end-time": "2026-11-24 22:03:57Z"
+    }
+  },
+  "rawImportedIntermediate": "A improved but mouth residual retained; not accepted as final playback",
+  "gpu": {
+    "status": "PASS",
+    "scope": "Imported clip sampling on shared mesh; offline images, not Animator/Player, biological, natural-motion or physical acceptance",
+    "graphics": "Metal",
+    "quality": "Medium",
+    "target": "R16G16B16A16_SFloat",
+    "samples": 4,
+    "images": 656,
+    "rejectedTopFramingMargin": -0.23049068450927734,
+    "motions": [
+      {
+        "variant": "before",
+        "motion": "idle",
+        "seconds": 2.0,
+        "joints": [
+          {
+            "joint": "spine1",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 0.0,
+            "endDegreesPerSecond": 0.0,
+            "velocityJumpDegreesPerSecond": 0.0,
+            "rangeDegrees": 0.0
+          },
+          {
+            "joint": "tail",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 5.4687652587890625,
+            "endDegreesPerSecond": 5.428279399871826,
+            "velocityJumpDegreesPerSecond": 0.04048585891723633,
+            "rangeDegrees": 3.787444591522217
+          },
+          {
+            "joint": "pectoralL",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 7.610265254974365,
+            "endDegreesPerSecond": 7.651541233062744,
+            "velocityJumpDegreesPerSecond": 8.27182674407959,
+            "rangeDegrees": 5.485193729400635
+          },
+          {
+            "joint": "jaw",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 0.0,
+            "endDegreesPerSecond": 0.0,
+            "velocityJumpDegreesPerSecond": 0.0,
+            "rangeDegrees": 0.0
+          }
+        ]
+      },
+      {
+        "variant": "before",
+        "motion": "swim",
+        "seconds": 2.0,
+        "joints": [
+          {
+            "joint": "spine1",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 1.44752037525177,
+            "endDegreesPerSecond": 1.3659121990203857,
+            "velocityJumpDegreesPerSecond": 0.08160817623138428,
+            "rangeDegrees": 0.4647800922393799
+          },
+          {
+            "joint": "tail",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 30.486806869506836,
+            "endDegreesPerSecond": 29.019983291625977,
+            "velocityJumpDegreesPerSecond": 1.4668235778808594,
+            "rangeDegrees": 9.963699340820312
+          },
+          {
+            "joint": "pectoralL",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 15.272226333618164,
+            "endDegreesPerSecond": 14.973167419433594,
+            "velocityJumpDegreesPerSecond": 0.3137868046760559,
+            "rangeDegrees": 5.601021766662598
+          },
+          {
+            "joint": "jaw",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 0.0,
+            "endDegreesPerSecond": 0.0,
+            "velocityJumpDegreesPerSecond": 0.0,
+            "rangeDegrees": 0.0
+          }
+        ]
+      },
+      {
+        "variant": "before",
+        "motion": "turn",
+        "seconds": 2.0,
+        "joints": [
+          {
+            "joint": "spine1",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 6.067747592926025,
+            "endDegreesPerSecond": 5.032162189483643,
+            "velocityJumpDegreesPerSecond": 11.099909782409668,
+            "rangeDegrees": 7.311718463897705
+          },
+          {
+            "joint": "tail",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 7.362912178039551,
+            "endDegreesPerSecond": 18.27619743347168,
+            "velocityJumpDegreesPerSecond": 10.913285255432129,
+            "rangeDegrees": 11.742117881774902
+          },
+          {
+            "joint": "pectoralL",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 7.610265254974365,
+            "endDegreesPerSecond": 7.651541233062744,
+            "velocityJumpDegreesPerSecond": 8.27182674407959,
+            "rangeDegrees": 5.485193729400635
+          },
+          {
+            "joint": "jaw",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 0.0,
+            "endDegreesPerSecond": 0.0,
+            "velocityJumpDegreesPerSecond": 0.0,
+            "rangeDegrees": 0.0
+          }
+        ]
+      },
+      {
+        "variant": "before",
+        "motion": "burst",
+        "seconds": 2.0,
+        "joints": [
+          {
+            "joint": "spine1",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 3.508327007293701,
+            "endDegreesPerSecond": 2.4400668144226074,
+            "velocityJumpDegreesPerSecond": 1.0682601928710938,
+            "rangeDegrees": 1.2679295539855957
+          },
+          {
+            "joint": "tail",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 66.6588134765625,
+            "endDegreesPerSecond": 75.79496765136719,
+            "velocityJumpDegreesPerSecond": 9.136154174804688,
+            "rangeDegrees": 15.743107795715332
+          },
+          {
+            "joint": "pectoralL",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 26.02281951904297,
+            "endDegreesPerSecond": 25.829917907714844,
+            "velocityJumpDegreesPerSecond": 25.463253021240234,
+            "rangeDegrees": 5.627241611480713
+          },
+          {
+            "joint": "jaw",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 0.0,
+            "endDegreesPerSecond": 0.0,
+            "velocityJumpDegreesPerSecond": 0.0,
+            "rangeDegrees": 0.0
+          }
+        ]
+      },
+      {
+        "variant": "before",
+        "motion": "bite",
+        "seconds": 2.0,
+        "joints": [
+          {
+            "joint": "spine1",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 0.4198479652404785,
+            "endDegreesPerSecond": 0.3654412627220154,
+            "velocityJumpDegreesPerSecond": 0.054406702518463135,
+            "rangeDegrees": 0.0
+          },
+          {
+            "joint": "tail",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 9.252233505249023,
+            "endDegreesPerSecond": 9.078398704528809,
+            "velocityJumpDegreesPerSecond": 0.17383480072021484,
+            "rangeDegrees": 6.054488658905029
+          },
+          {
+            "joint": "pectoralL",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 7.610265254974365,
+            "endDegreesPerSecond": 7.651541233062744,
+            "velocityJumpDegreesPerSecond": 8.27182674407959,
+            "rangeDegrees": 5.485193729400635
+          },
+          {
+            "joint": "jaw",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 30.389123916625977,
+            "endDegreesPerSecond": 0.0,
+            "velocityJumpDegreesPerSecond": 30.389123916625977,
+            "rangeDegrees": 18.04999542236328
+          }
+        ]
+      },
+      {
+        "variant": "before",
+        "motion": "hooked",
+        "seconds": 2.0,
+        "joints": [
+          {
+            "joint": "spine1",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 4.248106956481934,
+            "endDegreesPerSecond": 2.9889392852783203,
+            "velocityJumpDegreesPerSecond": 1.2591676712036133,
+            "rangeDegrees": 1.305641531944275
+          },
+          {
+            "joint": "tail",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 79.99341583251953,
+            "endDegreesPerSecond": 90.9565658569336,
+            "velocityJumpDegreesPerSecond": 10.963150024414062,
+            "rangeDegrees": 18.947521209716797
+          },
+          {
+            "joint": "pectoralL",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 26.02281951904297,
+            "endDegreesPerSecond": 25.829917907714844,
+            "velocityJumpDegreesPerSecond": 25.463253021240234,
+            "rangeDegrees": 5.627241611480713
+          },
+          {
+            "joint": "jaw",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 91.7135009765625,
+            "endDegreesPerSecond": 0.0,
+            "velocityJumpDegreesPerSecond": 91.7135009765625,
+            "rangeDegrees": 18.079883575439453
+          }
+        ]
+      },
+      {
+        "variant": "before",
+        "motion": "release",
+        "seconds": 2.0,
+        "joints": [
+          {
+            "joint": "spine1",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 1.6345586776733398,
+            "endDegreesPerSecond": 1.536643147468567,
+            "velocityJumpDegreesPerSecond": 0.09791553020477295,
+            "rangeDegrees": 0.5322887897491455
+          },
+          {
+            "joint": "tail",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 34.54584503173828,
+            "endDegreesPerSecond": 32.64744567871094,
+            "velocityJumpDegreesPerSecond": 1.8983993530273438,
+            "rangeDegrees": 11.313936233520508
+          },
+          {
+            "joint": "pectoralL",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 15.272226333618164,
+            "endDegreesPerSecond": 14.973167419433594,
+            "velocityJumpDegreesPerSecond": 0.3137868046760559,
+            "rangeDegrees": 5.601021766662598
+          },
+          {
+            "joint": "jaw",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 0.0,
+            "endDegreesPerSecond": 0.0,
+            "velocityJumpDegreesPerSecond": 0.0,
+            "rangeDegrees": 0.0
+          }
+        ]
+      },
+      {
+        "variant": "candidate",
+        "motion": "idle",
+        "seconds": 2.0,
+        "joints": [
+          {
+            "joint": "spine1",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 0.0,
+            "endDegreesPerSecond": 0.0,
+            "velocityJumpDegreesPerSecond": 0.0,
+            "rangeDegrees": 0.0
+          },
+          {
+            "joint": "tail",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 3.3530967235565186,
+            "endDegreesPerSecond": 3.7320785522460938,
+            "velocityJumpDegreesPerSecond": 0.3789818286895752,
+            "rangeDegrees": 2.893172264099121
+          },
+          {
+            "joint": "pectoralL",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 8.432320594787598,
+            "endDegreesPerSecond": 8.623201370239258,
+            "velocityJumpDegreesPerSecond": 0.19165916740894318,
+            "rangeDegrees": 6.4570536613464355
+          },
+          {
+            "joint": "jaw",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 0.0,
+            "endDegreesPerSecond": 0.0,
+            "velocityJumpDegreesPerSecond": 0.0,
+            "rangeDegrees": 0.0
+          }
+        ]
+      },
+      {
+        "variant": "candidate",
+        "motion": "swim",
+        "seconds": 2.0,
+        "joints": [
+          {
+            "joint": "spine1",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 0.2455390989780426,
+            "endDegreesPerSecond": 0.23103930056095123,
+            "velocityJumpDegreesPerSecond": 0.01449979841709137,
+            "rangeDegrees": 0.4747765362262726
+          },
+          {
+            "joint": "tail",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 23.72321319580078,
+            "endDegreesPerSecond": 23.484399795532227,
+            "velocityJumpDegreesPerSecond": 0.2388134002685547,
+            "rangeDegrees": 10.00412368774414
+          },
+          {
+            "joint": "pectoralL",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 16.579729080200195,
+            "endDegreesPerSecond": 17.069351196289062,
+            "velocityJumpDegreesPerSecond": 0.6880161762237549,
+            "rangeDegrees": 5.659154415130615
+          },
+          {
+            "joint": "jaw",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 0.0,
+            "endDegreesPerSecond": 0.0,
+            "velocityJumpDegreesPerSecond": 0.0,
+            "rangeDegrees": 0.0
+          }
+        ]
+      },
+      {
+        "variant": "candidate",
+        "motion": "turn",
+        "seconds": 2.0,
+        "joints": [
+          {
+            "joint": "spine1",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 0.10283461213111877,
+            "endDegreesPerSecond": 0.10446745157241821,
+            "velocityJumpDegreesPerSecond": 0.207302063703537,
+            "rangeDegrees": 7.204023361206055
+          },
+          {
+            "joint": "tail",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 7.59476900100708,
+            "endDegreesPerSecond": 7.833657741546631,
+            "velocityJumpDegreesPerSecond": 0.23888874053955078,
+            "rangeDegrees": 10.907974243164062
+          },
+          {
+            "joint": "pectoralL",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 8.432320594787598,
+            "endDegreesPerSecond": 8.623201370239258,
+            "velocityJumpDegreesPerSecond": 0.19165916740894318,
+            "rangeDegrees": 6.4570536613464355
+          },
+          {
+            "joint": "jaw",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 0.0,
+            "endDegreesPerSecond": 0.0,
+            "velocityJumpDegreesPerSecond": 0.0,
+            "rangeDegrees": 0.0
+          }
+        ]
+      },
+      {
+        "variant": "candidate",
+        "motion": "burst",
+        "seconds": 2.0,
+        "joints": [
+          {
+            "joint": "spine1",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 0.0998372957110405,
+            "endDegreesPerSecond": 0.10882318019866943,
+            "velocityJumpDegreesPerSecond": 0.20866048336029053,
+            "rangeDegrees": 1.2796045541763306
+          },
+          {
+            "joint": "tail",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 92.47102355957031,
+            "endDegreesPerSecond": 94.36549377441406,
+            "velocityJumpDegreesPerSecond": 1.89447021484375,
+            "rangeDegrees": 15.759657859802246
+          },
+          {
+            "joint": "pectoralL",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 27.12214469909668,
+            "endDegreesPerSecond": 28.105037689208984,
+            "velocityJumpDegreesPerSecond": 1.2552686929702759,
+            "rangeDegrees": 6.212289810180664
+          },
+          {
+            "joint": "jaw",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 0.0,
+            "endDegreesPerSecond": 0.0,
+            "velocityJumpDegreesPerSecond": 0.0,
+            "rangeDegrees": 0.0
+          }
+        ]
+      },
+      {
+        "variant": "candidate",
+        "motion": "bite",
+        "seconds": 2.0,
+        "joints": [
+          {
+            "joint": "spine1",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 4.0020589949563146e-05,
+            "endDegreesPerSecond": 0.015920188277959824,
+            "velocityJumpDegreesPerSecond": 0.015880167484283447,
+            "rangeDegrees": 0.0
+          },
+          {
+            "joint": "tail",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 8.050652503967285,
+            "endDegreesPerSecond": 8.23647403717041,
+            "velocityJumpDegreesPerSecond": 0.185821533203125,
+            "rangeDegrees": 5.580153465270996
+          },
+          {
+            "joint": "pectoralL",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 8.432320594787598,
+            "endDegreesPerSecond": 8.623201370239258,
+            "velocityJumpDegreesPerSecond": 0.19165916740894318,
+            "rangeDegrees": 6.4570536613464355
+          },
+          {
+            "joint": "jaw",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 1.088407278060913,
+            "endDegreesPerSecond": 0.015270490199327469,
+            "velocityJumpDegreesPerSecond": 1.073136806488037,
+            "rangeDegrees": 17.916528701782227
+          }
+        ]
+      },
+      {
+        "variant": "candidate",
+        "motion": "hooked",
+        "seconds": 2.0,
+        "joints": [
+          {
+            "joint": "spine1",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 0.11980429291725159,
+            "endDegreesPerSecond": 0.13178899884223938,
+            "velocityJumpDegreesPerSecond": 0.25159329175949097,
+            "rangeDegrees": 1.5374443531036377
+          },
+          {
+            "joint": "tail",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 123.66337585449219,
+            "endDegreesPerSecond": 122.71680450439453,
+            "velocityJumpDegreesPerSecond": 0.9465713500976562,
+            "rangeDegrees": 18.965478897094727
+          },
+          {
+            "joint": "pectoralL",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 27.12214469909668,
+            "endDegreesPerSecond": 28.105037689208984,
+            "velocityJumpDegreesPerSecond": 1.2552686929702759,
+            "rangeDegrees": 6.212289810180664
+          },
+          {
+            "joint": "jaw",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 10.671298027038574,
+            "endDegreesPerSecond": 0.0,
+            "velocityJumpDegreesPerSecond": 10.671298027038574,
+            "rangeDegrees": 18.334623336791992
+          }
+        ]
+      },
+      {
+        "variant": "candidate",
+        "motion": "release",
+        "seconds": 2.0,
+        "joints": [
+          {
+            "joint": "spine1",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 3.0269575119018555,
+            "endDegreesPerSecond": 2.5462822914123535,
+            "velocityJumpDegreesPerSecond": 0.48067522048950195,
+            "rangeDegrees": 0.5366819500923157
+          },
+          {
+            "joint": "tail",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 64.5262680053711,
+            "endDegreesPerSecond": 63.184234619140625,
+            "velocityJumpDegreesPerSecond": 1.3420333862304688,
+            "rangeDegrees": 11.37033748626709
+          },
+          {
+            "joint": "pectoralL",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 29.64535140991211,
+            "endDegreesPerSecond": 29.77391815185547,
+            "velocityJumpDegreesPerSecond": 0.30351075530052185,
+            "rangeDegrees": 5.659154415130615
+          },
+          {
+            "joint": "jaw",
+            "endpointDegrees": 0.0,
+            "startDegreesPerSecond": 0.0,
+            "endDegreesPerSecond": 0.0,
+            "velocityJumpDegreesPerSecond": 0.0,
+            "rangeDegrees": 0.0
+          }
+        ]
+      }
+    ],
+    "sequences": [
+      {
+        "prefix": "before-swim-side",
+        "frames": 80,
+        "repeatChangedPixels": 0,
+        "encodedFramesPerSecond": 20.0,
+        "minViewportMargin": 0.12865310907363892,
+        "minRasterMargin": 0.12812499701976776
+      },
+      {
+        "prefix": "before-swim-top",
+        "frames": 80,
+        "repeatChangedPixels": 0,
+        "encodedFramesPerSecond": 20.0,
+        "minViewportMargin": 0.12865310907363892,
+        "minRasterMargin": 0.12812499701976776
+      },
+      {
+        "prefix": "before-hooked-side",
+        "frames": 80,
+        "repeatChangedPixels": 0,
+        "encodedFramesPerSecond": 20.0,
+        "minViewportMargin": 0.12992757558822632,
+        "minRasterMargin": 0.12916666269302368
+      },
+      {
+        "prefix": "before-hooked-top",
+        "frames": 80,
+        "repeatChangedPixels": 0,
+        "encodedFramesPerSecond": 20.0,
+        "minViewportMargin": 0.12992757558822632,
+        "minRasterMargin": 0.1302083283662796
+      },
+      {
+        "prefix": "candidate-swim-side",
+        "frames": 80,
+        "repeatChangedPixels": 0,
+        "encodedFramesPerSecond": 20.0,
+        "minViewportMargin": 0.12863761186599731,
+        "minRasterMargin": 0.12812499701976776
+      },
+      {
+        "prefix": "candidate-swim-top",
+        "frames": 80,
+        "repeatChangedPixels": 0,
+        "encodedFramesPerSecond": 20.0,
+        "minViewportMargin": 0.12863761186599731,
+        "minRasterMargin": 0.12812499701976776
+      },
+      {
+        "prefix": "candidate-hooked-side",
+        "frames": 80,
+        "repeatChangedPixels": 0,
+        "encodedFramesPerSecond": 20.0,
+        "minViewportMargin": 0.1297910213470459,
+        "minRasterMargin": 0.12916666269302368
+      },
+      {
+        "prefix": "candidate-hooked-top",
+        "frames": 80,
+        "repeatChangedPixels": 0,
+        "encodedFramesPerSecond": 20.0,
+        "minViewportMargin": 0.1297910213470459,
+        "minRasterMargin": 0.12916666269302368
+      }
+    ]
+  },
+  "playableClips": [
+    {
+      "path": "game/Assets/OceanAngler/Art/Bluefin/Motions/release.anim",
+      "sha256": "5a22c2ae155800f0b5ee369f1412c1efc592a109dd5f2c0455177c8bb24f8dba",
+      "bytes": 58075
+    },
+    {
+      "path": "game/Assets/OceanAngler/Art/Bluefin/Motions/turn.anim",
+      "sha256": "e59f6821341e48c294b7edc9f05dfce99a1b66fda665a2c4b94307181eaa8556",
+      "bytes": 190180
+    },
+    {
+      "path": "game/Assets/OceanAngler/Art/Bluefin/Motions/bite.anim",
+      "sha256": "3a17b016957c32c01a3b7806cd109dba793964f827c9df02888792cce12c4c1a",
+      "bytes": 194837
+    },
+    {
+      "path": "game/Assets/OceanAngler/Art/Bluefin/Motions/hooked.anim",
+      "sha256": "044af84ecc10a7df0b4f9ccf7ac645f38553e0b77e21e396d9da1a41fb927161",
+      "bytes": 309391
+    },
+    {
+      "path": "game/Assets/OceanAngler/Art/Bluefin/Motions/burst.anim",
+      "sha256": "97b16b45ee05a4ebd4965db4ab61a33288de220b3255091dde1148307f8c0781",
+      "bytes": 262981
+    },
+    {
+      "path": "game/Assets/OceanAngler/Art/Bluefin/Motions/swim.anim",
+      "sha256": "ad69509d50a9b6068b714874780d2d77b6a816e737314dddcc017fc3ad13bc99",
+      "bytes": 217551
+    },
+    {
+      "path": "game/Assets/OceanAngler/Art/Bluefin/Motions/idle.anim",
+      "sha256": "dcca07a53dbfb92e1b7611d5abef36e3fe7f12a1da30ece8c2cdaa9fb460a4d1",
+      "bytes": 183577
+    }
+  ],
+  "serializedPlayableClipBytes": 1416592,
+  "artifacts": [
+    {
+      "path": "art/previews/bluefin-periodic-motion/comparison-side.mp4",
+      "sha256": "2a59ce8939cf412366f43e269ce25bf638305f159dbaaf52800223945510699e"
+    },
+    {
+      "path": "art/previews/bluefin-periodic-motion/comparison-top.mp4",
+      "sha256": "edc39dfaf76035c324506c59247a1963fd59f82461049738243e448efce2ad6e"
+    },
+    {
+      "path": "art/previews/bluefin-periodic-motion/contact-side.png",
+      "sha256": "e5d604fd5beb27c348d13abe4402611d2746cdbb32c4a6e3ab6943cf9f5d6d3f"
+    },
+    {
+      "path": "art/previews/bluefin-periodic-motion/contact-top.png",
+      "sha256": "909f67896a4d464d78087a98a2b1f97a227b7636cb712d7af8fc98475b24c22b"
+    },
+    {
+      "path": "art/previews/bluefin-periodic-motion/candidate-swim-top.png",
+      "sha256": "3bf769c97f2c6bec9fee7aa720a20bd1bd757995d7cfb66c4b336b88a8928c1b"
+    },
+    {
+      "path": "art/previews/bluefin-periodic-motion/candidate-hooked-side.png",
+      "sha256": "174d5f8436ff2ba08c4e474586f6795af0512674ea639f982233b78aeaa00fc9"
+    },
+    {
+      "path": "art/previews/bluefin-periodic-motion/rejected-top-framing.png",
+      "sha256": "d345e8c7f5c5d9eab8b8a299b670a77fb1ebf28db31b55cdac9afa24f3394875"
+    }
+  ],
+  "visualReview": {
+    "contactSheetsViewed": 2,
+    "currentOriginalsViewed": 2,
+    "rejectedOriginalsViewed": 1,
+    "fullMoviesWatched": false,
+    "all656OriginalsManuallyViewed": false,
+    "scope": "Selected poses and boundary engineering; natural motion/user/science/complete art remain partial"
+  },
+  "rejections": [
+    "A/B capture repeats passed but visual top framing clipped tail; rejected",
+    "C framing guard computed scale twice; actual nonzero retained, corrected with BakeMesh(true)",
+    "First preview encoding failed because local ffmpeg lacks drawtext; preserved, own frame labels composed with Pillow instead",
+    "Initial public check rejected stale current-asset manifest hashes for intentional Blend/FBX/prefab/report changes; independent geometry/rig/map proof retained, prior hashes preserved and current provenance refreshed"
+  ],
+  "limits": [
+    "Offline sequence encoding20fps is not game performance",
+    "No new full suite, complete progression or900-second rest run",
+    "Current clip tests do not prove child understanding, OS touch, scientific/natural art or physical20minutes",
+    "Full source art regeneration not rerun; motion-only entry and shared action recipe exercised"
+  ],
+  "native": "PENDING",
+  "testFlight": {
+    "build": 8,
+    "sourceCommit": "1bdfa785237701ab2c7675031142d526f66c0e28",
+    "updated": false,
+    "actualInstallation": "NOT_RUN"
+  },
+  "metrics": {
+    "incrementAudit": "PENDING",
+    "historicalOverall": "INCOMPLETE"
+  },
+  "nativeProbeContract": "Explicit iOS Development-only simulator probe reads actual deployed controller clip names and loop flags; no normal UI added"
+}

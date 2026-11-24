@@ -40,3 +40,7 @@ Unity执行python3 tools/game.py bluefin，重建URP材质、动画控制器和R
 # 体色单独更新入口
 
 已有源模型需要改色时，使用`python3 tools/art.py build --asset bluefin --maps-only --label unique --no-preview`保留现有网格、UV、骨骼、动作和FBX；随后重新验证源文件和导入贴图。完整build会重新执行减面，不保证不同折叠选择下逐顶点身份不变。当前体色与反射对照、首次失败及范围见[制作约束](../../../docs/32-hero-albedo-and-lighting.md)，科学、用户和完整美术仍待验收。
+
+## 动作单独更新入口
+
+`python3 tools/art.py build --asset bluefin --motions-only --label unique --no-preview`复用已保存网格和骨架，只更新七动作、源文件和FBX；随后运行源验证与`python3 tools/game.py bluefin`。Unity将导入动作派生为`Art/Bluefin/Motions`内七个原生播放资产，以保留六个循环接缝的连续切线；放流不循环。源/导入/Controller/Player与自然观感分开验收，参见[动作制作与复核](../../../docs/34-hero-motion-continuity.md)，不批量制作其他物种。

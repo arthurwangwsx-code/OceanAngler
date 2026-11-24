@@ -10,6 +10,17 @@ namespace OceanAngler.Tests
     {
         GameObject instance;
         [TearDown] public void CleanUp(){if(instance!=null)Object.DestroyImmediate(instance);}
+        [UnityTest] public IEnumerator AllSevenActionsResolveToThePlayableControllerMotion()
+        {
+            instance=Object.Instantiate(Resources.Load<GameObject>("Models/Bluefin"));var visual=instance.GetComponent<AuthoredFishVisual>();var animator=instance.GetComponentInChildren<Animator>();animator.cullingMode=AnimatorCullingMode.AlwaysAnimate;
+            foreach(var renderer in instance.GetComponentsInChildren<SkinnedMeshRenderer>())renderer.updateWhenOffscreen=true;
+            foreach(string semantic in new[]{"idle","swim","turn","burst","bite","hooked","release"})
+            {
+                visual.semantic=semantic;yield return new WaitForSeconds(.3f);
+                Assert.That(animator.GetCurrentAnimatorStateInfo(0).IsName(semantic),Is.True,semantic);
+                var clip=animator.GetCurrentAnimatorClipInfo(0).Single().clip;Assert.That(clip.name,Is.EqualTo(semantic));Assert.That(clip.isLooping,Is.EqualTo(semantic!="release"));
+            }
+        }
         [UnityTest] public IEnumerator ReleaseUsesImportedNonLoopingMotionAndFreezesTheActualTail()
         {
             instance=Object.Instantiate(Resources.Load<GameObject>("Models/Bluefin"));

@@ -457,17 +457,9 @@ for obj in lods:
     mod=obj.modifiers.new('SwimDeformation','ARMATURE');mod.object=rig;obj.parent=rig
     obj.hide_render=obj!=body;obj.hide_set(obj!=body)
 
-rig.animation_data_create()
-for name,amplitude,cycles in [('idle',.06,1),('swim',.16,2),('turn',.14,1),('burst',.25,3),('bite',.10,1),('hooked',.30,3),('release',.18,2)]:
-    action=bpy.data.actions.new(name);rig.animation_data.action=action;action.use_fake_user=True
-    for frame in range(1,62,3):
-        phase=(frame-1)/60*math.tau*cycles
-        for i,bone in enumerate(['head','spine1','spine2','spine3','peduncle','tail']):
-            p=rig.pose.bones[bone];p.rotation_mode='XYZ';p.rotation_euler=(0,0,math.sin(phase-i*.65)*amplitude*(i/5)**1.8+(math.sin((frame-1)/60*math.pi)*.12 if name=='turn' and i>0 else 0));p.keyframe_insert(data_path='rotation_euler',frame=frame)
-        for s,label in [(1,'L'),(-1,'R')]:
-            p=rig.pose.bones['pectoral'+label];p.rotation_mode='XYZ';p.rotation_euler=(math.sin(phase*.5)*.09,0,s*math.sin(phase)*.07);p.keyframe_insert(data_path='rotation_euler',frame=frame)
-        p=rig.pose.bones['jaw'];p.rotation_mode='XYZ';p.rotation_euler=(-.32*max(0,math.sin(phase)) if name in ('bite','hooked') else .005*math.sin(phase),0,0);p.keyframe_insert(data_path='rotation_euler',frame=frame)
-    action['semantic']=name
+sys.path.insert(0,str(ROOT/'tools'))
+from art_bluefin_motions import write_motions
+write_motions(rig)
 rig.animation_data.action=bpy.data.actions.get('idle');scene.frame_start=1;scene.frame_end=61;scene.frame_set(1)
 
 # Preserve source before export. FBX includes all LODs, skeleton and seven actions.
