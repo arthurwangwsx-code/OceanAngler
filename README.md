@@ -21,6 +21,7 @@
 | 当前真实结果 | [完整总账](reports/acceptance-ledger.md)、[移动布局与发行](reports/mobile-layout.md)、[逻辑与Mac运行](reports/progression-validation.md) |
 | 首条独立源模型 | [蓝鳍鲹候选及验收边界](reports/bluefin-art.md)、[源资产重建](art/source/bluefin/README.md) |
 | 第一套完整钓组候选 | [纺车钓组与验证边界](reports/spinning-rig-art.md)、[源资产重建](art/source/spinning-rig/README.md) |
+| 第二处海域与共享观察 | [近海航道、切换与验收边界](docs/15-nearshore-channel.md)、[源资产重建](art/source/nearshore-channel/README.md) |
 | 第一处独立海域候选 | [珊瑚海湾与验证边界](reports/coral-bay-art.md)、[海湾源资产重建](art/source/coral-bay/README.md) |
 | 物种资料和仅观察生物 | [学名、辨识与建模交接](docs/10-species-production.md) |
 | 原创音频与实际画面 | [音频控制](docs/11-feedback-audio.md)、[三档原生截图与问题](reports/integrated-native-render.md) |
@@ -49,11 +50,11 @@ ASC_ENV_FILE=/path/to/private/asc.env python3 tools/asc.py status
 
 ![蓝鳍鲹源模型工作室预览：候选，尚非最终美术或游戏场景](art/previews/bluefin-anatomy/three-quarter.png)
 
-[360度源模型转台](art/previews/bluefin-anatomy/turntable.mp4)。首条蓝鳍鲹与完整纺车钓组均有独立Blend/FBX、PBR、骨骼/动作和三档LOD；另有[钓组近景](art/previews/spinning-rig/reel.png)和[卷线器转台](art/previews/spinning-rig/turntable.mp4)。这些仍是候选，A1–A3、科学/用户审阅和真机尚未通过；其余11鱼种、其他钓具、两海域及观察生物仍需完整制作。
+[360度源模型转台](art/previews/bluefin-anatomy/turntable.mp4)。首条蓝鳍鲹与完整纺车钓组均有独立Blend/FBX、PBR、骨骼/动作和三档LOD；另有[钓组近景](art/previews/spinning-rig/reel.png)和[卷线器转台](art/previews/spinning-rig/turntable.mp4)。这些仍是候选，A1–A3、科学/用户审阅和真机尚未通过；其余11鱼种、其他钓具、陆坡及观察生物仍需完整制作，海湾和新近海航道也尚未通过成品美术验收。
 
 当前开发源码包含保存成功后的转向/放流与空载竿恢复、18任务指引、12候选学名和3个仅观察目录保护，以及原创水下底音/探索音乐及独立保存的开关。初始装备20次确定性模拟、逐次重载、重复记录不加分和全装备解锁已有[逻辑证据](reports/task-journey.json)，不代表儿童首鱼时间、随机遭遇耗时或实际20次UI试玩。后续源码已接入独立保护观察交互和图鉴，三种形体仍为A0样板，完整源模型与美术验收未完成。
 
-海湾已有独立源地形、码头、小船、岩礁/珊瑚/海草、水上/水下观察、缓存倒影与深度透射。源网格朝向/封闭、鱼体鳃缘/材质及鉴赏标题修复分别保留证据；岸线从孤立沙脊改为连接陆地的缓坡，沙地波纹与颜色分离。蓝鳍鲹新增实际向下张开的下颌、口腔内颊及逐段鳍纹，修复隔离场景首次绘制的子材质颜色异常。开发分支又加入三条复用模型的环境鱼群，固定实例、局部聚合/分离，暂停和减弱动态停止；图鉴/钓具鉴赏隐藏，背景鱼不参与结算。开发分支还加入抛投、接近、控线收鱼的阶段路径，鱼线保持到收鱼并跟随动画嘴部。蓝鳍鲹又补灰银/灰铜与蓝黑斑、蓝/浅鳍色区及较收敛的鳍比例，校准近景自阴影。最新46项Editor、9项无画面PlayMode及Mac编译通过，源文件工程检查和Editor离屏GPU图分别审阅；当前原生窗口与实际iPhone/iPad画面、触控、听感/触觉及20分钟性能仍未通过。旧版三档Mac流程各12截图属于其历史源码，不能替代新资产的验收。
+海湾已有独立源地形、码头、小船、岩礁/珊瑚/海草、水上/水下观察、缓存倒影与深度透射。源网格朝向/封闭、鱼体鳃缘/材质及鉴赏标题修复分别保留证据；岸线从孤立沙脊改为连接陆地的缓坡，沙地波纹与颜色分离。蓝鳍鲹新增实际向下张开的下颌、口腔内颊及逐段鳍纹，修复隔离场景首次绘制的子材质颜色异常。开发分支又加入三条复用模型的环境鱼群，固定实例、局部聚合/分离，暂停和减弱动态停止；图鉴/钓具鉴赏隐藏，背景鱼不参与结算。开发分支还加入抛投、接近、控线收鱼的阶段路径，鱼线保持到收鱼并跟随动画嘴部。蓝鳍鲹又补灰银/灰铜与蓝黑斑、蓝/浅鳍色区及较收敛的鳍比例，校准近景自阴影。保护观察阶段46项Editor、9项无画面PlayMode及Mac编译通过，源文件工程检查和Editor离屏GPU图分别审阅；当前原生窗口与实际iPhone/iPad画面、触控、听感/触觉及20分钟性能仍未通过。旧版三档Mac流程各12截图属于其历史源码，不能替代新资产的验收。
 
 Mac构建入口为`python3 tools/game.py mac`；原生检查为`python3 tools/runtime_smoke.py --label uniquerun`，使用隔离存档，须在桌面窗口可用后实际运行并核对图像/回执。Editor离屏诊断为`python3 tools/game.py water-review --label uniquereview`，不能据此宣布玩家UI或设备通过。Unity和资产写入串行，每轮用新label保留证据；字体重建见tools/requirements.txt。
 
@@ -62,3 +63,5 @@ TestFlight 0.1.0 (4)冻结于ee7ba50，包含三条环境鱼、阶段接近/收�
 保护观察后续源码已接入绿海龟、宽吻海豚和鲸鲨的独立观察/图鉴/存档闭环，形体仅为A0样板。首次记录才升级payload为schema 2，旧build 4会拒绝该版本以保护记录，不能以清档解决回退。此变化尚未进入上述TestFlight 0.1.0 (4)，详见[验证与限制](reports/protected-observation.md)。
 
 2026-11-24已按要求把冻结0.1.0 (4)以本地单设备测试包装到当前iPhone 17 Pro Max，并确认启动和运行进程；见[安装回执](reports/iphone-local-0.1.0-4.md)。它不等同于TestFlight设备安装，主界面/触控和20分钟仍未验，后续未发布源码不在该包内。
+
+近海航道候选已接入共享水上/水下观察和按需海域切换：自有Blend/FBX/四组PBR、六组各三LOD、独立水面及复用自有系泊艇。50项Editor、10项无画面PlayMode、Mac编译和11项发布工具测试通过，12张工作室/Editor Metal原图逐张审阅。岛体轮廓、材质边界与重复岩石/叶片仍有明显样板感，不能认定拟真美术合格；当前Mac锁定，尚无本轮玩家窗口或设备画面。新候选未进入已安装的build 4。详见[近海航道证据](reports/nearshore-channel.md)。

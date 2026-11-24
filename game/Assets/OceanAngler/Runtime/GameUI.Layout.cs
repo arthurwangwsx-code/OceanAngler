@@ -68,7 +68,7 @@ namespace OceanAngler
                     var b=Button(content,h.name+(unlocked?"":" · "+h.unlockPoints+"分"),12,48+i*52,-24,46,()=>game.SelectHabitat(h.id),h.id==game.Progress.Data.habitatId?Teal:Navy);b.GetComponentInChildren<Text>().fontSize=17;b.interactable=unlocked&&game.Session.Phase==FishingPhase.Ready;
                 }
                 Label(content,"已装备\n"+game.Content.Gear(game.Progress.Data.rodId).name+" · "+game.Content.Gear(game.Progress.Data.reelId).name+"\n"+game.Content.Gear(game.Progress.Data.lineId).name+" · "+game.Content.Gear(game.Progress.Data.lureId).name,17,Muted,12,212,-24,86);
-                if(game.Progress.Data.habitatId=="bay")Button(content,"看看海湾",12,306,-24,44,()=>Navigate("海湾观察"),Navy).GetComponentInChildren<Text>().fontSize=18;
+                if(MarineHabitat.ResourceFor(game.Progress.Data.habitatId)!=null)Button(content,game.Progress.Data.habitatId=="bay"?"看看海湾":"看看海域",12,306,-24,44,()=>Navigate("海湾观察"),Navy).GetComponentInChildren<Text>().fontSize=18;
             }
             if(game.Session.Paused)Button(pageRoot,"结束本次 · 返回准备",left?Width-252:12,Height-90,240,48,game.ReturnToPreparation,Navy).GetComponentInChildren<Text>().fontSize=17;
             if(game.Session.Phase==FishingPhase.Landed&&game.Session.Catch!=null)

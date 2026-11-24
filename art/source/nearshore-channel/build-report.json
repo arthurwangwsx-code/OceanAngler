@@ -1,0 +1,123 @@
+{
+  "status": "CANDIDATE",
+  "units": "metres",
+  "waterLevel": 4.5,
+  "lods": {
+    "Seabed_LOD0": 3236,
+    "Seabed_LOD1": 1618,
+    "Seabed_LOD2": 646,
+    "Islands_LOD0": 4212,
+    "Islands_LOD1": 2106,
+    "Islands_LOD2": 842,
+    "Outcrops_LOD0": 19152,
+    "Outcrops_LOD1": 9576,
+    "Outcrops_LOD2": 3830,
+    "Kelp_LOD0": 12600,
+    "Kelp_LOD1": 5040,
+    "Kelp_LOD2": 1800,
+    "Boat_LOD0": 1240,
+    "Boat_LOD1": 620,
+    "Boat_LOD2": 242,
+    "Mooring_LOD0": 1412,
+    "Mooring_LOD1": 706,
+    "Mooring_LOD2": 282,
+    "Water_LOD0": 512
+  },
+  "solidCounts": {
+    "Seabed": 1,
+    "Islands": 3,
+    "Outcrops": 14,
+    "Kelp": 90
+  },
+  "source": "tools/art_channel.py",
+  "islandCentres": [
+    [
+      -28,
+      82,
+      15,
+      22,
+      17.5
+    ],
+    [
+      32,
+      110,
+      18,
+      25,
+      20
+    ],
+    [
+      -65,
+      180,
+      25,
+      31,
+      23
+    ]
+  ],
+  "orientationCorrections": {
+    "KelpL2": 8
+  },
+  "reuse": {
+    "boatSource": "art/source/coral-bay/CoralBay.blend",
+    "sha256": "8feee230592e3f6954b641081abf674b5387650f25032862c5582e1a7a9afc46",
+    "change": "Removed former pier tether and translated authored dinghy; own new buoy/mooring"
+  },
+  "markers": {
+    "OriginAnchor": [
+      0,
+      0,
+      0
+    ],
+    "NorthAnchor": [
+      0,
+      1,
+      0
+    ],
+    "UpAnchor": [
+      0,
+      0,
+      1
+    ],
+    "UnderwaterCamera": [
+      0,
+      -6.5,
+      1.25
+    ],
+    "UnderwaterTarget": [
+      0,
+      6,
+      0
+    ],
+    "SurfaceCamera": [
+      0,
+      -9,
+      6.4
+    ],
+    "SurfaceTarget": [
+      -1,
+      18,
+      4.6
+    ],
+    "ReefCamera": [
+      2,
+      3,
+      -0.2
+    ],
+    "ReefTarget": [
+      8,
+      17,
+      -4
+    ],
+    "BoatCamera": [
+      -0.7,
+      2,
+      6.7
+    ],
+    "BoatTarget": [
+      -5,
+      6,
+      4.5
+    ]
+  },
+  "artAcceptance": "NOT_ACCEPTED",
+  "deviceAcceptance": "NOT_RUN"
+}

@@ -4,14 +4,14 @@ import argparse,json,os,shutil,subprocess,time
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 def main():
-    p=argparse.ArgumentParser();p.add_argument('action',choices=['build','validate','review']);p.add_argument('--asset',choices=['bluefin','spinning-rig','coral-bay'],default='bluefin');p.add_argument('--label',required=True);p.add_argument('--no-preview',action='store_true');p.add_argument('--motion',default='idle');p.add_argument('--frame',type=int,default=1);p.add_argument('--turntable',action='store_true');a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('action',choices=['build','validate','review']);p.add_argument('--asset',choices=['bluefin','spinning-rig','coral-bay','nearshore-channel'],default='bluefin');p.add_argument('--label',required=True);p.add_argument('--no-preview',action='store_true');p.add_argument('--motion',default='idle');p.add_argument('--frame',type=int,default=1);p.add_argument('--turntable',action='store_true');a=p.parse_args()
     if not a.label.replace('-','').isalnum():raise RuntimeError('Use a simple unique evidence label')
     folder=ROOT/'.local/art-runs'/a.label
     if folder.exists():raise RuntimeError('Evidence run already exists')
     folder.mkdir(parents=True)
     blender=Path(os.environ.get('BLENDER','/Applications/Blender.app/Contents/MacOS/Blender'))
     args=[str(blender),'--background','--factory-startup','--threads','8','--python-exit-code','1']
-    name,stem={'bluefin':('Bluefin','bluefin'),'spinning-rig':('SpinningRig','spinning_rig'),'coral-bay':('CoralBay','bay')}[a.asset]
+    name,stem={'bluefin':('Bluefin','bluefin'),'spinning-rig':('SpinningRig','spinning_rig'),'coral-bay':('CoralBay','bay'),'nearshore-channel':('NearshoreChannel','channel')}[a.asset]
     if a.action!='build':args+=[str(ROOT/'art/source'/a.asset/(name+'.blend'))]
     args+=['--python',str(ROOT/'tools'/('art_'+stem+'.py' if a.action=='build' else 'art_validate_'+stem+'.py' if a.action=='validate' else 'art_review_'+stem+'.py'))]
     if a.action=='build' and a.no_preview:args+=['--','--no-preview']

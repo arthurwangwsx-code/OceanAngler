@@ -128,7 +128,7 @@ namespace OceanAngler
                 b.interactable=unlocked && game.Session.Phase==FishingPhase.Ready;
             }
             Label(info,"已装备\n"+game.Content.Gear(game.Progress.Data.rodId).name+" · "+game.Content.Gear(game.Progress.Data.reelId).name+"\n"+game.Content.Gear(game.Progress.Data.lineId).name+" · "+game.Content.Gear(game.Progress.Data.lureId).name,19,Muted,20,368,-40,90);
-            if(game.Progress.Data.habitatId=="bay")Button(info,"看看海湾",20,460,-40,44,()=>Navigate("海湾观察"),Navy).GetComponentInChildren<Text>().fontSize=19;
+            if(MarineHabitat.ResourceFor(game.Progress.Data.habitatId)!=null)Button(info,game.Progress.Data.habitatId=="bay"?"看看海湾":"看看海域",20,460,-40,44,()=>Navigate("海湾观察"),Navy).GetComponentInChildren<Text>().fontSize=19;
             var controls=Box(pageRoot,"Controls",Panel,new Vector2(left?.02f:.69f,.12f),new Vector2(left?.31f:.98f,.81f),Vector2.zero,Vector2.zero);
             phaseText=Label(controls,"",Mathf.Min(32,Mathf.FloorToInt((Width*.29f-48)/9)),Color.white,24,22,-48,48);
             hintText=Label(controls,"",21,Muted,24,86,-48,116);

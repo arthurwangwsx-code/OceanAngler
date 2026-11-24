@@ -10,22 +10,30 @@ namespace OceanAngler.Editor
     // Isolated GPU material review. No player saves, desktop capture or UI claims.
     public static class WaterRenderReview
     {
-        [Serializable] sealed class Receipt {public string status="PASS",scope="isolated Editor GPU water fixture; no player UI/device acceptance";public int width=1440,height=900,reflectionPasses;public float reflectionVariance,waveDifference;public string graphics;public bool released;}
-        public static void Capture()
+        [Serializable] sealed class Receipt {public string status="PASS",scope="isolated Editor GPU water fixture; no player UI/device acceptance";public int width=1440,height=900,reflectionPasses;public float reflectionVariance,waveDifference;public string graphics;public bool released;public float initialDifference;}
+        public static void Capture()=>CapturePrefab("OCEAN_WATER_REVIEW_OUTPUT","Models/CoralBay",false);
+        public static void CaptureChannel()=>CapturePrefab("OCEAN_CHANNEL_REVIEW_OUTPUT","Models/NearshoreChannel",true);
+        static void CapturePrefab(string outputVariable,string resource,bool channel)
         {
-            string folder=Environment.GetEnvironmentVariable("OCEAN_WATER_REVIEW_OUTPUT");if(string.IsNullOrEmpty(folder))throw new InvalidOperationException("Review output required");
+            string folder=Environment.GetEnvironmentVariable(outputVariable);if(string.IsNullOrEmpty(folder))throw new InvalidOperationException("Review output required");
             if(SystemInfo.graphicsDeviceType==GraphicsDeviceType.Null)throw new InvalidOperationException("A graphics device is required for GPU review");
             EditorSceneManager.OpenScene("Assets/OceanAngler/Generated/Bay.unity");var camera=Camera.main;camera.enabled=false;camera.aspect=1.6f;
             var data=camera.GetComponent<UniversalAdditionalCameraData>()??camera.gameObject.AddComponent<UniversalAdditionalCameraData>();data.requiresColorTexture=true;data.requiresDepthTexture=true;
             RenderSettings.ambientLight=new Color(.2f,.32f,.38f);
-            var fill=new GameObject("ReviewRuntimeWaterFill").AddComponent<Light>();fill.type=LightType.Point;fill.color=new Color(.37f,.79f,.86f);fill.intensity=2.5f;fill.range=15;fill.transform.position=new Vector3(0,3,0);
-            var root=UnityEngine.Object.Instantiate(Resources.Load<GameObject>("Models/CoralBay"));var bay=root.GetComponent<BayHabitat>();var reflection=bay.reflection;
+            var fill=new GameObject("ReviewRuntimeWaterFill").AddComponent<Light>();fill.type=LightType.Point;fill.color=new Color(.37f,.79f,.86f);fill.intensity=channel?0:2.5f;fill.range=15;fill.transform.position=new Vector3(0,3,0);
+            var root=UnityEngine.Object.Instantiate(Resources.Load<GameObject>(resource));var bay=root.GetComponent<MarineHabitat>();var reflection=bay.reflection;
             var target=new RenderTexture(1440,900,24,RenderTextureFormat.ARGB32){antiAliasing=4};target.Create();camera.targetTexture=target;
             var request=new UniversalRenderPipeline.SingleCameraRequest{destination=target};var receipt=new Receipt{graphics=SystemInfo.graphicsDeviceType.ToString()};
             try
             {
                 if(!RenderPipeline.SupportsRenderRequest(camera,request))throw new InvalidOperationException("URP render request not supported");
                 bay.Present(camera,true,true,0,true,false);RenderPipeline.SubmitRenderRequest(camera,request);var first=Read(target,Path.Combine(folder,"surface.png"));
+                if(channel)
+                {
+                    bay.Present(camera,true,true,0,true,false);RenderPipeline.SubmitRenderRequest(camera,request);var repeated=Read(target,Path.Combine(folder,"surface-repeat.png"));
+                    for(int i=0;i<first.Length;i++)receipt.initialDifference=Mathf.Max(receipt.initialDifference,Mathf.Max(Mathf.Abs(first[i].r-repeated[i].r),Mathf.Max(Mathf.Abs(first[i].g-repeated[i].g),Mathf.Abs(first[i].b-repeated[i].b))));
+                    if(receipt.initialDifference>0)throw new InvalidOperationException("Initial channel render changed");
+                }
                 bay.waterSurface.enabled=false;RenderPipeline.SubmitRenderRequest(camera,request);Read(target,Path.Combine(folder,"no-water-control.png"));bay.waterSurface.enabled=true;
                 if(!reflection.Ready)throw new InvalidOperationException("Planar reflection missing");
                 var pixels=Read(reflection.Texture,Path.Combine(folder,"reflection.png"));float mean=0,squared=0;

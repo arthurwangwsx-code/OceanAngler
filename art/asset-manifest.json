@@ -8,7 +8,7 @@
       "license": "SIL Open Font License 1.1",
       "redistribution": true,
       "status": "LICENSE_VERIFIED",
-      "sha256": "411e43023de0bf08d341c2a1346cc1a3af60544463a27d1ad9690e932c6b89b1",
+      "sha256": "f6d36150757ab8411d8f4fd94a8cacbdfe224e8fc7c8d9b92f73b0e13e87d1fb",
       "path": "game/Assets/OceanAngler/Resources/UIFont.ttf"
     },
     {
@@ -979,6 +979,196 @@
         {
           "path": "art/previews/protected-observation/whale-shark-top.png",
           "sha256": "aea1bc4081a0bdf87d80c079918f43c80f0ed006adfb0f7b9ef7ddc0fc214cdd"
+        }
+      ]
+    },
+    {
+      "id": "nearshore-channel-authored-candidate",
+      "author": "OceanAngler contributors",
+      "source": "tools/art_channel.py; own CoralBay dinghy reuse recorded in build-report.json",
+      "license": "MIT",
+      "redistribution": true,
+      "sourceRedistribution": true,
+      "canModify": true,
+      "acquiredAt": "2026-11-24",
+      "status": "ART_REVIEW_PENDING",
+      "path": "art/source/nearshore-channel/NearshoreChannel.blend",
+      "sha256": "d0086638ef961dea147b32ebab79a961ceed92a8814d64d2960538f78e3f30d9",
+      "artifacts": [
+        {
+          "path": "art/source/nearshore-channel/NearshoreChannel.blend",
+          "sha256": "d0086638ef961dea147b32ebab79a961ceed92a8814d64d2960538f78e3f30d9"
+        },
+        {
+          "path": "art/source/nearshore-channel/boat-profile.json",
+          "sha256": "476ccc2b2685cbcd020f1890f3b3ea01123f50555e169c3d6d550e663ab2154a"
+        },
+        {
+          "path": "art/source/nearshore-channel/build-report.json",
+          "sha256": "b453013fad44b52708d42cb3f67c7b0c43bf78711fa273c072d2ea8307e9f22f"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/NearshoreChannel/Channel_Buoy.mat",
+          "sha256": "edf18df2e04531ead59207dfef113004e78b4f24950c489a11ce4db348aa0992"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/NearshoreChannel/Channel_CoastalSoil.mat",
+          "sha256": "824cc50c4fc787e2eb50c210a2d75c563e58bcd6ea2a22ea694afc3b125693d0"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/NearshoreChannel/Channel_CoastalSoil.png",
+          "sha256": "71130ed2ac5a371accfabb0de3e1887cc38c57781562b8a81a90797b8c6d807e"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/NearshoreChannel/Channel_CoastalSoil_MetallicSmoothness.png",
+          "sha256": "6fe5aa1b673f5ec846222ae68e622605352c29c0680dd61a6406b7309229ab2a"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/NearshoreChannel/Channel_CoastalSoil_Normal.png",
+          "sha256": "9ddac9fb51e24142a269dae4b4164b562a5b37ecf03d024e5a917f9078f94fc4"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/NearshoreChannel/Channel_CoastalSoil_Roughness.png",
+          "sha256": "92395f63cecc32ee2ba4db7f98e4985858b0ca28bc07ae5fe540077195314e7e"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/NearshoreChannel/Channel_Kelp.mat",
+          "sha256": "e0a61d1c1b2a3dcc3c469bc321c565abb8d41881ba61bcde907e38339dcdde41"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/NearshoreChannel/Channel_Kelp.png",
+          "sha256": "38275f60c324bd4e38431032c6ddeafe07e178675da915be0c5e11a56dc23263"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/NearshoreChannel/Channel_Kelp_MetallicSmoothness.png",
+          "sha256": "fddaebb9a37d212247bbbec7a0dc7bda9c80ed781e9049fcc6d894d9601d5d96"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/NearshoreChannel/Channel_Kelp_Normal.png",
+          "sha256": "b9a927399b3be530e8edee8d5f203754696edebdb537513371eb0a2e932de645"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/NearshoreChannel/Channel_Kelp_Roughness.png",
+          "sha256": "4ff23d9e4cc07878d54ec70879b7b74fabeef1531cb063b010a077c1a0e10faa"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/NearshoreChannel/Channel_Mooring.mat",
+          "sha256": "38c78f7d6babd7c7787d5f7a8120df25a800c481ea95f58c42e22f3488d717a5"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/NearshoreChannel/Channel_Sediment.mat",
+          "sha256": "1502f41316232d459de0a641f341df09d782971b209f0244314dab763b47efbb"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/NearshoreChannel/Channel_Sediment.png",
+          "sha256": "9cfcdf1f0a369987a3ddd6bfdae5efb26636b9fda518e497bd5ce0f2f986fc4b"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/NearshoreChannel/Channel_Sediment_MetallicSmoothness.png",
+          "sha256": "6ef7d92a54de1c253b14458465d8dd0591e64be7b914a57de2ceee7376b75252"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/NearshoreChannel/Channel_Sediment_Normal.png",
+          "sha256": "0e7f7c2ff5496a15294174ad155c447360005bfe5c8e4e5bc24b1e3337aed453"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/NearshoreChannel/Channel_Sediment_Roughness.png",
+          "sha256": "b9f227e67bf5a630494a695bb99f8328af2721dc25bcf4c61679e3bad2cfe6b3"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/NearshoreChannel/Channel_Stone.mat",
+          "sha256": "72e446c297c5cde2fe625409f4655aeae483edbe531dd43a7d98e24af6e9e9ae"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/NearshoreChannel/Channel_Stone.png",
+          "sha256": "6a8ae2bf1b0a0783936c8b824bf22df83813a411598428f4214272601329fa4e"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/NearshoreChannel/Channel_Stone_MetallicSmoothness.png",
+          "sha256": "bc4a65c603e8c86322f89445362568c234591ac11417585a3177a07c45d7a722"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/NearshoreChannel/Channel_Stone_Normal.png",
+          "sha256": "0dd2444458deccfe38a779a04816f91670cf4bc0c8071fcd3c489a41489c710f"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/NearshoreChannel/Channel_Stone_Roughness.png",
+          "sha256": "fef5a9ea4289431999b887c55a279082e7979833bc816198d554b5207c7a5cbd"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/NearshoreChannel/Channel_Water.mat",
+          "sha256": "3416dc3fbda5777c969ae46015966506acad4b45ea728bd59eca90c17f77745a"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/NearshoreChannel/NearshoreChannel.fbx",
+          "sha256": "d9c3447ae48f0f4dbaac564d2aa4b72f4a33c8732b718dc228ca1583a3de905b"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Resources/Models/NearshoreChannel.prefab",
+          "sha256": "f6a50c30610b70310feaf5008f9589bab62474eff6e091812d77ac5e19783850"
+        }
+      ],
+      "note": "Three grounded islands, closed seabed/outcrops/fronds, six three-LOD assemblies, four original PBR families and separate water. Current distant island silhouettes/material transitions and repeated stone/leaf detail remain prototype quality. No real ecosystem, final art, player-window or device acceptance."
+    },
+    {
+      "id": "nearshore-channel-previews",
+      "author": "OceanAngler contributors",
+      "source": "Own saved Blend Cycles views and isolated Editor Metal channel2; no external images",
+      "license": "MIT",
+      "redistribution": true,
+      "sourceRedistribution": true,
+      "canModify": true,
+      "acquiredAt": "2026-11-24",
+      "status": "PROTOTYPE_REVIEW_PARTIAL",
+      "note": "Unmodified 4 studio and 8 Editor fixture images, individually viewed. Not player UI or device screenshots. Studio lighting is washed out; current island silhouettes, material transitions and repeated rock/leaf detail are not accepted final art.",
+      "artifacts": [
+        {
+          "path": "art/previews/nearshore-channel/gpu-no-water-control.png",
+          "sha256": "41f8810063da3a288fc00c80721fd791165c6811b66fafb1bb6029c49ec4a033"
+        },
+        {
+          "path": "art/previews/nearshore-channel/gpu-pier.png",
+          "sha256": "00a57c680c4e4544f0326525b5e1252eef5f1660c869d79e334ed71610d8768e"
+        },
+        {
+          "path": "art/previews/nearshore-channel/gpu-reef.png",
+          "sha256": "c13f0db86f8729750d6201437a1e9b30bc9c64945698bba55dff501e49270783"
+        },
+        {
+          "path": "art/previews/nearshore-channel/gpu-reflection.png",
+          "sha256": "7e035b9bb4841ede97c8c97fca95b6ad958a62eceed3770071e65ab68662c4eb"
+        },
+        {
+          "path": "art/previews/nearshore-channel/gpu-surface-repeat.png",
+          "sha256": "39fbc0bfc02c586a46c6ba150ee4d4adb2762326b2ee57ba5d1eb7b807ae3942"
+        },
+        {
+          "path": "art/previews/nearshore-channel/gpu-surface-time2.png",
+          "sha256": "84f928e6fe33465723d23c14d8b63d3fb7c088836115c1b3fb47a783df434bbb"
+        },
+        {
+          "path": "art/previews/nearshore-channel/gpu-surface.png",
+          "sha256": "39fbc0bfc02c586a46c6ba150ee4d4adb2762326b2ee57ba5d1eb7b807ae3942"
+        },
+        {
+          "path": "art/previews/nearshore-channel/gpu-underwater.png",
+          "sha256": "6ba9cde82ead2f7a49215b30d48c0b0d30d4552440e950861a36f90dd034865e"
+        },
+        {
+          "path": "art/previews/nearshore-channel/source-boat.png",
+          "sha256": "0478c51addd8f19cff8de69fe70f7120ea654ac4f347a7dabbabfbc123d300e1"
+        },
+        {
+          "path": "art/previews/nearshore-channel/source-outcrops.png",
+          "sha256": "593759694790d24948cefe85cfa07b1b5a7322a8b0570a1b2fa92b6202241a2c"
+        },
+        {
+          "path": "art/previews/nearshore-channel/source-surface.png",
+          "sha256": "a2f192af09f2d1bc487de2042aed48d30e71d73935391d587a012db21dc4ba4d"
+        },
+        {
+          "path": "art/previews/nearshore-channel/source-underwater.png",
+          "sha256": "47239855b3086cad1533ef3cabb3486887ce8b42512d78153c7276418150d5cd"
         }
       ]
     }
