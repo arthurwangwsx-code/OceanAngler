@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "95aa3cd7-a8e3-46b1-8a89-b0c7975d17b1",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "17bb482dc5217adb638e1cd2bb6891cfe498e070c926b82b68a7ff5f3ec6383e",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-24T16:15:09.144Z",
+    "finishedAt": "2026-11-24T16:17:21.877Z",
+    "durationMs": 132691.77687499998,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/beta6-qa/poll.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/beta6-qa/poll.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T16:15:09.144Z",
+  "finishedAt": "2026-11-24T16:17:21.877Z",
+  "durationMs": 132691.77687499998
+}

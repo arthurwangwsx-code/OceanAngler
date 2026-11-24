@@ -36,9 +36,9 @@
     "equippedGear": 20,
     "duplicateReleaseTaps": 34
   },
-  "freeze": "NOT_RUN",
-  "archive": "NOT_RUN",
-  "upload": "NOT_RUN",
+  "freeze": "PASS",
+  "archive": "PASS",
+  "upload": "PASS",
   "actualTestFlightInstallation": "NOT_RUN",
   "overallProduct": "PARTIAL",
   "art": "PARTIAL",
@@ -66,5 +66,10 @@
     "gameSourceUnchangedSinceFullTests": true,
     "rejectedSourceCommit": "d8e928b21a567dc1e5e210a1126322e69cd2e118",
     "noExportOrUploadBeforeFix": true
-  }
+  },
+  "releaseReport": "reports/testflight-0.1.0-6.json",
+  "frozenSource": "648b4ce8d9c22f3e2a24ddf3bbe658d822023c2a",
+  "sourceDigest": "2625263c7ed5aaace780872e499fe555be0363c7e3011bd84a344222300f54d8",
+  "appleProcessing": "VALID",
+  "internalGroup": "VERIFIED"
 }
