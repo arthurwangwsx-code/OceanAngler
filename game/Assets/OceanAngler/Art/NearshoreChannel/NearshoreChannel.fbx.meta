@@ -42,6 +42,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Channel_IslandBlend
+    second: {fileID: 2100000, guid: 21e979ff4ea4741bf87ae9dec20fb896, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Channel_Kelp
     second: {fileID: 2100000, guid: 628c8cba5cf1e4e559ab01a6de4a27bd, type: 2}
   - first:

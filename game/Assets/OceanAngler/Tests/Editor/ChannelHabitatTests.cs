@@ -35,6 +35,15 @@ namespace OceanAngler.Tests
             var water=habitat.waterSurface.sharedMaterial;Assert.That(water.shader.name,Is.EqualTo("OceanAngler/BayWater"));Assert.That(ShaderUtil.ShaderHasError(water.shader),Is.False);Assert.That(water.GetVector("_BoatOrigin"),Is.EqualTo(new Vector4(-5,4.5f,6,.48f)));
             Assert.That(root.GetComponentsInChildren<Renderer>(true).SelectMany(r=>r.sharedMaterials).All(m=>m!=null),Is.True);Assert.That(habitat.causticLight.cookie,Is.Not.Null);
         }
+        [Test] public void TerrainBlendSurvivesImportAndAllDistanceLevels()
+        {
+            var filters=root.GetComponentsInChildren<MeshFilter>(true).Where(f=>f.name.StartsWith("Islands_LOD")).ToArray();Assert.That(filters.Length,Is.EqualTo(3));
+            foreach(var filter in filters)
+            {
+                var mesh=filter.sharedMesh;var colors=mesh.colors;Assert.That(colors.Length,Is.EqualTo(mesh.vertexCount));Assert.That(colors.All(c=>!float.IsNaN(c.r)&&!float.IsInfinity(c.r)&&c.r>=0&&c.r<=1),Is.True);Assert.That(colors.Min(c=>c.r),Is.LessThan(.01f));Assert.That(colors.Max(c=>c.r),Is.GreaterThan(.3f));Assert.That(colors.Count(c=>c.r>.01f&&c.r<.99f),Is.GreaterThan(100));Assert.That(mesh.tangents.Length,Is.EqualTo(mesh.vertexCount));
+                var materials=filter.GetComponent<Renderer>().sharedMaterials;Assert.That(materials.Length,Is.EqualTo(1));var material=materials[0];Assert.That(material.shader.name,Is.EqualTo("OceanAngler/CoastalTerrain"));Assert.That(ShaderUtil.ShaderHasError(material.shader),Is.False);foreach(string pass in new[]{"ForwardLit","ShadowCaster","DepthOnly"})Assert.That(material.FindPass(pass),Is.GreaterThanOrEqualTo(0));foreach(string map in new[]{"_BaseMap","_BumpMap","_MetallicGlossMap","_SoilMap","_SoilNormal","_SoilMetallicGlossMap"})Assert.That(material.GetTexture(map),Is.Not.Null);
+            }
+        }
         [Test] public void ChannelOpenCorridorClearsCurrentFishingAndObservationVolumes()
         {
             var triangles=new System.Collections.Generic.List<Bounds>();

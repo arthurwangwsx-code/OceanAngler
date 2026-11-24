@@ -53,7 +53,13 @@ for lod in range(3):
    island_profiles.append(dict(lod=lod,island=index,offset=[dx,dy],seabed=floor_height,top=top,bottom=bottom));check(all(v is not None for v in [floor_height,top,bottom]) and bottom<-18 and bottom<floor_height<top and top>5.5,'island intersects seabed LOD'+str(lod)+' island'+str(index)+' '+str((dx,dy)))
 for im in bpy.data.images:
  if im.source=='FILE':check(Path(bpy.path.abspath(im.filepath)).is_file(),'image dependency '+im.name)
+blend_profiles=[]
+for level in range(3):
+ obj=bpy.data.objects['Islands_LOD'+str(level)];mask=obj.data.color_attributes.get('TerrainBlend');check(mask is not None and mask.domain=='POINT','terrain vertex mask retained LOD'+str(level))
+ if mask is not None:
+  values=[float(item.color[0]) for item in mask.data];stats=dict(lod=level,vertices=len(obj.data.vertices),values=len(values),minimum=min(values),maximum=max(values),intermediate=sum(.01<v<.99 for v in values));blend_profiles.append(stats);check(len(values)==len(obj.data.vertices) and all(math.isfinite(v) and 0<=v<=1 for v in values),'finite terrain weights LOD'+str(level));check(stats['minimum']<.01 and stats['maximum']>.3 and stats['intermediate']>100,'continuous terrain weights LOD'+str(level))
+ check([m.name for m in obj.data.materials]==['Channel_IslandBlend'],'single continuous terrain material LOD'+str(level))
 check(sum(n for k,n in triangles.items() if k.endswith('_LOD0'))<180000,'candidate geometry budget')
-report=dict(status='FAIL' if failures else 'ENGINEERING_CHECKS_PASS',scope='saved nearshore-channel source geometry and dependencies',checks=checks,failures=failures,triangles=triangles,solids=solids,corridorProfiles=profiles,islandProfiles=island_profiles,artAcceptance='NOT_ACCEPTED',deviceAcceptance='NOT_RUN')
+report=dict(status='FAIL' if failures else 'ENGINEERING_CHECKS_PASS',scope='saved nearshore-channel source geometry and dependencies',checks=checks,failures=failures,triangles=triangles,solids=solids,corridorProfiles=profiles,islandProfiles=island_profiles,terrainBlendProfiles=blend_profiles,artAcceptance='NOT_ACCEPTED',deviceAcceptance='NOT_RUN')
 p=ROOT/'.local/art/nearshore-channel/validation.json';p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(dict(status=report['status'],failures=failures,solids=solids)))
 if failures:raise RuntimeError('Saved channel validation failed')

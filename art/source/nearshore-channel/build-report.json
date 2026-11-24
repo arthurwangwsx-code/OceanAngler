@@ -6,9 +6,9 @@
     "Seabed_LOD0": 3236,
     "Seabed_LOD1": 1618,
     "Seabed_LOD2": 646,
-    "Islands_LOD0": 4212,
-    "Islands_LOD1": 2106,
-    "Islands_LOD2": 842,
+    "Islands_LOD0": 23658,
+    "Islands_LOD1": 11828,
+    "Islands_LOD2": 4730,
     "Outcrops_LOD0": 19152,
     "Outcrops_LOD1": 9576,
     "Outcrops_LOD2": 3830,
@@ -30,6 +30,9 @@
     "Kelp": 90
   },
   "source": "tools/art_channel.py",
+  "terrainMaterial": "Channel_IslandBlend",
+  "terrainMask": "TerrainBlend",
+  "terrainProjection": "Runtime world triplanar; Cycles world box/bump preview approximation",
   "islandCentres": [
     [
       -28,

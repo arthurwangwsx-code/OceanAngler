@@ -6,7 +6,7 @@ import numpy as np
 ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'art/source/nearshore-channel';GAME=ROOT/'game/Assets/OceanAngler/Art/NearshoreChannel';BAY=ROOT/'art/source/coral-bay';BAY_GAME=ROOT/'game/Assets/OceanAngler/Art/CoralBay'
 for p in [OUT,GAME]:p.mkdir(parents=True,exist_ok=True)
 bpy.ops.object.select_all(action='SELECT');bpy.ops.object.delete(use_global=False);bpy.context.preferences.filepaths.save_version=0
-scene=bpy.context.scene;scene.unit_settings.system='METRIC';scene.render.engine='CYCLES';scene.cycles.samples=24;scene.cycles.use_denoising=True;scene.render.resolution_x=1440;scene.render.resolution_y=900;scene.render.resolution_percentage=100;scene.view_settings.view_transform='AgX';scene.view_settings.look='AgX - Medium High Contrast'
+scene=bpy.context.scene;scene.unit_settings.system='METRIC';scene.render.engine='CYCLES';scene.cycles.samples=24;scene.cycles.use_denoising=True;scene.render.resolution_x=1440;scene.render.resolution_y=900;scene.render.resolution_percentage=100;scene.view_settings.view_transform='AgX';scene.view_settings.look='AgX - Medium High Contrast';scene.view_settings.exposure=-1.1
 source=bpy.data.objects.new('NearshoreChannelSource',None);scene.collection.objects.link(source);groups={};mats={};orientation_fixes={};rand=random.Random(5481);rng=np.random.default_rng(5481)
 def image(name,data,linear=False):
  if data.ndim==2:data=np.repeat(data[:,:,None],3,axis=2)
@@ -27,14 +27,24 @@ y,x=np.mgrid[0:512,0:512]/512
 def field(cells):
  grid=rng.random((cells,cells));u=x*cells;v=y*cells;ix=np.floor(u).astype(int);iy=np.floor(v).astype(int);a=u-ix;b=v-iy;a=a*a*(3-2*a);b=b*b*(3-2*b)
  return (grid[iy%cells,ix%cells]*(1-a)+grid[iy%cells,(ix+1)%cells]*a)*(1-b)+(grid[(iy+1)%cells,ix%cells]*(1-a)+grid[(iy+1)%cells,(ix+1)%cells]*a)*b
-for name,color,rough in [('Sediment',(.49,.47,.38),.94),('Stone',(.39,.42,.40),.87),('Kelp',(.16,.28,.12),.74),('CoastalSoil',(.24,.28,.15),.93)]:
- if name=='Sediment':h=np.sin((y*14+np.sin(x*19)*.2)*math.tau)*.009;variation=np.sin(x*19)*np.cos(y*23)*.014+rng.normal(0,.005,x.shape)
- elif name=='Stone':h=(field(4)-.5)*.16+(field(13)-.5)*.07+(field(47)-.5)*.025;variation=h*.35+(field(7)-.5)*.025+rng.normal(0,.005,x.shape)
+for name,color,rough in [('Sediment',(.49,.47,.38),.94),('Stone',(.32,.35,.34),.87),('Kelp',(.16,.28,.12),.74),('CoastalSoil',(.17,.22,.13),.93)]:
+ if name=='Sediment':h=np.sin((y*14+np.sin(x*19)*.2)*math.tau)*.009;variation=(field(9)-.5)*.018+rng.normal(0,.004,x.shape)
+ elif name=='Stone':
+  fractures=np.maximum(0,1-np.abs(field(12)-.5)*35);h=(field(4)-.5)*.12+(field(13)-.5)*.05+(field(47)-.5)*.025-fractures*.018;variation=h*.55+(field(7)-.5)*.04+rng.normal(0,.005,x.shape)
  elif name=='CoastalSoil':h=(field(11)-.5)*.035+(field(51)-.5)*.012;variation=(field(5)-.5)*.07+h*.25+rng.normal(0,.004,x.shape)
  else:h=np.sin(x*math.tau*14)*.018+np.cos(y*math.tau*4)*.008;variation=h+rng.normal(0,.003,x.shape)
  base=image('Channel_'+name,np.stack([c+variation for c in color],axis=2));gy,gx=np.gradient(h);n=np.stack((-gx*12,-gy*12,np.ones_like(h)),axis=2);n/=np.linalg.norm(n,axis=2)[:,:,None]
  normal=image('Channel_'+name+'_Normal',n*.5+.5,True);r=image('Channel_'+name+'_Roughness',np.clip(rough+h*.15,0,1),True);packed=np.zeros((*x.shape,4));packed[:,:,3]=1-np.clip(rough+h*.15,0,1);image('Channel_'+name+'_MetallicSmoothness',packed,True);material(name,(1,1,1),rough,base,normal,r)
 material('Buoy',(.62,.22,.12),.5);material('Mooring',(.38,.34,.25),.9)
+# Author the same continuous vertex mask used by the runtime PBR shader.
+blend=bpy.data.materials.new('Channel_IslandBlend');blend.use_nodes=True;nodes=blend.node_tree.nodes;nodes.clear();output=nodes.new('ShaderNodeOutputMaterial');mix=nodes.new('ShaderNodeMixShader');attribute=nodes.new('ShaderNodeAttribute');attribute.attribute_name='TerrainBlend';blend.node_tree.links.new(attribute.outputs['Fac'],mix.inputs[0]);blend.node_tree.links.new(mix.outputs[0],output.inputs['Surface'])
+for index,name in enumerate(['Stone','CoastalSoil']):
+ bsdf=nodes.new('ShaderNodeBsdfPrincipled');blend.node_tree.links.new(bsdf.outputs[0],mix.inputs[index+1])
+ for suffix,property in [('', 'Base Color'),('_Roughness','Roughness')]:
+  tex=nodes.new('ShaderNodeTexImage');tex.image=bpy.data.images['Channel_'+name+suffix];tex.projection='BOX';tex.projection_blend=.3;coords=nodes.new('ShaderNodeNewGeometry');scale=nodes.new('ShaderNodeVectorMath');scale.operation='SCALE';scale.inputs[3].default_value=.22;blend.node_tree.links.new(coords.outputs['Position'],scale.inputs[0]);blend.node_tree.links.new(scale.outputs[0],tex.inputs['Vector']);blend.node_tree.links.new(tex.outputs['Color'],bsdf.inputs[property])
+ rough=nodes.new('ShaderNodeTexImage');rough.image=bpy.data.images['Channel_'+name+'_Roughness'];rough.projection='BOX';rough.projection_blend=.3;blend.node_tree.links.new(scale.outputs[0],rough.inputs['Vector']);bump=nodes.new('ShaderNodeBump');bump.inputs['Strength'].default_value=.15;bump.inputs['Distance'].default_value=.05;blend.node_tree.links.new(rough.outputs['Color'],bump.inputs['Height']);blend.node_tree.links.new(bump.outputs['Normal'],bsdf.inputs['Normal'])
+mats['IslandBlend']=blend
+
 
 def mesh(name,vertices,faces,mat,group,uv=None):
  data=bpy.data.meshes.new(name);data.from_pydata(vertices,[],faces);data.update();o=bpy.data.objects.new(name,data);scene.collection.objects.link(o);o.parent=source;data.materials.append(mats[mat]);groups.setdefault(group,[]).append(o)
@@ -71,19 +81,34 @@ def rock(name,a,b,z,width,depth,height,seed,group):
   for k in range(segments):q=j*(segments+1)+k;faces.append((q,q+segments+1,q+segments+2,q+1))
  return mesh(name,vs,faces,'Stone',group,uv)
 island_centres=[(-28,82,15,22,17.5),(32,110,18,25,20),(-65,180,25,31,23)]
+def smooth(value):value=max(0,min(1,value));return value*value*(3-2*value)
 for seed,(a,b,width,depth,peak) in enumerate(island_centres):
- vertices=[];faces=[];uv=[];segments=64
- terraces=[(-24,1.23),(-13,1.18),(-4,1.06),(2,.99),(4.2,.94),(6.5,.86),(9,.78),(12,.65),(14.5,.43),(16,.16),(17.5,.025)]
- for j,(height,scale) in enumerate(terraces):
-  for k in range(segments):
-   phi=k/segments*math.tau;coast=1+.13*math.sin(phi*3+seed)+.07*math.cos(phi*5-seed)+.025*math.sin(phi*13+j*.7)
-   z=height if j<3 else height/17.5*peak+(1 if j<9 else .3 if j==9 else .05)*(math.sin(phi*3+seed)*.8+math.sin(phi*7-j*.9)*.3)
-   vertices.append((a+math.cos(phi)*width*scale*coast,b+math.sin(phi)*depth*scale*coast,z));uv.append((k/segments*width*.6,j*.65))
- for j in range(len(terraces)-1):
-  for k in range(segments):q=j*segments+k;n=j*segments+(k+1)%segments;faces.append((q,n,n+segments,q+segments))
- faces.extend([tuple(reversed(range(segments))),tuple((len(terraces)-1)*segments+k for k in range(segments))]);obj=mesh('GroundedRockIsland'+str(seed),vertices,faces,'Stone','Islands',uv);obj.data.materials.append(mats['CoastalSoil'])
- for face in obj.data.polygons:
-  if sum(obj.data.vertices[v].co.z for v in face.vertices)/len(face.vertices)>peak*.65:face.material_index=1
+ # A closed heightfield gives multiple offset ridges and a broad weathered
+ # plateau instead of shrinking every horizontal contour into one cone.
+ vertices=[];faces=[];nx,ny=56,64
+ for j in range(ny+1):
+  v=(j/ny*2-1)*1.65
+  for i in range(nx+1):
+   u=(i/nx*2-1)*1.65;angle=math.atan2(v,u);outline=1+.18*math.sin(angle*3+seed*.9)+.12*math.cos(angle*5-seed*1.2)+.06*math.sin(angle*7+.7);r=math.hypot(u,v)/outline
+   ridge=max(.5,min(1,.64+.17*math.sin(u*3.1+v*1.6+seed)+.10*math.cos(v*4.3-seed*.6)+.09*math.sin(u*8-v*6+seed*.7)));ridge*=1-.1*max(0,r-.4)
+   cliff=smooth((1.06-r)/.24);height=-24+(24+peak*ridge)*cliff
+   if i in (0,nx) or j in (0,ny):height=-24
+   vertices.append((a+u*width,b+v*depth,height))
+ for j in range(ny):
+  for i in range(nx):q=j*(nx+1)+i;faces.append((q,q+1,q+nx+2,q+nx+1))
+ boundary=list(range(nx+1))+[j*(nx+1)+nx for j in range(1,ny+1)]+[ny*(nx+1)+i for i in range(nx-1,-1,-1)]+[j*(nx+1) for j in range(ny-1,0,-1)];bottom=[]
+ for v in boundary:bottom.append(len(vertices));vertices.append((vertices[v][0],vertices[v][1],-28))
+ for k in range(len(boundary)):n=(k+1)%len(boundary);faces.append((boundary[k],bottom[k],bottom[n],boundary[n]))
+ faces.append(tuple(reversed(bottom)));obj=mesh('GroundedRockIsland'+str(seed),vertices,faces,'IslandBlend','Islands');data=obj.data;layer=data.uv_layers.active
+ # Box projection avoids stretching the cliff texture up near-vertical walls.
+ for face in data.polygons:
+  axis=max(range(3),key=lambda k:abs(face.normal[k]))
+  for li in face.loop_indices:
+   v=data.vertices[data.loops[li].vertex_index].co;layer.data[li].uv=((v.y if axis==0 else v.x)*.22,(v.y if axis==2 else v.z)*.22)
+ mask=data.color_attributes.new(name='TerrainBlend',type='FLOAT_COLOR',domain='POINT')
+ for v in data.vertices:
+  slope=smooth((v.normal.z-.45)/.45);elevation=smooth((v.co.z-6-seed*.5)/3);cover=max(0,min(1,.55+.3*math.sin(v.co.x*.22+v.co.y*.17)+.15*math.cos(v.co.y*.31-v.co.x*.13)));weight=slope*elevation*cover;mask.data[v.index].color=(weight,weight,weight,1)
+ data.color_attributes.active_color=mask
 
 rocks=[]
 for i in range(14):
@@ -152,5 +177,5 @@ d=bpy.data.cameras.new('ReviewCamera');cam=bpy.data.objects.new('ReviewCamera',d
 for im in bpy.data.images:
  if im.source=='FILE':im.filepath=bpy.path.relpath(im.filepath,start=str(OUT))
 bpy.ops.wm.save_as_mainfile(filepath=str(OUT/'NearshoreChannel.blend'))
-result=dict(status='CANDIDATE',units='metres',waterLevel=4.5,lods=report,solidCounts={'Seabed':1,'Islands':3,'Outcrops':14,'Kelp':90},source='tools/art_channel.py',islandCentres=island_centres,orientationCorrections=orientation_fixes,reuse=dict(boatSource='art/source/coral-bay/CoralBay.blend',sha256=hashlib.sha256((BAY/'CoralBay.blend').read_bytes()).hexdigest(),change='Removed former pier tether and translated authored dinghy; own new buoy/mooring'),markers=markers,artAcceptance='NOT_ACCEPTED',deviceAcceptance='NOT_RUN')
+result=dict(status='CANDIDATE',units='metres',waterLevel=4.5,lods=report,solidCounts={'Seabed':1,'Islands':3,'Outcrops':14,'Kelp':90},source='tools/art_channel.py',terrainMaterial='Channel_IslandBlend',terrainMask='TerrainBlend',terrainProjection='Runtime world triplanar; Cycles world box/bump preview approximation',islandCentres=island_centres,orientationCorrections=orientation_fixes,reuse=dict(boatSource='art/source/coral-bay/CoralBay.blend',sha256=hashlib.sha256((BAY/'CoralBay.blend').read_bytes()).hexdigest(),change='Removed former pier tether and translated authored dinghy; own new buoy/mooring'),markers=markers,artAcceptance='NOT_ACCEPTED',deviceAcceptance='NOT_RUN')
 (OUT/'build-report.json').write_text(json.dumps(result,indent=2)+'\n');print('CHANNEL_BUILD_OK '+json.dumps(result))

@@ -22,6 +22,7 @@
 | 首条独立源模型 | [蓝鳍鲹候选及验收边界](reports/bluefin-art.md)、[源资产重建](art/source/bluefin/README.md) |
 | 第一套完整钓组候选 | [纺车钓组与验证边界](reports/spinning-rig-art.md)、[源资产重建](art/source/spinning-rig/README.md) |
 | 第二处海域与共享观察 | [近海航道、切换与验收边界](docs/15-nearshore-channel.md)、[源资产重建](art/source/nearshore-channel/README.md) |
+| 后续岛形、土层和近景接缝 | [地形与三轴材质](docs/17-nearshore-terrain.md)、[本轮验证与原图](reports/nearshore-terrain.md) |
 | 第一处独立海域候选 | [珊瑚海湾与验证边界](reports/coral-bay-art.md)、[海湾源资产重建](art/source/coral-bay/README.md) |
 | 物种资料和仅观察生物 | [学名、辨识与建模交接](docs/10-species-production.md) |
 | 原创音频与实际画面 | [音频控制](docs/11-feedback-audio.md)、[三档原生截图与问题](reports/integrated-native-render.md) |

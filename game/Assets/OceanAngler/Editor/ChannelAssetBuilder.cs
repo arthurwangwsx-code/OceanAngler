@@ -18,7 +18,7 @@ namespace OceanAngler.Editor
             {
                 var texture=(TextureImporter)AssetImporter.GetAtPath(path);bool normal=path.Contains("_Normal"),linear=normal||path.Contains("_Roughness")||path.Contains("_MetallicSmoothness");texture.textureType=normal?TextureImporterType.NormalMap:TextureImporterType.Default;texture.sRGBTexture=!linear;texture.maxTextureSize=512;texture.textureCompression=TextureImporterCompression.CompressedHQ;texture.wrapMode=TextureWrapMode.Repeat;texture.SaveAndReimport();
             }
-            var materials=new[]{Create("Sediment",Color.white,true),Create("Stone",Color.white,true),Create("Kelp",Color.white,true),Create("CoastalSoil",Color.white,true),Create("Buoy",new Color(.62f,.22f,.12f),false),Create("Mooring",new Color(.38f,.34f,.25f),false),Water()}.Concat(new[]{"BoatHull","BoatTrim","Metal","Wood","Rope"}.Select(name=>AssetDatabase.LoadAssetAtPath<Material>(Bay+"/Bay_"+name+".mat"))).ToArray();
+            var materials=new[]{Create("Sediment",Color.white,true),Create("Stone",Color.white,true),Create("Kelp",Color.white,true),Create("CoastalSoil",Color.white,true),Terrain(),Create("Buoy",new Color(.62f,.22f,.12f),false),Create("Mooring",new Color(.38f,.34f,.25f),false),Water()}.Concat(new[]{"BoatHull","BoatTrim","Metal","Wood","Rope"}.Select(name=>AssetDatabase.LoadAssetAtPath<Material>(Bay+"/Bay_"+name+".mat"))).ToArray();
             if(materials.Any(m=>m==null))throw new InvalidOperationException("Missing owned material dependency");
             var importer=(ModelImporter)AssetImporter.GetAtPath(Folder+"/NearshoreChannel.fbx");importer.importAnimation=false;importer.importVisibility=false;importer.materialImportMode=ModelImporterMaterialImportMode.ImportStandard;
             foreach(var material in materials)importer.AddRemap(new AssetImporter.SourceAssetIdentifier(typeof(Material),material.name),material);importer.SaveAndReimport();
@@ -48,6 +48,11 @@ namespace OceanAngler.Editor
         {
             string path=Folder+"/Channel_"+name+".mat";var material=AssetDatabase.LoadAssetAtPath<Material>(path);if(material==null){material=new Material(Shader.Find("Universal Render Pipeline/Lit"));AssetDatabase.CreateAsset(material,path);}material.color=color;material.SetColor("_Color",color);material.SetFloat("_Smoothness",name=="Buoy"?.5f:.1f);
             if(textured){material.SetTexture("_BaseMap",AssetDatabase.LoadAssetAtPath<Texture2D>(Folder+"/Channel_"+name+".png"));material.SetTexture("_BumpMap",AssetDatabase.LoadAssetAtPath<Texture2D>(Folder+"/Channel_"+name+"_Normal.png"));material.SetFloat("_BumpScale",.35f);material.EnableKeyword("_NORMALMAP");material.SetTexture("_MetallicGlossMap",AssetDatabase.LoadAssetAtPath<Texture2D>(Folder+"/Channel_"+name+"_MetallicSmoothness.png"));material.SetFloat("_Smoothness",1);material.EnableKeyword("_METALLICSPECGLOSSMAP");}EditorUtility.SetDirty(material);return material;
+        }
+        static Material Terrain()
+        {
+            const string path=Folder+"/Channel_IslandBlend.mat";var shader=Shader.Find("OceanAngler/CoastalTerrain");if(shader==null)throw new InvalidOperationException("Missing terrain blend shader");var material=AssetDatabase.LoadAssetAtPath<Material>(path);if(material==null){material=new Material(shader);AssetDatabase.CreateAsset(material,path);}material.shader=shader;material.SetColor("_BaseColor",Color.white);material.SetFloat("_BumpScale",.35f);
+            foreach(var entry in new[]{("_BaseMap","Stone"),("_BumpMap","Stone_Normal"),("_MetallicGlossMap","Stone_MetallicSmoothness"),("_SoilMap","CoastalSoil"),("_SoilNormal","CoastalSoil_Normal"),("_SoilMetallicGlossMap","CoastalSoil_MetallicSmoothness")})material.SetTexture(entry.Item1,AssetDatabase.LoadAssetAtPath<Texture2D>(Folder+"/Channel_"+entry.Item2+".png"));material.SetFloat("_TextureScale",.22f);EditorUtility.SetDirty(material);return material;
         }
         static Material Water()
         {

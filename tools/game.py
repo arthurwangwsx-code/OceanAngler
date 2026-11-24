@@ -42,6 +42,8 @@ try:
  os.close(fd);result=subprocess.run(cmd,env=env,cwd=ROOT)
  if gpu_review and result.returncode==0:
   receipt=folder/'receipt.json'
-  if not receipt.is_file() or json.loads(receipt.read_text()).get('status')!='PASS':raise SystemExit('GPU review receipt missing or failed')
+  if not receipt.is_file():raise SystemExit('GPU review receipt missing')
+  state=json.loads(receipt.read_text()).get('status')
+  if state!='PASS':raise SystemExit('GPU review result: '+str(state))
  print(json.dumps({'action':a.action,'exitCode':result.returncode,'log':str(log)}));raise SystemExit(result.returncode)
 finally:lock.unlink()

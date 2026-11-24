@@ -10,7 +10,7 @@ namespace OceanAngler.Editor
     // Isolated GPU material review. No player saves, desktop capture or UI claims.
     public static class WaterRenderReview
     {
-        [Serializable] sealed class Receipt {public string status="PASS",scope="isolated Editor GPU water fixture; no player UI/device acceptance";public int width=1440,height=900,reflectionPasses;public float reflectionVariance,waveDifference;public string graphics;public bool released;public float initialDifference;}
+        [Serializable] sealed class Receipt {public string status="IN_PROGRESS",scope="isolated Editor GPU water fixture; no player UI/device acceptance",staticMatchCheck="NOT_RUN";public int width=1440,height=900,reflectionPasses,validatedMaterials,initialChangedPixels,repeatChangedPixels,samples=4,staticDraws;public float reflectionVariance,waveDifference;public string graphics;public bool released,representedEachDraw=true,exactStaticMatch;public float initialDifference,repeatDifference;}
         public static void Capture()=>CapturePrefab("OCEAN_WATER_REVIEW_OUTPUT","Models/CoralBay",false);
         public static void CaptureChannel()=>CapturePrefab("OCEAN_CHANNEL_REVIEW_OUTPUT","Models/NearshoreChannel",true);
         static void CapturePrefab(string outputVariable,string resource,bool channel)
@@ -22,17 +22,27 @@ namespace OceanAngler.Editor
             RenderSettings.ambientLight=new Color(.2f,.32f,.38f);
             var fill=new GameObject("ReviewRuntimeWaterFill").AddComponent<Light>();fill.type=LightType.Point;fill.color=new Color(.37f,.79f,.86f);fill.intensity=channel?0:2.5f;fill.range=15;fill.transform.position=new Vector3(0,3,0);
             var root=UnityEngine.Object.Instantiate(Resources.Load<GameObject>(resource));var bay=root.GetComponent<MarineHabitat>();var reflection=bay.reflection;
-            var target=new RenderTexture(1440,900,24,RenderTextureFormat.ARGB32){antiAliasing=4};target.Create();camera.targetTexture=target;
-            var request=new UniversalRenderPipeline.SingleCameraRequest{destination=target};var receipt=new Receipt{graphics=SystemInfo.graphicsDeviceType.ToString()};
+            int samples=channel&&Environment.GetEnvironmentVariable("OCEAN_CHANNEL_REVIEW_MSAA")=="1"?1:4;
+            var target=new RenderTexture(1440,900,24,RenderTextureFormat.ARGB32){antiAliasing=samples};target.Create();camera.targetTexture=target;
+            var request=new UniversalRenderPipeline.SingleCameraRequest{destination=target};var receipt=new Receipt{graphics=SystemInfo.graphicsDeviceType.ToString(),samples=target.antiAliasing};
             try
             {
                 if(!RenderPipeline.SupportsRenderRequest(camera,request))throw new InvalidOperationException("URP render request not supported");
                 bay.Present(camera,true,true,0,true,false);RenderPipeline.SubmitRenderRequest(camera,request);var first=Read(target,Path.Combine(folder,"surface.png"));
                 if(channel)
                 {
-                    bay.Present(camera,true,true,0,true,false);RenderPipeline.SubmitRenderRequest(camera,request);var repeated=Read(target,Path.Combine(folder,"surface-repeat.png"));
-                    for(int i=0;i<first.Length;i++)receipt.initialDifference=Mathf.Max(receipt.initialDifference,Mathf.Max(Mathf.Abs(first[i].r-repeated[i].r),Mathf.Max(Mathf.Abs(first[i].g-repeated[i].g),Mathf.Abs(first[i].b-repeated[i].b))));
-                    if(receipt.initialDifference>0)throw new InvalidOperationException("Initial channel render changed");
+                    receipt.staticDraws=3;
+                    receipt.representedEachDraw=Environment.GetEnvironmentVariable("OCEAN_CHANNEL_REVIEW_REPRESENT")!="0";
+                    if(receipt.representedEachDraw)bay.Present(camera,true,true,0,true,false);RenderPipeline.SubmitRenderRequest(camera,request);var repeated=Read(target,Path.Combine(folder,"surface-repeat.png"));
+                    if(receipt.representedEachDraw)bay.Present(camera,true,true,0,true,false);RenderPipeline.SubmitRenderRequest(camera,request);var third=Read(target,Path.Combine(folder,"surface-third.png"));
+                    for(int i=0;i<first.Length;i++)
+                    {
+                        float initial=Mathf.Max(Mathf.Abs(first[i].r-repeated[i].r),Mathf.Max(Mathf.Abs(first[i].g-repeated[i].g),Mathf.Abs(first[i].b-repeated[i].b)));receipt.initialDifference=Mathf.Max(receipt.initialDifference,initial);if(initial>0)receipt.initialChangedPixels++;
+                        float next=Mathf.Max(Mathf.Abs(repeated[i].r-third[i].r),Mathf.Max(Mathf.Abs(repeated[i].g-third[i].g),Mathf.Abs(repeated[i].b-third[i].b)));receipt.repeatDifference=Mathf.Max(receipt.repeatDifference,next);if(next>0)receipt.repeatChangedPixels++;
+                    }
+                    receipt.exactStaticMatch=receipt.initialDifference==0&&receipt.repeatDifference==0;
+                    receipt.staticMatchCheck=receipt.exactStaticMatch?"PASS":"PARTIAL_STATIC_RGB_DIFFERENCE";
+                    File.WriteAllText(Path.Combine(folder,"initial-diagnostics.json"),JsonUtility.ToJson(receipt,true));
                 }
                 bay.waterSurface.enabled=false;RenderPipeline.SubmitRenderRequest(camera,request);Read(target,Path.Combine(folder,"no-water-control.png"));bay.waterSurface.enabled=true;
                 if(!reflection.Ready)throw new InvalidOperationException("Planar reflection missing");
@@ -47,10 +57,21 @@ namespace OceanAngler.Editor
                 captures=reflection.RenderCount;bay.Present(camera,true,false,0,true,false);RenderPipeline.SubmitRenderRequest(camera,request);Read(target,Path.Combine(folder,"underwater.png"));
                 if(reflection.Ready||reflection.RenderCount!=captures)throw new InvalidOperationException("Underwater reflection request was not skipped");
                 bay.Present(camera,true,false,1,true,false);RenderPipeline.SubmitRenderRequest(camera,request);Read(target,Path.Combine(folder,"reef.png"));receipt.reflectionPasses=reflection.RenderCount;
+                if(channel)
+                {
+                    bay.Present(camera,true,true,0,true,false);camera.transform.SetPositionAndRotation(new Vector3(-14,8,58),Quaternion.LookRotation(new Vector3(-10,3,14)));camera.fieldOfView=50;reflection.Prepare(camera,true,bay.SeaLevel);
+                    var coastalWater=new MaterialPropertyBlock();bay.waterSurface.GetPropertyBlock(coastalWater);coastalWater.SetTexture("_PlanarReflection",reflection.Texture);coastalWater.SetMatrix("_ReflectionVP",reflection.ViewProjection);bay.waterSurface.SetPropertyBlock(coastalWater);RenderPipeline.SubmitRenderRequest(camera,request);Read(target,Path.Combine(folder,"terrain-close.png"));
+                    bay.Present(camera,true,false,0,true,false);camera.transform.SetPositionAndRotation(new Vector3(-14,3,58),Quaternion.LookRotation(new Vector3(-10,-7,14)));camera.fieldOfView=50;RenderPipeline.SubmitRenderRequest(camera,request);Read(target,Path.Combine(folder,"terrain-wet-edge.png"));receipt.reflectionPasses=reflection.RenderCount;
+                }
                 if(receipt.reflectionVariance<.0005f||receipt.waveDifference<.0001f)throw new InvalidOperationException("Rendered water/reflection lacks scene or wave detail");
                 reflection.enabled=false;bay.Present(camera,true,true,0,true,false);receipt.released=reflection.Texture==null;
                 if(!receipt.released)throw new InvalidOperationException("Disabled reflection retained/recreated its texture");
-                File.WriteAllText(Path.Combine(folder,"receipt.json"),JsonUtility.ToJson(receipt,true));Debug.Log("WATER_GPU_REVIEW_PASS");
+                foreach(var renderer in root.GetComponentsInChildren<Renderer>(true))foreach(var material in renderer.sharedMaterials)
+                {
+                    if(material==null||material.shader==null||!material.shader.isSupported||ShaderUtil.ShaderHasError(material.shader))throw new InvalidOperationException("Rendered habitat has a missing/unsupported/failed shader");receipt.validatedMaterials++;
+                }
+                receipt.status=!channel||receipt.exactStaticMatch?"PASS":"PARTIAL_STATIC_RGB_DIFFERENCE";
+                File.WriteAllText(Path.Combine(folder,"receipt.json"),JsonUtility.ToJson(receipt,true));Debug.Log("WATER_GPU_REVIEW_"+receipt.status);
             }
             finally{camera.targetTexture=null;target.Release();UnityEngine.Object.DestroyImmediate(target);UnityEngine.Object.DestroyImmediate(root);UnityEngine.Object.DestroyImmediate(fill.gameObject);}
         }

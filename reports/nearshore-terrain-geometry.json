@@ -1,0 +1,885 @@
+{
+  "status": "ENGINEERING_CHECKS_PASS",
+  "scope": "saved nearshore-channel source geometry and dependencies",
+  "checks": [
+    "mesh Seabed_LOD0",
+    "nonempty mesh/UV Seabed_LOD0",
+    "finite vertices Seabed_LOD0",
+    "finite UV Seabed_LOD0",
+    "mesh Seabed_LOD1",
+    "nonempty mesh/UV Seabed_LOD1",
+    "finite vertices Seabed_LOD1",
+    "finite UV Seabed_LOD1",
+    "mesh Seabed_LOD2",
+    "nonempty mesh/UV Seabed_LOD2",
+    "finite vertices Seabed_LOD2",
+    "finite UV Seabed_LOD2",
+    "mesh Islands_LOD0",
+    "nonempty mesh/UV Islands_LOD0",
+    "finite vertices Islands_LOD0",
+    "finite UV Islands_LOD0",
+    "mesh Islands_LOD1",
+    "nonempty mesh/UV Islands_LOD1",
+    "finite vertices Islands_LOD1",
+    "finite UV Islands_LOD1",
+    "mesh Islands_LOD2",
+    "nonempty mesh/UV Islands_LOD2",
+    "finite vertices Islands_LOD2",
+    "finite UV Islands_LOD2",
+    "mesh Outcrops_LOD0",
+    "nonempty mesh/UV Outcrops_LOD0",
+    "finite vertices Outcrops_LOD0",
+    "finite UV Outcrops_LOD0",
+    "mesh Outcrops_LOD1",
+    "nonempty mesh/UV Outcrops_LOD1",
+    "finite vertices Outcrops_LOD1",
+    "finite UV Outcrops_LOD1",
+    "mesh Outcrops_LOD2",
+    "nonempty mesh/UV Outcrops_LOD2",
+    "finite vertices Outcrops_LOD2",
+    "finite UV Outcrops_LOD2",
+    "mesh Kelp_LOD0",
+    "nonempty mesh/UV Kelp_LOD0",
+    "finite vertices Kelp_LOD0",
+    "finite UV Kelp_LOD0",
+    "mesh Kelp_LOD1",
+    "nonempty mesh/UV Kelp_LOD1",
+    "finite vertices Kelp_LOD1",
+    "finite UV Kelp_LOD1",
+    "mesh Kelp_LOD2",
+    "nonempty mesh/UV Kelp_LOD2",
+    "finite vertices Kelp_LOD2",
+    "finite UV Kelp_LOD2",
+    "mesh Boat_LOD0",
+    "nonempty mesh/UV Boat_LOD0",
+    "finite vertices Boat_LOD0",
+    "finite UV Boat_LOD0",
+    "mesh Boat_LOD1",
+    "nonempty mesh/UV Boat_LOD1",
+    "finite vertices Boat_LOD1",
+    "finite UV Boat_LOD1",
+    "mesh Boat_LOD2",
+    "nonempty mesh/UV Boat_LOD2",
+    "finite vertices Boat_LOD2",
+    "finite UV Boat_LOD2",
+    "mesh Mooring_LOD0",
+    "nonempty mesh/UV Mooring_LOD0",
+    "finite vertices Mooring_LOD0",
+    "finite UV Mooring_LOD0",
+    "mesh Mooring_LOD1",
+    "nonempty mesh/UV Mooring_LOD1",
+    "finite vertices Mooring_LOD1",
+    "finite UV Mooring_LOD1",
+    "mesh Mooring_LOD2",
+    "nonempty mesh/UV Mooring_LOD2",
+    "finite vertices Mooring_LOD2",
+    "finite UV Mooring_LOD2",
+    "mesh Water_LOD0",
+    "nonempty mesh/UV Water_LOD0",
+    "finite vertices Water_LOD0",
+    "finite UV Water_LOD0",
+    "LOD reduction Seabed",
+    "LOD reduction Islands",
+    "LOD reduction Outcrops",
+    "LOD reduction Kelp",
+    "LOD reduction Boat",
+    "LOD reduction Mooring",
+    "component count Seabed_LOD0",
+    "closed manifold Seabed_LOD0",
+    "outward positive solids Seabed_LOD0",
+    "component count Seabed_LOD1",
+    "closed manifold Seabed_LOD1",
+    "outward positive solids Seabed_LOD1",
+    "component count Seabed_LOD2",
+    "closed manifold Seabed_LOD2",
+    "outward positive solids Seabed_LOD2",
+    "component count Islands_LOD0",
+    "closed manifold Islands_LOD0",
+    "outward positive solids Islands_LOD0",
+    "component count Islands_LOD1",
+    "closed manifold Islands_LOD1",
+    "outward positive solids Islands_LOD1",
+    "component count Islands_LOD2",
+    "closed manifold Islands_LOD2",
+    "outward positive solids Islands_LOD2",
+    "component count Outcrops_LOD0",
+    "closed manifold Outcrops_LOD0",
+    "outward positive solids Outcrops_LOD0",
+    "component count Outcrops_LOD1",
+    "closed manifold Outcrops_LOD1",
+    "outward positive solids Outcrops_LOD1",
+    "component count Outcrops_LOD2",
+    "closed manifold Outcrops_LOD2",
+    "outward positive solids Outcrops_LOD2",
+    "component count Kelp_LOD0",
+    "closed manifold Kelp_LOD0",
+    "outward positive solids Kelp_LOD0",
+    "component count Kelp_LOD1",
+    "closed manifold Kelp_LOD1",
+    "outward positive solids Kelp_LOD1",
+    "component count Kelp_LOD2",
+    "closed manifold Kelp_LOD2",
+    "outward positive solids Kelp_LOD2",
+    "coordinate marker OriginAnchor",
+    "coordinate marker NorthAnchor",
+    "coordinate marker UpAnchor",
+    "water elevation",
+    "surface/underwater cameras",
+    "open deep corridor LOD0 (0, 0)",
+    "open deep corridor LOD0 (0, 10)",
+    "open deep corridor LOD0 (0, 30)",
+    "open deep corridor LOD0 (-5, 10)",
+    "open deep corridor LOD0 (5, 10)",
+    "open deep corridor LOD1 (0, 0)",
+    "open deep corridor LOD1 (0, 10)",
+    "open deep corridor LOD1 (0, 30)",
+    "open deep corridor LOD1 (-5, 10)",
+    "open deep corridor LOD1 (5, 10)",
+    "open deep corridor LOD2 (0, 0)",
+    "open deep corridor LOD2 (0, 10)",
+    "open deep corridor LOD2 (0, 30)",
+    "open deep corridor LOD2 (-5, 10)",
+    "open deep corridor LOD2 (5, 10)",
+    "three grounded island profiles LOD0",
+    "island intersects seabed LOD0 island0 (0, 0)",
+    "island intersects seabed LOD0 island0 (-6.0, 0)",
+    "island intersects seabed LOD0 island0 (6.0, 0)",
+    "island intersects seabed LOD0 island0 (0, -8.8)",
+    "island intersects seabed LOD0 island0 (0, 8.8)",
+    "island intersects seabed LOD0 island1 (0, 0)",
+    "island intersects seabed LOD0 island1 (-7.2, 0)",
+    "island intersects seabed LOD0 island1 (7.2, 0)",
+    "island intersects seabed LOD0 island1 (0, -10.0)",
+    "island intersects seabed LOD0 island1 (0, 10.0)",
+    "island intersects seabed LOD0 island2 (0, 0)",
+    "island intersects seabed LOD0 island2 (-10.0, 0)",
+    "island intersects seabed LOD0 island2 (10.0, 0)",
+    "island intersects seabed LOD0 island2 (0, -12.4)",
+    "island intersects seabed LOD0 island2 (0, 12.4)",
+    "three grounded island profiles LOD1",
+    "island intersects seabed LOD1 island0 (0, 0)",
+    "island intersects seabed LOD1 island0 (-6.0, 0)",
+    "island intersects seabed LOD1 island0 (6.0, 0)",
+    "island intersects seabed LOD1 island0 (0, -8.8)",
+    "island intersects seabed LOD1 island0 (0, 8.8)",
+    "island intersects seabed LOD1 island1 (0, 0)",
+    "island intersects seabed LOD1 island1 (-7.2, 0)",
+    "island intersects seabed LOD1 island1 (7.2, 0)",
+    "island intersects seabed LOD1 island1 (0, -10.0)",
+    "island intersects seabed LOD1 island1 (0, 10.0)",
+    "island intersects seabed LOD1 island2 (0, 0)",
+    "island intersects seabed LOD1 island2 (-10.0, 0)",
+    "island intersects seabed LOD1 island2 (10.0, 0)",
+    "island intersects seabed LOD1 island2 (0, -12.4)",
+    "island intersects seabed LOD1 island2 (0, 12.4)",
+    "three grounded island profiles LOD2",
+    "island intersects seabed LOD2 island0 (0, 0)",
+    "island intersects seabed LOD2 island0 (-6.0, 0)",
+    "island intersects seabed LOD2 island0 (6.0, 0)",
+    "island intersects seabed LOD2 island0 (0, -8.8)",
+    "island intersects seabed LOD2 island0 (0, 8.8)",
+    "island intersects seabed LOD2 island1 (0, 0)",
+    "island intersects seabed LOD2 island1 (-7.2, 0)",
+    "island intersects seabed LOD2 island1 (7.2, 0)",
+    "island intersects seabed LOD2 island1 (0, -10.0)",
+    "island intersects seabed LOD2 island1 (0, 10.0)",
+    "island intersects seabed LOD2 island2 (0, 0)",
+    "island intersects seabed LOD2 island2 (-10.0, 0)",
+    "island intersects seabed LOD2 island2 (10.0, 0)",
+    "island intersects seabed LOD2 island2 (0, -12.4)",
+    "island intersects seabed LOD2 island2 (0, 12.4)",
+    "image dependency Bay_Wood",
+    "image dependency Bay_Wood_Normal",
+    "image dependency Bay_Wood_Roughness",
+    "image dependency Channel_CoastalSoil",
+    "image dependency Channel_CoastalSoil_Normal",
+    "image dependency Channel_CoastalSoil_Roughness",
+    "image dependency Channel_Kelp",
+    "image dependency Channel_Kelp_Normal",
+    "image dependency Channel_Kelp_Roughness",
+    "image dependency Channel_Sediment",
+    "image dependency Channel_Sediment_Normal",
+    "image dependency Channel_Sediment_Roughness",
+    "image dependency Channel_Stone",
+    "image dependency Channel_Stone_Normal",
+    "image dependency Channel_Stone_Roughness",
+    "terrain vertex mask retained LOD0",
+    "finite terrain weights LOD0",
+    "continuous terrain weights LOD0",
+    "single continuous terrain material LOD0",
+    "terrain vertex mask retained LOD1",
+    "finite terrain weights LOD1",
+    "continuous terrain weights LOD1",
+    "single continuous terrain material LOD1",
+    "terrain vertex mask retained LOD2",
+    "finite terrain weights LOD2",
+    "continuous terrain weights LOD2",
+    "single continuous terrain material LOD2",
+    "candidate geometry budget"
+  ],
+  "failures": [],
+  "triangles": {
+    "Seabed_LOD0": 3236,
+    "Seabed_LOD1": 1618,
+    "Seabed_LOD2": 646,
+    "Islands_LOD0": 23658,
+    "Islands_LOD1": 11828,
+    "Islands_LOD2": 4730,
+    "Outcrops_LOD0": 19152,
+    "Outcrops_LOD1": 9576,
+    "Outcrops_LOD2": 3830,
+    "Kelp_LOD0": 12600,
+    "Kelp_LOD1": 5040,
+    "Kelp_LOD2": 1800,
+    "Boat_LOD0": 1240,
+    "Boat_LOD1": 620,
+    "Boat_LOD2": 242,
+    "Mooring_LOD0": 1412,
+    "Mooring_LOD1": 706,
+    "Mooring_LOD2": 282,
+    "Water_LOD0": 512
+  },
+  "solids": {
+    "Seabed_LOD0": {
+      "components": 1,
+      "nonManifoldEdges": 0,
+      "minSignedVolume": 2898790.3690334954,
+      "inwardComponents": 0,
+      "worldFrameFloat32Minimum": 2898790.3791135154
+    },
+    "Seabed_LOD1": {
+      "components": 1,
+      "nonManifoldEdges": 0,
+      "minSignedVolume": 2898697.59795076,
+      "inwardComponents": 0,
+      "worldFrameFloat32Minimum": 2898697.5690953876
+    },
+    "Seabed_LOD2": {
+      "components": 1,
+      "nonManifoldEdges": 0,
+      "minSignedVolume": 2897085.037148614,
+      "inwardComponents": 0,
+      "worldFrameFloat32Minimum": 2897085.004651654
+    },
+    "Islands_LOD0": {
+      "components": 3,
+      "nonManifoldEdges": 0,
+      "minSignedVolume": 47186.23065786599,
+      "inwardComponents": 0,
+      "worldFrameFloat32Minimum": 47186.307343464345
+    },
+    "Islands_LOD1": {
+      "components": 3,
+      "nonManifoldEdges": 0,
+      "minSignedVolume": 47187.19010271578,
+      "inwardComponents": 0,
+      "worldFrameFloat32Minimum": 47187.22721277754
+    },
+    "Islands_LOD2": {
+      "components": 3,
+      "nonManifoldEdges": 0,
+      "minSignedVolume": 47192.596636720606,
+      "inwardComponents": 0,
+      "worldFrameFloat32Minimum": 47192.56346248587
+    },
+    "Outcrops_LOD0": {
+      "components": 14,
+      "nonManifoldEdges": 0,
+      "minSignedVolume": 3.1695075464434077,
+      "inwardComponents": 0,
+      "worldFrameFloat32Minimum": 3.168195834286356
+    },
+    "Outcrops_LOD1": {
+      "components": 14,
+      "nonManifoldEdges": 0,
+      "minSignedVolume": 3.163980596400377,
+      "inwardComponents": 0,
+      "worldFrameFloat32Minimum": 3.1637758376697698
+    },
+    "Outcrops_LOD2": {
+      "components": 14,
+      "nonManifoldEdges": 0,
+      "minSignedVolume": 3.122850771925638,
+      "inwardComponents": 0,
+      "worldFrameFloat32Minimum": 3.1228003475698642
+    },
+    "Kelp_LOD0": {
+      "components": 90,
+      "nonManifoldEdges": 0,
+      "minSignedVolume": 0.0005973252756767388,
+      "inwardComponents": 0,
+      "worldFrameFloat32Minimum": 0.000528404489159584
+    },
+    "Kelp_LOD1": {
+      "components": 90,
+      "nonManifoldEdges": 0,
+      "minSignedVolume": 3.4562290956352604e-05,
+      "inwardComponents": 0,
+      "worldFrameFloat32Minimum": -8.43508169054985e-05
+    },
+    "Kelp_LOD2": {
+      "components": 90,
+      "nonManifoldEdges": 0,
+      "minSignedVolume": 8.0053468398183e-05,
+      "inwardComponents": 0,
+      "worldFrameFloat32Minimum": 4.3223301569620766e-05
+    }
+  },
+  "corridorProfiles": [
+    {
+      "lod": 0,
+      "heights": [
+        -6.284999847412109,
+        -6.552753448486328,
+        -6.714622497558594,
+        -6.393795013427734,
+        -6.42717170715332
+      ]
+    },
+    {
+      "lod": 1,
+      "heights": [
+        -6.284999847412109,
+        -6.526041030883789,
+        -6.746337890625,
+        -6.383014678955078,
+        -6.434274673461914
+      ]
+    },
+    {
+      "lod": 2,
+      "heights": [
+        -6.293575286865234,
+        -6.515186309814453,
+        -6.720802307128906,
+        -6.386564254760742,
+        -6.41172981262207
+      ]
+    }
+  ],
+  "islandProfiles": [
+    {
+      "lod": 0,
+      "island": 0,
+      "offset": [
+        0,
+        0
+      ],
+      "seabed": -7.692268371582031,
+      "top": 12.949996948242188,
+      "bottom": -28.0
+    },
+    {
+      "lod": 0,
+      "island": 0,
+      "offset": [
+        -6.0,
+        0
+      ],
+      "seabed": -7.717082977294922,
+      "top": 10.1590576171875,
+      "bottom": -28.0
+    },
+    {
+      "lod": 0,
+      "island": 0,
+      "offset": [
+        6.0,
+        0
+      ],
+      "seabed": -7.516082763671875,
+      "top": 15.663093566894531,
+      "bottom": -28.0
+    },
+    {
+      "lod": 0,
+      "island": 0,
+      "offset": [
+        0,
+        -8.8
+      ],
+      "seabed": -7.460044860839844,
+      "top": 10.219161987304688,
+      "bottom": -28.0
+    },
+    {
+      "lod": 0,
+      "island": 0,
+      "offset": [
+        0,
+        8.8
+      ],
+      "seabed": -7.9244842529296875,
+      "top": 11.526008605957031,
+      "bottom": -28.0
+    },
+    {
+      "lod": 0,
+      "island": 1,
+      "offset": [
+        0,
+        0
+      ],
+      "seabed": -8.167057037353516,
+      "top": 18.471263885498047,
+      "bottom": -28.0
+    },
+    {
+      "lod": 0,
+      "island": 1,
+      "offset": [
+        -7.2,
+        0
+      ],
+      "seabed": -8.02584457397461,
+      "top": 12.444755554199219,
+      "bottom": -28.0
+    },
+    {
+      "lod": 0,
+      "island": 1,
+      "offset": [
+        7.2,
+        0
+      ],
+      "seabed": -8.225658416748047,
+      "top": 15.892341613769531,
+      "bottom": -28.0
+    },
+    {
+      "lod": 0,
+      "island": 1,
+      "offset": [
+        0,
+        -10.0
+      ],
+      "seabed": -8.016311645507812,
+      "top": 12.714080810546875,
+      "bottom": -28.0
+    },
+    {
+      "lod": 0,
+      "island": 1,
+      "offset": [
+        0,
+        10.0
+      ],
+      "seabed": -8.317802429199219,
+      "top": 15.250358581542969,
+      "bottom": -28.0
+    },
+    {
+      "lod": 0,
+      "island": 2,
+      "offset": [
+        0,
+        0
+      ],
+      "seabed": -9.46798324584961,
+      "top": 21.148658752441406,
+      "bottom": -28.0
+    },
+    {
+      "lod": 0,
+      "island": 2,
+      "offset": [
+        -10.0,
+        0
+      ],
+      "seabed": -9.462413787841797,
+      "top": 16.168476104736328,
+      "bottom": -28.0
+    },
+    {
+      "lod": 0,
+      "island": 2,
+      "offset": [
+        10.0,
+        0
+      ],
+      "seabed": -9.526657104492188,
+      "top": 13.150482177734375,
+      "bottom": -28.0
+    },
+    {
+      "lod": 0,
+      "island": 2,
+      "offset": [
+        0,
+        -12.4
+      ],
+      "seabed": -9.31646728515625,
+      "top": 14.998756408691406,
+      "bottom": -28.0
+    },
+    {
+      "lod": 0,
+      "island": 2,
+      "offset": [
+        0,
+        12.4
+      ],
+      "seabed": -9.619499206542969,
+      "top": 16.858497619628906,
+      "bottom": -28.0
+    },
+    {
+      "lod": 1,
+      "island": 0,
+      "offset": [
+        0,
+        0
+      ],
+      "seabed": -7.645664215087891,
+      "top": 12.949996948242188,
+      "bottom": -28.0
+    },
+    {
+      "lod": 1,
+      "island": 0,
+      "offset": [
+        -6.0,
+        0
+      ],
+      "seabed": -7.668434143066406,
+      "top": 10.1590576171875,
+      "bottom": -28.0
+    },
+    {
+      "lod": 1,
+      "island": 0,
+      "offset": [
+        6.0,
+        0
+      ],
+      "seabed": -7.516082763671875,
+      "top": 15.663093566894531,
+      "bottom": -28.0
+    },
+    {
+      "lod": 1,
+      "island": 0,
+      "offset": [
+        0,
+        -8.8
+      ],
+      "seabed": -7.438617706298828,
+      "top": 10.219161987304688,
+      "bottom": -28.0
+    },
+    {
+      "lod": 1,
+      "island": 0,
+      "offset": [
+        0,
+        8.8
+      ],
+      "seabed": -7.876243591308594,
+      "top": 11.526008605957031,
+      "bottom": -28.0
+    },
+    {
+      "lod": 1,
+      "island": 1,
+      "offset": [
+        0,
+        0
+      ],
+      "seabed": -8.19635009765625,
+      "top": 18.471263885498047,
+      "bottom": -28.0
+    },
+    {
+      "lod": 1,
+      "island": 1,
+      "offset": [
+        -7.2,
+        0
+      ],
+      "seabed": -8.032962799072266,
+      "top": 12.444755554199219,
+      "bottom": -28.0
+    },
+    {
+      "lod": 1,
+      "island": 1,
+      "offset": [
+        7.2,
+        0
+      ],
+      "seabed": -8.225658416748047,
+      "top": 15.892341613769531,
+      "bottom": -28.0
+    },
+    {
+      "lod": 1,
+      "island": 1,
+      "offset": [
+        0,
+        -10.0
+      ],
+      "seabed": -8.016311645507812,
+      "top": 12.714080810546875,
+      "bottom": -28.0
+    },
+    {
+      "lod": 1,
+      "island": 1,
+      "offset": [
+        0,
+        10.0
+      ],
+      "seabed": -8.376380920410156,
+      "top": 15.250358581542969,
+      "bottom": -28.0
+    },
+    {
+      "lod": 1,
+      "island": 2,
+      "offset": [
+        0,
+        0
+      ],
+      "seabed": -9.46798324584961,
+      "top": 21.148658752441406,
+      "bottom": -27.999998092651367
+    },
+    {
+      "lod": 1,
+      "island": 2,
+      "offset": [
+        -10.0,
+        0
+      ],
+      "seabed": -9.462409973144531,
+      "top": 16.168476104736328,
+      "bottom": -28.0
+    },
+    {
+      "lod": 1,
+      "island": 2,
+      "offset": [
+        10.0,
+        0
+      ],
+      "seabed": -9.433895111083984,
+      "top": 13.150482177734375,
+      "bottom": -28.0
+    },
+    {
+      "lod": 1,
+      "island": 2,
+      "offset": [
+        0,
+        -12.4
+      ],
+      "seabed": -9.31646728515625,
+      "top": 14.998756408691406,
+      "bottom": -28.0
+    },
+    {
+      "lod": 1,
+      "island": 2,
+      "offset": [
+        0,
+        12.4
+      ],
+      "seabed": -9.619503021240234,
+      "top": 16.858497619628906,
+      "bottom": -28.0
+    },
+    {
+      "lod": 2,
+      "island": 0,
+      "offset": [
+        0,
+        0
+      ],
+      "seabed": -7.626674652099609,
+      "top": 12.950447082519531,
+      "bottom": -28.0
+    },
+    {
+      "lod": 2,
+      "island": 0,
+      "offset": [
+        -6.0,
+        0
+      ],
+      "seabed": -7.676158905029297,
+      "top": 10.157127380371094,
+      "bottom": -28.0
+    },
+    {
+      "lod": 2,
+      "island": 0,
+      "offset": [
+        6.0,
+        0
+      ],
+      "seabed": -7.5848236083984375,
+      "top": 15.639564514160156,
+      "bottom": -28.0
+    },
+    {
+      "lod": 2,
+      "island": 0,
+      "offset": [
+        0,
+        -8.8
+      ],
+      "seabed": -7.4368743896484375,
+      "top": 10.218193054199219,
+      "bottom": -28.0
+    },
+    {
+      "lod": 2,
+      "island": 0,
+      "offset": [
+        0,
+        8.8
+      ],
+      "seabed": -7.8164825439453125,
+      "top": 11.517967224121094,
+      "bottom": -28.0
+    },
+    {
+      "lod": 2,
+      "island": 1,
+      "offset": [
+        0,
+        0
+      ],
+      "seabed": -8.169574737548828,
+      "top": 18.44033432006836,
+      "bottom": -28.0
+    },
+    {
+      "lod": 2,
+      "island": 1,
+      "offset": [
+        -7.2,
+        0
+      ],
+      "seabed": -8.042438507080078,
+      "top": 12.471771240234375,
+      "bottom": -28.0
+    },
+    {
+      "lod": 2,
+      "island": 1,
+      "offset": [
+        7.2,
+        0
+      ],
+      "seabed": -8.22457504272461,
+      "top": 15.865791320800781,
+      "bottom": -28.0
+    },
+    {
+      "lod": 2,
+      "island": 1,
+      "offset": [
+        0,
+        -10.0
+      ],
+      "seabed": -7.98931884765625,
+      "top": 12.688079833984375,
+      "bottom": -28.0
+    },
+    {
+      "lod": 2,
+      "island": 1,
+      "offset": [
+        0,
+        10.0
+      ],
+      "seabed": -8.349830627441406,
+      "top": 15.250358581542969,
+      "bottom": -28.0
+    },
+    {
+      "lod": 2,
+      "island": 2,
+      "offset": [
+        0,
+        0
+      ],
+      "seabed": -9.47918701171875,
+      "top": 21.12847900390625,
+      "bottom": -28.0
+    },
+    {
+      "lod": 2,
+      "island": 2,
+      "offset": [
+        -10.0,
+        0
+      ],
+      "seabed": -9.465328216552734,
+      "top": 16.168476104736328,
+      "bottom": -28.0
+    },
+    {
+      "lod": 2,
+      "island": 2,
+      "offset": [
+        10.0,
+        0
+      ],
+      "seabed": -9.449199676513672,
+      "top": 13.18524169921875,
+      "bottom": -28.0
+    },
+    {
+      "lod": 2,
+      "island": 2,
+      "offset": [
+        0,
+        -12.4
+      ],
+      "seabed": -9.295455932617188,
+      "top": 14.979255676269531,
+      "bottom": -28.0
+    },
+    {
+      "lod": 2,
+      "island": 2,
+      "offset": [
+        0,
+        12.4
+      ],
+      "seabed": -9.651054382324219,
+      "top": 16.847930908203125,
+      "bottom": -28.0
+    }
+  ],
+  "terrainBlendProfiles": [
+    {
+      "lod": 0,
+      "vertices": 11835,
+      "values": 11835,
+      "minimum": 0.0,
+      "maximum": 0.9989498853683472,
+      "intermediate": 2201
+    },
+    {
+      "lod": 1,
+      "vertices": 5920,
+      "values": 5920,
+      "minimum": 0.0,
+      "maximum": 0.9989498853683472,
+      "intermediate": 2201
+    },
+    {
+      "lod": 2,
+      "vertices": 2371,
+      "values": 2371,
+      "minimum": 0.0,
+      "maximum": 0.9983838200569153,
+      "intermediate": 1034
+    }
+  ],
+  "artAcceptance": "NOT_ACCEPTED",
+  "deviceAcceptance": "NOT_RUN"
+}
