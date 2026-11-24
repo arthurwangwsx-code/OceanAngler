@@ -8,6 +8,7 @@ Shader "OceanAngler/BayWater"
         _OceanTime("Water time",Float)=0
         _SeaLevel("Sea level",Float)=4.5
         _HasReflection("Reflection ready",Float)=0
+        _FishingSplash("Fishing splash x z age strength",Vector)=(0,0,-1,0)
         _PlanarReflection("Planar reflection",2D)="black"{}
         _BoatOrigin("Static dinghy origin and rim",Vector)=(-2.5,4.5,3.8,.48)
         _Boat0("Hull station 0",Vector)=(-1.8,.03,-.02,0)
@@ -39,6 +40,7 @@ Shader "OceanAngler/BayWater"
             CBUFFER_START(UnityPerMaterial)
             half4 _ShallowColor,_DeepColor,_FoamColor;
             float4 _BoatOrigin,_Boat0,_Boat1,_Boat2,_Boat3,_Boat4,_Boat5,_Boat6;
+            float4 _FishingSplash;
             float _OceanTime,_SeaLevel,_HasReflection;
             float4x4 _ReflectionVP;
             CBUFFER_END
@@ -89,6 +91,13 @@ Shader "OceanAngler/BayWater"
                 float micro=1-smoothstep(.06,.25,footprint);
                 float dx=cos(a)*.055*.34-cos(b)*.025*.14+micro*(cos(c)*.008*5.3-cos(d)*.006*1.8);
                 float dz=cos(a)*.055*.21+cos(b)*.025*.48+micro*(cos(c)*.008*2.7+cos(d)*.006*4.5);
+                float2 splashDelta=input.positionWS.xz-_FishingSplash.xy;
+                float splashDistance=length(splashDelta),splashAge=max(0,_FishingSplash.z);
+                float ringDistance=splashDistance-splashAge*1.4;
+                float splashEnvelope=_FishingSplash.w*exp(-splashAge*2-abs(ringDistance)*5)*(1-smoothstep(1,1.4,splashAge));
+                float rippleSlope=cos(ringDistance*22)*.05*splashEnvelope;
+                float2 rippleDirection=splashDelta/max(.001,splashDistance);
+                dx+=rippleDirection.x*rippleSlope;dz+=rippleDirection.y*rippleSlope;
                 half3 normal=normalize(float3(-dx,1,-dz));bool above=_WorldSpaceCameraPos.y>_SeaLevel;
                 if(!above)normal=-normal;
                 half fresnel=.02+.98*pow(1-saturate(dot(view,normal)),5);
@@ -114,6 +123,7 @@ Shader "OceanAngler/BayWater"
                 float noise=sin(input.positionWS.x*15+sin(input.positionWS.z*9)+_OceanTime)*.12+.87;
                 half foam=above?(1-smoothstep(.025,.22,max(0,_SeaLevel-bedPosition.y)))*noise:0;
                 color=lerp(color,_FoamColor.rgb,foam*.8);
+                color=lerp(color,_FoamColor.rgb,exp(-ringDistance*ringDistance*140)*splashEnvelope*.4);
                 return half4(MixFog(color,input.fog),1);
             }
             ENDHLSL

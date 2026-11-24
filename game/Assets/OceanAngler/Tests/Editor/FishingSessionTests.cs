@@ -78,7 +78,7 @@ namespace OceanAngler.Tests
                 Assert.That(Vector3.Distance(bite.fishPosition+bite.fishRotation*hook,bite.lurePosition),Is.LessThan(.00001f));
                 Assert.That(Vector3.Distance(bite.fishPosition,fight.fishPosition),Is.LessThan(.00001f));
                 Assert.That(Vector3.Distance(end.fishPosition,landed.fishPosition),Is.LessThan(.00001f));Assert.That(Quaternion.Angle(end.fishRotation,landed.fishRotation),Is.LessThan(.01f));
-                Assert.That(Vector3.Distance(Pose(FishingPhase.Casting,0).lurePosition,launch),Is.LessThan(.00001f));
+                Assert.That(Vector3.Distance(Pose(FishingPhase.Casting,0).lurePosition,Pose(FishingPhase.Ready,0).lurePosition),Is.LessThan(.00001f));
                 Assert.That(Vector3.Distance(wait.fishPosition,approach.fishPosition),Is.GreaterThan(4));
             }
         }

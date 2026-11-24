@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 namespace OceanAngler
 {
-    public sealed class OceanWorld : MonoBehaviour
+    public sealed partial class OceanWorld : MonoBehaviour
     {
         GameController game;GameUI ui;Transform fishRoot;FishVisual fish;AuthoredSpinningRig gear;
         string fishId,habitat;
@@ -68,14 +68,15 @@ namespace OceanAngler
         }
         void PoseFishingGear(bool leftHanded)
         {
-            float hand=leftHanded?-1:1;var start=new Vector3(1.75f*hand,-.30f,-2.0f);var direction=(new Vector3(.70f*hand,2.6f,1.3f)-start).normalized;
-            gear.transform.localScale=Vector3.one;gear.transform.position=start;gear.transform.rotation=Quaternion.LookRotation(Vector3.ProjectOnPlane(Vector3.up,direction).normalized,direction);
+            PoseGearAtWaterline(gear,activeHabitat.SeaLevel,leftHanded);
         }
         void Update()
         {
             if(game==null||game.Progress.RequiresRecovery)return;
             var data=game.Progress.Data;bool reduced=data.settings.reducedMotion;
-            if(game.Session.Phase!=FishingPhase.Ready||habitat!=null&&habitat!=data.habitatId){releasing=null;awaitingNextFish=false;}
+            bool habitatChanged=habitat!=data.habitatId;
+            if(habitatChanged){SwitchHabitat(data.habitatId);cameraInitialized=false;splashBegan=float.NegativeInfinity;}
+            if(game.Session.Phase!=FishingPhase.Ready||habitatChanged){releasing=null;awaitingNextFish=false;}
             if(ui.FocusedFish!=null||ui.InspectingGear||ui.InspectingHabitat||ui.InspectingObservation||reduced)releasing=null;
             string desired=ui.FocusedFish??releasing?.fishId??game.Session.Catch?.fishId??(awaitingNextFish?fishId:System.Array.Find(game.Content.fish,f=>f.habitatId==data.habitatId).id);
             if(desired!=fishId)SelectFish(desired);
@@ -85,7 +86,7 @@ namespace OceanAngler
             bool journal=ui.FocusedFish!=null;
             fish.semantic=journal?"swim":game.Session.Phase==FishingPhase.Fighting?"hooked":game.Session.Phase==FishingPhase.Bite?"bite":game.Session.Phase==FishingPhase.Casting?"burst":game.Session.Phase==FishingPhase.Landed?"idle":"swim";
             if(!ui.InspectingGear)PoseFishingGear(data.settings.leftHanded);
-            var pose=FishingEncounter.Evaluate(game.Session.Phase,game.Session.PhaseProgress,game.Session.CastPower,fishHookLocal,gear.CastOrigin,ui.Compact?(data.settings.leftHanded?1.3f:-1.3f):0,time,reduced);
+            var pose=FishingEncounter.Evaluate(game.Session.Phase,game.Session.PhaseProgress,game.Session.CastPower,fishHookLocal,gear.CastOrigin,ui.Compact?(data.settings.leftHanded?1.3f:-1.3f):0,time,reduced,activeHabitat.SeaLevel);
             fishRoot.position=journal?new Vector3(ui.CompactViewer?-1.3f:2.35f,ui.CompactViewer?.7f:1.35f,1.2f):pose.fishPosition;
             fishRoot.localScale=Vector3.one*(journal?ui.ModelZoom:1);
             fishRoot.rotation=journal?Quaternion.Euler(0,-25+ui.ModelYaw,-3):pose.fishRotation;
@@ -104,8 +105,8 @@ namespace OceanAngler
                 bool attached=hooked||game.Session.Phase==FishingPhase.Bite;
                 gear.Drive(t,game.Reeling,game.Session.Paused,reduced,game.Session.Phase==FishingPhase.Casting,pose.lurePosition,false,hooked,attached?fish:null);
             }
-            if(habitat!=data.habitatId)SwitchHabitat(data.habitatId);
-            if(activeHabitat!=null)activeHabitat.Present(view,ui.InspectingHabitat,ui.InspectingHabitat&&ui.HabitatSurfaceView,ui.HabitatAngle,game.Session.Paused,reduced,ui.FocusedFish==null&&!ui.InspectingGear&&!ui.InspectingObservation,ui.InspectingHabitat?ui.HabitatCompositionOffset:0);
+            UpdateWaterlineCamera(pose.lurePosition);
+            if(activeHabitat!=null)activeHabitat.Present(view,ui.InspectingHabitat,ui.InspectingHabitat&&ui.HabitatSurfaceView||FishingSurfaceView,ui.HabitatAngle,game.Session.Paused,reduced,ui.FocusedFish==null&&!ui.InspectingGear&&!ui.InspectingObservation,ui.InspectingHabitat?ui.HabitatCompositionOffset:0,FishingSurfaceView);
             Observations.Present(ui.ObservingSpecies,view,ui.Compact,reduced,Time.unscaledDeltaTime);
         }
         void OnDestroy(){if(game!=null)game.Released-=BeginRelease;if(activeHabitat!=null)Destroy(activeHabitat.gameObject);}

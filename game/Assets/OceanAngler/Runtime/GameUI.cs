@@ -224,7 +224,7 @@ namespace OceanAngler
         static string GentleResult(CatchRecord record)=>TaskProgress.Gentle(record)?"轻柔控线已达标":"轻柔控线，下次再试";
         void BuildSettings()
         {
-            var panel=PagePanel("Settings",new Vector2(.02f,.12f),new Vector2(.78f,.81f),668);
+            var panel=PagePanel("Settings",new Vector2(.02f,.12f),new Vector2(.78f,.81f),736);
             Label(panel,"按自己的节奏探索",30,Color.white,24,18,-48,46);
             var s=game.Progress.Data.settings;
             Setting(panel,90,"初学辅助",s.assisted,()=>game.Configure(x=>x.assisted=!x.assisted));
@@ -233,8 +233,9 @@ namespace OceanAngler
             Setting(panel,294,"环境与提示音",s.sound,()=>game.Configure(x=>x.sound=!x.sound));
             Setting(panel,362,"探索音乐",s.music,()=>game.Configure(x=>x.music=!x.music));
             Setting(panel,430,"咬钩触觉提示",s.haptics,()=>game.Configure(x=>x.haptics=!x.haptics));
-            Label(panel,"无广告 · 无内购 · 音乐继续后播放\n设置即时保存，首次教学始终辅助。",22,Muted,24,498,-48,80);
-            Button(panel,"家长区与隐私",24,588,330,52,()=>{parentAnswer=UnityEngine.Random.Range(4,9)+9;page="家长验证";dirty=true;},Navy);
+            Setting(panel,498,"固定水下镜头",s.underwaterOnly,()=>game.Configure(x=>x.underwaterOnly=!x.underwaterOnly));
+            Label(panel,"无广告 · 无内购 · 设置即时保存\n减弱动态时镜头也固定在水下。",22,Muted,24,566,-48,80);
+            Button(panel,"家长区与隐私",24,656,330,52,()=>{parentAnswer=UnityEngine.Random.Range(4,9)+9;page="家长验证";dirty=true;},Navy);
         }
         void Setting(RectTransform parent,float y,string title,bool enabled,Action action) => Button(parent,title+"    "+(enabled?"已开启":"已关闭"),24,y,-48,54,action,enabled?new Color(.07f,.32f,.34f):Navy);
         void BuildParentGate()

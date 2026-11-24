@@ -61,7 +61,7 @@ namespace OceanAngler.Tests
             archive=Path.Combine(root,"immersive-before-after");Assert.That(Directory.Exists(archive),Is.False);Directory.CreateDirectory(archive);
             foreach(string suffix in new[]{"",".bak",".tmp"}){string file=Path.Combine(root,"ocean-progress.json")+suffix;if(File.Exists(file)){string saved=Path.Combine(archive,"before"+suffix+".json");File.Move(file,saved);originals.Add(file,saved);}}
             yield return SceneManager.LoadSceneAsync("Bay",LoadSceneMode.Single);scene=SceneManager.GetSceneByName("Bay");yield return null;yield return null;
-            game=UnityEngine.Object.FindFirstObjectByType<GameController>();string output=Path.Combine(root,"immersive-review");yield return game.GetComponent<RuntimeSmoke>().RunImmersiveReview(output,false);
+            game=UnityEngine.Object.FindFirstObjectByType<GameController>();string output=Path.Combine(root,"immersive-review");yield return game.GetComponent<RuntimeSmoke>().RunImmersiveReview(output,false,checkWaterline:true);
             var result=JsonUtility.FromJson<Result>(File.ReadAllText(Path.Combine(output,"immersive.json")));Assert.That(result.status,Is.EqualTo("PASS"),string.Join("\n",result.failures));Assert.That(result.catchesAfter,Is.EqualTo(result.catchesBefore+1));Assert.That(result.unfinishedExitPreservedLedger&&result.settingsRestored,Is.True);
         }
         [UnityTest,Timeout(60000)] public IEnumerator RestAcknowledgementResetsOnlyAfterExplicitContinueAndKeepsMinimalHud()

@@ -917,7 +917,9 @@
         },
         {
           "path": "game/Assets/OceanAngler/Shaders/BayWater.shader",
-          "sha256": "c303192b81a54ec9772311a35aef72210d273b3c66e8d763da5910058423e211"
+          "sha256": "d4a54f2a7d54629c9e06bbe44c4fd08b3f13791bce6777501c0d66a70865473c",
+          "previousSha256": "c303192b81a54ec9772311a35aef72210d273b3c66e8d763da5910058423e211",
+          "modification": "Own waterline cast-impact radial normal and foam response; other shader inputs preserved; docs/35-waterline-casting.md"
         }
       ]
     },

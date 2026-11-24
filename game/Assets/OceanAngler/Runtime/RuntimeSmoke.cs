@@ -62,7 +62,7 @@ namespace OceanAngler
             Require(!bay.reflection.Ready&&bay.reflection.RenderCount==captures,"underwater-skips-reflection-render");
             Click("换个角度",true);yield return null;yield return null;Require(Vector3.Distance(Camera.main.transform.position,bay.reefCamera.position)<.01f,"reef-camera-actually-changes");yield return Snapshot("11-bay-reef");
             Click("返回钓鱼",true);yield return null;yield return null;Require(game.Session.Paused,"observation-return-keeps-pause");
-            Click("继续探索",true);yield return null;yield return null;Require(Vector3.Distance(Camera.main.transform.position,bay.underwaterCamera.position)<.01f,"fishing-camera-restored");
+            Click("继续探索",true);yield return null;yield return null;Require(GetComponent<OceanWorld>().FishingSurfaceView&&Camera.main.transform.position.y>bay.SeaLevel,"surface-fishing-camera-restored");
             int before=game.Progress.Data.catches.Count;
             var cast=Find("按住蓄力");Pointer(cast,true);yield return new WaitForSecondsRealtime(.4f);Pointer(cast,false);
             float timeout=Time.realtimeSinceStartup+18;

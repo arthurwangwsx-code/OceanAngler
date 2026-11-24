@@ -14,7 +14,10 @@ namespace OceanAngler
         public static string ResourceFor(string id)=>id=="bay"?"Models/CoralBay":id=="channel"?"Models/NearshoreChannel":id=="slope"?"Models/ContinentalSlope":null;
         protected virtual void PresentAmbient(bool paused,bool reduced,bool visible){}
         float waterTime;MaterialPropertyBlock waterProperties;
-        public void Present(Camera camera,bool observing,bool above,int angle,bool paused,bool reduced,bool showAmbient=true,float compositionOffset=0)
+        Vector4 fishingSplash=new Vector4(0,0,-1,0);
+        public void SetFishingSplash(Vector3 position,float age)
+        {fishingSplash=new Vector4(position.x,position.z,age,age>=0&&age<1.4f?1:0);}
+        public void Present(Camera camera,bool observing,bool above,int angle,bool paused,bool reduced,bool showAmbient=true,float compositionOffset=0,bool fishingSurface=false)
         {
             PresentAmbient(paused,reduced,showAmbient);
             if(lighting!=null)lighting.Present(above);
@@ -22,13 +25,16 @@ namespace OceanAngler
             if(waterProperties==null)waterProperties=new MaterialPropertyBlock();
             waterProperties.SetFloat("_OceanTime",reduced?0:waterTime);
             waterProperties.SetFloat("_SeaLevel",SeaLevel);
+            waterProperties.SetVector("_FishingSplash",reduced?new Vector4(0,0,-1,0):fishingSplash);
             if(causticLight!=null){causticLight.enabled=!above;causticLight.transform.localRotation=Quaternion.Euler(90,reduced?0:waterTime*1.5f,0);}
             if(suspendedParticles!=null){var main=suspendedParticles.main;main.simulationSpeed=paused||reduced?0:1;suspendedParticles.gameObject.SetActive(!above&&!reduced);}
             var from=above?(angle%2==0?surfaceCamera:pierCamera):(observing&&angle%2!=0?reefCamera:underwaterCamera);
             var target=above?(angle%2==0?surfaceTarget:pierTarget):(observing&&angle%2!=0?reefTarget:underwaterTarget);
             // Explicit destinations make mode changes reversible and keep the fishing camera stable.
-            camera.transform.SetPositionAndRotation(from.position,Quaternion.LookRotation(target.position-from.position,Vector3.up));
-            camera.fieldOfView=observing?58:42;camera.depthTextureMode|=DepthTextureMode.Depth;
+            var position=fishingSurface?new Vector3(underwaterCamera.position.x,SeaLevel+1.25f,underwaterCamera.position.z):from.position;
+            var look=fishingSurface?new Vector3(underwaterTarget.position.x,SeaLevel+.05f,underwaterTarget.position.z):target.position;
+            camera.transform.SetPositionAndRotation(position,Quaternion.LookRotation(look-position,Vector3.up));
+            camera.fieldOfView=observing||fishingSurface?58:42;camera.depthTextureMode|=DepthTextureMode.Depth;
             // Reserve the actual preview panel width without moving the subject
             // or adding more play HUD. Reflection uses this same projection.
             camera.ResetProjectionMatrix();

@@ -46,12 +46,13 @@ namespace OceanAngler.Tests
             var rig=Object.Instantiate(Resources.Load<GameObject>("Models/SpinningRig")).GetComponent<AuthoredSpinningRig>();
             try
             {
-                rig.InitializeMechanisms();var start=new Vector3(1.75f,-.3f,-2);var direction=(new Vector3(.7f,2.6f,1.3f)-start).normalized;rig.transform.SetPositionAndRotation(start,Quaternion.LookRotation(Vector3.ProjectOnPlane(Vector3.up,direction).normalized,direction));
+                rig.InitializeMechanisms();
                 var animator=fish.GetComponentInChildren<Animator>();animator.enabled=false;
                 var hook=fish.transform.InverseTransformPoint(fish.HookPosition);
                 var clips=AssetDatabase.LoadAllAssetsAtPath("Assets/OceanAngler/Art/Bluefin/Bluefin.fbx").OfType<AnimationClip>().Where(c=>!c.name.StartsWith("__preview__")).ToArray();
-                foreach(var frame in new[]{(FishingPhase.Bite,0f,"bite"),(FishingPhase.Fighting,.5f,"hooked"),(FishingPhase.Landed,1f,"idle")})
+                foreach(float seaLevel in new[]{4.5f,200f})foreach(bool left in new[]{false,true})foreach(var frame in new[]{(FishingPhase.Bite,0f,"bite"),(FishingPhase.Fighting,.5f,"hooked"),(FishingPhase.Landed,1f,"idle")})
                 {
+                    OceanWorld.PoseGearAtWaterline(rig,seaLevel,left);
                     var pose=FishingEncounter.Evaluate(frame.Item1,frame.Item2,.6f,hook,rig.CastOrigin,0,3,false);fish.transform.SetPositionAndRotation(pose.fishPosition,pose.fishRotation);
                     clips.Single(c=>c.name==frame.Item3||c.name.EndsWith("|"+frame.Item3)).SampleAnimation(animator.gameObject,.2f);
                     rig.Drive(.45f,false,true,false,false,Vector3.zero,false,true,fish);rig.Present(0);

@@ -11,16 +11,19 @@ namespace OceanAngler
     {
         [Serializable] sealed class HudSample { public string phase;public bool leftHanded,centralClear;public int buttons;public float occupiedRatio; }
         [Serializable] sealed class MeterLabelSample { public string text;public float preferredWidth,availableWidth,preferredHeight,availableHeight;public bool fits; }
+        [Serializable] sealed class WaterlineSample { public string stage,phase;public bool leftHanded,surface;public float seaLevel,cameraY,rigY,lureY,fade,guideError; }
         [Serializable] sealed class RestTimerResult { public string status="RUNNING",scope="real unmodified active timer on a QA player; not child or physical-device qualification";public float observedSeconds;public bool paused,reminderDue,acknowledged,progressUnchanged; }
-        [Serializable] sealed class ImmersiveResult { public string status,scope;public string[] failures;public List<HudSample> samples;public List<MeterLabelSample> meterLabels;public int catchesBefore,catchesAfter,pointsBefore,pointsAfter;public bool unfinishedExitPreservedLedger,settingsRestored;public RestTimerResult restTimer; }
+        [Serializable] sealed class ImmersiveResult { public string status,scope;public string[] failures;public List<HudSample> samples;public List<MeterLabelSample> meterLabels;public List<WaterlineSample> waterline;public int catchesBefore,catchesAfter,pointsBefore,pointsAfter;public bool unfinishedExitPreservedLedger,settingsRestored;public RestTimerResult restTimer; }
         RestTimerResult restTimer;
         readonly List<HudSample> hudSamples=new List<HudSample>();
         readonly List<MeterLabelSample> meterLabels=new List<MeterLabelSample>();
         readonly HashSet<string> seenMeterLabels=new HashSet<string>();
-        public IEnumerator RunImmersiveReview(string outputFolder,bool captureFrames,bool quitProcess=false)
+        readonly List<WaterlineSample> waterlineSamples=new List<WaterlineSample>();bool waterlineReview;
+        public IEnumerator RunImmersiveReview(string outputFolder,bool captureFrames,bool quitProcess=false,bool checkWaterline=false)
         {
             folder=Path.GetFullPath(outputFolder);Directory.CreateDirectory(folder);if(File.Exists(Path.Combine(folder,"receipt.json")))throw new InvalidOperationException("Use a new review folder");
             game=GetComponent<GameController>();began=Time.realtimeSinceStartup;finished=false;journeyMode=true;gearReviewMode=!LaunchArguments.Get().Contains("--ocean-rest-timer");journeyQuit=quitProcess;completeContent=false;hudSamples.Clear();meterLabels.Clear();seenMeterLabels.Clear();restTimer=null;
+            waterlineSamples.Clear();waterlineReview=checkWaterline||LaunchArguments.Get().Contains("--ocean-waterline-review");
             receipt=new Receipt{captureEnabled=captureFrames,scope=captureFrames?"native focused immersive UI EventSystem review; not OS touch, child or full progression":"headless immersive UI regression; no rendered acceptance"};
             var before=game.Progress.Data.Clone();var stack=new Stack<IEnumerator>();stack.Push(ImmersiveReview());
             while(stack.Count>0&&!finished)
@@ -32,8 +35,15 @@ namespace OceanAngler
             }
             while(stack.Count>0)(stack.Pop() as IDisposable)?.Dispose();
             if(!finished)FinishJourney();
-            File.WriteAllText(Path.Combine(folder,"immersive.json"),JsonUtility.ToJson(new ImmersiveResult{status=receipt.status,scope=receipt.scope,failures=receipt.failures.ToArray(),samples=new List<HudSample>(hudSamples),meterLabels=new List<MeterLabelSample>(meterLabels),catchesBefore=before.catches.Count,catchesAfter=game.Progress.Data.catches.Count,pointsBefore=before.totalPoints,pointsAfter=game.Progress.Data.totalPoints,unfinishedExitPreservedLedger=game.Progress.Data.catches.Count==before.catches.Count+1,settingsRestored=JsonUtility.ToJson(before.settings)==JsonUtility.ToJson(game.Progress.Data.settings),restTimer=restTimer},true));
+            File.WriteAllText(Path.Combine(folder,"immersive.json"),JsonUtility.ToJson(new ImmersiveResult{status=receipt.status,scope=receipt.scope,failures=receipt.failures.ToArray(),samples=new List<HudSample>(hudSamples),meterLabels=new List<MeterLabelSample>(meterLabels),waterline=new List<WaterlineSample>(waterlineSamples),catchesBefore=before.catches.Count,catchesAfter=game.Progress.Data.catches.Count,pointsBefore=before.totalPoints,pointsAfter=game.Progress.Data.totalPoints,unfinishedExitPreservedLedger=game.Progress.Data.catches.Count==before.catches.Count+1,settingsRestored=JsonUtility.ToJson(before.settings)==JsonUtility.ToJson(game.Progress.Data.settings),restTimer=restTimer},true));
         }
+        void CheckWaterline(string stage,bool surface)
+        {
+            var world=GetComponent<OceanWorld>();var rig=FindFirstObjectByType<AuthoredSpinningRig>();var sample=new WaterlineSample{stage=stage,phase=game.Session.Phase.ToString(),leftHanded=game.Progress.Data.settings.leftHanded,surface=world.FishingSurfaceView,seaLevel=world.ActiveHabitat.SeaLevel,cameraY=Camera.main.transform.position.y,rigY=rig.transform.position.y,lureY=rig.lureNose.position.y,fade=world.CameraFade,guideError=rig.MaximumGuideLineError()};waterlineSamples.Add(sample);
+            JourneyRequire(sample.surface==surface&&(surface?sample.cameraY>sample.seaLevel:sample.cameraY<sample.seaLevel)&&sample.rigY>sample.seaLevel&&sample.guideError<.0001f,"waterline-"+stage+"-actual-camera-rig-and-guides");
+        }
+        IEnumerator WaterlineClick(string label)
+        {yield return JourneyClick(label,true);yield return null;yield return null;}
         void CheckLiveMeterLabels()
         {
             Canvas.ForceUpdateCanvases();
@@ -92,14 +102,31 @@ namespace OceanAngler
                 var corners=new Vector3[4];departure.GetComponent<RectTransform>().GetWorldCorners(corners);var safe=DisplayMetrics.SafeArea;
                 JourneyRequire(corners[0].x>=safe.xMin&&corners[0].y>=safe.yMin&&corners[2].x<=safe.xMax&&corners[2].y<=safe.yMax,"immersive-departure-inside-safe-area");
                 Pointer(departure,true);Pointer(departure,false);
-                yield return JourneyClick("开始钓鱼",true);yield return null;yield return null;CheckImmersiveHud();yield return JourneyFrame(left?"left-ready":"ready");
+                yield return JourneyClick("开始钓鱼",true);yield return null;yield return null;
+                bool wantsSurface=!game.Progress.Data.settings.underwaterOnly&&!game.Progress.Data.settings.reducedMotion;float cameraDeadline=Time.realtimeSinceStartup+4;
+                while(wantsSurface&&(!GetComponent<OceanWorld>().FishingSurfaceView||GetComponent<OceanWorld>().CameraFade>0)&&Time.realtimeSinceStartup<cameraDeadline)yield return null;
+                CheckImmersiveHud();yield return JourneyFrame(left?"left-ready":"ready");CheckWaterline("ready",wantsSurface);
+                if(waterlineReview&&!left)
+                {
+                    foreach(string setting in new[]{"固定水下镜头","减弱动态效果"})
+                    {
+                        yield return WaterlineClick("暂停");yield return WaterlineClick("设置");yield return JourneyClick(setting);yield return null;yield return null;yield return WaterlineClick("出海");yield return WaterlineClick("继续探索");
+                        CheckWaterline(setting,false);JourneyRequire(GetComponent<OceanWorld>().CameraFade==0,"waterline-fixed-camera-no-fade-"+setting);yield return JourneyFrame(setting=="固定水下镜头"?"fixed-underwater":"reduced-underwater");
+                        yield return WaterlineClick("暂停");yield return WaterlineClick("设置");yield return JourneyClick(setting);yield return null;yield return null;yield return WaterlineClick("出海");yield return WaterlineClick("继续探索");CheckWaterline("restored-auto",true);
+                    }
+                }
                 var cast=Find("按住蓄力");Pointer(cast,true);yield return new WaitForSecondsRealtime(.25f);
                 yield return JourneyClick("暂停",true);yield return null;yield return null;
                 JourneyRequire(game.Session.Phase==FishingPhase.Ready&&game.Session.Paused&&!game.Reeling,"immersive-menu-cancels-cast-charge");
                 yield return JourneyClick("继续探索",true);yield return null;yield return null;
                 cast=Find("按住蓄力");Pointer(cast,true);yield return new WaitForSecondsRealtime(.3f);Pointer(cast,false);
+                yield return null;yield return null;
+                if(waterlineReview&&!left){CheckWaterline("casting",true);yield return JourneyFrame("surface-casting");}
                 float deadline=Time.realtimeSinceStartup+20;while(game.Session.Phase!=FishingPhase.Waiting&&Time.realtimeSinceStartup<deadline)yield return null;
+                if(waterlineReview&&!left){yield return null;CheckWaterline("impact",true);yield return JourneyFrame("surface-impact");}
+                while((GetComponent<OceanWorld>().FishingSurfaceView||GetComponent<OceanWorld>().CameraFade>0)&&Time.realtimeSinceStartup<deadline)yield return null;
                 yield return null;yield return null;CheckImmersiveHud();if(!left)yield return JourneyFrame("waiting");
+                CheckWaterline("underwater-waiting",false);JourneyRequire(GetComponent<OceanWorld>().CameraFade==0,"waterline-transition-completes");
                 while(game.Session.Phase!=FishingPhase.Bite&&Time.realtimeSinceStartup<deadline)yield return null;
                 JourneyRequire(game.Session.Phase==FishingPhase.Bite,"immersive-normal-bite");yield return null;yield return null;CheckImmersiveHud();if(!left)yield return JourneyFrame("bite");
                 yield return JourneyClick("提竿",true);yield return null;yield return null;CheckImmersiveHud();var caught=game.Session.Catch;

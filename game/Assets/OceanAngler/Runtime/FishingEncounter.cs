@@ -10,12 +10,14 @@ namespace OceanAngler
             public readonly Quaternion fishRotation;
             public Pose(Vector3 fish,Quaternion rotation,Vector3 lure){fishPosition=fish;fishRotation=rotation;lurePosition=lure;}
         }
-        public static Pose Evaluate(FishingPhase phase,float progress,float power,Vector3 hookLocal,Vector3 launch,float lane,float time,bool reduced)
+        public static Pose Evaluate(FishingPhase phase,float progress,float power,Vector3 hookLocal,Vector3 launch,float lane,float time,bool reduced,float seaLevel=4.5f)
         {
             float u=Mathf.Clamp01(progress),smooth=u*u*(3-2*u);
             var rotation=Quaternion.Euler(0,-25,-3);
             var home=new Vector3(lane,.3f,1.2f);
             var destination=new Vector3(lane-.1f,.2f,1.2f+1.6f*Mathf.Clamp(power,.3f,1));
+            var splash=new Vector3(destination.x,seaLevel,destination.z);
+            var hanging=launch+Vector3.down*.3f;
             var bite=destination-rotation*hookLocal;
             // Keep the large target ahead of the small ambient school and above
             // the rear coral before descending into the clear foreground.
@@ -30,9 +32,10 @@ namespace OceanAngler
                         fish=start;
                         var castHeading=control-start;
                         rotation=Quaternion.Euler(0,Mathf.Atan2(castHeading.z,-castHeading.x)*Mathf.Rad2Deg,-3);
-                        lure=Vector3.Lerp(launch,destination,u)+Vector3.up*(4*u*(1-u)*1.3f);
+                        lure=Vector3.Lerp(hanging,splash,u)+Vector3.up*(4*u*(1-u)*1.3f);
                         break;
                     case FishingPhase.Waiting:
+                        lure=Vector3.Lerp(splash,destination,Mathf.SmoothStep(0,1,Mathf.Clamp01(u/.7f)));
                         // Quadratic approach ends along the fish's nose direction.
                         float v=1-smooth;
                         fish=v*v*start+2*v*smooth*control+smooth*smooth*bite;
@@ -46,7 +49,7 @@ namespace OceanAngler
                         rotation=Quaternion.Euler(0,-25+Mathf.Sin(time*1.6f)*7*sweep,-3);
                         break;
                     case FishingPhase.Landed:fish=home;break;
-                    default:fish=home+new Vector3(Mathf.Sin(time*.3f)*.18f,Mathf.Sin(time*.5f)*.05f,0);break;
+                    default:fish=home+new Vector3(Mathf.Sin(time*.3f)*.18f,Mathf.Sin(time*.5f)*.05f,0);lure=hanging;break;
                 }
             }
             return new Pose(fish,rotation,lure);
