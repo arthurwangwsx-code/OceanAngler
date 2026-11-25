@@ -26,12 +26,125 @@
     "scope": "Targeted source/imported/GPU, not native, final natural art, science/child/physical qualification"
   },
   "native": {
-    "status": "NOT_RUN"
+    "status": "PASS_TARGETED_NATIVE_JOURNAL_ONLY",
+    "source": {
+      "sourceCommit": "c5bdaa558d85dada16ffcecfe9f4cd8b65da7356",
+      "sourceDigest": "5edc3462a124bd9fc5f5aa3c948bec94279f34ae16d8881e800314f77db749cb",
+      "projectSettingsSha256": "bea92e9b5c8b678dd130d48c1f43acaf939b56cacce33928a5a45af6da0a4585"
+    },
+    "appDigest": "f935d1ddafc6fa257f408d17984328b93f0c66aafb73c3d8b9b85d3971ac51cc",
+    "devices": {
+      "phone": {
+        "status": "PASS_NATIVE_DISCOVERED_JOURNAL_FIN_REVIEW",
+        "device": "phone",
+        "source": {
+          "sourceCommit": "c5bdaa558d85dada16ffcecfe9f4cd8b65da7356",
+          "sourceDigest": "5edc3462a124bd9fc5f5aa3c948bec94279f34ae16d8881e800314f77db749cb",
+          "projectSettingsSha256": "bea92e9b5c8b678dd130d48c1f43acaf939b56cacce33928a5a45af6da0a4585"
+        },
+        "appDigest": "f935d1ddafc6fa257f408d17984328b93f0c66aafb73c3d8b9b85d3971ac51cc",
+        "catches": 26,
+        "points": 4570,
+        "newCatch": false,
+        "genuineSourceUnchanged": true,
+        "otherProgressSettingsExact": true,
+        "onlyGearSelectionChanged": true,
+        "gearChecks": 20,
+        "modelStatuses": 12,
+        "bones": 34,
+        "samples": 17,
+        "independentFrontRearTravelDegrees": {
+          "front": 18.952188556796067,
+          "rear": 13.713691722553838
+        },
+        "pauseDrift": 0.0,
+        "resumeTravel": 21.114120483398438,
+        "zoom": 1.2999999523162842,
+        "modelOnlyControlsPreserveSave": true,
+        "scope": "Same-source native Simulator journal swim, pause/resume/zoom and existing gear UI. No new catch, seven native actions, OS touch, science/final art/child/physical acceptance."
+      },
+      "tablet": {
+        "status": "PASS_NATIVE_DISCOVERED_JOURNAL_FIN_REVIEW",
+        "device": "tablet",
+        "source": {
+          "sourceCommit": "c5bdaa558d85dada16ffcecfe9f4cd8b65da7356",
+          "sourceDigest": "5edc3462a124bd9fc5f5aa3c948bec94279f34ae16d8881e800314f77db749cb",
+          "projectSettingsSha256": "bea92e9b5c8b678dd130d48c1f43acaf939b56cacce33928a5a45af6da0a4585"
+        },
+        "appDigest": "f935d1ddafc6fa257f408d17984328b93f0c66aafb73c3d8b9b85d3971ac51cc",
+        "catches": 21,
+        "points": 3868,
+        "newCatch": false,
+        "genuineSourceUnchanged": true,
+        "otherProgressSettingsExact": true,
+        "onlyGearSelectionChanged": true,
+        "gearChecks": 20,
+        "modelStatuses": 12,
+        "bones": 34,
+        "samples": 17,
+        "independentFrontRearTravelDegrees": {
+          "front": 19.53728704648314,
+          "rear": 12.263223136299969
+        },
+        "pauseDrift": 0.0,
+        "resumeTravel": 21.09207534790039,
+        "zoom": 1.2999999523162842,
+        "modelOnlyControlsPreserveSave": true,
+        "scope": "Same-source native Simulator journal swim, pause/resume/zoom and existing gear UI. No new catch, seven native actions, OS touch, science/final art/child/physical acceptance."
+      }
+    },
+    "nativePngVerified": 20,
+    "media": {
+      "status": "VISUAL_REVIEWED_12_QUARTER_SECOND_SAMPLES_AND_NATIVE_PAUSE_RESUME_STILLS",
+      "clips": [
+        {
+          "device": "phone",
+          "label": "halibutfinphone",
+          "path": "art/previews/halibut-fin-motion-native/phone-journal-swim.mp4",
+          "recordingStart": 5.85199761390686,
+          "recordingEnd": 9.699643611907959,
+          "rawDuration": 11.085,
+          "clipDuration": 3.8476459980010986,
+          "visualSamples": 6,
+          "noAudio": true,
+          "onlyTrimScaleSampling": true,
+          "colorExposureEdits": false,
+          "note": "Actual native Simulator journal swim recording, bounded within verified in-game frames; output30fps is sampling, not measured runtimeFPS. Pause/resume also has separate native PNGs.",
+          "contactSampleRate": 4,
+          "contactNote": "Quarter-second samples avoid one-second aliasing of this authored one-second swim period; original contact retained privately."
+        },
+        {
+          "device": "tablet",
+          "label": "halibutfintablet",
+          "path": "art/previews/halibut-fin-motion-native/tablet-journal-swim.mp4",
+          "recordingStart": 5.93986177444458,
+          "recordingEnd": 9.803019762039185,
+          "rawDuration": 11.203333,
+          "clipDuration": 3.8631579875946045,
+          "visualSamples": 6,
+          "noAudio": true,
+          "onlyTrimScaleSampling": true,
+          "colorExposureEdits": false,
+          "note": "Actual native Simulator journal swim recording, bounded within verified in-game frames; output30fps is sampling, not measured runtimeFPS. Pause/resume also has separate native PNGs.",
+          "contactSampleRate": 4,
+          "contactNote": "Quarter-second samples avoid one-second aliasing of this authored one-second swim period; original contact retained privately."
+        }
+      ]
+    },
+    "oldSaveFilesByteIdentical": 180,
+    "oldPrimarySaveFiles": 93
   },
   "art": "PARTIAL",
   "science": "NOT_RUN",
   "child": "NOT_RUN",
   "physical": "NOT_RUN",
   "distribution": "UNCHANGED_PRIOR_BUILD_8_NOT_THIS_SOURCE",
-  "goal": "ACTIVE_FULL_PRODUCT_NOT_COMPLETE"
+  "goal": "ACTIVE_FULL_PRODUCT_NOT_COMPLETE",
+  "sourceCommit": "c5bdaa558d85dada16ffcecfe9f4cd8b65da7356",
+  "sourceCI": {
+    "conclusion": "success",
+    "headSha": "c5bdaa558d85dada16ffcecfe9f4cd8b65da7356",
+    "status": "completed",
+    "url": "https://github.com/arthurwangwsx-code/OceanAngler/actions/runs/45559760884"
+  }
 }

@@ -3421,6 +3421,65 @@
         }
       ],
       "note": "Own isolated imported Metal/4xMSAA seven authored cycles and held-fin controls after posterior skin repair; no color/exposure edits. Strict first idle/repeat differs at18pixels by1channel level, CPU positions/normals exact; GPU stability PARTIAL retained, not final art/native/FPS acceptance."
+    },
+    {
+      "id": "halibut-median-fin-native-review",
+      "author": "OceanAngler contributors",
+      "source": "Own native Simulator c5bdaa5 / f935d1dd; RuntimeSmoke.MedianFinReview",
+      "license": "MIT",
+      "redistribution": true,
+      "status": "ART_REVIEW_PENDING",
+      "artifacts": [
+        {
+          "path": "art/previews/halibut-fin-motion-native/phone-journal-swim.mp4",
+          "sha256": "77727d95dbbfd635fa13ed2c83f6905dcf0ca80fa6bcf95cccbaae297f1947b2"
+        },
+        {
+          "path": "art/previews/halibut-fin-motion-native/phone-recording-contact.jpg",
+          "sha256": "2e9bf5c23496acaff898bb6f95384c541678a2d3ad6ce416a7d668cdcfdc13a3"
+        },
+        {
+          "path": "art/previews/halibut-fin-motion-native/phone-wave-end.png",
+          "sha256": "c0c577d9e0445ec2a0f5703c2e8780de955799584158fc91cd70cd9f58141816"
+        },
+        {
+          "path": "art/previews/halibut-fin-motion-native/phone-wave-paused.png",
+          "sha256": "4c71ceeb3e5d82f10fe05cbdea00af52d7ce872aec6361bc321f5380800c4a09"
+        },
+        {
+          "path": "art/previews/halibut-fin-motion-native/phone-wave-resumed.png",
+          "sha256": "75d52c8bb8d402349825b13624815b4599fe2e5cb383dc79697189a15a972c1c"
+        },
+        {
+          "path": "art/previews/halibut-fin-motion-native/phone-wave-start.png",
+          "sha256": "bd82e2695164ec8078bb616d016f79b96a3b272d4009ea97946ccdfd60b40965"
+        },
+        {
+          "path": "art/previews/halibut-fin-motion-native/tablet-journal-swim.mp4",
+          "sha256": "a82cc5fba3e54e907e5f8eac1d115e89dd4383b4dc174c0f33367106ca69325d"
+        },
+        {
+          "path": "art/previews/halibut-fin-motion-native/tablet-recording-contact.jpg",
+          "sha256": "8d4a4c67077ea215a3e7ac01ee017317ec2fe4ec0586f34d536da1fe5ca2fea5"
+        },
+        {
+          "path": "art/previews/halibut-fin-motion-native/tablet-wave-end.png",
+          "sha256": "a913ed2a32e65f54e5332ec51e5a965873f4caed75423b1b840397da27346f36"
+        },
+        {
+          "path": "art/previews/halibut-fin-motion-native/tablet-wave-paused.png",
+          "sha256": "a29f9f5cd5932356cbc57375fb9d953020a72dc28dde65f4272d5d9a1fa02695"
+        },
+        {
+          "path": "art/previews/halibut-fin-motion-native/tablet-wave-resumed.png",
+          "sha256": "d57ed4d839cf17d17b4aa409390e1e84d20e1cd4c0efb344c4805653040b26bd"
+        },
+        {
+          "path": "art/previews/halibut-fin-motion-native/tablet-wave-start.png",
+          "sha256": "40deeac8bc2448c677aa79bbd97f3c642cdee8926947f089ee1ff3c13681d27b"
+        }
+      ],
+      "note": "Own game/native discovered-journal UI from genuine prior catch save copies; 2 bounded real display recordings,8original PNG and2contacts. No injected catch/point, audio, color or exposure edits; not OS touch,7nativeactions,newgrowth,science/final art or physical qualification."
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."
