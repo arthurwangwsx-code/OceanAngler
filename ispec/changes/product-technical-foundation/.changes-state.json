@@ -645,6 +645,14 @@
       "checkedAt": "2026-11-25T14:30:45.336Z",
       "durationMs": 165.952291,
       "outcome": "accepted"
+    },
+    {
+      "stageId": "apply",
+      "runId": null,
+      "operation": "start",
+      "checkedAt": "2026-11-25T16:30:53.473Z",
+      "durationMs": 167.176333,
+      "outcome": "accepted"
     }
   ],
   "measurementJournal": {
@@ -19576,6 +19584,171 @@
       "executable": "python3",
       "commandDigest": "563b2f21f928b37326d4640ac2d346c659ff27fd9a6a1794efac6e5c2ebeaeca",
       "receiptPath": "measurements/bluefin-flex-record-integrity.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "dd8aad17-0bac-4848-ae77-e57ce78670b9",
+      "startedAt": "2026-11-25T16:33:28.641Z",
+      "executable": "Blender",
+      "commandDigest": "3114f47982401516574d5d7a3d47421f23d680b5eccce7f24c42102785ae9410",
+      "receiptPath": "measurements/fin-contour-source-diagnostic-20261126a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "3d7fa5bb-a3ae-40c0-8c32-215a3596a4da",
+      "startedAt": "2026-11-25T16:35:46.693Z",
+      "executable": "python3",
+      "commandDigest": "de5cd8eba94056f494390031a25ff4925121e132476f0d88516cdfc8fc2fb72e",
+      "receiptPath": "measurements/fin-contour-gpu-diagnostic-20261126a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "3090d608-d006-42f5-a69d-f36d82c9ee7b",
+      "startedAt": "2026-11-25T16:39:11.037Z",
+      "executable": "python3",
+      "commandDigest": "52c81996c6d31c1c2f568567219b26c74a1cd1d2d197613c968862c6e3c73246",
+      "receiptPath": "measurements/fin-contour-gpu-scene-diagnostic-20261126a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "95896ad5-7e04-4e25-9e6e-53e50a3cfa5c",
+      "startedAt": "2026-11-25T16:42:01.507Z",
+      "executable": "python3",
+      "commandDigest": "4a31a4e4369e9e88f304bfa85ad3926ce351087bd7a5d6835cb74662bbace0a1",
+      "receiptPath": "measurements/fin-contour-red-editor-20261126.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "a87c1118-d799-44b6-a45c-691a0bf12ff6",
+      "startedAt": "2026-11-25T16:42:53.596Z",
+      "executable": "python3",
+      "commandDigest": "718193c85d062f99a8a86b1599aedf714eb8ba9757c755dafc1e57f9107c3e03",
+      "receiptPath": "measurements/fin-contour-editor-20261126.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "5ed0be0a-18ad-4955-a51d-d6261824e5c6",
+      "startedAt": "2026-11-25T16:47:26.987Z",
+      "executable": "python3",
+      "commandDigest": "9dcf0d931ffeaeaef1a0572b22c2099a3f8de66d9063ee5e8c3c90e640b9167e",
+      "receiptPath": "measurements/fin-contour-editor-b-20261126.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "c80ba883-fafc-454e-a4d0-5c3422bf19a5",
+      "startedAt": "2026-11-25T16:49:28.036Z",
+      "executable": "python3",
+      "commandDigest": "bc8975c82806f3143ff1d571505da25f4f74a26e8b4a4f560e0bfd59f13d56f5",
+      "receiptPath": "measurements/fin-contour-play-b-20261126.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "03b24c52-3a7c-4eeb-b433-c823cb08b536",
+      "startedAt": "2026-11-25T16:53:32.149Z",
+      "executable": "python3",
+      "commandDigest": "930fb69bd2430f99dfa52966173141d230d9019af2d389315b1bafc5a97a2f4f",
+      "receiptPath": "measurements/fin-contour-developer-c-20261126.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "7bfad4d4-6cdf-44d3-93f5-93db44e84231",
+      "startedAt": "2026-11-25T16:54:14.501Z",
+      "executable": "python3",
+      "commandDigest": "93cb6f84079d1f9710cf2882858a69d28551c7f0e897e1868af4c910d0a949d7",
+      "receiptPath": "measurements/fin-contour-integrated-c-20261126.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "c45bb71a-4c9a-4cf5-84dc-9137d807e82f",
+      "startedAt": "2026-11-25T16:54:31.941Z",
+      "executable": "python3",
+      "commandDigest": "41e14e5a5da6a680632d7cc732f6c63db7273cb471f40442ebd46b54285365e1",
+      "receiptPath": "measurements/fin-contour-gpu-scene-20261126.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "9b65221f-5974-4279-a99f-54b816079852",
+      "startedAt": "2026-11-25T16:57:20.118Z",
+      "executable": "python3",
+      "commandDigest": "67c6d9a19f4e9cd4364bfd0ee02d5aafe32abe73d5fceef9f16228dabf59c658",
+      "receiptPath": "measurements/fin-contour-gpu-analysis-20261126.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "bd999835-c700-4b2f-b4f7-bd81b56df115",
+      "startedAt": "2026-11-25T16:57:20.900Z",
+      "executable": "python3",
+      "commandDigest": "3cc8d32bf7e750ae8e066c252ee4ec373ff414dbb62845988a4661cf1af07523",
+      "receiptPath": "measurements/fin-contour-gpu-isolated-20261126.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "lint",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "0ae9cdd0-07a0-4515-9bbd-2b72b0458d97",
+      "startedAt": "2026-11-25T17:00:01.749Z",
+      "executable": "python3",
+      "commandDigest": "bc9efe0f9ed9ce84806cf6791f03c41a0fdda722ec4513c9a5defba54495f05f",
+      "receiptPath": "measurements/fin-contour-checks-20261126.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "b5c1aade-cc93-4db4-83d5-37b95d3634c1",
+      "startedAt": "2026-11-25T17:00:04.851Z",
+      "executable": "python3",
+      "commandDigest": "174037474f9ebfb7ec7e282b3ae5e0f1b7b00267bfbdfb3fda98df1e2c2b473a",
+      "receiptPath": "measurements/fin-contour-gpu-contacts-20261126.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "lint",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "fb128a7b-53bb-48b8-a403-c78a62e29c81",
+      "startedAt": "2026-11-25T17:03:26.332Z",
+      "executable": "python3",
+      "commandDigest": "d89602c770c16a35b6c5da9a9da4ae967807390aa462f4349604d0463de12f51",
+      "receiptPath": "measurements/fin-contour-staged-publication-20261126.json"
     }
   ],
   "runMeasurements": [
@@ -50487,6 +50660,291 @@
       "receipt": {
         "path": "measurements/bluefin-flex-record-integrity.json",
         "sha256": "2d6f71120d9469e4cb50d3f063c3c60094186c0c6875fe7b98bbaf1fc1bac049"
+      }
+    },
+    {
+      "id": "dd8aad17-0bac-4848-ae77-e57ce78670b9",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "3114f47982401516574d5d7a3d47421f23d680b5eccce7f24c42102785ae9410",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-25T16:33:28.641Z",
+      "finishedAt": "2026-11-25T16:33:34.896Z",
+      "durationMs": 6202.824624999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fin-contour-source-diagnostic-20261126a.json",
+        "sha256": "4f9fc2e18e4c7b64e60a4bfe1be0906761a2d66cb5fe22881ba7b489c7f7b3d3"
+      }
+    },
+    {
+      "id": "3d7fa5bb-a3ae-40c0-8c32-215a3596a4da",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "de5cd8eba94056f494390031a25ff4925121e132476f0d88516cdfc8fc2fb72e",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T16:35:46.693Z",
+      "finishedAt": "2026-11-25T16:36:11.032Z",
+      "durationMs": 24261.468,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fin-contour-gpu-diagnostic-20261126a.json",
+        "sha256": "f1ed7ea34c9a98fb8e21d19963ac149751e989d6bde5c8e877f66554e60251ae"
+      }
+    },
+    {
+      "id": "3090d608-d006-42f5-a69d-f36d82c9ee7b",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "52c81996c6d31c1c2f568567219b26c74a1cd1d2d197613c968862c6e3c73246",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T16:39:11.037Z",
+      "finishedAt": "2026-11-25T16:39:25.166Z",
+      "durationMs": 14087.350709,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fin-contour-gpu-scene-diagnostic-20261126a.json",
+        "sha256": "644e26cbedda2aa787db61c46412a326b59e67ab9e9fa32250e7b96ddb63cca0"
+      }
+    },
+    {
+      "id": "95896ad5-7e04-4e25-9e6e-53e50a3cfa5c",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "4a31a4e4369e9e88f304bfa85ad3926ce351087bd7a5d6835cb74662bbace0a1",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T16:42:01.507Z",
+      "finishedAt": "2026-11-25T16:42:13.489Z",
+      "durationMs": 11938.377375,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fin-contour-red-editor-20261126.json",
+        "sha256": "e7cd5536f475a1861bfc360c8081f3a8ae5b22a29b56decc6e4266213ca31857"
+      }
+    },
+    {
+      "id": "a87c1118-d799-44b6-a45c-691a0bf12ff6",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "718193c85d062f99a8a86b1599aedf714eb8ba9757c755dafc1e57f9107c3e03",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T16:42:53.596Z",
+      "finishedAt": "2026-11-25T16:44:50.777Z",
+      "durationMs": 117153.057625,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fin-contour-editor-20261126.json",
+        "sha256": "280d1da1ac5a568afa9f7484e5d38c2fca47bfbfda4d8e95e35855b3e4ec8ac9"
+      }
+    },
+    {
+      "id": "5ed0be0a-18ad-4955-a51d-d6261824e5c6",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "9dcf0d931ffeaeaef1a0572b22c2099a3f8de66d9063ee5e8c3c90e640b9167e",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T16:47:26.987Z",
+      "finishedAt": "2026-11-25T16:49:27.305Z",
+      "durationMs": 120281.769875,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fin-contour-editor-b-20261126.json",
+        "sha256": "915a3015638d0b513ad61668623285eb8615f36df6a488f5f588d90d3b47c585"
+      }
+    },
+    {
+      "id": "c80ba883-fafc-454e-a4d0-5c3422bf19a5",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "bc8975c82806f3143ff1d571505da25f4f74a26e8b4a4f560e0bfd59f13d56f5",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T16:49:28.036Z",
+      "finishedAt": "2026-11-25T16:50:46.202Z",
+      "durationMs": 78110.73675,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fin-contour-play-b-20261126.json",
+        "sha256": "b2bac1c5338350c5a6202aee2bd4c6d9140c75272b8109a808ecb89f1732b738"
+      }
+    },
+    {
+      "id": "03b24c52-3a7c-4eeb-b433-c823cb08b536",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "930fb69bd2430f99dfa52966173141d230d9019af2d389315b1bafc5a97a2f4f",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T16:53:32.149Z",
+      "finishedAt": "2026-11-25T16:54:13.920Z",
+      "durationMs": 41731.806832999995,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fin-contour-developer-c-20261126.json",
+        "sha256": "b2621889ae84354d38e115ab1d616d12e80fb1b952551a846577b93a4575b09d"
+      }
+    },
+    {
+      "id": "7bfad4d4-6cdf-44d3-93f5-93db44e84231",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "93cb6f84079d1f9710cf2882858a69d28551c7f0e897e1868af4c910d0a949d7",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T16:54:14.501Z",
+      "finishedAt": "2026-11-25T16:54:31.360Z",
+      "durationMs": 16830.478166999997,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fin-contour-integrated-c-20261126.json",
+        "sha256": "3ef6f5bd4cc02dda5a5c16d0a1801564fc68e4258cde20b409d302fe0919e4b9"
+      }
+    },
+    {
+      "id": "c45bb71a-4c9a-4cf5-84dc-9137d807e82f",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "41e14e5a5da6a680632d7cc732f6c63db7273cb471f40442ebd46b54285365e1",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T16:54:31.941Z",
+      "finishedAt": "2026-11-25T16:54:51.218Z",
+      "durationMs": 19250.439417,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fin-contour-gpu-scene-20261126.json",
+        "sha256": "78fe84cd114e3026807fded856702eb4653c0821c66321fcd8510b2cc17a74be"
+      }
+    },
+    {
+      "id": "9b65221f-5974-4279-a99f-54b816079852",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "67c6d9a19f4e9cd4364bfd0ee02d5aafe32abe73d5fceef9f16228dabf59c658",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T16:57:20.118Z",
+      "finishedAt": "2026-11-25T16:57:20.511Z",
+      "durationMs": 350.4107079999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fin-contour-gpu-analysis-20261126.json",
+        "sha256": "997a24e75e2724b529dcf84287d786a46e54c6aba9794f12d28f9bab6c1c4e39"
+      }
+    },
+    {
+      "id": "bd999835-c700-4b2f-b4f7-bd81b56df115",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "3cc8d32bf7e750ae8e066c252ee4ec373ff414dbb62845988a4661cf1af07523",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T16:57:20.900Z",
+      "finishedAt": "2026-11-25T16:57:36.720Z",
+      "durationMs": 15778.032083,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fin-contour-gpu-isolated-20261126.json",
+        "sha256": "4dbce966487dcd9d74c2c263721be95d6163ece9a4e6a119e93bf85486ade466"
+      }
+    },
+    {
+      "id": "0ae9cdd0-07a0-4515-9bbd-2b72b0458d97",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "bc9efe0f9ed9ce84806cf6791f03c41a0fdda722ec4513c9a5defba54495f05f",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-25T17:00:01.749Z",
+      "finishedAt": "2026-11-25T17:00:04.443Z",
+      "durationMs": 2653.621667,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fin-contour-checks-20261126.json",
+        "sha256": "87e18c6702b97a674a8c5d39badd90acbbc4c845245b03e976dd68ad88f9f08f"
+      }
+    },
+    {
+      "id": "b5c1aade-cc93-4db4-83d5-37b95d3634c1",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "174037474f9ebfb7ec7e282b3ae5e0f1b7b00267bfbdfb3fda98df1e2c2b473a",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T17:00:04.851Z",
+      "finishedAt": "2026-11-25T17:00:07.687Z",
+      "durationMs": 2792.0857499999997,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fin-contour-gpu-contacts-20261126.json",
+        "sha256": "400d8c33b10ff44ba5b839762105d2834d5b889291e947ecda43e6c282a1f789"
+      }
+    },
+    {
+      "id": "fb128a7b-53bb-48b8-a403-c78a62e29c81",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d89602c770c16a35b6c5da9a9da4ae967807390aa462f4349604d0463de12f51",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-25T17:03:26.332Z",
+      "finishedAt": "2026-11-25T17:03:27.497Z",
+      "durationMs": 1131.1785,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/fin-contour-staged-publication-20261126.json",
+        "sha256": "8b3205c62886eb588c40b5189711f34c20cfedece31d1e174946057208383c58"
       }
     }
   ]

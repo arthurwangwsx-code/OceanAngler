@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "a87c1118-d799-44b6-a45c-691a0bf12ff6",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "718193c85d062f99a8a86b1599aedf714eb8ba9757c755dafc1e57f9107c3e03",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-25T16:42:53.596Z",
+    "finishedAt": "2026-11-25T16:44:50.777Z",
+    "durationMs": 117153.057625,
+    "exitCode": 1,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "args": [
+      "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b/.local/fin-contour-qa/unity-step.py",
+      "editor",
+      "tests"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b/.local/fin-contour-qa/unity-step.py",
+    "editor",
+    "tests"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 1,
+  "startedAt": "2026-11-25T16:42:53.596Z",
+  "finishedAt": "2026-11-25T16:44:50.777Z",
+  "durationMs": 117153.057625
+}

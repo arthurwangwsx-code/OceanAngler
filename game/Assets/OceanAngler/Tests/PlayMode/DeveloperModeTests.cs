@@ -23,7 +23,7 @@ namespace OceanAngler.Tests
             {
                 yield return SceneManager.LoadSceneAsync("Bay",LoadSceneMode.Single);scene=SceneManager.GetSceneByName("Bay");yield return null;yield return null;
                 var game=UnityEngine.Object.FindFirstObjectByType<GameController>();string output=Path.Combine(root,"developer-"+phase);
-                yield return game.GetComponent<RuntimeSmoke>().RunDeveloperReview(output,phase,false);
+                yield return game.GetComponent<RuntimeSmoke>().RunDeveloperReview(output,phase,false,checkFinContours:true);
                 var result=JsonUtility.FromJson<Result>(File.ReadAllText(Path.Combine(output,"receipt.json")));
                 Assert.That(result.status,Is.EqualTo("PASS"),phase+": "+string.Join("\n",result.failures));
             }

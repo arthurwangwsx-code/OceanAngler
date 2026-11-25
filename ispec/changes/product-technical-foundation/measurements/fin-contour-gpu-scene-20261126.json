@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "c45bb71a-4c9a-4cf5-84dc-9137d807e82f",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "41e14e5a5da6a680632d7cc732f6c63db7273cb471f40442ebd46b54285365e1",
+    "category": "e2e",
+    "executable": "python3",
+    "startedAt": "2026-11-25T16:54:31.941Z",
+    "finishedAt": "2026-11-25T16:54:51.218Z",
+    "durationMs": 19250.439417,
+    "exitCode": 1,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "args": [
+      "tools/game.py",
+      "contour-scene-review",
+      "--review-target",
+      "ios",
+      "--label",
+      "fincontourscene20261126b"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "tools/game.py",
+    "contour-scene-review",
+    "--review-target",
+    "ios",
+    "--label",
+    "fincontourscene20261126b"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 1,
+  "startedAt": "2026-11-25T16:54:31.941Z",
+  "finishedAt": "2026-11-25T16:54:51.218Z",
+  "durationMs": 19250.439417
+}

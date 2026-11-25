@@ -28,7 +28,7 @@ namespace OceanAngler.Editor
             catch(Exception e){EditorApplication.update-=Step;(job as IDisposable)?.Dispose();job=null;Debug.LogException(e);EditorApplication.Exit(1);}
         }
         static int Changed(Color32[] a,Color32[] b,int threshold=2)=>a.Where((p,i)=>Mathf.Max(Mathf.Abs(p.r-b[i].r),Mathf.Max(Mathf.Abs(p.g-b[i].g),Mathf.Abs(p.b-b[i].b)))>threshold).Count();
-        static void InitializeSceneBindings(GameObject root)
+        internal static void InitializeSceneBindings(GameObject root)
         {
             // The isolated submit-render path can precede per-submesh material
             // initialization. Bind actual authored values explicitly; no warm

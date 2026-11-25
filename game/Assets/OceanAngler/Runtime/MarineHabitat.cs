@@ -15,6 +15,17 @@ namespace OceanAngler
         protected virtual void PresentAmbient(bool paused,bool reduced,bool visible){}
         float waterTime;MaterialPropertyBlock waterProperties;
         MeshRenderer[] surfaceScenery;bool[] originalSurfaceRendering;bool surfaceSceneryVisible=true;
+        bool waterOrderCaptured;int originalWaterOrder;
+        void PresentWaterOrder(Camera camera)
+        {
+            if(!waterOrderCaptured){originalWaterOrder=waterSurface.sortingOrder;waterOrderCaptured=true;}
+            // A water plane spans the whole habitat. Sorting its transparent
+            // bounds centre by distance can put it over nearer fin membranes,
+            // while opaque rays still pass the depth test. Underwater, the
+            // surface belongs behind these subjects. Above water, retain the
+            // authored order so the surface can cover submerged objects.
+            waterSurface.sortingOrder=camera.transform.position.y<SeaLevel?Mathf.Max(short.MinValue,originalWaterOrder-1):originalWaterOrder;
+        }
         void PresentSurfaceScenery(bool visible)
         {
             if(surfaceScenery==null)
@@ -30,7 +41,7 @@ namespace OceanAngler
             for(int i=0;i<surfaceScenery.Length;i++)if(surfaceScenery[i]!=null)surfaceScenery[i].forceRenderingOff=!visible||originalSurfaceRendering[i];
             surfaceSceneryVisible=visible;
         }
-        void OnDisable(){if(surfaceScenery!=null)PresentSurfaceScenery(true);}
+        void OnDisable(){if(surfaceScenery!=null)PresentSurfaceScenery(true);if(waterOrderCaptured&&waterSurface!=null)waterSurface.sortingOrder=originalWaterOrder;}
         Vector4 fishingSplash=new Vector4(0,0,-1,0);
         public void SetFishingSplash(Vector3 position,float age)
         {
@@ -57,6 +68,7 @@ namespace OceanAngler
             var position=fishingSurface?new Vector3(underwaterCamera.position.x,SeaLevel+1.25f,underwaterCamera.position.z):from.position;
             var look=fishingSurface?new Vector3(underwaterTarget.position.x,SeaLevel+.05f,underwaterTarget.position.z):target.position;
             camera.transform.SetPositionAndRotation(position,Quaternion.LookRotation(look-position,Vector3.up));
+            PresentWaterOrder(camera);
             if(lighting!=null)lighting.AimCameraFill(camera);
             camera.fieldOfView=observing||fishingSurface?58:42;camera.depthTextureMode|=DepthTextureMode.Depth;
             // Reserve the actual preview panel width without moving the subject

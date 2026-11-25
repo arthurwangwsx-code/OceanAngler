@@ -10,13 +10,13 @@ namespace OceanAngler
     {
         // Three separately launched phases prove startup selection, rather than
         // replacing the controller's loaded data with a synthetic fixture.
-        public IEnumerator RunDeveloperReview(string outputFolder,string phase,bool captureFrames,bool quitProcess=false)
+        public IEnumerator RunDeveloperReview(string outputFolder,string phase,bool captureFrames,bool quitProcess=false,bool checkFinContours=false)
         {
             folder=Path.GetFullPath(outputFolder);Directory.CreateDirectory(folder);
             if(File.Exists(Path.Combine(folder,"receipt.json")))throw new InvalidOperationException("Use a new review folder");
             game=GetComponent<GameController>();began=Time.realtimeSinceStartup;finished=false;journeyMode=gearReviewMode=true;journeyQuit=quitProcess;
             receipt=new Receipt{captureEnabled=captureFrames,scope=(captureFrames?"native Simulator":"headless PlayMode")+" developer mode real UI, isolated saves and explicit write-failure injection; not OS touch or physical-device acceptance"};
-            var stack=new System.Collections.Generic.Stack<IEnumerator>();stack.Push(DeveloperReview(phase));
+            var stack=new System.Collections.Generic.Stack<IEnumerator>();stack.Push(DeveloperReview(phase,checkFinContours));
             while(stack.Count>0&&!finished)
             {
                 object next=null;bool moved=false;Exception failure=null;
@@ -42,7 +42,7 @@ namespace OceanAngler
         {
             foreach(string suffix in new[]{"",".bak"})JourneyRequire(File.ReadAllBytes(Path.Combine(root,"ocean-progress.json")+suffix).SequenceEqual(File.ReadAllBytes(Path.Combine(root,"developer-normal-before"+suffix+".bin"))),"developer-normal-bytes-unchanged"+suffix);
         }
-        IEnumerator DeveloperReview(string phase)
+        IEnumerator DeveloperReview(string phase,bool checkFinContours)
         {
             var args=LaunchArguments.Get();int index=Array.IndexOf(args,"--ocean-save-root");JourneyRequire(index>=0&&index+1<args.Length,"developer-explicit-isolated-save-root");
             string root=Path.GetFullPath(args[index+1]),normal=Path.Combine(root,"ocean-progress.json"),test=Path.Combine(root,"ocean-developer-progress.json");
@@ -87,6 +87,7 @@ namespace OceanAngler
                     JourneyRequire(colored,"developer-no-silhouette-"+fish.id);
                     yield return PageFrame("developer-model-"+fish.id,true);yield return PageTap("上一级","图鉴");
                 }
+                if(checkFinContours||LaunchArguments.Get().Contains("--ocean-fin-contour-review"))yield return ReviewFinContours();
                 yield return PageTap("保护观察  0 / 3","保护观察");
                 foreach(var species in game.Content.observations)
                 {
