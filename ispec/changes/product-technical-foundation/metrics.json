@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-25T02:49:01.761Z",
+  "generatedAt": "2026-11-25T03:16:36.983Z",
   "source": {
     "change": "product-technical-foundation",
     "cliVersion": "1.0.20",
@@ -26,16 +26,16 @@
     "firstAttemptPassedCount": 1,
     "firstAttemptEvaluatedCount": 1,
     "firstAttemptPassRate": 1,
-    "elapsedMs": 170505955,
-    "observedStepWallMs": 136904401,
+    "elapsedMs": 172160967,
+    "observedStepWallMs": 138559413,
     "unattributedMs": 33601554,
-    "unattributedRate": 0.19706968005897507,
-    "commandMeasurementCount": 1348,
-    "commandSucceededCount": 1198,
-    "commandFailedCount": 150,
-    "commandSuccessRate": 0.8887240356083086,
-    "commandDurationMs": 50469289.24470102,
-    "gateCheckCount": 62,
+    "unattributedRate": 0.19517521645890848,
+    "commandMeasurementCount": 1370,
+    "commandSucceededCount": 1217,
+    "commandFailedCount": 153,
+    "commandSuccessRate": 0.8883211678832117,
+    "commandDurationMs": 50734282.21895303,
+    "gateCheckCount": 63,
     "repairCount": 0,
     "targetMs": 3600000,
     "targetMet": null,
@@ -52,7 +52,7 @@
     },
     "entryChecks": {
       "status": "complete",
-      "recorded": 62,
+      "recorded": 63,
       "expectedAtLeast": 2
     },
     "runAttribution": {
@@ -62,7 +62,7 @@
     },
     "commandMeasurements": {
       "status": "partial",
-      "recorded": 1348
+      "recorded": 1370
     },
     "waitingTime": {
       "status": "unavailable"
@@ -78,14 +78,14 @@
   "runs": [],
   "runMetrics": {
     "version": 1,
-    "generatedAt": "2026-11-25T02:49:01.761Z",
+    "generatedAt": "2026-11-25T03:16:36.984Z",
     "runs": [],
     "unattributed": {
       "unboundAttempts": 2,
       "unknownRunAttempts": 0,
-      "unboundCommands": 1348,
+      "unboundCommands": 1370,
       "unknownRunCommands": 0,
-      "unboundGateChecks": 62,
+      "unboundGateChecks": 63,
       "unknownRunGateChecks": 0,
       "repairsWithoutRunBinding": 0,
       "unknownRunRepairs": 0
@@ -22451,6 +22451,424 @@
         "path": "measurements/meter-fixture-final-records-20261125.json",
         "sha256": "64fa4bf80999e2f68624c39360def2b81bad3652aa0bc85b1ffa82aec1fa8701"
       }
+    },
+    {
+      "id": "825322f6-2180-4e9e-8042-f2e1219ad540",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "2b290cafc5c3401dd6bf1eea339a4d798afee0031f2d36af1777c262e297b900",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T03:00:39.556Z",
+      "finishedAt": "2026-11-25T03:00:48.428Z",
+      "durationMs": 8801.427333,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-source-build-a.json",
+        "sha256": "2624b53703f1c39c16d05f73759a2038d8c8edf5af1a2b3c7740110ccbd61938"
+      }
+    },
+    {
+      "id": "e585f967-1f5b-49c7-89dd-0827d0185883",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "bd38d8d1d3a0be2913362dbb6ac5e9426399d6428079927fdb62b89615130128",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T03:01:26.015Z",
+      "finishedAt": "2026-11-25T03:01:27.634Z",
+      "durationMs": 1580.3342499999999,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-source-validation-a.json",
+        "sha256": "be5a996323ac5fb77eed2515823a2d585eeba9c5713ae8d50b94b6e6967c7b60"
+      }
+    },
+    {
+      "id": "4acf6f68-319c-4681-962b-181574ade3db",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "9d7a6658026f262c72cf8f3ba23c8554bebd9ccf0b03e16504ca211a9599c8e9",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T03:01:56.188Z",
+      "finishedAt": "2026-11-25T03:01:58.737Z",
+      "durationMs": 2513.499,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-source-build-b.json",
+        "sha256": "7c5dd4eec782530bd1c68b6d085eae20478d2d1043808437dc89de8469763f5c"
+      }
+    },
+    {
+      "id": "a4e9b75d-caba-4baf-abc3-70bc6ec7a9eb",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "9accaf8c9f4e38ce3fe28347a42f3184f6429048e5361c5d5009bd3c48350df8",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T03:02:37.688Z",
+      "finishedAt": "2026-11-25T03:02:39.333Z",
+      "durationMs": 1621.057583,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-source-validation-b.json",
+        "sha256": "ec3e7c7f5958cb60b8a0d8d620e7d3c1feb90e2178f36f451e3a653169a2f043"
+      }
+    },
+    {
+      "id": "168d8329-5a65-474d-bdbc-755c7c672af3",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d8b794c5ed8a4f18e729bc4290b7494dd6796925c391210b542c31e9d912f084",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T03:02:46.533Z",
+      "finishedAt": "2026-11-25T03:03:36.445Z",
+      "durationMs": 49888.72225,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-source-review-b.json",
+        "sha256": "d748b0d194af5e3853f3f03b93cd69791587e69b92d6ccdba14d66fca69a7b29"
+      }
+    },
+    {
+      "id": "5e3019ac-e7c4-404f-a1d5-050beb8c6c81",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "f2629dc9faf395c9769020a6b0d0862d8aa526679757c02a409ecc211aba613c",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T03:03:53.054Z",
+      "finishedAt": "2026-11-25T03:03:55.696Z",
+      "durationMs": 2611.216167,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-source-build-c.json",
+        "sha256": "7d93e36e20f972ef4d8bd321b61e28ede12efec74a88ab5d563ea640ad83fea9"
+      }
+    },
+    {
+      "id": "d688454a-c9ee-422d-9877-478c212faa7d",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "225ec72800f1870fbb0400e158b1ce70d6347d18c8add10fc05b663d21e5c6ac",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T03:04:13.019Z",
+      "finishedAt": "2026-11-25T03:04:14.591Z",
+      "durationMs": 1547.9634999999998,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-source-validation-c.json",
+        "sha256": "c431cc1586f7d1b745d7f60994863001851b9eb4e941d110ac825f3cebbb83e1"
+      }
+    },
+    {
+      "id": "b0ed04b0-a65d-4d73-9124-cafc7957cae0",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "074630ff15821479502b777444b1c4389c9456bd4e406f000b21107a0efbc73a",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T03:04:25.222Z",
+      "finishedAt": "2026-11-25T03:05:21.630Z",
+      "durationMs": 56386.310875,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-source-review-c.json",
+        "sha256": "218bdabc3fc2a3b194543fd20546cd5ae2ad7f88e3e02c178f9f7ebaa0f153e2"
+      }
+    },
+    {
+      "id": "fd45bba9-8401-43b4-b01d-098cb5983c20",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "4baaff876f5ea9ee65459fe4a90619b425a5e41b3c37eb9e4089e562d22c403d",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T03:05:27.694Z",
+      "finishedAt": "2026-11-25T03:05:40.174Z",
+      "durationMs": 12457.148207999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-unity-import-a.json",
+        "sha256": "a7fc3df1dee4c84091c50578de451493b1d52fa49946d77b392bdb318dd00072"
+      }
+    },
+    {
+      "id": "9e1b73a3-f13f-437e-bb34-183c8be34dcc",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "ca9b12df15f3ab4ce2116ac054e6785cc505727b4b361a5af6680f22158eb376",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T03:05:51.054Z",
+      "finishedAt": "2026-11-25T03:05:58.832Z",
+      "durationMs": 7752.901417000001,
+      "exitCode": 2,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-import-tests-a.json",
+        "sha256": "69a2ecf689188506a51707299102ea0ec1b1fb6f2d41bfee6eb7e75a4aa541b4"
+      }
+    },
+    {
+      "id": "62983bf6-c14a-4e87-a5d0-c882c31cea97",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "cd02d05155be1bad31243433c3f6ecb3201cbfedfdd3ddd81b3aa2ab0613e118",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T03:07:30.235Z",
+      "finishedAt": "2026-11-25T03:07:48.971Z",
+      "durationMs": 18690.834124999998,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-metal-review-a.json",
+        "sha256": "8603e046f2cd7cb23be7c0c1e1f191ffeda23c5b591643c9cbeb65f1b9b55ee6"
+      }
+    },
+    {
+      "id": "46f4a527-4101-47a1-b26a-0364980835a0",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "ca9b12df15f3ab4ce2116ac054e6785cc505727b4b361a5af6680f22158eb376",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T03:08:23.734Z",
+      "finishedAt": "2026-11-25T03:08:32.273Z",
+      "durationMs": 8485.527125,
+      "exitCode": 2,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-import-tests-b.json",
+        "sha256": "660e883040945108a3028a5cfba24292465e4813eee6ee25e734cde8a6ccd2e2"
+      }
+    },
+    {
+      "id": "991a4909-bf1f-4372-97b8-7666ca2a9993",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "ca9b12df15f3ab4ce2116ac054e6785cc505727b4b361a5af6680f22158eb376",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T03:09:05.538Z",
+      "finishedAt": "2026-11-25T03:09:16.564Z",
+      "durationMs": 10987.782167,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-import-tests-c.json",
+        "sha256": "30256246784e99d83608ce1d6b2445f2db9827a6e33380862cde4c89d0378496"
+      }
+    },
+    {
+      "id": "d5e09f99-1c4e-4501-995f-509268bcbbd5",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "107b662a355e58c7c180faa0e7f518d8398d7c3777632cfd9ea055a2e201fc7f",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T03:09:34.120Z",
+      "finishedAt": "2026-11-25T03:10:37.832Z",
+      "durationMs": 63684.161792,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-source-turntable-c.json",
+        "sha256": "f2b607018326fcf3cc9bff2104263a1c37a214a3b02107bec7ea9ae65d49a10c"
+      }
+    },
+    {
+      "id": "843c0307-4831-4b91-8d09-feaf72f4875b",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "a9d159d4b59444be9d0aeced370e7b227780bce2d7d84cad4cb2ad4a1f7f1e04",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T03:11:19.145Z",
+      "finishedAt": "2026-11-25T03:11:31.126Z",
+      "durationMs": 11939.582375,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-metal-review-b.json",
+        "sha256": "15e1f2dc9fb41426a78e249c5ce7ed71640bcd266166a4e70a19bfca8ab63197"
+      }
+    },
+    {
+      "id": "4ebd1d57-39f1-4397-ad1d-6ab4e6a9e12f",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "cd0fb76136556189ea96134809e1b91c8b4b1d64c718ec47df795f87c7cf9992",
+      "category": "compile",
+      "executable": "ffmpeg",
+      "startedAt": "2026-11-25T03:11:48.626Z",
+      "finishedAt": "2026-11-25T03:11:49.162Z",
+      "durationMs": 494.071542,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-turntable-video.json",
+        "sha256": "b76562f0cff902eeb316c779929d3a58c8619a99bf34c9212e70450d32283729"
+      }
+    },
+    {
+      "id": "110931a9-e359-425f-bda8-2f4fc9ca89ea",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "42ab430776348757a52f6e535aea2a5f648b083b3f91c73bf9cdcccd0ef763b7",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T03:13:22.045Z",
+      "finishedAt": "2026-11-25T03:13:24.859Z",
+      "durationMs": 2775.948459,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-evidence-verify.json",
+        "sha256": "8ac30ac7826b11064c58f28f1bb465ee4ae6b4bfc1dfe66dc6218094b656d0bf"
+      }
+    },
+    {
+      "id": "4eea1198-7607-425b-aff1-646d4d4987b5",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "1b9b750d007c851f920bb86ccb95b6c8d0649e1d11d26d4708a2736b0478955e",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-25T03:14:39.989Z",
+      "finishedAt": "2026-11-25T03:14:40.724Z",
+      "durationMs": 702.515917,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-foundation-validation.json",
+        "sha256": "a8d6c8613ac9af53c85f91a14723a390dab816ce661b4dc42ecc5ae9c76e1cc5"
+      }
+    },
+    {
+      "id": "c76a8cc0-6fa2-4d63-a31e-98e0f523b355",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "c7c935e1ba437ae7729f6ab91f81bc25ffeba9b54f0e4cfe8a4d89028a8747a4",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T03:15:03.253Z",
+      "finishedAt": "2026-11-25T03:15:03.681Z",
+      "durationMs": 389.68395799999985,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-tool-regression.json",
+        "sha256": "c2fbeccd2a63b8bfa3ebf2c83d04c79bd0604941cb571f0ba107bdb7b8232f61"
+      }
+    },
+    {
+      "id": "3f671850-ca0b-46eb-a146-55c2f648133f",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d89602c770c16a35b6c5da9a9da4ae967807390aa462f4349604d0463de12f51",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-25T03:15:37.041Z",
+      "finishedAt": "2026-11-25T03:15:38.557Z",
+      "durationMs": 1481.369334,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-publication-audit.json",
+        "sha256": "045cdf8fdcb69ff4e757f3b30ab0f2ff428029d7632d9963ab38fb99899cf78c"
+      }
+    },
+    {
+      "id": "0ca70716-67a0-4f76-a563-3dbd023911a3",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "649f53e7041a0b5c99ff047535ad9586b7fba05cfe2a0f1e912953eca74dd065",
+      "category": "lint",
+      "executable": "git",
+      "startedAt": "2026-11-25T03:16:05.963Z",
+      "finishedAt": "2026-11-25T03:16:06.067Z",
+      "durationMs": 68.57337500000006,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-diff-check.json",
+        "sha256": "fec939009e59dc0d7bd78f7d121d37952129dd07de8f1bab2925d59bc0fa81e6"
+      }
+    },
+    {
+      "id": "0a800c68-5bb6-44a8-b215-36a260caef6f",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "59646e1a4e0b68052e28c80b5538f7d98138f79a4b2cd0fb8d2fe703941624bb",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T03:16:13.069Z",
+      "finishedAt": "2026-11-25T03:16:13.233Z",
+      "durationMs": 132.34349999999995,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-final-records.json",
+        "sha256": "e4f66b5581de64fecc6b88a8766b16ab6d7e45dccb4ffba4de625719c0c83d63"
+      }
     }
   ],
   "measurementAudit": {
@@ -22458,8 +22876,8 @@
     "scope": "declared-command-receipts-only",
     "runId": null,
     "complete": false,
-    "registered": 1344,
-    "completed": 1348,
+    "registered": 1366,
+    "completed": 1370,
     "unfinishedIds": [
       "539d2470-da3f-4a9d-941c-e4c4a34b48da"
     ],
@@ -25758,35 +26176,35 @@
   "commands": [
     {
       "category": "test",
-      "count": 543,
-      "succeededCount": 459,
-      "failedCount": 84,
-      "successRate": 0.8453038674033149,
-      "durationMs": 17297550.466284003
+      "count": 552,
+      "succeededCount": 465,
+      "failedCount": 87,
+      "successRate": 0.842391304347826,
+      "durationMs": 17332824.008243002
     },
     {
       "category": "compile",
-      "count": 293,
-      "succeededCount": 280,
+      "count": 298,
+      "succeededCount": 285,
       "failedCount": 13,
-      "successRate": 0.9556313993174061,
-      "durationMs": 13380959.869005002
+      "successRate": 0.9563758389261745,
+      "durationMs": 13407837.231255
     },
     {
       "category": "e2e",
-      "count": 284,
-      "succeededCount": 236,
+      "count": 289,
+      "succeededCount": 241,
       "failedCount": 48,
-      "successRate": 0.8309859154929577,
-      "durationMs": 19498953.30154501
+      "successRate": 0.8339100346020761,
+      "durationMs": 19699542.91296201
     },
     {
       "category": "lint",
-      "count": 177,
-      "succeededCount": 176,
+      "count": 180,
+      "succeededCount": 179,
       "failedCount": 1,
-      "successRate": 0.9943502824858758,
-      "durationMs": 78156.41541199997
+      "successRate": 0.9944444444444445,
+      "durationMs": 80408.87403799998
     },
     {
       "category": "validation",
@@ -26333,6 +26751,14 @@
       "checkedAt": "2026-11-25T02:33:47.667Z",
       "durationMs": 129.99295900000004,
       "outcome": "accepted"
+    },
+    {
+      "stageId": "apply",
+      "runId": null,
+      "operation": "start",
+      "checkedAt": "2026-11-25T02:57:36.954Z",
+      "durationMs": 130.52412500000003,
+      "outcome": "accepted"
     }
   ],
   "timing": {
@@ -26340,8 +26766,8 @@
     "finishedAt": null,
     "status": "in_progress",
     "measurementBasis": "before-first-entry-gate",
-    "elapsedMs": 170505955,
-    "observedStepWallMs": 136904401,
+    "elapsedMs": 172160967,
+    "observedStepWallMs": 138559413,
     "unattributedMs": 33601554,
     "waitingMs": null,
     "retryAttemptMs": 0,
