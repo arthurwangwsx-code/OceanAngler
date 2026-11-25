@@ -3480,6 +3480,129 @@
         }
       ],
       "note": "Own game/native discovered-journal UI from genuine prior catch save copies; 2 bounded real display recordings,8original PNG and2contacts. No injected catch/point, audio, color or exposure edits; not OS touch,7nativeactions,newgrowth,science/final art or physical qualification."
+    },
+    {
+      "id": "journal-model-framing-native-review",
+      "author": "OceanAngler contributors",
+      "source": "Own native Simulator373eabb /2364210f; same-frame UI model framing and return review",
+      "license": "MIT",
+      "redistribution": true,
+      "status": "ART_REVIEW_PENDING",
+      "artifacts": [
+        {
+          "path": "art/previews/journal-model-framing/phone-back-to-fishing.png",
+          "sha256": "2f66ed84cc5e4ebea1a9eb3fecc7915a2064f89ac091de0f802d4811df85d582"
+        },
+        {
+          "path": "art/previews/journal-model-framing/phone-before-after-1_3.jpg",
+          "sha256": "d8ea7a348fdcda0f648f499429a1206b1e9ad42714714c204f0ef9861d930298"
+        },
+        {
+          "path": "art/previews/journal-model-framing/phone-halibut-zoom100-turn0.png",
+          "sha256": "d9275cbabbc2384a1d73ff092af70e9b201329578c147b67740ea1e8c21fa516"
+        },
+        {
+          "path": "art/previews/journal-model-framing/phone-halibut-zoom130-turn0.png",
+          "sha256": "95e423233f610e6d144b103f37ac8c6151a857f57bf4511bc68d702c144b714d"
+        },
+        {
+          "path": "art/previews/journal-model-framing/phone-halibut-zoom150-turn0.png",
+          "sha256": "6484344a66c4457ca3718242e186a19ae22e309c50a329fb90b1ce4f034bce94"
+        },
+        {
+          "path": "art/previews/journal-model-framing/phone-halibut-zoom150-turn1.png",
+          "sha256": "15ca8e13b23080efa2179382d430e62f5a162322fcd85d73c0946b3d2c0daea6"
+        },
+        {
+          "path": "art/previews/journal-model-framing/phone-halibut-zoom70-turn0.png",
+          "sha256": "82a4731198111a4fe3765a11841535552b03904117c660ac60532e22a87ac206"
+        },
+        {
+          "path": "art/previews/journal-model-framing/phone-recording-contact.jpg",
+          "sha256": "db9d394bcdd4ca90dafab479595d21702d4d49bc16aefaaa6a7cf71052fd5fd3"
+        },
+        {
+          "path": "art/previews/journal-model-framing/phone-trevally-zoom100-turn0.png",
+          "sha256": "e3ee11c061bab03768f8e8ad6b1a2f26777315fdeb90c13ffaa48cf920e0a0c8"
+        },
+        {
+          "path": "art/previews/journal-model-framing/phone-trevally-zoom130-turn0.png",
+          "sha256": "452bc3670a851e9c3b88717d4bb11517ab178a27850ed72eeacdcbe66a321945"
+        },
+        {
+          "path": "art/previews/journal-model-framing/phone-trevally-zoom150-turn0.png",
+          "sha256": "7d5b07bf85a7508f35ba7082ce51662a376b832a520677711322bd08a0fa1e51"
+        },
+        {
+          "path": "art/previews/journal-model-framing/phone-trevally-zoom150-turn1.png",
+          "sha256": "46d67bed456bfb642417d61e00c4ff7e68b0a2674a86dec175fe51b6aeb42ea7"
+        },
+        {
+          "path": "art/previews/journal-model-framing/phone-trevally-zoom70-turn0.png",
+          "sha256": "093d4aa686da9e86714d4662acaf0467223e14b910b577c51742a2442517906e"
+        },
+        {
+          "path": "art/previews/journal-model-framing/phone-zoom-and-rotate.mp4",
+          "sha256": "687a3faad183e3f3a3de99558c8163cc7f7e2c05237882b6e7d06a798aeeed09"
+        },
+        {
+          "path": "art/previews/journal-model-framing/tablet-back-to-fishing.png",
+          "sha256": "52ac93418887971648d8829ce4982697766e0dbae595473b6e3659aa09d095dc"
+        },
+        {
+          "path": "art/previews/journal-model-framing/tablet-before-after-1_3.jpg",
+          "sha256": "cbbccbf2d95a8d44989c8d43e7125811af153d476000413c2c4235a2380d214a"
+        },
+        {
+          "path": "art/previews/journal-model-framing/tablet-halibut-zoom100-turn0.png",
+          "sha256": "46824c474090a5a578eebba2df7e33a1de320d54d55a10b669be1a35bc3750a7"
+        },
+        {
+          "path": "art/previews/journal-model-framing/tablet-halibut-zoom130-turn0.png",
+          "sha256": "e5defd0740131ee40605564a554c33daf203ad509c82b5541a28c08bab47f2a0"
+        },
+        {
+          "path": "art/previews/journal-model-framing/tablet-halibut-zoom150-turn0.png",
+          "sha256": "96983de39facedfa7bde1ab9abb1e6311ecb48853553d479e1be2ffa836cb3f6"
+        },
+        {
+          "path": "art/previews/journal-model-framing/tablet-halibut-zoom150-turn1.png",
+          "sha256": "bab7c3d827fc84899f68f578198bf03f246bd10df4f2886efe0026b1a64aeb3a"
+        },
+        {
+          "path": "art/previews/journal-model-framing/tablet-halibut-zoom70-turn0.png",
+          "sha256": "1433408d5b71f8c5872a86e5d4fb4c77b264258df665c5309255e569d5b82644"
+        },
+        {
+          "path": "art/previews/journal-model-framing/tablet-recording-contact.jpg",
+          "sha256": "cebae4454990e17f6fe0af0d6fdc4acab7b4884edf7722fb1fd16f9d31fc481c"
+        },
+        {
+          "path": "art/previews/journal-model-framing/tablet-trevally-zoom100-turn0.png",
+          "sha256": "9c8eebfc0c52c2da87dd7a03ad18b4f3d293d9767eaf31d183e663eae7112887"
+        },
+        {
+          "path": "art/previews/journal-model-framing/tablet-trevally-zoom130-turn0.png",
+          "sha256": "375bae0e336154414ada0c27ddd285073490dc7292757c6e8d75a5b7fc13a510"
+        },
+        {
+          "path": "art/previews/journal-model-framing/tablet-trevally-zoom150-turn0.png",
+          "sha256": "5c737ed8c68aa454422a23f4ab87e0085c8bd304cfeed4d1a22ee78b570009df"
+        },
+        {
+          "path": "art/previews/journal-model-framing/tablet-trevally-zoom150-turn1.png",
+          "sha256": "7318420bf7c8c411c3602828e1ad027c3e800328f2b7ecfba160facba7cf74a5"
+        },
+        {
+          "path": "art/previews/journal-model-framing/tablet-trevally-zoom70-turn0.png",
+          "sha256": "7abd10030264a7dd31a2b072abb3ff0160e2518efd58c79847f1230b68684dda"
+        },
+        {
+          "path": "art/previews/journal-model-framing/tablet-zoom-and-rotate.mp4",
+          "sha256": "762003fdfca9fb9ca37752e63208609835247f18553571bbdc01e75ec445cd67"
+        }
+      ],
+      "note": "Own game screenshots/recordings; before/after uses own prior1.3x image, same model files but different natural motion phase. Functional clearance PASS; visual framing overconservative and models too small, still PARTIAL. No personal media, audio or color/exposure edits. Not runtimeFPS, OS touch, physical, final art or science qualification."
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."
