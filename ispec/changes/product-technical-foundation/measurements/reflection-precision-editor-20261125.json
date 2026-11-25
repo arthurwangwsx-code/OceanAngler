@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "1d0f06bd-4cbe-4c71-a942-9b119502acb4",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "25098d4a1f4bdc0c8cd6d2ea98c960c8cd5f4418d233fcad30e8862f4b0d9302",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-25T00:39:12.410Z",
+    "finishedAt": "2026-11-25T00:39:26.876Z",
+    "durationMs": 14412.844207999999,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      "tools/game.py",
+      "tests",
+      "--test-platform",
+      "EditMode",
+      "--test-filter",
+      "OceanAngler.Tests.WaterlinePresentationTests;OceanAngler.Tests.EncounterGeometryTests;OceanAngler.Tests.SpinningRigMaterialTests",
+      "--label",
+      "reflectionprecisioneditor20261125"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    "tools/game.py",
+    "tests",
+    "--test-platform",
+    "EditMode",
+    "--test-filter",
+    "OceanAngler.Tests.WaterlinePresentationTests;OceanAngler.Tests.EncounterGeometryTests;OceanAngler.Tests.SpinningRigMaterialTests",
+    "--label",
+    "reflectionprecisioneditor20261125"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T00:39:12.410Z",
+  "finishedAt": "2026-11-25T00:39:26.876Z",
+  "durationMs": 14412.844207999999
+}

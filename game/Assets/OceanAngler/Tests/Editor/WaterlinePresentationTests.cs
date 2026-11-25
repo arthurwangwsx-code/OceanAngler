@@ -4,6 +4,34 @@ namespace OceanAngler.Tests
 {
     public sealed class WaterlinePresentationTests
     {
+        [Test] public void RepeatingAnUnchangedReadyPoseDoesNotMoveTheLureOrLine()
+        {
+            var rig=Object.Instantiate(Resources.Load<GameObject>("Models/SpinningRig")).GetComponent<AuthoredSpinningRig>();
+            try
+            {
+                rig.InitializeMechanisms();
+                foreach(float sea in new[]{4.5f,200f})foreach(bool left in new[]{false,true})foreach(bool primeDrag in new[]{false,true})
+                {
+                    OceanWorld.PoseGearAtWaterline(rig,sea,left);var target=rig.CastOrigin+Vector3.down*.3f;
+                    if(primeDrag){rig.Drive(.95f,false,false,false,false,target);rig.Present(.1f);}
+                    rig.Drive(0,false,false,false,false,target);rig.Present(1f/60);
+                    var lure=rig.lure.position;var nose=rig.lureNose.position;var line=new Vector3[rig.fishingLine.positionCount];rig.fishingLine.GetPositions(line);
+                    var renderers=rig.GetComponentsInChildren<Renderer>(true);var matrices=new Matrix4x4[renderers.Length];for(int i=0;i<renderers.Length;i++)matrices[i]=renderers[i].transform.localToWorldMatrix;
+                    bool Exact(Vector3 a,Vector3 b)=>a.x.Equals(b.x)&&a.y.Equals(b.y)&&a.z.Equals(b.z);
+                    bool ExactMatrix(Matrix4x4 a,Matrix4x4 b){for(int i=0;i<16;i++)if(!a[i].Equals(b[i]))return false;return true;}
+                    for(int frame=0;frame<60;frame++)
+                    {
+                        OceanWorld.PoseGearAtWaterline(rig,sea,left);rig.Drive(0,false,false,false,false,target);rig.Present(1f/60);
+                        string context="sea="+sea+" left="+left+" primeDrag="+primeDrag+" frame="+frame;
+                        Assert.That(Exact(rig.lure.position,lure),Is.True,context+" lure "+lure.ToString("R")+" -> "+rig.lure.position.ToString("R"));
+                        Assert.That(Exact(rig.lureNose.position,nose),Is.True,context+" nose "+nose.ToString("R")+" -> "+rig.lureNose.position.ToString("R"));
+                        for(int i=0;i<line.Length;i++)Assert.That(Exact(rig.fishingLine.GetPosition(i),line[i]),Is.True,context+" line="+i);
+                        for(int i=0;i<renderers.Length;i++)Assert.That(ExactMatrix(renderers[i].transform.localToWorldMatrix,matrices[i]),Is.True,context+" renderer="+renderers[i].name);
+                    }
+                }
+            }
+            finally{rig.ReleasePresentation();Object.DestroyImmediate(rig.gameObject);}
+        }
         [Test] public void IdleAndExpiredSplashNeverUploadNonFiniteShaderInputs()
         {
             var habitat=Object.Instantiate(Resources.Load<GameObject>("Models/CoralBay")).GetComponent<MarineHabitat>();var cameraObject=new GameObject("SplashBoundaryCamera");var camera=cameraObject.AddComponent<Camera>();camera.enabled=false;

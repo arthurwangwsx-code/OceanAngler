@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "00f80f9c-b43d-49d3-9c10-9189c1610807",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "a749cb48fa3e04617df1809586688a4a921d6882b3aa0863447068794c3f0d7f",
+    "category": "compile",
+    "executable": "python3",
+    "startedAt": "2026-11-25T00:19:12.727Z",
+    "finishedAt": "2026-11-25T00:22:44.789Z",
+    "durationMs": 212036.858875,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/reflection-native-qa/build.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/reflection-native-qa/build.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T00:19:12.727Z",
+  "finishedAt": "2026-11-25T00:22:44.789Z",
+  "durationMs": 212036.858875
+}

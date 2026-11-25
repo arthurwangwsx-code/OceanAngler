@@ -18,7 +18,7 @@ namespace OceanAngler
         public bool LinePassesRoller {get;private set;}
         Quaternion[] boneRest;Vector3[] bendAxes;
         Quaternion rotorRest,crankRest,bailRest,spoolRest,lureRootRotation,rollerRest;
-        Vector3 rotorLocalAxis,crankLocalAxis,bailLocalAxis,spoolRestRoot,lureRestRoot,lureAxisRoot,rollerLocalAxis;
+        Vector3 rotorLocalAxis,crankLocalAxis,bailLocalAxis,spoolRestRoot,lureRestRoot,lureAxisRoot,rollerLocalAxis,lureNoseLocal,spoolLocalAxis;
         float tension,dragAngle;bool reeling,paused,reduced,casting,preview,hideLure;Vector3 endpoint;
         FishVisual attachedFish;
         sealed class MaterialBinding {public Renderer renderer;public int index;public Color color;public float smoothness;public readonly MaterialPropertyBlock block=new MaterialPropertyBlock();}
@@ -36,8 +36,10 @@ namespace OceanAngler
             rotorLocalAxis=rotor.InverseTransformDirection((rotorAxis.position-rotor.position).normalized);
             crankLocalAxis=crank.InverseTransformDirection((crankAxis.position-crank.position).normalized);
             bailLocalAxis=bail.InverseTransformDirection((bailAxis.position-bail.position).normalized);
+            spoolLocalAxis=spool.InverseTransformDirection(transform.up);
             rollerRest=roller.localRotation;rollerLocalAxis=roller.InverseTransformDirection((rollerAxis.position-roller.position).normalized);
             spoolRestRoot=transform.InverseTransformPoint(spool.position);lureRestRoot=transform.InverseTransformPoint(lure.position);
+            lureNoseLocal=lure.InverseTransformPoint(lureNose.position);
             lureRootRotation=Quaternion.Inverse(transform.rotation)*lure.rotation;lureAxisRoot=transform.InverseTransformDirection((lureNose.position-lure.position).normalized);
         }
         public void InitializePresentation()
@@ -84,7 +86,7 @@ namespace OceanAngler
             bail.localRotation=bailRest*Quaternion.AngleAxis(BailOpenDegrees,bailLocalAxis);
             roller.localRotation=rollerRest*Quaternion.AngleAxis(RollerDegrees,rollerLocalAxis);
             spool.position=transform.TransformPoint(spoolRestRoot+Vector3.up*SpoolStroke);
-            var dragAxis=spool.InverseTransformDirection(transform.up);spool.localRotation=spoolRest*Quaternion.AngleAxis(dragAngle,dragAxis);
+            spool.localRotation=spoolRest*Quaternion.AngleAxis(dragAngle,spoolLocalAxis);
             for(int i=0;i<rodBones.Length;i++)rodBones[i].localRotation=boneRest[i]*Quaternion.AngleAxis(-tension*2.8f*Mathf.Pow(i/(float)(rodBones.Length-1),1.3f),bendAxes[i]);
             lure.gameObject.SetActive(preview||!hideLure);
             if(preview){lure.position=transform.TransformPoint(lureRestRoot);lure.rotation=transform.rotation*lureRootRotation;}
@@ -93,6 +95,10 @@ namespace OceanAngler
                 // Read the animated mouth after Animator updates, including a landed fish.
                 if(attachedFish!=null)endpoint=attachedFish.HookPosition;
                 lure.rotation=Quaternion.FromToRotation(transform.TransformDirection(lureAxisRoot),Vector3.left)*transform.rotation*lureRootRotation;
+                // Place from a fixed local offset before one bounded precision
+                // correction. Accumulating the delta made a stationary lure
+                // oscillate by float roundoff and recapture an unchanged view.
+                lure.position=endpoint-lure.TransformVector(lureNoseLocal);
                 lure.position+=endpoint-lureNose.position;
             }
             Vector3 target=preview||!hideLure?lureNose.position:endpoint;int span=16;
