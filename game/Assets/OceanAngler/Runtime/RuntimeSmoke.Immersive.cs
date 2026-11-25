@@ -11,7 +11,7 @@ namespace OceanAngler
     {
         [Serializable] sealed class HudSample { public string phase;public bool leftHanded,centralClear;public int buttons;public float occupiedRatio; }
         [Serializable] sealed class MeterLabelSample { public string text;public float preferredWidth,availableWidth,preferredHeight,availableHeight;public bool fits; }
-        [Serializable] sealed class WaterlineSample { public string stage,phase;public bool leftHanded,surface;public float seaLevel,cameraY,rigY,lureY,fade,guideError,splashAge; }
+        [Serializable] sealed class WaterlineSample { public string stage,phase,reflectionSha256;public bool leftHanded,surface,rigTracked,reflectionReady;public int reflectionRenders;public float seaLevel,cameraY,rigY,lureY,fade,guideError,splashAge; }
         [Serializable] sealed class RestTimerResult { public string status="RUNNING",scope="real unmodified active timer on a QA player; not child or physical-device qualification";public float observedSeconds;public bool paused,reminderDue,acknowledged,progressUnchanged; }
         [Serializable] sealed class ImmersiveResult { public string status,scope;public string[] failures;public List<HudSample> samples;public List<MeterLabelSample> meterLabels;public List<WaterlineSample> waterline;public int catchesBefore,catchesAfter,pointsBefore,pointsAfter;public bool unfinishedExitPreservedLedger,settingsRestored;public RestTimerResult restTimer; }
         RestTimerResult restTimer;
@@ -43,6 +43,29 @@ namespace OceanAngler
             var block=new MaterialPropertyBlock();world.ActiveHabitat.waterSurface.GetPropertyBlock(block);sample.splashAge=block.GetVector("_FishingSplash").z;
             JourneyRequire(!float.IsNaN(sample.splashAge)&&!float.IsInfinity(sample.splashAge),"waterline-finite-shader-input-"+stage);
             JourneyRequire(sample.surface==surface&&(surface?sample.cameraY>sample.seaLevel:sample.cameraY<sample.seaLevel)&&sample.rigY>sample.seaLevel&&sample.guideError<.0001f,"waterline-"+stage+"-actual-camera-rig-and-guides");
+            var reflection=world.ActiveHabitat.reflection;sample.rigTracked=reflection!=null&&reflection.TrackedSubject==rig.transform;JourneyRequire(sample.rigTracked,"waterline-"+stage+"-actual-reflected-rig-binding");
+            if(reflection!=null)
+            {
+                sample.reflectionRenders=reflection.RenderCount;sample.reflectionReady=reflection.Ready;
+                if(SystemInfo.graphicsDeviceType!=UnityEngine.Rendering.GraphicsDeviceType.Null)
+                {
+                    JourneyRequire(sample.reflectionReady==surface,"waterline-"+stage+"-reflection-active-only-above");
+                    if(surface)
+                    {
+                        var target=reflection.Texture;JourneyRequire(target!=null&&target.IsCreated(),"waterline-"+stage+"-actual-reflection-texture");
+                        if(target!=null)
+                        {
+                            var prior=RenderTexture.active;var pixels=new Texture2D(target.width,target.height,TextureFormat.RGB24,false);
+                            try{RenderTexture.active=target;pixels.ReadPixels(new Rect(0,0,target.width,target.height),0,0);pixels.Apply();using(var hash=System.Security.Cryptography.SHA256.Create())sample.reflectionSha256=BitConverter.ToString(hash.ComputeHash(pixels.GetRawTextureData<byte>().ToArray())).Replace("-","").ToLowerInvariant();}
+                            finally{RenderTexture.active=prior;Destroy(pixels);}
+                        }
+                    }
+                    var casting=waterlineSamples.LastOrDefault(s=>s.stage=="casting"&&s.leftHanded==sample.leftHanded);
+                    if(stage=="impact"&&casting!=null)JourneyRequire(sample.reflectionRenders>casting.reflectionRenders,"waterline-fixed-camera-reflection-refreshed-during-cast");
+                    var ready=waterlineSamples.LastOrDefault(s=>s.stage=="ready"&&s.leftHanded==sample.leftHanded);
+                    if(stage=="ready-still"&&surface&&ready!=null)JourneyRequire(sample.reflectionRenders==ready.reflectionRenders&&sample.reflectionSha256==ready.reflectionSha256,"waterline-static-rig-reuses-identical-reflection");
+                }
+            }
         }
         IEnumerator WaterlineClick(string label)
         {yield return JourneyClick(label,true);yield return null;yield return null;}
@@ -108,6 +131,7 @@ namespace OceanAngler
                 bool wantsSurface=!game.Progress.Data.settings.underwaterOnly&&!game.Progress.Data.settings.reducedMotion;float cameraDeadline=Time.realtimeSinceStartup+4;
                 while(wantsSurface&&(!GetComponent<OceanWorld>().FishingSurfaceView||GetComponent<OceanWorld>().CameraFade>0)&&Time.realtimeSinceStartup<cameraDeadline)yield return null;
                 CheckImmersiveHud();yield return JourneyFrame(left?"left-ready":"ready");CheckWaterline("ready",wantsSurface);
+                if(waterlineReview){yield return new WaitForSecondsRealtime(.12f);CheckWaterline("ready-still",wantsSurface);}
                 if(waterlineReview&&!left)
                 {
                     foreach(string setting in new[]{"固定水下镜头","减弱动态效果"})

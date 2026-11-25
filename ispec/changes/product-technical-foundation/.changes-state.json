@@ -517,6 +517,14 @@
       "checkedAt": "2026-11-24T23:41:10.732Z",
       "durationMs": 143.13725,
       "outcome": "accepted"
+    },
+    {
+      "stageId": "apply",
+      "runId": null,
+      "operation": "start",
+      "checkedAt": "2026-11-25T00:04:50.780Z",
+      "durationMs": 124.88225000000006,
+      "outcome": "accepted"
     }
   ],
   "measurementJournal": {
@@ -13596,6 +13604,61 @@
       "executable": "python3",
       "commandDigest": "d89602c770c16a35b6c5da9a9da4ae967807390aa462f4349604d0463de12f51",
       "receiptPath": "measurements/reflection-publication-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "artifact-retention",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "fe801bcb-69f5-4518-aee1-d908572dbd09",
+      "startedAt": "2026-11-25T00:10:49.865Z",
+      "executable": "python3",
+      "commandDigest": "4f8c009d7b3d9987c734d60bb32a2aac84cbccdad5c9bc6aa2bdf2821693bea0",
+      "receiptPath": "measurements/reflection-native-export-retention-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "artifact-retention",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "50215167-bca1-4b39-9637-470472614566",
+      "startedAt": "2026-11-25T00:12:33.826Z",
+      "executable": "python3",
+      "commandDigest": "431cc7e35b96ae199969db799a54c36f051b60f2faa1acebacc490406258de0a",
+      "receiptPath": "measurements/reflection-native-retention-restore-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "ab30575f-1bc9-4fac-8697-d7b0d5a0f151",
+      "startedAt": "2026-11-25T00:16:06.566Z",
+      "executable": "python3",
+      "commandDigest": "66e589c5956f058cf40dce4dccd26ff0b0a3abd868bda4e662965bc62e9a9b2b",
+      "receiptPath": "measurements/reflection-native-trace-play-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "validation",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "df658914-044f-4f1b-8aa6-22a561d5aba0",
+      "startedAt": "2026-11-25T00:18:12.722Z",
+      "executable": "python3",
+      "commandDigest": "1b9b750d007c851f920bb86ccb95b6c8d0649e1d11d26d4708a2736b0478955e",
+      "receiptPath": "measurements/reflection-native-trace-validation-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "publication-audit",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "79428842-3766-4c99-92f3-ccbf9a0253b6",
+      "startedAt": "2026-11-25T00:18:48.003Z",
+      "executable": "python3",
+      "commandDigest": "d89602c770c16a35b6c5da9a9da4ae967807390aa462f4349604d0463de12f51",
+      "receiptPath": "measurements/reflection-native-trace-publication-20261125.json"
     }
   ],
   "runMeasurements": [
@@ -34399,6 +34462,101 @@
       "receipt": {
         "path": "measurements/reflection-publication-20261125.json",
         "sha256": "71b5f03374cc458fd87fafc00b618a1c3592eb38892743e951910611f97b0ee5"
+      }
+    },
+    {
+      "id": "fe801bcb-69f5-4518-aee1-d908572dbd09",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "4f8c009d7b3d9987c734d60bb32a2aac84cbccdad5c9bc6aa2bdf2821693bea0",
+      "category": "artifact-retention",
+      "executable": "python3",
+      "startedAt": "2026-11-25T00:10:49.865Z",
+      "finishedAt": "2026-11-25T00:11:05.553Z",
+      "durationMs": 15645.9115,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/reflection-native-export-retention-20261125.json",
+        "sha256": "88304eb6af65485a789947e7af5f237c3a9bbf625d79dbcf6ab10e33516bf61b"
+      }
+    },
+    {
+      "id": "50215167-bca1-4b39-9637-470472614566",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "431cc7e35b96ae199969db799a54c36f051b60f2faa1acebacc490406258de0a",
+      "category": "artifact-retention",
+      "executable": "python3",
+      "startedAt": "2026-11-25T00:12:33.826Z",
+      "finishedAt": "2026-11-25T00:12:40.147Z",
+      "durationMs": 6274.524332999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/reflection-native-retention-restore-20261125.json",
+        "sha256": "2dcf1446ded3f3dd826d130b9ac2eac21cca76f27a9dde7c4311f6c857e1e111"
+      }
+    },
+    {
+      "id": "ab30575f-1bc9-4fac-8697-d7b0d5a0f151",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "66e589c5956f058cf40dce4dccd26ff0b0a3abd868bda4e662965bc62e9a9b2b",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T00:16:06.566Z",
+      "finishedAt": "2026-11-25T00:17:03.577Z",
+      "durationMs": 56969.132125000004,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/reflection-native-trace-play-20261125.json",
+        "sha256": "648b30a85b739b921ce3c775cddef489eaeff7a1dd35fb55e6aa20618120e668"
+      }
+    },
+    {
+      "id": "df658914-044f-4f1b-8aa6-22a561d5aba0",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "1b9b750d007c851f920bb86ccb95b6c8d0649e1d11d26d4708a2736b0478955e",
+      "category": "validation",
+      "executable": "python3",
+      "startedAt": "2026-11-25T00:18:12.722Z",
+      "finishedAt": "2026-11-25T00:18:13.524Z",
+      "durationMs": 770.4082909999998,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/reflection-native-trace-validation-20261125.json",
+        "sha256": "fec9192a480099d7886b9318127125d04ba276e6e0f8d14049d7690c5e1315c6"
+      }
+    },
+    {
+      "id": "79428842-3766-4c99-92f3-ccbf9a0253b6",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d89602c770c16a35b6c5da9a9da4ae967807390aa462f4349604d0463de12f51",
+      "category": "publication-audit",
+      "executable": "python3",
+      "startedAt": "2026-11-25T00:18:48.003Z",
+      "finishedAt": "2026-11-25T00:18:48.633Z",
+      "durationMs": 597.656375,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/reflection-native-trace-publication-20261125.json",
+        "sha256": "a76fbf868f84a2274577476a9b714a94f2fac5ac7cd250fdac34605f0bb5860e"
       }
     }
   ]
