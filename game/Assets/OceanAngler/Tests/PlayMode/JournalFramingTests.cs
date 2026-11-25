@@ -80,6 +80,11 @@ namespace OceanAngler.Tests
                     File.WriteAllText(Path.Combine(root,"journal-live-stability.json"),JsonUtility.ToJson(stability,true));Assert.That(stability.countAfter,Is.EqualTo(stability.countBefore),"Live Animator must reuse framing too");Assert.That(Vector3.Distance(stability.positionAfter,stability.positionBefore),Is.LessThan(.00001f));Assert.That(Vector3.Distance(stability.scaleAfter,stability.scaleBefore),Is.LessThan(.00001f));
                 }
                 finally{live.cullingMode=priorCulling;for(int i=0;i<skins.Length;i++)skins[i].updateWhenOffscreen=priorOffscreen[i];}
+                var rotate=UnityEngine.Object.FindObjectsByType<Button>(FindObjectsSortMode.None).Single(b=>b.isActiveAndEnabled&&b.GetComponentInChildren<Text>()?.text=="旋转");
+                // Match a native UI callback after World.Update: this same
+                // rendered frame must consume the new angle in LateUpdate.
+                ExecuteEvents.Execute(rotate.gameObject,new PointerEventData(EventSystem.current),ExecuteEvents.pointerClickHandler);world.SendMessage("LateUpdate");
+                Assert.That(Quaternion.Angle(world.CurrentJournalFit.rotation,Quaternion.Euler(0,-25+ui.ModelYaw,-3)),Is.LessThan(.001f),"Use this frame's newly clicked yaw, not the prior Update pose");
                 CollectionAssert.AreEqual(saved,File.ReadAllBytes(Path.Combine(root,"ocean-progress.json")));result.status="PASS";
             }
             finally{if(result.status=="RUNNING")result.status="FAIL";File.WriteAllText(Path.Combine(root,"journal-framing.json"),JsonUtility.ToJson(result,true));}

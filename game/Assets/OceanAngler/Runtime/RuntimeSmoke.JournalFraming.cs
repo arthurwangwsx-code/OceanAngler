@@ -23,11 +23,12 @@ namespace OceanAngler
         [Serializable] public sealed class JournalStabilitySample
         {
             public int countBefore,countAfter;public Vector3 positionBefore,positionAfter,scaleBefore,scaleAfter;
+            public float requestedYawBefore,requestedYawAfter;
             public OceanWorld.JournalFitState inputsBefore,inputsAfter;
         }
-        public static JournalStabilitySample BeginJournalStability(OceanWorld world)=>new JournalStabilitySample{countBefore=world.JournalFitCalculations,positionBefore=world.TargetFish.transform.position,scaleBefore=world.TargetFish.transform.localScale,inputsBefore=world.CurrentJournalFit};
+        public static JournalStabilitySample BeginJournalStability(OceanWorld world)=>new JournalStabilitySample{countBefore=world.JournalFitCalculations,positionBefore=world.TargetFish.transform.position,scaleBefore=world.TargetFish.transform.localScale,inputsBefore=world.CurrentJournalFit,requestedYawBefore=world.GetComponent<GameUI>().ModelYaw};
         public static void EndJournalStability(OceanWorld world,JournalStabilitySample sample)
-        {sample.countAfter=world.JournalFitCalculations;sample.positionAfter=world.TargetFish.transform.position;sample.scaleAfter=world.TargetFish.transform.localScale;sample.inputsAfter=world.CurrentJournalFit;}
+        {sample.countAfter=world.JournalFitCalculations;sample.positionAfter=world.TargetFish.transform.position;sample.scaleAfter=world.TargetFish.transform.localScale;sample.inputsAfter=world.CurrentJournalFit;sample.requestedYawAfter=world.GetComponent<GameUI>().ModelYaw;}
         IEnumerator ReviewJournalFraming(string fishId,string saveFile)
         {
             JourneyRequire(Debug.isDebugBuild,"framing-review-development-only");

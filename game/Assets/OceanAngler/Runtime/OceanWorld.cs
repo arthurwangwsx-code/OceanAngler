@@ -90,13 +90,9 @@ namespace OceanAngler
             fish.semantic=journal?"swim":game.Session.Phase==FishingPhase.Fighting?"hooked":game.Session.Phase==FishingPhase.Bite?"bite":game.Session.Phase==FishingPhase.Casting?"burst":game.Session.Phase==FishingPhase.Landed?"idle":"swim";
             if(!ui.InspectingGear)PoseFishingGear(data.settings.leftHanded);
             var pose=FishingEncounter.Evaluate(game.Session.Phase,game.Session.PhaseProgress,game.Session.CastPower,fishHookLocal,gear.CastOrigin,ui.Compact?(data.settings.leftHanded?1.3f:-1.3f):0,time,reduced,activeHabitat.SeaLevel);
-            fishRoot.position=journal?new Vector3(ui.CompactViewer?-1.3f:2.35f,ui.CompactViewer?.7f:1.35f,1.2f):pose.fishPosition;
-            if(journal)journalReferencePosition=fishRoot.position;
+            fishRoot.position=journal?JournalReferencePosition():pose.fishPosition;
             fishRoot.localScale=Vector3.one*(journal?ui.ModelZoom:1);
-            fishRoot.rotation=journal?Quaternion.Euler(0,-25+ui.ModelYaw,-3):pose.fishRotation;
-            // Turn the flatfish toward the journal viewer. Existing yaw controls
-            // reveal both sides; the swimming encounter keeps its horizontal pose.
-            if(journal&&fishId=="halibut")fishRoot.rotation*=Quaternion.Euler(-55,0,0);
+            fishRoot.rotation=journal?JournalRotation():pose.fishRotation;
             if(releasing!=null)PresentRelease(game.Session.Paused);
             bool discovered=game.Progress.Data.catches.Exists(c=>c.fishId==fishId);fish.SetSilhouette(journal&&!discovered);
             float t=game.Session.Tension;

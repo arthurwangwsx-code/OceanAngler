@@ -16459,6 +16459,61 @@
       "executable": "python3",
       "commandDigest": "82c1216912c31b96ee3dc6422c0f1f5670a3b248c892b952340f06cabdb449ea",
       "receiptPath": "measurements/journal-framing-telemetry-compile.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "618737b7-52c1-4c1b-bedc-7689b60e6b51",
+      "startedAt": "2026-11-25T07:01:24.107Z",
+      "executable": "python3",
+      "commandDigest": "170126ce90732677de702ccf3c0f88eeff1c3221d996067d3b1008b184735eb0",
+      "receiptPath": "measurements/journal-framing-native-build-b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "00de70c8-e136-44c2-bd80-7da66986f3b1",
+      "startedAt": "2026-11-25T07:03:27.743Z",
+      "executable": "python3",
+      "commandDigest": "acadd00025f60b0f5f4d5a2b0827dd625a2bce3dac4687dd0e771663f54ffe6e",
+      "receiptPath": "measurements/journal-framing-native-phone-b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "e02bf0e2-9e02-44ca-b587-58a9a56e3f1c",
+      "startedAt": "2026-11-25T07:06:27.768Z",
+      "executable": "python3",
+      "commandDigest": "e4160d075ca1eb3e835eb98f5e78b8d106db3360a4c998f3f9423ac493019598",
+      "receiptPath": "measurements/journal-framing-same-frame-red.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "16fea25a-8a94-4f0b-8bb1-5070624bc552",
+      "startedAt": "2026-11-25T07:07:19.757Z",
+      "executable": "python3",
+      "commandDigest": "d433b4c974618fe303c5c638d081f66c113ab080176199c97f7137eba7be76e7",
+      "receiptPath": "measurements/journal-framing-play-c.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "c458879c-59d0-4cd5-b530-fa08f8de385b",
+      "startedAt": "2026-11-25T07:09:50.821Z",
+      "executable": "python3",
+      "commandDigest": "2ea2439a4bf06b806a12db28dfcf21738b8dbe0a07cb6b92462754780460e36f",
+      "receiptPath": "measurements/journal-framing-source-c.json"
     }
   ],
   "runMeasurements": [
@@ -42069,6 +42124,101 @@
       "receipt": {
         "path": "measurements/journal-framing-telemetry-compile.json",
         "sha256": "13df64a6adb0e32d6398173137ba428f671df3ad7307ef331b8fddac7853fce9"
+      }
+    },
+    {
+      "id": "618737b7-52c1-4c1b-bedc-7689b60e6b51",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "170126ce90732677de702ccf3c0f88eeff1c3221d996067d3b1008b184735eb0",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T07:01:24.107Z",
+      "finishedAt": "2026-11-25T07:03:21.503Z",
+      "durationMs": 117338.493583,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/journal-framing-native-build-b.json",
+        "sha256": "95529af4e685dc6835673a5fa1f65e328a22516c9d2f7159a1247e99b34bb3d9"
+      }
+    },
+    {
+      "id": "00de70c8-e136-44c2-bd80-7da66986f3b1",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "acadd00025f60b0f5f4d5a2b0827dd625a2bce3dac4687dd0e771663f54ffe6e",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T07:03:27.743Z",
+      "finishedAt": "2026-11-25T07:03:41.499Z",
+      "durationMs": 13731.912542,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/journal-framing-native-phone-b.json",
+        "sha256": "68caaf226a26eac3bb7ef4dd78f6dc1335be14dbf40468b5618de6801532f03d"
+      }
+    },
+    {
+      "id": "e02bf0e2-9e02-44ca-b587-58a9a56e3f1c",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "e4160d075ca1eb3e835eb98f5e78b8d106db3360a4c998f3f9423ac493019598",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T07:06:27.768Z",
+      "finishedAt": "2026-11-25T07:06:46.650Z",
+      "durationMs": 18841.055582999998,
+      "exitCode": 2,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/journal-framing-same-frame-red.json",
+        "sha256": "31115079ae763c5e40a45003279294f7a6ae317df34a19b1f70258f228991dd4"
+      }
+    },
+    {
+      "id": "16fea25a-8a94-4f0b-8bb1-5070624bc552",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d433b4c974618fe303c5c638d081f66c113ab080176199c97f7137eba7be76e7",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T07:07:19.757Z",
+      "finishedAt": "2026-11-25T07:08:35.332Z",
+      "durationMs": 75545.312333,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/journal-framing-play-c.json",
+        "sha256": "786a702591b950d21f2bc7edffa559abb5c0ebfc1d501c144eae4a4a2371ecc3"
+      }
+    },
+    {
+      "id": "c458879c-59d0-4cd5-b530-fa08f8de385b",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "2ea2439a4bf06b806a12db28dfcf21738b8dbe0a07cb6b92462754780460e36f",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T07:09:50.821Z",
+      "finishedAt": "2026-11-25T07:09:51.268Z",
+      "durationMs": 367.953125,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/journal-framing-source-c.json",
+        "sha256": "7918dc3359f82f29d7f710fc3074846a975ffe29cc4d1b869b4afbceb88491a0"
       }
     }
   ]

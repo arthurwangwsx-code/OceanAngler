@@ -8,7 +8,12 @@ namespace OceanAngler
         bool journalFitCached;
         Rect journalLastRect;Matrix4x4 journalLastCamera;Quaternion journalLastRotation;
         float journalLastZoom,journalLastDepth,journalFitScale;Vector3 journalFitPosition;
-        Vector3 journalReferencePosition;
+        Vector3 JournalReferencePosition()=>new Vector3(ui.CompactViewer?-1.3f:2.35f,ui.CompactViewer?.7f:1.35f,1.2f);
+        Quaternion JournalRotation()
+        {
+            var rotation=Quaternion.Euler(0,-25+ui.ModelYaw,-3);
+            return fishId=="halibut"?rotation*Quaternion.Euler(-55,0,0):rotation;
+        }
         public int JournalFitCalculations {get;private set;}
         [System.Serializable] public struct JournalFitState
         {public Matrix4x4 camera;public Rect area;public Quaternion rotation;public float zoom,depth;}
@@ -37,10 +42,10 @@ namespace OceanAngler
             if(game==null||game.Progress.RequiresRecovery||fishRoot==null||view==null||ui.FocusedFish==null||!ui.TryJournalModelRect(out var area))return;
             float padding=4*DisplayMetrics.PixelsPerPoint;area=Rect.MinMaxRect(area.xMin+padding,area.yMin+padding,area.xMax-padding,area.yMax-padding);
             if(area.width<=0||area.height<=0)return;
-            var rotation=fishRoot.rotation;var cameraMatrix=view.projectionMatrix*view.worldToCameraMatrix;
-            // Update() has placed the ordinary presentation pose first. Retain
-            // its depth/lighting; only fit the model inside the UI's empty area.
-            float depth=Mathf.Max(view.nearClipPlane*4,Vector3.Dot(journalReferencePosition-view.transform.position,view.transform.forward));
+            // UI events can run after Update. Read this frame's requested pose
+            // here too, instead of fitting the previous rendered yaw for one frame.
+            var rotation=JournalRotation();var cameraMatrix=view.projectionMatrix*view.worldToCameraMatrix;
+            float depth=Mathf.Max(view.nearClipPlane*4,Vector3.Dot(JournalReferencePosition()-view.transform.position,view.transform.forward));
             if(!journalFitCached||area!=journalLastRect||cameraMatrix!=journalLastCamera||rotation!=journalLastRotation||ui.ModelZoom!=journalLastZoom||Mathf.Abs(depth-journalLastDepth)>.0001f)
             {
                 var center=view.ScreenToWorldPoint(new Vector3(area.center.x,area.center.y,depth));

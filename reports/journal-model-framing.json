@@ -18,16 +18,19 @@
     "controlledSwimPhases": 4,
     "oldFailureVertices": 23,
     "cacheAndRootStable": true,
+    "sameFrameUiYawRegressionPass": true,
+    "realAnimatorHeadlessPass": true,
     "zoomActuallyChangesScreenSize": true,
     "saveByteExact": true,
     "scope": "Headless explicit presentation-phase and controlled mesh samples, not native/OS touch/science/final art/physical qualification"
   },
   "native": {
-    "status": "FAIL_PHONE_A_CACHE_STABILITY",
+    "status": "FAIL_PHONE_A_AND_B_SAME_FRAME_YAW_FIXED_C_PENDING",
     "sourceCommit": "7244c45fc95dd2bb14854af8bbf6f819824040ef",
     "appDigest": "118bd18488ffc26baa4ca90f08c8f933fee32ebe4e4979c1f982c859d2383ed7",
     "checksReached": "trevally .7 zoom; mesh clearance passed, cache/root stability failed; more input telemetry added before retry",
-    "capturedFrames": 6
+    "capturedFrames": 6,
+    "diagnosis": "B first-frame fitted35deg then65deg under unchanged region/camera/zoom/depth. Same-frame UI red found30deg stale pose. C reads UI yaw directly in final presentation; native pending."
   },
   "fullProduct": "PARTIAL_NOT_COMPLETE",
   "scienceUserChildPhysicalFinalArt": "NOT_QUALIFIED",
