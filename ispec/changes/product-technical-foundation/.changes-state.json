@@ -581,6 +581,14 @@
       "checkedAt": "2026-11-25T04:33:36.510Z",
       "durationMs": 328.04825000000005,
       "outcome": "accepted"
+    },
+    {
+      "stageId": "apply",
+      "runId": null,
+      "operation": "start",
+      "checkedAt": "2026-11-25T05:14:26.664Z",
+      "durationMs": 162.34050000000002,
+      "outcome": "accepted"
     }
   ],
   "measurementJournal": {
@@ -15717,6 +15725,446 @@
       "executable": "python3",
       "commandDigest": "94b413f0c995746244c16f26c14a7b7fe63d05015a0b677005dd9a962cc062a4",
       "receiptPath": "measurements/deep-lighting-final-records.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "4368d1c8-a05b-4954-8831-f1a39f2a5243",
+      "startedAt": "2026-11-25T05:18:54.804Z",
+      "executable": "Blender",
+      "commandDigest": "8da62f5acc5b5dea43e409dd6a0fd9d42507dff4dc92950e35579326cab0ed29",
+      "receiptPath": "measurements/halibut-fin-inspect-before.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "ad9bff71-826e-4223-8bf0-0035e3c96491",
+      "startedAt": "2026-11-25T05:24:42.061Z",
+      "executable": "Blender",
+      "commandDigest": "2a75b86f8014abfaed781ddc99a02f9780446d3e8f93f7902267dc21de764800",
+      "receiptPath": "measurements/halibut-fin-reference.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "6dd676e4-3366-48d3-bb22-6ff62d258ad8",
+      "startedAt": "2026-11-25T05:25:06.762Z",
+      "executable": "Blender",
+      "commandDigest": "f7d3b34d408b5d6f5e9175c13212ea280223acb5d923d93b410d44d673ad5a4b",
+      "receiptPath": "measurements/halibut-fin-controlled-red.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "a78e23ff-c737-46c7-86fb-576de132dfa0",
+      "startedAt": "2026-11-25T05:25:29.604Z",
+      "executable": "python3",
+      "commandDigest": "35ae463d475afb51b6a085e5f1f8287ddb8377191658174f4430eecc06849b93",
+      "receiptPath": "measurements/halibut-fin-author-a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "938bd388-ffdb-4970-b987-ccbdaf4b73f6",
+      "startedAt": "2026-11-25T05:26:31.547Z",
+      "executable": "Blender",
+      "commandDigest": "214655a646bdc80eaac1b31ec323bbaf42e13667245d949819ba497f0f652bc9",
+      "receiptPath": "measurements/halibut-fin-source-a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "da21e8b5-6c19-4de3-b3bd-346fef1e18d8",
+      "startedAt": "2026-11-25T05:27:38.925Z",
+      "executable": "Blender",
+      "commandDigest": "cccb37ccb9f536af91415c04ba4af89493fe37f5e252829e2d36f569d08c4a4d",
+      "receiptPath": "measurements/halibut-fin-weights-diagnostic.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "2dcdefb5-3efb-4c37-862b-74907ae78d90",
+      "startedAt": "2026-11-25T05:28:04.906Z",
+      "executable": "python3",
+      "commandDigest": "20dc34c8f7ab00f5e1bf85bce6673128be22f88b3478d664a6e580e515b8ab04",
+      "receiptPath": "measurements/halibut-fin-author-b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "e6ae3401-b45a-4119-8db2-ce979f126bb9",
+      "startedAt": "2026-11-25T05:29:40.286Z",
+      "executable": "Blender",
+      "commandDigest": "c190ed826583910bb7e9af8b41b8d3e7caed08c9b671a625a5e7363fb6f865fc",
+      "receiptPath": "measurements/halibut-fin-source-b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "0c58a2b6-0533-46eb-bc56-447ad0c6636f",
+      "startedAt": "2026-11-25T05:32:22.214Z",
+      "executable": "python3",
+      "commandDigest": "39df5b0b263f1fc7796fcf89c8c67c86dfb5b190e90505cced218f93fed51cb6",
+      "receiptPath": "measurements/halibut-fin-core-source.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "6d890a01-12d2-4b5a-8c18-8bd273f506a0",
+      "startedAt": "2026-11-25T05:34:37.620Z",
+      "executable": "python3",
+      "commandDigest": "4baaff876f5ea9ee65459fe4a90619b425a5e41b3c37eb9e4089e562d22c403d",
+      "receiptPath": "measurements/halibut-fin-unity-import.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "8ac779d2-5d24-44da-94cf-7ff16f2af8d2",
+      "startedAt": "2026-11-25T05:35:55.063Z",
+      "executable": "python3",
+      "commandDigest": "8f5239c2bc020dfd0cc5910245432c5aaaf226f6578028d2b1d88e5c286c428e",
+      "receiptPath": "measurements/halibut-fin-editor-a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "e6569eee-4920-4603-a44e-e4658b58872f",
+      "startedAt": "2026-11-25T05:38:03.914Z",
+      "executable": "python3",
+      "commandDigest": "605254105e992b41e475ee427705e5c9a05f035836ecd897b036decdaece56c2",
+      "receiptPath": "measurements/halibut-fin-play-a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "f1ddc4e6-3f97-4254-8a14-312566cfa5a8",
+      "startedAt": "2026-11-25T05:40:46.632Z",
+      "executable": "python3",
+      "commandDigest": "f980e13532973feacc42835176179bd844fb39aa89abdfe031473973b3064eea",
+      "receiptPath": "measurements/halibut-fin-play-b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "26af6514-f9c8-491f-94ea-5a706722219c",
+      "startedAt": "2026-11-25T05:42:13.167Z",
+      "executable": "python3",
+      "commandDigest": "7699e9ab93eabd7b3c239aabb81f7ececd62fde22e3cd7f1b3ef6fb46d1b4fa1",
+      "receiptPath": "measurements/halibut-fin-metal-a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "f332c66f-f095-4abe-9526-b87f2ce6a77c",
+      "startedAt": "2026-11-25T05:44:40.004Z",
+      "executable": "python3",
+      "commandDigest": "9cb9743f115f3f29349a08ff7b6503ae0eb1d246147c97613bb278345efd0fa6",
+      "receiptPath": "measurements/halibut-fin-metal-a-independent.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "91dc61e8-67db-4c13-badf-6eb59ee25859",
+      "startedAt": "2026-11-25T05:45:23.447Z",
+      "executable": "python3",
+      "commandDigest": "457c733be83cf2df870d00393d6b05b06bef596a393705034c932f3512575b0e",
+      "receiptPath": "measurements/halibut-fin-metal-b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "6cd3e3b4-2802-405d-9b42-4f09ea074ac3",
+      "startedAt": "2026-11-25T05:48:57.815Z",
+      "executable": "python3",
+      "commandDigest": "5ae49c487156b856a277df8184e34cec55e5bfd7593390a2daee3d054d31e560",
+      "receiptPath": "measurements/halibut-fin-metal-b-independent.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "87cc4557-a11b-4013-8cce-86bd9d362794",
+      "startedAt": "2026-11-25T05:50:54.492Z",
+      "executable": "python3",
+      "commandDigest": "135c7af7d60ee8a528fd3ab276a3a32f65a0447fbfa84614d90b1b0559203ed6",
+      "receiptPath": "measurements/halibut-fin-metal-c.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "bd21ed31-d537-4247-b642-b4bf48d7c93e",
+      "startedAt": "2026-11-25T05:53:51.125Z",
+      "executable": "python3",
+      "commandDigest": "84e696b292255d34d9f3ef6fe35f167460c8697c236d6aafb1959e4565a71d15",
+      "receiptPath": "measurements/halibut-fin-metal-c-independent.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "60977767-124a-43c1-8266-c211d5d0ff43",
+      "startedAt": "2026-11-25T05:54:57.794Z",
+      "executable": "Blender",
+      "commandDigest": "963e05d6f95d4232c3033391f09e785225a90bb2c9327ae1fbdb9b9b6532f8c7",
+      "receiptPath": "measurements/halibut-fin-idempotent.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "e08dae30-7338-47b5-8ab6-c8e7651b179b",
+      "startedAt": "2026-11-25T05:55:42.609Z",
+      "executable": "python3",
+      "commandDigest": "c035df85fea997c97ead540aba44b7f4d139f0a1f71bae311514726f79cac21b",
+      "receiptPath": "measurements/halibut-fin-source-media.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "8f440fd1-857e-4942-a488-3ab6bb971f62",
+      "startedAt": "2026-11-25T05:59:30.847Z",
+      "executable": "python3",
+      "commandDigest": "86b1f27242668d9e0d5214d31b89d26f92ef8cd596ef1c042fde81bb8ccb15a2",
+      "receiptPath": "measurements/halibut-fin-source-final.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "7b1abf61-02e2-40f5-849d-bd05f2275de3",
+      "startedAt": "2026-11-25T06:04:14.258Z",
+      "executable": "Blender",
+      "commandDigest": "8c80c9f51ebe1440cee387a147025d9a959029f65c72da6a0295d1d5706242be",
+      "receiptPath": "measurements/halibut-fin-body-diagnostic.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "c558060c-2de3-469c-a4dd-78ebeadf830e",
+      "startedAt": "2026-11-25T06:09:46.190Z",
+      "executable": "Blender",
+      "commandDigest": "a79dbf4ad318e699f422bef37d504379acd38da1ed6c7113123bf0881d837c6e",
+      "receiptPath": "measurements/halibut-fin-reference-v2.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "243bbfe2-a113-4fb1-b119-93558697862e",
+      "startedAt": "2026-11-25T06:10:39.946Z",
+      "executable": "Blender",
+      "commandDigest": "563ca2e9f93ed3a42320f818779204d7facbca21d390c967767032ed8b0f46a5",
+      "receiptPath": "measurements/halibut-fin-reference-v2b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "f87c5cc9-f573-4267-b303-746a23163c81",
+      "startedAt": "2026-11-25T06:10:47.754Z",
+      "executable": "Blender",
+      "commandDigest": "5afb1ec9ae5d8f5ee2179bdc4b28ae19abfa00fd66356aa188131ed8699f2efd",
+      "receiptPath": "measurements/halibut-fin-body-controlled-red.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "bf5515c8-7083-4816-9a86-9437e29752c8",
+      "startedAt": "2026-11-25T06:11:00.676Z",
+      "executable": "python3",
+      "commandDigest": "631902f5e21c55efe8f985f2e486bec2e4470af4d12202d2354c4786902dbb12",
+      "receiptPath": "measurements/halibut-fin-body-author.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "d20a7816-b8ad-483a-a42d-e1cd72f9a2d8",
+      "startedAt": "2026-11-25T06:11:13.575Z",
+      "executable": "Blender",
+      "commandDigest": "607b79011de0067c5613daecc3b5549985f02ac18481228111c4abb018c1377d",
+      "receiptPath": "measurements/halibut-fin-source-body.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "519ed6e4-109c-43c5-9f0e-0e9ecb039a7e",
+      "startedAt": "2026-11-25T06:11:22.878Z",
+      "executable": "python3",
+      "commandDigest": "fa165916d5c4e607098826d6d9aa5f4a637ba6c96f75098bb44a88079517443c",
+      "receiptPath": "measurements/halibut-fin-core-body.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "ce1e0f08-19a1-4940-b778-1c9ca95ddd3e",
+      "startedAt": "2026-11-25T06:11:40.801Z",
+      "executable": "python3",
+      "commandDigest": "4baaff876f5ea9ee65459fe4a90619b425a5e41b3c37eb9e4089e562d22c403d",
+      "receiptPath": "measurements/halibut-fin-body-unity-import.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "a0f96671-cd60-4c5d-a87c-0c4c8025c53d",
+      "startedAt": "2026-11-25T06:12:06.456Z",
+      "executable": "python3",
+      "commandDigest": "c0a10b9c83a93c1bdef542f38089e9d39396b7ea5ca0a159415b1c6f362aab69",
+      "receiptPath": "measurements/halibut-fin-body-editor.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "5754519e-1aec-453f-8766-e46fff8bc26f",
+      "startedAt": "2026-11-25T06:12:24.437Z",
+      "executable": "python3",
+      "commandDigest": "c06009cb98f9e596dc746771aedcd4e66ed8ed946d001e114add6a11f6dcd840",
+      "receiptPath": "measurements/halibut-fin-body-play.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "3bb19853-9b06-41e4-8358-cee36bac2415",
+      "startedAt": "2026-11-25T06:13:38.759Z",
+      "executable": "python3",
+      "commandDigest": "f5f5c3303e185807c7c784a5c3215b0309b36f54686901b1ffceb5b7056f9eb5",
+      "receiptPath": "measurements/halibut-fin-metal-d.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "f482ac20-6853-4afd-af96-612568cfd3d7",
+      "startedAt": "2026-11-25T06:15:12.014Z",
+      "executable": "python3",
+      "commandDigest": "cd19d1376204f634f092484f9f32a67a4b44e9d023cbd44bb7f33a8d364fb824",
+      "receiptPath": "measurements/halibut-fin-metal-e.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "798b3c5c-e264-400f-85ba-b2c83a4d9228",
+      "startedAt": "2026-11-25T06:16:26.527Z",
+      "executable": "python3",
+      "commandDigest": "93ad510c2647e9e3ef303ad14ed4278e3d88cc5b30857b6464b409c5878ba9aa",
+      "receiptPath": "measurements/halibut-fin-metal-e-independent.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "c5cb9b4a-f031-48e4-be88-66bb31783fb6",
+      "startedAt": "2026-11-25T06:16:49.334Z",
+      "executable": "Blender",
+      "commandDigest": "963e05d6f95d4232c3033391f09e785225a90bb2c9327ae1fbdb9b9b6532f8c7",
+      "receiptPath": "measurements/halibut-fin-body-idempotent.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "353682e4-a9eb-4b23-ae35-fc8e55f5a3f0",
+      "startedAt": "2026-11-25T06:17:03.517Z",
+      "executable": "python3",
+      "commandDigest": "c035df85fea997c97ead540aba44b7f4d139f0a1f71bae311514726f79cac21b",
+      "receiptPath": "measurements/halibut-fin-source-media-body.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "536aa8cb-1d0c-4368-b44b-39d46ccac7a4",
+      "startedAt": "2026-11-25T06:17:23.136Z",
+      "executable": "python3",
+      "commandDigest": "86b1f27242668d9e0d5214d31b89d26f92ef8cd596ef1c042fde81bb8ccb15a2",
+      "receiptPath": "measurements/halibut-fin-source-body-final.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "lint",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "2c832492-59a5-4a59-bac2-d0b91f1e2094",
+      "startedAt": "2026-11-25T06:18:09.428Z",
+      "executable": "python3",
+      "commandDigest": "d89602c770c16a35b6c5da9a9da4ae967807390aa462f4349604d0463de12f51",
+      "receiptPath": "measurements/halibut-fin-publication-source.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "lint",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "09cf65be-632a-47f3-b59b-4f89e9ce1184",
+      "startedAt": "2026-11-25T06:18:21.997Z",
+      "executable": "python3",
+      "commandDigest": "1b9b750d007c851f920bb86ccb95b6c8d0649e1d11d26d4708a2736b0478955e",
+      "receiptPath": "measurements/halibut-fin-project-source.json"
     }
   ],
   "runMeasurements": [
@@ -40073,6 +40521,766 @@
       "receipt": {
         "path": "measurements/deep-lighting-final-records.json",
         "sha256": "3c03f4f10c36628f994a005742542df38c0516344b976351d5255b450b845398"
+      }
+    },
+    {
+      "id": "4368d1c8-a05b-4954-8831-f1a39f2a5243",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "8da62f5acc5b5dea43e409dd6a0fd9d42507dff4dc92950e35579326cab0ed29",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-25T05:18:54.804Z",
+      "finishedAt": "2026-11-25T05:18:57.261Z",
+      "durationMs": 2414.337834,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-fin-inspect-before.json",
+        "sha256": "9ef0fd6bf225a8801526cb02695fe2fb6f247e4f3ee4bf3dbe602853f216357b"
+      }
+    },
+    {
+      "id": "ad9bff71-826e-4223-8bf0-0035e3c96491",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "2a75b86f8014abfaed781ddc99a02f9780446d3e8f93f7902267dc21de764800",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-25T05:24:42.061Z",
+      "finishedAt": "2026-11-25T05:24:43.590Z",
+      "durationMs": 1495.5195,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-fin-reference.json",
+        "sha256": "878453d530bdb24e0399f21493513d4b9e1e0bc73f42503407b15ef6d74cd214"
+      }
+    },
+    {
+      "id": "6dd676e4-3366-48d3-bb22-6ff62d258ad8",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "f7d3b34d408b5d6f5e9175c13212ea280223acb5d923d93b410d44d673ad5a4b",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-25T05:25:06.762Z",
+      "finishedAt": "2026-11-25T05:25:08.259Z",
+      "durationMs": 1471.165291,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-fin-controlled-red.json",
+        "sha256": "b06f7042ff823e3f42b5518574f9b753846c2faf53643618504c71dfd9d50ef0"
+      }
+    },
+    {
+      "id": "a78e23ff-c737-46c7-86fb-576de132dfa0",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "35ae463d475afb51b6a085e5f1f8287ddb8377191658174f4430eecc06849b93",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T05:25:29.604Z",
+      "finishedAt": "2026-11-25T05:25:31.812Z",
+      "durationMs": 2172.697375,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-fin-author-a.json",
+        "sha256": "cdbe8a9825823fd8ce38f377a952020a7470e14f9625d30f3f1d87f532c27f15"
+      }
+    },
+    {
+      "id": "938bd388-ffdb-4970-b987-ccbdaf4b73f6",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "214655a646bdc80eaac1b31ec323bbaf42e13667245d949819ba497f0f652bc9",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-25T05:26:31.547Z",
+      "finishedAt": "2026-11-25T05:26:36.460Z",
+      "durationMs": 4883.579041,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-fin-source-a.json",
+        "sha256": "ab1baaca7aa99b712466306ecca92271f971370196071c35423e09a259b0e040"
+      }
+    },
+    {
+      "id": "da21e8b5-6c19-4de3-b3bd-346fef1e18d8",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "cccb37ccb9f536af91415c04ba4af89493fe37f5e252829e2d36f569d08c4a4d",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-25T05:27:38.925Z",
+      "finishedAt": "2026-11-25T05:27:40.148Z",
+      "durationMs": 1190.5912090000002,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-fin-weights-diagnostic.json",
+        "sha256": "7685dc77303f8398b4c6222386ab32815f29d2621cb03c4e2679821dc8e66867"
+      }
+    },
+    {
+      "id": "2dcdefb5-3efb-4c37-862b-74907ae78d90",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "20dc34c8f7ab00f5e1bf85bce6673128be22f88b3478d664a6e580e515b8ab04",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T05:28:04.906Z",
+      "finishedAt": "2026-11-25T05:28:07.076Z",
+      "durationMs": 2144.863458,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-fin-author-b.json",
+        "sha256": "76a4159457046356ebd8f6793edd5aa666572e46c01f2c62328b61d9e5445a88"
+      }
+    },
+    {
+      "id": "e6ae3401-b45a-4119-8db2-ce979f126bb9",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "c190ed826583910bb7e9af8b41b8d3e7caed08c9b671a625a5e7363fb6f865fc",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-25T05:29:40.286Z",
+      "finishedAt": "2026-11-25T05:29:44.114Z",
+      "durationMs": 3792.277167,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-fin-source-b.json",
+        "sha256": "dd6c0e3d8349602714ddbed99baed946d3a740af885651edad760a8f4c4a0079"
+      }
+    },
+    {
+      "id": "0c58a2b6-0533-46eb-bc56-447ad0c6636f",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "39df5b0b263f1fc7796fcf89c8c67c86dfb5b190e90505cced218f93fed51cb6",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T05:32:22.214Z",
+      "finishedAt": "2026-11-25T05:32:24.064Z",
+      "durationMs": 1819.615209,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-fin-core-source.json",
+        "sha256": "b74683a5bae48483756499fa306fc44bb98ea1ed87ab3ffbf2dbe8b96db7dbad"
+      }
+    },
+    {
+      "id": "6d890a01-12d2-4b5a-8c18-8bd273f506a0",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "4baaff876f5ea9ee65459fe4a90619b425a5e41b3c37eb9e4089e562d22c403d",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T05:34:37.620Z",
+      "finishedAt": "2026-11-25T05:34:54.789Z",
+      "durationMs": 17127.836959,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-fin-unity-import.json",
+        "sha256": "a06054a749f20b3d867e7ceee461b0da9b24a0f6d9eae831a8531ea69e832f81"
+      }
+    },
+    {
+      "id": "8ac779d2-5d24-44da-94cf-7ff16f2af8d2",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "8f5239c2bc020dfd0cc5910245432c5aaaf226f6578028d2b1d88e5c286c428e",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T05:35:55.063Z",
+      "finishedAt": "2026-11-25T05:36:06.778Z",
+      "durationMs": 11673.446917000001,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-fin-editor-a.json",
+        "sha256": "c7b5460ded7dda106b6c1ef760326f89d3ee836ae983015f325f548c59e37769"
+      }
+    },
+    {
+      "id": "e6569eee-4920-4603-a44e-e4658b58872f",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "605254105e992b41e475ee427705e5c9a05f035836ecd897b036decdaece56c2",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T05:38:03.914Z",
+      "finishedAt": "2026-11-25T05:39:08.945Z",
+      "durationMs": 64996.962167,
+      "exitCode": 2,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-fin-play-a.json",
+        "sha256": "eb30dc06c939c255afa432907038f454647ad5194567ac0a7a00579f4e6aac25"
+      }
+    },
+    {
+      "id": "f1ddc4e6-3f97-4254-8a14-312566cfa5a8",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "f980e13532973feacc42835176179bd844fb39aa89abdfe031473973b3064eea",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T05:40:46.632Z",
+      "finishedAt": "2026-11-25T05:41:53.972Z",
+      "durationMs": 67310.826625,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-fin-play-b.json",
+        "sha256": "ba43fb0d72401161bdc22834ed05aa212d60c81f54e379b17921c8c4bc98ff51"
+      }
+    },
+    {
+      "id": "26af6514-f9c8-491f-94ea-5a706722219c",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "7699e9ab93eabd7b3c239aabb81f7ececd62fde22e3cd7f1b3ef6fb46d1b4fa1",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T05:42:13.167Z",
+      "finishedAt": "2026-11-25T05:42:40.263Z",
+      "durationMs": 27066.869875,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-fin-metal-a.json",
+        "sha256": "420da7f3043db3966307b528f09f30235d2dbee64b75a6c6d6d27edbfc2738ce"
+      }
+    },
+    {
+      "id": "f332c66f-f095-4abe-9526-b87f2ce6a77c",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "9cb9743f115f3f29349a08ff7b6503ae0eb1d246147c97613bb278345efd0fa6",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T05:44:40.004Z",
+      "finishedAt": "2026-11-25T05:44:46.525Z",
+      "durationMs": 6496.650208,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-fin-metal-a-independent.json",
+        "sha256": "5936c5ea7135f589c4974d928739fbe9e9f248882ee416f11b1399a6be4c7398"
+      }
+    },
+    {
+      "id": "91dc61e8-67db-4c13-badf-6eb59ee25859",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "457c733be83cf2df870d00393d6b05b06bef596a393705034c932f3512575b0e",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T05:45:23.447Z",
+      "finishedAt": "2026-11-25T05:45:54.742Z",
+      "durationMs": 31261.514790999998,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-fin-metal-b.json",
+        "sha256": "4fffdd4f1544237725d3e3aa2bbec9d58baaac48f5bfac15e6cf064a94ed7603"
+      }
+    },
+    {
+      "id": "6cd3e3b4-2802-405d-9b42-4f09ea074ac3",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "5ae49c487156b856a277df8184e34cec55e5bfd7593390a2daee3d054d31e560",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T05:48:57.815Z",
+      "finishedAt": "2026-11-25T05:49:12.764Z",
+      "durationMs": 14908.021458000001,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-fin-metal-b-independent.json",
+        "sha256": "15eec91d19048236472ecd6248999c49799732d11bd884033cd065af90540294"
+      }
+    },
+    {
+      "id": "87cc4557-a11b-4013-8cce-86bd9d362794",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "135c7af7d60ee8a528fd3ab276a3a32f65a0447fbfa84614d90b1b0559203ed6",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T05:50:54.492Z",
+      "finishedAt": "2026-11-25T05:51:35.069Z",
+      "durationMs": 40537.597542,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-fin-metal-c.json",
+        "sha256": "3139b1b73668b77fb4bc0a7ba6114fc5aea39508fba7c07c58845823b001d155"
+      }
+    },
+    {
+      "id": "bd21ed31-d537-4247-b642-b4bf48d7c93e",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "84e696b292255d34d9f3ef6fe35f167460c8697c236d6aafb1959e4565a71d15",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T05:53:51.125Z",
+      "finishedAt": "2026-11-25T05:53:57.841Z",
+      "durationMs": 6692.037167,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-fin-metal-c-independent.json",
+        "sha256": "8cd95111a87d5ca3d7e9119a948ca24181c02a8ee215258bf9538ea0d960d809"
+      }
+    },
+    {
+      "id": "60977767-124a-43c1-8266-c211d5d0ff43",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "963e05d6f95d4232c3033391f09e785225a90bb2c9327ae1fbdb9b9b6532f8c7",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-25T05:54:57.794Z",
+      "finishedAt": "2026-11-25T05:55:00.225Z",
+      "durationMs": 2403.7489579999997,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-fin-idempotent.json",
+        "sha256": "bd5b27059b890ec7ca42c7a654e118cdb01cdfef9c61e4e3d9c7181c12367de9"
+      }
+    },
+    {
+      "id": "e08dae30-7338-47b5-8ab6-c8e7651b179b",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "c035df85fea997c97ead540aba44b7f4d139f0a1f71bae311514726f79cac21b",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T05:55:42.609Z",
+      "finishedAt": "2026-11-25T05:55:45.454Z",
+      "durationMs": 2810.0412079999996,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-fin-source-media.json",
+        "sha256": "0331625fb813a0c305ea6ed281fb9a82329b2bc2c548c56c67f2cb65a0ca335b"
+      }
+    },
+    {
+      "id": "8f440fd1-857e-4942-a488-3ab6bb971f62",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "86b1f27242668d9e0d5214d31b89d26f92ef8cd596ef1c042fde81bb8ccb15a2",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T05:59:30.847Z",
+      "finishedAt": "2026-11-25T05:59:31.450Z",
+      "durationMs": 571.970167,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-fin-source-final.json",
+        "sha256": "897e5685c4b041ee12c34cdf597c2e13b2020d8143d1736969d7e1c878b376eb"
+      }
+    },
+    {
+      "id": "7b1abf61-02e2-40f5-849d-bd05f2275de3",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "8c80c9f51ebe1440cee387a147025d9a959029f65c72da6a0295d1d5706242be",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-25T06:04:14.258Z",
+      "finishedAt": "2026-11-25T06:04:16.121Z",
+      "durationMs": 1820.190958,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-fin-body-diagnostic.json",
+        "sha256": "27867c48257674068260a1adf7d6aa7114543a03da4d2a143d6d14a8dc0bd167"
+      }
+    },
+    {
+      "id": "c558060c-2de3-469c-a4dd-78ebeadf830e",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "a79dbf4ad318e699f422bef37d504379acd38da1ed6c7113123bf0881d837c6e",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-25T06:09:46.190Z",
+      "finishedAt": "2026-11-25T06:10:31.509Z",
+      "durationMs": 45150.026708,
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-fin-reference-v2.json",
+        "sha256": "4258a15c88d0f5d89c6ccd46210a4603865faf51d308c6f28a6b4826d7d22547"
+      }
+    },
+    {
+      "id": "243bbfe2-a113-4fb1-b119-93558697862e",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "563ca2e9f93ed3a42320f818779204d7facbca21d390c967767032ed8b0f46a5",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-25T06:10:39.946Z",
+      "finishedAt": "2026-11-25T06:10:42.595Z",
+      "durationMs": 2612.9555419999997,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-fin-reference-v2b.json",
+        "sha256": "d3cb1134c5e3ab32e9d6dfb8cca2abf22281c527f30c52a5ad36e5c76b8f192d"
+      }
+    },
+    {
+      "id": "f87c5cc9-f573-4267-b303-746a23163c81",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "5afb1ec9ae5d8f5ee2179bdc4b28ae19abfa00fd66356aa188131ed8699f2efd",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-25T06:10:47.754Z",
+      "finishedAt": "2026-11-25T06:10:53.496Z",
+      "durationMs": 5715.699417000001,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-fin-body-controlled-red.json",
+        "sha256": "896d70ff007177aa8ca6d4e61e8ef6e5847dacf595f852c99b65ffe75b4e68ce"
+      }
+    },
+    {
+      "id": "bf5515c8-7083-4816-9a86-9437e29752c8",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "631902f5e21c55efe8f985f2e486bec2e4470af4d12202d2354c4786902dbb12",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T06:11:00.676Z",
+      "finishedAt": "2026-11-25T06:11:04.352Z",
+      "durationMs": 3637.063167,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-fin-body-author.json",
+        "sha256": "fce4bb4be536b52dc38181cd17b3bef4f520bd44fcd3de6d0df4f2e35994fd5d"
+      }
+    },
+    {
+      "id": "d20a7816-b8ad-483a-a42d-e1cd72f9a2d8",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "607b79011de0067c5613daecc3b5549985f02ac18481228111c4abb018c1377d",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-25T06:11:13.575Z",
+      "finishedAt": "2026-11-25T06:11:17.635Z",
+      "durationMs": 4032.6326660000004,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-fin-source-body.json",
+        "sha256": "dbd30fda0a52d8e70ab2e0b61ac43a00c4c0dbea04d6129057ac0400cdd1c73c"
+      }
+    },
+    {
+      "id": "519ed6e4-109c-43c5-9f0e-0e9ecb039a7e",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "fa165916d5c4e607098826d6d9aa5f4a637ba6c96f75098bb44a88079517443c",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T06:11:22.878Z",
+      "finishedAt": "2026-11-25T06:11:24.827Z",
+      "durationMs": 1910.5782080000001,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-fin-core-body.json",
+        "sha256": "0333c8a1957383f5055efaf10ab47436d6a449b425f15d86aef8aa90c2f90f3e"
+      }
+    },
+    {
+      "id": "ce1e0f08-19a1-4940-b778-1c9ca95ddd3e",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "4baaff876f5ea9ee65459fe4a90619b425a5e41b3c37eb9e4089e562d22c403d",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T06:11:40.801Z",
+      "finishedAt": "2026-11-25T06:11:52.446Z",
+      "durationMs": 11592.362874999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-fin-body-unity-import.json",
+        "sha256": "3f2d3dc704add6541509369023b1b04058639e2465323254caf030780d720e7e"
+      }
+    },
+    {
+      "id": "a0f96671-cd60-4c5d-a87c-0c4c8025c53d",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "c0a10b9c83a93c1bdef542f38089e9d39396b7ea5ca0a159415b1c6f362aab69",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T06:12:06.456Z",
+      "finishedAt": "2026-11-25T06:12:17.165Z",
+      "durationMs": 10681.035,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-fin-body-editor.json",
+        "sha256": "0bba9dd718cfd092f4eb645ddf75d7dfa9a8e68ec78f7b0320a3d654c88897cb"
+      }
+    },
+    {
+      "id": "5754519e-1aec-453f-8766-e46fff8bc26f",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "c06009cb98f9e596dc746771aedcd4e66ed8ed946d001e114add6a11f6dcd840",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T06:12:24.437Z",
+      "finishedAt": "2026-11-25T06:13:33.131Z",
+      "durationMs": 68655.54166700001,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-fin-body-play.json",
+        "sha256": "0250499ce715de902ed960d8c0cc5bc980286433c27ca664709c274dccaf5df8"
+      }
+    },
+    {
+      "id": "3bb19853-9b06-41e4-8358-cee36bac2415",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "f5f5c3303e185807c7c784a5c3215b0309b36f54686901b1ffceb5b7056f9eb5",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T06:13:38.759Z",
+      "finishedAt": "2026-11-25T06:14:13.149Z",
+      "durationMs": 34361.819542000005,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-fin-metal-d.json",
+        "sha256": "083b0d80af4205c016f5db60954b1b6aeac18f9923d4bd53b508bdc60ad4c2f5"
+      }
+    },
+    {
+      "id": "f482ac20-6853-4afd-af96-612568cfd3d7",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "cd19d1376204f634f092484f9f32a67a4b44e9d023cbd44bb7f33a8d364fb824",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T06:15:12.014Z",
+      "finishedAt": "2026-11-25T06:15:49.537Z",
+      "durationMs": 37483.441958,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-fin-metal-e.json",
+        "sha256": "0d32ec7dd0293cc709198b999842100131ec95379308588835e14008b551e90e"
+      }
+    },
+    {
+      "id": "798b3c5c-e264-400f-85ba-b2c83a4d9228",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "93ad510c2647e9e3ef303ad14ed4278e3d88cc5b30857b6464b409c5878ba9aa",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T06:16:26.527Z",
+      "finishedAt": "2026-11-25T06:16:34.225Z",
+      "durationMs": 7655.6311670000005,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-fin-metal-e-independent.json",
+        "sha256": "23d97d207868346a69b68d7eed922e5640895a7ce9a9cc2ae770124734d93938"
+      }
+    },
+    {
+      "id": "c5cb9b4a-f031-48e4-be88-66bb31783fb6",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "963e05d6f95d4232c3033391f09e785225a90bb2c9327ae1fbdb9b9b6532f8c7",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-25T06:16:49.334Z",
+      "finishedAt": "2026-11-25T06:16:52.880Z",
+      "durationMs": 3482.5891670000005,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-fin-body-idempotent.json",
+        "sha256": "42b2f990e094e0ac54e2a234b42e4b03cc99a13595a3fbf90c50e1717c6a77e9"
+      }
+    },
+    {
+      "id": "353682e4-a9eb-4b23-ae35-fc8e55f5a3f0",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "c035df85fea997c97ead540aba44b7f4d139f0a1f71bae311514726f79cac21b",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T06:17:03.517Z",
+      "finishedAt": "2026-11-25T06:17:06.261Z",
+      "durationMs": 2717.3618749999996,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-fin-source-media-body.json",
+        "sha256": "70f44d805b6be238a28c27b3dc9a899dc466f910538d0426380128c3af1a7561"
+      }
+    },
+    {
+      "id": "536aa8cb-1d0c-4368-b44b-39d46ccac7a4",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "86b1f27242668d9e0d5214d31b89d26f92ef8cd596ef1c042fde81bb8ccb15a2",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T06:17:23.136Z",
+      "finishedAt": "2026-11-25T06:17:23.762Z",
+      "durationMs": 601.188,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-fin-source-body-final.json",
+        "sha256": "b59436c6a293294d6f7bc2de0e95426716b0201bd71ff150d4c60f94c7ab19cd"
+      }
+    },
+    {
+      "id": "2c832492-59a5-4a59-bac2-d0b91f1e2094",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d89602c770c16a35b6c5da9a9da4ae967807390aa462f4349604d0463de12f51",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-25T06:18:09.428Z",
+      "finishedAt": "2026-11-25T06:18:11.988Z",
+      "durationMs": 2480.776792,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-fin-publication-source.json",
+        "sha256": "caeb9b746472ecb515a9bd24a1f31c795a991d5942516439faab51f774f2b6fc"
+      }
+    },
+    {
+      "id": "09cf65be-632a-47f3-b59b-4f89e9ce1184",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "1b9b750d007c851f920bb86ccb95b6c8d0649e1d11d26d4708a2736b0478955e",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-25T06:18:21.997Z",
+      "finishedAt": "2026-11-25T06:18:26.351Z",
+      "durationMs": 4191.677167,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-fin-project-source.json",
+        "sha256": "46031bda464603cfad7f55f250008a877829a92572854e277d250afdefd7cb28"
       }
     }
   ]

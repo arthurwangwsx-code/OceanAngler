@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "4368d1c8-a05b-4954-8831-f1a39f2a5243",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "8da62f5acc5b5dea43e409dd6a0fd9d42507dff4dc92950e35579326cab0ed29",
+    "category": "test",
+    "executable": "Blender",
+    "startedAt": "2026-11-25T05:18:54.804Z",
+    "finishedAt": "2026-11-25T05:18:57.261Z",
+    "durationMs": 2414.337834,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "/Applications/Blender.app/Contents/MacOS/Blender",
+    "args": [
+      "--background",
+      "art/source/halibut/Halibut.blend",
+      "--threads",
+      "4",
+      "--python-exit-code",
+      "1",
+      "--python",
+      ".local/halibut-fin-qa/inspect-before.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "/Applications/Blender.app/Contents/MacOS/Blender",
+    "--background",
+    "art/source/halibut/Halibut.blend",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "1",
+    "--python",
+    ".local/halibut-fin-qa/inspect-before.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T05:18:54.804Z",
+  "finishedAt": "2026-11-25T05:18:57.261Z",
+  "durationMs": 2414.337834
+}

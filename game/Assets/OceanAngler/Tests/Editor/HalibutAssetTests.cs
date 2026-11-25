@@ -7,6 +7,33 @@ namespace OceanAngler.Tests
 {
     public sealed class HalibutAssetTests
     {
+        [Test] public void ImportedMedianFinsMoveIndependentlyWithoutMovingOtherAnatomy()
+        {
+            var root=Object.Instantiate(Resources.Load<GameObject>("Models/Halibut"));var moved=new Mesh();var held=new Mesh();
+            try
+            {
+                var animator=root.GetComponentInChildren<Animator>();animator.enabled=false;
+                var fins=root.GetComponentsInChildren<Transform>(true).Where(t=>t.name.StartsWith("dorsal_")||t.name.StartsWith("anal_")).ToArray();Assert.That(fins.Length,Is.EqualTo(34));var rest=fins.Select(t=>t.localRotation).ToArray();
+                foreach(var renderer in root.GetComponentsInChildren<SkinnedMeshRenderer>(true))
+                {
+                    var mesh=renderer.sharedMesh;Assert.That(mesh.bindposes.Length,Is.LessThanOrEqualTo(42));var weights=mesh.boneWeights;var finBones=new HashSet<int>(renderer.bones.Select((bone,index)=>(bone,index)).Where(x=>x.bone.name.StartsWith("dorsal_")||x.bone.name.StartsWith("anal_")).Select(x=>x.index));
+                    bool Influenced(BoneWeight w)=>finBones.Contains(w.boneIndex0)&&w.weight0>0||finBones.Contains(w.boneIndex1)&&w.weight1>0||finBones.Contains(w.boneIndex2)&&w.weight2>0||finBones.Contains(w.boneIndex3)&&w.weight3>0;
+                    var moving=Enumerable.Range(0,mesh.vertexCount).Where(i=>Influenced(weights[i])).ToArray();var fixedVertices=Enumerable.Range(0,mesh.vertexCount).Where(i=>!Influenced(weights[i])).ToArray();Assert.That(moving.Length,Is.GreaterThan(100));Assert.That(fixedVertices.Length,Is.GreaterThan(100));
+                    foreach(var clip in animator.runtimeAnimatorController.animationClips)
+                    {
+                        float maximum=0;
+                        foreach(float phase in new[]{0,.125f,.25f,.375f,.5f,.625f,.75f,.875f})
+                        {
+                            clip.SampleAnimation(animator.gameObject,clip.length*phase);renderer.BakeMesh(moved,true);var a=moved.vertices;var rotations=fins.Select(t=>t.localRotation).ToArray();for(int i=0;i<fins.Length;i++)fins[i].localRotation=rest[i];renderer.BakeMesh(held,true);var b=held.vertices;for(int i=0;i<fins.Length;i++)fins[i].localRotation=rotations[i];
+                            float Distance(int i)=>renderer.transform.TransformVector(a[i]-b[i]).magnitude;
+                            Assert.That(fixedVertices.Max(Distance),Is.LessThan(.00001f),renderer.name+clip.name+" body/eyes/mouth and roots stay fixed under fin-only ablation");maximum=Mathf.Max(maximum,moving.Max(Distance));Assert.That(a.All(v=>float.IsFinite(v.x)&&float.IsFinite(v.y)&&float.IsFinite(v.z)),Is.True);
+                        }
+                        Assert.That(maximum,Is.GreaterThan(.0015f),renderer.name+clip.name+" actual imported fin deformation");
+                    }
+                }
+            }
+            finally{Object.DestroyImmediate(moved);Object.DestroyImmediate(held);Object.DestroyImmediate(root);}
+        }
         [Test] public void ActualImportedToothRootsRemainInVisibleGumThroughAllSevenActions()
         {
             var root=Object.Instantiate(Resources.Load<GameObject>("Models/Halibut"));var baked=new Mesh();
@@ -89,8 +116,15 @@ namespace OceanAngler.Tests
                 try
                 {
                     var swim=clips.Single(c=>c.name=="swim");swim.SampleAnimation(animator.gameObject,0);renderer.BakeMesh(a,true);
-                    float maximum=0;
-                    foreach(float time in new[]{.125f,.25f,.375f,.5f,.75f,1f}){swim.SampleAnimation(animator.gameObject,time);renderer.BakeMesh(b,true);maximum=Mathf.Max(maximum,a.vertices.Zip(b.vertices,(x,y)=>Vector3.Distance(renderer.transform.TransformPoint(x),renderer.transform.TransformPoint(y))).Max());}
+                    int skin=System.Array.FindIndex(renderer.sharedMaterials,m=>m.name=="Halibut_Skin");Assert.That(skin,Is.GreaterThanOrEqualTo(0));var initial=a.vertices;
+                    var posterior=renderer.sharedMesh.GetTriangles(skin).Distinct().Where(i=>renderer.transform.TransformPoint(initial[i]).x>.2f).ToArray();Assert.That(posterior.Length,Is.GreaterThan(100));
+                    float maximum=0,posteriorMaximum=0;
+                    foreach(float time in new[]{.125f,.25f,.375f,.5f,.75f,1f})
+                    {
+                        swim.SampleAnimation(animator.gameObject,time);renderer.BakeMesh(b,true);var posed=b.vertices;float Distance(int i)=>Vector3.Distance(renderer.transform.TransformPoint(initial[i]),renderer.transform.TransformPoint(posed[i]));
+                        maximum=Mathf.Max(maximum,Enumerable.Range(0,initial.Length).Max(Distance));posteriorMaximum=Mathf.Max(posteriorMaximum,posterior.Max(Distance));
+                    }
+                    Assert.That(posteriorMaximum,Is.GreaterThan(.005f),"Actual posterior skin must bend with the spine, not remain rigid on head while fins move");
                     Assert.That(maximum,Is.GreaterThan(.025f));Assert.That(b.vertices.All(v=>float.IsFinite(v.x)&&float.IsFinite(v.y)&&float.IsFinite(v.z)),Is.True);
                 }
                 finally{Object.DestroyImmediate(a);Object.DestroyImmediate(b);}

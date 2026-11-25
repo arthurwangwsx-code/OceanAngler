@@ -2961,19 +2961,19 @@
       "acquiredAt": "2026-11-25",
       "status": "ART_REVIEW_PENDING",
       "path": "art/source/halibut/Halibut.blend",
-      "sha256": "e2bd45fbd7bac6f1b2b69a7795d55579b1b474e52132a887825e2b87d3682b20",
+      "sha256": "70a9479158d6130ecaf9577b5887f3cf81bb0a4254e5670dc1e13e1aec8cde5d",
       "artifacts": [
         {
           "path": "art/source/halibut/Halibut.blend",
-          "sha256": "e2bd45fbd7bac6f1b2b69a7795d55579b1b474e52132a887825e2b87d3682b20"
+          "sha256": "70a9479158d6130ecaf9577b5887f3cf81bb0a4254e5670dc1e13e1aec8cde5d"
         },
         {
           "path": "art/source/halibut/build-report.json",
-          "sha256": "f4475505be34f8c308bd4d2f542b2b97b5647f4cb01d2c0a46919217984e2607"
+          "sha256": "61735d18eecabbcedad960d4aec5778eb7fce3378bb93251e2ca61bdc391fcf1"
         },
         {
           "path": "game/Assets/OceanAngler/Art/Halibut/Halibut.fbx",
-          "sha256": "31206951d41ec54c06e4a1946abdfd7e94dc1b1b6de48ce4d32cc55c098b7577"
+          "sha256": "313870156beefa62c92bb39fc9af30856169879c2178f577fcccde8d2b019df4"
         },
         {
           "path": "game/Assets/OceanAngler/Art/Halibut/Halibut_BaseColor.png",
@@ -3008,7 +3008,7 @@
           "sha256": "56c89c3f5cb201376b136b6b489708215b84c9496b024f345851ff0c6c46603f"
         }
       ],
-      "note": "Original anatomical candidate with continuous rolled lip, gum, lumen and body gill relief. Integrated target/journal selection; art/science/user/A1-A3 and natural motion still pending. No third-party media."
+      "note": "Original candidate with 34 independent median-fin controls,42bones/4weights. Exact geometry/UV/maps, roots, front anatomy/other fins, old8bones/7body-jaw curves retained. Posterior Skin weights deliberately rebound to the original spine to close the moving-hull gap. Art/science/user/A1-A3 pending; no third-party media."
     },
     {
       "id": "atlantic-halibut-anatomy-review",
@@ -3334,6 +3334,93 @@
         }
       ],
       "note": "Own game UI/assets and isolated project QA progress. Game-only clips, no home screen, audio or color adjustment. Old/current native comparison uses different encounters. Not personal media, OS touch, physical or final art acceptance."
+    },
+    {
+      "id": "halibut-median-fin-editor-review",
+      "author": "OceanAngler contributors",
+      "source": "Own imported halibut; HalibutFinRenderReview/halibutFinC, two-second authored Editor cycles and same-body held-fin controls",
+      "license": "MIT",
+      "redistribution": true,
+      "status": "ART_REVIEW_PENDING",
+      "artifacts": [
+        {
+          "path": "art/previews/halibut-fin-motion/ablation-contact.jpg",
+          "sha256": "4f35a5f72d11c2ae74d0622bac1dea4859b20dcd3517cab29d8572a4638f87a4"
+        },
+        {
+          "path": "art/previews/halibut-fin-motion/bite-editor-cycle.mp4",
+          "sha256": "83163412c7ce9c8c06741bc5a1fc4b79f0a3660160d33ebf1b76763e13b44f99"
+        },
+        {
+          "path": "art/previews/halibut-fin-motion/burst-editor-cycle.mp4",
+          "sha256": "c13bcb3b8166757196b8dd2c7c5fc1d3aa04ddd79614d9e9497bf7143c42f676"
+        },
+        {
+          "path": "art/previews/halibut-fin-motion/cycles-contact.jpg",
+          "sha256": "1cc3a6911e70e2ae5fab5c8556fd399f5005227cf7f3904fec5a6fc0775dc523"
+        },
+        {
+          "path": "art/previews/halibut-fin-motion/edge0-held-fin.png",
+          "sha256": "0f0d8cbb48faf37c72a628369838396afdf07711e0162192fd006ca171ff8f69"
+        },
+        {
+          "path": "art/previews/halibut-fin-motion/edge0.png",
+          "sha256": "bf8179223f76a3ed6e40402957a69ba42473e4d52026e50eeade276ee1a95977"
+        },
+        {
+          "path": "art/previews/halibut-fin-motion/edge1-held-fin.png",
+          "sha256": "b99775b550e17d2f189e7e15fe07857a4adf4bbc1481646f351529ecb1f0dce0"
+        },
+        {
+          "path": "art/previews/halibut-fin-motion/edge1.png",
+          "sha256": "4fb84aec560c413113beb371822161e5358b2c290e61a311e2513f3e2c113b0f"
+        },
+        {
+          "path": "art/previews/halibut-fin-motion/hooked-editor-cycle.mp4",
+          "sha256": "60970c3b3251f22f4e20511e0ee1eef635c97995bbd58b3f34df31bdae284073"
+        },
+        {
+          "path": "art/previews/halibut-fin-motion/idle-editor-cycle.mp4",
+          "sha256": "2bcd2dee1ae908eeb18ab13308936c3013a0eebcff643deb2b6efa4d05400032"
+        },
+        {
+          "path": "art/previews/halibut-fin-motion/lod1-0.png",
+          "sha256": "f24a1691fb32f3f22b849a13b88ddbe33698009d6c8a7d7adf81bcbe23e659d3"
+        },
+        {
+          "path": "art/previews/halibut-fin-motion/lod2-0.png",
+          "sha256": "c568b36e35fbbe84985d94ce5ab12728d8ac8961cff283f316573a83f2668be4"
+        },
+        {
+          "path": "art/previews/halibut-fin-motion/release-editor-cycle.mp4",
+          "sha256": "eac73361e2f5d17e23d13a4dd5acffc5613ea58a56ec35c667fbef7ad497a164"
+        },
+        {
+          "path": "art/previews/halibut-fin-motion/swim-000.png",
+          "sha256": "074e107d6e4f0c5beca9425119f0499cccd287ccba92a9004a367cdb89426bb7"
+        },
+        {
+          "path": "art/previews/halibut-fin-motion/swim-008.png",
+          "sha256": "f2736a6845e781188b316c35ea1c5c4f0a99d71e7ba4c4b53b0377c4b50c1aa4"
+        },
+        {
+          "path": "art/previews/halibut-fin-motion/swim-015.png",
+          "sha256": "35496e9b3046bbfa87873ec24ba3955340df4fbb44a46ed1b603b1a21517006b"
+        },
+        {
+          "path": "art/previews/halibut-fin-motion/swim-023.png",
+          "sha256": "0f37ff5efea3234dea4bdec5c814aac91fc338ea474214eedd20209835271a25"
+        },
+        {
+          "path": "art/previews/halibut-fin-motion/swim-editor-cycle.mp4",
+          "sha256": "db8a96d07cb08dfedbde1392bbb9a41024c8fefb8cd2fdee64ecee1dd1232c2e"
+        },
+        {
+          "path": "art/previews/halibut-fin-motion/turn-editor-cycle.mp4",
+          "sha256": "293c1d5a5d0608af508a738afaffb5f5bbba1c88d88caea0734f77b8326dcb34"
+        }
+      ],
+      "note": "Own isolated imported Metal/4xMSAA seven authored cycles and held-fin controls after posterior skin repair; no color/exposure edits. Strict first idle/repeat differs at18pixels by1channel level, CPU positions/normals exact; GPU stability PARTIAL retained, not final art/native/FPS acceptance."
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."

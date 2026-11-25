@@ -1,0 +1,37 @@
+{
+  "implementation": "IN_PROGRESS",
+  "acceptance": "PARTIAL",
+  "source": {
+    "status": "PARTIAL_GPU_FIRST_DRAW_STABILITY",
+    "sourceChecks": 1014,
+    "legacySourceChecks": 160,
+    "editor": 6,
+    "play": 9,
+    "sourceMeshesGeometryUvRootFrontAnatomyAndOtherFinWeightsExact": true,
+    "posteriorSkinBindingsIntentionallyRepaired": true,
+    "actualRootCentersStayInsideMovingHull": true,
+    "oldEightBonesAndSevenBodyJawCurvesExact": true,
+    "pngMapsUnchanged": 8,
+    "otherOldSourceFilesIdentical": 585,
+    "metalImages": 473,
+    "wholeFishFramingChecks": 473,
+    "firstRepeatPairs": 30,
+    "allFirstRepeatZero": false,
+    "firstDrawMismatchPixels": 18,
+    "firstDrawMaximumChannelDifference": 1,
+    "firstDrawCpuVerticesAndNormalsExact": true,
+    "sevenCyclesAllAdjacentFramesChange": true,
+    "allFourHeldFinControlsVisiblyDiffer": true,
+    "bodyHeldSourceRootAndNonFinDisplacement": 0,
+    "scope": "Targeted source/imported/GPU, not native, final natural art, science/child/physical qualification"
+  },
+  "native": {
+    "status": "NOT_RUN"
+  },
+  "art": "PARTIAL",
+  "science": "NOT_RUN",
+  "child": "NOT_RUN",
+  "physical": "NOT_RUN",
+  "distribution": "UNCHANGED_PRIOR_BUILD_8_NOT_THIS_SOURCE",
+  "goal": "ACTIVE_FULL_PRODUCT_NOT_COMPLETE"
+}

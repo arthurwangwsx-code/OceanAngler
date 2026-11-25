@@ -11,11 +11,12 @@ namespace OceanAngler
     public sealed partial class RuntimeSmoke
     {
         [Serializable] sealed class GearCheck { public string id,notice;public float scrollBefore,scrollAfter;public bool selectedVisible,topHitMatches; }
-        public IEnumerator RunGearReview(string outputFolder,bool captureFrames,bool quitProcess=false)
+        bool medianFinReview;
+        public IEnumerator RunGearReview(string outputFolder,bool captureFrames,bool quitProcess=false,bool reviewMedianFins=false)
         {
             folder=Path.GetFullPath(outputFolder);Directory.CreateDirectory(folder);
             if(File.Exists(Path.Combine(folder,"receipt.json")))throw new InvalidOperationException("Use a new review folder");
-            game=GetComponent<GameController>();began=Time.realtimeSinceStartup;finished=false;journeyMode=gearReviewMode=true;journeyQuit=quitProcess;completeContent=false;
+            game=GetComponent<GameController>();began=Time.realtimeSinceStartup;finished=false;journeyMode=gearReviewMode=true;journeyQuit=quitProcess;completeContent=false;medianFinReview=reviewMedianFins;
             receipt=new Receipt{captureEnabled=captureFrames,scope=captureFrames?"native focused gear/model-status UI review from a genuine isolated save copy; not fresh progression or OS touch":"headless focused gear/model-status UI review; logical fixture, no rendered acceptance"};
             var stack=new Stack<IEnumerator>();stack.Push(GearReview());
             while(stack.Count>0&&!finished)
@@ -73,6 +74,11 @@ namespace OceanAngler
                 JourneyRequire(!status.canvasRenderer.cull&&RectTransformUtility.RectangleContainsScreenPoint(viewport,corners[0])&&RectTransformUtility.RectangleContainsScreenPoint(viewport,corners[2]),"prototype-status-in-viewport-"+fish.id);
                 receipt.modelStatuses.Add(fish.id);
                 if(fish.id=="trevally"||fish.id=="halibut")yield return JourneyFrame("prototype-"+fish.id);
+                if(fish.id=="halibut"&&medianFinReview)
+                {
+                    JourneyRequire(Debug.isDebugBuild&&before.catches.Any(c=>c.fishId=="halibut")&&!before.settings.reducedMotion,"fin-review-development-build-and-discovered-moving-halibut");
+                    yield return ReviewMedianFinMotion(saveFile);
+                }
             }
             var after=game.Progress.Data;
             JourneyRequire(after.totalPoints==before.totalPoints&&after.catches.Select(JsonUtility.ToJson).SequenceEqual(before.catches.Select(JsonUtility.ToJson))&&after.observations.SequenceEqual(before.observations)&&after.habitatId==before.habitatId&&after.tutorialComplete==before.tutorialComplete&&JsonUtility.ToJson(after.settings)==JsonUtility.ToJson(before.settings),"gear-review-preserves-progress-and-settings");

@@ -76,6 +76,9 @@ def weights(x):
     for (a,an),(b,bn) in zip(BONE_X,BONE_X[1:]):
         if a<=x<=b:t=(x-a)/(b-a);return [(an,1-t),(bn,t)]
 def jaw_weights(p):
+    # Only the anterior mouth belongs to head/jaw. The posterior hull must
+    # follow the same spine interpolation as its attached fins and tail.
+    if p[0]>BONE_X[0][0]:return weights(p[0])
     x,y,z=p;t=np.clip((-.79-x)/.17,0,1)*np.clip((y+.005)/.018,0,1);return [('head',1-float(t)),('jaw',float(t))]
 def mesh(name,verts,faces,mat,uv=None,bone=None,jaw=False,fixed_weights=None):
     data=bpy.data.meshes.new(name);data.from_pydata(verts,[],faces);data.update();obj=bpy.data.objects.new(name,data);scene.collection.objects.link(obj);data.materials.append(mat);layer=data.uv_layers.new()
@@ -208,6 +211,9 @@ for name,amp,cycles in SEMANTICS:
         curve.update()
     action['semantic']=name
 rig.animation_data.action=bpy.data.actions['idle'];scene.frame_set(1)
+sys.path.insert(0,str(ROOT/'tools'))
+from art_halibut_fin_motion import apply_fin_motion
+fin_motion=apply_fin_motion(rig,lods)
 bpy.ops.object.select_all(action='DESELECT');rig.select_set(True)
 for obj in lods:obj.hide_set(False);obj.select_set(True)
 bpy.context.view_layer.objects.active=rig
@@ -221,6 +227,7 @@ for im in maps.values():im.filepath=bpy.path.relpath(im.filepath,start=str(OUT))
 bpy.ops.wm.save_as_mainfile(filepath=str(OUT/'Halibut.blend'))
 report={'status':'ANATOMICAL_CANDIDATE_NOT_ART_ACCEPTED','species':'Hippoglossus hippoglossus','coordinateConvention':'X longitudinal, Y body width, +Z eyed side up; blind side faces seabed','lods':{},'distanceUVReduction':uv_reduction,'bones':[b.name for b in rig.data.bones],'motions':[n for n,_,_ in SEMANTICS],'anatomy':anatomy,'maps':{},'license':'MIT; all geometry, UV, maps and keyframes original; reference photos excluded'}
 for obj in lods:obj.data.calc_loop_triangles();report['lods'][obj.name]={'vertices':len(obj.data.vertices),'triangles':len(obj.data.loop_triangles)}
+report['finMotion']=fin_motion
 for name,im in maps.items():p=GAME/(im.name+'.png');report['maps'][name]={'path':str(p.relative_to(ROOT)),'width':im.size[0],'height':im.size[1],'sha256':hashlib.sha256(p.read_bytes()).hexdigest()}
 (OUT/'build-report.json').write_text(json.dumps(report,indent=2,ensure_ascii=False)+'\n')
 print(json.dumps({'triangles':report['lods'],'status':report['status']}))

@@ -38,7 +38,41 @@
     "spine3",
     "peduncle",
     "tail",
-    "jaw"
+    "dorsal_15",
+    "dorsal_16",
+    "anal_15",
+    "anal_16",
+    "dorsal_13",
+    "dorsal_14",
+    "anal_12",
+    "anal_13",
+    "anal_14",
+    "dorsal_10",
+    "dorsal_11",
+    "dorsal_12",
+    "anal_09",
+    "anal_10",
+    "anal_11",
+    "dorsal_06",
+    "dorsal_07",
+    "dorsal_08",
+    "dorsal_09",
+    "anal_04",
+    "anal_05",
+    "anal_06",
+    "anal_07",
+    "anal_08",
+    "jaw",
+    "dorsal_00",
+    "dorsal_01",
+    "dorsal_02",
+    "dorsal_03",
+    "dorsal_04",
+    "dorsal_05",
+    "anal_00",
+    "anal_01",
+    "anal_02",
+    "anal_03"
   ],
   "motions": [
     "idle",
@@ -188,5 +222,72 @@
       "sha256": "9215cb3b6eb97f0de4fc4d4915949f8acaf948f96c605d60a3933960f7873a21"
     }
   },
-  "license": "MIT; all geometry, UV, maps and keyframes original; reference photos excluded"
+  "license": "MIT; all geometry, UV, maps and keyframes original; reference photos excluded",
+  "finMotion": {
+    "version": 1,
+    "stationsPerSide": 17,
+    "additionalBones": 34,
+    "totalBones": 42,
+    "spatialCycles": 1.1,
+    "rootUnchangedThroughRadialFraction": 0.25,
+    "maxFinInfluence": 0.98,
+    "maxWeights": 4,
+    "components": {
+      "Halibut_LOD0": {
+        "vertices": {
+          "dorsal": 780,
+          "anal": 780
+        },
+        "posteriorSkinVerticesReboundToSpine": 4704,
+        "outerVerticesReducedToTwoBodyInfluences": 0
+      },
+      "Halibut_LOD1": {
+        "vertices": {
+          "dorsal": 485,
+          "anal": 483
+        },
+        "posteriorSkinVerticesReboundToSpine": 1069,
+        "outerVerticesReducedToTwoBodyInfluences": 0
+      },
+      "Halibut_LOD2": {
+        "vertices": {
+          "dorsal": 155,
+          "anal": 144
+        },
+        "posteriorSkinVerticesReboundToSpine": 482,
+        "outerVerticesReducedToTwoBodyInfluences": 0
+      }
+    },
+    "anglesAndCycles": {
+      "idle": [
+        0.045,
+        1
+      ],
+      "swim": [
+        0.22,
+        2
+      ],
+      "turn": [
+        0.26,
+        1
+      ],
+      "burst": [
+        0.32,
+        3
+      ],
+      "bite": [
+        0.13,
+        1
+      ],
+      "hooked": [
+        0.28,
+        3
+      ],
+      "release": [
+        0.24,
+        2
+      ]
+    },
+    "scope": "Authored median-fin animation candidate, not measured adult halibut biomechanics or final art acceptance"
+  }
 }
