@@ -4045,6 +4045,81 @@
           "sha256": "008efca61d4525d8cbcb287d61043f634bc69e66959c44b8e4e349f81c97e1c3"
         }
       ]
+    },
+    {
+      "id": "developer-mode-native-review",
+      "author": "OceanAngler contributors",
+      "source": "Own build 9 actual iPhone/iPad Simulator UI and contact sheets",
+      "license": "MIT",
+      "redistribution": true,
+      "status": "NATIVE_SIMULATOR_UI_PASS_ART_PENDING",
+      "note": "Frozen source 5e4f9700468e045bac40e631f5ab018a5f8e6ad7; eight unedited full-size frames plus eight labelled/resized contact sheets covering 80 captures. Synthetic isolated test progress only; no personal phone/media, no retouching. Game art remains prototype; no physical touch or final art qualification.",
+      "artifacts": [
+        {
+          "path": "art/previews/developer-mode/phone-disable-1.jpg",
+          "sha256": "70f192b84247309a11d1475d817276c04fc07512a79bce61d5be6e6d8414f0cc"
+        },
+        {
+          "path": "art/previews/developer-mode/phone-enable-1.jpg",
+          "sha256": "8d77b9d7894d8bdd500288456752769d7f9b28acc9fed6f5ca98935deb98bc0c"
+        },
+        {
+          "path": "art/previews/developer-mode/phone-enable-2.jpg",
+          "sha256": "a9a381d9d7546e06a301ee242eabd5b6b40ddb8b7d7ba66bbd5e389e98d9f82d"
+        },
+        {
+          "path": "art/previews/developer-mode/phone-enable-confirmation.png",
+          "sha256": "a8a5429b28e2d3e23f4af0785706e8827392586266f5ba748f4d149f4946df14"
+        },
+        {
+          "path": "art/previews/developer-mode/phone-normal-restart-1.jpg",
+          "sha256": "5db1ca91019eb920e1fd630a17633222968e583d894dd6552a14195baf169213"
+        },
+        {
+          "path": "art/previews/developer-mode/phone-playing.png",
+          "sha256": "1affaae8a5e8b846e2746bbf23e45e531b88c58348d538eff20d70c54e9f6abd"
+        },
+        {
+          "path": "art/previews/developer-mode/phone-unlocked-preparation.png",
+          "sha256": "5c15efd0f59825147ccbd1de1774572ba82c4373f1f9b8b0facb357753f299b1"
+        },
+        {
+          "path": "art/previews/developer-mode/phone-write-failure.png",
+          "sha256": "f99ab60064d1ec1eb6ae44a8407d160e13fc9143fa7ad58dd757f56de2d7467a"
+        },
+        {
+          "path": "art/previews/developer-mode/tablet-disable-1.jpg",
+          "sha256": "060c7996c289f03451b94f29de2f6755ce9a5ba70bf1b0c01fc1099b3134dca8"
+        },
+        {
+          "path": "art/previews/developer-mode/tablet-enable-1.jpg",
+          "sha256": "7647610183f0817182404d246048439c7fd72792a2916012cfdd5a8cc871547e"
+        },
+        {
+          "path": "art/previews/developer-mode/tablet-enable-2.jpg",
+          "sha256": "59a2726d9756eac2521e5462805d1af6ea820aa6ac464d15df45cd8b5e88929a"
+        },
+        {
+          "path": "art/previews/developer-mode/tablet-enable-confirmation.png",
+          "sha256": "ee3acbfa66e28c8871e07fde1fd6abc58a0ed713def16ceb9833cb72e403e210"
+        },
+        {
+          "path": "art/previews/developer-mode/tablet-normal-restart-1.jpg",
+          "sha256": "501eff7273ef30b263490c684bb2acba5947c5b92d4f58f7cfbf70883f08d0cd"
+        },
+        {
+          "path": "art/previews/developer-mode/tablet-playing.png",
+          "sha256": "1ea438c4c06a9bdf3dd19a8e961f37f20e5bc5517257d62d6ff6b05a310b5c14"
+        },
+        {
+          "path": "art/previews/developer-mode/tablet-unlocked-preparation.png",
+          "sha256": "d54c3303013030e2f20cd5299c81c2c1c3014152e0fef0f318c12edd1c0ef083"
+        },
+        {
+          "path": "art/previews/developer-mode/tablet-write-failure.png",
+          "sha256": "68eb48f0b22cdfe63bba5c7bbc98b7ba9fca650ee3c4eaeb7b91eafe8f7aa2a6"
+        }
+      ]
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."

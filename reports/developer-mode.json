@@ -1,55 +1,219 @@
 {
   "implementation": "IMPLEMENTED",
-  "acceptance": "PARTIAL",
-  "sourceCommit": "639144a36ff89745cc214c53045be39399ddd31d",
-  "sourceDigest": "14ee6a290104e1a423e29cbeb2d089b4e22d06090fbcd14e9ebd7aac61bbb789",
+  "acceptance": "PASS_NATIVE_SIMULATOR_SCOPE",
+  "fullProduct": "PARTIAL",
+  "source": {
+    "sourceCommit": "5e4f9700468e045bac40e631f5ab018a5f8e6ad7",
+    "sourceDigest": "17a84537c126d9a4f3d46edf34d87b13abf87bb6beb39ae2d1219c4db5844434",
+    "projectSettingsSha256": "b8a690cbe44deea983180bc8f1a8028ce6c42c9cf8d0b570ff0a06930d4747b3"
+  },
+  "appDigest": "6b6bf393383b96cc2b605c724287446f61c9d7d8c57281f35d975cb8b77363d6",
+  "bundleVersion": "0.1.0",
+  "bundleBuild": "9",
   "verification": {
-    "editorPassed": 83,
-    "playModePassed": 15,
-    "developerPhases": 3,
-    "developerChecks": 361,
+    "editorPassed": 84,
+    "currentDeveloperPlayModePassed": 1,
     "pythonPassed": 12,
-    "fontGlyphs": 723,
-    "requirements": 13,
-    "tasks": 15
+    "nativeDevices": [
+      {
+        "status": "PASS_NATIVE_DEVELOPER_THREE_PROCESSES",
+        "device": "phone",
+        "source": {
+          "sourceCommit": "5e4f9700468e045bac40e631f5ab018a5f8e6ad7",
+          "sourceDigest": "17a84537c126d9a4f3d46edf34d87b13abf87bb6beb39ae2d1219c4db5844434",
+          "projectSettingsSha256": "b8a690cbe44deea983180bc8f1a8028ce6c42c9cf8d0b570ff0a06930d4747b3"
+        },
+        "appDigest": "6b6bf393383b96cc2b605c724287446f61c9d7d8c57281f35d975cb8b77363d6",
+        "phases": [
+          {
+            "phase": "enable",
+            "status": "PASS",
+            "checks": 266,
+            "failures": [],
+            "captures": 26,
+            "pngFiles": 26,
+            "points": 0,
+            "catches": 0
+          },
+          {
+            "phase": "disable",
+            "status": "PASS",
+            "checks": 66,
+            "failures": [],
+            "captures": 8,
+            "pngFiles": 8,
+            "points": 0,
+            "catches": 0
+          },
+          {
+            "phase": "normal-restart",
+            "status": "PASS",
+            "checks": 44,
+            "failures": [],
+            "captures": 6,
+            "pngFiles": 6,
+            "points": 0,
+            "catches": 0
+          }
+        ],
+        "normalPrimaryAndBackupByteIdentical": true,
+        "normalPoints": 0,
+        "testPoints": 210,
+        "testCatches": 1,
+        "testObservations": 3,
+        "newFishId": "yellowfin",
+        "finalDeveloperSelected": false,
+        "scope": "Owned Simulator real UI and external process restarts, fresh isolated test save and explicit write-failure fixture; not OS touch, physical, child or final art qualification"
+      },
+      {
+        "status": "PASS_NATIVE_DEVELOPER_THREE_PROCESSES",
+        "device": "tablet",
+        "source": {
+          "sourceCommit": "5e4f9700468e045bac40e631f5ab018a5f8e6ad7",
+          "sourceDigest": "17a84537c126d9a4f3d46edf34d87b13abf87bb6beb39ae2d1219c4db5844434",
+          "projectSettingsSha256": "b8a690cbe44deea983180bc8f1a8028ce6c42c9cf8d0b570ff0a06930d4747b3"
+        },
+        "appDigest": "6b6bf393383b96cc2b605c724287446f61c9d7d8c57281f35d975cb8b77363d6",
+        "phases": [
+          {
+            "phase": "enable",
+            "status": "PASS",
+            "checks": 266,
+            "failures": [],
+            "captures": 26,
+            "pngFiles": 26,
+            "points": 0,
+            "catches": 0
+          },
+          {
+            "phase": "disable",
+            "status": "PASS",
+            "checks": 66,
+            "failures": [],
+            "captures": 8,
+            "pngFiles": 8,
+            "points": 0,
+            "catches": 0
+          },
+          {
+            "phase": "normal-restart",
+            "status": "PASS",
+            "checks": 44,
+            "failures": [],
+            "captures": 6,
+            "pngFiles": 6,
+            "points": 0,
+            "catches": 0
+          }
+        ],
+        "normalPrimaryAndBackupByteIdentical": true,
+        "normalPoints": 0,
+        "testPoints": 200,
+        "testCatches": 1,
+        "testObservations": 3,
+        "newFishId": "mahi",
+        "finalDeveloperSelected": false,
+        "scope": "Owned Simulator real UI and external process restarts, fresh isolated test save and explicit write-failure fixture; not OS touch, physical, child or final art qualification"
+      }
+    ],
+    "nativeScreenshots": 80,
+    "contactSheetsReviewed": 8,
+    "fullSizeReviewed": 6,
+    "normalFilesByteIdentical": 222,
+    "normalPrimaryFiles": 112,
+    "criticalFailureNoticeVisibleWithoutScrolling": true
   },
   "developer": {
     "zeroPointHabitats": 3,
     "zeroPointGear": 20,
     "fullJournalModels": 12,
     "observations": 3,
-    "realTestCatches": 1,
-    "realTestPoints": 284,
-    "normalPrimaryAndBackupByteIdentical": true,
-    "sceneReload": true,
-    "externalProcessRestart": "NOT_RUN"
+    "separateProgress": true,
+    "persistentSelection": true,
+    "noAdditionalGameplayHUD": true
   },
-  "native": {
-    "status": "BLOCKED",
-    "cause": "OFFICIAL_STORAGE_GUARD_REFUSED_LOW_SPACE",
-    "unityExport": "PASS",
-    "originalExportDigest": "73e761f25a92a3349863411a91ee8aa30490b59a3bf2917884a2236f947826fc",
-    "preparedVariantDigest": "4edfb8ea208a200d681a984498d31f758a4ee9daa041f032dda696ff79ed9365",
-    "compilerStarted": false,
-    "newAppBuilt": false,
-    "freeBeforeBytes": 121050984448,
-    "requestedReservationBytes": 2147483648,
-    "hardFloorBytes": 128849018880,
-    "otherReservedBytes": 0,
-    "minimumFreeBytes": 130996502528,
-    "shortfallBytes": 9945518080,
-    "guardReceipt": "run-25c71b72db52488ca0c553ae5bd2f558"
+  "storage": {
+    "testExportRun": "run-e6d631f851cd49e792e2592296b8dfc8",
+    "firstNativeExit": 65,
+    "resumedNativeInstallEvidenceRun": "run-306d2c972d5c4d399b321c7df00a7acb",
+    "wholePipelineReservationGiB": 12,
+    "stableExportAndCacheReused": true,
+    "previousCompleteRawExportAndAppVerified": true,
+    "scopeCorrection": "Logical pipeline spans two protected executions. First contained tests, retention, export and failed compile; second resumed compile, dual installation, snapshots and receipts. The second private receipt boilerplate scope is broader than that single execution.",
+    "releaseRun": "run-cfedb7e56c7a4bbb820ab218dee9de84",
+    "releaseReservationGiB": 26
+  },
+  "failures": {
+    "initialLowSpaceRetained": true,
+    "appendDuplicatePhaseRetained": true,
+    "appendGeneratedOnlyFix": "Remove one identical repeated GameAssembly ShellScript reference; preserve every distinct phase and all game source",
+    "phoneOldFailureFooter": "Actual phone image clipped notice; headless 640x480 probe passed, therefore that probe is not claimed as a reproducing red test",
+    "initialAdapterIntegerArgumentRejected": true
   },
   "distribution": {
-    "personalPhone": "NOT_UPDATED",
-    "testFlight": "NOT_UPDATED",
-    "currentSourceInstalled": "NOT_RUN"
+    "testFlight": "INTERNAL_GROUP_READY_0.1.0_9",
+    "appleProcessing": "VALID",
+    "internalBuildState": "IN_BETA_TESTING",
+    "buildAudienceType": "INTERNAL_ONLY",
+    "approvedAccountCount": 2,
+    "arthurTesterState": "INVITED",
+    "actualTestFlightInstallation": "NOT_RUN",
+    "personalPhone": "NOT_TOUCHED"
   },
-  "records": {
-    "ended": 33,
-    "failedOrBlockedRetained": 7,
-    "oldObjectsUnchanged": true,
-    "historicalOverall": "INCOMPLETE"
+  "historicalInitialIncrement": {
+    "implementation": "IMPLEMENTED",
+    "acceptance": "PARTIAL",
+    "sourceCommit": "639144a36ff89745cc214c53045be39399ddd31d",
+    "sourceDigest": "14ee6a290104e1a423e29cbeb2d089b4e22d06090fbcd14e9ebd7aac61bbb789",
+    "verification": {
+      "editorPassed": 83,
+      "playModePassed": 15,
+      "developerPhases": 3,
+      "developerChecks": 361,
+      "pythonPassed": 12,
+      "fontGlyphs": 723,
+      "requirements": 13,
+      "tasks": 15
+    },
+    "developer": {
+      "zeroPointHabitats": 3,
+      "zeroPointGear": 20,
+      "fullJournalModels": 12,
+      "observations": 3,
+      "realTestCatches": 1,
+      "realTestPoints": 284,
+      "normalPrimaryAndBackupByteIdentical": true,
+      "sceneReload": true,
+      "externalProcessRestart": "NOT_RUN"
+    },
+    "native": {
+      "status": "BLOCKED",
+      "cause": "OFFICIAL_STORAGE_GUARD_REFUSED_LOW_SPACE",
+      "unityExport": "PASS",
+      "originalExportDigest": "73e761f25a92a3349863411a91ee8aa30490b59a3bf2917884a2236f947826fc",
+      "preparedVariantDigest": "4edfb8ea208a200d681a984498d31f758a4ee9daa041f032dda696ff79ed9365",
+      "compilerStarted": false,
+      "newAppBuilt": false,
+      "freeBeforeBytes": 121050984448,
+      "requestedReservationBytes": 2147483648,
+      "hardFloorBytes": 128849018880,
+      "otherReservedBytes": 0,
+      "minimumFreeBytes": 130996502528,
+      "shortfallBytes": 9945518080,
+      "guardReceipt": "run-25c71b72db52488ca0c553ae5bd2f558"
+    },
+    "distribution": {
+      "personalPhone": "NOT_UPDATED",
+      "testFlight": "NOT_UPDATED",
+      "currentSourceInstalled": "NOT_RUN"
+    },
+    "records": {
+      "ended": 33,
+      "failedOrBlockedRetained": 7,
+      "oldObjectsUnchanged": true,
+      "historicalOverall": "INCOMPLETE"
+    },
+    "scope": "Current source rule/headless UI verification and genuine write-failure fixture; no current native images, external-process, physical, child or final-art acceptance"
   },
-  "scope": "Current source rule/headless UI verification and genuine write-failure fixture; no current native images, external-process, physical, child or final-art acceptance"
+  "scope": "Current owned iPhone/iPad Simulator native EventSystem UI and external process launches in isolated synthetic saves; not OS touch, physical, child, final-art or full-product acceptance"
 }

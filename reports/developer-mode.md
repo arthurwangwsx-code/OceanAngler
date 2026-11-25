@@ -1,30 +1,39 @@
 # 本人开发者模式：实现与验收
 
-开发者模式已实现，规则和headless页面流程PASS；新原生模拟器包BLOCKED，完整产品PARTIAL。入口为首页／暂停 → 设置 → 家长区与隐私 → 家长验证 → 开发者模式 → 开启并确认。普通发布构建也能使用，不依赖Unity开发构建。
+开发者模式已实现，当前build 9的手机／iPad模拟器功能和页面验收PASS，完整产品仍PARTIAL。入口：首页或暂停 → 设置 → 家长区与隐私 → 家长验证 → 开发者模式 → 开启并确认。普通发布构建同样可用，不依赖Unity开发构建。TestFlight 0.1.0 (9)已VALID／INTERNAL_ONLY／IN_BETA_TESTING，已分配本人授权两账号内部组；指定邮箱仍INVITED，实际安装NOT_RUN。
 
-开启后零积分即可选择三海域、全部二十钓具、三个保护观察，并查看十二鱼种完整模型；正常的发现计数、任务、钓鱼和积分结算保持真实，不注入完成记录。测试进度单独保存，关闭恢复正常进度，重新开启恢复测试历史；切换有独立确认并回准备保持暂停，游玩不新增模式HUD。
+零积分即可选择三海域、全部二十钓具和三个保护观察，并查看十二鱼种图鉴模型；钓鱼、发现计数、任务及积分结算保持真实，不注入完成记录。正常／测试进度独立保存，关闭恢复原正常进度和门槛，再开启恢复测试历史，重启保持上次选择。切换成功后回准备并保持暂停；取消或写入失败保持当前模式。没有新增游玩常驻HUD。
 
-| 本轮范围 | 结果 |
+| 当前冻结范围 | 实际结果 |
 | --- | --- |
-| 完整Editor | 83通过，含6项新增规则／存档测试 |
-| 新增三阶段PlayMode | 1项通过、361检查，零积分全内容／场景重新加载／取消／失败／关闭／再开启 |
-| 现有页面、钓组、观察和世界PlayMode回归 | 14通过 |
-| 工具链单元测试 | 12通过，合成数据与mock，无真实邀请或上传 |
-| 普通文件保护 | 新测试根的正常主文件和备份逐字节保持 |
-| 测试记录 | 真实放流1条284分、3观察；第二条未记录鱼获仅在切换成功后取消 |
-| 静态追踪、字体、公开许可扫描 | PASS；13需求、15任务，723字形覆盖 |
-| iOS模拟器Unity工程导出 | PASS；项目设置还原且游戏摘要不变 |
-| 原生编译、新进程、双端画面与安装 | BLOCKED／NOT_RUN；没有生成新App |
-| 个人手机／TestFlight | 未更新，不含本轮功能 |
+| Editor规则、资产与存档 | 84通过 |
+| 本轮DeveloperMode PlayMode | 1通过，包含三阶段页面及场景重载 |
+| 发布保护工具 | 12通过，合成数据／mock，无真实邀请 |
+| 同一个ARM64 Simulator App | 两端各3个外部启动进程、376检查、40帧，全部PASS |
+| 零积分实际入口 | 3海域／20钓具／12鱼种模型／3保护观察逐项访问 |
+| 独立真实玩法 | 手机黄鳍金枪鱼210分、iPad鬼头刀200分，各1条真实放流和3观察 |
+| 正常进度保护 | 222份已有进度文件逐字节一致，含112份正常主存档；新隔离根正常主文件／备份也保持 |
+| 页面实际图审 | 80张原生截图由8张总览覆盖，另审阅6张原尺寸图；确认操作及失败提示无需滚动 |
+| TestFlight／个人手机 | build 9已处理并加入本人两账号组，指定邮箱INVITED；未操作实体iPhone，实际安装NOT_RUN |
 
-冻结源码`639144a36ff89745cc214c53045be39399ddd31d`，游戏摘要`14ee6a290104e1a423e29cbeb2d089b4e22d06090fbcd14e9ebd7aac61bbb789`。原始Unity导出摘要`73e761f25a92a3349863411a91ee8aa30490b59a3bf2917884a2236f947826fc`；准备g0／两编译worker的模拟器专用原生变体摘要`4edfb8ea208a200d681a984498d31f758a4ee9daa041f032dda696ff79ed9365`。编译尚未开始，不能把上轮96568e87原生App的通过结果算给当前源码。
+冻结源码`5e4f9700468e045bac40e631f5ab018a5f8e6ad7`，来源摘要`17a84537c126d9a4f3d46edf34d87b13abf87bb6beb39ae2d1219c4db5844434`，App摘要`6b6bf393383b96cc2b605c724287446f61c9d7d8c57281f35d975cb8b77363d6`。本地Simulator使用0.1.0(9)，不是Apple发行包或真机安装证明。正式签名包来源、归档和IPA另行冻结。
 
-本机正式构建保护回执为REFUSED_LOW_SPACE：可用121050984448字节，预留2 GiB、其他预留0，要求编译后至少120 GiB。因此需要可用至少122 GiB，当时缺9945518080字节（约9.26 GiB）。保留拒绝回执、导出工程、源码和原App；没有改共享门槛、缩小2 GiB估算或清理其他项目。仅整理本项目十份过期DerivedData压缩包中的可重建编译条目，保留所有App内容/日志并逐字节校验，新增退役记录明确旧压缩包摘要已被替代；两份旧Unity导出完整压缩、实际解压并验证字节/模式/链接后删除原生成目录。原TestFlight8、源码、媒体与设备存档保留。空间再次满足后，按冻结来源继续原生编译和双端三进程验证。
+模拟器B轮834dffc已通过双端三进程，各40帧、374检查，测试积分241／254，214份已有文件保持；C轮在此基础上整理手机确认页并新增失败提示可见检查，以上表格是当前C轮结果，不能把两轮截图或检查数混合相加。B轮实图显示失败提示落在手机视口下方；640×480的headless探针实际通过，不能声称它复现了手机裁切。当前确认页缩至304点，说明／错误共享可见区域、两个54点操作并列；实际两端画面与安全区检查均通过。
 
-首次PlayMode脚本没有在Bite后等待实际UI重建，查找提竿失败；加入两帧等待后通过，失败保留。新增模式关闭失败夹具仅在隔离根建立.tmp目录，真实存档写入失败后当前模式、文件及暂停鱼获保持；移除夹具后正常关闭。场景重载证明控制器启动选择，不是外部新进程或真实设备证明。
+初始639144a的原生编译因120 GiB硬底线被拒绝，拒绝及历史导出仍保留；该阻塞已被后续B/C原生成功取代。新C流水线首次原生编译退出65：Unity追加导出在GameAssembly中重复登记同一脚本引用。保留失败后，仅删除生成工程中一个完全相同的重复引用，再用同一缓存成功编译。没有删除不同脚本或修改游戏逻辑；原生g0／两worker配置沿用。共享适配器首次以12.0传入只接受整数的CLI时被参数解析拒绝，改为整数后准入，没有降低12 GiB预算或120 GiB底线。
 
-本轮还保留鳃盖后缘候选D：三LOD24028/9728/3948面，源243检查／210采样通过；九PNG、12骨七动作及16670个局部外面记录保持。真实Unity导入与图鉴包络重烘完成，但鳃部连续GPU、当前原生、美术/科学/用户及A1–A3仍开放。见[鳃缘方案](../docs/44-bluefin-opercular-rim.md)。所有模型继续标注prototype，完整拟真与儿童／真机验收不因本功能通过。
+完整测试／留存／导出／失败编译受`run-e6d631f851cd49e792e2592296b8dfc8`保护；恢复编译／双端安装／进度核对／截图和收据受`run-306d2c972d5c4d399b321c7df00a7acb`保护，均申报12 GiB。第二份私有流水线回执中的scope沿用了整条逻辑流水线描述；它并没有在第二租约内重跑第一段测试。复用同SDK／配置的导出和DerivedData，覆盖旧路径前已完整核验保存上一生成工程与App。详见[本机构建与缓存](../docs/46-local-build-storage.md)。
 
-[模式设计](../docs/45-developer-mode.md) · [Editor回执](../ispec/changes/product-technical-foundation/measurements/developer-mode-editor-full.json) · [PlayMode回执](../ispec/changes/product-technical-foundation/measurements/developer-mode-play-b.json) · [回归](../ispec/changes/product-technical-foundation/measurements/developer-mode-play-regression.json) · [Unity导出](../ispec/changes/product-technical-foundation/measurements/developer-mode-simulator-export-a.json) · [原生阻塞](../ispec/changes/product-technical-foundation/measurements/developer-mode-native-build-a.json)。完整产品、原任务和apply保持未完成，独立历史审计仍INCOMPLETE。
+本轮也修复蓝鳍鲹FBX更新后prefab子材质错序导致的全黑虹膜／蓝色嘴缘，源几何／贴图／动作保持；相关84 Editor及早一冻结4项世界／动画／图鉴Play回归、126离散GPU视角和252张首／重图分别保留。[实际材质修复范围](bluefin-gill-import.md)不是自然连续游动、科学审阅或最终美术通过。
 
-This increment has 33 ended measurements; all 7 failed or blocked records are retained. Historical objects, receipt hashes, attempt bindings and new serial intervals pass the local integrity check; its own terminal receipt is also confirmed. Formal historical audit remains INCOMPLETE. See [record integrity](developer-mode-records.json).
+![手机确认操作位于同一视口](../art/previews/developer-mode/phone-enable-confirmation.png)
+
+![手机真实保存失败提示仍在视口中](../art/previews/developer-mode/phone-write-failure.png)
+
+![iPad游玩保留边缘操作，不增加模式面板](../art/previews/developer-mode/tablet-playing.png)
+
+[模式设计](../docs/45-developer-mode.md) · [完整当前小型回执](developer-mode.json) · [本人build 9说明](../docs/47-beta9-review.md) · [初始33条测量完整性](developer-mode-records.json)。最后一项只覆盖初始增量，独立历史审计仍INCOMPLETE。失败、旧阻塞和每轮来源均保留；完整产品、原美术／儿童／真机任务及apply不标记完成。所有模型仍prototype，其他成品物种／钓具、最终拟真、美术／科学／用户、儿童、OS触控和双真机20分钟继续开放。
+
+2026-11-25发行完成：同一5e4f970来源已冻结正式iOS工程、验证签名归档与内部专用IPA，单次上传后Apple返回VALID／INTERNAL_ONLY／IN_BETA_TESTING；仅本人授权两账号组，指定邮箱仍INVITED，测试说明已核对。实际TestFlight安装、真实触控和双真机仍NOT_RUN；[独立发行回执](testflight-0.1.0-9.json)。
+
+本后续增量52条测量已结束，5条失败保留；[局部完整性检查](developer-mode-native-records.json)在自身开始时截取了前51条，末条自身回执现已确认exit 0。旧1685对象／回执摘要保持，新回执、绑定及新结束区间的串行顺序通过；不修补旧缺失证据，正式历史审计继续INCOMPLETE。收尾读数190.81 GB，200 GB日常工作目标尚未达到；共享120 GiB硬底线与全部活跃预算保持，未扩大清理范围。

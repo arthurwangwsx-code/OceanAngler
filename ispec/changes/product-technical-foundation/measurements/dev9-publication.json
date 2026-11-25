@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "7a7b0482-23d5-4b18-bdff-34b9ba5cbe82",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "fe36dc3d712c91b5e90b443d3b5299949aa8d2349d4b5c6d750983ada18faaf1",
+    "category": "lint",
+    "executable": "python3",
+    "startedAt": "2026-11-25T14:13:20.097Z",
+    "finishedAt": "2026-11-25T14:13:21.405Z",
+    "durationMs": 1282.803792,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "args": [
+      "tools/publication_audit.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "tools/publication_audit.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T14:13:20.097Z",
+  "finishedAt": "2026-11-25T14:13:21.405Z",
+  "durationMs": 1282.803792
+}

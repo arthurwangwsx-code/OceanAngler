@@ -1,6 +1,6 @@
 # OceanAngler · 海洋小钓手
 
-本人开发者模式已加入：设置／家长区中明确开启后，零积分体验三海域、二十钓具、保护观察和完整图鉴模型；测试存档独立，关闭恢复正常进度，不增加游玩HUD。冻结639144a，83Editor、15PlayMode与12工具测试通过；Unity模拟器工程已导出，原生编译被本机空间门槛阻止，尚无本轮新App、画面或TestFlight。实现与设备验收分开，完整产品仍PARTIAL。见[模式入口与验证](reports/developer-mode.md)。鳃缘候选D仅源／一般导入检查通过，仍非最终美术。
+本人开发者模式已完成双端模拟器验证：首页／暂停→设置→家长区与隐私→验证→开发者模式，明确开启后零积分体验三海域、二十钓具、三保护观察及十二图鉴模型；测试存档独立，关闭恢复正常进度，不增加游玩HUD。冻结5e4f970的build 9同App两端各3进程、376检查／40帧通过，222份旧进度文件字节保持；84 Editor、当前1项模式Play及12工具测试通过，手机确认页和保存失败提示已实际图审。TestFlight 9已处理并加入本人两账号组，指定邮箱INVITED；个人手机未操作；完整拟真／儿童／真机和完整产品仍PARTIAL。见[入口、实际画面与独立验收范围](reports/developer-mode.md)、[build 9测试说明](docs/47-beta9-review.md)、[真实材质绑定修复](reports/bluefin-gill-import.md)。
 
 整体页面优化已完成本地模拟器复核：准备、图鉴列表、3D鉴赏、资料和分组设置分别承载操作，移除重复全局导航/通知及常驻侧栏，保留固定出发、来源返回、图形触控与主动继续。77Editor/14定向Play、79692d8同包双端各40页/装备帧及19游玩帧、每端104个模型帧末样本通过；HUD最高12.228%/4.526%，202份旧进度文件字节保持。首轮平板37处标题裁切失败保留，维持字号修复后最后零失败；319份源美术/模型保持。仅本地Simulator，个人手机/TF未更新；完整拟真、儿童/真实触控及双真机仍未通过。见[前后画面、录屏与验收范围](reports/immersive-pages.md)、[页面方案](docs/43-immersive-pages.md)。连续眼表局部改善见[独立范围](reports/bluefin-continuous-eye.md)，不代替完整拟真验收。
 
@@ -92,9 +92,9 @@
 
 ```sh
 python3 tools/validate.py
-python3 tools/game.py prepare
-python3 tools/game.py tests
-python3 tools/game.py mac
+python3 tools/storage_gate.py --expected-gib 20 -- python3 tools/game.py prepare
+python3 tools/storage_gate.py --expected-gib 20 -- python3 tools/game.py tests
+python3 tools/storage_gate.py --expected-gib 20 -- python3 tools/game.py mac
 ASC_ENV_FILE=/path/to/private/asc.env python3 tools/asc.py status
 ```
 

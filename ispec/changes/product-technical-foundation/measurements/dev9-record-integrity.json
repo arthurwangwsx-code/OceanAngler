@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "c8cd1901-7baa-4210-b226-a859f4cc9e80",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "8cd95e02fafa2b93c1689854808a82c4916bd418096d1c574c7711eb84d3d1b9",
+    "category": "lint",
+    "executable": "python3",
+    "startedAt": "2026-11-25T14:27:15.861Z",
+    "finishedAt": "2026-11-25T14:27:16.086Z",
+    "durationMs": 145.83100000000002,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "args": [
+      "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b/.local/dev9-qa/audit-records.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b/.local/dev9-qa/audit-records.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T14:27:15.861Z",
+  "finishedAt": "2026-11-25T14:27:16.086Z",
+  "durationMs": 145.83100000000002
+}

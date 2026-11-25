@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "e7ce3173-38f4-4d51-8087-6c67e530fb7c",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "43ead4d4cf1e3e13879187dacf1e008fc697dd9081a0dede1c8cef49c9b5ae0d",
+    "category": "e2e",
+    "executable": "python3",
+    "startedAt": "2026-11-25T13:32:39.322Z",
+    "finishedAt": "2026-11-25T13:32:39.505Z",
+    "durationMs": 159.97216699999996,
+    "exitCode": 1,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/bluefin-gill-gpu-qa/apple-release-preflight.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/bluefin-gill-gpu-qa/apple-release-preflight.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 1,
+  "startedAt": "2026-11-25T13:32:39.322Z",
+  "finishedAt": "2026-11-25T13:32:39.505Z",
+  "durationMs": 159.97216699999996
+}
