@@ -8,7 +8,7 @@ namespace OceanAngler
         string observationId;
         Text observationStatus,observationPlayback;Button observationRecord;
         public bool InspectingObservation=>page=="观察生物";
-        public bool ObservationJournal=>page=="保护观察"||InspectingObservation;
+        public bool ObservationJournal=>page=="保护观察"||page=="观察资料"||InspectingObservation;
         public string ObservingSpecies=>InspectingObservation?observationId:null;
         void ObservationEntry(RectTransform parent,float top)
         {
@@ -36,21 +36,23 @@ namespace OceanAngler
         }
         void BuildObservationVisit()
         {
-            var species=game.Content.Observation(observationId);float width=Mathf.Min(340,Width*.44f);
-            var panel=Box(pageRoot,"ObservationDetails",Panel,new Vector2(1,0),Vector2.one,new Vector2(-width-12,36),new Vector2(-12,Compact?-102:-156));
-            var viewport=Box(panel,"ObservationViewport",Color.clear,Vector2.zero,Vector2.one,new Vector2(0,148),Vector2.zero);viewport.gameObject.AddComponent<RectMask2D>();
+            float width=Mathf.Min(620,Width-24),cell=(width-12)/3,left=(Width-width)/2,top=Height-78;
+            var playback=IconButton(pageRoot,"安静观察",TouchSymbol.Kind.Play,left,top,cell,66,()=>game.GetComponent<OceanWorld>().Observations.Toggle(),32);observationPlayback=playback.GetComponentInChildren<Text>();
+            observationRecord=IconButton(pageRoot,"记入观察图鉴",TouchSymbol.Kind.Book,left+cell+6,top,cell,66,game.RecordObservation,32);
+            IconButton(pageRoot,"认识它",TouchSymbol.Kind.Fish,left+2*(cell+6),top,cell,66,()=>Navigate("观察资料"),32);
+            observationStatus=Label(pageRoot,"",17,Color.white,(Width-width)/2,Height-112,width,28);
+            var outline=observationStatus.gameObject.AddComponent<Outline>();outline.effectColor=Navy;outline.effectDistance=new Vector2(1,-1);
+        }
+        void BuildObservationReading()
+        {
+            var species=game.Content.Observation(observationId);var panel=BodyPanel("ObservationReading");
+            var viewport=Box(panel,"ObservationViewport",Color.clear,Vector2.zero,Vector2.one,new Vector2(0,30),Vector2.zero);viewport.gameObject.AddComponent<RectMask2D>();
             var content=new GameObject("ObservationContent",typeof(RectTransform)).GetComponent<RectTransform>();content.SetParent(viewport,false);content.anchorMin=new Vector2(0,1);content.anchorMax=Vector2.one;content.pivot=new Vector2(.5f,1);content.sizeDelta=Vector2.zero;
-            var layout=content.gameObject.AddComponent<VerticalLayoutGroup>();layout.padding=new RectOffset(14,14,10,10);layout.spacing=10;layout.childControlWidth=layout.childControlHeight=true;layout.childForceExpandWidth=layout.childForceExpandHeight=false;
+            var layout=content.gameObject.AddComponent<VerticalLayoutGroup>();layout.padding=new RectOffset(18,18,14,14);layout.spacing=12;layout.childControlWidth=layout.childControlHeight=true;layout.childForceExpandWidth=layout.childForceExpandHeight=false;
             content.gameObject.AddComponent<ContentSizeFitter>().verticalFit=ContentSizeFitter.FitMode.PreferredSize;
             var scroll=viewport.gameObject.AddComponent<ScrollRect>();scroll.viewport=viewport;scroll.content=content;scroll.horizontal=false;scroll.movementType=ScrollRect.MovementType.Clamped;
             Add("ObservationName",species.name,24,Color.white);Add("ObservationScientific",species.scientificName,18,Muted);Add("ObservationRecognition",species.recognition,18,Color.white);Add("ObservationHabitat",species.naturalHabitat,18,Muted);Add("ObservationCare",species.note+" 游戏海域是想象的探索安排。",17,Muted);
-            // Bottom anchored controls stay reachable while the facts scroll.
-            var controls=At(panel,"ObservationControls",Panel,0,0,0,148,true);
-            var playback=Button(controls,"安静观察",12,4,-24,44,()=>game.GetComponent<OceanWorld>().Observations.Toggle(),Navy);observationPlayback=playback.GetComponentInChildren<Text>();observationPlayback.fontSize=18;
-            observationStatus=Label(controls,"",17,Muted,12,50,-24,42);
-            observationRecord=Button(controls,"记入观察图鉴",12,98,-24,44,game.RecordObservation,Teal);observationRecord.GetComponentInChildren<Text>().fontSize=18;
-            // Wide navigation ends at 142 points; keep the visit exit below it.
-            Button(pageRoot,"返回观察图鉴",12,Compact?102:150,180,44,()=>Navigate("保护观察"),Navy).GetComponentInChildren<Text>().fontSize=18;
+            Label(panel,"上下滑动查看详情",17,Muted,18,Height-PageTop-42,-36,26);
             void Add(string name,string text,int size,Color color){var label=Label(content,text,size,color,0,0,0,80);label.name=name;label.gameObject.AddComponent<LayoutElement>().minHeight=size*1.5f;}
         }
         void UpdateObservationUI()

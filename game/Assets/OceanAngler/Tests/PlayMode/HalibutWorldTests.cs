@@ -20,7 +20,8 @@ namespace OceanAngler.Tests
         Scene scene;GameController game;string root,archive;readonly Dictionary<string,string> originals=new Dictionary<string,string>();
         IEnumerator Tap(string text)
         {
-            var button=UnityEngine.Object.FindObjectsByType<Button>(FindObjectsSortMode.None).Single(b=>b.isActiveAndEnabled&&b.interactable&&b.GetComponentInChildren<Text>()?.text==text);
+            yield return UnityEngine.Object.FindFirstObjectByType<RuntimeSmoke>().ResolveControlForReview(text,true);
+            var button=UnityEngine.Object.FindFirstObjectByType<RuntimeSmoke>().FindForReview(text,true);
             var data=new PointerEventData(EventSystem.current){button=PointerEventData.InputButton.Left};ExecuteEvents.Execute(button.gameObject,data,ExecuteEvents.pointerClickHandler);yield return null;yield return null;
         }
         [UnityTearDown] public IEnumerator Cleanup()

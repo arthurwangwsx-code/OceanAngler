@@ -43,6 +43,7 @@ namespace OceanAngler
                 yield return JourneyClick(fish.name,true);yield return null;yield return null;
                 var ui=GetComponent<GameUI>();
                 JourneyRequire(ui.FocusedFish==fish.id,"content-journal-focused-"+fish.id);
+                yield return JourneyClick("认识它",true);yield return null;yield return null;
                 var texts=FindObjectsByType<Text>(FindObjectsSortMode.None);
                 JourneyRequire(texts.Any(t=>t.name=="CatchSummary"&&t.text.StartsWith("我的记录")),"content-journal-record-"+fish.id);
                 JourneyRequire(texts.Any(t=>t.name=="ScientificName"&&t.text==fish.scientificName),"content-journal-identity-"+fish.id);

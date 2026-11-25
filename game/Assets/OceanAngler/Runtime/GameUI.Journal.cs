@@ -48,10 +48,11 @@ namespace OceanAngler
         }
         void BuildJournalControls(float left,float top,float available)
         {
-            string[] names={"旋转","放大","缩小",ModelPaused?"游动":"静止","重置"};
-            Action[] actions={()=>ModelYaw+=30,()=>ModelZoom=Mathf.Min(1.5f,ModelZoom+.15f),()=>ModelZoom=Mathf.Max(.7f,ModelZoom-.15f),()=>{ModelPaused=!ModelPaused;dirty=true;},()=>{ModelYaw=0;ModelZoom=1;ModelPaused=false;dirty=true;}};
-            float width=(available-24)/5;
-            for(int i=0;i<names.Length;i++)Button(pageRoot,names[i],left+i*(width+6),top,width,44,actions[i],Navy).GetComponentInChildren<Text>().fontSize=17;
+            string[] names={"旋转","放大","缩小",ModelPaused?"游动":"静止","重置","认识它"};
+            TouchSymbol.Kind[] icons={TouchSymbol.Kind.Rotate,TouchSymbol.Kind.ZoomIn,TouchSymbol.Kind.ZoomOut,ModelPaused?TouchSymbol.Kind.Play:TouchSymbol.Kind.Pause,TouchSymbol.Kind.Reset,TouchSymbol.Kind.Book};
+            Action[] actions={()=>ModelYaw+=30,()=>ModelZoom=Mathf.Min(1.5f,ModelZoom+.15f),()=>ModelZoom=Mathf.Max(.7f,ModelZoom-.15f),()=>{ModelPaused=!ModelPaused;dirty=true;},()=>{ModelYaw=0;ModelZoom=1;ModelPaused=false;dirty=true;},()=>Navigate("鱼类资料")};
+            float width=(available-30)/6;
+            for(int i=0;i<names.Length;i++)IconButton(pageRoot,names[i],icons[i],left+i*(width+6),top,width,66,actions[i],32);
         }
     }
 }

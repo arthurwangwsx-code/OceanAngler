@@ -6,31 +6,39 @@ namespace OceanAngler
 {
     public sealed partial class GameUI
     {
+        float PageWidth=>Mathf.Min(960,Width-24);
+        float PageTop=>Compact?56:80;
+        bool ModelPage=>page=="鱼类详情"||InspectingGear||InspectingHabitat||InspectingObservation;
         void BuildChrome()
         {
-            var header=At(pageRoot,"Header",Navy,0,0,0,Compact?44:80);
-            IconButton(header,"上一级",TouchSymbol.Kind.Back,8,0,92,Compact?44:70,GoBack,32);
-            Label(header,page=="准备"?"出海准备":page=="海湾观察"?"海域观察":page,Compact?20:30,Color.white,100,Compact?6:14,260,Compact?32:46);
-            pointsText=Label(header,game.Progress.RequiresRecovery?"存档需要恢复":"研究积分  "+game.Progress.Data.totalPoints,Compact?17:22,Gold,Compact?-260:-310,Compact?9:22,Compact?145:280,Compact?28:36,true);
-            if(!game.Progress.RequiresRecovery)IconButton(header,"菜单",TouchSymbol.Kind.Home,-78,0,72,Compact?44:70,()=>Navigate("首页"),32);
-            var nav=At(pageRoot,"Navigation",Navy,0,Compact?44:82,0,Compact?52:60);
-            string[] names={"出海","图鉴","钓具","任务","设置"};float navWidth=Compact?(Width-24)/5:145;
-            for(int i=0;i<names.Length;i++)
+            // Destinations live in the menu, not in a second global tab bar.
+            // A model visit keeps its ocean backdrop and one local back route.
+            if(!ModelPage)Box(pageRoot,"PageShade",new Color(.01f,.06f,.1f,.7f),Vector2.zero,Vector2.one,Vector2.zero,Vector2.zero);
+            var header=At(pageRoot,"Header",ModelPage?Color.clear:Navy,0,0,0,Compact?48:70);
+            IconButton(header,"上一级",TouchSymbol.Kind.Back,12,0,92,44,GoBack,28);
+            string title=page=="准备"?"出海准备":page=="海湾观察"?"海域观察":page=="鱼类详情"?game.Content.Fish(selectedFish??game.Content.fish[0].id).name:page=="观察生物"?game.Content.Observation(observationId).name:page;
+            var heading=Label(header,title,Compact?21:26,Color.white,112,Compact?8:14,-224,36);
+            if(ModelPage){var outline=heading.gameObject.AddComponent<Outline>();outline.effectColor=Navy;outline.effectDistance=new Vector2(1,-1);}
+            if(!game.Progress.RequiresRecovery&&!ModelPage)IconButton(header,"菜单",TouchSymbol.Kind.Home,-84,0,72,44,()=>Navigate("首页"),28);
+            // Gear feedback belongs to its own page. Other pages do not inherit
+            // stale equipment notices or a permanent banner over the world.
+            if(page=="钓具")
             {
-                string target=names[i];var b=Button(nav,target,(Compact?12:16)+i*navWidth,Compact?4:7,navWidth-8,Compact?44:46,()=>Navigate(target),page==target||(page=="鱼类详情"||ObservationJournal)&&target=="图鉴"||InspectingGear&&target=="钓具"||InspectingHabitat&&target=="出海"?Teal:Panel);b.interactable=!game.Progress.RequiresRecovery;
-                if(Compact)b.GetComponentInChildren<Text>().fontSize=18;
+                var feedback=At(pageRoot,"GearFeedback",Navy,12,0,12,38,true);
+                noticeText=Label(feedback,"",17,Muted,12,6,-24,28);
             }
-            var footer=At(pageRoot,"Footer",Navy,0,0,0,Compact?30:58,true);
-            noticeText=Label(footer,"",Compact?17:19,Muted,Compact?12:24,Compact?2:12,-(Compact?24:48),Compact?28:35);
         }
         RectTransform BodyPanel(string name)
         {
-            return Box(pageRoot,name,Panel,Vector2.zero,Vector2.one,new Vector2(12,36),new Vector2(-12,-102));
+            float bottom=page=="钓具"?44:12;
+            return FixedBox(pageRoot,name,Panel,(Width-PageWidth)/2,PageTop,PageWidth,Height-PageTop-bottom);
         }
         RectTransform PagePanel(string name,Vector2 min,Vector2 max,float contentHeight)
         {
-            var viewport=Compact?BodyPanel(name):Box(pageRoot,name,Panel,min,max,Vector2.zero,Vector2.zero);
-            float available=Compact?Height-138:Height*(max.y-min.y);if(!Compact&&contentHeight<=available)return viewport;viewport.gameObject.AddComponent<RectMask2D>();
+            var viewport=BodyPanel(name);
+            float available=Height-PageTop-(page=="钓具"?44:12);
+            if(contentHeight<=available)return viewport;
+            viewport.gameObject.AddComponent<RectMask2D>();
             var content=new GameObject("ScrollableContent",typeof(RectTransform)).GetComponent<RectTransform>();content.SetParent(viewport,false);content.anchorMin=new Vector2(0,1);content.anchorMax=new Vector2(1,1);content.pivot=new Vector2(.5f,1);content.sizeDelta=new Vector2(0,contentHeight);
             var scroll=viewport.gameObject.AddComponent<ScrollRect>();scroll.viewport=viewport;scroll.content=content;scroll.horizontal=false;scroll.vertical=true;scroll.movementType=ScrollRect.MovementType.Clamped;
             return content;
@@ -41,7 +49,7 @@ namespace OceanAngler
             for(int i=0;i<game.Content.fish.Length;i++)
             {
                 var f=game.Content.fish[i];bool caught=game.Progress.Data.catches.Any(c=>c.fishId==f.id);
-                Button(parent,(caught?f.name:"未发现 · "+f.name),22+i%columns*cell,top+i/columns*62,cell-12,54,()=>{selectedFish=focusedFish=f.id;if(Compact)page="鱼类详情";dirty=true;},selectedFish==f.id?Teal:Navy).GetComponentInChildren<Text>().fontSize=Compact?18:23;
+                Button(parent,(caught?f.name:"未发现 · "+f.name),22+i%columns*cell,top+i/columns*62,cell-12,54,()=>{selectedFish=focusedFish=f.id;Navigate("鱼类详情");},selectedFish==f.id?Teal:Navy).GetComponentInChildren<Text>().fontSize=Compact?18:23;
             }
         }
         string CompactHint()
@@ -60,19 +68,23 @@ namespace OceanAngler
         }
         void BuildCompactJournal()
         {
-            var content=PagePanel("Journal",Vector2.zero,Vector2.one,550);Label(content,"鱼类图鉴  "+game.Progress.Data.catches.Select(c=>c.fishId).Distinct().Count()+" / 12",22,Color.white,22,12,-44,34);
+            int columns=PageWidth>=760?3:2;
+            var content=PagePanel("Journal",Vector2.zero,Vector2.one,110+Mathf.Ceil(game.Content.fish.Length/(float)columns)*62);
+            Label(content,"鱼类图鉴  "+game.Progress.Data.catches.Select(c=>c.fishId).Distinct().Count()+" / 12",24,Color.white,22,12,-44,36);
             ObservationEntry(content,56);
-            BuildFishCards(content,Width-24,2,110);
+            BuildFishCards(content,PageWidth,columns,110);
         }
         void BuildCompactInspect()
         {
-            var target=game.Content.Fish(selectedFish??game.Content.fish[0].id);
-            Button(pageRoot,"返回图鉴",12,102,140,44,()=>{page="图鉴";dirty=true;},Navy).GetComponentInChildren<Text>().fontSize=18;
-            float width=Mathf.Min(310,Width*.44f);
-            var detail=Box(pageRoot,"Details",Panel,new Vector2(1,0),Vector2.one,new Vector2(-width-12,36),new Vector2(-12,-102));
-            BuildFishDetails(detail,target);
-            BuildJournalControls(12,Height-86,Width-width-42);
-            BuildJournalModelViewport(12,158,Width-width-42,Height-98);
+            var status=Label(pageRoot,"开发版模型 · 还在制作",17,Muted,112,46,-224,28);status.name="ModelStatus";
+            var outline=status.gameObject.AddComponent<Outline>();outline.effectColor=Navy;outline.effectDistance=new Vector2(1,-1);
+            float controls=Mathf.Min(680,Width-24);
+            BuildJournalControls((Width-controls)/2,Height-78,controls);
+            BuildJournalModelViewport(12,80,Width-24,Height-88);
+        }
+        void BuildFishReading()
+        {
+            var panel=BodyPanel("SpeciesReading");BuildFishDetails(panel,game.Content.Fish(selectedFish??game.Content.fish[0].id));
         }
     }
 }

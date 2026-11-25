@@ -57,26 +57,32 @@ namespace OceanAngler
             float depth=Mathf.Max(view.nearClipPlane*4,Vector3.Dot(JournalReferencePosition()-view.transform.position,view.transform.forward));
             if(!journalFitCached||area!=journalLastRect||cameraMatrix!=journalLastCamera||rotation!=journalLastRotation||ui.ModelZoom!=journalLastZoom||Mathf.Abs(depth-journalLastDepth)>.0001f)
             {
-                var center=view.ScreenToWorldPoint(new Vector3(area.center.x,area.center.y,depth));
-                bool Fits(float scale,Quaternion pose)
+                var lower=view.transform.InverseTransformPoint(view.ScreenToWorldPoint(new Vector3(area.xMin,area.yMin,1)));
+                var upper=view.transform.InverseTransformPoint(view.ScreenToWorldPoint(new Vector3(area.xMax,area.yMax,1)));
+                bool Fits(float scale,Quaternion pose,out Vector3 center)
                 {
+                    float minX=float.NegativeInfinity,maxX=float.PositiveInfinity,minY=minX,maxY=maxX;
                     for(int i=0;i<journalBoundsCorners.Length;i++)
                     {
-                        var p=view.WorldToScreenPoint(center+pose*(journalBoundsCorners[i]*scale));
-                        if(p.z<=view.nearClipPlane||p.x<area.xMin||p.x>area.xMax||p.y<area.yMin||p.y>area.yMax)return false;
+                        var q=view.transform.InverseTransformVector(pose*(journalBoundsCorners[i]*scale));float z=depth+q.z;
+                        if(z<=view.nearClipPlane){center=default;return false;}
+                        // Perspective gives an interval for the object's plane
+                        // position at each corner. Intersect all intervals, then
+                        // center within the feasible space instead of pinning a
+                        // 3D bounds center whose projection can be off-center.
+                        minX=Mathf.Max(minX,lower.x/lower.z*z-q.x);maxX=Mathf.Min(maxX,upper.x/upper.z*z-q.x);
+                        minY=Mathf.Max(minY,lower.y/lower.z*z-q.y);maxY=Mathf.Min(maxY,upper.y/upper.z*z-q.y);
                     }
-                    return true;
+                    center=view.transform.TransformPoint(new Vector3((minX+maxX)*.5f,(minY+maxY)*.5f,depth));return minX<=maxX&&minY<=maxY;
                 }
                 float Limit(Quaternion pose)
                 {
-                    float low=0,high=64;for(int i=0;i<22;i++){float middle=(low+high)*.5f;if(Fits(middle,pose))low=middle;else high=middle;}return low;
+                    float low=0,high=64;for(int i=0;i<22;i++){float middle=(low+high)*.5f;if(Fits(middle,pose,out _))low=middle;else high=middle;}return low;
                 }
-                // Rotating to a thin edge must not automatically magnify it
-                // beyond the default front view's physical presentation scale.
-                // Fit the padded envelope itself: it already includes12mm in
-                // each direction and the UI region has4pt padding. An extra
-                // percentage shrink compounds those explicit safety margins.
+                // Preserve the front-view cap and actual sampled animation
+                // envelope, four-point UI padding and all existing size gates.
                 journalFitScale=Mathf.Min(Limit(rotation),Limit(JournalRotation(0)))*ui.ModelZoom/1.5f;
+                if(!Fits(journalFitScale,rotation,out var center))return;
                 journalFitPosition=center-rotation*(journalGeometryBounds.center*journalFitScale);
                 journalLastRect=area;journalLastCamera=cameraMatrix;journalLastRotation=rotation;journalLastZoom=ui.ModelZoom;journalLastDepth=depth;journalFitCached=true;JournalFitCalculations++;
             }

@@ -8,7 +8,7 @@
       "license": "SIL Open Font License 1.1",
       "redistribution": true,
       "status": "LICENSE_VERIFIED",
-      "sha256": "73a008d8ceef6f82ac502338d90de0c7f4e02ab62d2699fab8950a859805a3a0",
+      "sha256": "0978e118b340c676c83d76bb88bcd18d446a88fc49f15bd35d00b792153dae59",
       "path": "game/Assets/OceanAngler/Resources/UIFont.ttf"
     },
     {
@@ -3772,6 +3772,49 @@
         }
       ],
       "note": "Original continuous opaque iris/pupil surface and original pigmentation update; no imported reference pixels, added materials or baked highlight. Existing other mesh/UV/weights/rest/actions independently protected. Finite source/Editor checks do not qualify final art/science/child/physical."
+    },
+    {
+      "id": "bluefin-continuous-eye-source-review",
+      "author": "OceanAngler contributors",
+      "source": "Own saved-source studio images and imported Editor Metal fixture; source afa8fed",
+      "license": "MIT",
+      "redistribution": true,
+      "status": "LOCAL_SOURCE_EYE_IMPROVEMENT_ART_PARTIAL",
+      "artifacts": [
+        {
+          "path": "art/previews/bluefin-continuous-eye/metal-bite-side.png",
+          "sha256": "eb82a2bb798567af243c6ea26c1cf36485378bc274c83c306fad4015dd566a2d"
+        },
+        {
+          "path": "art/previews/bluefin-continuous-eye/metal-idle-eye-opposite.png",
+          "sha256": "d57049392ae843b281ef06177da13a8dcebd7c13fd659b472bada2948115137b"
+        },
+        {
+          "path": "art/previews/bluefin-continuous-eye/metal-idle-eye.png",
+          "sha256": "9416ecb0b83b468091a8ba68c76032ff982c1213a0d5f33d5084ac3c1acd8b3d"
+        },
+        {
+          "path": "art/previews/bluefin-continuous-eye/metal-idle-side.png",
+          "sha256": "4af3e265fa849f8d7c738fc3c72cd86acc0f651561dcf79f2fb87f6a08e86464"
+        },
+        {
+          "path": "art/previews/bluefin-continuous-eye/studio-after-eye-opposite.png",
+          "sha256": "3b35ccf3a6871182861c49c8d39e8ba7a2e42d99882e87d6dbc664845919e854"
+        },
+        {
+          "path": "art/previews/bluefin-continuous-eye/studio-after-eye.png",
+          "sha256": "7c33d2aac43603f18f4611aeb081811aa69e82d396aea0599a896019ba55162a"
+        },
+        {
+          "path": "art/previews/bluefin-continuous-eye/studio-before-eye-opposite.png",
+          "sha256": "f021bd110bc3a5c20e224c2f3cb643e787634271c8a56a68187f474eb1941d4c"
+        },
+        {
+          "path": "art/previews/bluefin-continuous-eye/studio-before-eye.png",
+          "sha256": "02d86958f9b97768b0b8b4a71c5462bf6bb70c4a5b2c7c396b3e6126be48ba15"
+        }
+      ],
+      "note": "Four source before/after close-ups and four selected imported Metal images reviewed. AgX studio and Unity Gamma are separate scopes. Removed raised independent pupil rim; gill stipple, anatomy/fin/material realism, final art/science/user/child and physical device qualification remain open. Not native player screenshots."
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."

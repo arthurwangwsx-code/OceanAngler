@@ -12,14 +12,14 @@ namespace OceanAngler
     {
         [Serializable] sealed class GearCheck { public string id,notice;public float scrollBefore,scrollAfter;public bool selectedVisible,topHitMatches; }
         bool medianFinReview;
-        bool journalFramingReview;
-        public IEnumerator RunGearReview(string outputFolder,bool captureFrames,bool quitProcess=false,bool reviewMedianFins=false,bool reviewJournalFraming=false)
+        bool journalFramingReview;bool pageReview;
+        public IEnumerator RunGearReview(string outputFolder,bool captureFrames,bool quitProcess=false,bool reviewMedianFins=false,bool reviewJournalFraming=false,bool reviewPages=false)
         {
             folder=Path.GetFullPath(outputFolder);Directory.CreateDirectory(folder);
             if(File.Exists(Path.Combine(folder,"receipt.json")))throw new InvalidOperationException("Use a new review folder");
             game=GetComponent<GameController>();began=Time.realtimeSinceStartup;finished=false;journeyMode=gearReviewMode=true;journeyQuit=quitProcess;completeContent=false;medianFinReview=reviewMedianFins;
             receipt=new Receipt{captureEnabled=captureFrames,scope=captureFrames?"native focused gear/model-status UI review from a genuine isolated save copy; not fresh progression or OS touch":"headless focused gear/model-status UI review; logical fixture, no rendered acceptance"};
-            journalFramingReview=reviewJournalFraming;journalFramingSamples.Clear();
+            pageReview=reviewPages;journalFramingReview=reviewJournalFraming;journalFramingSamples.Clear();
             var stack=new Stack<IEnumerator>();stack.Push(GearReview());
             while(stack.Count>0&&!finished)
             {
@@ -39,6 +39,7 @@ namespace OceanAngler
             string saveFile=Path.Combine(Path.GetFullPath(args[index+1]),"ocean-progress.json");
             JourneyRequire(!game.Progress.RequiresRecovery&&game.Session.Phase==FishingPhase.Ready&&game.Content.gear.All(g=>g.unlockPoints<=game.Progress.Data.totalPoints),"gear-valid-save-with-all-equipment-unlocked");
             var before=game.Progress.Data.Clone();
+            if(pageReview){yield return null;yield return null;yield return ReviewDedicatedPages();}
             yield return null;yield return null;yield return JourneyClick("钓具",true);yield return null;yield return null;
             receipt.gearEntryHintPresent=FindObjectsByType<Text>(FindObjectsSortMode.None).Any(t=>t.text=="选择已解锁的钓具，研究积分不会扣除。");
             string[] categories={"rod","reel","line","lure"},labels={"鱼竿","卷线器","鱼线","拟饵"};
@@ -71,9 +72,9 @@ namespace OceanAngler
                 yield return JourneyClick("图鉴",true);yield return null;yield return null;
                 yield return JourneyClick(before.catches.Any(c=>c.fishId==fish.id)?fish.name:"未发现 · "+fish.name,true);yield return null;yield return null;
                 var status=FindObjectsByType<Text>(FindObjectsSortMode.None).SingleOrDefault(t=>t.name=="ModelStatus");
-                JourneyRequire(status!=null&&status.text=="模型还在制作，先看文字认识它。","prototype-status-visible-"+fish.id);
-                var viewport=status.GetComponentInParent<ScrollRect>().viewport;var corners=new Vector3[4];status.rectTransform.GetWorldCorners(corners);
-                JourneyRequire(!status.canvasRenderer.cull&&RectTransformUtility.RectangleContainsScreenPoint(viewport,corners[0])&&RectTransformUtility.RectangleContainsScreenPoint(viewport,corners[2]),"prototype-status-in-viewport-"+fish.id);
+                JourneyRequire(status!=null&&status.text=="开发版模型 · 还在制作","prototype-status-visible-"+fish.id);
+                var corners=new Vector3[4];status.rectTransform.GetWorldCorners(corners);var safe=DisplayMetrics.SafeArea;
+                JourneyRequire(!status.canvasRenderer.cull&&corners[0].x>=safe.xMin&&corners[0].y>=safe.yMin&&corners[2].x<=safe.xMax&&corners[2].y<=safe.yMax,"prototype-status-in-safe-area-"+fish.id);
                 receipt.modelStatuses.Add(fish.id);
                 if(fish.id=="trevally"||fish.id=="halibut")yield return JourneyFrame("prototype-"+fish.id);
                 if(fish.id=="halibut"&&medianFinReview)

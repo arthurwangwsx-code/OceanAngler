@@ -1,0 +1,54 @@
+{
+  "status": "PASS_TARGETED_CONTINUOUS_EYE_SOURCE_AND_EDITOR",
+  "oldHead": "62c62047e9d418736f0c5fbabb37bec3fc80daa8",
+  "otherOldSourceFilesExact": 614,
+  "runtimeCodeUnchanged": true,
+  "allOtherModelsAndEnvironmentsUnchanged": true,
+  "runtimeSevenClipsAndPrefabByteExact": true,
+  "sourceRestAndSevenActionsExact": true,
+  "sourceEyeUVWeightsAndRadialFootprintPreserved": true,
+  "sourceChecks": 32,
+  "eyeFirstHitRays": 216,
+  "otherEightMapsByteExact": true,
+  "annularPixelsExact": 36044,
+  "editor": 74,
+  "play": 10,
+  "framingSamples": 3456,
+  "gpu": {
+    "status": "PASS",
+    "scope": "isolated imported-fish Editor GPU fixture; no player UI/device acceptance",
+    "graphics": "Metal",
+    "initialPassScope": "Production material initialization; first/repeated isolated draw checked; no player-startup claim",
+    "width": 1440,
+    "height": 960,
+    "images": 8,
+    "initialPassImages": 2,
+    "irisTextureWidth": 256,
+    "importedJawAngle": 17.916528701782227,
+    "idleInitialDifference": 0.0,
+    "biteInitialDifference": 0.0,
+    "singleSidedLining": true,
+    "firstDrawStable": true
+  },
+  "lods": {
+    "Bluefin_LOD0": {
+      "triangles": 23320,
+      "vertices": 12099,
+      "protectedFaces": 10870
+    },
+    "Bluefin_LOD1": {
+      "triangles": 9450,
+      "vertices": 4960,
+      "protectedFaces": 4981
+    },
+    "Bluefin_LOD2": {
+      "triangles": 3598,
+      "vertices": 2024,
+      "protectedFaces": 2134
+    }
+  },
+  "scope": "Own finite saved-source, Editor, headless UI/geometry and isolated Metal fixture checks. Not native, full art/science/child/physical acceptance",
+  "sourceCommit": "afa8fedfe6f484facbcd30310f84b83398adc471",
+  "currentNative": "DEFERRED_TO_COMBINED_PAGE_SOURCE",
+  "fullProduct": "PARTIAL"
+}

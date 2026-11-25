@@ -17278,6 +17278,215 @@
       "executable": "python3",
       "commandDigest": "d89602c770c16a35b6c5da9a9da4ae967807390aa462f4349604d0463de12f51",
       "receiptPath": "measurements/bluefin-eye-publication-source.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "1506cc99-431e-427c-a607-b370dbe0758b",
+      "startedAt": "2026-11-25T09:01:35.461Z",
+      "executable": "python3",
+      "commandDigest": "23d1911ddb69e67a9a8025a38ae45956720fb3b2dbf863e025af68d666b937dd",
+      "receiptPath": "measurements/bluefin-eye-simulator-build.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "c672d042-f2e9-432e-b0d8-98664f5a996f",
+      "startedAt": "2026-11-25T09:17:48.670Z",
+      "executable": "python3",
+      "commandDigest": "6e7c438b122660d12fb3dbe0864a3f94861223865f8672879896b7ffccc3856b",
+      "receiptPath": "measurements/bluefin-eye-verified-old-build-archives.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "52e54df6-c646-438c-96af-a27b4219988e",
+      "startedAt": "2026-11-25T09:38:03.044Z",
+      "executable": "python3",
+      "commandDigest": "5f049fb6c545b54fa0de1247430f9ddcb14c52db16cb99cc14fe3cd0b59d8f44",
+      "receiptPath": "measurements/immersive-pages-editor-a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "8e02749e-a794-4c00-9089-85c7571fa85f",
+      "startedAt": "2026-11-25T09:41:31.144Z",
+      "executable": "python3",
+      "commandDigest": "20485823268158eb18699bca73564bd8c7ef88ec0c29af538a816eecf4b00517",
+      "receiptPath": "measurements/immersive-pages-font-a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "f675f9ac-072e-4f96-a1a4-dafc0a769b66",
+      "startedAt": "2026-11-25T09:41:59.612Z",
+      "executable": "python3",
+      "commandDigest": "78dacedcd6c837d8ba064dc6dba3b82da0abe64cbe309211d895f628f1ea4f1c",
+      "receiptPath": "measurements/immersive-pages-play-a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "a17db815-5b8e-4613-89d4-9ceed0c0df98",
+      "startedAt": "2026-11-25T09:45:23.973Z",
+      "executable": "python3",
+      "commandDigest": "f3e59b41ef0baadb7ba16950822c9a12105558002a8475e6df0afd32ab396c85",
+      "receiptPath": "measurements/immersive-pages-saves-before.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "4bf6bf74-c45f-45ce-af17-8b1ac77d2df8",
+      "startedAt": "2026-11-25T09:45:44.710Z",
+      "executable": "python3",
+      "commandDigest": "5bf983a1c06840516cce224ef208038b8d7b405b15006cadf3af72af6713a838",
+      "receiptPath": "measurements/immersive-pages-shared-media-blocks.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "dd2d13ff-1ce4-4dab-a1f2-dd574dd4e750",
+      "startedAt": "2026-11-25T09:46:44.286Z",
+      "executable": "python3",
+      "commandDigest": "5bf983a1c06840516cce224ef208038b8d7b405b15006cadf3af72af6713a838",
+      "receiptPath": "measurements/immersive-pages-shared-media-blocks-b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "07561166-74e5-4797-bb3f-0c1f2289a80a",
+      "startedAt": "2026-11-25T09:47:32.275Z",
+      "executable": "python3",
+      "commandDigest": "fb41217afb9c1a93e9d3a4bdbe99ba0efa40fc7ad1ee700960159a170a1b2c7a",
+      "receiptPath": "measurements/immersive-pages-play-b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "42c753d9-8f2c-491f-a908-b0c5e9618ae4",
+      "startedAt": "2026-11-25T09:48:11.111Z",
+      "executable": "python3",
+      "commandDigest": "689a970d8a3cb33c84464ee0d960bc7c104b08f889bffe3110de82b71b2417ac",
+      "receiptPath": "measurements/immersive-pages-play-c.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "4c839e59-854b-4fe1-8a06-7c1616d4032b",
+      "startedAt": "2026-11-25T09:51:03.468Z",
+      "executable": "python3",
+      "commandDigest": "c076c9f9354c55a7fd291ec6841f5111acc510cbaed430f03aea390c2fd80cfb",
+      "receiptPath": "measurements/immersive-pages-play-d.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "fba53d1e-e529-41c2-bc09-d818976e309e",
+      "startedAt": "2026-11-25T09:53:53.792Z",
+      "executable": "python3",
+      "commandDigest": "7b686121f0016cc60b73f644925ca1606276185d787361764fc71f02221c73a7",
+      "receiptPath": "measurements/immersive-pages-play-e.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "43c39d8b-7f8f-4e19-9798-6f5c67b4ee5e",
+      "startedAt": "2026-11-25T09:58:02.666Z",
+      "executable": "python3",
+      "commandDigest": "e84ba6a06c572b561d17e6611a8475e53e8b2e6b2e9e543f5503f4082b62d059",
+      "receiptPath": "measurements/immersive-pages-play-f.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "c97a2503-3800-4a41-96a4-bfded4a5e2be",
+      "startedAt": "2026-11-25T10:00:59.029Z",
+      "executable": "python3",
+      "commandDigest": "54784639f6be24aec98b409d842da179ca9b16c4bb1c06704af0b2a33dde3fdb",
+      "receiptPath": "measurements/immersive-pages-play-g.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "5e9ca3e6-c89b-42b1-af1c-0aecc559fe76",
+      "startedAt": "2026-11-25T10:02:16.369Z",
+      "executable": "python3",
+      "commandDigest": "5f049fb6c545b54fa0de1247430f9ddcb14c52db16cb99cc14fe3cd0b59d8f44",
+      "receiptPath": "measurements/immersive-pages-editor-final.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "lint",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "d633e9fc-eb72-4738-ba7d-949441306474",
+      "startedAt": "2026-11-25T10:05:23.595Z",
+      "executable": "python3",
+      "commandDigest": "49b978df2fc9e37f8144ce2b1c619c61410d0ef52e49d84957662f594cdb1e94",
+      "receiptPath": "measurements/immersive-pages-font-verify.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "lint",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "d423214d-ec6b-4709-8203-c62f517aadc4",
+      "startedAt": "2026-11-25T10:06:03.563Z",
+      "executable": "python3",
+      "commandDigest": "1b9b750d007c851f920bb86ccb95b6c8d0649e1d11d26d4708a2736b0478955e",
+      "receiptPath": "measurements/immersive-pages-validation-source.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "2341d81b-cf62-4776-aaed-b56ece36aee7",
+      "startedAt": "2026-11-25T10:06:40.038Z",
+      "executable": "python3",
+      "commandDigest": "2db5a4cf3d954a7f72a4d63380b9aa143c4b8fb9963d8a249333d5a6cb9fc463",
+      "receiptPath": "measurements/immersive-pages-source-verification.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "lint",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "3d42172d-dcd2-4ad6-ba4c-322c2cf60aea",
+      "startedAt": "2026-11-25T10:07:10.779Z",
+      "executable": "python3",
+      "commandDigest": "d89602c770c16a35b6c5da9a9da4ae967807390aa462f4349604d0463de12f51",
+      "receiptPath": "measurements/immersive-pages-publication-source.json"
     }
   ],
   "runMeasurements": [
@@ -44275,6 +44484,367 @@
       "receipt": {
         "path": "measurements/bluefin-eye-publication-source.json",
         "sha256": "c07bdb662392d693adea1b8a45b40536d9f3d691204b262203e5900ddc45f788"
+      }
+    },
+    {
+      "id": "1506cc99-431e-427c-a607-b370dbe0758b",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "23d1911ddb69e67a9a8025a38ae45956720fb3b2dbf863e025af68d666b937dd",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T09:01:35.461Z",
+      "finishedAt": "2026-11-25T09:02:43.102Z",
+      "durationMs": 67606.771209,
+      "exitCode": 3,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-eye-simulator-build.json",
+        "sha256": "511d534c7559333a373c8dc78322841998621b789d620329e8ad0bc7d57a26fe"
+      }
+    },
+    {
+      "id": "c672d042-f2e9-432e-b0d8-98664f5a996f",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "6e7c438b122660d12fb3dbe0864a3f94861223865f8672879896b7ffccc3856b",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T09:17:48.670Z",
+      "finishedAt": "2026-11-25T09:33:04.903Z",
+      "durationMs": 916187.930792,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-eye-verified-old-build-archives.json",
+        "sha256": "bcacf391471b7345bf2989768409086f9e8983fa37a477a89db0f764f8f4d403"
+      }
+    },
+    {
+      "id": "52e54df6-c646-438c-96af-a27b4219988e",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "5f049fb6c545b54fa0de1247430f9ddcb14c52db16cb99cc14fe3cd0b59d8f44",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T09:38:03.044Z",
+      "finishedAt": "2026-11-25T09:39:56.478Z",
+      "durationMs": 113394.54654200001,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-editor-a.json",
+        "sha256": "72ffc50480970044cffd3a6fbc0d38f9f8b91a13c9676ee2b00b783eca5a1654"
+      }
+    },
+    {
+      "id": "8e02749e-a794-4c00-9089-85c7571fa85f",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "20485823268158eb18699bca73564bd8c7ef88ec0c29af538a816eecf4b00517",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T09:41:31.144Z",
+      "finishedAt": "2026-11-25T09:41:42.029Z",
+      "durationMs": 10849.983083000001,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-font-a.json",
+        "sha256": "1ad6cf4748f93bf0d573d3f3f42adcd92038ef39c5a8a56d46d592d42be2c3fe"
+      }
+    },
+    {
+      "id": "f675f9ac-072e-4f96-a1a4-dafc0a769b66",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "78dacedcd6c837d8ba064dc6dba3b82da0abe64cbe309211d895f628f1ea4f1c",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T09:41:59.612Z",
+      "finishedAt": "2026-11-25T09:45:10.931Z",
+      "durationMs": 191294.76875,
+      "exitCode": 254,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-play-a.json",
+        "sha256": "502647fe740b53db43b5bbda7dec0f61c6d2acddccf3b0a3dfe7b4717706358d"
+      }
+    },
+    {
+      "id": "a17db815-5b8e-4613-89d4-9ceed0c0df98",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "f3e59b41ef0baadb7ba16950822c9a12105558002a8475e6df0afd32ab396c85",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T09:45:23.973Z",
+      "finishedAt": "2026-11-25T09:45:24.732Z",
+      "durationMs": 733.81,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-saves-before.json",
+        "sha256": "216b6b633ac45381e6f475650caa8f37b566b217bd17131a08643e3b5225c64a"
+      }
+    },
+    {
+      "id": "4bf6bf74-c45f-45ce-af17-8b1ac77d2df8",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "5bf983a1c06840516cce224ef208038b8d7b405b15006cadf3af72af6713a838",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T09:45:44.710Z",
+      "finishedAt": "2026-11-25T09:45:45.745Z",
+      "durationMs": 1004.827166,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-shared-media-blocks.json",
+        "sha256": "f70a39f85d12613af0dd633b408b0568c0bc130199191d35a3d56ef4b0a0f35b"
+      }
+    },
+    {
+      "id": "dd2d13ff-1ce4-4dab-a1f2-dd574dd4e750",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "5bf983a1c06840516cce224ef208038b8d7b405b15006cadf3af72af6713a838",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T09:46:44.286Z",
+      "finishedAt": "2026-11-25T09:47:31.721Z",
+      "durationMs": 47409.25816600001,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-shared-media-blocks-b.json",
+        "sha256": "4bb6b6e02e03d459c3cccb19e70516c4caa1208e0b7dbfc420b0146dff3eb94d"
+      }
+    },
+    {
+      "id": "07561166-74e5-4797-bb3f-0c1f2289a80a",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "fb41217afb9c1a93e9d3a4bdbe99ba0efa40fc7ad1ee700960159a170a1b2c7a",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T09:47:32.275Z",
+      "finishedAt": "2026-11-25T09:47:55.536Z",
+      "durationMs": 23236.765667,
+      "exitCode": 254,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-play-b.json",
+        "sha256": "67d6fe8bf0d525cda787e497ca04655414e3a37038ca964e14ffc8a28bf31e09"
+      }
+    },
+    {
+      "id": "42c753d9-8f2c-491f-a908-b0c5e9618ae4",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "689a970d8a3cb33c84464ee0d960bc7c104b08f889bffe3110de82b71b2417ac",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T09:48:11.111Z",
+      "finishedAt": "2026-11-25T09:49:35.758Z",
+      "durationMs": 84620.773041,
+      "exitCode": 2,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-play-c.json",
+        "sha256": "630af8820e904b1cb4f03a2a104acb3ced40426ede048e3d43fcd96a494b5176"
+      }
+    },
+    {
+      "id": "4c839e59-854b-4fe1-8a06-7c1616d4032b",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "c076c9f9354c55a7fd291ec6841f5111acc510cbaed430f03aea390c2fd80cfb",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T09:51:03.468Z",
+      "finishedAt": "2026-11-25T09:52:30.777Z",
+      "durationMs": 87258.930209,
+      "exitCode": 2,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-play-d.json",
+        "sha256": "e9ff14da1e4e4e04a18fb90089255d29b88acac915fb2b731d02a7104e8a615b"
+      }
+    },
+    {
+      "id": "fba53d1e-e529-41c2-bc09-d818976e309e",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "7b686121f0016cc60b73f644925ca1606276185d787361764fc71f02221c73a7",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T09:53:53.792Z",
+      "finishedAt": "2026-11-25T09:55:36.953Z",
+      "durationMs": 103123.897583,
+      "exitCode": 2,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-play-e.json",
+        "sha256": "49484021e5d3452d228c4d3ca5c1bcddb9a577724e1cbe7a8ce0228a7dac0735"
+      }
+    },
+    {
+      "id": "43c39d8b-7f8f-4e19-9798-6f5c67b4ee5e",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "e84ba6a06c572b561d17e6611a8475e53e8b2e6b2e9e543f5503f4082b62d059",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T09:58:02.666Z",
+      "finishedAt": "2026-11-25T09:59:52.301Z",
+      "durationMs": 109597.381667,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-play-f.json",
+        "sha256": "d3b0e88af38e8458bcb6b4d3644771dc8b348779cce37f13b8f97596a4ab6628"
+      }
+    },
+    {
+      "id": "c97a2503-3800-4a41-96a4-bfded4a5e2be",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "54784639f6be24aec98b409d842da179ca9b16c4bb1c06704af0b2a33dde3fdb",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T10:00:59.029Z",
+      "finishedAt": "2026-11-25T10:01:28.046Z",
+      "durationMs": 28990.10775,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-play-g.json",
+        "sha256": "cccdbf6b4e4e02192eafb2f781cfc23c8c7e4060c8427e65ef0070e1c522b9ff"
+      }
+    },
+    {
+      "id": "5e9ca3e6-c89b-42b1-af1c-0aecc559fe76",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "5f049fb6c545b54fa0de1247430f9ddcb14c52db16cb99cc14fe3cd0b59d8f44",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T10:02:16.369Z",
+      "finishedAt": "2026-11-25T10:04:03.516Z",
+      "durationMs": 107116.435625,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-editor-final.json",
+        "sha256": "4cbe9dcb83b00a15d77e50ab16c9f4ecda7257c60237f22ee12b48df5cc10db4"
+      }
+    },
+    {
+      "id": "d633e9fc-eb72-4738-ba7d-949441306474",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "49b978df2fc9e37f8144ce2b1c619c61410d0ef52e49d84957662f594cdb1e94",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-25T10:05:23.595Z",
+      "finishedAt": "2026-11-25T10:05:23.939Z",
+      "durationMs": 307.64229100000006,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-font-verify.json",
+        "sha256": "3e8a2fc0ec63c7486cb1e4d77d99e9076b5bc1895a38998c421640b32b77567d"
+      }
+    },
+    {
+      "id": "d423214d-ec6b-4709-8203-c62f517aadc4",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "1b9b750d007c851f920bb86ccb95b6c8d0649e1d11d26d4708a2736b0478955e",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-25T10:06:03.563Z",
+      "finishedAt": "2026-11-25T10:06:04.280Z",
+      "durationMs": 690.8819579999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-validation-source.json",
+        "sha256": "59992c2a98fc7af575b6b5a73f4ebce5ddc430cc39d16f0c17dfbe2146921090"
+      }
+    },
+    {
+      "id": "2341d81b-cf62-4776-aaed-b56ece36aee7",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "2db5a4cf3d954a7f72a4d63380b9aa143c4b8fb9963d8a249333d5a6cb9fc463",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T10:06:40.038Z",
+      "finishedAt": "2026-11-25T10:06:40.177Z",
+      "durationMs": 113.22300000000001,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-source-verification.json",
+        "sha256": "e69602c431142205d1f0d0e94001d81056ca4261f50a22c0d230474f380212cb"
+      }
+    },
+    {
+      "id": "3d42172d-dcd2-4ad6-ba4c-322c2cf60aea",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d89602c770c16a35b6c5da9a9da4ae967807390aa462f4349604d0463de12f51",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-25T10:07:10.779Z",
+      "finishedAt": "2026-11-25T10:07:11.479Z",
+      "durationMs": 677.462792,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-publication-source.json",
+        "sha256": "69955411f414ea6b82e9494bc73ea9caad746a74c69c9cf57195d7bbb846a83f"
       }
     }
   ]

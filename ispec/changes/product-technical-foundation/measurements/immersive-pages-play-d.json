@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "4c839e59-854b-4fe1-8a06-7c1616d4032b",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "c076c9f9354c55a7fd291ec6841f5111acc510cbaed430f03aea390c2fd80cfb",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-25T09:51:03.468Z",
+    "finishedAt": "2026-11-25T09:52:30.777Z",
+    "durationMs": 87258.930209,
+    "exitCode": 2,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      "tools/game.py",
+      "tests",
+      "--test-platform",
+      "PlayMode",
+      "--label",
+      "immersivepagesplay20261125d",
+      "--test-filter",
+      "ImmersiveNavigationTests;CompactPreparationTests;GearFeedbackTests;JournalFramingTests;IntegratedWorldTests;ObservationVisitTests;ChannelVisitTests;HalibutWorldTests;RigDetailReviewTests"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    "tools/game.py",
+    "tests",
+    "--test-platform",
+    "PlayMode",
+    "--label",
+    "immersivepagesplay20261125d",
+    "--test-filter",
+    "ImmersiveNavigationTests;CompactPreparationTests;GearFeedbackTests;JournalFramingTests;IntegratedWorldTests;ObservationVisitTests;ChannelVisitTests;HalibutWorldTests;RigDetailReviewTests"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 2,
+  "startedAt": "2026-11-25T09:51:03.468Z",
+  "finishedAt": "2026-11-25T09:52:30.777Z",
+  "durationMs": 87258.930209
+}

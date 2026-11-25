@@ -83,7 +83,7 @@ namespace OceanAngler
             if(ui.FocusedFish!=null||ui.InspectingGear||ui.InspectingHabitat||ui.InspectingObservation||reduced)releasing=null;
             string desired=ui.FocusedFish??releasing?.fishId??game.Session.Catch?.fishId??(awaitingNextFish?fishId:System.Array.Find(game.Content.fish,f=>f.habitatId==data.habitatId).id);
             if(desired!=fishId)SelectFish(desired);
-            fishRoot.gameObject.SetActive(!ui.InspectingGear&&!ui.InspectingHabitat&&!ui.InspectingObservation&&(!awaitingNextFish||releasing!=null||ui.FocusedFish!=null));gear.gameObject.SetActive(!ui.InspectingHabitat&&!ui.InspectingObservation);
+            fishRoot.gameObject.SetActive(!ui.InspectingGear&&!ui.InspectingHabitat&&!ui.InspectingObservation&&(!awaitingNextFish||releasing!=null||ui.FocusedFish!=null));gear.gameObject.SetActive(ui.FocusedFish==null&&!ui.InspectingHabitat&&!ui.InspectingObservation);
             if(!reduced&&!game.Session.Paused)visualTime+=Time.deltaTime;float time=reduced?0:visualTime;
             fish.reducedMotion=reduced;fish.paused=ui.FocusedFish!=null?ui.ModelPaused:game.Session.Paused;fish.speed=game.Session.Phase==FishingPhase.Fighting?1.6f:1;
             bool journal=ui.FocusedFish!=null;
@@ -99,7 +99,7 @@ namespace OceanAngler
             if(ui.InspectingGear)
             {
                 float scale=ui.GearCloseup?6.5f:1.15f;gear.transform.localScale=Vector3.one*scale;gear.transform.rotation=Quaternion.Euler(ui.GearCloseup?-28:-6,ui.GearYaw,6);
-                var focus=ui.GearCloseup?gear.inspectionCenter:new Vector3(0,1.16f,0);gear.transform.position=new Vector3(-1.3f,.45f,1.2f)-gear.transform.TransformVector(focus);
+                var focus=ui.GearCloseup?gear.inspectionCenter:new Vector3(0,1.16f,0);gear.transform.position=new Vector3(0,.85f,1.2f)-gear.transform.TransformVector(focus);
                 gear.Drive(.45f,ui.GearReelingDemo,false,reduced,false,Vector3.zero,true);
             }
             else

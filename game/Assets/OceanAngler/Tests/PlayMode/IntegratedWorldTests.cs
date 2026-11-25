@@ -15,12 +15,9 @@ namespace OceanAngler.Tests
     public sealed class IntegratedWorldTests
     {
         Scene scene;GameController game;
-        void Click(string text)
+        IEnumerator Click(string text)
         {
-            if(UnityEngine.Object.FindFirstObjectByType<GameUI>().Playing&&new[]{"出海","图鉴","钓具","任务","设置","海域与装备"}.Contains(text))
-                UnityEngine.Object.FindObjectsByType<Button>(FindObjectsSortMode.None).Single(b=>b.isActiveAndEnabled&&b.GetComponentInChildren<Text>()?.text=="暂停").onClick.Invoke();
-            var button=UnityEngine.Object.FindObjectsByType<Button>(FindObjectsSortMode.None).Single(b=>b.isActiveAndEnabled&&b.interactable&&b.GetComponentInChildren<Text>()?.text==text);
-            button.onClick.Invoke();
+            yield return UnityEngine.Object.FindFirstObjectByType<RuntimeSmoke>().TapForReview(text,true);
         }
         void LandCurrentFish()
         {
@@ -57,21 +54,21 @@ namespace OceanAngler.Tests
             var frozenSchool=school.Members.Select(f=>f.transform.localPosition).ToArray();yield return new WaitForSeconds(.15f);
             CollectionAssert.AreEqual(frozenSchool,school.Members.Select(f=>f.transform.localPosition).ToArray());Assert.That(school.Members.All(f=>f.paused),Is.True);
             var rodRest=gear.rodBones.Last().localRotation;
-            Click("海域与装备");yield return null;yield return null;
-            Click("看看海湾");yield return null;yield return null;
+            yield return Click("海域与装备");yield return null;yield return null;
+            yield return Click("看看海湾");yield return null;yield return null;
             Assert.That(ui.InspectingHabitat&&game.Session.Paused,Is.True);Assert.That(gear.gameObject.activeSelf||fish.gameObject.activeSelf,Is.False);Assert.That(Camera.main.transform.position.y,Is.GreaterThan(bay.SeaLevel));
-            Click("潜入水下");yield return null;yield return null;Assert.That(Camera.main.transform.position.y,Is.LessThan(bay.SeaLevel));
-            Click("返回钓鱼");yield return null;yield return null;Assert.That(game.Session.Paused,Is.True);Assert.That(gear.gameObject.activeSelf&&fish.gameObject.activeSelf,Is.True);
-            Click("钓具");yield return null;yield return null;Click("观察入门钓组");yield return null;yield return null;
+            yield return Click("潜入水下");yield return null;yield return null;Assert.That(Camera.main.transform.position.y,Is.LessThan(bay.SeaLevel));
+            yield return Click("返回钓鱼");yield return null;yield return null;Assert.That(game.Session.Paused,Is.True);Assert.That(gear.gameObject.activeSelf&&fish.gameObject.activeSelf,Is.True);
+            yield return Click("钓具");yield return null;yield return null;yield return Click("观察入门钓组");yield return null;yield return null;
             Assert.That(ui.InspectingGear&&game.Session.Paused,Is.True);Assert.That(fish.gameObject.activeSelf,Is.False);Assert.That(gear.gameObject.activeSelf,Is.True);
             Assert.That(school.gameObject.activeSelf,Is.False);CollectionAssert.AreEqual(population,school.Members.Select(f=>f.GetInstanceID()).ToArray());
-            var prior=gear.crank.localRotation;Click("试摇卷线器");yield return new WaitForSeconds(.2f);
+            var prior=gear.crank.localRotation;yield return Click("试摇卷线器");yield return new WaitForSeconds(.2f);
             Assert.That(Quaternion.Angle(prior,gear.crank.localRotation),Is.GreaterThan(10));Assert.That(game.Reeling,Is.False);
-            Click("出海");yield return null;yield return null;var stopped=gear.crank.localRotation;yield return new WaitForSeconds(.15f);
+            yield return Click("出海");yield return null;yield return null;var stopped=gear.crank.localRotation;yield return new WaitForSeconds(.15f);
             Assert.That(ui.GearReelingDemo,Is.False);Assert.That(game.Session.Paused,Is.True);Assert.That(Quaternion.Angle(stopped,gear.crank.localRotation),Is.LessThan(.02f));
             Assert.That(Vector3.Distance(Camera.main.transform.position,bay.underwaterCamera.position),Is.LessThan(.001f));
 
-            Click("继续探索");yield return null;yield return null;Assert.That(game.Session.Paused,Is.False);
+            yield return Click("继续探索");yield return null;yield return null;Assert.That(game.Session.Paused,Is.False);
             var priorSchool=school.Members.Select(f=>f.transform.localPosition).ToArray();yield return new WaitForSeconds(.2f);
             Assert.That(school.gameObject.activeSelf,Is.True);Assert.That(Vector3.Distance(priorSchool[0],school.Members[0].transform.localPosition),Is.GreaterThan(.01f));
             CollectionAssert.AreEqual(population,school.Members.Select(f=>f.GetInstanceID()).ToArray());
@@ -81,9 +78,9 @@ namespace OceanAngler.Tests
             Assert.That(game.Session.Catch,Is.SameAs(activeCatch));Assert.That(game.Session.CastPower,Is.EqualTo(.5f));Assert.That(redundantCastSignals,Is.Zero);
             for(int i=0;i<600&&game.Session.Phase!=FishingPhase.Bite;i++)game.Session.Tick(1f/30,false);
             Assert.That(game.Session.Phase,Is.EqualTo(FishingPhase.Bite));game.Strike();game.HoldReel(true);Assert.That(game.Reeling,Is.True);yield return null;yield return null;
-            Click("钓具");yield return null;yield return null;Click("观察入门钓组");yield return null;yield return null;
+            yield return Click("钓具");yield return null;yield return null;yield return Click("观察入门钓组");yield return null;yield return null;
             Assert.That(game.Session.Phase,Is.EqualTo(FishingPhase.Fighting));Assert.That(game.Session.Paused&&!game.Reeling,Is.True);
-            Click("出海");yield return null;yield return null;Click("继续探索");yield return null;yield return null;
+            yield return Click("出海");yield return null;yield return null;yield return Click("继续探索");yield return null;yield return null;
             Assert.That(game.Session.Phase,Is.EqualTo(FishingPhase.Fighting));Assert.That(game.Session.Paused||game.Reeling,Is.False);
 
             // A failed disk commit must not release or reward; the same fish can be retried.
@@ -94,12 +91,12 @@ namespace OceanAngler.Tests
             string saveFile=Path.Combine(save,"ocean-progress.json");Assert.That(Directory.Exists(saveFile)||File.Exists(saveFile),Is.False);
             Directory.CreateDirectory(saveFile);float heldLoad=game.Session.Tension;
             LogAssert.Expect(LogType.Warning,new Regex("Progress operation failed: (IOException|UnauthorizedAccessException)"));
-            Click("记录并放流");yield return null;yield return null;
+            yield return Click("记录并放流");yield return null;yield return null;
             Assert.That(game.Session.Phase,Is.EqualTo(FishingPhase.Landed));Assert.That(game.Progress.Data.catches.Count,Is.Zero);Assert.That(released,Is.Zero);
             Assert.That(game.Session.Tension,Is.EqualTo(heldLoad));
             Assert.That(UnityEngine.Object.FindObjectsByType<Text>(FindObjectsSortMode.None).Any(t=>t.text.Contains("轻柔控线已达标")),Is.True);
             Assert.That(fish.semantic,Is.EqualTo("idle"));Directory.Delete(saveFile);
-            Click("记录并放流");yield return null;yield return null;
+            yield return Click("记录并放流");yield return null;yield return null;
             Assert.That(game.Session.Phase,Is.EqualTo(FishingPhase.Ready));Assert.That(released,Is.EqualTo(1));Assert.That(game.Reeling,Is.False);
             Assert.That(game.Session.Tension,Is.Zero);Assert.That(game.Session.Progress,Is.Zero);
             Assert.That(Quaternion.Angle(rodRest,gear.rodBones.Last().localRotation),Is.LessThan(.001f));
@@ -115,7 +112,7 @@ namespace OceanAngler.Tests
 
             // New casts can immediately replace the departing fish without a presentation lock.
             game.Cast(.5f);yield return null;yield return null;LandCurrentFish();yield return null;yield return null;
-            Click("记录并放流");yield return null;yield return null;Assert.That(released,Is.EqualTo(2));
+            yield return Click("记录并放流");yield return null;yield return null;Assert.That(released,Is.EqualTo(2));
             game.Cast(.5f);yield return null;yield return null;
             var current=game.GetComponent<OceanWorld>().TargetFish;Assert.That(current,Is.Not.Null);
             Assert.That(current.semantic,Is.EqualTo("burst"));Assert.That(current.transform.position.z,Is.GreaterThan(4));
@@ -123,22 +120,22 @@ namespace OceanAngler.Tests
             var reducedSchool=school.Members.Select(f=>f.transform.localPosition).ToArray();yield return new WaitForSeconds(.15f);
             CollectionAssert.AreEqual(reducedSchool,school.Members.Select(f=>f.transform.localPosition).ToArray());Assert.That(school.Members.All(f=>f.reducedMotion),Is.True);
             LandCurrentFish();yield return null;yield return null;
-            Click("记录并放流");yield return null;yield return null;
+            yield return Click("记录并放流");yield return null;yield return null;
             Assert.That(released,Is.EqualTo(3));Assert.That(current.gameObject.activeSelf,Is.False);
             Assert.That(new SaveStore(saveFile,game.Content).Load().data.catches.Count,Is.EqualTo(3));
 
             // Opening the journal must cancel the departure without moving its inspected fish.
             game.Configure(s=>s.reducedMotion=false);game.Cast(.5f);LandCurrentFish();yield return null;yield return null;
-            Click("记录并放流");yield return null;yield return null;Assert.That(released,Is.EqualTo(4));
-            Click("图鉴");yield return null;yield return null;
+            yield return Click("记录并放流");yield return null;yield return null;Assert.That(released,Is.EqualTo(4));
+            yield return Click("图鉴");yield return null;yield return null;yield return Click(game.Content.Fish("trevally").name);yield return null;yield return null;
             Assert.That(game.Session.Paused,Is.True);Assert.That(ui.FocusedFish,Is.Not.Null);
             var inspected=game.GetComponent<OceanWorld>().TargetFish;Assert.That(inspected.semantic,Is.EqualTo("swim"));
-            Click("出海");yield return null;yield return null;Assert.That(inspected.gameObject.activeSelf,Is.False);
+            yield return Click("出海");yield return null;yield return null;Assert.That(inspected.gameObject.activeSelf,Is.False);
             Assert.That(game.Session.Phase,Is.EqualTo(FishingPhase.Ready));Assert.That(game.Session.Paused,Is.True);
-            Click("继续探索");game.Cast(.5f);yield return null;yield return null;
+            yield return Click("继续探索");game.Cast(.5f);yield return null;yield return null;
             Assert.That(game.GetComponent<OceanWorld>().TargetFish.semantic,Is.EqualTo("burst"));
             Assert.That(new SaveStore(saveFile,game.Content).Load().data.catches.Count,Is.EqualTo(4));
-            Click("任务");yield return null;yield return null;Canvas.ForceUpdateCanvases();
+            yield return Click("任务");yield return null;yield return null;Canvas.ForceUpdateCanvases();
             var rows=UnityEngine.Object.FindObjectsByType<RectTransform>(FindObjectsSortMode.None).Where(t=>t.name=="Task").ToArray();Assert.That(rows.Length,Is.EqualTo(18));
             foreach(var row in rows)
             {
@@ -156,13 +153,15 @@ namespace OceanAngler.Tests
             // paragraph by scrolling, independently of the current screen profile.
             int beforeJournalPoints=game.Progress.Data.totalPoints,beforeJournalCount=game.Progress.Data.catches.Count;
             var journalChecks=new System.Collections.Generic.List<string>();
-            Click("图鉴");yield return null;yield return null;
+            yield return Click("图鉴");yield return null;yield return null;
             foreach(var species in game.Content.fish)
             {
-                if(ui.Compact&&ui.CompactViewer){Click("返回图鉴");yield return null;yield return null;}
+                if(ui.PageName=="鱼类资料"){yield return Click("上一级");yield return null;yield return null;}
+                if(ui.CompactViewer){yield return Click("上一级");yield return null;yield return null;}
                 bool known=game.Progress.Data.catches.Any(c=>c.fishId==species.id);
-                Click((known?"":"未发现 · ")+species.name);yield return null;yield return null;
+                yield return Click((known?"":"未发现 · ")+species.name);yield return null;yield return null;
                 Assert.That(ui.FocusedFish,Is.EqualTo(species.id));Assert.That(game.Session.Paused&&!game.Reeling,Is.True);
+                yield return Click("认识它");yield return null;yield return null;
                 var detail=UnityEngine.Object.FindObjectsByType<ScrollRect>(FindObjectsSortMode.None).Single(s=>s.content.name=="SpeciesContent");
                 foreach(float width in new[]{240f,310f,500f})
                 {
@@ -187,19 +186,20 @@ namespace OceanAngler.Tests
                     journalChecks.Add(species.id+","+width+",PASS");
                 }
             }
-            Click("旋转");Click("放大");Click("静止");yield return null;yield return null;
+            yield return Click("上一级");yield return null;yield return null;
+            yield return Click("旋转");yield return Click("放大");yield return Click("静止");yield return null;yield return null;
             Assert.That(ui.ModelYaw,Is.Not.Zero);Assert.That(ui.ModelZoom,Is.GreaterThan(1));Assert.That(ui.ModelPaused,Is.True);
-            Click("重置");yield return null;yield return null;
+            yield return Click("重置");yield return null;yield return null;
             Assert.That(ui.ModelYaw,Is.Zero);Assert.That(ui.ModelZoom,Is.EqualTo(1));Assert.That(ui.ModelPaused,Is.False);
             Assert.That(game.Progress.Data.totalPoints,Is.EqualTo(beforeJournalPoints));Assert.That(game.Progress.Data.catches.Count,Is.EqualTo(beforeJournalCount));
             File.WriteAllLines(Path.Combine(save,"journal-layout.csv"),journalChecks);
 
-            Click("设置");yield return null;yield return null;
+            yield return Click("设置");yield return null;yield return null;
             var effects=game.GetComponent<AudioSource>();var ambient=game.transform.Find("OceanAmbience").GetComponent<AudioSource>();var music=game.transform.Find("ExploreMusic").GetComponent<AudioSource>();
             Assert.That(ambient.clip.name,Is.EqualTo("OceanBed"));Assert.That(music.clip.name,Is.EqualTo("ExploreTheme"));Assert.That(ambient.loop&&music.loop,Is.True);
-            Click("探索音乐    已关闭");yield return null;yield return null;
+            yield return Click("探索音乐    已关闭");yield return null;yield return null;
             Assert.That(new SaveStore(saveFile,game.Content).Load().data.settings.music,Is.True);Assert.That(music.volume,Is.Zero);
-            Click("出海");yield return null;yield return null;Click("继续探索");yield return null;yield return null;
+            yield return Click("出海");yield return null;yield return null;yield return Click("继续探索");yield return null;yield return null;
             Assert.That(ambient.volume,Is.GreaterThan(0));Assert.That(music.volume,Is.GreaterThan(0));
             game.Configure(s=>s.sound=false);yield return null;yield return null;
             Assert.That(effects.volume,Is.Zero);Assert.That(ambient.volume,Is.Zero);Assert.That(music.volume,Is.GreaterThan(0));

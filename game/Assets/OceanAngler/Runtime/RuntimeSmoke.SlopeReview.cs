@@ -40,8 +40,9 @@ namespace OceanAngler
             {
                 var bounds=habitat.GetComponentsInChildren<Renderer>(true).Single(r=>r.name=="ROV_LOD0").bounds;float left=float.PositiveInfinity,right=float.NegativeInfinity;
                 for(int i=0;i<8;i++){var point=Camera.main.WorldToScreenPoint(bounds.center+Vector3.Scale(bounds.extents,new Vector3((i&1)==0?-1:1,(i&2)==0?-1:1,(i&4)==0?-1:1)));JourneyRequire(point.z>0,"slope-rov-in-front-of-preview-camera");left=Mathf.Min(left,point.x);right=Mathf.Max(right,point.x);}
-                var panel=FindObjectsByType<RectTransform>(FindObjectsSortMode.None).Single(t=>t.name=="HabitatDetails");var corners=new Vector3[4];panel.GetWorldCorners(corners);float padding=8*DisplayMetrics.PixelsPerPoint;
-                JourneyRequire(left>=DisplayMetrics.SafeArea.xMin+padding&&right<=corners[0].x-padding,"slope-rov-bounds-clear-of-preview-panel-and-safe-edge");
+                float padding=8*DisplayMetrics.PixelsPerPoint;
+                JourneyRequire(left>=DisplayMetrics.SafeArea.xMin+padding&&right<=DisplayMetrics.SafeArea.xMax-padding,"slope-rov-bounds-clear-of-safe-edge");
+                JourneyRequire(!FindObjectsByType<RectTransform>(FindObjectsSortMode.None).Any(t=>t.name=="HabitatDetails"),"slope-no-permanent-reading-panel");
             }
             slopeViews.Add(new SlopeView{frame=name,habitat=game.Progress.Data.habitatId,camera=Camera.main.transform.position,fog=RenderSettings.fogColor,sun=sun.color,sunIntensity=sun.intensity,seaLevel=habitat.SeaLevel,above=GetComponent<GameUI>().HabitatSurfaceView});
             yield return JourneyFrame(name);

@@ -162,9 +162,59 @@ namespace OceanAngler.Tests
             }
             File.WriteAllText(Path.Combine(archive,"rest.json"),"{\"status\":\"PASS\",\"scope\":\"headless active-clock boundary and real UI pointer regression; not elapsed 15-minute or child/device acceptance\",\"hands\":2,\"saveBytesUnchanged\":true}");
         }
+        [UnityTest,Timeout(120000)] public IEnumerator DedicatedPagesKeepModelClearAndBackReturnsToTheirActualSource()
+        {
+            var args=LaunchArguments.Get();int index=Array.IndexOf(args,"--ocean-save-root");Assert.That(index,Is.GreaterThanOrEqualTo(0));root=Path.GetFullPath(args[index+1]);Assert.That(root,Does.Contain("unity-test-saves"));
+            archive=Path.Combine(root,"dedicated-pages-before-after");Directory.CreateDirectory(archive);
+            foreach(string suffix in new[]{"",".bak",".tmp"}){string file=Path.Combine(root,"ocean-progress.json")+suffix;if(File.Exists(file)){string saved=Path.Combine(archive,"before"+suffix+".json");File.Move(file,saved);originals.Add(file,saved);}}
+            yield return SceneManager.LoadSceneAsync("Bay",LoadSceneMode.Single);scene=SceneManager.GetSceneByName("Bay");yield return null;yield return null;game=UnityEngine.Object.FindFirstObjectByType<GameController>();game.Configure(_=>{});yield return null;yield return null;
+            string savedData=JsonUtility.ToJson(game.Progress.Data);var ui=game.GetComponent<GameUI>();int pages=0,critical=0;
+            IEnumerator TapExact(string label,string expected)
+            {
+                var b=UnityEngine.Object.FindObjectsByType<Button>(FindObjectsSortMode.None).Single(x=>x.isActiveAndEnabled&&x.interactable&&x.GetComponentInChildren<Text>()?.text==label);
+                var scroll=b.GetComponentInParent<ScrollRect>();
+                if(scroll!=null&&scroll.content.rect.height>scroll.viewport.rect.height)
+                {
+                    Canvas.ForceUpdateCanvases();var bounds=RectTransformUtility.CalculateRelativeRectTransformBounds(scroll.content,b.GetComponent<RectTransform>());float range=scroll.content.rect.height-scroll.viewport.rect.height;scroll.verticalNormalizedPosition=1-Mathf.Clamp(scroll.content.rect.yMax-bounds.center.y-scroll.viewport.rect.height/2,0,range)/range;
+                }
+                yield return null;yield return null;Canvas.ForceUpdateCanvases();
+                var rt=b.GetComponent<RectTransform>();var point=RectTransformUtility.WorldToScreenPoint(null,rt.TransformPoint(rt.rect.center));var data=new PointerEventData(EventSystem.current){position=point,button=PointerEventData.InputButton.Left};var hits=new List<RaycastResult>();EventSystem.current.RaycastAll(data,hits);
+                Assert.That(hits.Count>0&&hits[0].gameObject.GetComponentInParent<Button>()==b,Is.True,label+" must be the top visible target");
+                ExecuteEvents.Execute(b.gameObject,data,ExecuteEvents.pointerDownHandler);ExecuteEvents.Execute(b.gameObject,data,ExecuteEvents.pointerUpHandler);ExecuteEvents.Execute(b.gameObject,data,ExecuteEvents.pointerClickHandler);yield return null;yield return null;
+                Assert.That(ui.PageName,Is.EqualTo(expected),label+" back/context route");Assert.That(game.Session.Paused&&!game.Reeling,Is.True,"Pages must never resume a held action");
+                if(expected!="首页"&&expected!="出海")
+                {
+                    var rects=UnityEngine.Object.FindObjectsByType<RectTransform>(FindObjectsSortMode.None);
+                    Assert.That(rects.Any(t=>t.name=="Navigation"||t.name=="Footer"),Is.False,"No duplicate global tab bar or unrelated footer");
+                    foreach(var button in UnityEngine.Object.FindObjectsByType<Button>(FindObjectsSortMode.None).Where(x=>x.GetComponentInParent<ScrollRect>()==null))
+                    {
+                        var r=button.GetComponent<RectTransform>();var corners=new Vector3[4];r.GetWorldCorners(corners);var safe=DisplayMetrics.SafeArea;float unit=DisplayMetrics.PixelsPerPoint;
+                        Assert.That(r.rect.width,Is.GreaterThanOrEqualTo(44));Assert.That(r.rect.height,Is.GreaterThanOrEqualTo(44));
+                        Assert.That(corners[0].x,Is.GreaterThanOrEqualTo(safe.xMin-.1f));Assert.That(corners[0].y,Is.GreaterThanOrEqualTo(safe.yMin-.1f));Assert.That(corners[2].x,Is.LessThanOrEqualTo(safe.xMax+.1f));Assert.That(corners[2].y,Is.LessThanOrEqualTo(safe.yMax+.1f));
+                        var text=button.GetComponentInChildren<Text>();Assert.That(text.fontSize,Is.GreaterThanOrEqualTo(17));Assert.That(text.preferredHeight,Is.LessThanOrEqualTo(text.rectTransform.rect.height+.1f),expected+"/"+text.text);critical++;
+                    }
+                    pages++;
+                }
+            }
+            yield return TapExact("海域与装备","准备");yield return TapExact("更换钓具","钓具");yield return TapExact("上一级","准备");
+            yield return TapExact("看看海湾","海湾观察");Assert.That(UnityEngine.Object.FindObjectsByType<RectTransform>(FindObjectsSortMode.None).Any(t=>t.name=="HabitatDetails"),Is.False);yield return TapExact("上一级","准备");yield return TapExact("上一级","首页");
+            yield return TapExact("图鉴","图鉴");Assert.That(ui.FocusedFish,Is.Null);yield return TapExact("未发现 · 蓝鳍鲹","鱼类详情");
+            Assert.That(ui.TryJournalModelRect(out var model),Is.True);Assert.That(model.width/DisplayMetrics.SafeArea.width,Is.GreaterThan(.85f));
+            Assert.That(UnityEngine.Object.FindFirstObjectByType<AuthoredSpinningRig>(FindObjectsInactive.Include).gameObject.activeInHierarchy,Is.False,"Fish appreciation must hide the unrelated fishing rig");
+            Assert.That(UnityEngine.Object.FindObjectsByType<ScrollRect>(FindObjectsSortMode.None).Length,Is.Zero,"3D model has no large reading side panel");
+            yield return TapExact("认识它","鱼类资料");Assert.That(ui.FocusedFish,Is.Null);Assert.That(UnityEngine.Object.FindObjectsByType<ScrollRect>(FindObjectsSortMode.None).Any(s=>s.content.name=="SpeciesContent"),Is.True);
+            yield return TapExact("上一级","鱼类详情");Assert.That(ui.FocusedFish,Is.EqualTo("trevally"));yield return TapExact("上一级","图鉴");yield return TapExact("上一级","首页");
+            yield return TapExact("设置","设置");
+            foreach(string group in new[]{"操作与辅助","声音与触觉","画面与动态"}){yield return TapExact(group,group);yield return TapExact("上一级","设置");}
+            yield return TapExact("上一级","首页");yield return TapExact("钓具","钓具");yield return TapExact("观察入门钓组","钓组预览");
+            Assert.That(UnityEngine.Object.FindObjectsByType<RectTransform>(FindObjectsSortMode.None).Any(t=>t.name=="GearDetails"),Is.False);
+            yield return TapExact("上一级","钓具");yield return TapExact("上一级","首页");
+            Assert.That(JsonUtility.ToJson(game.Progress.Data),Is.EqualTo(savedData));File.WriteAllText(Path.Combine(archive,"pages.json"),"{\"status\":\"PASS\",\"scope\":\"strict visible hierarchy/back/safe-target checks, no automatic destination routing; not native or OS touch\",\"pages\":"+pages+",\"criticalButtons\":"+critical+"}");
+        }
         IEnumerator RestTap(string text)
         {
-            Canvas.ForceUpdateCanvases();var b=UnityEngine.Object.FindObjectsByType<Button>(FindObjectsSortMode.None).Single(x=>x.isActiveAndEnabled&&x.interactable&&x.GetComponentInChildren<Text>().text==text);
+            yield return UnityEngine.Object.FindFirstObjectByType<RuntimeSmoke>().ResolveControlForReview(text,true);
+            Canvas.ForceUpdateCanvases();var b=UnityEngine.Object.FindFirstObjectByType<RuntimeSmoke>().FindForReview(text,true);
             var rt=b.GetComponent<RectTransform>();var point=RectTransformUtility.WorldToScreenPoint(null,rt.TransformPoint(rt.rect.center));var data=new PointerEventData(EventSystem.current){position=point,button=PointerEventData.InputButton.Left};var hits=new List<RaycastResult>();EventSystem.current.RaycastAll(data,hits);
             Assert.That(hits.Count>0&&hits[0].gameObject.GetComponentInParent<Button>()==b,Is.True,"Top pointer target must be "+text);
             ExecuteEvents.Execute(b.gameObject,data,ExecuteEvents.pointerDownHandler);ExecuteEvents.Execute(b.gameObject,data,ExecuteEvents.pointerUpHandler);ExecuteEvents.Execute(b.gameObject,data,ExecuteEvents.pointerClickHandler);yield return null;yield return null;

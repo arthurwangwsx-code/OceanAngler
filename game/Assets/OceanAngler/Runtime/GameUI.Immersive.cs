@@ -9,12 +9,12 @@ namespace OceanAngler
         GameObject hintGroup;
         void GoBack()
         {
-            string parent=page=="鱼类详情"||page=="保护观察"?"图鉴":page=="观察生物"?"保护观察":page=="钓组预览"?"钓具":page=="海湾观察"?"准备":page=="隐私许可"?"家长区":page=="家长区"||page=="家长验证"?"设置":"出海";
-            Navigate(parent);
+            string target=pageTrail.Count>0?pageTrail.Pop():"首页";
+            OpenPage(target,false);
         }
         Button IconButton(Transform parent,string title,TouchSymbol.Kind symbol,float x,float y,float w,float h,System.Action click,float iconSize=52)
         {
-            var button=Button(parent,title,x,y,w,h,click,Color.clear);button.name="Touch-"+symbol;button.GetComponent<Image>().raycastTarget=true;
+            var button=Button(parent,title,x,y,w,h,click,Color.clear);button.name="Touch-"+symbol;button.GetComponent<Image>().raycastTarget=true;button.GetComponent<Image>().canvasRenderer.cullTransparentMesh=false;
             var mark=new GameObject("Symbol",typeof(RectTransform),typeof(TouchSymbol));var rt=mark.GetComponent<RectTransform>();rt.SetParent(button.transform,false);rt.anchorMin=rt.anchorMax=new Vector2(.5f,1);rt.pivot=new Vector2(.5f,1);rt.anchoredPosition=new Vector2(0,-2);rt.sizeDelta=new Vector2(iconSize,iconSize);
             var graphic=mark.GetComponent<TouchSymbol>();graphic.symbol=symbol;graphic.raycastTarget=false;button.targetGraphic=graphic;
             var text=button.GetComponentInChildren<Text>();text.fontSize=17;text.rectTransform.anchoredPosition=new Vector2(0,-iconSize-4);text.rectTransform.sizeDelta=new Vector2(0,h-iconSize-4);text.alignment=TextAnchor.UpperCenter;
@@ -87,14 +87,14 @@ namespace OceanAngler
             var panel=FixedBox(pageRoot,home?"HomeMenu":"PauseMenu",Panel,x,y,w,h);
             Label(panel,home?"海洋小钓手":"探索已暂停",26,Color.white,20,12,-40,40);
             Label(panel,game.Content.Habitat(game.Progress.Data.habitatId).name+" · 研究积分 "+game.Progress.Data.totalPoints,17,Muted,20,53,-40,28);
-            float half=(w-52)/2;
-            Button(panel,game.RestReminder?"休息好了，继续":"继续探索",20,88,half,46,()=>{if(game.RestReminder)game.DismissRest();page="出海";focusedFish=null;game.Pause(false);dirty=false;Rebuild();},Teal);
-            Button(panel,"海域与装备",32+half,88,half,46,()=>Navigate("准备"),Navy);
+            float half=(w-52)/2;bool shortMenu=h<324;float primary=shortMenu?76:88,links=shortMenu?130:146,ending=shortMenu?212:240,note=shortMenu?264:294;
+            Button(panel,game.RestReminder?"休息好了，继续":"继续探索",20,primary,half,46,()=>{if(game.RestReminder)game.DismissRest();page="出海";focusedFish=null;game.Pause(false);dirty=false;Rebuild();},Teal);
+            Button(panel,"海域与装备",32+half,primary,half,46,()=>Navigate("准备"),Navy);
             string[] names={"出海","图鉴","钓具","任务","设置"};TouchSymbol.Kind[] icons={TouchSymbol.Kind.Rod,TouchSymbol.Kind.Book,TouchSymbol.Kind.Reel,TouchSymbol.Kind.Tasks,TouchSymbol.Kind.Settings};float cell=(w-32)/5;
-            for(int i=0;i<names.Length;i++){string target=names[i];IconButton(panel,target,icons[i],16+i*cell,146,cell,82,()=>Navigate(target),48);}
-            Button(panel,"结束本次 · 返回准备",20,240,half,44,()=>Navigate("退出确认"),Navy).GetComponentInChildren<Text>().fontSize=17;
-            Button(panel,home?"返回暂停":"返回首页",32+half,240,half,44,()=>Navigate(home?"出海":"首页"),Navy).GetComponentInChildren<Text>().fontSize=17;
-            Label(panel,game.RestReminder?"和家人休息一下，准备好再继续。":"当前探索会保留，点继续才恢复。",17,Muted,20,294,-40,28);
+            for(int i=0;i<names.Length;i++){string target=names[i];IconButton(panel,target,icons[i],16+i*cell,links,cell,shortMenu?76:82,()=>Navigate(target),shortMenu?42:48);}
+            Button(panel,"结束本次 · 返回准备",20,ending,half,44,()=>Navigate("退出确认"),Navy).GetComponentInChildren<Text>().fontSize=17;
+            Button(panel,home?"返回暂停":"返回首页",32+half,ending,half,44,()=>Navigate(home?"出海":"首页"),Navy).GetComponentInChildren<Text>().fontSize=17;
+            Label(panel,game.RestReminder?"和家人休息一下，准备好再继续。":"当前探索会保留，点继续才恢复。",17,Muted,20,note,-40,28);
         }
         void BuildExitConfirmation()
         {
@@ -103,25 +103,33 @@ namespace OceanAngler
             Label(p,"结束本次探索？",26,Color.white,22,18,-44,40);
             Label(p,game.Session.Catch!=null?"本次还没记录的鱼会放回海中。\n已有图鉴、记录和研究积分都会保留。":"已有图鉴、记录和研究积分都会保留。\n你可以在准备页再次出海。",18,Muted,22,72,-44,82);
             Button(p,"取消，继续留在这里",22,166,-44,44,()=>Navigate("出海"),Teal).GetComponentInChildren<Text>().fontSize=18;
-            Button(p,"确认结束并返回准备",22,222,-44,44,()=>{game.ReturnToPreparation();Navigate("准备");},Navy).GetComponentInChildren<Text>().fontSize=18;
+            Button(p,"确认结束并返回准备",22,222,-44,44,()=>{game.ReturnToPreparation();pageTrail.Clear();OpenPage("准备",false);},Navy).GetComponentInChildren<Text>().fontSize=18;
         }
         void BuildPreparation()
         {
-            var p=PagePanel("Preparation",new Vector2(.1f,.12f),new Vector2(.9f,.81f),432);
-            // Keep departure above the footer, outside scroll content. Reserve
-            // space in the viewport so its last row cannot be covered.
+            bool split=PageWidth>=540;float column=split?(PageWidth-56)*.52f:PageWidth-44;
+            var p=PagePanel("Preparation",Vector2.zero,Vector2.one,split?202:426);
             var scroll=p.GetComponentInParent<ScrollRect>();var viewport=scroll!=null?scroll.viewport:p;viewport.offsetMin+=new Vector2(0,56);
-            Label(p,"选择海域，准备好再出发",24,Color.white,22,12,-44,38);
+            if(scroll==null&&split&&viewport.rect.height<202)
+            {
+                // Short phones scroll the content while departure stays fixed.
+                viewport.gameObject.AddComponent<RectMask2D>();
+                var content=new GameObject("ScrollableContent",typeof(RectTransform)).GetComponent<RectTransform>();content.SetParent(viewport,false);content.anchorMin=new Vector2(0,1);content.anchorMax=Vector2.one;content.pivot=new Vector2(.5f,1);content.sizeDelta=new Vector2(0,202);
+                scroll=viewport.gameObject.AddComponent<ScrollRect>();scroll.viewport=viewport;scroll.content=content;scroll.horizontal=false;scroll.movementType=ScrollRect.MovementType.Clamped;p=content;
+            }
+            Label(p,"选择海域",22,Color.white,22,8,column,32);
             bool ready=game.Session.Phase==FishingPhase.Ready;
             for(int i=0;i<game.Content.habitats.Length;i++)
             {
                 var habitat=game.Content.habitats[i];bool unlocked=game.Progress.Data.totalPoints>=habitat.unlockPoints;
-                var b=Button(p,habitat.name+(unlocked?"":" · "+habitat.unlockPoints+"分"),22,62+i*52,-44,46,()=>game.SelectHabitat(habitat.id),habitat.id==game.Progress.Data.habitatId?Teal:Navy);b.GetComponentInChildren<Text>().fontSize=19;b.interactable=ready&&unlocked;
+                var b=Button(p,habitat.name+(unlocked?"":" · "+habitat.unlockPoints+"分"),22,48+i*50,column,44,()=>game.SelectHabitat(habitat.id),habitat.id==game.Progress.Data.habitatId?Teal:Navy);b.GetComponentInChildren<Text>().fontSize=18;b.interactable=ready&&unlocked;
             }
-            Label(p,"已装备\n"+game.Content.Gear(game.Progress.Data.rodId).name+" · "+game.Content.Gear(game.Progress.Data.reelId).name+"\n"+game.Content.Gear(game.Progress.Data.lineId).name+" · "+game.Content.Gear(game.Progress.Data.lureId).name,18,Muted,22,230,-44,82);
-            Button(p,"更换钓具",22,320,-44,44,()=>Navigate("钓具"),Navy).GetComponentInChildren<Text>().fontSize=18;
-            if(MarineHabitat.ResourceFor(game.Progress.Data.habitatId)!=null)Button(p,game.Progress.Data.habitatId=="bay"?"看看海湾":"看看海域",22,376,-44,44,()=>Navigate("海湾观察"),Navy).GetComponentInChildren<Text>().fontSize=18;
-            Button(pageRoot,ready?"开始钓鱼":"返回当前探索",Compact?12:Width*.1f,Height-(Compact?88:124),Compact?Width-24:Width*.8f,44,()=>{page="出海";focusedFish=null;game.Pause(false);dirty=false;Rebuild();},Teal).GetComponentInChildren<Text>().fontSize=18;
+            float x=split?34+column:22,y=split?8:214,w=split?PageWidth-x-22:PageWidth-44;
+            Label(p,"已装备",22,Color.white,x,y,w,32);
+            Label(p,game.Content.Gear(game.Progress.Data.rodId).name+"\n"+game.Content.Gear(game.Progress.Data.reelId).name,17,Muted,x,y+38,w,56);
+            Button(p,"更换钓具",x,y+100,w,44,()=>Navigate("钓具"),Navy).GetComponentInChildren<Text>().fontSize=18;
+            if(MarineHabitat.ResourceFor(game.Progress.Data.habitatId)!=null)Button(p,game.Progress.Data.habitatId=="bay"?"看看海湾":"看看海域",x,y+150,w,44,()=>Navigate("海湾观察"),Navy).GetComponentInChildren<Text>().fontSize=18;
+            Button(pageRoot,ready?"开始钓鱼":"返回当前探索",(Width-PageWidth)/2,Height-56,PageWidth,44,()=>{pageTrail.Clear();page="出海";focusedFish=null;game.Pause(false);dirty=false;Rebuild();},Teal).GetComponentInChildren<Text>().fontSize=18;
         }
     }
 }

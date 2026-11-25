@@ -17,7 +17,8 @@ namespace OceanAngler.Tests
         Scene scene;GameController game;string root,archive;readonly Dictionary<string,string> originals=new Dictionary<string,string>();
         IEnumerator Tap(string label)
         {
-            var b=UnityEngine.Object.FindObjectsByType<Button>(FindObjectsSortMode.None).Single(b=>b.isActiveAndEnabled&&b.interactable&&b.GetComponentInChildren<Text>()?.text==label);
+            yield return UnityEngine.Object.FindFirstObjectByType<RuntimeSmoke>().ResolveControlForReview(label,true);
+            var b=UnityEngine.Object.FindFirstObjectByType<RuntimeSmoke>().FindForReview(label,true);
             ExecuteEvents.Execute(b.gameObject,new PointerEventData(EventSystem.current){button=PointerEventData.InputButton.Left},ExecuteEvents.pointerClickHandler);yield return null;yield return null;
         }
         [UnityTearDown] public IEnumerator Cleanup()

@@ -5,7 +5,7 @@ namespace OceanAngler
     // Original, resolution-independent UI marks. No emoji or font glyph dependency.
     public sealed class TouchSymbol : MaskableGraphic
     {
-        public enum Kind { Pause, Play, Back, Home, Rod, Reel, Fish, Book, Map, Settings, Tasks, Release }
+        public enum Kind { Pause, Play, Back, Home, Rod, Reel, Fish, Book, Map, Settings, Tasks, Release, Rotate, ZoomIn, ZoomOut, Reset, Sound }
         public Kind symbol;
         public bool background=true;
         protected override void OnPopulateMesh(VertexHelper mesh)
@@ -48,6 +48,12 @@ namespace OceanAngler
                 case Kind.Book:Line(-.27f,.22f,0,.16f);Line(0,.16f,.27f,.22f);Line(-.27f,.22f,-.27f,-.2f);Line(.27f,.22f,.27f,-.2f);Line(-.27f,-.2f,0,-.25f);Line(0,-.25f,.27f,-.2f);Line(0,.16f,0,-.25f);break;
                 case Kind.Map:Line(-.28f,.2f,-.1f,.27f);Line(-.1f,.27f,.1f,.17f);Line(.1f,.17f,.28f,.24f);Line(-.28f,.2f,-.28f,-.22f);Line(-.28f,-.22f,-.1f,-.15f);Line(-.1f,-.15f,.1f,-.25f);Line(.1f,-.25f,.28f,-.18f);Line(.28f,-.18f,.28f,.24f);Line(-.1f,.27f,-.1f,-.15f);Line(.1f,.17f,.1f,-.25f);break;
                 case Kind.Settings:Ring(0,0,.17f);Ring(0,0,.06f);for(int i=0;i<8;i++){float a=i*Mathf.PI/4;Line(Mathf.Cos(a)*.18f,Mathf.Sin(a)*.18f,Mathf.Cos(a)*.28f,Mathf.Sin(a)*.28f,.06f);}break;
+                case Kind.Rotate:case Kind.Reset:
+                    for(int i=0;i<19;i++){float a=(i+2)*Mathf.PI/12,b=(i+3)*Mathf.PI/12;Line(Mathf.Cos(a)*.24f,Mathf.Sin(a)*.24f,Mathf.Cos(b)*.24f,Mathf.Sin(b)*.24f);}
+                    Line(.21f,.12f,.27f,.22f);Line(.27f,.22f,.13f,.23f);
+                    if(symbol==Kind.Reset){Line(-.1f,0,.1f,0);Line(0,-.1f,0,.1f);}break;
+                case Kind.ZoomIn:case Kind.ZoomOut:Ring(-.06f,.06f,.18f);Line(.07f,-.08f,.25f,-.26f,.055f);Line(-.16f,.06f,.04f,.06f);if(symbol==Kind.ZoomIn)Line(-.06f,-.04f,-.06f,.16f);break;
+                case Kind.Sound:Line(-.25f,.1f,-.13f,.1f);Line(-.13f,.1f,.04f,.24f);Line(.04f,.24f,.04f,-.24f);Line(.04f,-.24f,-.13f,-.1f);Line(-.13f,-.1f,-.25f,-.1f);Line(-.25f,-.1f,-.25f,.1f);Line(.14f,.13f,.22f,.06f);Line(.22f,.06f,.22f,-.06f);Line(.22f,-.06f,.14f,-.13f);break;
                 case Kind.Tasks:Line(-.18f,.24f,.23f,.24f);Line(.23f,.24f,.23f,-.24f);Line(.23f,-.24f,-.23f,-.24f);Line(-.23f,-.24f,-.23f,.18f);for(int i=0;i<3;i++){float y=.12f-i*.13f;Line(-.13f,y,-.09f,y-.035f);Line(-.09f,y-.035f,-.02f,y+.025f);Line(.045f,y,.15f,y);}break;
             }
         }

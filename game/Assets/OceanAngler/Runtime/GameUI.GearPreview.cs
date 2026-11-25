@@ -5,14 +5,13 @@ namespace OceanAngler
     {
         void BuildGearPreview()
         {
-            float width=Mathf.Min(300,Width*.35f);
-            var panel=Box(pageRoot,"GearDetails",Panel,new Vector2(1,0),Vector2.one,new Vector2(-width-12,Compact?36:72),new Vector2(-12,Compact?-102:-156));
-            Label(panel,"入门钓组",Compact?23:28,Color.white,14,8,-28,44);
-            Label(panel,"鱼线穿过导环，\n摇柄带动收线。",Compact?17:21,Muted,14,52,-28,Compact?54:64);
-            Button(panel,GearCloseup?"查看全竿":"近看卷线器",14,Compact?110:122,-28,Compact?44:48,()=>{GearCloseup=!GearCloseup;dirty=true;},Navy).GetComponentInChildren<UnityEngine.UI.Text>().fontSize=Compact?18:22;
-            Button(panel,GearReelingDemo?"停止收线演示":"试摇卷线器",14,Compact?162:182,-28,Compact?44:48,()=>{GearReelingDemo=!GearReelingDemo;dirty=true;},Teal).GetComponentInChildren<UnityEngine.UI.Text>().fontSize=Compact?18:22;
-            Button(pageRoot,"返回钓具",12,Height-(Compact?86:124),130,44,()=>Navigate("钓具"),Navy).GetComponentInChildren<UnityEngine.UI.Text>().fontSize=18;
-            Button(pageRoot,"旋转钓组",152,Height-(Compact?86:124),130,44,()=>GearYaw+=30,Navy).GetComponentInChildren<UnityEngine.UI.Text>().fontSize=18;
+            float width=Mathf.Min(600,Width-24),cell=(width-18)/4,left=(Width-width)/2,top=Height-78;
+            IconButton(pageRoot,"旋转钓组",TouchSymbol.Kind.Rotate,left,top,cell,66,()=>GearYaw+=30,32);
+            IconButton(pageRoot,GearCloseup?"查看全竿":"近看卷线器",TouchSymbol.Kind.ZoomIn,left+cell+6,top,cell,66,()=>{GearCloseup=!GearCloseup;dirty=true;},32);
+            IconButton(pageRoot,GearReelingDemo?"停止演示":"试摇卷线器",GearReelingDemo?TouchSymbol.Kind.Pause:TouchSymbol.Kind.Reel,left+2*(cell+6),top,cell,66,()=>{GearReelingDemo=!GearReelingDemo;dirty=true;},32);
+            IconButton(pageRoot,"返回钓具",TouchSymbol.Kind.Back,left+3*(cell+6),top,cell,66,GoBack,32);
+            var hint=Label(pageRoot,"摇动卷线器，看看鱼线。",17,Muted,112,46,-224,28);
+            var outline=hint.gameObject.AddComponent<UnityEngine.UI.Outline>();outline.effectColor=Navy;outline.effectDistance=new Vector2(1,-1);
         }
     }
 }

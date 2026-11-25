@@ -25,11 +25,12 @@ namespace OceanAngler
         public bool Compact { get; private set; }
         public string PageName => page;
         public bool Playing => page=="出海"&&!game.Session.Paused;
-        public bool CompactViewer => Compact && page=="鱼类详情";
+        public bool CompactViewer => page=="鱼类详情";
         float Width => DisplayMetrics.SafeArea.width/DisplayMetrics.PixelsPerPoint;
         float Height => DisplayMetrics.SafeArea.height/DisplayMetrics.PixelsPerPoint;
         string page = "首页", gearTab = "rod", focusedFish;
         string selectedFish;
+        readonly Stack<string> pageTrail=new Stack<string>();
         ScrollRect gearScroll;
         string renderedGearTab;
         readonly Dictionary<string,float> gearScrollPositions=new Dictionary<string,float>();
@@ -67,7 +68,7 @@ namespace OceanAngler
         {
             if (safe == null) return;
             canvas.scaleFactor=DisplayMetrics.PixelsPerPoint;
-            bool compact=Height<600;if(compact!=Compact){Compact=compact;if(!compact&&page=="鱼类详情")page="图鉴";dirty=true;}
+            bool compact=Height<600;if(compact!=Compact){Compact=compact;dirty=true;}
             var size=new Vector2(Width,Height);if(Vector2.Distance(size,lastSafeSize)>.5f){lastSafeSize=size;dirty=true;}
             var area = DisplayMetrics.SafeArea; safe.anchorMin = new Vector2(area.xMin/Screen.width,area.yMin/Screen.height); safe.anchorMax = new Vector2(area.xMax/Screen.width,area.yMax/Screen.height);
             if (game.Session.Phase != lastPhase || game.Session.Paused != lastPause) dirty = true;
@@ -114,11 +115,16 @@ namespace OceanAngler
                 case "保护观察": BuildObservations(); break;
                 case "观察生物": BuildObservationVisit(); break;
                 case "鱼类详情": BuildCompactInspect(); break;
+                case "鱼类资料": BuildFishReading(); break;
                 case "钓具": BuildGear(); break;
                 case "钓组预览": BuildGearPreview(); break;
                 case "海湾观察": BuildHabitatPreview(); break;
                 case "任务": BuildTasks(); break;
                 case "设置": BuildSettings(); break;
+                case "操作与辅助": BuildSettingGroup("操作"); break;
+                case "声音与触觉": BuildSettingGroup("声音"); break;
+                case "画面与动态": BuildSettingGroup("画面"); break;
+                case "观察资料": BuildObservationReading(); break;
                 case "家长验证": BuildParentGate(); break;
                 case "家长区": BuildParent(); break;
                 case "隐私许可": BuildLegal(); break;
@@ -129,16 +135,18 @@ namespace OceanAngler
                 gearScroll.verticalNormalizedPosition=gearScrollPositions.TryGetValue(gearTab,out float position)?position:1;
             }
         }
-        void Navigate(string target)
+        void Navigate(string target)=>OpenPage(target,true);
+        void OpenPage(string target,bool remember)
         {
-            game.HoldReel(false); charging=false;
+            game.HoldReel(false);charging=false;
+            if(target=="首页"||target=="出海")pageTrail.Clear();
+            else if(remember&&page!=target)pageTrail.Push(page);
             if(target=="钓具")game.ClearNotice();
-            if (target != "出海") game.Pause(true);
-            // 返回钓鱼页仍显示继续界面，避免导航触发自动输入。
-            page=target; focusedFish=target=="图鉴"?(selectedFish??game.Content.fish[0].id):null; dirty=true;
+            if(target!="出海")game.Pause(true);
+            page=target;focusedFish=target=="鱼类详情"?(selectedFish??game.Content.fish[0].id):null;
             if(target!="钓组预览")GearReelingDemo=false;
-            // Navigation is visible in the same event frame; the old page is
-            // disabled before destruction so releasing a hold cannot recast.
+            // Disable the old tree in the event frame before a release can
+            // propagate into a hidden hold control.
             dirty=false;Rebuild();
         }
         void BindFishingInput(Button action)
@@ -177,24 +185,13 @@ namespace OceanAngler
             switch(game.Session.Phase) {case FishingPhase.Ready:return "按住蓄力，松手抛竿。轻点也能抛出。首次探索有辅助陪伴。";case FishingPhase.Casting:return "观察拟饵落水，寻找鱼群。";case FishingPhase.Waiting:return "观察拟饵，等咬钩提示再提竿。";case FishingPhase.Bite:return "点一下提竿，让鱼线轻轻绷紧。";case FishingPhase.Fighting:return game.Session.Assisted?"按住收线，松手降张力。张力过高时，辅助会帮你松线。":"按住收线，松手降张力。看到警戒提示就及时松手。";case FishingPhase.Landed:return "记录体长和重量，再把它放回海里。积分会和记录一起保存。";default:return "已有积分不会减少，随时可以再试一次。";}
         }
         string ActionName() => game.Session.Paused?"继续探索":game.Session.Phase==FishingPhase.Ready?"按住蓄力 · 松手抛竿":game.Session.Phase==FishingPhase.Fighting?"按住收线":game.Session.Phase==FishingPhase.Bite?"提竿":game.Session.Phase==FishingPhase.Landed?"记录并放流":game.Session.Phase==FishingPhase.Escaped?"再试一次":game.Session.Phase==FishingPhase.Casting?"等待落水":"等待咬钩";
-        void BuildJournal()
-        {
-            if(Compact){BuildCompactJournal();return;}
-            var panel=PagePanel("Journal",new Vector2(.02f,.12f),new Vector2(.60f,.81f),530);
-            Label(panel,"鱼类图鉴  "+game.Progress.Data.catches.Select(c=>c.fishId).Distinct().Count()+" / 12",28,Color.white,22,16,-44,46);
-            ObservationEntry(panel,72);
-            BuildFishCards(panel,Width*.58f,2,126);
-            BuildJournalControls(Width*.63f,Height*.52f-50,Width*.35f);
-            BuildJournalModelViewport(Width*.63f,154,Width*.35f,Height*.52f-62);
-            var detail=Box(pageRoot,"FishDetails",Panel,new Vector2(.63f,.12f),new Vector2(.98f,.48f),Vector2.zero,Vector2.zero);
-            BuildFishDetails(detail,game.Content.Fish(selectedFish??game.Content.fish[0].id));
-        }
+        void BuildJournal()=>BuildCompactJournal();
         void BuildGear()
         {
             var panel=PagePanel("Gear",new Vector2(.02f,.12f),new Vector2(.75f,.81f),600);
             gearScroll=panel.GetComponentInParent<ScrollRect>();renderedGearTab=gearTab;
             string[] categories={"rod","reel","line","lure"};string[] labels={"鱼竿","卷线器","鱼线","拟饵"};
-            float tabWidth=(Compact?Width-52:Width*.73f-44)/4;
+            float tabWidth=(PageWidth-44)/4;
             for(int i=0;i<4;i++){string tab=categories[i];Button(panel,labels[i],22+i*tabWidth,18,tabWidth-10,48,()=>{gearTab=tab;dirty=true;},gearTab==tab?Teal:Navy);}
             Button(panel,"观察入门钓组",22,78,-44,48,()=>Navigate("钓组预览"),Navy);
             var items=game.Content.gear.Where(g=>g.category==gearTab).ToArray();
@@ -205,12 +202,10 @@ namespace OceanAngler
                 var b=Button(panel,g.name+(equipped?"  已装备":unlocked?"  装备":"  "+g.unlockPoints+"分解锁")+"\n"+g.description,22,142+i*72,-44,64,()=>game.SelectGear(g.id),equipped?Teal:Navy);
                 b.interactable=unlocked&&game.Session.Phase==FishingPhase.Ready;b.GetComponentInChildren<Text>().fontSize=19;
             }
-            if(!Compact)
-            Label(pageRoot,game.Session.Phase==FishingPhase.Ready?"解锁后永久可用\n不扣研究积分\n无损坏与消耗":"请先完成当前鱼获，\n或返回出海继续。\n钓鱼中不能更换装备。",24,Color.white,-315,245,290,160,true);
         }
         void BuildTasks()
         {
-            float available=Width*.96f-44;int columns=available<600?1:2;float cellWidth=available/columns;
+            float available=PageWidth-44;int columns=available<600?1:2;float cellWidth=available/columns;
             var panel=PagePanel("Tasks",new Vector2(.02f,.12f),new Vector2(.98f,.81f),Mathf.Max(600,88+Mathf.Ceil(game.Content.tasks.Length/(float)columns)*136));
             Label(panel,"探索手册  ·  "+game.Content.tasks.Count(t=>TaskProgress.Complete(t,game.Progress.Data))+" / 18",28,Color.white,22,14,-44,46);
             for(int i=0;i<game.Content.tasks.Length;i++)
@@ -225,18 +220,47 @@ namespace OceanAngler
         static string GentleResult(CatchRecord record)=>TaskProgress.Gentle(record)?"轻柔控线已达标":"轻柔控线，下次再试";
         void BuildSettings()
         {
-            var panel=PagePanel("Settings",new Vector2(.02f,.12f),new Vector2(.78f,.81f),736);
-            Label(panel,"按自己的节奏探索",30,Color.white,24,18,-48,46);
+            int columns=PageWidth>=500?2:1;
+            var panel=PagePanel("Settings",Vector2.zero,Vector2.one,columns==2?278:408);
+            Label(panel,"按自己的节奏探索",24,Color.white,22,12,-44,36);
+            Label(panel,"选择一项，再调整对应设置。",17,Muted,22,52,-44,28);
+            string[] labels={"操作与辅助","声音与触觉","画面与动态","家长区与隐私"};
+            TouchSymbol.Kind[] icons={TouchSymbol.Kind.Rod,TouchSymbol.Kind.Sound,TouchSymbol.Kind.Map,TouchSymbol.Kind.Settings};
+            float cell=(PageWidth-44)/columns;
+            for(int i=0;i<labels.Length;i++)
+            {
+                string target=labels[i];
+                IconButton(panel,target,icons[i],22+i%columns*cell,92+i/columns*66,cell-12,54,()=>
+                {
+                    if(target=="家长区与隐私"){parentAnswer=UnityEngine.Random.Range(4,9)+9;Navigate("家长验证");}
+                    else Navigate(target);
+                },28);
+            }
+            Label(panel,"无广告 · 无内购 · 设置即时保存",17,Muted,22,columns==2?238:370,-44,30);
+        }
+        void BuildSettingGroup(string group)
+        {
+            var panel=PagePanel("SettingGroup",Vector2.zero,Vector2.one,group=="声音"?272:278);
+            Label(panel,group=="操作"?"找到顺手的玩法":group=="声音"?"听见海洋的声音":"用舒服的画面探索",24,Color.white,24,14,-48,36);
             var s=game.Progress.Data.settings;
-            Setting(panel,90,"初学辅助",s.assisted,()=>game.Configure(x=>x.assisted=!x.assisted));
-            Setting(panel,158,"左手操作",s.leftHanded,()=>game.Configure(x=>x.leftHanded=!x.leftHanded));
-            Setting(panel,226,"减弱动态效果",s.reducedMotion,()=>game.Configure(x=>x.reducedMotion=!x.reducedMotion));
-            Setting(panel,294,"环境与提示音",s.sound,()=>game.Configure(x=>x.sound=!x.sound));
-            Setting(panel,362,"探索音乐",s.music,()=>game.Configure(x=>x.music=!x.music));
-            Setting(panel,430,"咬钩触觉提示",s.haptics,()=>game.Configure(x=>x.haptics=!x.haptics));
-            Setting(panel,498,"固定水下镜头",s.underwaterOnly,()=>game.Configure(x=>x.underwaterOnly=!x.underwaterOnly));
-            Label(panel,"无广告 · 无内购 · 设置即时保存\n减弱动态时镜头也固定在水下。",22,Muted,24,566,-48,80);
-            Button(panel,"家长区与隐私",24,656,330,52,()=>{parentAnswer=UnityEngine.Random.Range(4,9)+9;page="家长验证";dirty=true;},Navy);
+            if(group=="操作")
+            {
+                Setting(panel,70,"初学辅助",s.assisted,()=>game.Configure(x=>x.assisted=!x.assisted));
+                Setting(panel,138,"左手操作",s.leftHanded,()=>game.Configure(x=>x.leftHanded=!x.leftHanded));
+                Label(panel,"辅助会在张力过高时帮忙松线。",18,Muted,24,212,-48,54);
+            }
+            else if(group=="声音")
+            {
+                Setting(panel,70,"环境与提示音",s.sound,()=>game.Configure(x=>x.sound=!x.sound));
+                Setting(panel,138,"探索音乐",s.music,()=>game.Configure(x=>x.music=!x.music));
+                Setting(panel,206,"咬钩触觉提示",s.haptics,()=>game.Configure(x=>x.haptics=!x.haptics));
+            }
+            else
+            {
+                Setting(panel,70,"减弱动态效果",s.reducedMotion,()=>game.Configure(x=>x.reducedMotion=!x.reducedMotion));
+                Setting(panel,138,"固定水下镜头",s.underwaterOnly,()=>game.Configure(x=>x.underwaterOnly=!x.underwaterOnly));
+                Label(panel,"减弱动态时镜头也固定在水下。",18,Muted,24,212,-48,54);
+            }
         }
         void Setting(RectTransform parent,float y,string title,bool enabled,Action action) => Button(parent,title+"    "+(enabled?"已开启":"已关闭"),24,y,-48,54,action,enabled?new Color(.07f,.32f,.34f):Navy);
         void BuildParentGate()
@@ -245,24 +269,23 @@ namespace OceanAngler
             Label(p,"请让家长协助",30,Color.white,28,24,-56,46);
             Label(p,"9 + "+(parentAnswer-9)+" = ?",32,Gold,28,94,-56,52);
             int[] answers={parentAnswer-1,parentAnswer,parentAnswer+2};
-            for(int i=0;i<3;i++){int answer=answers[i];Button(p,answer.ToString(),28+i*((Compact?Width*.96f:Width*.6f)-56)/3,180,((Compact?Width*.96f:Width*.6f)-76)/3,60,()=>{if(answer==parentAnswer){page="家长区";resetConfirm=false;}else{page="设置";}dirty=true;},Navy);}
-            Button(p,"返回游戏",28,285,250,52,()=>Navigate("出海"),Navy);
+            for(int i=0;i<3;i++){int answer=answers[i];Button(p,answer.ToString(),28+i*((PageWidth)-56)/3,180,((PageWidth)-76)/3,60,()=>{if(answer==parentAnswer){resetConfirm=false;OpenPage("家长区",false);}else GoBack();},Navy);}
+            Button(p,"返回游戏",28,285,-56,52,()=>Navigate("出海"),Navy);
         }
         void BuildParent()
         {
-            var p=PagePanel("Parents",new Vector2(.06f,.16f),new Vector2(.94f,.81f),Compact?750:560);
+            var p=PagePanel("Parents",new Vector2(.06f,.16f),new Vector2(.94f,.81f),570);
             Label(p,"家长区",30,Color.white,28,18,-56,46);
             Label(p,"游戏进度仅保存在此设备，无账号、广告、内购或第三方分析。\n技术支持、反馈与隐私请求：arthur.wang.wsx@gmail.com\n模型和科普内容仍在制作审核，当前为开发测试版本。\n字体：Noto Sans SC（SIL Open Font License 1.1）。",Compact?17:23,Muted,28,90,-56,160);
-            Button(p,"查看隐私与字体许可",28,270,420,54,()=>{page="隐私许可";dirty=true;},Navy);
-            Button(p,"联系技术支持",Compact?28:470,Compact?334:270,360,54,()=>Application.OpenURL("mailto:arthur.wang.wsx@gmail.com?subject=OceanAngler%20Feedback"),Navy);
-            Button(p,resetConfirm?"再次确认：建立新进度（保留原文件）":"清除游戏进度",28,Compact?410:350,-56,56,()=>{if(resetConfirm){game.ResetProgress();resetConfirm=false;page="出海";}else resetConfirm=true;dirty=true;},resetConfirm?new Color(.45f,.21f,.16f):Navy);
-            Button(p,"取消并返回设置",28,Compact?490:430,420,52,()=>{resetConfirm=false;Navigate("设置");},Navy);
+            Button(p,"查看隐私与字体许可",28,270,-56,54,()=>Navigate("隐私许可"),Navy);
+            Button(p,"联系技术支持",28,334,-56,54,()=>Application.OpenURL("mailto:arthur.wang.wsx@gmail.com?subject=OceanAngler%20Feedback"),Navy);
+            Button(p,resetConfirm?"再次确认：建立新进度（保留原文件）":"清除游戏进度",28,410,-56,56,()=>{if(resetConfirm){game.ResetProgress();resetConfirm=false;page="出海";}else resetConfirm=true;dirty=true;},resetConfirm?new Color(.45f,.21f,.16f):Navy);
+            Button(p,"取消并返回设置",28,490,-56,52,()=>{resetConfirm=false;GoBack();},Navy);
         }
         void BuildLegal()
         {
-            var p=Compact?BodyPanel("Legal"):Box(pageRoot,"Legal",Panel,new Vector2(.04f,.12f),new Vector2(.96f,.81f),Vector2.zero,Vector2.zero);
-            Button(p,"返回家长区",22,16,260,48,()=>{page="家长区";dirty=true;},Navy);
-            var viewport=Compact?Box(p,"Scroll",Navy,Vector2.zero,Vector2.one,new Vector2(12,12),new Vector2(-12,-78)):Box(p,"Scroll",Navy,new Vector2(.02f,.04f),new Vector2(.98f,.84f),Vector2.zero,Vector2.zero);
+            var p=BodyPanel("Legal");
+            var viewport=Box(p,"Scroll",Navy,Vector2.zero,Vector2.one,new Vector2(12,12),new Vector2(-12,-12));
             viewport.gameObject.AddComponent<RectMask2D>();
             var content=new GameObject("Content",typeof(RectTransform)).GetComponent<RectTransform>();content.SetParent(viewport,false);content.anchorMin=new Vector2(0,1);content.anchorMax=new Vector2(1,1);content.pivot=new Vector2(.5f,1);content.sizeDelta=new Vector2(0,2200);
             string license=Resources.Load<TextAsset>("Legal/NotoSansSC-OFL")?.text??"字体许可暂时无法读取，请联系支持。";
@@ -280,7 +303,7 @@ namespace OceanAngler
             Button(p,"15",28,280,180,58,()=>{},Navy);
             Button(p,resetConfirm?"16 · 再次确认恢复":"16",228,280,-256,58,()=>{if(resetConfirm){game.ResetProgress();page="出海";resetConfirm=false;}else resetConfirm=true;dirty=true;},Teal);
         }
-        public void SelectJournalFish(string id) { selectedFish=focusedFish=id;dirty=true; }
+        public void SelectJournalFish(string id) { selectedFish=id;if(page!="鱼类详情")Navigate("鱼类详情");else{focusedFish=id;dirty=true;} }
         Image Bar(RectTransform parent,float y,Color color)
         {
             var bg=FixedBox(parent,"Bar",Navy,24,y,-48,12);

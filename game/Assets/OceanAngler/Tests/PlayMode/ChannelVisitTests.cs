@@ -13,12 +13,11 @@ namespace OceanAngler.Tests
     public sealed class ChannelVisitTests
     {
         Scene scene;GameController game;string root,archive;readonly Dictionary<string,string> originals=new Dictionary<string,string>();
-        void Click(string text)
+        IEnumerator Click(string text)
         {
-            if(UnityEngine.Object.FindFirstObjectByType<GameUI>().Playing&&new[]{"出海","图鉴","钓具","任务","设置","海域与装备"}.Contains(text))
-                UnityEngine.Object.FindObjectsByType<Button>(FindObjectsSortMode.None).Single(b=>b.isActiveAndEnabled&&b.GetComponentInChildren<Text>()?.text=="暂停").onClick.Invoke();
-            UnityEngine.Object.FindObjectsByType<Button>(FindObjectsSortMode.None).Single(b=>b.isActiveAndEnabled&&b.interactable&&b.GetComponentInChildren<Text>()?.text==text).onClick.Invoke();
+            yield return UnityEngine.Object.FindFirstObjectByType<RuntimeSmoke>().TapForReview(text,true);
         }
+
         [UnityTearDown] public IEnumerator Cleanup()
         {
             if(game!=null)game.Pause(true);if(scene.IsValid()&&scene.isLoaded){var empty=SceneManager.CreateScene("AfterChannelVisit");SceneManager.SetActiveScene(empty);yield return SceneManager.UnloadSceneAsync(scene);}
@@ -38,16 +37,16 @@ namespace OceanAngler.Tests
                 game.SelectHabitat("channel");yield return null;yield return null;
                 Assert.That(world.ActiveHabitat,Is.TypeOf<MarineHabitat>());Assert.That(UnityEngine.Object.FindObjectsByType<MarineHabitat>(FindObjectsInactive.Include,FindObjectsSortMode.None).Length,Is.EqualTo(1));Assert.That(GameObject.Find("OtherHabitatPrototype"),Is.Null);
                 Assert.That(world.ActiveHabitat.reflection.TrackedSubject,Is.EqualTo(trackedGear.transform),"A new habitat must bind the existing rig instead of retaining its destroyed predecessor");
-                Click("海域与装备");yield return null;yield return null;
-                Click("看看海域");yield return null;yield return null;Assert.That(ui.InspectingHabitat&&game.Session.Paused,Is.True);
-                if(!ui.HabitatSurfaceView){Click("回到水面");yield return null;yield return null;}
-                Assert.That(Camera.main.transform.position.y,Is.GreaterThan(world.ActiveHabitat.SeaLevel));Click("潜入水下");yield return null;yield return null;Assert.That(Camera.main.transform.position.y,Is.LessThan(world.ActiveHabitat.SeaLevel));Click("换个角度");yield return null;yield return null;
+                yield return Click("海域与装备");yield return null;yield return null;
+                yield return Click("看看海域");yield return null;yield return null;Assert.That(ui.InspectingHabitat&&game.Session.Paused,Is.True);
+                if(!ui.HabitatSurfaceView){yield return Click("回到水面");yield return null;yield return null;}
+                Assert.That(Camera.main.transform.position.y,Is.GreaterThan(world.ActiveHabitat.SeaLevel));yield return Click("潜入水下");yield return null;yield return null;Assert.That(Camera.main.transform.position.y,Is.LessThan(world.ActiveHabitat.SeaLevel));yield return Click("换个角度");yield return null;yield return null;
                 var target=ui.HabitatAngle%2==0?world.ActiveHabitat.underwaterCamera:world.ActiveHabitat.reefCamera;Assert.That(Vector3.Distance(Camera.main.transform.position,target.position),Is.LessThan(.001f));
                 game.Configure(s=>s.reducedMotion=true);yield return null;yield return null;Assert.That(world.ActiveHabitat.suspendedParticles.gameObject.activeSelf,Is.False);
-                Click("返回钓鱼");yield return null;yield return null;Assert.That(game.Session.Paused,Is.True);
+                yield return Click("返回钓鱼");yield return null;yield return null;Assert.That(game.Session.Paused,Is.True);
 
-                Click("继续探索");game.Cast(.5f);for(int i=0;i<12000&&game.Session.Phase!=FishingPhase.Landed;i++){if(game.Session.Phase==FishingPhase.Bite)game.Strike();game.Session.Tick(1f/30,game.Session.Tension<.65f);}Assert.That(game.Session.Phase,Is.EqualTo(FishingPhase.Landed));yield return null;yield return null;
-                Click("记录并放流");yield return null;yield return null;Assert.That(game.Progress.Data.catches.Count,Is.EqualTo(initial+trip+1));Assert.That(new SaveStore(Path.Combine(root,"ocean-progress.json"),game.Content).Load().data.habitatId,Is.EqualTo("channel"));
+                yield return Click("继续探索");game.Cast(.5f);for(int i=0;i<12000&&game.Session.Phase!=FishingPhase.Landed;i++){if(game.Session.Phase==FishingPhase.Bite)game.Strike();game.Session.Tick(1f/30,game.Session.Tension<.65f);}Assert.That(game.Session.Phase,Is.EqualTo(FishingPhase.Landed));yield return null;yield return null;
+                yield return Click("记录并放流");yield return null;yield return null;Assert.That(game.Progress.Data.catches.Count,Is.EqualTo(initial+trip+1));Assert.That(new SaveStore(Path.Combine(root,"ocean-progress.json"),game.Content).Load().data.habitatId,Is.EqualTo("channel"));
                 game.Pause(true);game.SelectHabitat("bay");yield return null;yield return null;Assert.That(world.ActiveHabitat,Is.TypeOf<BayHabitat>());Assert.That(world.ActiveHabitat.GetComponent<BayHabitat>().school.Members.Length,Is.EqualTo(3));
                 game.SelectHabitat("slope");yield return null;yield return null;Assert.That(world.ActiveHabitat,Is.TypeOf<MarineHabitat>());Assert.That(world.ActiveHabitat.SeaLevel,Is.EqualTo(200));Assert.That(world.ActiveHabitat.lighting,Is.Not.Null);Assert.That(GameObject.Find("OtherHabitatPrototype"),Is.Null);Assert.That(Camera.main.clearFlags,Is.EqualTo(CameraClearFlags.SolidColor));Assert.That(RenderSettings.fogColor,Is.EqualTo(new Color(.025f,.10f,.20f)));
                 Assert.That(world.ActiveHabitat.reflection.TrackedSubject,Is.EqualTo(trackedGear.transform));

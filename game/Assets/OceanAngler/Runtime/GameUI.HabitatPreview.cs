@@ -6,24 +6,13 @@ namespace OceanAngler
         public bool InspectingHabitat=>page=="海湾观察";
         public bool HabitatSurfaceView {get;private set;}=true;
         public int HabitatAngle {get;private set;}
-        public float HabitatCompositionOffset
-        {
-            get
-            {
-                float panel=Mathf.Min(300,Width*.35f),pixels=DisplayMetrics.PixelsPerPoint;
-                float center=DisplayMetrics.SafeArea.xMin+(Width-panel-24)*pixels*.5f;
-                return 1-2*center/Screen.width;
-            }
-        }
+        public float HabitatCompositionOffset=>0;
         void BuildHabitatPreview()
         {
-            float width=Mathf.Min(300,Width*.35f);
-            var panel=Box(pageRoot,"HabitatDetails",Panel,new Vector2(1,0),Vector2.one,new Vector2(-width-12,Compact?36:72),new Vector2(-12,Compact?-102:-156));
-            Label(panel,game.Content.Habitat(game.Progress.Data.habitatId).name,Compact?23:28,Color.white,14,8,-28,44);
-            Label(panel,game.Progress.Data.habitatId=="bay"?"看看沙地和礁石，\n让珊瑚安静生长。":game.Progress.Data.habitatId=="slope"?"看看岩壁与沉积通道，\n和研究潜器一起探索。":"看看岩岛与海床，\n安静欣赏开阔蓝海。",Compact?17:21,Muted,14,52,-28,Compact?54:64);
-            Button(panel,HabitatSurfaceView?"潜入水下":"回到水面",14,Compact?110:122,-28,Compact?44:48,()=>{HabitatSurfaceView=!HabitatSurfaceView;dirty=true;},Navy).GetComponentInChildren<UnityEngine.UI.Text>().fontSize=Compact?18:22;
-            Button(panel,"换个角度",14,Compact?162:182,-28,Compact?44:48,()=>HabitatAngle++,Teal).GetComponentInChildren<UnityEngine.UI.Text>().fontSize=Compact?18:22;
-            Button(pageRoot,"返回钓鱼",12,Height-(Compact?86:124),160,44,()=>Navigate("出海"),Navy).GetComponentInChildren<UnityEngine.UI.Text>().fontSize=18;
+            float width=Mathf.Min(520,Width-24),cell=(width-12)/3,left=(Width-width)/2,top=Height-78;
+            IconButton(pageRoot,HabitatSurfaceView?"潜入水下":"回到水面",TouchSymbol.Kind.Fish,left,top,cell,66,()=>{HabitatSurfaceView=!HabitatSurfaceView;dirty=true;},32);
+            IconButton(pageRoot,"换个角度",TouchSymbol.Kind.Rotate,left+cell+6,top,cell,66,()=>HabitatAngle++,32);
+            IconButton(pageRoot,"返回钓鱼",TouchSymbol.Kind.Back,left+2*(cell+6),top,cell,66,()=>Navigate("出海"),32);
         }
     }
 }

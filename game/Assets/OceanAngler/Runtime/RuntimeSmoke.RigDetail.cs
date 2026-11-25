@@ -54,7 +54,7 @@ namespace OceanAngler
             yield return JourneyClick("试摇卷线器",true);var rotation=rig.roller.localRotation;float end=Time.realtimeSinceStartup+.25f;
             while(Time.realtimeSinceStartup<end){yield return null;rigRollerTravel+=Quaternion.Angle(rotation,rig.roller.localRotation);rotation=rig.roller.localRotation;}
             JourneyRequire(rigRollerTravel>5,"rig-detail-real-roller-turns");yield return RigFrame("rig-winding-a");yield return new WaitForSecondsRealtime(.17f);yield return RigFrame("rig-winding-b");
-            yield return JourneyClick("停止收线演示",true);yield return null;yield return null;rotation=rig.roller.localRotation;yield return new WaitForSecondsRealtime(.15f);JourneyRequire(Quaternion.Angle(rotation,rig.roller.localRotation)<.02f,"rig-detail-stopped-roller-freezes");
+            yield return JourneyClick("停止演示",true);yield return null;yield return null;rotation=rig.roller.localRotation;yield return new WaitForSecondsRealtime(.15f);JourneyRequire(Quaternion.Angle(rotation,rig.roller.localRotation)<.02f,"rig-detail-stopped-roller-freezes");
             for(int i=0;i<3;i++){yield return JourneyClick("旋转钓组",true);yield return null;yield return null;yield return RigFrame("rig-angle-"+i);}
             yield return JourneyClick("查看全竿",true);yield return null;yield return null;yield return RigFrame("rig-whole");
             yield return JourneyClick("返回钓具",true);yield return null;yield return null;yield return JourneyClick("出海",true);yield return null;yield return null;yield return JourneyClick("继续探索",true);yield return null;yield return null;yield return RigFrame("ready");

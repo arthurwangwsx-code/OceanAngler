@@ -80,9 +80,10 @@ namespace OceanAngler
                 return Rect.MinMaxRect(points.Min(p=>p.x),points.Min(p=>p.y),points.Max(p=>p.x),points.Max(p=>p.y));
             }
             var controls=new[]{"旋转","放大","缩小",ui.ModelPaused?"游动":"静止","重置"}.Select(n=>Pixels(Find(n).GetComponent<RectTransform>())).ToArray();
-            float gap=12*DisplayMetrics.PixelsPerPoint;
-            float top=ui.CompactViewer?Pixels(Find("返回图鉴").GetComponent<RectTransform>()).yMin:Pixels(FindObjectsByType<RectTransform>(FindObjectsSortMode.None).Single(t=>t.name=="Navigation"&&t.gameObject.activeInHierarchy)).yMin;
-            var result=new JournalFrameSample{fishId=ui.FocusedFish,zoom=ui.ModelZoom,yaw=ui.ModelYaw,available=Rect.MinMaxRect(controls.Min(r=>r.xMin),controls.Max(r=>r.yMax)+gap,controls.Max(r=>r.xMax),top-gap)};
+            float unit=DisplayMetrics.PixelsPerPoint;var safe=DisplayMetrics.SafeArea;
+            var status=FindObjectsByType<Text>(FindObjectsSortMode.None).Single(t=>t.name=="ModelStatus");
+            float top=Pixels(status.rectTransform).yMin-6*unit;
+            var result=new JournalFrameSample{fishId=ui.FocusedFish,zoom=ui.ModelZoom,yaw=ui.ModelYaw,available=Rect.MinMaxRect(safe.xMin+12*unit,controls.Max(r=>r.yMax)+10*unit,safe.xMax-12*unit,top)};
             var min=new Vector2(float.PositiveInfinity,float.PositiveInfinity);var max=-min;var scratch=new Mesh();
             void Point(Vector3 world)
             {
