@@ -56,7 +56,7 @@ def leased(command):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--expected-gib", type=float, default=20)
+    parser.add_argument("--expected-gib", type=int, default=20)
     parser.add_argument("--leased", action="store_true", help=argparse.SUPPRESS)
     parser.add_argument("command", nargs=argparse.REMAINDER)
     args = parser.parse_args()
