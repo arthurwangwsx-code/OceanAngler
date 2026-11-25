@@ -115,6 +115,7 @@ namespace OceanAngler
             if(activeHabitat!=null)activeHabitat.Present(view,ui.InspectingHabitat,ui.InspectingHabitat&&ui.HabitatSurfaceView||FishingSurfaceView,ui.HabitatAngle,game.Session.Paused,reduced,ui.FocusedFish==null&&!ui.InspectingGear&&!ui.InspectingObservation,ui.InspectingHabitat?ui.HabitatCompositionOffset:0,FishingSurfaceView);
             if(activeHabitat!=null)PresentFlatfishCamera(reduced);
             Observations.Present(ui.ObservingSpecies,view,ui.Compact,reduced,Time.unscaledDeltaTime);
+            if(activeHabitat!=null&&activeHabitat.lighting!=null)activeHabitat.lighting.AimCameraFill(view);
         }
         void OnDestroy(){if(game!=null)game.Released-=BeginRelease;if(activeHabitat!=null)Destroy(activeHabitat.gameObject);}
     }

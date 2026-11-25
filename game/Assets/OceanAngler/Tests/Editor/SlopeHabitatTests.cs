@@ -41,6 +41,20 @@ namespace OceanAngler.Tests
             habitat.Present(camera,true,true,0,true,false);Assert.That(light.color,Is.EqualTo(originalColor));Assert.That(light.intensity,Is.EqualTo(intensity));Assert.That(RenderSettings.ambientMode,Is.EqualTo(originalMode));Assert.That(RenderSettings.ambientLight,Is.EqualTo(originalAmbient));Assert.That(habitat.lighting.inspectionLights.All(l=>!l.enabled),Is.True);Assert.That(habitat.suspendedParticles.gameObject.activeSelf,Is.False);
             habitat.Present(camera,true,false,1,true,true);Assert.That(Vector3.Distance(camera.transform.position,habitat.reefCamera.position),Is.LessThan(.001f));Assert.That(habitat.suspendedParticles.gameObject.activeSelf,Is.False);habitat.lighting.Restore();habitat.lighting.Restore();root.SetActive(false);Assert.That(light.intensity,Is.EqualTo(intensity));Assert.That(light.color,Is.EqualTo(originalColor));Assert.That(RenderSettings.ambientLight,Is.EqualTo(originalAmbient));
         }
+        [Test] public void ResearchLampFollowsFinalViewWithoutAddingLightsOrLeakingToSurface()
+        {
+            var lighting=habitat.lighting;Assert.That(lighting.cameraFill,Is.Not.Null);Assert.That(lighting.inspectionLights.Count(l=>l==lighting.cameraFill),Is.EqualTo(1));Assert.That(root.GetComponentsInChildren<Light>(true).Length,Is.EqualTo(3));
+            var lamp=lighting.cameraFill;Assert.That(lamp.type,Is.EqualTo(LightType.Spot));Assert.That(lamp.shadows,Is.EqualTo(LightShadows.None));
+            var originalSun=RenderSettings.sun.color;float originalIntensity=RenderSettings.sun.intensity;var originalAmbient=RenderSettings.ambientLight;
+            habitat.Present(camera,false,false,0,true,true);
+            var subject=new Vector3(0,.3f,1.2f);var eye=subject+new Vector3(0,2.8f,-3.8f);camera.transform.SetPositionAndRotation(eye,Quaternion.LookRotation(subject-eye));lighting.AimCameraFill(camera);
+            Assert.That(Vector3.Dot((lamp.transform.position-subject).normalized,Vector3.up),Is.GreaterThan(.5f),"The eyed side receives light from above");
+            Assert.That(Vector3.Angle(lamp.transform.forward,subject-lamp.transform.position),Is.LessThan(lamp.spotAngle*.5f-5),"Close subject remains inside the beam");
+            var heldPosition=lamp.transform.position;var heldRotation=lamp.transform.rotation;lighting.AimCameraFill(camera);Assert.That(lamp.transform.position,Is.EqualTo(heldPosition));Assert.That(lamp.transform.rotation,Is.EqualTo(heldRotation));
+            camera.transform.position+=new Vector3(3,1,-2);camera.transform.LookAt(subject);lighting.AimCameraFill(camera);Assert.That(Vector3.Distance(lamp.transform.position,heldPosition),Is.GreaterThan(2));
+            habitat.Present(camera,true,true,0,true,true);Assert.That(lamp.enabled,Is.False);Assert.That(RenderSettings.sun.color,Is.EqualTo(originalSun));Assert.That(RenderSettings.sun.intensity,Is.EqualTo(originalIntensity));Assert.That(RenderSettings.ambientLight,Is.EqualTo(originalAmbient));
+            habitat.Present(camera,false,false,0,true,true);Assert.That(lamp.enabled,Is.True);lighting.Restore();Assert.That(lighting.inspectionLights.All(l=>!l.enabled),Is.True);Assert.That(RenderSettings.sun.intensity,Is.EqualTo(originalIntensity));
+        }
         [Test] public void PreviewProjectionClearsRovFromRightPanelAndRestoresCenteredPlay()
         {
             camera.aspect=2.17f;var bounds=root.GetComponentsInChildren<Renderer>(true).Single(r=>r.name=="ROV_LOD0").bounds;

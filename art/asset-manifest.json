@@ -3216,6 +3216,57 @@
         }
       ],
       "note": "Original task gameplay images, before/after using own previous frame and trimmed owned-Simulator display recordings. No home screen/audio, no gamma or color enhancement. 30fps clip sampling is not game performance; deep lighting, natural fin motion and A1-A3 remain partial."
+    },
+    {
+      "id": "deep-water-lighting-editor-controls",
+      "author": "OceanAngler contributors",
+      "source": "Own imported project models; DeepWaterLightingReview Metal same-pose controls, deepLightB",
+      "license": "MIT",
+      "redistribution": true,
+      "status": "ART_REVIEW_PENDING",
+      "artifacts": [
+        {
+          "path": "art/previews/deep-water-lighting/alfonsino-fight-20-new.png",
+          "sha256": "66815fe86b634c49de4d0c6deb7b7cd58e0d76cd3737469ccbd6cfd47f53adb3"
+        },
+        {
+          "path": "art/previews/deep-water-lighting/bigeye-fight-20-new.png",
+          "sha256": "9201e2c26a6516b1fdf2277138ad0f7fc20958e2705021d2443345fdee6f4e9a"
+        },
+        {
+          "path": "art/previews/deep-water-lighting/cod-fight-20-new.png",
+          "sha256": "258ed62aee1458383993c91969878770a7a577f2b50bfd86985e8cda1350973d"
+        },
+        {
+          "path": "art/previews/deep-water-lighting/editor-controls.jpg",
+          "sha256": "b8fd0703e63abdbc57bcbb358db12307f44e41685464fa12f85abc0fdd558fad"
+        },
+        {
+          "path": "art/previews/deep-water-lighting/halibut-fight-20-new.png",
+          "sha256": "3687d84d2e517d38bafe110e09389718d0f8392d7d8358f6d6affd8e1481e206"
+        },
+        {
+          "path": "art/previews/deep-water-lighting/halibut-fight-20-old.png",
+          "sha256": "c5f6426fd27ccb80831a5f9f3d8a487811a93d5c4652fbc79d8ba34a444cdeaf"
+        },
+        {
+          "path": "art/previews/deep-water-lighting/halibut-journal-new.png",
+          "sha256": "e6ea80615f467aedf5d999caf379769d64b45f517fd9eca3e500edfdc5917759"
+        },
+        {
+          "path": "art/previews/deep-water-lighting/halibut-journal-old.png",
+          "sha256": "3a9869f05613c9fbcfee01003ad0bb87f5c40441a50e0351f7af3ea0fb96bcf8"
+        },
+        {
+          "path": "art/previews/deep-water-lighting/halibut-landed-new.png",
+          "sha256": "522ccbf3188599f3ab182260641e7735071cc7700a3a552fb1e6e3222e3ea969"
+        },
+        {
+          "path": "art/previews/deep-water-lighting/halibut-landed-old.png",
+          "sha256": "1cf6225609a07cbcd7b41878e971f0eeab82815590c4ebc8574af427d6a0e1c5"
+        }
+      ],
+      "note": "Original project assets rendered in isolated Editor GPU, old fixed lamp versus final camera lamp. No personal media or reference image reuse. Not native UI, science, physical or final art acceptance."
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."

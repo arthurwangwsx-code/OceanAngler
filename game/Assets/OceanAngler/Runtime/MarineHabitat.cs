@@ -39,6 +39,7 @@ namespace OceanAngler
             var position=fishingSurface?new Vector3(underwaterCamera.position.x,SeaLevel+1.25f,underwaterCamera.position.z):from.position;
             var look=fishingSurface?new Vector3(underwaterTarget.position.x,SeaLevel+.05f,underwaterTarget.position.z):target.position;
             camera.transform.SetPositionAndRotation(position,Quaternion.LookRotation(look-position,Vector3.up));
+            if(lighting!=null)lighting.AimCameraFill(camera);
             camera.fieldOfView=observing||fishingSurface?58:42;camera.depthTextureMode|=DepthTextureMode.Depth;
             // Reserve the actual preview panel width without moving the subject
             // or adding more play HUD. Reflection uses this same projection.

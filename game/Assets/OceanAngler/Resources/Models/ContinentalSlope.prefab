@@ -7302,10 +7302,10 @@ Light:
   m_Enabled: 1
   serializedVersion: 12
   m_Type: 0
-  m_Color: {r: 0.6, g: 0.73, b: 1, a: 1}
-  m_Intensity: 6
-  m_Range: 35
-  m_SpotAngle: 90
+  m_Color: {r: 1, g: 0.92, b: 0.8, a: 1}
+  m_Intensity: 36
+  m_Range: 20
+  m_SpotAngle: 80
   m_InnerSpotAngle: 21.80208
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
@@ -7463,6 +7463,7 @@ MonoBehaviour:
   - {fileID: 4320532500499775070}
   - {fileID: 3152969942945328205}
   - {fileID: 7626395989316591370}
+  cameraFill: {fileID: 7626395989316591370}
 --- !u!1 &8505844436262046446
 GameObject:
   m_ObjectHideFlags: 0

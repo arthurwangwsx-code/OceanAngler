@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-25T04:30:03.729Z",
+  "generatedAt": "2026-11-25T04:43:32.342Z",
   "source": {
     "change": "product-technical-foundation",
     "cliVersion": "1.0.20",
@@ -26,16 +26,16 @@
     "firstAttemptPassedCount": 1,
     "firstAttemptEvaluatedCount": 1,
     "firstAttemptPassRate": 1,
-    "elapsedMs": 176567916,
-    "observedStepWallMs": 142966362,
+    "elapsedMs": 177376530,
+    "observedStepWallMs": 143774976,
     "unattributedMs": 33601554,
-    "unattributedRate": 0.1903038488600613,
-    "commandMeasurementCount": 1425,
-    "commandSucceededCount": 1266,
+    "unattributedRate": 0.18943630253675614,
+    "commandMeasurementCount": 1436,
+    "commandSucceededCount": 1277,
     "commandFailedCount": 159,
-    "commandSuccessRate": 0.888421052631579,
-    "commandDurationMs": 51895671.51495406,
-    "gateCheckCount": 65,
+    "commandSuccessRate": 0.8892757660167131,
+    "commandDurationMs": 52074625.76624605,
+    "gateCheckCount": 66,
     "repairCount": 0,
     "targetMs": 3600000,
     "targetMet": null,
@@ -52,7 +52,7 @@
     },
     "entryChecks": {
       "status": "complete",
-      "recorded": 65,
+      "recorded": 66,
       "expectedAtLeast": 2
     },
     "runAttribution": {
@@ -62,7 +62,7 @@
     },
     "commandMeasurements": {
       "status": "partial",
-      "recorded": 1425
+      "recorded": 1436
     },
     "waitingTime": {
       "status": "unavailable"
@@ -78,14 +78,14 @@
   "runs": [],
   "runMetrics": {
     "version": 1,
-    "generatedAt": "2026-11-25T04:30:03.729Z",
+    "generatedAt": "2026-11-25T04:43:32.343Z",
     "runs": [],
     "unattributed": {
       "unboundAttempts": 2,
       "unknownRunAttempts": 0,
-      "unboundCommands": 1425,
+      "unboundCommands": 1436,
       "unknownRunCommands": 0,
-      "unboundGateChecks": 65,
+      "unboundGateChecks": 66,
       "unknownRunGateChecks": 0,
       "repairsWithoutRunBinding": 0,
       "unknownRunRepairs": 0
@@ -23914,6 +23914,215 @@
         "path": "measurements/halibut-framing-final-records.json",
         "sha256": "33a36d7a0cc37dd1524eded1ad8fdb6bce01c1496aec8d61e5dfd0dc389b09dc"
       }
+    },
+    {
+      "id": "bf65f112-ddae-4789-b847-7af878b2fae0",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "4c798960e4c7f9e7094691bc6681540c18e3ac2004f6d18c3a0e7179bb806db8",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T04:35:57.441Z",
+      "finishedAt": "2026-11-25T04:36:13.270Z",
+      "durationMs": 15783.812166,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/deep-lighting-prefab-a.json",
+        "sha256": "d11bec60ad2470224245336d0e1537e9966199b15d50c51a08a7751ff7b0784a"
+      }
+    },
+    {
+      "id": "246fe7d4-5596-48e4-aabb-374c760fe025",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "de075df64288426cc681abe424692a66de3511a67883e88c0ecdcc70fce175b8",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T04:36:25.156Z",
+      "finishedAt": "2026-11-25T04:36:36.638Z",
+      "durationMs": 11454.435458,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/deep-lighting-editor-a.json",
+        "sha256": "97648478bf8831e8dfd67ec350ccb2688d4cff433f8c15cef0ba1a13a86255b4"
+      }
+    },
+    {
+      "id": "08f7e570-e142-4aac-afd0-2935e1c699f0",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "71cf568ce8680502fdf3b2555b28d6c7494e0a5ecd99070eac40c1856012955a",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T04:38:35.891Z",
+      "finishedAt": "2026-11-25T04:38:49.973Z",
+      "durationMs": 14053.242,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/deep-lighting-metal-a.json",
+        "sha256": "f986c062fd82b46aaec4ddd66878841768a1d2e8e8365614a4e42d3c36ad2529"
+      }
+    },
+    {
+      "id": "c871537b-2945-407a-a5e4-d9fd0a869715",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "77f3c3c612bfd4b2cde4af8d83d9b4fd9fccce8009dd5e26fd35b1d3ea903c17",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T04:39:09.526Z",
+      "finishedAt": "2026-11-25T04:40:02.461Z",
+      "durationMs": 52909.142458999995,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/deep-lighting-play-a.json",
+        "sha256": "74d503406113ffb1411a031fbfa6de10747e0505e58a8bd3243d65452b38c464"
+      }
+    },
+    {
+      "id": "df8e20c9-a473-4c34-baf6-3612706fb723",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "4c798960e4c7f9e7094691bc6681540c18e3ac2004f6d18c3a0e7179bb806db8",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T04:40:26.998Z",
+      "finishedAt": "2026-11-25T04:40:38.713Z",
+      "durationMs": 11683.312958,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/deep-lighting-prefab-b.json",
+        "sha256": "1ae39d8f05e324cccaf1192bdba499d3d5790b01ea3237756ca1179bfe3477ab"
+      }
+    },
+    {
+      "id": "49c64677-5b4d-4543-8d91-f472a18741b5",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "0c9dfc9e97c76e9f3e8e372beea98e5a2fd710b20d9a6324076bb912ff6d7b7f",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T04:40:44.589Z",
+      "finishedAt": "2026-11-25T04:40:54.059Z",
+      "durationMs": 9437.95225,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/deep-lighting-metal-b.json",
+        "sha256": "5d381ae9e0d97acc7c2639eeed4b5f27378e9d851550446142a7830396bec253"
+      }
+    },
+    {
+      "id": "8ae901e8-6dd5-444c-91d8-dfb26d7bd0e0",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "de075df64288426cc681abe424692a66de3511a67883e88c0ecdcc70fce175b8",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T04:41:05.578Z",
+      "finishedAt": "2026-11-25T04:41:13.222Z",
+      "durationMs": 7615.505958,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/deep-lighting-final-editor.json",
+        "sha256": "6ab55d459ba2cec39f93bcd3f80046ee02892ef55c03f67a5ce572c695bbef01"
+      }
+    },
+    {
+      "id": "5a6bfa05-d25f-475a-94d1-47dd546c02c7",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d95b85614d0ee01de3667442675597227cb20e3bb6f8c0e06d27e613d66a0726",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T04:41:39.144Z",
+      "finishedAt": "2026-11-25T04:42:32.950Z",
+      "durationMs": 53783.634792,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/deep-lighting-final-play.json",
+        "sha256": "75a3ba61c944c233f2ca1d7b881c359f17d107fc9c5aae6bbd8a159054f637ec"
+      }
+    },
+    {
+      "id": "f2dcd3b1-fdf9-457d-989e-99c4e2a6e77a",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "2566ca34f42047566aa2d1a36a9ca6dee46cf800f0b5953321cb9595cd0b63c0",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T04:42:40.081Z",
+      "finishedAt": "2026-11-25T04:42:40.903Z",
+      "durationMs": 790.211959,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/deep-lighting-source-check.json",
+        "sha256": "4b5322d2fecf716e349c79b92da1ee528108718ef801767abd4641b430d27a22"
+      }
+    },
+    {
+      "id": "58fcb499-1116-4f68-8d1d-443c42ce513b",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "88cb4279967c9dba892528288db927659fe82ab55aa8110ceb71f7a3038c8341",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T04:43:07.653Z",
+      "finishedAt": "2026-11-25T04:43:08.267Z",
+      "durationMs": 588.1114170000001,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/deep-lighting-saves-before.json",
+        "sha256": "34d499410542fb5c000dd451cea60fb5405378f1acc7ac9ac08273eb49210336"
+      }
+    },
+    {
+      "id": "1d36fe99-071f-430b-a6f9-3d87b5d1b350",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d89602c770c16a35b6c5da9a9da4ae967807390aa462f4349604d0463de12f51",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-25T04:43:21.275Z",
+      "finishedAt": "2026-11-25T04:43:22.154Z",
+      "durationMs": 854.8898749999998,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/deep-lighting-source-publication.json",
+        "sha256": "34849ba3f593bd4c73435b34ce8cc0de3e1b2151a82098b09b2fe4b9b8946f05"
+      }
     }
   ],
   "measurementAudit": {
@@ -23921,8 +24130,8 @@
     "scope": "declared-command-receipts-only",
     "runId": null,
     "complete": false,
-    "registered": 1421,
-    "completed": 1425,
+    "registered": 1432,
+    "completed": 1436,
     "unfinishedIds": [
       "539d2470-da3f-4a9d-941c-e4c4a34b48da"
     ],
@@ -27221,35 +27430,35 @@
   "commands": [
     {
       "category": "test",
-      "count": 578,
-      "succeededCount": 485,
+      "count": 585,
+      "succeededCount": 492,
       "failedCount": 93,
-      "successRate": 0.8391003460207612,
-      "durationMs": 17619144.845410008
+      "successRate": 0.841025641025641,
+      "durationMs": 17769188.970286008
     },
     {
       "category": "compile",
-      "count": 303,
-      "succeededCount": 290,
+      "count": 305,
+      "succeededCount": 292,
       "failedCount": 13,
-      "successRate": 0.9570957095709571,
-      "durationMs": 13805772.538880002
+      "successRate": 0.9573770491803278,
+      "durationMs": 13833239.664004002
     },
     {
       "category": "e2e",
-      "count": 301,
-      "succeededCount": 253,
+      "count": 302,
+      "succeededCount": 254,
       "failedCount": 48,
-      "successRate": 0.840531561461794,
-      "durationMs": 20169608.530795004
+      "successRate": 0.8410596026490066,
+      "durationMs": 20170196.642212003
     },
     {
       "category": "lint",
-      "count": 192,
-      "succeededCount": 191,
+      "count": 193,
+      "succeededCount": 192,
       "failedCount": 1,
-      "successRate": 0.9947916666666666,
-      "durationMs": 87476.40741399996
+      "successRate": 0.9948186528497409,
+      "durationMs": 88331.29728899995
     },
     {
       "category": "validation",
@@ -27820,6 +28029,14 @@
       "checkedAt": "2026-11-25T03:52:57.651Z",
       "durationMs": 188.204833,
       "outcome": "accepted"
+    },
+    {
+      "stageId": "apply",
+      "runId": null,
+      "operation": "start",
+      "checkedAt": "2026-11-25T04:33:36.510Z",
+      "durationMs": 328.04825000000005,
+      "outcome": "accepted"
     }
   ],
   "timing": {
@@ -27827,8 +28044,8 @@
     "finishedAt": null,
     "status": "in_progress",
     "measurementBasis": "before-first-entry-gate",
-    "elapsedMs": 176567916,
-    "observedStepWallMs": 142966362,
+    "elapsedMs": 177376530,
+    "observedStepWallMs": 143774976,
     "unattributedMs": 33601554,
     "waitingMs": null,
     "retryAttemptMs": 0,
