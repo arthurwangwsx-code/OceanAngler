@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "5ade5d54-134b-4bb0-a676-4acbffe49a3a",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "c3aaa81434b1ca992376eea0d63c0797c73c6c39f5ece5859f9b47a2f84adcd9",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-25T02:42:34.854Z",
+    "finishedAt": "2026-11-25T02:43:32.830Z",
+    "durationMs": 57938.457542,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      "tools/game.py",
+      "tests",
+      "--test-platform",
+      "PlayMode",
+      "--test-filter",
+      "OceanAngler.Tests.ImmersiveNavigationTests;OceanAngler.Tests.IntegratedWorldTests;OceanAngler.Tests.ChannelVisitTests",
+      "--label",
+      "meterfixturesuite20261125b"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    "tools/game.py",
+    "tests",
+    "--test-platform",
+    "PlayMode",
+    "--test-filter",
+    "OceanAngler.Tests.ImmersiveNavigationTests;OceanAngler.Tests.IntegratedWorldTests;OceanAngler.Tests.ChannelVisitTests",
+    "--label",
+    "meterfixturesuite20261125b"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T02:42:34.854Z",
+  "finishedAt": "2026-11-25T02:43:32.830Z",
+  "durationMs": 57938.457542
+}

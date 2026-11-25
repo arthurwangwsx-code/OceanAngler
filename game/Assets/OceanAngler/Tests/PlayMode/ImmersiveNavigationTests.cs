@@ -14,6 +14,7 @@ namespace OceanAngler.Tests
     public sealed class ImmersiveNavigationTests
     {
         [Serializable] sealed class Result { public string status;public string[] failures;public int catchesBefore,catchesAfter;public bool unfinishedExitPreservedLedger,settingsRestored; }
+        [Serializable] sealed class MeterResult { public string status,scope;public bool injectedFocusLoss,saveBytesUnchanged;public int hands,valuesPerHand,labelChecks,focusPauses,explicitResumes; }
         Scene scene;GameController game;string root,archive;readonly Dictionary<string,string> originals=new Dictionary<string,string>();
         [UnityTearDown] public IEnumerator Cleanup()
         {
@@ -23,38 +24,68 @@ namespace OceanAngler.Tests
             foreach(var pair in originals)File.Move(pair.Value,pair.Key);originals.Clear();
         }
         [UnityTest,Timeout(90000)] public IEnumerator EveryMeterValueFitsTheUnchangedHudRegion()
+            =>CheckMeterValues(false);
+        [UnityTest,Timeout(90000)] public IEnumerator EveryMeterValueFitsAfterFocusLossAndExplicitResume()
+            =>CheckMeterValues(true);
+        IEnumerator CheckMeterValues(bool injectFocusLoss)
         {
             var args=LaunchArguments.Get();int index=Array.IndexOf(args,"--ocean-save-root");Assert.That(index,Is.GreaterThanOrEqualTo(0));root=Path.GetFullPath(args[index+1]);Assert.That(root,Does.Contain("unity-test-saves"));
-            archive=Path.Combine(root,"meter-values-before-after");Assert.That(Directory.Exists(archive),Is.False);Directory.CreateDirectory(archive);
+            archive=Path.Combine(root,injectFocusLoss?"meter-focus-before-after":"meter-values-before-after");Assert.That(Directory.Exists(archive),Is.False);Directory.CreateDirectory(archive);
             foreach(string suffix in new[]{"",".bak",".tmp"}){string file=Path.Combine(root,"ocean-progress.json")+suffix;if(File.Exists(file)){string saved=Path.Combine(archive,"before"+suffix+".json");File.Move(file,saved);originals.Add(file,saved);}}
             yield return SceneManager.LoadSceneAsync("Bay",LoadSceneMode.Single);scene=SceneManager.GetSceneByName("Bay");yield return null;yield return null;game=UnityEngine.Object.FindFirstObjectByType<GameController>();
             yield return RestTap("海域与装备");yield return RestTap("开始钓鱼");game.Cast(.6f);float deadline=Time.realtimeSinceStartup+20;
             while(game.Session.Phase!=FishingPhase.Bite&&Time.realtimeSinceStartup<deadline)yield return null;Assert.That(game.Session.Phase,Is.EqualTo(FishingPhase.Bite));game.Strike();yield return null;yield return null;
             var ui=game.GetComponent<GameUI>();var flags=System.Reflection.BindingFlags.Instance|System.Reflection.BindingFlags.NonPublic;
             var progress=typeof(FishingSession).GetField("<Progress>k__BackingField",flags);var tension=typeof(FishingSession).GetField("<Tension>k__BackingField",flags);Assert.That(progress,Is.Not.Null);Assert.That(tension,Is.Not.Null);
-            foreach(bool left in new[]{false,true})
+            Assert.That(game.Session.Phase,Is.EqualTo(FishingPhase.Fighting),"The layout fixture must start with a real struck fish");
+            float originalProgress=game.Session.Progress,originalTension=game.Session.Tension;bool enabled=game.enabled;
+            var result=new MeterResult{scope="Headless real UI meter boundary and optional lifecycle-callback injection; not OS focus, natural fishing, child or device qualification",injectedFocusLoss=injectFocusLoss,valuesPerHand=101};
+            // Freeze simulation across both UI rebuilds as well as the value
+            // sweep. Keep the real pause/resume UI; never force a missing meter.
+            game.enabled=false;
+            try
             {
-                game.Configure(s=>s.leftHanded=left);yield return null;yield return null;
-                float originalProgress=game.Session.Progress,originalTension=game.Session.Tension;bool enabled=game.enabled;byte[] saved=File.ReadAllBytes(Path.Combine(root,"ocean-progress.json"));game.enabled=false;
-                try
+                foreach(bool left in new[]{false,true})
                 {
-                    // Headless in-memory boundary fixture only. Never tick the
-                    // fishing model or save synthetic progress/tension values.
-                    for(int value=0;value<=100;value++)
+                    game.Configure(s=>s.leftHanded=left);yield return null;yield return null;
+                    byte[] saved=File.ReadAllBytes(Path.Combine(root,"ocean-progress.json"));
+                    if(injectFocusLoss)
                     {
-                        progress.SetValue(game.Session,value/100f);tension.SetValue(game.Session,value/100f);ui.SendMessage("Update");Canvas.ForceUpdateCanvases();
-                        foreach(string field in new[]{"tensionText","progressText"})
+                        game.HoldReel(true);Assert.That(game.Reeling,Is.True);
+                        game.SendMessage("OnApplicationFocus",false);ui.SendMessage("Update");
+                        Assert.That(game.Session.Paused,Is.True);Assert.That(game.Reeling||ui.Playing,Is.False);
+                        Assert.That(UnityEngine.Object.FindObjectsByType<HudFootprint>(FindObjectsSortMode.None).Any(m=>m.name=="FightHUD"),Is.False,"Paused menus must not leave a live fighting meter");
+                        yield return null;yield return null;
+                        Assert.That(game.Session.Progress,Is.EqualTo(originalProgress));Assert.That(game.Session.Tension,Is.EqualTo(originalTension));result.focusPauses++;
+                    }
+                    if(game.Session.Paused)
+                    {
+                        ui.SendMessage("Update");yield return RestTap("继续探索");result.explicitResumes++;
+                    }
+                    Assert.That(game.Session.Phase,Is.EqualTo(FishingPhase.Fighting));Assert.That(ui.Playing,Is.True,"Use the real visible continue action before checking live meters");
+                    Assert.That(game.Session.Paused||game.Reeling,Is.False,"Continue must require a fresh reel press instead of replaying the old hold");
+                    try
+                    {
+                        // Boundary values exist only in memory. Never tick the
+                        // fishing model or save synthetic progress/tension values.
+                        for(int value=0;value<=100;value++)
                         {
-                            var text=(Text)typeof(GameUI).GetField(field,flags).GetValue(ui);string label=field+" value="+value+" left="+left;
-                            Assert.That(text,Is.Not.Null,label+" phase="+game.Session.Phase+" paused="+game.Session.Paused+" page="+ui.PageName);
-                            Assert.That(text.fontSize,Is.EqualTo(17),label);Assert.That(text.preferredWidth,Is.LessThanOrEqualTo(text.rectTransform.rect.width+.1f),label+" "+text.text);
-                            Assert.That(text.preferredHeight,Is.LessThanOrEqualTo(text.rectTransform.rect.height+.1f),label);Assert.That(text.rectTransform.parent.GetComponent<RectTransform>().rect.size,Is.EqualTo(new Vector2(228,48)));
+                            progress.SetValue(game.Session,value/100f);tension.SetValue(game.Session,value/100f);ui.SendMessage("Update");Canvas.ForceUpdateCanvases();
+                            foreach(string field in new[]{"tensionText","progressText"})
+                            {
+                                var text=(Text)typeof(GameUI).GetField(field,flags).GetValue(ui);string label=field+" value="+value+" left="+left;
+                                Assert.That(text,Is.Not.Null,label+" phase="+game.Session.Phase+" paused="+game.Session.Paused+" page="+ui.PageName);
+                                Assert.That(text.fontSize,Is.EqualTo(17),label);Assert.That(text.preferredWidth,Is.LessThanOrEqualTo(text.rectTransform.rect.width+.1f),label+" "+text.text);
+                                Assert.That(text.preferredHeight,Is.LessThanOrEqualTo(text.rectTransform.rect.height+.1f),label);Assert.That(text.rectTransform.parent.GetComponent<RectTransform>().rect.size,Is.EqualTo(new Vector2(228,48)));result.labelChecks++;
+                            }
                         }
                     }
+                    finally{progress.SetValue(game.Session,originalProgress);tension.SetValue(game.Session,originalTension);ui.SendMessage("Update");}
+                    CollectionAssert.AreEqual(saved,File.ReadAllBytes(Path.Combine(root,"ocean-progress.json")),"Focus/resume and boundary values must not rewrite the save");result.hands++;
                 }
-                finally{progress.SetValue(game.Session,originalProgress);tension.SetValue(game.Session,originalTension);game.enabled=enabled;ui.SendMessage("Update");}
-                CollectionAssert.AreEqual(saved,File.ReadAllBytes(Path.Combine(root,"ocean-progress.json")),"Meter boundary fixture must not rewrite the save");
             }
+            finally{progress.SetValue(game.Session,originalProgress);tension.SetValue(game.Session,originalTension);game.enabled=enabled;ui.SendMessage("Update");}
+            result.status="PASS";result.saveBytesUnchanged=true;File.WriteAllText(Path.Combine(archive,"meter-values.json"),JsonUtility.ToJson(result,true));
         }
         [UnityTest,Timeout(240000)] public IEnumerator MinimalHudAndHierarchicalMenusPreserveFishingAndPersistOnlyRecordedFish()
         {

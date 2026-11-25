@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "0826b039-236d-4f51-bb0e-6f3535587aeb",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "7d795eadfb55e5b039ac28b9473681f58d839beefe523bb5b1a91a4e996d4ad0",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-25T02:38:25.573Z",
+    "finishedAt": "2026-11-25T02:38:43.151Z",
+    "durationMs": 17541.528625,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      "tools/game.py",
+      "tests",
+      "--test-platform",
+      "PlayMode",
+      "--test-filter",
+      "^OceanAngler.Tests.ImmersiveNavigationTests.EveryMeterValueFitsAfterFocusLossAndExplicitResume$",
+      "--label",
+      "meterfocusgreen20261125"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    "tools/game.py",
+    "tests",
+    "--test-platform",
+    "PlayMode",
+    "--test-filter",
+    "^OceanAngler.Tests.ImmersiveNavigationTests.EveryMeterValueFitsAfterFocusLossAndExplicitResume$",
+    "--label",
+    "meterfocusgreen20261125"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T02:38:25.573Z",
+  "finishedAt": "2026-11-25T02:38:43.151Z",
+  "durationMs": 17541.528625
+}

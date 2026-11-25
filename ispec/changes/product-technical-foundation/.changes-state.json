@@ -541,6 +541,14 @@
       "checkedAt": "2026-11-25T01:59:50.850Z",
       "durationMs": 142.27020900000002,
       "outcome": "accepted"
+    },
+    {
+      "stageId": "apply",
+      "runId": null,
+      "operation": "start",
+      "checkedAt": "2026-11-25T02:33:47.667Z",
+      "durationMs": 129.99295900000004,
+      "outcome": "accepted"
     }
   ],
   "measurementJournal": {
@@ -14423,6 +14431,105 @@
       "executable": "python3",
       "commandDigest": "d6ab6c9ebf8c1a23998f71bb26561a45d6c69ffa41812e12d7fa3f8473ec6060",
       "receiptPath": "measurements/meadow-final-records-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "0cf219c0-8edc-4a00-b2b8-568ebd39a8a2",
+      "startedAt": "2026-11-25T02:35:49.447Z",
+      "executable": "python3",
+      "commandDigest": "e12a4e1c668141e6e5644600fe7e9c364c1225289b0c16012c1f7dd229c1f42c",
+      "receiptPath": "measurements/meter-focus-red-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "0826b039-236d-4f51-bb0e-6f3535587aeb",
+      "startedAt": "2026-11-25T02:38:25.573Z",
+      "executable": "python3",
+      "commandDigest": "7d795eadfb55e5b039ac28b9473681f58d839beefe523bb5b1a91a4e996d4ad0",
+      "receiptPath": "measurements/meter-focus-green-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "9fd23980-b2a8-49b0-b557-aaf3d9723998",
+      "startedAt": "2026-11-25T02:39:53.482Z",
+      "executable": "python3",
+      "commandDigest": "b2a58b209b397e809e7e8fb6bd5db6ae05e1251af0635612286a3766e9306b79",
+      "receiptPath": "measurements/meter-fixture-suite-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "5ade5d54-134b-4bb0-a676-4acbffe49a3a",
+      "startedAt": "2026-11-25T02:42:34.854Z",
+      "executable": "python3",
+      "commandDigest": "c3aaa81434b1ca992376eea0d63c0797c73c6c39f5ece5859f9b47a2f84adcd9",
+      "receiptPath": "measurements/meter-fixture-suite-b-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "verification",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "b7be8d60-ae10-4285-837c-d03f1db36e91",
+      "startedAt": "2026-11-25T02:44:04.213Z",
+      "executable": "python3",
+      "commandDigest": "7c8e8c5c11100c6d421cea6694e1fcbb164d647d668e631c211e1eb33d4390e6",
+      "receiptPath": "measurements/meter-fixture-ledger-proof-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "lint",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "61d6c65f-acaf-43dc-9c89-0703f119d073",
+      "startedAt": "2026-11-25T02:46:54.683Z",
+      "executable": "python3",
+      "commandDigest": "1b9b750d007c851f920bb86ccb95b6c8d0649e1d11d26d4708a2736b0478955e",
+      "receiptPath": "measurements/meter-fixture-public-validate-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "publication-audit",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "a872718a-2178-47de-9950-7376cfeb020b",
+      "startedAt": "2026-11-25T02:46:55.803Z",
+      "executable": "python3",
+      "commandDigest": "d89602c770c16a35b6c5da9a9da4ae967807390aa462f4349604d0463de12f51",
+      "receiptPath": "measurements/meter-fixture-public-audit-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "verification",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "323f5d6a-ef6f-4061-9f41-ceb772a31654",
+      "startedAt": "2026-11-25T02:47:54.719Z",
+      "executable": "python3",
+      "commandDigest": "deb048b99cc8b7d4a59c98646fc8ac2ba29b75dbca2248f241d655b61609fcc6",
+      "receiptPath": "measurements/meter-fixture-final-binding-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "verification",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "02e35d28-18d7-42a1-b5a2-380981f6358a",
+      "startedAt": "2026-11-25T02:47:58.102Z",
+      "executable": "python3",
+      "commandDigest": "cf53b4c1c67d3339004e8253d4c5cbfc1d1a778639494c3959439216e052b39c",
+      "receiptPath": "measurements/meter-fixture-final-records-20261125.json"
     }
   ],
   "runMeasurements": [
@@ -36613,6 +36720,177 @@
       "receipt": {
         "path": "measurements/meadow-final-records-20261125.json",
         "sha256": "b077db98fac81639f68fb3730a78f38c40500f4f13b7518b4f97f636417019e5"
+      }
+    },
+    {
+      "id": "0cf219c0-8edc-4a00-b2b8-568ebd39a8a2",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "e12a4e1c668141e6e5644600fe7e9c364c1225289b0c16012c1f7dd229c1f42c",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T02:35:49.447Z",
+      "finishedAt": "2026-11-25T02:36:05.989Z",
+      "durationMs": 16505.621125,
+      "exitCode": 2,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/meter-focus-red-20261125.json",
+        "sha256": "98e8084b121086ca6c64388da366939e93d594f38c02b09308cea681298ffe21"
+      }
+    },
+    {
+      "id": "0826b039-236d-4f51-bb0e-6f3535587aeb",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "7d795eadfb55e5b039ac28b9473681f58d839beefe523bb5b1a91a4e996d4ad0",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T02:38:25.573Z",
+      "finishedAt": "2026-11-25T02:38:43.151Z",
+      "durationMs": 17541.528625,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/meter-focus-green-20261125.json",
+        "sha256": "c89d7e9a071306c910e1d093d8c14ae4440f64ccc0b793a6ff74f658ef5952a7"
+      }
+    },
+    {
+      "id": "9fd23980-b2a8-49b0-b557-aaf3d9723998",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "b2a58b209b397e809e7e8fb6bd5db6ae05e1251af0635612286a3766e9306b79",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T02:39:53.482Z",
+      "finishedAt": "2026-11-25T02:40:52.405Z",
+      "durationMs": 58886.111542,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/meter-fixture-suite-20261125.json",
+        "sha256": "1b5942ee36ce920a910b606afda35dda0b24ac0805d56be2f827cfa7434a9d88"
+      }
+    },
+    {
+      "id": "5ade5d54-134b-4bb0-a676-4acbffe49a3a",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "c3aaa81434b1ca992376eea0d63c0797c73c6c39f5ece5859f9b47a2f84adcd9",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T02:42:34.854Z",
+      "finishedAt": "2026-11-25T02:43:32.830Z",
+      "durationMs": 57938.457542,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/meter-fixture-suite-b-20261125.json",
+        "sha256": "eaf059bb03a7b4fccae75d5d1227a0deafc087704ef4235c150157c15ee9fd18"
+      }
+    },
+    {
+      "id": "b7be8d60-ae10-4285-837c-d03f1db36e91",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "7c8e8c5c11100c6d421cea6694e1fcbb164d647d668e631c211e1eb33d4390e6",
+      "category": "verification",
+      "executable": "python3",
+      "startedAt": "2026-11-25T02:44:04.213Z",
+      "finishedAt": "2026-11-25T02:44:04.718Z",
+      "durationMs": 482.14650000000006,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/meter-fixture-ledger-proof-20261125.json",
+        "sha256": "db254e0135bcb5c6ebed68fbc2f0c7db5ee9eff1072e9884062d415c8c676417"
+      }
+    },
+    {
+      "id": "61d6c65f-acaf-43dc-9c89-0703f119d073",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "1b9b750d007c851f920bb86ccb95b6c8d0649e1d11d26d4708a2736b0478955e",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-25T02:46:54.683Z",
+      "finishedAt": "2026-11-25T02:46:55.416Z",
+      "durationMs": 697.7314999999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/meter-fixture-public-validate-20261125.json",
+        "sha256": "fa8f9212c90af0982c4a501a849d759f7760907f80ce3b8c43445686c2855ebd"
+      }
+    },
+    {
+      "id": "a872718a-2178-47de-9950-7376cfeb020b",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d89602c770c16a35b6c5da9a9da4ae967807390aa462f4349604d0463de12f51",
+      "category": "publication-audit",
+      "executable": "python3",
+      "startedAt": "2026-11-25T02:46:55.803Z",
+      "finishedAt": "2026-11-25T02:46:56.506Z",
+      "durationMs": 677.840625,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/meter-fixture-public-audit-20261125.json",
+        "sha256": "9e7c7623cc78a856abce130e6fde60fbc1ca8824ca9af65485a2ce7cb872376e"
+      }
+    },
+    {
+      "id": "323f5d6a-ef6f-4061-9f41-ceb772a31654",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "deb048b99cc8b7d4a59c98646fc8ac2ba29b75dbca2248f241d655b61609fcc6",
+      "category": "verification",
+      "executable": "python3",
+      "startedAt": "2026-11-25T02:47:54.719Z",
+      "finishedAt": "2026-11-25T02:47:55.932Z",
+      "durationMs": 1173.205125,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/meter-fixture-final-binding-20261125.json",
+        "sha256": "e2a41db925d2c1c9a1814dceef4f1437f7926e4a3ed9b17f37114a57540a0208"
+      }
+    },
+    {
+      "id": "02e35d28-18d7-42a1-b5a2-380981f6358a",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "cf53b4c1c67d3339004e8253d4c5cbfc1d1a778639494c3959439216e052b39c",
+      "category": "verification",
+      "executable": "python3",
+      "startedAt": "2026-11-25T02:47:58.102Z",
+      "finishedAt": "2026-11-25T02:47:58.367Z",
+      "durationMs": 202.34912500000019,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/meter-fixture-final-records-20261125.json",
+        "sha256": "64fa4bf80999e2f68624c39360def2b81bad3652aa0bc85b1ffa82aec1fa8701"
       }
     }
   ]
