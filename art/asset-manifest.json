@@ -3103,6 +3103,33 @@
         }
       ],
       "note": "Own source and isolated Unity images, including before/after from own previous candidate. Not final visual, science, native or physical-device acceptance."
+    },
+    {
+      "id": "atlantic-halibut-native-journal-review",
+      "author": "OceanAngler contributors",
+      "source": "Own native Simulator app 88c6879 / 7dc15a24; RuntimeSmoke.GearReview",
+      "license": "MIT",
+      "redistribution": true,
+      "status": "ART_REVIEW_PENDING",
+      "artifacts": [
+        {
+          "path": "art/previews/halibut-mouth-native/phone-contact.jpg",
+          "sha256": "fd5a5394d0b777f4ed79ad88887b43cbfcaa1aea5edb374f4d4c4cf390fa85a0"
+        },
+        {
+          "path": "art/previews/halibut-mouth-native/phone-halibut.png",
+          "sha256": "c1996a32d53ab2398e35798a5167e78217daddf3d00dcdaf5b6aa0d81968dfc7"
+        },
+        {
+          "path": "art/previews/halibut-mouth-native/tablet-contact.jpg",
+          "sha256": "0ba65cdaa1ade0d663e2bd0c9c42df41163e41bd762c5cb37e17bdfb08a0dc6d"
+        },
+        {
+          "path": "art/previews/halibut-mouth-native/tablet-halibut.png",
+          "sha256": "ace18d70c5497b2f2c7e1004af09335b66c5dbb3e4f2cfa95d2908fb6b839dc3"
+        }
+      ],
+      "note": "Own game UI/rendered assets and project QA game progress only. Same new app on both owned Simulators; not personal media, new growth, native halibut catch, OS touch, physical or A1-A3 acceptance."
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."
