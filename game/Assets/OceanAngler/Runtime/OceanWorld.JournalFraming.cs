@@ -73,7 +73,10 @@ namespace OceanAngler
                 }
                 // Rotating to a thin edge must not automatically magnify it
                 // beyond the default front view's physical presentation scale.
-                journalFitScale=Mathf.Min(Limit(rotation),Limit(JournalRotation(0)))*.94f*ui.ModelZoom/1.5f;
+                // The sampled envelope already includes12mm in each direction
+                // and the UI region has4pt padding. Keep2% extra projection
+                // slack rather than shrinking the detailed preview twice.
+                journalFitScale=Mathf.Min(Limit(rotation),Limit(JournalRotation(0)))*.98f*ui.ModelZoom/1.5f;
                 journalFitPosition=center-rotation*(journalGeometryBounds.center*journalFitScale);
                 journalLastRect=area;journalLastCamera=cameraMatrix;journalLastRotation=rotation;journalLastZoom=ui.ModelZoom;journalLastDepth=depth;journalFitCached=true;JournalFitCalculations++;
             }
