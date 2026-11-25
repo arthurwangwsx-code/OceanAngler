@@ -106,6 +106,7 @@ namespace OceanAngler
                 gear.Drive(t,game.Reeling,game.Session.Paused,reduced,game.Session.Phase==FishingPhase.Casting,pose.lurePosition,false,hooked,attached?fish:null);
             }
             UpdateWaterlineCamera(pose.lurePosition);
+            if(activeHabitat!=null&&activeHabitat.reflection!=null)activeHabitat.reflection.TrackSubject(gear.transform);
             if(activeHabitat!=null)activeHabitat.Present(view,ui.InspectingHabitat,ui.InspectingHabitat&&ui.HabitatSurfaceView||FishingSurfaceView,ui.HabitatAngle,game.Session.Paused,reduced,ui.FocusedFish==null&&!ui.InspectingGear&&!ui.InspectingObservation,ui.InspectingHabitat?ui.HabitatCompositionOffset:0,FishingSurfaceView);
             Observations.Present(ui.ObservingSpecies,view,ui.Compact,reduced,Time.unscaledDeltaTime);
         }

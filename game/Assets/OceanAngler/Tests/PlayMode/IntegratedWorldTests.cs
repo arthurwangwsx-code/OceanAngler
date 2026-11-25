@@ -51,6 +51,7 @@ namespace OceanAngler.Tests
             game=UnityEngine.Object.FindFirstObjectByType<GameController>();var ui=game.GetComponent<GameUI>();game.Pause(true);yield return null;yield return null;
             var gear=UnityEngine.Object.FindFirstObjectByType<AuthoredSpinningRig>();var fish=game.GetComponent<OceanWorld>().TargetFish as AuthoredFishVisual;var bay=UnityEngine.Object.FindFirstObjectByType<BayHabitat>();
             Assert.That(gear,Is.Not.Null);Assert.That(fish,Is.Not.Null);Assert.That(bay,Is.Not.Null);Assert.That(GameObject.Find("OtherHabitatPrototype"),Is.Null);
+            Assert.That(bay.reflection.TrackedSubject,Is.EqualTo(gear.transform),"The production world must bind its moving fishing rig to the reflection cache");
             var school=bay.school;Assert.That(school.Members.Length,Is.EqualTo(3));var population=school.Members.Select(f=>f.GetInstanceID()).ToArray();
             Assert.That(school.Members.Contains(fish),Is.False);Assert.That(school.Members.All(f=>f.GetComponentsInChildren<Collider>().All(c=>!c.enabled)),Is.True);
             var frozenSchool=school.Members.Select(f=>f.transform.localPosition).ToArray();yield return new WaitForSeconds(.15f);

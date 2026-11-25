@@ -1,0 +1,13 @@
+# 固定水面镜头的移动倒影
+
+REQ-05/08、任务4.7后续。水面镜头固定时，原缓存仅看相机位置、方向、投影和纹理大小，移动拟饵或改变钓组姿态不会触发新的倒影。真实Metal红测把原创诊断方块放在已加载钓组下，再移动它；捕捉次数仍为1、倒影图变化为0，确认缓存过期。方块与粗线仅为Editor诊断，不进入游戏内容。
+
+生产世界现将同一个实际钓组绑定给当前海域的倒影组件，切换海域也重新绑定。组件为固定层级保存Renderer、骨骼和鱼线引用，检查变换、可见性、骨骼矩阵及鱼线位置/宽度；只有变化才刷新。较晚的LateUpdate会在钓组动作更新后更新已绑定纹理，静止时保留缓存，水下停止捕捉。新内容层级或材质动画未来需另行扩展，不能将当前绑定当成所有场景对象的通用变化检测。
+
+更新次序依据[Unity 6.3事件顺序](https://docs.unity.com/en-us/engine/6000.3/manual/scripting/managing-update-order/execution-order)及[DefaultExecutionOrder](https://docs.unity.com/en-us/engine/6000.3/script-reference/unityengine/defaultexecutionorder)；还以实际Editor循环的LateUpdate图像检查验证本组件，不只依赖文档推断。动态捕捉增加了渲染成本，移动设备帧耗、内存和温升仍须用新原生包与真机测量。
+
+验证与失败见[完整回执](../reports/reflection-motion.json)和[图像说明](../reports/reflection-motion.md)。20项定向Editor与5项无画面PlayMode通过，后者包含三海域反复切换的真实绑定、原菜单/暂停/退出/休息和存档保护；三海域快速夹具使用合成解锁分数与加速会话，不冒称正常完整成长。真实Metal检查证明移动、鱼线、可见性及恢复水面的图像更新和静止缓存复用；骨骼用例只证明触发一次捕捉，该关节在镜头外，不能声称可见骨骼变形图像已验证。
+
+复现入口为`python3 tools/game.py reflection-review --label <新的字母数字标签>`，需真实GPU和项目规定的Unity版本；每次使用新标签以保留原图与回执。`waterline-review`保留原三海域首绘检查，二者不能相互替代。
+
+原首绘标准保持：新一轮24姿态/48图中，首个海湾准备姿态仍有17像素差、最大4/255，故严格首绘验收继续PARTIAL。此前232像素/最大14的失败保留，不把差异变小归因于本修正或当作通过。本轮没有构建新iOS模拟器包、更新个人手机或TestFlight；最终美术、儿童、OS触控与双真机20分钟仍未通过。

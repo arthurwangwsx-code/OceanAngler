@@ -30,12 +30,14 @@ namespace OceanAngler.Tests
             foreach(string suffix in new[]{"",".bak",".tmp"}){string file=Path.Combine(root,"ocean-progress.json")+suffix;if(File.Exists(file)){string saved=Path.Combine(archive,"before"+suffix+".json");File.Move(file,saved);originals.Add(file,saved);}}
             yield return SceneManager.LoadSceneAsync("Bay",LoadSceneMode.Single);scene=SceneManager.GetSceneByName("Bay");yield return null;yield return null;
             game=UnityEngine.Object.FindFirstObjectByType<GameController>();var world=game.GetComponent<OceanWorld>();var ui=game.GetComponent<GameUI>();game.Pause(true);Assert.That(world.ActiveHabitat,Is.TypeOf<BayHabitat>());Assert.That(GameObject.Find("OtherHabitatPrototype"),Is.Null);
+            var trackedGear=UnityEngine.Object.FindFirstObjectByType<AuthoredSpinningRig>();Assert.That(world.ActiveHabitat.reflection.TrackedSubject,Is.EqualTo(trackedGear.transform));
             while(game.Progress.Data.totalPoints<1800){var f=game.Content.Fish("trevally");game.Progress.Settle(new CatchRecord{catchId=Guid.NewGuid().ToString(),fishId=f.id,habitatId=f.habitatId,mode="assisted",weight=f.minWeight,length=f.minLength,skillPoints=30});}
             int initial=game.Progress.Data.catches.Count;
             for(int trip=0;trip<3;trip++)
             {
                 game.SelectHabitat("channel");yield return null;yield return null;
                 Assert.That(world.ActiveHabitat,Is.TypeOf<MarineHabitat>());Assert.That(UnityEngine.Object.FindObjectsByType<MarineHabitat>(FindObjectsInactive.Include,FindObjectsSortMode.None).Length,Is.EqualTo(1));Assert.That(GameObject.Find("OtherHabitatPrototype"),Is.Null);
+                Assert.That(world.ActiveHabitat.reflection.TrackedSubject,Is.EqualTo(trackedGear.transform),"A new habitat must bind the existing rig instead of retaining its destroyed predecessor");
                 Click("海域与装备");yield return null;yield return null;
                 Click("看看海域");yield return null;yield return null;Assert.That(ui.InspectingHabitat&&game.Session.Paused,Is.True);
                 if(!ui.HabitatSurfaceView){Click("回到水面");yield return null;yield return null;}
@@ -48,7 +50,9 @@ namespace OceanAngler.Tests
                 Click("记录并放流");yield return null;yield return null;Assert.That(game.Progress.Data.catches.Count,Is.EqualTo(initial+trip+1));Assert.That(new SaveStore(Path.Combine(root,"ocean-progress.json"),game.Content).Load().data.habitatId,Is.EqualTo("channel"));
                 game.Pause(true);game.SelectHabitat("bay");yield return null;yield return null;Assert.That(world.ActiveHabitat,Is.TypeOf<BayHabitat>());Assert.That(world.ActiveHabitat.GetComponent<BayHabitat>().school.Members.Length,Is.EqualTo(3));
                 game.SelectHabitat("slope");yield return null;yield return null;Assert.That(world.ActiveHabitat,Is.TypeOf<MarineHabitat>());Assert.That(world.ActiveHabitat.SeaLevel,Is.EqualTo(200));Assert.That(world.ActiveHabitat.lighting,Is.Not.Null);Assert.That(GameObject.Find("OtherHabitatPrototype"),Is.Null);Assert.That(Camera.main.clearFlags,Is.EqualTo(CameraClearFlags.SolidColor));Assert.That(RenderSettings.fogColor,Is.EqualTo(new Color(.025f,.10f,.20f)));
+                Assert.That(world.ActiveHabitat.reflection.TrackedSubject,Is.EqualTo(trackedGear.transform));
                 game.SelectHabitat("bay");yield return null;yield return null;Assert.That(GameObject.Find("OtherHabitatPrototype"),Is.Null);
+                Assert.That(world.ActiveHabitat.reflection.TrackedSubject,Is.EqualTo(trackedGear.transform));
             }
             Assert.That(UnityEngine.Object.FindObjectsByType<MarineHabitat>(FindObjectsInactive.Include,FindObjectsSortMode.None).Length,Is.EqualTo(1));Assert.That(new SaveStore(Path.Combine(root,"ocean-progress.json"),game.Content).Load().data.catches.Count,Is.EqualTo(initial+3));
         }

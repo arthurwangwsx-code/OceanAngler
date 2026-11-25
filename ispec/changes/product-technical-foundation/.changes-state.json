@@ -509,6 +509,14 @@
       "checkedAt": "2026-11-24T23:32:03.953Z",
       "durationMs": 131.776584,
       "outcome": "accepted"
+    },
+    {
+      "stageId": "apply",
+      "runId": null,
+      "operation": "start",
+      "checkedAt": "2026-11-24T23:41:10.732Z",
+      "durationMs": 143.13725,
+      "outcome": "accepted"
     }
   ],
   "measurementJournal": {
@@ -13489,6 +13497,105 @@
       "executable": "python3",
       "commandDigest": "d89602c770c16a35b6c5da9a9da4ae967807390aa462f4349604d0463de12f51",
       "receiptPath": "measurements/immersive-copy-publication-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "gpu-regression",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "37650ad0-cc1d-424a-93f2-25e3fc53c920",
+      "startedAt": "2026-11-24T23:45:46.413Z",
+      "executable": "python3",
+      "commandDigest": "22b8e76c0e897501a6e915d407d163b04561919dccb0d595970dc632f3e4a7c8",
+      "receiptPath": "measurements/reflection-stale-red-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "gpu-regression",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "c5f0e311-7ddc-4267-a58f-44afd463c99a",
+      "startedAt": "2026-11-24T23:46:34.758Z",
+      "executable": "python3",
+      "commandDigest": "fab7267780094e283487ad2868ef5a3cfa7a2d5a7e4ca626de0043af02cf6d80",
+      "receiptPath": "measurements/reflection-stale-red2-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "gpu-regression",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "35444d54-05e1-4ce7-8bb5-174e0153a857",
+      "startedAt": "2026-11-24T23:47:55.272Z",
+      "executable": "python3",
+      "commandDigest": "1a3444d8b31d06db9deff840a19de41ef86e77d8fc78f1c0daa04fae553fa195",
+      "receiptPath": "measurements/reflection-stale-green-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "gpu-regression",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "fc6d8838-c4ae-4e5a-adef-5271bf170a46",
+      "startedAt": "2026-11-24T23:50:03.170Z",
+      "executable": "python3",
+      "commandDigest": "71ca617cd8f66a0087c9b422662476e80f2fb22da48edf47dc7c59a55358856f",
+      "receiptPath": "measurements/reflection-motion-cases-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "b2edda3b-3ae1-437e-b9b8-bc37dc405e18",
+      "startedAt": "2026-11-24T23:50:41.656Z",
+      "executable": "python3",
+      "commandDigest": "fb3326ac8cb04bca3f95ec5e951661f889acadf677dcc5d5ac34385a41ef49cc",
+      "receiptPath": "measurements/reflection-editor-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "ee262924-a5ae-47c7-973b-eae6ff3ed0e2",
+      "startedAt": "2026-11-24T23:51:34.071Z",
+      "executable": "python3",
+      "commandDigest": "16d7ab65f3043c1a83f98f3548621c5596f1e1ec2a8a1f5278c3faeab717076f",
+      "receiptPath": "measurements/reflection-world-play-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "gpu-regression",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "d2dbea98-6ec6-408c-8f16-873f6ef80589",
+      "startedAt": "2026-11-24T23:53:10.492Z",
+      "executable": "python3",
+      "commandDigest": "1560d6278effc2a7bfb74b2989a2087ee396c50157079752e9b5ca6db7eac85f",
+      "receiptPath": "measurements/reflection-waterline-static-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "validation",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "4547259a-ba74-4bf5-9369-b3648c41799c",
+      "startedAt": "2026-11-24T23:58:41.654Z",
+      "executable": "python3",
+      "commandDigest": "1b9b750d007c851f920bb86ccb95b6c8d0649e1d11d26d4708a2736b0478955e",
+      "receiptPath": "measurements/reflection-source-validation-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "publication-audit",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "37010696-8e10-4eb1-a7d3-f9ac48c23702",
+      "startedAt": "2026-11-24T23:59:32.816Z",
+      "executable": "python3",
+      "commandDigest": "d89602c770c16a35b6c5da9a9da4ae967807390aa462f4349604d0463de12f51",
+      "receiptPath": "measurements/reflection-publication-20261125.json"
     }
   ],
   "runMeasurements": [
@@ -34121,6 +34228,177 @@
       "receipt": {
         "path": "measurements/immersive-copy-publication-20261125.json",
         "sha256": "70f8a390a4933a52ebe46040c2bcf83dafef4969a830000e35f4f44596e3492d"
+      }
+    },
+    {
+      "id": "37650ad0-cc1d-424a-93f2-25e3fc53c920",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "22b8e76c0e897501a6e915d407d163b04561919dccb0d595970dc632f3e4a7c8",
+      "category": "gpu-regression",
+      "executable": "python3",
+      "startedAt": "2026-11-24T23:45:46.413Z",
+      "finishedAt": "2026-11-24T23:46:19.725Z",
+      "durationMs": 33272.884875,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/reflection-stale-red-20261125.json",
+        "sha256": "780a33653d447ba163f80918d555bd8f26c1408a2c8b102f610b729f45a08489"
+      }
+    },
+    {
+      "id": "c5f0e311-7ddc-4267-a58f-44afd463c99a",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "fab7267780094e283487ad2868ef5a3cfa7a2d5a7e4ca626de0043af02cf6d80",
+      "category": "gpu-regression",
+      "executable": "python3",
+      "startedAt": "2026-11-24T23:46:34.758Z",
+      "finishedAt": "2026-11-24T23:46:44.878Z",
+      "durationMs": 10081.62375,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/reflection-stale-red2-20261125.json",
+        "sha256": "804a37b4cad20634adf0ef401e9379414a7c8d62b90361105826535370f5f529"
+      }
+    },
+    {
+      "id": "35444d54-05e1-4ce7-8bb5-174e0153a857",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "1a3444d8b31d06db9deff840a19de41ef86e77d8fc78f1c0daa04fae553fa195",
+      "category": "gpu-regression",
+      "executable": "python3",
+      "startedAt": "2026-11-24T23:47:55.272Z",
+      "finishedAt": "2026-11-24T23:48:06.094Z",
+      "durationMs": 10777.453833,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/reflection-stale-green-20261125.json",
+        "sha256": "71c4abeb91a52a160d7efe9516f6d3108ca7db44789275040b7ef2e9e681c3fa"
+      }
+    },
+    {
+      "id": "fc6d8838-c4ae-4e5a-adef-5271bf170a46",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "71ca617cd8f66a0087c9b422662476e80f2fb22da48edf47dc7c59a55358856f",
+      "category": "gpu-regression",
+      "executable": "python3",
+      "startedAt": "2026-11-24T23:50:03.170Z",
+      "finishedAt": "2026-11-24T23:50:13.840Z",
+      "durationMs": 10644.048958000001,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/reflection-motion-cases-20261125.json",
+        "sha256": "249e682932c6a09126628f7f1451f0db3ebf62726cffcc33db680b12caebfffc"
+      }
+    },
+    {
+      "id": "b2edda3b-3ae1-437e-b9b8-bc37dc405e18",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "fb3326ac8cb04bca3f95ec5e951661f889acadf677dcc5d5ac34385a41ef49cc",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T23:50:41.656Z",
+      "finishedAt": "2026-11-24T23:50:51.510Z",
+      "durationMs": 9812.332291,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/reflection-editor-20261125.json",
+        "sha256": "c3b97eeba03cd72c78cc60fd3ffa272cf1ae074cfffb5b7b45af804a21a503b8"
+      }
+    },
+    {
+      "id": "ee262924-a5ae-47c7-973b-eae6ff3ed0e2",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "16d7ab65f3043c1a83f98f3548621c5596f1e1ec2a8a1f5278c3faeab717076f",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-24T23:51:34.071Z",
+      "finishedAt": "2026-11-24T23:52:27.238Z",
+      "durationMs": 53134.108416999996,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/reflection-world-play-20261125.json",
+        "sha256": "feeff90fa1b4e40c8d73f7285f27b32a35bb1e126b7db66bafc9afd74135a9ec"
+      }
+    },
+    {
+      "id": "d2dbea98-6ec6-408c-8f16-873f6ef80589",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "1560d6278effc2a7bfb74b2989a2087ee396c50157079752e9b5ca6db7eac85f",
+      "category": "gpu-regression",
+      "executable": "python3",
+      "startedAt": "2026-11-24T23:53:10.492Z",
+      "finishedAt": "2026-11-24T23:53:25.909Z",
+      "durationMs": 15369.88275,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/reflection-waterline-static-20261125.json",
+        "sha256": "85f9d451a8c8fdd13d48fbced5300277e8ad372337eeafc0cdaf577a785837fe"
+      }
+    },
+    {
+      "id": "4547259a-ba74-4bf5-9369-b3648c41799c",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "1b9b750d007c851f920bb86ccb95b6c8d0649e1d11d26d4708a2736b0478955e",
+      "category": "validation",
+      "executable": "python3",
+      "startedAt": "2026-11-24T23:58:41.654Z",
+      "finishedAt": "2026-11-24T23:58:42.374Z",
+      "durationMs": 685.1043750000001,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/reflection-source-validation-20261125.json",
+        "sha256": "c948bea560d67c9cd36ebbc8e9c46fd776d0b615101fa0b5a8bfcb53da0b2e0b"
+      }
+    },
+    {
+      "id": "37010696-8e10-4eb1-a7d3-f9ac48c23702",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d89602c770c16a35b6c5da9a9da4ae967807390aa462f4349604d0463de12f51",
+      "category": "publication-audit",
+      "executable": "python3",
+      "startedAt": "2026-11-24T23:59:32.816Z",
+      "finishedAt": "2026-11-24T23:59:33.615Z",
+      "durationMs": 756.836667,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/reflection-publication-20261125.json",
+        "sha256": "71b5f03374cc458fd87fafc00b618a1c3592eb38892743e951910611f97b0ee5"
       }
     }
   ]

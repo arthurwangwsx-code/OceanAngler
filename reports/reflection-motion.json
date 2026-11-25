@@ -1,0 +1,184 @@
+{
+  "implementation": "IMPLEMENTED",
+  "acceptance": "PARTIAL",
+  "product": "IN_PROGRESS",
+  "scope": "固定镜头移动倒影缓存修正；Editor真实Metal诊断与定向无画面回归，不代表新原生包、性能、完整美术或儿童验收",
+  "sourceBaseCommit": "be89930f4f7a510c1d68df55add49f7dbb57ccd5",
+  "sourceDigest": "6b531fafe3f32afdc04ef7ebb25405f6a51d7c64735c2a63e08387f648fc19f1",
+  "sourceFiles": {
+    "game/Assets/OceanAngler/Runtime/BayPlanarReflection.cs": "4d9e4771a2855c53a088b2c665ca3b86dfdb3031a9826fab70f9cd805747cbec",
+    "game/Assets/OceanAngler/Runtime/OceanWorld.cs": "e1c11ef61bcdf3f31b9292c454480c56d7e3f19608aa043a1f91819511a98915",
+    "game/Assets/OceanAngler/Editor/WaterlineRenderReview.cs": "d5050a9697487af1f55875377ee82ff915711e8f176afd2e4e6ef6c40b7df0c9",
+    "tools/game.py": "e0512276bb903a12b8115f6c82b6946ec2dfe7b57754ff14d8a306b91612e42d",
+    "game/Assets/OceanAngler/Tests/PlayMode/IntegratedWorldTests.cs": "f3281f85c763a98fe3d9af867622ed3ca4c263ee767e3ea7ca631a7e1ec20f02",
+    "game/Assets/OceanAngler/Tests/PlayMode/ChannelVisitTests.cs": "e29c7131662e1cf0b3fdbd4d410085a4bb53853ecb8c908c0e26eab6a6bb9597"
+  },
+  "red": {
+    "status": "FAIL",
+    "graphics": "Metal",
+    "scope": "Fixed-camera actual planar reflection with an owned moving diagnostic marker under the authored rig; not native performance or art acceptance",
+    "trackingAvailable": false,
+    "staticCacheReused": true,
+    "beforeRenders": 1,
+    "afterRenders": 1,
+    "changedPixels": 0,
+    "width": 640,
+    "height": 400
+  },
+  "firstGreen": {
+    "status": "PASS",
+    "graphics": "Metal",
+    "scope": "Fixed-camera actual planar reflection with an owned moving diagnostic marker under the authored rig; not native performance or art acceptance",
+    "trackingAvailable": true,
+    "staticCacheReused": true,
+    "beforeRenders": 1,
+    "afterRenders": 2,
+    "changedPixels": 3445,
+    "width": 640,
+    "height": 400
+  },
+  "motionCases": {
+    "status": "PASS",
+    "graphics": "Metal",
+    "scope": "Fixed-camera actual planar reflection with an owned moving diagnostic marker under the authored rig; not native performance or art acceptance",
+    "trackingAvailable": true,
+    "staticCacheReused": true,
+    "underwaterSkipped": true,
+    "beforeRenders": 1,
+    "afterRenders": 2,
+    "changedPixels": 3445,
+    "width": 640,
+    "height": 400,
+    "changes": [
+      {
+        "name": "late-update",
+        "renderDelta": 1,
+        "changedPixels": 3351,
+        "minimumPixels": 128
+      },
+      {
+        "name": "line-only",
+        "renderDelta": 1,
+        "changedPixels": 308,
+        "minimumPixels": 64
+      },
+      {
+        "name": "bone-only",
+        "renderDelta": 1,
+        "changedPixels": 0,
+        "minimumPixels": 0
+      },
+      {
+        "name": "visibility",
+        "renderDelta": 1,
+        "changedPixels": 1720,
+        "minimumPixels": 128
+      },
+      {
+        "name": "resurface",
+        "renderDelta": 1,
+        "changedPixels": 1664,
+        "minimumPixels": 128
+      }
+    ]
+  },
+  "staticWaterline": {
+    "status": "PARTIAL",
+    "bad": [
+      {
+        "name": "bay-right-ready",
+        "pixels": 17,
+        "maximum": 4
+      }
+    ],
+    "images": 48,
+    "minMechanismMargin": 0.19949808716773987
+  },
+  "editor": {
+    "id": "2",
+    "testcasecount": "20",
+    "result": "Passed",
+    "total": "20",
+    "passed": "20",
+    "failed": "0",
+    "inconclusive": "0",
+    "skipped": "0",
+    "asserts": "0",
+    "engine-version": "3.5.0.0",
+    "clr-version": "4.0.30319.42000",
+    "start-time": "2026-11-24 23:50:48Z",
+    "end-time": "2026-11-24 23:50:50Z",
+    "duration": "1.6984224"
+  },
+  "playMode": {
+    "id": "2",
+    "testcasecount": "5",
+    "result": "Passed",
+    "total": "5",
+    "passed": "5",
+    "failed": "0",
+    "inconclusive": "0",
+    "skipped": "0",
+    "asserts": "0",
+    "engine-version": "3.5.0.0",
+    "clr-version": "4.0.30319.42000",
+    "start-time": "2026-11-24 23:51:43Z",
+    "end-time": "2026-11-24 23:52:25Z",
+    "duration": "42.0998785"
+  },
+  "nativeSimulator": "NOT_RUN",
+  "physicalDevice": "NOT_RUN",
+  "testFlight": "UNCHANGED_0.1.0_8",
+  "devicePerformance": "NOT_RUN",
+  "initialEntryFailure": "首轮带提前退出参数，没有取图或GPU回执；已保留非零测量与私有日志，修正入口后才获得真实红测",
+  "historicalRecordAudit": "INCOMPLETE",
+  "artifacts": [
+    {
+      "path": "art/previews/reflection-motion/legacy-reflection.png",
+      "sha256": "f314c6ad9e831a9d261c0d11daea0b3a7d7e55ae11d5bd9a27c00eda4e1db0b5"
+    },
+    {
+      "path": "art/previews/reflection-motion/refreshed-reflection.png",
+      "sha256": "00f6336be654d7ec2871378c578e9fa57805ff39c4e6a1d8e41058036077ecaf"
+    },
+    {
+      "path": "art/previews/reflection-motion/late-reflection.png",
+      "sha256": "f8b88bdb8c46b3e021207975c3a1524d8f869d7f7b5ac1235c00caa3ad6b3011"
+    },
+    {
+      "path": "art/previews/reflection-motion/line-only-reflection.png",
+      "sha256": "2180181e76538ff2162deb3ef71f142bb46d1e34ea7c7d289463dea3ec9fc658"
+    },
+    {
+      "path": "art/previews/reflection-motion/visibility-reflection.png",
+      "sha256": "74be4c16ba0b3224938a5d355d8bf02db32d21bc79b15bf172ad755a4420795a"
+    },
+    {
+      "path": "art/previews/reflection-motion/resurface-reflection.png",
+      "sha256": "029f742148995858ec33224eb4a11a4e127ad25200902286b2121701a93bde7e"
+    },
+    {
+      "path": "art/previews/reflection-motion/bay-surface.png",
+      "sha256": "0c614521db4265e4b34aec5049ea628593eccef9b286f16d3231bf226c7c15c4"
+    },
+    {
+      "path": "art/previews/reflection-motion/slope-surface.png",
+      "sha256": "f887bbadce1d12b7a7374b1d3d6bf3853bf7055b39323db5dd43ae3349a2c96a"
+    }
+  ],
+  "recordIntegrity": {
+    "status": "PASS",
+    "scope": "Current reflection increment only; historical incomplete records retained",
+    "starts": 9,
+    "completed": 9,
+    "failuresRetained": [
+      "measurements/reflection-stale-red-20261125.json",
+      "measurements/reflection-stale-red2-20261125.json",
+      "measurements/reflection-waterline-static-20261125.json"
+    ],
+    "oldObjectsUnchanged": true,
+    "receiptsVerified": true,
+    "intervalsDisjoint": true,
+    "historicalOverall": "INCOMPLETE"
+  }
+}

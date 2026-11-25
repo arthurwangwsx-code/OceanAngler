@@ -913,7 +913,9 @@
         },
         {
           "path": "game/Assets/OceanAngler/Runtime/BayPlanarReflection.cs",
-          "sha256": "f6d6115e50d0f688475c0ddba5f17f1602efde6cf3299fdc6098c570969b2aaa"
+          "sha256": "4d9e4771a2855c53a088b2c665ca3b86dfdb3031a9826fab70f9cd805747cbec",
+          "previousSha256": "f6d6115e50d0f688475c0ddba5f17f1602efde6cf3299fdc6098c570969b2aaa",
+          "modification": "跟踪已绑定钓具的变换、骨骼、可见性与鱼线，并在较晚的LateUpdate刷新变化倒影；保留静止缓存和水下关闭。见docs/36-reflection-motion.md。"
         },
         {
           "path": "game/Assets/OceanAngler/Shaders/BayWater.shader",
@@ -2733,6 +2735,52 @@
         }
       ],
       "note": "CurrentE48 static frames retain strict first/repeat partial.19-frame native contacts, selected originals and four normalized video frames reviewed.4-second video is actual screen recording, not performance or complete natural-motion proof. Two rejected originals retained. No device logs/identifiers."
+    },
+    {
+      "id": "reflection-motion-diagnostics",
+      "author": "OceanAngler contributors",
+      "license": "MIT",
+      "redistribution": true,
+      "sourceRedistribution": true,
+      "canModify": true,
+      "acquiredAt": "2026-11-25",
+      "source": "本项目原创场景、钓组与诊断方块/线条的Unity Metal图像；无参考照片、私人媒体或设备日志",
+      "status": "EDITOR_DIAGNOSTIC_PASS_STATIC_FIRST_DRAW_PARTIAL_ART_PENDING",
+      "note": "方块和粗线仅为Editor缓存诊断，不加入Player。首轮提前退出和旧倒影红测保留，图像不是iOS模拟器或真机验收。",
+      "artifacts": [
+        {
+          "path": "art/previews/reflection-motion/legacy-reflection.png",
+          "sha256": "f314c6ad9e831a9d261c0d11daea0b3a7d7e55ae11d5bd9a27c00eda4e1db0b5"
+        },
+        {
+          "path": "art/previews/reflection-motion/refreshed-reflection.png",
+          "sha256": "00f6336be654d7ec2871378c578e9fa57805ff39c4e6a1d8e41058036077ecaf"
+        },
+        {
+          "path": "art/previews/reflection-motion/late-reflection.png",
+          "sha256": "f8b88bdb8c46b3e021207975c3a1524d8f869d7f7b5ac1235c00caa3ad6b3011"
+        },
+        {
+          "path": "art/previews/reflection-motion/line-only-reflection.png",
+          "sha256": "2180181e76538ff2162deb3ef71f142bb46d1e34ea7c7d289463dea3ec9fc658"
+        },
+        {
+          "path": "art/previews/reflection-motion/visibility-reflection.png",
+          "sha256": "74be4c16ba0b3224938a5d355d8bf02db32d21bc79b15bf172ad755a4420795a"
+        },
+        {
+          "path": "art/previews/reflection-motion/resurface-reflection.png",
+          "sha256": "029f742148995858ec33224eb4a11a4e127ad25200902286b2121701a93bde7e"
+        },
+        {
+          "path": "art/previews/reflection-motion/bay-surface.png",
+          "sha256": "0c614521db4265e4b34aec5049ea628593eccef9b286f16d3231bf226c7c15c4"
+        },
+        {
+          "path": "art/previews/reflection-motion/slope-surface.png",
+          "sha256": "f887bbadce1d12b7a7374b1d3d6bf3853bf7055b39323db5dd43ae3349a2c96a"
+        }
+      ]
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."
