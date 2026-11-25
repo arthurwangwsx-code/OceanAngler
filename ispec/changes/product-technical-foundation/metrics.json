@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-25T04:43:32.342Z",
+  "generatedAt": "2026-11-25T05:11:30.218Z",
   "source": {
     "change": "product-technical-foundation",
     "cliVersion": "1.0.20",
@@ -26,15 +26,15 @@
     "firstAttemptPassedCount": 1,
     "firstAttemptEvaluatedCount": 1,
     "firstAttemptPassRate": 1,
-    "elapsedMs": 177376530,
-    "observedStepWallMs": 143774976,
+    "elapsedMs": 179054177,
+    "observedStepWallMs": 145452623,
     "unattributedMs": 33601554,
-    "unattributedRate": 0.18943630253675614,
-    "commandMeasurementCount": 1436,
-    "commandSucceededCount": 1277,
+    "unattributedRate": 0.18766138027598206,
+    "commandMeasurementCount": 1453,
+    "commandSucceededCount": 1294,
     "commandFailedCount": 159,
-    "commandSuccessRate": 0.8892757660167131,
-    "commandDurationMs": 52074625.76624605,
+    "commandSuccessRate": 0.8905712319339298,
+    "commandDurationMs": 53086177.07078705,
     "gateCheckCount": 66,
     "repairCount": 0,
     "targetMs": 3600000,
@@ -62,7 +62,7 @@
     },
     "commandMeasurements": {
       "status": "partial",
-      "recorded": 1436
+      "recorded": 1453
     },
     "waitingTime": {
       "status": "unavailable"
@@ -78,12 +78,12 @@
   "runs": [],
   "runMetrics": {
     "version": 1,
-    "generatedAt": "2026-11-25T04:43:32.343Z",
+    "generatedAt": "2026-11-25T05:11:30.219Z",
     "runs": [],
     "unattributed": {
       "unboundAttempts": 2,
       "unknownRunAttempts": 0,
-      "unboundCommands": 1436,
+      "unboundCommands": 1453,
       "unknownRunCommands": 0,
       "unboundGateChecks": 66,
       "unknownRunGateChecks": 0,
@@ -24123,6 +24123,329 @@
         "path": "measurements/deep-lighting-source-publication.json",
         "sha256": "34849ba3f593bd4c73435b34ce8cc0de3e1b2151a82098b09b2fe4b9b8946f05"
       }
+    },
+    {
+      "id": "e0def47d-ca6b-412b-89f8-e77647af8b6c",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "de1548ea70c4ad0f3191ff163332ce0d274f36361d491698b9fe5de3db5dc440",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T04:43:38.190Z",
+      "finishedAt": "2026-11-25T04:45:36.620Z",
+      "durationMs": 118402.412958,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/deep-lighting-simulator-build.json",
+        "sha256": "ef7d91ac100e0d6d50eaafe061dfe6db0675510c8ec4b4b0d081639d46706a4c"
+      }
+    },
+    {
+      "id": "eba7d4b4-09e5-4d4d-837b-7a7cadaeef1d",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d509520a8790ca8c71e556d99bec509aa286ce86285e2234c740b4272bfc507a",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T04:45:42.669Z",
+      "finishedAt": "2026-11-25T04:46:20.221Z",
+      "durationMs": 37522.372375,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/deep-lighting-native-phone01.json",
+        "sha256": "418025fbca26960bc753baa23dd000bbd4430e063513af47c9f301ac459a30fa"
+      }
+    },
+    {
+      "id": "7e3ece2e-88fe-4b8e-86c5-e45459e6dce4",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "ec70fd2fc7a622c5d3bfc50b7acde2a18d6baaeda57895248e8ec06f1e9e72b2",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T04:46:29.365Z",
+      "finishedAt": "2026-11-25T04:46:30.572Z",
+      "durationMs": 1171.427208,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/deep-lighting-phone01-check.json",
+        "sha256": "5bf7e94657b4fc1e6331c5136656683981a00518d5f4b57d4ff60bd6fd8f91d1"
+      }
+    },
+    {
+      "id": "eb92e402-4a85-4963-9ba2-dd795cfe25c7",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "1b9b750d007c851f920bb86ccb95b6c8d0649e1d11d26d4708a2736b0478955e",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-25T04:46:43.013Z",
+      "finishedAt": "2026-11-25T04:46:43.953Z",
+      "durationMs": 916.6184579999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/deep-lighting-foundation-corrected.json",
+        "sha256": "f5206b1b01049f66e7bede7f1aca5fdad2c2faa984a24b7c2a0a9d0ba9eda5b1"
+      }
+    },
+    {
+      "id": "31ecfaaa-005f-4e44-9173-1614c02c2ead",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "df536efe73bd0b96edb2787d2cbfffdf108be36391279b45192923dee850276c",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T04:46:50.356Z",
+      "finishedAt": "2026-11-25T04:47:28.693Z",
+      "durationMs": 38312.004833,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/deep-lighting-native-phone02.json",
+        "sha256": "096675afdd4b763df5dc348d3ba209c047344a9916281084d8ba0ffae40f319f"
+      }
+    },
+    {
+      "id": "e55f4644-49c2-4196-a3c8-d2a2267f6a6b",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "0527e830dd2af62fa9e59c354d9a896a4f049129e6457446e9e7b52c828f3343",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T04:47:43.795Z",
+      "finishedAt": "2026-11-25T04:47:44.992Z",
+      "durationMs": 1163.253666,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/deep-lighting-phone02-check.json",
+        "sha256": "28c8d85638e08add7c9d113e1cd16f8e97ec40928d946b64d3d234ba4bfe34d8"
+      }
+    },
+    {
+      "id": "9c4f279d-f273-4f4b-b901-bbb2240b28ed",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "03dd1b5f21404ad1f0ed216b6b5e92bad46ddab89ab572daa79c5440d21b29ca",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T04:47:50.444Z",
+      "finishedAt": "2026-11-25T04:58:53.855Z",
+      "durationMs": 663349.692542,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/deep-lighting-native-sampling.json",
+        "sha256": "92d741149b4efb7986be2948ade41d438cfbb661b56ad560cf42aa37190d07d2"
+      }
+    },
+    {
+      "id": "9264e39d-3faf-49e3-8909-12d18c0beaf5",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "c21bbe0f8a345eb1c9d466227b74ba92a67ce6e9b065ca7741e2fd158072eafc",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T04:59:15.680Z",
+      "finishedAt": "2026-11-25T05:00:32.026Z",
+      "durationMs": 76292.585625,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/deep-lighting-native-extended.json",
+        "sha256": "64ca85513928a2ac8d2c5258133a7078b07d8c5766ac9746e71daf8bb1b2c089"
+      }
+    },
+    {
+      "id": "6cbf00ac-4eba-4562-bdd9-e8ed0c150226",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "b7d340f14062df5b607fbd6aa1ff879d76797e15546fdc050fddbef8564de786",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T05:00:43.383Z",
+      "finishedAt": "2026-11-25T05:01:11.067Z",
+      "durationMs": 27662.629333999997,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/deep-lighting-reopen.json",
+        "sha256": "c81fd63f4633e7d2087d95cb8baa4155104d30371c1c1ad43607d753dcbfe5a8"
+      }
+    },
+    {
+      "id": "f8ff8b5e-dac6-4e4b-9989-a9a2ef79b7ae",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "39659f409828878ad758654de509275b34ca2fd773fbca1e70390dd6a2c90070",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T05:06:45.019Z",
+      "finishedAt": "2026-11-25T05:06:45.537Z",
+      "durationMs": 491.02975,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/deep-lighting-saves-after.json",
+        "sha256": "25248e4db7d2d2143d59286c314bbb323a09db8d61767026d58bc335e2c0a65f"
+      }
+    },
+    {
+      "id": "66101b51-a1a3-4740-9558-c499e4104e15",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "00b636f85eee09a40b9e672ea970c7ceae7b3d0941f6220c9b079d30efc05e07",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T05:06:50.254Z",
+      "finishedAt": "2026-11-25T05:07:00.391Z",
+      "durationMs": 10108.589208000001,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/deep-lighting-game-media.json",
+        "sha256": "286ef34b8537942d2f51a6438af547755351292d461a0f2e9c6093a50487b4d5"
+      }
+    },
+    {
+      "id": "26c06ab2-9965-4127-af56-57b44f0992d7",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "757a2d8cde02485d3b9b4ab58f8cfac8d429eb5b48a8472f049beba90b4953e3",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T05:07:16.238Z",
+      "finishedAt": "2026-11-25T05:07:40.088Z",
+      "durationMs": 23827.023500000003,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/deep-lighting-final-check.json",
+        "sha256": "be682281a0f961552a6bede74e7b9c91a7631728382208c1b19fcf1ec3b588fb"
+      }
+    },
+    {
+      "id": "24844eca-4e5f-40eb-8856-8f37c3e00884",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "5b7419ef26fbc141af57e726898365fc31ea391280e26afd22d02373dba7b573",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T05:08:06.135Z",
+      "finishedAt": "2026-11-25T05:08:16.900Z",
+      "durationMs": 10728.464667,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/deep-lighting-interactive.json",
+        "sha256": "1ec7679418649f2e80685e0e0931d427f538665b3c74f35e035974549464d952"
+      }
+    },
+    {
+      "id": "7b12a802-c444-475d-8bf9-edf72d3a2e16",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "1b9b750d007c851f920bb86ccb95b6c8d0649e1d11d26d4708a2736b0478955e",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-25T05:09:36.049Z",
+      "finishedAt": "2026-11-25T05:09:36.782Z",
+      "durationMs": 711.1223750000001,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/deep-lighting-final-foundation.json",
+        "sha256": "123e98e82bace33448cef7482e69042879920dff5a24a8342bc971326e3056de"
+      }
+    },
+    {
+      "id": "f988f9a5-645f-4d4f-a82b-1761a214f9e0",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d89602c770c16a35b6c5da9a9da4ae967807390aa462f4349604d0463de12f51",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-25T05:10:37.127Z",
+      "finishedAt": "2026-11-25T05:10:37.881Z",
+      "durationMs": 723.6125830000001,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/deep-lighting-final-publication.json",
+        "sha256": "5a0473f92d546c0f07bd76bf5bca43a0ae28c26b06920e179475fb9ae50b2d0a"
+      }
+    },
+    {
+      "id": "a8587241-e7fd-4677-ae17-a6e67621e183",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "649f53e7041a0b5c99ff047535ad9586b7fba05cfe2a0f1e912953eca74dd065",
+      "category": "lint",
+      "executable": "git",
+      "startedAt": "2026-11-25T05:11:06.895Z",
+      "finishedAt": "2026-11-25T05:11:06.973Z",
+      "durationMs": 51.106334000000004,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/deep-lighting-final-diff.json",
+        "sha256": "adcbd2a83b66d8a48b2903286dc5e4d0a12fc6ea15d6b87ca10bce2426738518"
+      }
+    },
+    {
+      "id": "79e2642d-c481-4150-af5f-470486b47bda",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "94b413f0c995746244c16f26c14a7b7fe63d05015a0b677005dd9a962cc062a4",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T05:11:16.710Z",
+      "finishedAt": "2026-11-25T05:11:16.885Z",
+      "durationMs": 117.35912499999995,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/deep-lighting-final-records.json",
+        "sha256": "3c03f4f10c36628f994a005742542df38c0516344b976351d5255b450b845398"
+      }
     }
   ],
   "measurementAudit": {
@@ -24130,8 +24453,8 @@
     "scope": "declared-command-receipts-only",
     "runId": null,
     "complete": false,
-    "registered": 1432,
-    "completed": 1436,
+    "registered": 1449,
+    "completed": 1453,
     "unfinishedIds": [
       "539d2470-da3f-4a9d-941c-e4c4a34b48da"
     ],
@@ -27430,35 +27753,35 @@
   "commands": [
     {
       "category": "test",
-      "count": 585,
-      "succeededCount": 492,
+      "count": 586,
+      "succeededCount": 493,
       "failedCount": 93,
-      "successRate": 0.841025641025641,
-      "durationMs": 17769188.970286008
+      "successRate": 0.841296928327645,
+      "durationMs": 17769306.329411007
     },
     {
       "category": "compile",
-      "count": 305,
-      "succeededCount": 292,
+      "count": 306,
+      "succeededCount": 293,
       "failedCount": 13,
-      "successRate": 0.9573770491803278,
-      "durationMs": 13833239.664004002
+      "successRate": 0.9575163398692811,
+      "durationMs": 13951642.076962002
     },
     {
       "category": "e2e",
-      "count": 302,
-      "succeededCount": 254,
+      "count": 313,
+      "succeededCount": 265,
       "failedCount": 48,
-      "successRate": 0.8410596026490066,
-      "durationMs": 20170196.642212003
+      "successRate": 0.8466453674121406,
+      "durationMs": 21060825.714920003
     },
     {
       "category": "lint",
-      "count": 193,
-      "succeededCount": 192,
+      "count": 197,
+      "succeededCount": 196,
       "failedCount": 1,
-      "successRate": 0.9948186528497409,
-      "durationMs": 88331.29728899995
+      "successRate": 0.9949238578680203,
+      "durationMs": 90733.75703899995
     },
     {
       "category": "validation",
@@ -28044,8 +28367,8 @@
     "finishedAt": null,
     "status": "in_progress",
     "measurementBasis": "before-first-entry-gate",
-    "elapsedMs": 177376530,
-    "observedStepWallMs": 143774976,
+    "elapsedMs": 179054177,
+    "observedStepWallMs": 145452623,
     "unattributedMs": 33601554,
     "waitingMs": null,
     "retryAttemptMs": 0,

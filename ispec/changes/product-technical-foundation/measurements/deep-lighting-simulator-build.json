@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "e0def47d-ca6b-412b-89f8-e77647af8b6c",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "de1548ea70c4ad0f3191ff163332ce0d274f36361d491698b9fe5de3db5dc440",
+    "category": "compile",
+    "executable": "python3",
+    "startedAt": "2026-11-25T04:43:38.190Z",
+    "finishedAt": "2026-11-25T04:45:36.620Z",
+    "durationMs": 118402.412958,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/deep-lighting-qa/build.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/deep-lighting-qa/build.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T04:43:38.190Z",
+  "finishedAt": "2026-11-25T04:45:36.620Z",
+  "durationMs": 118402.412958
+}

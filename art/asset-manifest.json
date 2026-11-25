@@ -3267,6 +3267,73 @@
         }
       ],
       "note": "Original project assets rendered in isolated Editor GPU, old fixed lamp versus final camera lamp. No personal media or reference image reuse. Not native UI, science, physical or final art acceptance."
+    },
+    {
+      "id": "deep-water-lighting-native",
+      "author": "OceanAngler contributors",
+      "source": "Own native Simulator app6caaed6/b0e38658; real RNG phone14/tablet07 and new-process journals",
+      "license": "MIT",
+      "redistribution": true,
+      "status": "ART_REVIEW_PENDING",
+      "artifacts": [
+        {
+          "path": "art/previews/deep-water-lighting-native/phone-contact.jpg",
+          "sha256": "3e8fdefe8caec7743478068eaa3ca46be4f801652ce3b06f95e373414ede75e6"
+        },
+        {
+          "path": "art/previews/deep-water-lighting-native/phone-fight-release.mp4",
+          "sha256": "0e91f068fb5565c45f6f75c6632134f2d2736fdd464c857ffe451e0e8389e5fb"
+        },
+        {
+          "path": "art/previews/deep-water-lighting-native/phone-fighting.png",
+          "sha256": "f329f0540be655c7f3ac3be71a6b8a2f92f8de3d7c7878d4cbc2c08ab23ac293"
+        },
+        {
+          "path": "art/previews/deep-water-lighting-native/phone-landed.png",
+          "sha256": "cf6d2edfb29123d89a64dde8125e5b5a82b9ed4abfb013c504b4f5088974d216"
+        },
+        {
+          "path": "art/previews/deep-water-lighting-native/phone-previous-current.jpg",
+          "sha256": "f22ee7e7543f32afb2b73aee55e316c37e55ac0187b27de13f553cdeb967382b"
+        },
+        {
+          "path": "art/previews/deep-water-lighting-native/phone-release.png",
+          "sha256": "af0aac10b3e923c493fa67237d3164ce8f9000885e37cf7691025bbd1cad37f9"
+        },
+        {
+          "path": "art/previews/deep-water-lighting-native/phone-reopened-journal.png",
+          "sha256": "7132c75125cf8e095379603c02f3572855cefda4c7fe9be627a798bf940b5ff2"
+        },
+        {
+          "path": "art/previews/deep-water-lighting-native/tablet-contact.jpg",
+          "sha256": "4f35e645249899673a8153f61573a0fd3bee9cbfee01426f2b0c21781768533f"
+        },
+        {
+          "path": "art/previews/deep-water-lighting-native/tablet-fight-release.mp4",
+          "sha256": "d059c6dfd062e6a5a64735e82a10eb392a54277b7ee2424fa7b617f49efd8e33"
+        },
+        {
+          "path": "art/previews/deep-water-lighting-native/tablet-fighting.png",
+          "sha256": "3ffab45c6911c47ff71bbc7ba45024d50ffb06b2ee052ad3038c5f1d9b227478"
+        },
+        {
+          "path": "art/previews/deep-water-lighting-native/tablet-landed.png",
+          "sha256": "dc66ecced1c14b5f8a0e22167fd3192f055b169a37f171ca26204649b01efa20"
+        },
+        {
+          "path": "art/previews/deep-water-lighting-native/tablet-previous-current.jpg",
+          "sha256": "064d352e31927b4d9da79fe8ce197d2c7ab832197c450d0dd8dcc7cf868e9052"
+        },
+        {
+          "path": "art/previews/deep-water-lighting-native/tablet-release.png",
+          "sha256": "e86fd848cc09729a49ff1c659de938c38d4f18dbf89ba136a893cac31b336bc6"
+        },
+        {
+          "path": "art/previews/deep-water-lighting-native/tablet-reopened-journal.png",
+          "sha256": "c159f67c9cec7ff1f1afa0ec74e5973e97441a6d16211faa08f1da072a115bac"
+        }
+      ],
+      "note": "Own game UI/assets and isolated project QA progress. Game-only clips, no home screen, audio or color adjustment. Old/current native comparison uses different encounters. Not personal media, OS touch, physical or final art acceptance."
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."

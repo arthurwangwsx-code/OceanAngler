@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "eba7d4b4-09e5-4d4d-837b-7a7cadaeef1d",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "d509520a8790ca8c71e556d99bec509aa286ce86285e2234c740b4272bfc507a",
+    "category": "e2e",
+    "executable": "python3",
+    "startedAt": "2026-11-25T04:45:42.669Z",
+    "finishedAt": "2026-11-25T04:46:20.221Z",
+    "durationMs": 37522.372375,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/deep-lighting-qa/record-and-run.py",
+      "deeplightphone01",
+      "--device",
+      "phone"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/deep-lighting-qa/record-and-run.py",
+    "deeplightphone01",
+    "--device",
+    "phone"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T04:45:42.669Z",
+  "finishedAt": "2026-11-25T04:46:20.221Z",
+  "durationMs": 37522.372375
+}

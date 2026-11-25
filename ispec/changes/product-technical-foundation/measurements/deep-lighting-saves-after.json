@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "f8ff8b5e-dac6-4e4b-9989-a9a2ef79b7ae",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "39659f409828878ad758654de509275b34ca2fd773fbca1e70390dd6a2c90070",
+    "category": "e2e",
+    "executable": "python3",
+    "startedAt": "2026-11-25T05:06:45.019Z",
+    "finishedAt": "2026-11-25T05:06:45.537Z",
+    "durationMs": 491.02975,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/deep-lighting-qa/retain-saves.py",
+      "after"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/deep-lighting-qa/retain-saves.py",
+    "after"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T05:06:45.019Z",
+  "finishedAt": "2026-11-25T05:06:45.537Z",
+  "durationMs": 491.02975
+}
