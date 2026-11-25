@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "3ddbc05d-a687-4d5d-96c2-4c3759539447",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "b12bdf93901089275b643f4d190837958274937b8f9179a8b8da82abad492f41",
+    "category": "compile",
+    "executable": "python3",
+    "startedAt": "2026-11-25T03:23:21.667Z",
+    "finishedAt": "2026-11-25T03:23:29.349Z",
+    "durationMs": 7652.22175,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      "tools/art.py",
+      "build",
+      "--asset",
+      "halibut",
+      "--label",
+      "halibut-mouth-source-a",
+      "--no-preview"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    "tools/art.py",
+    "build",
+    "--asset",
+    "halibut",
+    "--label",
+    "halibut-mouth-source-a",
+    "--no-preview"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T03:23:21.667Z",
+  "finishedAt": "2026-11-25T03:23:29.349Z",
+  "durationMs": 7652.22175
+}

@@ -19,8 +19,8 @@ Blender 5.3：`python3 tools/art.py build --asset halibut --label unique-build -
 
 Halibut.blend 是可编辑源，FBX 与 1K 身体 / 512 鳍 / 256 虹膜原创贴图在 game/Assets/OceanAngler/Art/Halibut。源坐标 X 向尾、Y 宽、Z 正向眼侧；Unity 导入需要核对转换后的眼侧朝上和钩点。
 
-Unity 导入入口为 `python3 tools/game.py halibut`；隔离 GPU 图入口为 `python3 tools/game.py halibut-review --label uniqueLabel`。三个网格共享五个材质槽与七个派生动画资产。当前隔离 prefab 尚未接入实际遭遇或图鉴的选鱼工厂。
+Unity 导入入口为 `python3 tools/game.py halibut`；隔离 GPU 图入口为 `python3 tools/game.py halibut-review --label uniqueLabel`。三个网格共享六个材质槽与七个派生动画资产。候选已接入实际遭遇和图鉴的选鱼工厂；图鉴保留未完成提示，展示倾角不改变游动时的水平姿态。
 
 ## 尚待验收
 
-当前刚性胸鳍、边鳍摆动、细节与自然色泽仍需实际画面审阅；普通减面可能损失鳍边及眼部轮廓。Unity 开口近景已发现口缘/牙根连接未完成，牙齿呈脱离感，该项视觉 FAIL；鳃盖与眼部也需细化。源网格通过不代表 Unity、Player、双端触控、真实设备性能、儿童或完整美术通过。不能把解剖修正当作成品拟真完成。
+第一轮口缘/牙根连接缺失的 FAIL 图保留在 halibut-anatomy 目录；当前连续唇/牙龈/口壁已焊接、牙根随动作贴合，并补上鱼体鳃盖起伏，见[修正记录](../../../reports/halibut-mouth.md)。当前刚性胸鳍、边鳍摆动、唇部高光、眼眶、鳃盖比例及自然色泽仍待精修；普通减面可能损失小部位轮廓。源与导入通过不代表 Player、双端触控、真实设备性能、儿童或完整美术通过。不能把解剖修正当作成品拟真完成。

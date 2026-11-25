@@ -4,16 +4,16 @@
   "coordinateConvention": "X longitudinal, Y body width, +Z eyed side up; blind side faces seabed",
   "lods": {
     "Halibut_LOD0": {
-      "vertices": 10362,
-      "triangles": 20336
+      "vertices": 10530,
+      "triangles": 20784
     },
     "Halibut_LOD1": {
-      "vertices": 4257,
-      "triangles": 8134
+      "vertices": 4294,
+      "triangles": 8312
     },
     "Halibut_LOD2": {
-      "vertices": 1678,
-      "triangles": 3049
+      "vertices": 1684,
+      "triangles": 3117
     }
   },
   "distanceUVReduction": [
@@ -21,13 +21,13 @@
       "lod": 1,
       "beforeMin": -0.009893481619656086,
       "beforeMax": 1.0032761096954346,
-      "clampedCoordinates": 376
+      "clampedCoordinates": 352
     },
     {
       "lod": 2,
       "beforeMin": -0.017021046951413155,
       "beforeMax": 1.010401725769043,
-      "clampedCoordinates": 275
+      "clampedCoordinates": 216
     }
   ],
   "bones": [
@@ -61,7 +61,50 @@
         -0.81,
         0.065,
         0
+      ],
+      "continuousLipGumLumen": true,
+      "rings": [
+        [
+          -1.045,
+          0.048,
+          0.021
+        ],
+        [
+          -1.053,
+          0.046,
+          0.022
+        ],
+        [
+          -1.048,
+          0.04,
+          0.016
+        ],
+        [
+          -1.026,
+          0.043,
+          0.018
+        ],
+        [
+          -1.009,
+          0.038,
+          0.014
+        ],
+        [
+          -0.975,
+          0.03,
+          0.013
+        ],
+        [
+          -0.855,
+          0.018,
+          0.011
+        ]
       ]
+    },
+    "gillCover": {
+      "construction": "continuous body relief and curved albedo crease on eyed side",
+      "peakRelief": 0.006,
+      "edgeXAtCenter": -0.48
     },
     "Dorsal": {
       "rays": 65,
@@ -100,7 +143,7 @@
       "path": "game/Assets/OceanAngler/Art/Halibut/Halibut_BaseColor.png",
       "width": 1024,
       "height": 1024,
-      "sha256": "248eddc89212dfe074adc2f588f99dac4d800c2fbd7442fb5c7ea1735607820f"
+      "sha256": "88a561c378f8b965baf672c9f77ed41e1b1b7a3ac18846840c3d52ea245bea4e"
     },
     "Normal": {
       "path": "game/Assets/OceanAngler/Art/Halibut/Halibut_Normal.png",

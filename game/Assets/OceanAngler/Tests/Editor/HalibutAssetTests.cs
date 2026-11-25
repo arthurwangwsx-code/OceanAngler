@@ -1,4 +1,5 @@
 using System.Linq;
+using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEditor;
 using UnityEngine;
@@ -6,6 +7,48 @@ namespace OceanAngler.Tests
 {
     public sealed class HalibutAssetTests
     {
+        [Test] public void ActualImportedToothRootsRemainInVisibleGumThroughAllSevenActions()
+        {
+            var root=Object.Instantiate(Resources.Load<GameObject>("Models/Halibut"));var baked=new Mesh();
+            try
+            {
+                var animator=root.GetComponentInChildren<Animator>();animator.enabled=false;var renderer=root.GetComponentsInChildren<SkinnedMeshRenderer>().Single(r=>r.name.EndsWith("LOD0"));var mesh=renderer.sharedMesh;
+                int gum=System.Array.FindIndex(renderer.sharedMaterials,m=>m.name=="Halibut_Gum"),tooth=System.Array.FindIndex(renderer.sharedMaterials,m=>m.name=="Halibut_Teeth");Assert.That(gum,Is.GreaterThanOrEqualTo(0));Assert.That(tooth,Is.GreaterThanOrEqualTo(0));
+                var triangles=mesh.GetTriangles(tooth);var adjacency=triangles.Distinct().ToDictionary(i=>i,i=>new HashSet<int>());
+                for(int i=0;i<triangles.Length;i+=3)foreach(int a in triangles.Skip(i).Take(3))foreach(int b in triangles.Skip(i).Take(3))if(a!=b)adjacency[a].Add(b);
+                var unseen=new HashSet<int>(adjacency.Keys);var groups=new List<int[]>();renderer.BakeMesh(baked,true);var rest=baked.vertices.Select(v=>renderer.transform.TransformPoint(v)).ToArray();
+                while(unseen.Count>0)
+                {
+                    int seed=unseen.First();unseen.Remove(seed);var pending=new Stack<int>();pending.Push(seed);var group=new List<int>();
+                    while(pending.Count>0){int current=pending.Pop();group.Add(current);foreach(int next in adjacency[current])if(unseen.Remove(next))pending.Push(next);}
+                    Assert.That(group.Count,Is.EqualTo(6));int tip=group.OrderByDescending(i=>rest[i].x).First();groups.Add(group.Where(i=>i!=tip).ToArray());
+                }
+                Assert.That(groups.Count,Is.EqualTo(12));var gums=mesh.GetTriangles(gum);Assert.That(gums.Length,Is.GreaterThan(300));
+                foreach(var clip in animator.runtimeAnimatorController.animationClips)foreach(float phase in new[]{0,.25f,.5f,.75f,1f})
+                {
+                    clip.SampleAnimation(animator.gameObject,clip.length*phase);renderer.BakeMesh(baked,true);var positions=baked.vertices.Select(v=>renderer.transform.TransformPoint(v)).ToArray();
+                    foreach(var group in groups)
+                    {
+                        Vector3 center=group.Aggregate(Vector3.zero,(sum,i)=>sum+positions[i])/group.Length;float minimum=float.PositiveInfinity;
+                        for(int i=0;i<gums.Length;i+=3)minimum=Mathf.Min(minimum,TriangleDistanceSquared(center,positions[gums[i]],positions[gums[i+1]],positions[gums[i+2]]));
+                        Assert.That(minimum,Is.LessThan(.001f*.001f),clip.name+" phase="+phase+" tooth root left gum");
+                    }
+                }
+            }
+            finally{Object.DestroyImmediate(baked);Object.DestroyImmediate(root);}
+        }
+        static float TriangleDistanceSquared(Vector3 p,Vector3 a,Vector3 b,Vector3 c)
+        {
+            var normal=Vector3.Cross(b-a,c-a);float size=normal.sqrMagnitude;
+            if(size>1e-16f)
+            {
+                var projected=p-normal*(Vector3.Dot(p-a,normal)/size);
+                if(Vector3.Dot(Vector3.Cross(b-a,projected-a),normal)>=-1e-15f&&Vector3.Dot(Vector3.Cross(c-b,projected-b),normal)>=-1e-15f&&Vector3.Dot(Vector3.Cross(a-c,projected-c),normal)>=-1e-15f)return (p-projected).sqrMagnitude;
+            }
+            return Mathf.Min(SegmentDistanceSquared(p,a,b),Mathf.Min(SegmentDistanceSquared(p,b,c),SegmentDistanceSquared(p,c,a)));
+        }
+        static float SegmentDistanceSquared(Vector3 p,Vector3 a,Vector3 b)
+        {var edge=b-a;float size=edge.sqrMagnitude;return (p-a-edge*(size>0?Mathf.Clamp01(Vector3.Dot(p-a,edge)/size):0)).sqrMagnitude;}
         [Test] public void ImportedCandidatePreservesHorizontalFlatBodyAndBothEyedSideEyes()
         {
             var root=Object.Instantiate(Resources.Load<GameObject>("Models/Halibut"));

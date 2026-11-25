@@ -44,7 +44,9 @@ namespace OceanAngler
         void SelectFish(string id)
         {
             if(fishRoot!=null)Destroy(fishRoot.gameObject);
-            var authored=id=="trevally"?Resources.Load<GameObject>("Models/Bluefin"):null;
+            string resource=id=="trevally"?"Models/Bluefin":id=="halibut"?"Models/Halibut":null;
+            var authored=resource==null?null:Resources.Load<GameObject>(resource);
+            if(resource!=null&&authored==null)throw new InvalidOperationException("Missing authored fish "+id);
             if(authored!=null){fishRoot=Instantiate(authored).transform;fish=fishRoot.GetComponent<AuthoredFishVisual>();}
             else{fishRoot=new GameObject("Fish-"+id).transform;var prototype=fishRoot.gameObject.AddComponent<FishModel>();prototype.Initialize(game.Content.Fish(id));fish=prototype;}
             fishId=id;
@@ -90,6 +92,9 @@ namespace OceanAngler
             fishRoot.position=journal?new Vector3(ui.CompactViewer?-1.3f:2.35f,ui.CompactViewer?.7f:1.35f,1.2f):pose.fishPosition;
             fishRoot.localScale=Vector3.one*(journal?ui.ModelZoom:1);
             fishRoot.rotation=journal?Quaternion.Euler(0,-25+ui.ModelYaw,-3):pose.fishRotation;
+            // Turn the flatfish toward the journal viewer. Existing yaw controls
+            // reveal both sides; the swimming encounter keeps its horizontal pose.
+            if(journal&&fishId=="halibut")fishRoot.rotation*=Quaternion.Euler(-55,0,0);
             if(releasing!=null)PresentRelease(game.Session.Paused);
             bool discovered=game.Progress.Data.catches.Exists(c=>c.fishId==fishId);fish.SetSilhouette(journal&&!discovered);
             float t=game.Session.Tension;

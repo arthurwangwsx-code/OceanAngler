@@ -18,8 +18,13 @@ scene.view_settings.view_transform='AgX';scene.world.color=(.18,.18,.18)
 PROFILE=[(-1.045,.048,.021),(-.99,.09,.028),(-.88,.175,.044),(-.73,.285,.060),(-.52,.405,.073),(-.23,.475,.077),(.04,.467,.073),(.29,.387,.061),(.52,.280,.047),(.72,.170,.034),(.88,.083,.025),(1.0,.058,.021)]
 parts=[];anatomy={};maps={}
 def section(x):return tuple(float(np.interp(x,[p[0] for p in PROFILE],[p[i] for p in PROFILE])) for i in (1,2))
+def gill_relief(x,y):
+    edge=-.48-.15*(y/.32)**2;mask=max(0,1-(y/.31)**2)
+    return mask*(.006*math.exp(-((x-(edge-.035))/.027)**2)-.0015*math.exp(-((x-edge)/.009)**2))
 def surface(x,a,offset=0):
-    w,h=section(x);return (x,(w+offset)*math.sin(a),(h+offset)*math.cos(a))
+    w,h=section(x);y=(w+offset)*math.sin(a);z=(h+offset)*math.cos(a)
+    z+=gill_relief(x,y)*max(0,math.cos(a))**3
+    return (x,y,z)
 def image(name,values,noncolor=False):
     if values.ndim==2:values=np.repeat(values[:,:,None],3,axis=2)
     rgba=np.ones((*values.shape[:2],4),dtype=np.float32);rgba[:,:,:values.shape[2]]=np.clip(values,0,1)
@@ -47,6 +52,10 @@ base+=upper[:,:,None]*flecks[:,:,None]*.035+fine[:,:,None]*.002
 # Curved lateral line arches around the pectoral region on the eyed side.
 line_v=.30+.16*np.exp(-((u-.29)/.14)**2);line=np.exp(-((np.sin(phi)-line_v)/.018)**2)*upper*np.clip((u-.17)*15,0,1)
 base-=line[:,:,None]*np.array([.025,.023,.016])
+px=-1.045+u*2.045;body_w=np.interp(px,[p[0] for p in PROFILE],[p[1] for p in PROFILE]);py=body_w*np.sin(phi)
+gill_edge=-.48-.15*(py/.32)**2;gill_mask=np.clip(1-(py/.31)**2,0,1)*np.clip(np.cos(phi),0,1)**3
+gill_crease=np.exp(-((px-gill_edge)/.009)**2)*gill_mask
+base-=gill_crease[:,:,None]*np.array([.055,.052,.036])
 rows=v*80;cols=u*150+(np.floor(rows)%2)*.5
 relief=np.exp(-(((rows%1)-(.25+.35*(cols%1-.5)**2))/.065)**2)*.00015
 relief*=np.clip((u-.18)*12,0,1);gy,gx=np.gradient(relief);normal=np.stack((-gx*65,-gy*65,np.ones_like(gx)),axis=2);normal/=np.linalg.norm(normal,axis=2)[:,:,None]
@@ -59,7 +68,7 @@ image('Fin',fc);fn=np.stack((np.sin(fu*math.tau*88)*.07,np.zeros_like(fu),np.one
 image('Fin_MetallicSmoothness',np.dstack((np.zeros((512,512,3)),.44+ray*.05)),True)
 ey,ex=np.mgrid[0:256,0:256];dx=(ex-127.5)/127.5;dy=(ey-127.5)/127.5;r=np.sqrt(dx*dx+dy*dy);theta=np.arctan2(dy,dx)
 iris=np.zeros((256,256,3));iris[:]=[.22,.21,.12];iris+=(np.cos(theta*57+r*21)*.018)[:,:,None];iris*=np.clip((1-r)*7,0,1)[:,:,None];image('Iris',iris)
-skin=material('Skin',(.3,.3,.2),base=maps['BaseColor'],normal=maps['Normal'],packed=maps['MetallicSmoothness']);fin=material('Fins',(.25,.25,.16),base=maps['Fin'],normal=maps['Fin_Normal'],packed=maps['Fin_MetallicSmoothness']);eye=material('Iris',(.3,.3,.2),.3,base=maps['Iris']);dark=material('Dark',(.018,.015,.011),.37);tooth=material('Teeth',(.61,.59,.51),.52)
+skin=material('Skin',(.3,.3,.2),base=maps['BaseColor'],normal=maps['Normal'],packed=maps['MetallicSmoothness']);fin=material('Fins',(.25,.25,.16),base=maps['Fin'],normal=maps['Fin_Normal'],packed=maps['Fin_MetallicSmoothness']);eye=material('Iris',(.3,.3,.2),.3,base=maps['Iris']);dark=material('Dark',(.035,.025,.018),.50);tooth=material('Teeth',(.61,.59,.51),.52);gum=material('Gum',(.15,.105,.08),.62)
 BONE_X=[(-.55,'head'),(-.05,'spine1'),(.32,'spine2'),(.61,'spine3'),(.9,'peduncle'),(1.25,'tail')]
 def weights(x):
     if x<=BONE_X[0][0]:return [('head',1)]
@@ -68,14 +77,14 @@ def weights(x):
         if a<=x<=b:t=(x-a)/(b-a);return [(an,1-t),(bn,t)]
 def jaw_weights(p):
     x,y,z=p;t=np.clip((-.79-x)/.17,0,1)*np.clip((y+.005)/.018,0,1);return [('head',1-float(t)),('jaw',float(t))]
-def mesh(name,verts,faces,mat,uv=None,bone=None,jaw=False):
+def mesh(name,verts,faces,mat,uv=None,bone=None,jaw=False,fixed_weights=None):
     data=bpy.data.meshes.new(name);data.from_pydata(verts,[],faces);data.update();obj=bpy.data.objects.new(name,data);scene.collection.objects.link(obj);data.materials.append(mat);layer=data.uv_layers.new()
     for face in data.polygons:
         face.use_smooth=True
         for li in face.loop_indices:
             vi=data.loops[li].vertex_index;p=verts[vi];layer.data[li].uv=uv[vi] if uv else ((p[0]+1.05)/2.5,.25)
     for i,p in enumerate(verts):
-        for key,value in jaw_weights(p) if jaw else [(bone,1)] if bone else weights(p[0]):
+        for key,value in fixed_weights if fixed_weights is not None else jaw_weights(p) if jaw else [(bone,1)] if bone else weights(p[0]):
             if value>0:(obj.vertex_groups.get(key) or obj.vertex_groups.new(name=key)).add([i],value,'REPLACE')
     bm=bmesh.new();bm.from_mesh(data);bmesh.ops.recalc_face_normals(bm,faces=list(bm.faces));bm.to_mesh(data);bm.free();parts.append(obj);return obj
 # Body and real mouth lumen, with a throat cap instead of a painted hole.
@@ -87,16 +96,20 @@ for i in range(rings):
     for j in range(sides):a=i*(sides+1)+j;faces.append((a,a+sides+1,a+sides+2,a+1))
 faces.append(tuple(rings*(sides+1)+j for j in range(sides)))
 body=mesh('Body',verts,faces,skin,uv,jaw=True)
-verts=[];faces=[]
-for k,(x,w,h) in enumerate([(-1.045,.0475,.0205),(-.975,.042,.018),(-.855,.018,.011)]):
-    for j in range(sides):verts.append((x,w*math.sin(j/sides*math.tau),h*math.cos(j/sides*math.tau)))
-for i in range(2):
-    for j in range(sides):a=i*sides+j;b=i*sides+(j+1)%sides;faces.append((a,b,b+sides,a+sides))
-faces.append(tuple(2*sides+j for j in range(sides-1,-1,-1)))
-oral=mesh('OralLumen',verts,faces,dark,jaw=True)
-# The lumen's visible normals must face inside the opening, not outside.
-bm=bmesh.new();bm.from_mesh(oral.data);bmesh.ops.reverse_faces(bm,faces=list(bm.faces));bm.to_mesh(oral.data);bm.free()
-anatomy['mouth']={'opening':[-1.045,.048,.021],'throatX':-.855,'jawHinge':[-.81,.065,0]}
+MOUTH_RINGS=[(-1.045,.048,.021),(-1.053,.046,.022),(-1.048,.040,.016),(-1.026,.043,.018),(-1.009,.038,.014),(-.975,.030,.013),(-.855,.018,.011)]
+# Each band shares exact vertices and deformation with its neighbors; the first
+# ring is welded to the body's real opening after joining. No floating lip torus.
+for band,(outer,inner) in enumerate(zip(MOUTH_RINGS,MOUTH_RINGS[1:])):
+    verts=[];faces=[];uv=[]
+    for x,w,h in (outer,inner):
+        for j in range(sides):
+            a=j/sides*math.tau;verts.append((x,w*math.sin(a),h*math.cos(a)));uv.append((max(0,min(1,(x+1.045)/2.045)),j/sides))
+    for j in range(sides):n=(j+1)%sides;faces.append((j,n,n+sides,j+sides))
+    mesh('LipBand'+str(band),verts,faces,skin if band<2 else gum if band<4 else dark,uv,jaw=True)
+verts=[(MOUTH_RINGS[-1][0],MOUTH_RINGS[-1][1]*math.sin(j/sides*math.tau),MOUTH_RINGS[-1][2]*math.cos(j/sides*math.tau)) for j in range(sides)]
+mesh('ThroatCap',verts,[tuple(range(sides-1,-1,-1))],dark,jaw=True)
+anatomy['mouth']={'opening':[-1.045,.048,.021],'throatX':-.855,'jawHinge':[-.81,.065,0],'continuousLipGumLumen':True,'rings':MOUTH_RINGS}
+anatomy['gillCover']={'construction':'continuous body relief and curved albedo crease on eyed side','peakRelief':.006,'edgeXAtCenter':-.48}
 def fin_shell(name,roots,tips,bone=None,steps=5):
     # Two faces, a tapered edge and closed rim; no paper-thin triangular fan.
     n=len(roots);verts=[];uv=[];faces=[]
@@ -144,13 +157,13 @@ for index,(cx,cy) in enumerate([(-.787,-.064),(-.691,-.185)]):
 # Teeth are restrained close-view details, entirely inside the mouth.
 for i in range(12):
     a=math.tau*i/12;root=Vector((-1.026,.043*math.sin(a),.018*math.cos(a)));tip=root+Vector((.01,-.006*math.sin(a),-.006*math.cos(a)));axis=(tip-root).normalized();a1=axis.cross(Vector((0,0,1))).normalized();a2=axis.cross(a1)
-    vv=[tuple(root+.0018*(math.cos(j*math.tau/5)*a1+math.sin(j*math.tau/5)*a2)) for j in range(5)]+[tuple(tip)];ff=[tuple(range(4,-1,-1))]+[(j,(j+1)%5,5) for j in range(5)];mesh('Tooth'+str(i),vv,ff,tooth,jaw=True)
+    vv=[tuple(root+.0018*(math.cos(j*math.tau/5)*a1+math.sin(j*math.tau/5)*a2)) for j in range(5)]+[tuple(tip)];ff=[tuple(range(4,-1,-1))]+[(j,(j+1)%5,5) for j in range(5)];mesh('Tooth'+str(i),vv,ff,tooth,fixed_weights=jaw_weights(root))
 # Join authored components; UVs and semantic weight groups survive each LOD.
 bpy.ops.object.select_all(action='DESELECT')
 for obj in parts:obj.select_set(True)
 bpy.context.view_layer.objects.active=body;bpy.ops.object.join();body.name='Halibut_LOD0'
 # Merge only coincident seam/eye pole vertices, preserving UV per loop.
-bm=bmesh.new();bm.from_mesh(body.data);bmesh.ops.remove_doubles(bm,verts=list(bm.verts),dist=.000001);bm.to_mesh(body.data);bm.free();body.data.update()
+bm=bmesh.new();bm.from_mesh(body.data);bmesh.ops.remove_doubles(bm,verts=list(bm.verts),dist=.000001);bmesh.ops.recalc_face_normals(bm,faces=list(bm.faces));bm.to_mesh(body.data);bm.free();body.data.update()
 rigdata=bpy.data.armatures.new('HalibutSkeleton');rig=bpy.data.objects.new('HalibutRig',rigdata);scene.collection.objects.link(rig)
 bpy.ops.object.select_all(action='DESELECT');rig.select_set(True);bpy.context.view_layer.objects.active=rig;bpy.ops.object.mode_set(mode='EDIT')
 spec=[('root',(0,0,0),(0,0,.12),None),('head',(-.75,0,0),(-.25,0,0),'root'),('spine1',(-.25,0,0),(.15,0,0),'head'),('spine2',(.15,0,0),(.49,0,0),'spine1'),('spine3',(.49,0,0),(.78,0,0),'spine2'),('peduncle',(.78,0,0),(.96,0,0),'spine3'),('tail',(.96,0,0),(1.425,0,0),'peduncle'),('jaw',(-.81,.065,0),(-1.04,.065,0),'head')]

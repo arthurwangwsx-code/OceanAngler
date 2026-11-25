@@ -2961,23 +2961,23 @@
       "acquiredAt": "2026-11-25",
       "status": "ART_REVIEW_PENDING",
       "path": "art/source/halibut/Halibut.blend",
-      "sha256": "bda33d70f23650259dbd309d6457c126f112e621d277275e8c22ae065ac2aeeb",
+      "sha256": "e2bd45fbd7bac6f1b2b69a7795d55579b1b474e52132a887825e2b87d3682b20",
       "artifacts": [
         {
           "path": "art/source/halibut/Halibut.blend",
-          "sha256": "bda33d70f23650259dbd309d6457c126f112e621d277275e8c22ae065ac2aeeb"
+          "sha256": "e2bd45fbd7bac6f1b2b69a7795d55579b1b474e52132a887825e2b87d3682b20"
         },
         {
           "path": "art/source/halibut/build-report.json",
-          "sha256": "4043de1e3e117aedfc056fa94cb76055ccc10de0dfb83c732425d275201a6ae1"
+          "sha256": "f4475505be34f8c308bd4d2f542b2b97b5647f4cb01d2c0a46919217984e2607"
         },
         {
           "path": "game/Assets/OceanAngler/Art/Halibut/Halibut.fbx",
-          "sha256": "bf74e3407e9536d00962156db93c1df9ebb0b6a9538b1d8dfdadd53fe10dae2c"
+          "sha256": "31206951d41ec54c06e4a1946abdfd7e94dc1b1b6de48ce4d32cc55c098b7577"
         },
         {
           "path": "game/Assets/OceanAngler/Art/Halibut/Halibut_BaseColor.png",
-          "sha256": "248eddc89212dfe074adc2f588f99dac4d800c2fbd7442fb5c7ea1735607820f"
+          "sha256": "88a561c378f8b965baf672c9f77ed41e1b1b7a3ac18846840c3d52ea245bea4e"
         },
         {
           "path": "game/Assets/OceanAngler/Art/Halibut/Halibut_Fin.png",
@@ -3008,7 +3008,7 @@
           "sha256": "56c89c3f5cb201376b136b6b489708215b84c9496b024f345851ff0c6c46603f"
         }
       ],
-      "note": "Independent anatomical correction candidate only. Original geometry, UV, procedural PBR maps, rig and seven actions; scientific reference photos excluded. No user/science/A1-A3/Player/device acceptance. Not integrated into encounter or journal selection yet."
+      "note": "Original anatomical candidate with continuous rolled lip, gum, lumen and body gill relief. Integrated target/journal selection; art/science/user/A1-A3 and natural motion still pending. No third-party media."
     },
     {
       "id": "atlantic-halibut-anatomy-review",
@@ -3060,6 +3060,49 @@
         }
       ],
       "note": "Original source-studio and isolated Unity Metal images and 36-frame source turntable. Includes unfinished mouth evidence. Not Player screenshots, science approval, device performance or finished art."
+    },
+    {
+      "id": "atlantic-halibut-mouth-review",
+      "author": "OceanAngler contributors",
+      "source": "tools/art_review_halibut.py and HalibutRenderReview.cs",
+      "license": "MIT",
+      "redistribution": true,
+      "status": "ART_REVIEW_PENDING",
+      "artifacts": [
+        {
+          "path": "art/previews/halibut-mouth/mouth-before-after.jpg",
+          "sha256": "3af35b299301b951d541be86ba7d607d060a9169d0e86fe031ffddf505f3dc8a"
+        },
+        {
+          "path": "art/previews/halibut-mouth/source-bite-eyed.png",
+          "sha256": "d4d7c596d3bbbc52e00fe7366b676ac125206d160fc2f16ee17ecf9a5b153847"
+        },
+        {
+          "path": "art/previews/halibut-mouth/source-bite-mouth.png",
+          "sha256": "9092dfb300c110c480511d1ff15889b0e06d5abedc2cce222962a0015f5d58e9"
+        },
+        {
+          "path": "art/previews/halibut-mouth/source-bite-three-quarter.png",
+          "sha256": "a1ed0e6596fe3a3b56532279b46fe7f6f219fa9ddac34675dfadb6bee30c9c7e"
+        },
+        {
+          "path": "art/previews/halibut-mouth/unity-bite-mouth.png",
+          "sha256": "9791c6244a67d9128da1c04f53eb75d2edfc80fe0ff2a53afa487a89c5fc582c"
+        },
+        {
+          "path": "art/previews/halibut-mouth/unity-eyes.png",
+          "sha256": "a19018edb970a64251c6219d7b57e862d79bfd3a98b7aeed3cc38fd56947902a"
+        },
+        {
+          "path": "art/previews/halibut-mouth/unity-lod0-blind.png",
+          "sha256": "fcbe9c9c426df8ecb59e82998982061fc140fea46e9d8847f4c6521c3df6bba4"
+        },
+        {
+          "path": "art/previews/halibut-mouth/unity-lod0-eyed.png",
+          "sha256": "14c0a544b7abe3d331d91335f312f1d080aaafae4e82c30f0d72ef1bfb1e3e4b"
+        }
+      ],
+      "note": "Own source and isolated Unity images, including before/after from own previous candidate. Not final visual, science, native or physical-device acceptance."
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."

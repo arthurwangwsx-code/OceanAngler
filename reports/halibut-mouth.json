@@ -1,0 +1,53 @@
+{
+  "status": "SOURCE_IMPORTED_AND_PRODUCTION_LOGIC_PASS_VISUAL_PARTIAL",
+  "baseCommit": "eed9320c4df0c5c89af271cefde4a3b7207c7247",
+  "sourceChecks": 160,
+  "poseSamples": 35,
+  "toothRootsPerPose": 12,
+  "toothRootMaxDistance": 4.1500643419567496e-05,
+  "oldMouthOpenEdges": 112,
+  "newMouthOpenEdges": 0,
+  "lods": {
+    "Halibut_LOD0": 20784,
+    "Halibut_LOD1": 8312,
+    "Halibut_LOD2": 3117
+  },
+  "editorPassed": 6,
+  "playPassed": 3,
+  "metal": {
+    "status": "PASS",
+    "scope": "isolated imported halibut Editor Metal; not Player, science, visual or device acceptance",
+    "graphics": "Metal",
+    "images": 24,
+    "pairs": 12,
+    "maxChannelDifference": 0,
+    "firstDrawStable": true,
+    "biteHookTravel": 0.09487726539373398
+  },
+  "pngDecoded": 31,
+  "existingFilesChecked": 1035,
+  "existingByteIdentical": 1023,
+  "expectedChanged": [
+    "art/asset-manifest.json",
+    "art/source/halibut/Halibut.blend",
+    "art/source/halibut/README.md",
+    "art/source/halibut/build-report.json",
+    "game/Assets/OceanAngler/Art/Halibut/Halibut.fbx",
+    "game/Assets/OceanAngler/Art/Halibut/Halibut.fbx.meta",
+    "game/Assets/OceanAngler/Art/Halibut/Halibut_BaseColor.png",
+    "game/Assets/OceanAngler/Art/Halibut/Halibut_Dark.mat",
+    "game/Assets/OceanAngler/Editor/HalibutAssetBuilder.cs",
+    "game/Assets/OceanAngler/Resources/Models/Halibut.prefab",
+    "game/Assets/OceanAngler/Runtime/OceanWorld.cs",
+    "game/Assets/OceanAngler/Tests/Editor/HalibutAssetTests.cs"
+  ],
+  "uiBytesUnchanged": true,
+  "otherHalibutMapsUnchanged": true,
+  "runtimeFactoryIntegrated": true,
+  "journalTiltDegrees": -55,
+  "visual": "PARTIAL: lip highlight, eye socket, gill and tail proportions, fin motion remain",
+  "currentCandidateNative": "NOT_RUN",
+  "physicalUserScienceA1_A3": "NOT_ACCEPTED",
+  "completeProduct": "PARTIAL",
+  "historicAudit": "INCOMPLETE"
+}

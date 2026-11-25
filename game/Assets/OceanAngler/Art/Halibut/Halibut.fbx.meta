@@ -17,6 +17,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Halibut_Gum
+    second: {fileID: 2100000, guid: f426a02dda0ed46c5b513b7068979fb2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Halibut_Iris
     second: {fileID: 2100000, guid: d5c21925bdfc64325bca162b6632dcac, type: 2}
   - first:

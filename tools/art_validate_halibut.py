@@ -1,7 +1,8 @@
 """Inspect actual saved meshes, anatomy and sampled skeletal deformation."""
-import bpy,json,math
+import bpy,bmesh,json,math
 from pathlib import Path
 from mathutils import Vector
+from mathutils.bvhtree import BVHTree
 ROOT=Path(__file__).resolve().parents[1];checks=[];failures=[]
 def check(ok,label):(checks if ok else failures).append(label)
 rig=bpy.data.objects.get('HalibutRig');check(rig is not None,'Editable skeleton exists');report={'scope':'saved-Blender engineering only; not science or visual acceptance','status':'FAIL','checks':checks,'failures':failures,'lods':{},'sampledPoses':[]}
@@ -27,7 +28,25 @@ if rig:
             check(width>.85 and thickness/width<.22,'flattened horizontal body rather than round fish');report['bodyWidth']=width;report['bodyThickness']=thickness
             tail=[v.co for v in data.vertices if v.co.x>1.18];center=max(v.x for v in tail if abs(v.y)<.016);outer=max(v.x for v in tail if abs(v.y)>.25);check(outer-center>.13,'actual concave tail edge');report['tailConcavity']=outer-center
     names={'idle','swim','turn','burst','bite','hooked','release'};check(names<=set(a.name for a in bpy.data.actions),'seven real semantic actions')
-    obj=bpy.data.objects['Halibut_LOD0'];obj.hide_set(False);dep=bpy.context.evaluated_depsgraph_get()
+    obj=bpy.data.objects['Halibut_LOD0'];obj.hide_set(False);dep=bpy.context.evaluated_depsgraph_get();data=obj.data
+    gum_slots={i for i,m in enumerate(data.materials) if m.name=='Halibut_Gum'};tooth_slots={i for i,m in enumerate(data.materials) if m.name=='Halibut_Teeth'}
+    gum_faces=[list(p.vertices) for p in data.polygons if p.material_index in gum_slots];check(len(gum_faces)>50,'real continuous gum bands exist')
+    tooth_vertices={v for p in data.polygons if p.material_index in tooth_slots for v in p.vertices};adj={v:set() for v in tooth_vertices}
+    for p in data.polygons:
+        if p.material_index not in tooth_slots:continue
+        for v in p.vertices:adj[v].update(set(p.vertices)-{v})
+    groups=[];unseen=set(tooth_vertices)
+    while unseen:
+        pending=[unseen.pop()];group=set(pending)
+        while pending:
+            for v in adj[pending.pop()]&unseen:unseen.remove(v);group.add(v);pending.append(v)
+        groups.append(group)
+    roots=[]
+    for group in groups:
+        tip=max(group,key=lambda i:data.vertices[i].co.x);roots.append(sorted(group-{tip}))
+    check(len(roots)==12 and all(len(g)==5 for g in roots),'twelve actual tooth bases identified')
+    bm=bmesh.new();bm.from_mesh(data);bad_edges=[e for e in bm.edges if max(v.co.x for v in e.verts)<-.86 and len(e.link_faces)!=2];check(not bad_edges,'outer lip, gum and throat have no open mouth-region edges');report['mouthOpenEdges']=len(bad_edges);bm.free()
+    report['toothRootDistanceByPose']=[]
     for name in sorted(names):
         action=bpy.data.actions.get(name)
         if action is None:continue
@@ -36,6 +55,9 @@ if rig:
             bpy.context.scene.frame_set(frame);dep.update();evaluated=obj.evaluated_get(dep);mesh=evaluated.to_mesh()
             try:
                 coords=[v.co for v in mesh.vertices];check(all(math.isfinite(c) for v in coords for c in v),name+' frame '+str(frame)+' finite deformed geometry');check(max(v.z for v in coords)-min(v.z for v in coords)<.85,name+' frame '+str(frame)+' no exploded pose');report['sampledPoses'].append({'action':name,'frame':frame,'height':max(v.z for v in coords)-min(v.z for v in coords)})
+                if gum_faces:
+                    tree=BVHTree.FromPolygons(coords,gum_faces,all_triangles=False);distances=[tree.find_nearest(sum((coords[i] for i in group),Vector())/len(group))[3] for group in roots];maximum=max(distances)
+                    check(maximum<.001,name+' frame '+str(frame)+' actual tooth roots stay in gum within 1mm');report['toothRootDistanceByPose'].append({'action':name,'frame':frame,'maximum':maximum})
             finally:evaluated.to_mesh_clear()
         bag=action.layers[0].strips[0].channelbag(rig.animation_data.action_slot)
         check(all(abs(fc.evaluate(1)-fc.evaluate(61))<.0001 for fc in bag.fcurves),name+' closed endpoints')
