@@ -1,6 +1,6 @@
 ## 1. 方案与治理
 
-2026-11-26水下鳍膜及本人模式复核：2ac60df／1c916ca5同包双端各3进程／464检查／58帧、每端三海域18视图通过，零积分全内容、开关／失败／进程重启、正常文件保持；240旧存档与331既有美术字节保持。88 Editor、五个最终独立Play及12工具检查通过，组合Play前置失败已保留并隔离根目录复验。隔离24视角／120图PASS，场景24视角／216图首绘111像素仍PARTIAL，修正前后掩码相同；不放宽门槛。修正已IMPLEMENTED，双端模拟器PASS，GPU首绘及完整美术PARTIAL，2.9／原美术／真机／完整产品和apply不勾选；TF及个人手机未更新。见reports/underwater-fin-contour.md与docs/49-underwater-fin-contour.md。
+2026-11-26水下鳍膜及本人模式复核：2ac60df／1c916ca5同包双端各3进程／58帧、手机464／平板467检查、每端三海域18视图通过，零积分全内容、开关／失败／进程重启、正常文件保持；240旧存档与331既有美术字节保持。88 Editor、五个最终独立Play及12工具检查通过，组合Play前置失败已保留并隔离根目录复验。隔离24视角／120图PASS，场景24视角／216图首绘111像素仍PARTIAL，修正前后掩码相同；不放宽门槛。修正已IMPLEMENTED，双端模拟器PASS，GPU首绘及完整美术PARTIAL，2.9／原美术／真机／完整产品和apply不勾选；TF及个人手机未更新。见reports/underwater-fin-contour.md与docs/49-underwater-fin-contour.md。
 
 REQ-13初次交付记录（5e4／TestFlight9）IMPLEMENTED、当时双端原生模拟器PASS、完整产品PARTIAL：家长入口、独立确认、零积分3海域／20钓具／12图鉴模型／3观察，测试存档及模式选择独立保存；普通积分门槛和原文件保护，失败不换态。当时5e4f970／build 9两端各3进程、376检查／40帧通过，222份旧文件字节保持；84 Editor、当前1项模式Play、12工具测试通过。手机确认／失败提示已实际图审。首次空间拒绝及Unity追加导出重复脚本导致的原生退出65保留，后者仅修复生成工程重复引用并复用原缓存通过。TestFlight 9已处理并加入本人两账号组，指定邮箱INVITED；未操作实体iPhone；见[模式结果](../../../reports/developer-mode.md)，完整产品、原美术／儿童／真机任务和apply不勾选。
 
@@ -14,7 +14,7 @@ REQ-13初次交付记录（5e4／TestFlight9）IMPLEMENTED、当时双端原生�
 
 ## 2. 工程基础
 
-- [ ] 2.10 首条英雄鱼嘴角近景：检查保存网格内部盖面／法线与实际运行时两侧、三LOD和咬钩动作；用独立材质消融定位白色折痕，只做有证据支持的局部修正。保留九贴图、原七动作及非头部几何；源／导入／Metal／模拟器和完整美术分别验收。局部内部盖面修正IMPLEMENTED，190源／88Editor／5独立Play与两套12视角Metal通过；低LOD外观、原生和完整美术仍PARTIAL，整体IN_PROGRESS，科学和用户审阅仍开放。见docs/50-bluefin-mouth-surface.md。
+- [ ] 2.10 首条英雄鱼嘴角近景：检查保存网格内部盖面／法线与实际运行时两侧、三LOD和咬钩动作；用独立材质消融定位白色折痕，只做有证据支持的局部修正。保留九贴图、原七动作及非头部几何；源／导入／Metal／模拟器和完整美术分别验收。局部内部盖面修正IMPLEMENTED，190源／88Editor／5独立Play与两套12视角Metal通过；1615a96／54459264同包双端各3进程／58帧、手机464／平板467检查及248旧文件保持PASS；低LOD外观和完整美术仍PARTIAL，整体IN_PROGRESS，科学和用户审阅仍开放。见docs/50-bluefin-mouth-surface.md。
 
 - [ ] 2.9 首条英雄鱼近景鳍缘诊断：针对原生图鉴背鳍上方细线，先测量全部鳍条与实际变形鳍膜，再以生产材质／独立不透明／双面／无鳍条对照查证导入渲染。仅修复证据支持的原因，保留原候选与失败记录；源码、Metal、原生及美术分别验收。水下排序已IMPLEMENTED／双端模拟器PASS，场景首绘111像素和完整美术PARTIAL，整体仍IN_PROGRESS；见docs/49-underwater-fin-contour.md与reports/underwater-fin-contour.md。
 

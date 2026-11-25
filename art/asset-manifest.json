@@ -4402,6 +4402,102 @@
           "sha256": "dfad7250f7c6cbe5dc5e5d881837b1c559a33fe70dbf932693303b542f87895d"
         }
       ]
+    },
+    {
+      "id": "bluefin-mouth-surface-review",
+      "author": "OceanAngler contributors",
+      "source": "Actual Unity Editor runtime prefab Metal head-macro captures and full-frame contact sheets, no third-party media",
+      "license": "MIT",
+      "redistribution": true,
+      "sourceRedistribution": true,
+      "canModify": true,
+      "acquiredAt": "2026-11-26",
+      "status": "ENGINEERING_REVIEWED_ART_PARTIAL",
+      "path": "art/previews/bluefin-mouth-surface/lod0-bite.jpg",
+      "sha256": "3309a028d0f3406d28ffe89ff6dd405850fe41d0cb8bcbc1565114cf01ed25b3",
+      "artifacts": [
+        {
+          "path": "art/previews/bluefin-mouth-surface/lod0-bite.jpg",
+          "sha256": "3309a028d0f3406d28ffe89ff6dd405850fe41d0cb8bcbc1565114cf01ed25b3"
+        },
+        {
+          "path": "art/previews/bluefin-mouth-surface/lod0-swim.jpg",
+          "sha256": "70a8b778099e2b5d7fde0d91f9ad01663558770c7740212f7627d6b62f08a431"
+        },
+        {
+          "path": "art/previews/bluefin-mouth-surface/lod1-bite.jpg",
+          "sha256": "ab8d2ea6a3712cdd0771db2381f094c361c03ab7f2b732f366e287b9cdf42c95"
+        },
+        {
+          "path": "art/previews/bluefin-mouth-surface/lod1-swim.jpg",
+          "sha256": "d560dca7b33c248652085c9db55732ae593466569e5722daf32671589484a58e"
+        },
+        {
+          "path": "art/previews/bluefin-mouth-surface/lod2-bite.jpg",
+          "sha256": "28d0a8566994ef6a08d7a1dbd4e54e944e8768d723e51b4e050b6385a9dabfb0"
+        },
+        {
+          "path": "art/previews/bluefin-mouth-surface/lod2-swim.jpg",
+          "sha256": "e04a67bb3e2e8bae07b73905ca1f449ce17e4845830528fdd904831ec5a12465"
+        },
+        {
+          "path": "art/previews/bluefin-mouth-surface/before-lod0-swim.png",
+          "sha256": "f5c5a574f3c3cc34ef12b505d209f1801cc9a89dd7adb8cf6d3721de119efda3"
+        },
+        {
+          "path": "art/previews/bluefin-mouth-surface/before-lod0-bite.png",
+          "sha256": "80355a08c08f80532df6717f47286b403b32c1d3e1de48a4972f05a3ec4f9195"
+        },
+        {
+          "path": "art/previews/bluefin-mouth-surface/before-lod2-swim.png",
+          "sha256": "78347c1145523e8f8700a4bf9812ed4d3442e02cee0c56a34dafb37d8a52f76e"
+        },
+        {
+          "path": "art/previews/bluefin-mouth-surface/after-lod0-swim.png",
+          "sha256": "193932959793c110b2bbc7f26b55a07229a54cb928e1af6145422dd0be512004"
+        },
+        {
+          "path": "art/previews/bluefin-mouth-surface/after-lod0-bite.png",
+          "sha256": "66c7dffc22de4659302542724bcd46ea6ff44389cd9f8b88a71ab6ef49103a0c"
+        },
+        {
+          "path": "art/previews/bluefin-mouth-surface/after-lod2-swim.png",
+          "sha256": "6dec44ff9890f905a2769dc1021f325ee676dd16f9bd13700a466c8f9cf2830a"
+        },
+        {
+          "path": "art/previews/bluefin-mouth-surface/native-phone-bay.png",
+          "sha256": "e09b16a4a803ab83648129b375503f36d23afe30187db19b5413364ec5ff26c9"
+        },
+        {
+          "path": "art/previews/bluefin-mouth-surface/native-phone-channel.png",
+          "sha256": "0d4229ee86405bcac4092a0a696373f14afb6abdaae9e75441c3ac9f6a4556b6"
+        },
+        {
+          "path": "art/previews/bluefin-mouth-surface/native-phone-slope.png",
+          "sha256": "7bfc283870a847fdb406fa8b14b0bd76a1249fd72acbe0588e082080694d4608"
+        },
+        {
+          "path": "art/previews/bluefin-mouth-surface/native-tablet-bay.png",
+          "sha256": "cfdfba7e3257ac43b5b84c15f2ea348533574f357d55806281082056834e558f"
+        },
+        {
+          "path": "art/previews/bluefin-mouth-surface/native-tablet-channel.png",
+          "sha256": "e6cf6e0cefb4a5d62838346faed6ee419254ea5994c88fe6d9f005406c90fa4f"
+        },
+        {
+          "path": "art/previews/bluefin-mouth-surface/native-tablet-slope.png",
+          "sha256": "a739727756ffff48a5cf540ad2bc1b457da3533308bf97103b172e29792cc962"
+        },
+        {
+          "path": "art/previews/bluefin-mouth-surface/native-phone-enable-confirmation.png",
+          "sha256": "24b8b3cb2b99b996ecdc28d218a237c2187002d8b3f32d57bc9040c6d21d5557"
+        },
+        {
+          "path": "art/previews/bluefin-mouth-surface/native-tablet-normal-restored.png",
+          "sha256": "bfc5aabc8921fd32cda013d697aca524cd1718ff644ff6342196116eb0532b53"
+        }
+      ],
+      "scope": "Editor macro deliberately crops fish. Before/after are actual production materials. Separate diagnostic controls labelled; no retouch or native/final art qualification. Lower LOD artifacts remain visible."
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."

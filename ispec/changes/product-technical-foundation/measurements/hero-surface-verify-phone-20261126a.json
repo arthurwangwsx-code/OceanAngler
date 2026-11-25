@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "682d20ab-a9b2-41b2-aa8c-68cf069b8f1b",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "39f8465e9c4a032aa143d63d4d30a16369eba3d9b216dca7e547c9d5625d5c52",
+    "category": "e2e",
+    "executable": "python3",
+    "startedAt": "2026-11-25T18:01:08.107Z",
+    "finishedAt": "2026-11-25T18:01:09.162Z",
+    "durationMs": 1026.986542,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "args": [
+      "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b/.local/hero-surface-qa/verify-contour-native.py",
+      "headsurfacephone20261126a"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b/.local/hero-surface-qa/verify-contour-native.py",
+    "headsurfacephone20261126a"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T18:01:08.107Z",
+  "finishedAt": "2026-11-25T18:01:09.162Z",
+  "durationMs": 1026.986542
+}

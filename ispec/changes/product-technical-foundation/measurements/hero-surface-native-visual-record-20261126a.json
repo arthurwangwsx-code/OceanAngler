@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "be7205d2-37ab-4e4d-bbbe-7c3d5b9d20c8",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "130eb5d760c78d61e9c8cfa8a798af7c3d6c478e6cbd3e01ddfd82d318ec285e",
+    "category": "e2e",
+    "executable": "python3",
+    "startedAt": "2026-11-25T18:06:02.000Z",
+    "finishedAt": "2026-11-25T18:06:02.100Z",
+    "durationMs": 64.92200000000003,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "args": [
+      "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b/.local/hero-surface-qa/record-native-review.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b/.local/hero-surface-qa/record-native-review.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T18:06:02.000Z",
+  "finishedAt": "2026-11-25T18:06:02.100Z",
+  "durationMs": 64.92200000000003
+}

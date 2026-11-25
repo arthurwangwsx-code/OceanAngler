@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "95f6e46e-c180-480a-b150-5a5258250700",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "f240fef7a4b9ab888a8162ec04de9dee276271cc3f785e47e6c60239b44c86c9",
+    "category": "e2e",
+    "executable": "python3",
+    "startedAt": "2026-11-25T18:06:02.521Z",
+    "finishedAt": "2026-11-25T18:07:17.015Z",
+    "durationMs": 74466.72525,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "args": [
+      "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b/.local/hero-surface-qa/archive-old-generated.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b/.local/hero-surface-qa/archive-old-generated.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T18:06:02.521Z",
+  "finishedAt": "2026-11-25T18:07:17.015Z",
+  "durationMs": 74466.72525
+}

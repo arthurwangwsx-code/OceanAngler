@@ -20150,6 +20150,193 @@
       "executable": "python3",
       "commandDigest": "d32242e9f40128f08fbe6c209cd2ecb0a4973a3f286dff2922fd4d362990fa67",
       "receiptPath": "measurements/hero-surface-source-check-b-20261126a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "d9c89fb2-90cb-41e2-bf54-99706e640556",
+      "startedAt": "2026-11-25T17:59:15.858Z",
+      "executable": "python3",
+      "commandDigest": "ad2b8e94078fe2e432ccc2907dc9394938d0c8cd17be8982d7bfedafea7908b3",
+      "receiptPath": "measurements/hero-surface-native-saves-before-20261126a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "ce7d08a3-48cf-42fd-8b8a-d06f603957b9",
+      "startedAt": "2026-11-25T17:59:17.454Z",
+      "executable": "python3",
+      "commandDigest": "bd046a90a40d9faecb416384c2f98e6973daac4454e4141954b84a2f1d845cdf",
+      "receiptPath": "measurements/hero-surface-retain-20261126a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "4a1810e0-4f5a-48b6-b52c-98b9d7fbc0dd",
+      "startedAt": "2026-11-25T17:59:23.315Z",
+      "executable": "python3",
+      "commandDigest": "e5af8e9309559ea972566dd1c4aa1473aeeafaf43a74598e3c203cdc97fb9e46",
+      "receiptPath": "measurements/hero-surface-export-20261126a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "de3fe6e8-45ec-4c26-8b58-c3010bd84ca8",
+      "startedAt": "2026-11-25T17:59:46.683Z",
+      "executable": "python3",
+      "commandDigest": "762015a0243933fe9f11219cab6ea6f48c25970e299728f83ca9e57c198a22d9",
+      "receiptPath": "measurements/hero-surface-native-20261126a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "862bbf67-3ae7-4126-bc17-51b6e63d499a",
+      "startedAt": "2026-11-25T17:59:56.767Z",
+      "executable": "python3",
+      "commandDigest": "d9c8160b70ac7c827610e55086ac7c5ff30732cecd1bb3fc988c38e1c6b855fe",
+      "receiptPath": "measurements/hero-surface-native-phone-20261126a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "682d20ab-a9b2-41b2-aa8c-68cf069b8f1b",
+      "startedAt": "2026-11-25T18:01:08.107Z",
+      "executable": "python3",
+      "commandDigest": "39f8465e9c4a032aa143d63d4d30a16369eba3d9b216dca7e547c9d5625d5c52",
+      "receiptPath": "measurements/hero-surface-verify-phone-20261126a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "93036c28-afb9-425f-af00-e396a5d862aa",
+      "startedAt": "2026-11-25T18:01:09.552Z",
+      "executable": "python3",
+      "commandDigest": "b0843d4d1bed6598eeb9783192938e21b036642257a27f81be8c3390177d4e3e",
+      "receiptPath": "measurements/hero-surface-native-tablet-20261126a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "9726d6dc-2863-438e-8f17-5577f8806bcb",
+      "startedAt": "2026-11-25T18:02:19.888Z",
+      "executable": "python3",
+      "commandDigest": "e0baa5111d6b2c09dcff706dc545135e00b9a364fd3a559df02d1920470d2058",
+      "receiptPath": "measurements/hero-surface-verify-tablet-20261126a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "9cb09758-f195-46d7-b2f9-34709003e9bf",
+      "startedAt": "2026-11-25T18:02:21.598Z",
+      "executable": "python3",
+      "commandDigest": "9f528d15c1c3b5bbb82309c68b3d10febb6617352b731a44e2c3fd6ab34eb3a4",
+      "receiptPath": "measurements/hero-surface-native-saves-after-20261126a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "39eb1732-f2db-453d-abe0-8c3b6f2a606d",
+      "startedAt": "2026-11-25T18:02:22.933Z",
+      "executable": "python3",
+      "commandDigest": "dd68d325aee04638716cf4b8e8caaf3d7f61d76c62dc458a66833be36f10c208",
+      "receiptPath": "measurements/hero-surface-native-contacts-20261126a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "be7205d2-37ab-4e4d-bbbe-7c3d5b9d20c8",
+      "startedAt": "2026-11-25T18:06:02.000Z",
+      "executable": "python3",
+      "commandDigest": "130eb5d760c78d61e9c8cfa8a798af7c3d6c478e6cbd3e01ddfd82d318ec285e",
+      "receiptPath": "measurements/hero-surface-native-visual-record-20261126a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "95f6e46e-c180-480a-b150-5a5258250700",
+      "startedAt": "2026-11-25T18:06:02.521Z",
+      "executable": "python3",
+      "commandDigest": "f240fef7a4b9ab888a8162ec04de9dee276271cc3f785e47e6c60239b44c86c9",
+      "receiptPath": "measurements/hero-surface-retention-older-generated-20261126a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "6bbd56d7-d267-4343-81a3-59e9e8fa9a3b",
+      "startedAt": "2026-11-25T18:07:18.174Z",
+      "executable": "python3",
+      "commandDigest": "07acc535694dfad856f57672accca836c27d04345e32fbc318b19b4e6ade6d5a",
+      "receiptPath": "measurements/hero-surface-final-report-20261126a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "lint",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "34fbad89-473e-493e-a81a-01053723ed94",
+      "startedAt": "2026-11-25T18:07:55.712Z",
+      "executable": "python3",
+      "commandDigest": "d62289e20f3a4dbcb81816986432eafde9e176967673ee69073009be4df3b587",
+      "receiptPath": "measurements/hero-surface-final-checks-20261126a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "6a3816c5-3073-4db4-b5b7-38bb7ec6c12f",
+      "startedAt": "2026-11-25T18:07:58.731Z",
+      "executable": "python3",
+      "commandDigest": "7dd5f61badb913cd1ad15c48af984ff846fddd13ec082699e60aeceed1c71855",
+      "receiptPath": "measurements/hero-surface-record-integrity-20261126a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "lint",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "1d68e62f-aefd-4eb6-84b4-59c7f59435f8",
+      "startedAt": "2026-11-25T18:10:13.323Z",
+      "executable": "python3",
+      "commandDigest": "bec4b60eee5fe7480a4d8d1aee7a05ff604ea07dca92e11c1ae2722117deaf0a",
+      "receiptPath": "measurements/hero-surface-final-checks-b-20261126a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "7d752a13-03f2-4d33-aa3f-64c7abc5c99b",
+      "startedAt": "2026-11-25T18:10:16.353Z",
+      "executable": "python3",
+      "commandDigest": "36ccb5cfd71aa7d286a085fb1c72fa2edb465a2362caa9ca0009c641ab90c667",
+      "receiptPath": "measurements/hero-surface-record-integrity-b-20261126a.json"
     }
   ],
   "runMeasurements": [
@@ -52011,6 +52198,329 @@
       "receipt": {
         "path": "measurements/hero-surface-source-check-b-20261126a.json",
         "sha256": "a03f27783ad939d0ed604fac9dc824a4cf2acfc52cc74e50a602639e53a00166"
+      }
+    },
+    {
+      "id": "d9c89fb2-90cb-41e2-bf54-99706e640556",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "ad2b8e94078fe2e432ccc2907dc9394938d0c8cd17be8982d7bfedafea7908b3",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T17:59:15.858Z",
+      "finishedAt": "2026-11-25T17:59:17.023Z",
+      "durationMs": 1116.6243749999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hero-surface-native-saves-before-20261126a.json",
+        "sha256": "5a6e774c8cb5d1b9409e1fcbf3b0922f11809f9d466fea4dbd1ecc0f40f68f11"
+      }
+    },
+    {
+      "id": "ce7d08a3-48cf-42fd-8b8a-d06f603957b9",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "bd046a90a40d9faecb416384c2f98e6973daac4454e4141954b84a2f1d845cdf",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T17:59:17.454Z",
+      "finishedAt": "2026-11-25T17:59:22.855Z",
+      "durationMs": 5371.975332999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hero-surface-retain-20261126a.json",
+        "sha256": "f385fadad5411fd7ae677d8a5a79f30924c9fdffefed244cc207f8f1ed0f56cd"
+      }
+    },
+    {
+      "id": "4a1810e0-4f5a-48b6-b52c-98b9d7fbc0dd",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "e5af8e9309559ea972566dd1c4aa1473aeeafaf43a74598e3c203cdc97fb9e46",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T17:59:23.315Z",
+      "finishedAt": "2026-11-25T17:59:46.225Z",
+      "durationMs": 22866.973958000002,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hero-surface-export-20261126a.json",
+        "sha256": "0521bb4ecc6378eb89539744b0698a78ca25039aa657167e993b104994393731"
+      }
+    },
+    {
+      "id": "de3fe6e8-45ec-4c26-8b58-c3010bd84ca8",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "762015a0243933fe9f11219cab6ea6f48c25970e299728f83ca9e57c198a22d9",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T17:59:46.683Z",
+      "finishedAt": "2026-11-25T17:59:56.367Z",
+      "durationMs": 9653.345,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hero-surface-native-20261126a.json",
+        "sha256": "f196ed06ab722f8c9ce0562d89518b332562438ae89d33f10e4d99e75494bd11"
+      }
+    },
+    {
+      "id": "862bbf67-3ae7-4126-bc17-51b6e63d499a",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d9c8160b70ac7c827610e55086ac7c5ff30732cecd1bb3fc988c38e1c6b855fe",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T17:59:56.767Z",
+      "finishedAt": "2026-11-25T18:01:07.501Z",
+      "durationMs": 70684.310667,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hero-surface-native-phone-20261126a.json",
+        "sha256": "590ab862b76fdca4e7fb2cbffe72b57a314454ed0e3d1759054866a28700b365"
+      }
+    },
+    {
+      "id": "682d20ab-a9b2-41b2-aa8c-68cf069b8f1b",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "39f8465e9c4a032aa143d63d4d30a16369eba3d9b216dca7e547c9d5625d5c52",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T18:01:08.107Z",
+      "finishedAt": "2026-11-25T18:01:09.162Z",
+      "durationMs": 1026.986542,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hero-surface-verify-phone-20261126a.json",
+        "sha256": "91ae9fe4c9dcb7db9c4c68fc88bef77ce206f2bf0b7c058ef9d9a07ed55b06e4"
+      }
+    },
+    {
+      "id": "93036c28-afb9-425f-af00-e396a5d862aa",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "b0843d4d1bed6598eeb9783192938e21b036642257a27f81be8c3390177d4e3e",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T18:01:09.552Z",
+      "finishedAt": "2026-11-25T18:02:18.929Z",
+      "durationMs": 69351.429542,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hero-surface-native-tablet-20261126a.json",
+        "sha256": "d4217d760431c46ba93d075b16c8e3ccb9a798d47e087de44084e4929fc461d2"
+      }
+    },
+    {
+      "id": "9726d6dc-2863-438e-8f17-5577f8806bcb",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "e0baa5111d6b2c09dcff706dc545135e00b9a364fd3a559df02d1920470d2058",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T18:02:19.888Z",
+      "finishedAt": "2026-11-25T18:02:21.158Z",
+      "durationMs": 1218.429333,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hero-surface-verify-tablet-20261126a.json",
+        "sha256": "33f2e10b52f17012dcc02ce39509b1eda00b8951b517d2d740291a0e090e0ed4"
+      }
+    },
+    {
+      "id": "9cb09758-f195-46d7-b2f9-34709003e9bf",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "9f528d15c1c3b5bbb82309c68b3d10febb6617352b731a44e2c3fd6ab34eb3a4",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T18:02:21.598Z",
+      "finishedAt": "2026-11-25T18:02:22.495Z",
+      "durationMs": 858.3187500000001,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hero-surface-native-saves-after-20261126a.json",
+        "sha256": "d3f457b2489eb6fcbc5222881f1c3e431492343397e439920aab571b977ec893"
+      }
+    },
+    {
+      "id": "39eb1732-f2db-453d-abe0-8c3b6f2a606d",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "dd68d325aee04638716cf4b8e8caaf3d7f61d76c62dc458a66833be36f10c208",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T18:02:22.933Z",
+      "finishedAt": "2026-11-25T18:02:30.133Z",
+      "durationMs": 7169.603541,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hero-surface-native-contacts-20261126a.json",
+        "sha256": "351334b317e8e9e60cd653f1b4893aeb4209ae35da4d9fca583404f793b53757"
+      }
+    },
+    {
+      "id": "be7205d2-37ab-4e4d-bbbe-7c3d5b9d20c8",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "130eb5d760c78d61e9c8cfa8a798af7c3d6c478e6cbd3e01ddfd82d318ec285e",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T18:06:02.000Z",
+      "finishedAt": "2026-11-25T18:06:02.100Z",
+      "durationMs": 64.92200000000003,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hero-surface-native-visual-record-20261126a.json",
+        "sha256": "65c54d3d127f03732a1c8c72ed398f77b9d1d6456278da9da1c5161adc70466a"
+      }
+    },
+    {
+      "id": "95f6e46e-c180-480a-b150-5a5258250700",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "f240fef7a4b9ab888a8162ec04de9dee276271cc3f785e47e6c60239b44c86c9",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T18:06:02.521Z",
+      "finishedAt": "2026-11-25T18:07:17.015Z",
+      "durationMs": 74466.72525,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hero-surface-retention-older-generated-20261126a.json",
+        "sha256": "9838094b9bc6085a65c3d2b9d890bbaf3ae50df9e0a78a23a0f0cebe2c12f039"
+      }
+    },
+    {
+      "id": "6bbd56d7-d267-4343-81a3-59e9e8fa9a3b",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "07acc535694dfad856f57672accca836c27d04345e32fbc318b19b4e6ade6d5a",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T18:07:18.174Z",
+      "finishedAt": "2026-11-25T18:07:18.382Z",
+      "durationMs": 179.05216700000005,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hero-surface-final-report-20261126a.json",
+        "sha256": "961f57001bbc2bad88b2ae4f303d565b8e8cd7da2214626828353851faf738ad"
+      }
+    },
+    {
+      "id": "34fbad89-473e-493e-a81a-01053723ed94",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d62289e20f3a4dbcb81816986432eafde9e176967673ee69073009be4df3b587",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-25T18:07:55.712Z",
+      "finishedAt": "2026-11-25T18:07:58.328Z",
+      "durationMs": 2572.0055,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hero-surface-final-checks-20261126a.json",
+        "sha256": "6e7315b738badc1f30bc2013fcdd29190288af0c836ec2d200ea65a2b4784f19"
+      }
+    },
+    {
+      "id": "6a3816c5-3073-4db4-b5b7-38bb7ec6c12f",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "7dd5f61badb913cd1ad15c48af984ff846fddd13ec082699e60aeceed1c71855",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T18:07:58.731Z",
+      "finishedAt": "2026-11-25T18:07:58.855Z",
+      "durationMs": 97.23891599999996,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hero-surface-record-integrity-20261126a.json",
+        "sha256": "b66f0e678a1efe42cdd88535a9903fbe6fa14cd9ccadd8cf8284a80ddc027129"
+      }
+    },
+    {
+      "id": "1d68e62f-aefd-4eb6-84b4-59c7f59435f8",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "bec4b60eee5fe7480a4d8d1aee7a05ff604ea07dca92e11c1ae2722117deaf0a",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-25T18:10:13.323Z",
+      "finishedAt": "2026-11-25T18:10:15.969Z",
+      "durationMs": 2610.8175,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hero-surface-final-checks-b-20261126a.json",
+        "sha256": "b6815acbd4cfe037c082d15cf5d93d794bc8d9b2841cd9cf11c4bd42b6fef915"
+      }
+    },
+    {
+      "id": "7d752a13-03f2-4d33-aa3f-64c7abc5c99b",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "36ccb5cfd71aa7d286a085fb1c72fa2edb465a2362caa9ca0009c641ab90c667",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T18:10:16.353Z",
+      "finishedAt": "2026-11-25T18:10:16.477Z",
+      "durationMs": 95.560542,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hero-surface-record-integrity-b-20261126a.json",
+        "sha256": "24edb812f70938c1ceff483f40dc2a69207e5cf1a66fc53bbeb535f58417bd17"
       }
     }
   ]
