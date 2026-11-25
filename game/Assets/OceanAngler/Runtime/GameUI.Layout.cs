@@ -17,7 +17,7 @@ namespace OceanAngler
             var header=At(pageRoot,"Header",ModelPage?Color.clear:Navy,0,0,0,Compact?48:70);
             IconButton(header,"上一级",TouchSymbol.Kind.Back,12,0,92,44,GoBack,28);
             string title=page=="准备"?"出海准备":page=="海湾观察"?"海域观察":page=="鱼类详情"?game.Content.Fish(selectedFish??game.Content.fish[0].id).name:page=="观察生物"?game.Content.Observation(observationId).name:page;
-            var heading=Label(header,title,Compact?21:26,Color.white,112,Compact?8:14,-224,36);
+            var heading=Label(header,title,Compact?21:26,Color.white,112,Compact?8:ModelPage?6:14,-224,Compact?36:44);
             if(ModelPage){var outline=heading.gameObject.AddComponent<Outline>();outline.effectColor=Navy;outline.effectDistance=new Vector2(1,-1);}
             if(!game.Progress.RequiresRecovery&&!ModelPage)IconButton(header,"菜单",TouchSymbol.Kind.Home,-84,0,72,44,()=>Navigate("首页"),28);
             // Gear feedback belongs to its own page. Other pages do not inherit

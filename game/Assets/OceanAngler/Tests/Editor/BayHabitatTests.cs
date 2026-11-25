@@ -24,6 +24,30 @@ namespace OceanAngler.Tests
                 Assert.That(Vector3.Distance(mirror.MultiplyPoint(q),p),Is.LessThan(.0001f));Assert.That(q.y-level,Is.EqualTo(-(p.y-level)).Within(.0001f));Assert.That(new Vector2(q.x,q.z),Is.EqualTo(new Vector2(p.x,p.z)));
             }
         }
+        [TestCase("CoralBay"),TestCase("NearshoreChannel"),TestCase("ContinentalSlope")]
+        public void AppreciationHidesSurfaceSceneryAndRestoresOriginalRendering(string resource)
+        {
+            var root=Object.Instantiate(Resources.Load<GameObject>("Models/"+resource));
+            try
+            {
+                var habitat=root.GetComponent<MarineHabitat>();
+                var all=root.GetComponentsInChildren<MeshRenderer>(true);
+                var surface=all.Where(r=>r!=habitat.waterSurface&&r.bounds.max.y>habitat.SeaLevel+.02f).ToArray();
+                Assert.That(surface.Length,Is.GreaterThan(0));Assert.That(all.Except(surface).Count(),Is.GreaterThan(0));
+                surface[0].forceRenderingOff=true;
+                var original=all.Select(r=>r.forceRenderingOff).ToArray();
+                habitat.Present(camera,false,false,0,true,false,false);
+                foreach(var r in surface)Assert.That(r.forceRenderingOff,Is.True,r.name);
+                foreach(var r in all.Except(surface))Assert.That(r.forceRenderingOff,Is.EqualTo(original[System.Array.IndexOf(all,r)]),r.name);
+                habitat.Present(camera,false,false,0,true,false,true);
+                Assert.That(all.Select(r=>r.forceRenderingOff),Is.EqualTo(original));
+                habitat.Present(camera,false,false,0,true,false,false);
+                foreach(var r in surface)Assert.That(r.forceRenderingOff,Is.True,r.name);
+                habitat.Present(camera,false,false,0,true,false,true);
+                Assert.That(all.Select(r=>r.forceRenderingOff),Is.EqualTo(original),"Repeated visits must preserve the original rendering flags");
+            }
+            finally{Object.DestroyImmediate(root);}
+        }
         [Test] public void EveryStartupQualityProfileMatchesItsPipelineSampleCount()
         {
             int prior=QualitySettings.GetQualityLevel();

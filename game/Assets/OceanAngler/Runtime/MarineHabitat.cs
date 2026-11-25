@@ -14,6 +14,23 @@ namespace OceanAngler
         public static string ResourceFor(string id)=>id=="bay"?"Models/CoralBay":id=="channel"?"Models/NearshoreChannel":id=="slope"?"Models/ContinentalSlope":null;
         protected virtual void PresentAmbient(bool paused,bool reduced,bool visible){}
         float waterTime;MaterialPropertyBlock waterProperties;
+        MeshRenderer[] surfaceScenery;bool[] originalSurfaceRendering;bool surfaceSceneryVisible=true;
+        void PresentSurfaceScenery(bool visible)
+        {
+            if(surfaceScenery==null)
+            {
+                // Keep the underwater setting, but remove above-water scenery
+                // from appreciation cameras. This also covers each habitat's
+                // boat, pier and marker LODs without changing their assets.
+                var all=GetComponentsInChildren<MeshRenderer>(true);
+                surfaceScenery=System.Array.FindAll(all,r=>r!=waterSurface&&r.bounds.max.y>SeaLevel+.02f);
+                originalSurfaceRendering=System.Array.ConvertAll(surfaceScenery,r=>r.forceRenderingOff);
+            }
+            if(surfaceSceneryVisible==visible)return;
+            for(int i=0;i<surfaceScenery.Length;i++)if(surfaceScenery[i]!=null)surfaceScenery[i].forceRenderingOff=!visible||originalSurfaceRendering[i];
+            surfaceSceneryVisible=visible;
+        }
+        void OnDisable(){if(surfaceScenery!=null)PresentSurfaceScenery(true);}
         Vector4 fishingSplash=new Vector4(0,0,-1,0);
         public void SetFishingSplash(Vector3 position,float age)
         {
@@ -25,6 +42,7 @@ namespace OceanAngler
         public void Present(Camera camera,bool observing,bool above,int angle,bool paused,bool reduced,bool showAmbient=true,float compositionOffset=0,bool fishingSurface=false)
         {
             PresentAmbient(paused,reduced,showAmbient);
+            PresentSurfaceScenery(showAmbient);
             if(lighting!=null)lighting.Present(above);
             if(!paused&&!reduced)waterTime+=Time.deltaTime;
             if(waterProperties==null)waterProperties=new MaterialPropertyBlock();

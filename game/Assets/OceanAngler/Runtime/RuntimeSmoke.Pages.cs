@@ -21,6 +21,12 @@ namespace OceanAngler
             var rects=FindObjectsByType<RectTransform>(FindObjectsSortMode.None);
             JourneyRequire(!rects.Any(t=>t.name=="Navigation"||t.name=="Footer"),"page-no-repeated-global-chrome-"+name);
             if(model)JourneyRequire(!rects.Any(t=>new[]{"Details","FishDetails","GearDetails","HabitatDetails","ObservationDetails"}.Contains(t.name)),"page-no-reading-sidebar-"+name);
+            var ui=GetComponent<GameUI>();
+            if(ui.FocusedFish!=null||ui.InspectingGear||ui.InspectingObservation)
+            {
+                var habitat=FindFirstObjectByType<MarineHabitat>();
+                JourneyRequire(habitat.GetComponentsInChildren<MeshRenderer>(true).Where(r=>r!=habitat.waterSurface&&r.bounds.max.y>habitat.SeaLevel+.02f).All(r=>r.forceRenderingOff),"page-appreciation-surface-scenery-hidden-"+name);
+            }
             yield return JourneyFrame("pages-"+name);
         }
         IEnumerator ReviewDedicatedPages()

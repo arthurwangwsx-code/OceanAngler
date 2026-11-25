@@ -194,6 +194,15 @@ namespace OceanAngler.Tests
                         var text=button.GetComponentInChildren<Text>();Assert.That(text.fontSize,Is.GreaterThanOrEqualTo(17));Assert.That(text.preferredHeight,Is.LessThanOrEqualTo(text.rectTransform.rect.height+.1f),expected+"/"+text.text);critical++;
                     }
                     pages++;
+                    // Headless CI uses a compact viewport. Exercise the actual
+                    // wide font style too; native tablet layout is separate.
+                    bool compact=ui.Compact;var flags=System.Reflection.BindingFlags.Instance|System.Reflection.BindingFlags.NonPublic;
+                    typeof(GameUI).GetProperty("Compact").SetValue(ui,false);
+                    typeof(GameUI).GetMethod("Rebuild",flags).Invoke(ui,null);Canvas.ForceUpdateCanvases();
+                    var title=UnityEngine.Object.FindObjectsByType<Text>(FindObjectsSortMode.None).Single(t=>t.isActiveAndEnabled&&t.rectTransform.parent.name=="Header");
+                    Assert.That(title.fontSize,Is.EqualTo(26));Assert.That(title.preferredHeight,Is.LessThanOrEqualTo(title.rectTransform.rect.height+.1f),expected+" wide title");
+                    typeof(GameUI).GetProperty("Compact").SetValue(ui,compact);
+                    typeof(GameUI).GetMethod("Rebuild",flags).Invoke(ui,null);Canvas.ForceUpdateCanvases();
                 }
             }
             yield return TapExact("海域与装备","准备");yield return TapExact("更换钓具","钓具");yield return TapExact("上一级","准备");
@@ -201,9 +210,12 @@ namespace OceanAngler.Tests
             yield return TapExact("图鉴","图鉴");Assert.That(ui.FocusedFish,Is.Null);yield return TapExact("未发现 · 蓝鳍鲹","鱼类详情");
             Assert.That(ui.TryJournalModelRect(out var model),Is.True);Assert.That(model.width/DisplayMetrics.SafeArea.width,Is.GreaterThan(.85f));
             Assert.That(UnityEngine.Object.FindFirstObjectByType<AuthoredSpinningRig>(FindObjectsInactive.Include).gameObject.activeInHierarchy,Is.False,"Fish appreciation must hide the unrelated fishing rig");
+            var habitat=UnityEngine.Object.FindFirstObjectByType<MarineHabitat>();
+            foreach(var scenery in habitat.GetComponentsInChildren<MeshRenderer>(true).Where(r=>r!=habitat.waterSurface&&r.bounds.max.y>habitat.SeaLevel+.02f))Assert.That(scenery.forceRenderingOff,Is.True,"Surface scenery must not enter the model/header view");
             Assert.That(UnityEngine.Object.FindObjectsByType<ScrollRect>(FindObjectsSortMode.None).Length,Is.Zero,"3D model has no large reading side panel");
             yield return TapExact("认识它","鱼类资料");Assert.That(ui.FocusedFish,Is.Null);Assert.That(UnityEngine.Object.FindObjectsByType<ScrollRect>(FindObjectsSortMode.None).Any(s=>s.content.name=="SpeciesContent"),Is.True);
             yield return TapExact("上一级","鱼类详情");Assert.That(ui.FocusedFish,Is.EqualTo("trevally"));yield return TapExact("上一级","图鉴");yield return TapExact("上一级","首页");
+            foreach(var scenery in habitat.GetComponentsInChildren<MeshRenderer>(true).Where(r=>r!=habitat.waterSurface&&r.bounds.max.y>habitat.SeaLevel+.02f))Assert.That(scenery.forceRenderingOff,Is.False,"Leaving appreciation must restore the actual world scenery");
             yield return TapExact("设置","设置");
             foreach(string group in new[]{"操作与辅助","声音与触觉","画面与动态"}){yield return TapExact(group,group);yield return TapExact("上一级","设置");}
             yield return TapExact("上一级","首页");yield return TapExact("钓具","钓具");yield return TapExact("观察入门钓组","钓组预览");

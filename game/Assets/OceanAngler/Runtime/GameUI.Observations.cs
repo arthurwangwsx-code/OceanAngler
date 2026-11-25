@@ -17,7 +17,7 @@ namespace OceanAngler
         void BuildObservations()
         {
             var panel=PagePanel("ObservationJournal",new Vector2(.02f,.12f),new Vector2(.98f,.81f),560);
-            Label(panel,"保护观察  "+game.Progress.Data.observations.Count+" / 3",Compact?22:28,Color.white,22,12,-44,40);
+            Label(panel,"保护观察  "+game.Progress.Data.observations.Count+" / 3",Compact?22:28,Color.white,22,12,-44,44);
             Label(panel,"安静观察，不投饵、不挂钩。阅读图鉴不会自动记为发现。",18,Muted,22,54,-44,48);
             for(int i=0;i<game.Content.observations.Length;i++)
             {
