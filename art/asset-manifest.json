@@ -3153,6 +3153,69 @@
         }
       ],
       "note": "Own project gameplay frames, no personal media. Captured normal halibut encounter; distant eye-level view obscures flatfish silhouette. Retained as failed visual baseline, not art acceptance."
+    },
+    {
+      "id": "halibut-framing-after-native",
+      "author": "OceanAngler contributors",
+      "source": "Own native Simulator app 4418971 / 3849caec; natural RNG halibutframephone02 and halibutframepad01",
+      "license": "MIT",
+      "redistribution": true,
+      "status": "ART_REVIEW_PENDING",
+      "artifacts": [
+        {
+          "path": "art/previews/halibut-framing-native/phone-before-after.jpg",
+          "sha256": "6bf846adb0d62d103df4c3d7301c31b083b5fba5cbfc53b33d9b2fff9fe829cb"
+        },
+        {
+          "path": "art/previews/halibut-framing-native/phone-contact.jpg",
+          "sha256": "dce88b8df14be4e9fcb5320115cd5baeacbd16cffc708f258e9af77cf71c939c"
+        },
+        {
+          "path": "art/previews/halibut-framing-native/phone-fight-release.mp4",
+          "sha256": "503521cc6115f221d7e33113a768a5055e4ef57b162a120fb35d1afba2dbd1ca"
+        },
+        {
+          "path": "art/previews/halibut-framing-native/phone-fighting.png",
+          "sha256": "6e7b799a7ec1346a0e8722c76d0fe98b810dcbc626974e5efc145584cd5599bf"
+        },
+        {
+          "path": "art/previews/halibut-framing-native/phone-landed.png",
+          "sha256": "5e31f9f267ca23091ea5f89ed3e2e7e8fe7b2a1ccc238bc5e68283fa2ac87a11"
+        },
+        {
+          "path": "art/previews/halibut-framing-native/phone-release.png",
+          "sha256": "03abacbd197bbb666857ec7c62429eb7e0d1a0cab9955dad5b23c7dcb7156f06"
+        },
+        {
+          "path": "art/previews/halibut-framing-native/phone-reopened-journal.png",
+          "sha256": "bf1e288726ed9723a73889757339f7ef1cec4ab97137af32fd63065b907ea182"
+        },
+        {
+          "path": "art/previews/halibut-framing-native/tablet-contact.jpg",
+          "sha256": "341a4627d555ccbea038c20d315a2046135cdf5d390e8a7577ca1d147709363a"
+        },
+        {
+          "path": "art/previews/halibut-framing-native/tablet-fight-release.mp4",
+          "sha256": "09be74f923f62c162de278bfcb546f529ba8b6cddd58607f2ae291b56a223795"
+        },
+        {
+          "path": "art/previews/halibut-framing-native/tablet-fighting.png",
+          "sha256": "816f20f7cd810848974b6bee0785f0252218e1d08f665e1e0cd8e5400931d4b8"
+        },
+        {
+          "path": "art/previews/halibut-framing-native/tablet-landed.png",
+          "sha256": "733e8702c5ca1b2558d94899d395fd5e99392e9b7a9594fc1f051478916192d0"
+        },
+        {
+          "path": "art/previews/halibut-framing-native/tablet-release.png",
+          "sha256": "9e9efdb0c9c2bfc39735f0821bab7eed7da91fe021b75a264dc76e6be0df59c9"
+        },
+        {
+          "path": "art/previews/halibut-framing-native/tablet-reopened-journal.png",
+          "sha256": "bf2e290b2776a096f0209352112b35c9e423db7719cb1684def6bc02ad4cc9f5"
+        }
+      ],
+      "note": "Original task gameplay images, before/after using own previous frame and trimmed owned-Simulator display recordings. No home screen/audio, no gamma or color enhancement. 30fps clip sampling is not game performance; deep lighting, natural fin motion and A1-A3 remain partial."
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."

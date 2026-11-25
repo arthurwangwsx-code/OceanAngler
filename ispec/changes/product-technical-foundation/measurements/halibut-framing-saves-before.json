@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "94b0cf97-347b-4b96-ae16-b4f8c4491d9a",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "705eb98b5ca9c12aacb00d86fce89f6aceb5d5754a06105c06137d07ed656172",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-25T04:16:22.838Z",
+    "finishedAt": "2026-11-25T04:16:23.375Z",
+    "durationMs": 513.6616670000001,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/halibut-encounter-qa/retain-phase2.py",
+      "before"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/halibut-encounter-qa/retain-phase2.py",
+    "before"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T04:16:22.838Z",
+  "finishedAt": "2026-11-25T04:16:23.375Z",
+  "durationMs": 513.6616670000001
+}

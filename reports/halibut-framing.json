@@ -1,0 +1,444 @@
+{
+  "status": "FRAMING_IMPLEMENTED_NATIVE_FLOW_PASS_VISUAL_LIGHTING_PARTIAL",
+  "source": {
+    "sourceCommit": "441897100c195df7d43270d328fbcaf7e49fca86",
+    "sourceDigest": "0a05e8fcae18d0139dde04dadb50e622f8a6ce431cc2e2174858dc5aaa05ed25",
+    "projectSettingsSha256": "bea92e9b5c8b678dd130d48c1f43acaf939b56cacce33928a5a45af6da0a4585"
+  },
+  "appDigest": "3849caec442cef6e578e631130d98e8a26e085d084d9249595226f07f097257a",
+  "distribution": "LOCAL_SIMULATOR_ONLY_NOT_TESTFLIGHT",
+  "version": "0.1.0",
+  "bundleBuild": "8",
+  "implementation": "IMPLEMENTED",
+  "acceptance": {
+    "framing": "PASS_TARGETED_NATIVE",
+    "normalEncounter": "PASS_INDEPENDENT_COPIES",
+    "ledger": "PASS",
+    "journalReopen": "PASS_NEW_PROCESS_COPY",
+    "lighting": "PARTIAL_TOO_DARK",
+    "naturalFinMotion": "NOT_ACCEPTED",
+    "scienceUserA1_A3": "NOT_ACCEPTED",
+    "physicalChildOsTouch": "NOT_RUN",
+    "fullProduct": "PARTIAL"
+  },
+  "playPassed": 8,
+  "normalCases": [
+    {
+      "status": "PASS_NATIVE_NORMAL_RANDOM_ENCOUNTER",
+      "scope": "Same existing Simulator binary and real controller RNG/EventSystem. Genuine isolated progress copy; one new catch. Not OS touch, child play, physical performance, twenty continuous rounds or final art acceptance",
+      "label": "halibutencphone01",
+      "device": "phone",
+      "source": {
+        "sourceCommit": "88c68797301075501a16ea53af4b77258bca9790",
+        "sourceDigest": "7658788767b0aa25998a7fc61f0b4cbe4b08a11725f3c3a0b815d0edc52b8627",
+        "projectSettingsSha256": "bea92e9b5c8b678dd130d48c1f43acaf939b56cacce33928a5a45af6da0a4585"
+      },
+      "appDigest": "7dc15a24ed91fdb438c556fb65c8393dd012eaa97ca4302a7f3aa4c093b3de3b",
+      "newFishId": "bigeye",
+      "newWeight": 21.016681671142578,
+      "newLength": 129.41673278808594,
+      "newMode": "standard",
+      "newSkillPoints": 30,
+      "newAwardedPoints": 238,
+      "pointsBefore": 4455,
+      "pointsAfter": 4693,
+      "catchesBefore": 25,
+      "catchesAfter": 26,
+      "saveSha256": "be4f4ca99835f73e60da8977e4af74ca6d91adb6d0bdeba0c0088812317f3d72",
+      "rawExistingPrefixPreserved": true,
+      "otherProgressAndSettingsSemanticsPreserved": true,
+      "onlyAddedSetting": "underwaterOnly=false",
+      "capturedFrames": 21,
+      "hud": [
+        {
+          "phase": "Ready",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.049358975142240524
+        },
+        {
+          "phase": "Bite",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0890224352478981
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.12034111469984055
+        }
+      ],
+      "maxHudRatio": 0.12034111469984055,
+      "nativeElapsedSeconds": 29.596908569335938,
+      "recordingFinalized": true
+    },
+    {
+      "status": "PASS_NATIVE_NORMAL_RANDOM_ENCOUNTER",
+      "scope": "Same existing Simulator binary and real controller RNG/EventSystem. Genuine isolated progress copy; one new catch. Not OS touch, child play, physical performance, twenty continuous rounds or final art acceptance",
+      "label": "halibutencphone02",
+      "device": "phone",
+      "source": {
+        "sourceCommit": "88c68797301075501a16ea53af4b77258bca9790",
+        "sourceDigest": "7658788767b0aa25998a7fc61f0b4cbe4b08a11725f3c3a0b815d0edc52b8627",
+        "projectSettingsSha256": "bea92e9b5c8b678dd130d48c1f43acaf939b56cacce33928a5a45af6da0a4585"
+      },
+      "appDigest": "7dc15a24ed91fdb438c556fb65c8393dd012eaa97ca4302a7f3aa4c093b3de3b",
+      "newFishId": "bigeye",
+      "newWeight": 6.745818138122559,
+      "newLength": 70.47185516357422,
+      "newMode": "standard",
+      "newSkillPoints": 30,
+      "newAwardedPoints": 115,
+      "pointsBefore": 4455,
+      "pointsAfter": 4570,
+      "catchesBefore": 25,
+      "catchesAfter": 26,
+      "saveSha256": "0c281f0c5aed29852bd643155b5305a6cee53aec63f6d02c6eba65034eb6d5c8",
+      "rawExistingPrefixPreserved": true,
+      "otherProgressAndSettingsSemanticsPreserved": true,
+      "onlyAddedSetting": "underwaterOnly=false",
+      "capturedFrames": 21,
+      "hud": [
+        {
+          "phase": "Ready",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.049358975142240524
+        },
+        {
+          "phase": "Bite",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0890224352478981
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.12034111469984055
+        }
+      ],
+      "maxHudRatio": 0.12034111469984055,
+      "nativeElapsedSeconds": 29.495712280273438,
+      "recordingFinalized": true
+    },
+    {
+      "status": "PASS_NATIVE_NORMAL_RANDOM_ENCOUNTER",
+      "scope": "Same existing Simulator binary and real controller RNG/EventSystem. Genuine isolated progress copy; one new catch. Not OS touch, child play, physical performance, twenty continuous rounds or final art acceptance",
+      "label": "halibutencphone03",
+      "device": "phone",
+      "source": {
+        "sourceCommit": "88c68797301075501a16ea53af4b77258bca9790",
+        "sourceDigest": "7658788767b0aa25998a7fc61f0b4cbe4b08a11725f3c3a0b815d0edc52b8627",
+        "projectSettingsSha256": "bea92e9b5c8b678dd130d48c1f43acaf939b56cacce33928a5a45af6da0a4585"
+      },
+      "appDigest": "7dc15a24ed91fdb438c556fb65c8393dd012eaa97ca4302a7f3aa4c093b3de3b",
+      "newFishId": "halibut",
+      "newWeight": 21.355012893676758,
+      "newLength": 128.57846069335938,
+      "newMode": "standard",
+      "newSkillPoints": 30,
+      "newAwardedPoints": 255,
+      "pointsBefore": 4455,
+      "pointsAfter": 4710,
+      "catchesBefore": 25,
+      "catchesAfter": 26,
+      "saveSha256": "72b0e2866ae4fd51e9d0fce615b5ef5572ed1cb997e0a5421b55928587e7eb3c",
+      "rawExistingPrefixPreserved": true,
+      "otherProgressAndSettingsSemanticsPreserved": true,
+      "onlyAddedSetting": "underwaterOnly=false",
+      "capturedFrames": 21,
+      "hud": [
+        {
+          "phase": "Ready",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.049358975142240524
+        },
+        {
+          "phase": "Bite",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0890224352478981
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.12034111469984055
+        }
+      ],
+      "maxHudRatio": 0.12034111469984055,
+      "nativeElapsedSeconds": 28.53471565246582,
+      "recordingFinalized": true
+    },
+    {
+      "status": "PASS_NATIVE_NORMAL_RANDOM_ENCOUNTER",
+      "scope": "Same existing Simulator binary and real controller RNG/EventSystem. Genuine isolated progress copy; one new catch. Not OS touch, child play, physical performance, twenty continuous rounds or final art acceptance",
+      "label": "halibutframephone01",
+      "device": "phone",
+      "source": {
+        "sourceCommit": "441897100c195df7d43270d328fbcaf7e49fca86",
+        "sourceDigest": "0a05e8fcae18d0139dde04dadb50e622f8a6ce431cc2e2174858dc5aaa05ed25",
+        "projectSettingsSha256": "bea92e9b5c8b678dd130d48c1f43acaf939b56cacce33928a5a45af6da0a4585"
+      },
+      "appDigest": "3849caec442cef6e578e631130d98e8a26e085d084d9249595226f07f097257a",
+      "newFishId": "alfonsino",
+      "newWeight": 1.1249103546142578,
+      "newLength": 30.498857498168945,
+      "newMode": "standard",
+      "newSkillPoints": 30,
+      "newAwardedPoints": 130,
+      "pointsBefore": 4455,
+      "pointsAfter": 4585,
+      "catchesBefore": 25,
+      "catchesAfter": 26,
+      "saveSha256": "471f1ae2e873e69cafb0391b736c9483b62d4d0491bae6dbe8a3006a7a46df5e",
+      "rawExistingPrefixPreserved": true,
+      "otherProgressAndSettingsSemanticsPreserved": true,
+      "onlyAddedSetting": "underwaterOnly=false",
+      "capturedFrames": 21,
+      "hud": [
+        {
+          "phase": "Ready",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.049358975142240524
+        },
+        {
+          "phase": "Bite",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0890224352478981
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.12034111469984055
+        }
+      ],
+      "maxHudRatio": 0.12034111469984055,
+      "nativeElapsedSeconds": 26.397502899169922,
+      "recordingFinalized": true
+    },
+    {
+      "status": "PASS_NATIVE_NORMAL_RANDOM_ENCOUNTER",
+      "scope": "Same existing Simulator binary and real controller RNG/EventSystem. Genuine isolated progress copy; one new catch. Not OS touch, child play, physical performance, twenty continuous rounds or final art acceptance",
+      "label": "halibutframephone02",
+      "device": "phone",
+      "source": {
+        "sourceCommit": "441897100c195df7d43270d328fbcaf7e49fca86",
+        "sourceDigest": "0a05e8fcae18d0139dde04dadb50e622f8a6ce431cc2e2174858dc5aaa05ed25",
+        "projectSettingsSha256": "bea92e9b5c8b678dd130d48c1f43acaf939b56cacce33928a5a45af6da0a4585"
+      },
+      "appDigest": "3849caec442cef6e578e631130d98e8a26e085d084d9249595226f07f097257a",
+      "newFishId": "halibut",
+      "newWeight": 21.507091522216797,
+      "newLength": 129.23516845703125,
+      "newMode": "standard",
+      "newSkillPoints": 30,
+      "newAwardedPoints": 257,
+      "pointsBefore": 4455,
+      "pointsAfter": 4712,
+      "catchesBefore": 25,
+      "catchesAfter": 26,
+      "saveSha256": "9d84f11d966c610ea0bd6cfc8077588d0ade134beb96b01403045cffabda71bc",
+      "rawExistingPrefixPreserved": true,
+      "otherProgressAndSettingsSemanticsPreserved": true,
+      "onlyAddedSetting": "underwaterOnly=false",
+      "capturedFrames": 21,
+      "hud": [
+        {
+          "phase": "Ready",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.049358975142240524
+        },
+        {
+          "phase": "Bite",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0890224352478981
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.12034111469984055
+        }
+      ],
+      "maxHudRatio": 0.12034111469984055,
+      "nativeElapsedSeconds": 28.27922248840332,
+      "recordingFinalized": true
+    },
+    {
+      "status": "PASS_NATIVE_NORMAL_RANDOM_ENCOUNTER",
+      "scope": "Same existing Simulator binary and real controller RNG/EventSystem. Genuine isolated progress copy; one new catch. Not OS touch, child play, physical performance, twenty continuous rounds or final art acceptance",
+      "label": "halibutframepad01",
+      "device": "tablet",
+      "source": {
+        "sourceCommit": "441897100c195df7d43270d328fbcaf7e49fca86",
+        "sourceDigest": "0a05e8fcae18d0139dde04dadb50e622f8a6ce431cc2e2174858dc5aaa05ed25",
+        "projectSettingsSha256": "bea92e9b5c8b678dd130d48c1f43acaf939b56cacce33928a5a45af6da0a4585"
+      },
+      "appDigest": "3849caec442cef6e578e631130d98e8a26e085d084d9249595226f07f097257a",
+      "newFishId": "halibut",
+      "newWeight": 14.691385269165039,
+      "newLength": 99.8037109375,
+      "newMode": "standard",
+      "newSkillPoints": 30,
+      "newAwardedPoints": 191,
+      "pointsBefore": 3703,
+      "pointsAfter": 3894,
+      "catchesBefore": 20,
+      "catchesAfter": 21,
+      "saveSha256": "0ae2889f43ce6e0d073d11346f2074c4b719de5bdbcb2dadb3e0071ceb77e585",
+      "rawExistingPrefixPreserved": true,
+      "otherProgressAndSettingsSemanticsPreserved": true,
+      "onlyAddedSetting": "underwaterOnly=false",
+      "capturedFrames": 21,
+      "hud": [
+        {
+          "phase": "Ready",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0182711873203516
+        },
+        {
+          "phase": "Bite",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.03295338898897171
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.04454661160707474
+        }
+      ],
+      "maxHudRatio": 0.04454661160707474,
+      "nativeElapsedSeconds": 28.396793365478516,
+      "recordingFinalized": true
+    }
+  ],
+  "reopen": [
+    {
+      "status": "PASS_NEW_PROCESS_JOURNAL_REOPEN",
+      "label": "halibutframereopenphone1",
+      "device": "phone",
+      "sourceCase": "halibutframephone02",
+      "sourceCommit": "441897100c195df7d43270d328fbcaf7e49fca86",
+      "appDigest": "3849caec442cef6e578e631130d98e8a26e085d084d9249595226f07f097257a",
+      "catches": 26,
+      "points": 4712,
+      "halibutCatches": 3,
+      "capturedFrames": 6,
+      "ledgerAndSettingsUnchanged": true,
+      "scope": "New process on byte-identical genuine new-catch save copy; actual journal image. Not OS touch or physical device acceptance"
+    },
+    {
+      "status": "PASS_NEW_PROCESS_JOURNAL_REOPEN",
+      "label": "halibutframereopenpad1",
+      "device": "tablet",
+      "sourceCase": "halibutframepad01",
+      "sourceCommit": "441897100c195df7d43270d328fbcaf7e49fca86",
+      "appDigest": "3849caec442cef6e578e631130d98e8a26e085d084d9249595226f07f097257a",
+      "catches": 21,
+      "points": 3894,
+      "halibutCatches": 2,
+      "capturedFrames": 6,
+      "ledgerAndSettingsUnchanged": true,
+      "scope": "New process on byte-identical genuine new-catch save copy; actual journal image. Not OS touch or physical device acceptance"
+    }
+  ],
+  "decodedNativePng": 138,
+  "originalProgressFilesPhase1": 117,
+  "originalProgressFilesPhase2": 123,
+  "originalPrimaryPhase2": 64,
+  "originalBytesUnchanged": true,
+  "clips": [
+    {
+      "device": "phone",
+      "label": "halibutframephone02",
+      "startSecondsFromRecordingRequest": 11.8734920501709,
+      "endSecondsFromRecordingRequest": 25.130433988571166,
+      "rawDuration": 28.21,
+      "clipSeconds": 13.256941938400267,
+      "path": "art/previews/halibut-framing-native/phone-fight-release.mp4",
+      "note": "Bounded to verified fight/release gameplay window; no home screen, no audio, no color/gamma adjustment. Resize and 30fps sampling only; not runtime FPS evidence."
+    },
+    {
+      "device": "tablet",
+      "label": "halibutframepad01",
+      "startSecondsFromRecordingRequest": 12.065008687973023,
+      "endSecondsFromRecordingRequest": 25.28099365234375,
+      "rawDuration": 28.523333,
+      "clipSeconds": 13.215984964370726,
+      "path": "art/previews/halibut-framing-native/tablet-fight-release.mp4",
+      "note": "Bounded to verified fight/release gameplay window; no home screen, no audio, no color/gamma adjustment. Resize and 30fps sampling only; not runtime FPS evidence."
+    }
+  ],
+  "historicalAudit": "INCOMPLETE",
+  "personalPhoneOrTestFlightChange": false,
+  "limits": [
+    "Six independent one-fish workflows across two source versions, not twenty continuous rounds",
+    "Native standard mode and right-handed fixture only; both hands covered logically",
+    "Deep illumination and natural fins remain unfinished",
+    "No final art, science, user, child, OS touch, physical thermal/memory or TestFlight-source installation acceptance"
+  ],
+  "recordIntegrity": {
+    "status": "PASS_CURRENT_INCREMENT_EXCLUDING_RUNNING_SELF",
+    "historicalOverall": "INCOMPLETE",
+    "newCompleted": 29,
+    "newStarts": 30,
+    "oldObjectsUnchanged": true,
+    "receiptsAndBindingsVerified": true,
+    "completedIntervalsDisjoint": true,
+    "onlyRunningSelfPending": true,
+    "failuresRetained": [
+      {
+        "receipt": "measurements/halibut-framing-controlled-red.json",
+        "exitCode": 2
+      },
+      {
+        "receipt": "measurements/halibut-framing-play-a.json",
+        "exitCode": 2
+      }
+    ],
+    "scope": "Own local state/receipt integrity; not formal independent CLI audit or product acceptance"
+  },
+  "finalVerification": {
+    "status": "PASS_TARGETED_FRAMING_NATIVE_AND_EVIDENCE",
+    "playPassed": 8,
+    "nativePng": 138,
+    "oldArtAndOtherRuntimeFilesIdentical": 383,
+    "currentSourceDigest": "0a05e8fcae18d0139dde04dadb50e622f8a6ce431cc2e2174858dc5aaa05ed25",
+    "appDigest": "3849caec442cef6e578e631130d98e8a26e085d084d9249595226f07f097257a",
+    "cameraOnlyGameplayChange": true,
+    "allOldUiAndModelsUnchanged": true,
+    "progressFilesByteIdentical": 123,
+    "lighting": "PARTIAL_TOO_DARK",
+    "finMotionArtChildPhysical": "NOT_ACCEPTED"
+  }
+}
