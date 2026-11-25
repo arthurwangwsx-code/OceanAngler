@@ -1,0 +1,242 @@
+{
+  "status": "PARTIAL",
+  "implementation": "IMPLEMENTED",
+  "foregroundWaterSorting": "PASS",
+  "nativeSimulatorAcceptance": "PASS",
+  "gpuSceneFirstDraw": "PARTIAL",
+  "finalArt": "PARTIAL",
+  "fullProduct": "PARTIAL",
+  "source": {
+    "sourceCommit": "2ac60df02e556efde5d53f4ac4c767ea0a0ee324",
+    "sourceDigest": "453f895d2aa014d492dced9541fc533e425bbdf5f41bc886d7fbeed10ddb8a05",
+    "projectSettingsSha256": "b8a690cbe44deea983180bc8f1a8028ce6c42c9cf8d0b570ff0a06930d4747b3"
+  },
+  "appDigest": "1c916ca590d8b2092bd7499151c7468a59966af1df7c7b527cd3daa921fe91db",
+  "distribution": "LOCAL_SIMULATOR_ONLY_NOT_TESTFLIGHT9",
+  "reportedAtUTC": "2026-11-25T17:16:51.065986+00:00",
+  "editorPassedBeforeQaTriggerParameterExtension": 88,
+  "playUniquePassed": 5,
+  "playScope": "Actual lifecycle, journal framing, immersive navigation, integrated world and expanded developer review. Initial combined test run failed its fresh-root precondition; independent roots passed. Water runtime and assets unchanged through QA-trigger extension.",
+  "toolTestsPassed": 12,
+  "gpu": {
+    "isolatedViews": 24,
+    "isolatedImages": 120,
+    "sceneViews": 24,
+    "sceneImages": 216,
+    "sceneStatus": "PARTIAL",
+    "analysis": {
+      "status": "PASS_DIAGNOSTIC_ANALYSIS_SCENE_STILL_PARTIAL",
+      "scope": "Do not replace the first image, relax thresholds or relabel the failed GPU result. Cold-start discrepancy remains an explicit open item.",
+      "before": {
+        "changed": 111,
+        "maximum": 4,
+        "bounds": [
+          49,
+          248,
+          1011,
+          394
+        ],
+        "maskSha256": "2b3e4d5030ece341c9135df0c6bf819fc96ce7256993801ebc3bdb5c5e67bcf5"
+      },
+      "after": {
+        "changed": 111,
+        "maximum": 4,
+        "bounds": [
+          49,
+          248,
+          1011,
+          394
+        ],
+        "maskSha256": "2b3e4d5030ece341c9135df0c6bf819fc96ce7256993801ebc3bdb5c5e67bcf5"
+      },
+      "coldDifferenceMaskIdentical": true,
+      "sceneStatus": "PARTIAL",
+      "sceneViews": 24,
+      "sceneImages": 216,
+      "strictStableProductionViews": 23,
+      "strictStableLateControlViews": 24,
+      "minimumLateWaterChangedPixels": 4644,
+      "lateWaterOriginalMaterialQueue": 3000
+    }
+  },
+  "native": {
+    "phone": {
+      "status": "PASS",
+      "processes": 3,
+      "checks": 464,
+      "frames": 58,
+      "contourViews": 18,
+      "normalPoints": 0,
+      "testCatches": 1,
+      "testPoints": 260,
+      "testObservations": 3,
+      "newFishId": "mackerel",
+      "normalBytesUnchanged": true,
+      "finalSelected": false
+    },
+    "tablet": {
+      "status": "PASS",
+      "processes": 3,
+      "checks": 464,
+      "frames": 58,
+      "contourViews": 18,
+      "normalPoints": 0,
+      "testCatches": 1,
+      "testPoints": 229,
+      "testObservations": 3,
+      "newFishId": "mackerel",
+      "normalBytesUnchanged": true,
+      "finalSelected": false
+    }
+  },
+  "priorSaveFilesByteIdentical": 240,
+  "priorNormalMainsByteIdentical": 119,
+  "priorArtFilesByteIdentical": 331,
+  "priorArtBaseline": "584a8933d90efa532d363e25d39806dbe75885c5",
+  "sourceCI": {
+    "conclusion": "success",
+    "databaseId": 45660868127,
+    "headSha": "2ac60df02e556efde5d53f4ac4c767ea0a0ee324",
+    "status": "completed"
+  },
+  "failedMeasurementsRetained": [
+    {
+      "receipt": "measurements/fin-contour-gpu-diagnostic-20261126a.json",
+      "exitCode": 1
+    },
+    {
+      "receipt": "measurements/fin-contour-gpu-scene-diagnostic-20261126a.json",
+      "exitCode": 1
+    },
+    {
+      "receipt": "measurements/fin-contour-red-editor-20261126.json",
+      "exitCode": 1
+    },
+    {
+      "receipt": "measurements/fin-contour-editor-20261126.json",
+      "exitCode": 1
+    },
+    {
+      "receipt": "measurements/fin-contour-play-b-20261126.json",
+      "exitCode": 1
+    },
+    {
+      "receipt": "measurements/fin-contour-gpu-scene-20261126.json",
+      "exitCode": 1
+    }
+  ],
+  "visualReview": {
+    "gpuContactSheets": 12,
+    "gpuRawImages": 4,
+    "nativeContactSheets": 12,
+    "nativeRawImages": 8,
+    "scope": "Actual complete contact-sheet review; selected raw views only. Not every raw image, animation/video or final art approval."
+  },
+  "publishedArtifacts": [
+    {
+      "path": "art/previews/underwater-fin-contour/scene-lod0-yaw-25.jpg",
+      "sha256": "203331b90e697cd05be86d4d7b70382ee710d55328a4e29be04b5dfb66c1a6a0"
+    },
+    {
+      "path": "art/previews/underwater-fin-contour/scene-lod0-yaw155.jpg",
+      "sha256": "96bdc7f6addb1687e79a30d56520ba8c7784b953852ee04882298f241aed42d4"
+    },
+    {
+      "path": "art/previews/underwater-fin-contour/scene-lod1-yaw-25.jpg",
+      "sha256": "eecee6fb6ca03aa517a7399738f0be541c1b4386a40d58b9070221750fe21b45"
+    },
+    {
+      "path": "art/previews/underwater-fin-contour/scene-lod1-yaw155.jpg",
+      "sha256": "e161a11774b732df236eaa8c93a398f2608d663c2596dfa4d5561be9383d1079"
+    },
+    {
+      "path": "art/previews/underwater-fin-contour/scene-lod2-yaw-25.jpg",
+      "sha256": "5b2c9f5b77f85dfa855788e214425df9474dc01972899d610760069c04576e2f"
+    },
+    {
+      "path": "art/previews/underwater-fin-contour/scene-lod2-yaw155.jpg",
+      "sha256": "d8a149fc717dd444a96fd192c24a6397c30f70c274e4c95a1da7b9950fb38d48"
+    },
+    {
+      "path": "art/previews/underwater-fin-contour/editor-current-order.png",
+      "sha256": "8c0c71e7ab44335297e5b734ecaba025d8342637aaaaea9db09877fce6432560"
+    },
+    {
+      "path": "art/previews/underwater-fin-contour/editor-original-order-control.png",
+      "sha256": "7692769cb070c5be0557f735fac7494348d2a6a72176f229278e03a2d7b89d35"
+    },
+    {
+      "path": "art/previews/underwater-fin-contour/native-phone-views-1.jpg",
+      "sha256": "c8d7d01aa48cb3499c1c160c0b5ed4768fe48085b25e1f0f32eee2959cdb0fda"
+    },
+    {
+      "path": "art/previews/underwater-fin-contour/native-phone-views-2.jpg",
+      "sha256": "d890ced384dc35811d894a4b159e02f7c0b75a59d061cfd62feecfd1555239fd"
+    },
+    {
+      "path": "art/previews/underwater-fin-contour/native-phone-bay.png",
+      "sha256": "3a56f4f3281f8c1d8b7a7ac38ea1bf2b8719800a259157620f961f248d8dc414"
+    },
+    {
+      "path": "art/previews/underwater-fin-contour/native-phone-channel.png",
+      "sha256": "6bff3d56497596b68215b0ebfa2f311d087fd294ddc528d7373d41a2602cd292"
+    },
+    {
+      "path": "art/previews/underwater-fin-contour/native-phone-slope.png",
+      "sha256": "a61d747640b0e97ae1c1e9290287d43a0c8306c31c1ec087acb07179d26f14d2"
+    },
+    {
+      "path": "art/previews/underwater-fin-contour/native-tablet-views-1.jpg",
+      "sha256": "db06904e49c2aaa8774a73da69fc590e1e6c04ad97ce79bbc0cca4500d88fe89"
+    },
+    {
+      "path": "art/previews/underwater-fin-contour/native-tablet-views-2.jpg",
+      "sha256": "48e336b8b97d3159e52fa9abde8ec507896a790883075ad9c24b6cadd3a627b9"
+    },
+    {
+      "path": "art/previews/underwater-fin-contour/native-tablet-bay.png",
+      "sha256": "2de1b810608e0b9ea6ba3a909aee4216db348daf017dc7a9a2a1a77a38ece0fd"
+    },
+    {
+      "path": "art/previews/underwater-fin-contour/native-tablet-channel.png",
+      "sha256": "7ec8db1299adf27f282a79c41e240837932516db2e12feb5968162e29f157956"
+    },
+    {
+      "path": "art/previews/underwater-fin-contour/native-tablet-slope.png",
+      "sha256": "611e69aa4dca7369e64133927131559b4a3f75c7072ead410a1f27641b665ce1"
+    },
+    {
+      "path": "art/previews/underwater-fin-contour/native-phone-enable-confirmation.png",
+      "sha256": "6b605fe1ec1a89d74d7faeb7f6faafc1f1d7aaba87c2607c0e9bed7904b96328"
+    },
+    {
+      "path": "art/previews/underwater-fin-contour/native-tablet-normal-restored.png",
+      "sha256": "dfad7250f7c6cbe5dc5e5d881837b1c559a33fe70dbf932693303b542f87895d"
+    }
+  ],
+  "storage": {
+    "nativeBudgetGiB": 14,
+    "nativeWholeRun": "run-cc3547d541ec415d8d41eaf631e8c2ff",
+    "previousRawSource": "2f10c4f6b463d60a7a37c6b6e1a6ed4bbe5c6c6d",
+    "olderGeneratedArchiveRealExtraction": "PASS",
+    "localArchiveIsIndependentBackup": false
+  },
+  "physicalAcceptance": "NOT_RUN",
+  "appStoreConnectUpdated": false,
+  "actualTestFlightInstallation": "NOT_RUN",
+  "remaining": [
+    "Identical pre-existing111-pixel cold-first discrepancy, maximum4levels; strict zero threshold unchanged.",
+    "Gill line, hard/plastic surface, environment and non-hero prototype species remain unfinished; A1-A3/science/user/child review open.",
+    "No fresh normal20-round/full-growth rerun in this increment; earlier2f10c4f20/26-round results remain historical.",
+    "No physical device, OS touch, thermal/20-minute or minimum-OS qualification.",
+    "Full apply and full product remain open."
+  ],
+  "finalRecordIntegrity": {
+    "status": "PASS_LOCAL_INCREMENT_INTEGRITY",
+    "baselineEnded": 1798,
+    "newEnded": 28,
+    "nonzeroRetained": 6,
+    "auditOwnEndedExitCode": 0,
+    "historicalAudit": "INCOMPLETE"
+  }
+}

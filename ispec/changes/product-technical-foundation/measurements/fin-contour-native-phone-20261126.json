@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "99be3875-09df-4056-914d-74adf1a174b2",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "edd7741c4aa7a247155c7c97d97dfa0b6e40ace087e620f034a3d9683ba6d530",
+    "category": "e2e",
+    "executable": "python3",
+    "startedAt": "2026-11-25T17:07:05.263Z",
+    "finishedAt": "2026-11-25T17:08:14.504Z",
+    "durationMs": 69205.14329200001,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "args": [
+      "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b/.local/fin-contour-qa/run-developer-native.py",
+      "fincontourphone20261126a",
+      "--device",
+      "phone"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b/.local/fin-contour-qa/run-developer-native.py",
+    "fincontourphone20261126a",
+    "--device",
+    "phone"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T17:07:05.263Z",
+  "finishedAt": "2026-11-25T17:08:14.504Z",
+  "durationMs": 69205.14329200001
+}

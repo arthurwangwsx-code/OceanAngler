@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "8000a1c6-e51c-432a-8223-5d8762bf02a6",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "ad7535bf31c364156c7a7a93f25f8b0ca5c7f17408735b6cdfd8321cc287da68",
+    "category": "e2e",
+    "executable": "python3",
+    "startedAt": "2026-11-25T17:09:21.651Z",
+    "finishedAt": "2026-11-25T17:09:22.677Z",
+    "durationMs": 996.142333,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "args": [
+      "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b/.local/fin-contour-qa/verify-contour-native.py",
+      "fincontourtablet20261126a"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b/.local/fin-contour-qa/verify-contour-native.py",
+    "fincontourtablet20261126a"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T17:09:21.651Z",
+  "finishedAt": "2026-11-25T17:09:22.677Z",
+  "durationMs": 996.142333
+}

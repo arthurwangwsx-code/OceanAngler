@@ -1,0 +1,44 @@
+{
+  "status": "PASS_LOCAL_INCREMENT_INTEGRITY",
+  "baselineEnded": 1798,
+  "endedBeforeThisAudit": 27,
+  "failedOrBlockedRetained": [
+    {
+      "receipt": "measurements/fin-contour-gpu-diagnostic-20261126a.json",
+      "exitCode": 1,
+      "errorCode": null
+    },
+    {
+      "receipt": "measurements/fin-contour-gpu-scene-diagnostic-20261126a.json",
+      "exitCode": 1,
+      "errorCode": null
+    },
+    {
+      "receipt": "measurements/fin-contour-red-editor-20261126.json",
+      "exitCode": 1,
+      "errorCode": null
+    },
+    {
+      "receipt": "measurements/fin-contour-editor-20261126.json",
+      "exitCode": 1,
+      "errorCode": null
+    },
+    {
+      "receipt": "measurements/fin-contour-play-b-20261126.json",
+      "exitCode": 1,
+      "errorCode": null
+    },
+    {
+      "receipt": "measurements/fin-contour-gpu-scene-20261126.json",
+      "exitCode": 1,
+      "errorCode": null
+    }
+  ],
+  "oldMeasurementObjectsUnchanged": true,
+  "oldReceiptHashesUnchanged": true,
+  "newReceiptHashesAndBindingsCorrect": true,
+  "newEndedIntervalsSerial": true,
+  "auditOwnMeasurementPending": "78b9a54f-da42-4c85-b97d-173cf458b153",
+  "formalHistoricalAudit": "INCOMPLETE",
+  "scope": "Only local object/hash/receipt binding and new-increment serial chronology; no retroactive recovery of older missing execution evidence, physical/art or full-product acceptance"
+}
