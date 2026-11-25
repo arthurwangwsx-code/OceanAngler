@@ -2,11 +2,13 @@
 """Serialized Unity project entry points; raw logs remain local."""
 import argparse, os, subprocess, json
 from pathlib import Path
+from storage_gate import storage_command
 ROOT=Path(__file__).resolve().parents[1]
-p=argparse.ArgumentParser();p.add_argument('action',choices=['gill-review','bluefin-head','journal-envelope','halibut-fin-review','deep-lighting-review','halibut-review','reflection-review','waterline-review','motion-review','fish-lighting-review','prepare','tests','ios','simulator','pectoral-review','mac','halibut','bluefin','spinning-rig','coral-bay','nearshore-channel','continental-slope','shoal','water-review','fish-review','school-review','encounter-review','observation-review','channel-review','slope-review','fin-review','rig-review']);p.add_argument('--build',type=int);p.add_argument('--label',default='a');p.add_argument('--review-target',choices=['mac','ios'],default='mac');p.add_argument('--test-platform',choices=['EditMode','PlayMode'],default='EditMode');p.add_argument('--test-filter');p.add_argument('--motion-reference',type=Path);a=p.parse_args()
+p=argparse.ArgumentParser();p.add_argument('action',choices=['gill-review','bluefin-head','journal-envelope','halibut-fin-review','deep-lighting-review','halibut-review','reflection-review','waterline-review','motion-review','fish-lighting-review','prepare','tests','ios','simulator','pectoral-review','mac','halibut','bluefin','spinning-rig','coral-bay','nearshore-channel','continental-slope','shoal','water-review','fish-review','school-review','encounter-review','observation-review','channel-review','slope-review','fin-review','rig-review']);p.add_argument('--build',type=int);p.add_argument('--label',default='a');p.add_argument('--review-target',choices=['mac','ios'],default='mac');p.add_argument('--test-platform',choices=['EditMode','PlayMode'],default='EditMode');p.add_argument('--test-filter');p.add_argument('--motion-reference',type=Path);p.add_argument('--append',action='store_true');p.add_argument('--retained-export',type=Path);a=p.parse_args()
 editor=Path(os.environ.get('UNITY_EDITOR','/Applications/Unity/Hub/Editor/6000.3.29f1/Unity.app/Contents/MacOS/Unity'))
 local=ROOT/'.local';local.mkdir(exist_ok=True)
 if not editor.is_file():raise SystemExit('Unity Editor not found')
+if a.append and a.action!='simulator':raise SystemExit('append is currently supported only for the stable simulator export')
 env=dict(os.environ);log=local/(a.action+'.log')
 reviews={'gill-review':('gill-runs','OCEAN_GILL_REVIEW_OUTPUT','OceanAngler.Editor.BluefinGillRenderReview.Capture'),'halibut-fin-review':('halibut-fin-runs','OCEAN_HALIBUT_FIN_OUTPUT','OceanAngler.Editor.HalibutFinRenderReview.Capture'),'deep-lighting-review':('deep-lighting-runs','OCEAN_DEEP_LIGHTING_OUTPUT','OceanAngler.Editor.DeepWaterLightingReview.Capture'),'halibut-review':('halibut-runs','OCEAN_HALIBUT_REVIEW_OUTPUT','OceanAngler.Editor.HalibutRenderReview.Capture'),'reflection-review':('reflection-runs','OCEAN_REFLECTION_REVIEW_OUTPUT','OceanAngler.Editor.WaterlineRenderReview.CaptureReflection'),'waterline-review':('waterline-runs','OCEAN_WATERLINE_REVIEW_OUTPUT','OceanAngler.Editor.WaterlineRenderReview.Capture'),'motion-review':('motion-runs','OCEAN_MOTION_REVIEW_OUTPUT','OceanAngler.Editor.FishMotionReview.Capture'),'fish-lighting-review':('fish-lighting-runs','OCEAN_FISH_LIGHTING_REVIEW_OUTPUT','OceanAngler.Editor.FishLightingReview.Capture'),'pectoral-review':('pectoral-runs','OCEAN_PECTORAL_REVIEW_OUTPUT','OceanAngler.Editor.PectoralRenderReview.Capture'),'rig-review':('rig-runs','OCEAN_RIG_REVIEW_OUTPUT','OceanAngler.Editor.RigRenderReview.Capture'),'fin-review':('fin-runs','OCEAN_FIN_REVIEW_OUTPUT','OceanAngler.Editor.FinRenderReview.Capture'),'slope-review':('slope-runs','OCEAN_SLOPE_REVIEW_OUTPUT','OceanAngler.Editor.WaterRenderReview.CaptureSlope'),'channel-review':('channel-runs','OCEAN_CHANNEL_REVIEW_OUTPUT','OceanAngler.Editor.WaterRenderReview.CaptureChannel'),'observation-review':('observation-runs','OCEAN_OBSERVATION_REVIEW_OUTPUT','OceanAngler.Editor.ObservationRenderReview.Capture'),'water-review':('water-runs','OCEAN_WATER_REVIEW_OUTPUT','OceanAngler.Editor.WaterRenderReview.Capture'),'fish-review':('fish-runs','OCEAN_FISH_REVIEW_OUTPUT','OceanAngler.Editor.FishRenderReview.Capture'),'school-review':('school-runs','OCEAN_SCHOOL_REVIEW_OUTPUT','OceanAngler.Editor.SchoolRenderReview.Capture'),'encounter-review':('encounter-runs','OCEAN_ENCOUNTER_REVIEW_OUTPUT','OceanAngler.Editor.EncounterRenderReview.Capture')}
 gpu_review=a.action in reviews
@@ -37,7 +39,20 @@ else:
  if a.action=='simulator':
   if not a.label.isalnum():raise SystemExit('simple simulator export label required')
   output=ROOT/'build'/('ios-simulator-'+a.label)
-  if output.exists():raise SystemExit('simulator export already exists; use a new label')
+  if output.exists():
+   if not a.append or a.retained_export is None:raise SystemExit('Existing export requires --append and a verified --retained-export')
+   import hashlib,stat
+   retained=a.retained_export.resolve()
+   if retained==output.resolve() or retained.is_relative_to(output.resolve()) or output.resolve().is_relative_to(retained):raise SystemExit('Retained export must be an independent generated-artifact directory')
+   def manifest(base):
+    result={}
+    for path in base.rglob('*'):
+     relative=path.relative_to(base).as_posix();mode=stat.S_IMODE(path.lstat().st_mode)
+     result[relative]=(mode,'link',os.readlink(path)) if path.is_symlink() else (mode,'dir') if path.is_dir() else (mode,'file',hashlib.sha256(path.read_bytes()).hexdigest())
+    return result
+   if not (retained/'Unity-iPhone.xcodeproj/project.pbxproj').is_file() or manifest(retained)!=manifest(output):raise SystemExit('Retained export byte/mode/link verification failed')
+   env['OCEAN_SIMULATOR_APPEND']='1'
+  elif a.append:raise SystemExit('append requires the existing stable export')
   output.parent.mkdir(exist_ok=True);env['OCEAN_SIMULATOR_OUTPUT']=str(output);cmd+=['-buildTarget','iOS']
  if a.action=='ios':
   cmd+=['-buildTarget','iOS']
@@ -54,7 +69,7 @@ graphics_before=None
 try:
  os.close(fd)
  if a.action=='fish-lighting-review':graphics_before=graphics_path.read_bytes()
- result=subprocess.run(cmd,env=env,cwd=ROOT)
+ result=subprocess.run(storage_command(cmd,ROOT),env=env,cwd=ROOT)
  if gpu_review and result.returncode==0:
   receipt=folder/'receipt.json'
   if not receipt.is_file():raise SystemExit('GPU review receipt missing')

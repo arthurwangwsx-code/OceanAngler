@@ -125,13 +125,15 @@ namespace OceanAngler.Editor
         {
             AudioAssetBuilder.Validate();
             var output=Environment.GetEnvironmentVariable("OCEAN_SIMULATOR_OUTPUT");
-            if(string.IsNullOrEmpty(output)||System.IO.Directory.Exists(output))throw new Exception("A new simulator export path is required");
+            bool append=Environment.GetEnvironmentVariable("OCEAN_SIMULATOR_APPEND")=="1";
+            if(string.IsNullOrEmpty(output)||System.IO.Directory.Exists(output)!=append)throw new Exception("Explicit new or retained append simulator export required");
+            if(append&&!System.IO.File.Exists(System.IO.Path.Combine(output,"Unity-iPhone.xcodeproj/project.pbxproj")))throw new Exception("Existing Xcode project required");
             var sdk=PlayerSettings.iOS.sdkVersion;var architecture=PlayerSettings.iOS.simulatorSdkArchitecture;
             try
             {
                 PlayerSettings.iOS.sdkVersion=iOSSdkVersion.SimulatorSDK;
                 PlayerSettings.iOS.simulatorSdkArchitecture=AppleMobileArchitectureSimulator.ARM64;
-                var result=BuildPipeline.BuildPlayer(EditorBuildSettings.scenes.Select(x=>x.path).ToArray(),output,BuildTarget.iOS,BuildOptions.Development);
+                var result=BuildPipeline.BuildPlayer(EditorBuildSettings.scenes.Select(x=>x.path).ToArray(),output,BuildTarget.iOS,BuildOptions.Development|(append?BuildOptions.AcceptExternalModificationsToPlayer:BuildOptions.None));
                 if(result.summary.result!=BuildResult.Succeeded)throw new Exception("iOS simulator export failed");
             }
             finally

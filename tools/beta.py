@@ -4,13 +4,14 @@
 import argparse,hashlib,json,os,plistlib,re,subprocess,urllib.parse,zipfile
 from pathlib import Path
 from asc import APP_ID,BUNDLE,Client,credentials
+from storage_gate import storage_command
 ROOT=Path(__file__).resolve().parents[1];RELEASE=json.loads((ROOT/'publication/release.json').read_text());VERSION=RELEASE['version'];TEAM=RELEASE['teamId'];LOCAL=ROOT/'.local/beta'
 
 def read(path):return json.loads(path.read_text())
 def write(path,value):path.parent.mkdir(parents=True,exist_ok=True);path.write_text(json.dumps(value,indent=2)+'\n')
 def command(args,log):
     log.parent.mkdir(parents=True,exist_ok=True)
-    with log.open('w') as output:r=subprocess.run([str(x) for x in args],cwd=ROOT,stdout=output,stderr=subprocess.STDOUT)
+    with log.open('w') as output:r=subprocess.run(storage_command([str(x) for x in args],ROOT),cwd=ROOT,stdout=output,stderr=subprocess.STDOUT)
     if r.returncode:raise RuntimeError('Command failed; inspect private '+log.name)
 def hash_files(base,paths):
     h=hashlib.sha256()
@@ -188,6 +189,8 @@ def notes(client,number):
         whatsnew='本次补齐沉浸式界面的休息提醒：实际游玩累计约15分钟后，在原边缘提示和暂停菜单显示提醒，点“休息好了，继续”才开始下一周期；普通页面往返不会清除提醒。等待提示仍会淡出，没有增加常驻遮挡。保留build 6的分层首页、海域装备准备、图鉴、任务、设置、统一退出确认和图形触控，支持左右手。请检查菜单往返、暂停/后台后主动继续、正常抛竿到记录放流，并重开核对已有积分、鱼获、装备、任务及设置；不要卸载或清档。双端模拟器真实计时和流程已验证，仍不代表实际iPhone/iPad触控、听感或20分钟性能通过。音乐默认关闭，积分和随机概率未改。首鱼、首套钓组和三海域仍为候选，其他鱼种、钓具及观察形体仍有样板；拟真美术、用户/科学和儿童验收尚未完成。仅本人内部测试，旧build 4不能读取首次保护观察后升级的存档，请继续使用新版。'
     if number=='8':
         whatsnew='本次细化首条蓝鳍鲹胸鳍与远距鳍面：近景保留实体鳍条，远距减少细小线条闪烁；身体调整为较中性的灰银/灰铜，保留蓝色鳍与斑点。控线仪表增加深色描边，亮沙背景更易读，未新增常驻面板。保留分层首页、准备、图鉴、任务、设置、统一退出、左右手图形触控和约15分钟的休息提醒；游玩中央留给鱼与场景。请测试正常抛竿到记录放流，控线中暂停/后台后主动继续，页面往返及左右手按钮，并重开核对原积分、鱼获、装备、任务和设置；不要卸载或清档。音乐默认关闭，积分和随机概率未改。双端模拟器流程已通过，仍不代表真机触控、儿童理解或20分钟性能合格。首鱼、首套钓组、三海域仍为美术候选，其他物种/钓具/观察形体仍有样板，塑料感与自然游动仍需完善；用户/科学/儿童和最终拟真美术未验收。仅本人内部测试；首次保护观察升级后的进度旧build 4不能读取，请继续使用新版。'
+    if number=='9':
+        whatsnew='本次加入本人测试用开发者模式：首页或暂停→设置→家长区与隐私→验证→开发者模式→开启并确认。零积分即可体验全部三海域、二十钓具、三种保护观察及十二鱼种图鉴模型；钓鱼、记录与任务仍按真实玩法进行，不伪造积分。测试进度与正常进度分别保存，关闭恢复原正常进度和积分门槛，重开保留上次模式；切换成功回准备并保持暂停，正常游玩不增加模式常驻面板。请测试开关、取消、重启、全部入口与记录放流，不要卸载或清档。另修复蓝鳍鲹模型更新后的眼口与鳍面材质绑定和切换后返回旧确认页问题，整理手机确认页提示。双端模拟器检查不代表真机触控、儿童体验或20分钟性能通过。音乐默认关闭，正常积分规则和随机概率未改；其余成品模型、最终拟真美术、用户/科学/儿童及双真机仍待验。仅本人内部测试。'
     for resource,parent,identifier,relation,field,text in [('betaAppLocalizations','apps',APP_ID,'app','description',description),('betaBuildLocalizations','builds',state['buildId'],'build','whatsNew',whatsnew)]:
         path='/v1/'+parent+'/'+identifier+'/'+resource;existing=items(client,path);match=next((x for x in existing if x['attributes']['locale']=='zh-Hans'),None);attributes={field:text}
         if resource=='betaAppLocalizations':attributes['feedbackEmail']='arthur.wang.wsx@gmail.com'

@@ -16,19 +16,20 @@ namespace OceanAngler
         }
         void BuildDeveloperConfirmation(bool rebuild)
         {
-            var panel=PagePanel("DeveloperConfirmation",Vector2.zero,Vector2.one,470);
+            var panel=PagePanel("DeveloperConfirmation",Vector2.zero,Vector2.one,304);
             string title=rebuild?"重建测试进度并开启？":developerTarget?"开启开发者模式？":"回到正常模式？";
             Label(panel,title,Compact?24:28,Color.white,28,18,-56,44);
             string detail=rebuild?"现有测试文件会保留，再建立全新的测试进度。正常进度保持。":"开发者测试进度与正常进度分开保存。关闭后，原正常进度和积分限制恢复。";
             detail+="\n切换会结束当前未记录的鱼获，已有记录保留。返回准备后再主动开始钓鱼。";
-            Label(panel,detail,Compact?18:22,Muted,28,82,-56,144);
-            Button(panel,rebuild?"确认重建测试进度":developerTarget?"确认开启开发者模式":"确认关闭开发者模式",28,244,-56,54,()=>
+            bool failed=!string.IsNullOrEmpty(game.Notice);
+            var feedback=Label(panel,failed?game.Notice:detail,Compact?18:22,failed?Gold:Muted,28,82,-56,116);feedback.name="DeveloperModeFeedback";
+            float buttonWidth=(PageWidth-68)/2;
+            Button(panel,rebuild?"确认重建测试进度":developerTarget?"确认开启开发者模式":"确认关闭开发者模式",28,224,buttonWidth,54,()=>
             {
                 bool changed=rebuild?game.RebuildDeveloperProgress():game.SwitchDeveloperMode(developerTarget);
                 if(changed){pageTrail.Clear();OpenPage("准备",false);}
             },Teal);
-            Button(panel,"取消，保持当前模式",28,312,-56,54,GoBack,Navy);
-            Label(panel,game.Notice??"",17,Muted,28,386,-56,64);
+            Button(panel,"取消，保持当前模式",40+buttonWidth,224,buttonWidth,54,GoBack,Navy);
         }
     }
 }

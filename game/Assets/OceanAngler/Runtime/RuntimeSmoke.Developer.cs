@@ -118,6 +118,14 @@ namespace OceanAngler
                 {
                     yield return JourneyClick("确认关闭开发者模式",true);yield return null;yield return null;
                     JourneyRequire(game.DeveloperMode&&ui.PageName=="切换模式确认"&&prior.SequenceEqual(File.ReadAllBytes(test)),"developer-failed-switch-keeps-current-mode-and-file");yield return PageFrame("developer-write-failure");
+                    var feedback=FindObjectsByType<Text>(FindObjectsSortMode.None).Single(t=>t.isActiveAndEnabled&&t.name=="DeveloperModeFeedback");
+                    JourneyRequire(feedback.text==game.Notice&&!string.IsNullOrEmpty(feedback.text),"developer-failure-feedback-reports-the-current-error");Canvas.ForceUpdateCanvases();
+                    var rect=feedback.rectTransform.rect;var scroll=feedback.GetComponentInParent<ScrollRect>();
+                    foreach(var local in new[]{new Vector3(rect.xMin,rect.yMax,0),new Vector3(rect.xMax,rect.yMax-feedback.preferredHeight,0)})
+                    {
+                        var point=RectTransformUtility.WorldToScreenPoint(null,feedback.rectTransform.TransformPoint(local));
+                        JourneyRequire(DisplayMetrics.SafeArea.Contains(point)&&(scroll==null||RectTransformUtility.RectangleContainsScreenPoint(scroll.viewport,point)),"developer-failure-text-visible-without-scrolling");
+                    }
                 }
                 finally{Directory.Delete(test+".tmp");}
                 yield return PageTap("确认关闭开发者模式","准备");yield return PageFrame("developer-normal-restored");
