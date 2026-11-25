@@ -41,6 +41,21 @@ for asset in a['assets']:
  for record in ([asset] if asset.get('path') else [])+asset.get('artifacts',[]):
   path=r/record['path'];check(path.is_file(),'missing registered asset '+record['path'])
   if path.is_file():check(hashlib.sha256(path.read_bytes()).hexdigest()==record.get('sha256'),'asset hash mismatch '+record['path'])
+envelopes=json.loads((r/'game/Assets/OceanAngler/Resources/JournalEnvelopes.json').read_text())
+envelope_inputs={'Assets/OceanAngler/'+p for p in ['Runtime/FishModel.cs','Runtime/FishVisual.cs','Runtime/AuthoredFishVisual.cs','Resources/ContentCatalog.json']}
+for name in ['Bluefin','Halibut']:
+ envelope_inputs.add('Assets/OceanAngler/Resources/Models/'+name+'.prefab')
+ envelope_inputs.update('Assets/OceanAngler/Art/'+name+'/'+p for p in [name+'.fbx',name+'.fbx.meta',name+'.controller','Motions/idle.anim','Motions/swim.anim'])
+inputs=envelopes.get('inputs',[])
+check(len(inputs)==len(envelope_inputs) and {i['path'] for i in inputs}==envelope_inputs,'journal envelope input set drift')
+for record in inputs:
+ if record['path'] in envelope_inputs:
+  check(hashlib.sha256((r/'game'/record['path']).read_bytes()).hexdigest()==record['sha256'],'stale journal geometry envelope '+record['path'])
+unity_version=re.search(r'^m_EditorVersion: (.+)$',(r/'game/ProjectSettings/ProjectVersion.txt').read_text(),re.M).group(1)
+check(envelopes.get('version')==1 and envelopes.get('unityVersion')==unity_version and envelopes.get('sections')==32 and abs(envelopes.get('padding',0)-.012)<1e-8,'journal envelope format/editor drift')
+shapes=envelopes.get('shapes',[])
+check(len(shapes)==len(catalog['fish']) and {s['fishId'] for s in shapes}=={s['id'] for s in catalog['fish']},'journal envelope species drift')
+check(all(16<=len(s['sections'])<=32 and s['sourceVertices']>3000 and s['poses']==(130 if s['fishId'] in ['trevally','halibut'] else 65) for s in shapes),'incomplete journal envelope sampling')
 for path in (r/'tools').rglob('*.p8'):
  if '.local' not in path.parts:errors.append('credential in project')
 print(json.dumps(dict(status='FAIL' if errors else 'PASS',requirements=len(reqs),tasks=len(rows),errors=errors),ensure_ascii=False,indent=2));sys.exit(bool(errors))

@@ -75,7 +75,7 @@ namespace OceanAngler
         }
         void Sphere(string name,Vector3 pos,Vector3 scale,Material material,Transform parent)
         {
-            var obj=GameObject.CreatePrimitive(PrimitiveType.Sphere);obj.name=name;obj.transform.SetParent(transform,false);obj.transform.localPosition=pos;obj.transform.localScale=scale;obj.GetComponent<Renderer>().sharedMaterial=material;Destroy(obj.GetComponent<Collider>());obj.transform.SetParent(parent,true);
+            var obj=GameObject.CreatePrimitive(PrimitiveType.Sphere);obj.name=name;obj.transform.SetParent(transform,false);obj.transform.localPosition=pos;obj.transform.localScale=scale;obj.GetComponent<Renderer>().sharedMaterial=material;Release(obj.GetComponent<Collider>());obj.transform.SetParent(parent,true);
         }
         void Fin(string name,Vector3[] points,Material material,Transform parent)
         {
@@ -110,6 +110,7 @@ namespace OceanAngler
             }
             tex.Apply();return tex;
         }
-        void OnDestroy() { foreach(var m in ownedMaterials)Destroy(m);foreach(var m in ownedMeshes)Destroy(m);if(texture!=null)Destroy(texture); }
+        static void Release(UnityEngine.Object value){if(Application.isPlaying)Destroy(value);else DestroyImmediate(value);}
+        void OnDestroy() { foreach(var m in ownedMaterials)Release(m);foreach(var m in ownedMeshes)Release(m);if(texture!=null)Release(texture); }
     }
 }

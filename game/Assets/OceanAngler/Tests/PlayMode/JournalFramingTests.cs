@@ -45,8 +45,10 @@ namespace OceanAngler.Tests
                             while(ui.ModelZoom>zoom+.01f)yield return Tap("缩小");while(ui.ModelZoom<zoom-.01f)yield return Tap("放大");
                             for(int turn=0;turn<12;turn++)
                             {
-                                int stableCount=0;Vector3 stablePosition=default,stableScale=default;
-                                foreach(float phase in new[]{0f,.25f,.5f,.75f})
+                                int stableCount=0;Vector3 stablePosition=default,stableScale=default;bool firstPose=true;
+                                // Off-grid phases are independent of the65
+                                // samples used to author the saved envelope.
+                                foreach(float phase in new[]{.007f,.083f,.173f,.309f,.431f,.557f,.719f,.883f})
                                 {
                                     if(animator!=null){var clip=animator.runtimeAnimatorController.animationClips.Single(c=>c.name=="swim");clip.SampleAnimation(animator.gameObject,clip.length*phase);}
                                     else{var prototype=(FishModel)visual;typeof(FishModel).GetField("animationTime",System.Reflection.BindingFlags.Instance|System.Reflection.BindingFlags.NonPublic).SetValue(prototype,phase*1.8f);prototype.SendMessage("Update");}
@@ -55,7 +57,7 @@ namespace OceanAngler.Tests
                                     // presentation phase before inspecting it.
                                     yield return null;world.SendMessage("LateUpdate",SendMessageOptions.DontRequireReceiver);var sample=RuntimeSmoke.ProbeJournalFrame(ui,visual,Camera.main);result.samples.Add(sample);
                                     Assert.That(sample.vertices,Is.GreaterThan(100));Assert.That(sample.behindCamera,Is.Zero);Assert.That(sample.outside,Is.Zero,definition.id+" zoom="+zoom+" yaw="+ui.ModelYaw+" region="+sample.available+" actual="+sample.projected);
-                                    if(phase==0){stableCount=world.JournalFitCalculations;stablePosition=visual.transform.position;stableScale=visual.transform.localScale;}
+                                    if(firstPose){stableCount=world.JournalFitCalculations;stablePosition=visual.transform.position;stableScale=visual.transform.localScale;firstPose=false;}
                                     else{Assert.That(world.JournalFitCalculations,Is.EqualTo(stableCount),"Reuse fitting while animation changes");Assert.That(Vector3.Distance(visual.transform.position,stablePosition),Is.LessThan(.00001f));Assert.That(Vector3.Distance(visual.transform.localScale,stableScale),Is.LessThan(.00001f),"No animation-driven zoom pumping");}
                                 }
                                 yield return Tap("旋转");
@@ -68,6 +70,8 @@ namespace OceanAngler.Tests
                 {
                     var samples=result.samples.Where(s=>s.fishId==id).ToArray();float Width(float zoom)=>samples.First(s=>Mathf.Abs(s.zoom-zoom)<.01f&&Mathf.Repeat(s.yaw,360)<.01f).projected.width;
                     Assert.That(Width(1.5f),Is.GreaterThan(Width(1)*1.3f),id+" zoom must actually enlarge the model");Assert.That(Width(.7f),Is.LessThan(Width(1)*.8f));
+                    var front=samples.Where(s=>Mathf.Abs(s.zoom-1.5f)<.01f&&Mathf.Repeat(s.yaw,360)<.01f).ToArray();
+                    Assert.That(front.Min(s=>Mathf.Max(s.projected.width/s.available.width,s.projected.height/s.available.height)),Is.GreaterThanOrEqualTo(.75f),id+" maximum front view must use at least75% of an available axis");
                 }
                 yield return Tap("图鉴");yield return Tap("未发现 · "+game.Content.Fish("trevally").name);yield return Tap("重置");yield return Tap("缩小");yield return Tap("缩小");
                 var live=world.TargetFish.GetComponentInChildren<Animator>();var priorCulling=live.cullingMode;var skins=world.TargetFish.GetComponentsInChildren<SkinnedMeshRenderer>();var priorOffscreen=skins.Select(r=>r.updateWhenOffscreen).ToArray();

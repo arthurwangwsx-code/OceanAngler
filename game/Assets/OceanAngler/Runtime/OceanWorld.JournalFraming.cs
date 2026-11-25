@@ -3,15 +3,16 @@ namespace OceanAngler
 {
     public sealed partial class OceanWorld
     {
-        readonly Vector3[] journalBoundsCorners=new Vector3[8];
+        Vector3[] journalBoundsCorners=new Vector3[8];
         Bounds journalGeometryBounds;
         bool journalFitCached;
         Rect journalLastRect;Matrix4x4 journalLastCamera;Quaternion journalLastRotation;
         float journalLastZoom,journalLastDepth,journalFitScale;Vector3 journalFitPosition;
         Vector3 JournalReferencePosition()=>new Vector3(ui.CompactViewer?-1.3f:2.35f,ui.CompactViewer?.7f:1.35f,1.2f);
-        Quaternion JournalRotation()
+        Quaternion JournalRotation()=>JournalRotation(ui.ModelYaw);
+        Quaternion JournalRotation(float yaw)
         {
-            var rotation=Quaternion.Euler(0,-25+ui.ModelYaw,-3);
+            var rotation=Quaternion.Euler(0,-25+yaw,-3);
             return fishId=="halibut"?rotation*Quaternion.Euler(-55,0,0):rotation;
         }
         public int JournalFitCalculations {get;private set;}
@@ -20,6 +21,14 @@ namespace OceanAngler
         public JournalFitState CurrentJournalFit=>new JournalFitState{camera=journalLastCamera,area=journalLastRect,rotation=journalLastRotation,zoom=journalLastZoom,depth=journalLastDepth};
         void CacheJournalGeometryBounds()
         {
+            var envelope=JournalEnvelopeData.Find(fishId);
+            if(envelope!=null&&envelope.sections!=null&&envelope.sections.Length>0)
+            {
+                journalGeometryBounds=envelope.bounds;journalBoundsCorners=new Vector3[envelope.sections.Length*8];int cursor=0;
+                foreach(var section in envelope.sections)for(int i=0;i<8;i++)journalBoundsCorners[cursor++]=section.center-journalGeometryBounds.center+Vector3.Scale(section.extents,new Vector3((i&1)==0?-1:1,(i&2)==0?-1:1,(i&4)==0?-1:1));
+                journalFitCached=false;return;
+            }
+            journalBoundsCorners=new Vector3[8];
             bool first=true;
             foreach(var renderer in fishRoot.GetComponentsInChildren<Renderer>(true))
             {
@@ -49,18 +58,22 @@ namespace OceanAngler
             if(!journalFitCached||area!=journalLastRect||cameraMatrix!=journalLastCamera||rotation!=journalLastRotation||ui.ModelZoom!=journalLastZoom||Mathf.Abs(depth-journalLastDepth)>.0001f)
             {
                 var center=view.ScreenToWorldPoint(new Vector3(area.center.x,area.center.y,depth));
-                bool Fits(float scale)
+                bool Fits(float scale,Quaternion pose)
                 {
-                    for(int i=0;i<8;i++)
+                    for(int i=0;i<journalBoundsCorners.Length;i++)
                     {
-                        var p=view.WorldToScreenPoint(center+rotation*(journalBoundsCorners[i]*scale));
+                        var p=view.WorldToScreenPoint(center+pose*(journalBoundsCorners[i]*scale));
                         if(p.z<=view.nearClipPlane||p.x<area.xMin||p.x>area.xMax||p.y<area.yMin||p.y>area.yMax)return false;
                     }
                     return true;
                 }
-                float low=0,high=64;
-                for(int i=0;i<22;i++){float middle=(low+high)*.5f;if(Fits(middle))low=middle;else high=middle;}
-                journalFitScale=low*.94f*ui.ModelZoom/1.5f;
+                float Limit(Quaternion pose)
+                {
+                    float low=0,high=64;for(int i=0;i<22;i++){float middle=(low+high)*.5f;if(Fits(middle,pose))low=middle;else high=middle;}return low;
+                }
+                // Rotating to a thin edge must not automatically magnify it
+                // beyond the default front view's physical presentation scale.
+                journalFitScale=Mathf.Min(Limit(rotation),Limit(JournalRotation(0)))*.94f*ui.ModelZoom/1.5f;
                 journalFitPosition=center-rotation*(journalGeometryBounds.center*journalFitScale);
                 journalLastRect=area;journalLastCamera=cameraMatrix;journalLastRotation=rotation;journalLastZoom=ui.ModelZoom;journalLastDepth=depth;journalFitCached=true;JournalFitCalculations++;
             }

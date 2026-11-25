@@ -3603,6 +3603,25 @@
         }
       ],
       "note": "Own game screenshots/recordings; before/after uses own prior1.3x image, same model files but different natural motion phase. Functional clearance PASS; visual framing overconservative and models too small, still PARTIAL. No personal media, audio or color/exposure edits. Not runtimeFPS, OS touch, physical, final art or science qualification."
+    },
+    {
+      "id": "journal-animation-envelope",
+      "author": "OceanAngler contributors",
+      "source": "game/Assets/OceanAngler/Editor/JournalEnvelopeBuilder.cs",
+      "license": "MIT",
+      "redistribution": true,
+      "status": "PRESENTATION_DATA_NOT_ART_ACCEPTANCE",
+      "artifacts": [
+        {
+          "path": "game/Assets/OceanAngler/Resources/JournalEnvelopes.json",
+          "sha256": "f8d4a140afcfdd68d7c95bd6d7fcba7aa1778fe16c1308b359d9fc4e89ed9344"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Editor/JournalEnvelopeBuilder.cs",
+          "sha256": "0bec3e101262ace23c4195350bde053ad38fc737888133dd7dbb5640c7279727"
+        }
+      ],
+      "note": "Own actual three-LOD mesh sample envelope:65 swim phases and authored idle too, up to32 occupied longitudinal sections and12mm margin. Source fingerprints prevent stale data. Finite sampled presentation bounds, not continuous biomechanics or finished art."
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."
