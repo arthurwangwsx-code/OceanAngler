@@ -2212,7 +2212,7 @@
         },
         {
           "path": "game/Assets/OceanAngler/Resources/Models/ContinentalSlope.prefab",
-          "sha256": "048260ad88114da303618e337b338487886f9088843c6681f2340806e962935c"
+          "sha256": "a49d1d132225dedf22889f8fd4031307f7e7c408845a6ed2ae8db972b39107aa"
         }
       ],
       "note": "Original canyon, scree, survey ROV and mast/receiver/tether/float. Five assemblies with three LODs, separate sea surface and original Strata/Silt PBR. No external media or new species models. Cycles preview differs from runtime lighting; visual and physical-device acceptance remain separate."
