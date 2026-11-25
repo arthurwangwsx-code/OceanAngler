@@ -38,7 +38,7 @@
 
 ## 4. 完整产品
 
-4.11图鉴包络后续：为解决最大正面仅51%–57%的偏小问题，制作实际动画网格的分段稳定包络，保留全部UI净空/输入/暂停/进度检查，并检查有效展示比例。见docs/41-journal-animation-envelope.md，IN_PROGRESS/NOT_RUN，成品美术与完整产品继续开放。
+4.11图鉴包络后续：实际动画网格的分段稳定包络已接入，保留UI净空/输入/暂停/进度检查。1Editor/10Play、3456中间姿态和d01af7d/68a863d0同包双端各104自然样本/17原图通过；最大正面十二种均超过75%，两套原创鱼80%–84%，返回Ready最小HUD与192旧文件字节保持。28份本游戏媒体及同1.3倍对照已审阅，旧大小红测与原生A/B失败均保留。局部取景IMPLEMENTED/PASS；见docs/41-journal-animation-envelope.md与reports/journal-animation-envelope.md/json，成品美术、科学/用户/儿童/真机、4.11整体与apply继续开放。
 
 4.11图鉴构图后续：实际空白区域驱动与稳定求解已接入，旧23顶点越界及原生同帧30度旋转滞后红测保留并修正；最终10Play/1728实际网格检查通过。373eabb/2364210f同包双端各104自然样本/17原图、返回Ready正常比例/相机/最小HUD通过，184旧文件字节保持；605份其他原源码含全部模型/贴图/动画保持。原图审阅发现包围盒过于保守，最大正面利用轴仅51%–57%，模型偏小，尺寸视觉PARTIAL，仍需基于真实动画几何收紧包络。见docs/40-journal-model-framing.md及reports/journal-model-framing.md/json，IN_PROGRESS；完整美术/产品与apply不勾选。
 

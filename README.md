@@ -62,6 +62,7 @@
 | 当前iOS模拟器运行 | [iPhone/iPad实际流程与原图](reports/ios-simulator.md)、[重建和数据隔离](docs/19-ios-simulator-verification.md) |
 | 连续游玩和暂停准备面板 | [20轮UI流程、左右手命中及读档](reports/continuous-journey.md)、[复现入口](docs/20-continuous-journey.md) |
 | 沉浸式游玩与分层页面 | [页面/交互约束](docs/23-immersive-interface.md)、[双端实际画面](reports/immersive-interface.md) |
+| 图鉴模型展示比例 | [动画范围、按钮净空与双端核对](reports/journal-animation-envelope.md)、[制作与复现](docs/41-journal-animation-envelope.md) |
 | 钓具滚动与模型制作提示 | [定向双端检查及系统滚动边界](reports/gear-feedback-and-model-status.md) |
 | 随机收齐全部鱼种、18任务和装备 | [双端完整成长与未通过项](reports/complete-content-journey.md)、[复现入口](docs/22-complete-content-journey.md) |
 | 首条独立源模型 | [蓝鳍鲹候选及验收边界](reports/bluefin-art.md)、[源资产重建](art/source/bluefin/README.md) |

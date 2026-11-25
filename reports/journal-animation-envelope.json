@@ -1,0 +1,395 @@
+{
+  "status": "PRESENTATION_FILL_AND_CLEARANCE_PASS",
+  "source": {
+    "sourceCommit": "d01af7d070b2b1716e090ab61a047db1037f24dd",
+    "sourceDigest": "6dc5c5580df5d859b16d0b2241ff7aabee42a8bfac72ef724b1e816880aca79f",
+    "projectSettingsSha256": "bea92e9b5c8b678dd130d48c1f43acaf939b56cacce33928a5a45af6da0a4585"
+  },
+  "appDigest": "68a863d0e953ab5c83130d738d9b3d9c1eb7e841a6d8817a5f3129cc56879a80",
+  "devices": {
+    "phone": {
+      "status": "PASS_NATIVE_JOURNAL_GEOMETRIC_CLEARANCE",
+      "device": "phone",
+      "points": 4570,
+      "catches": 26,
+      "newCatch": false,
+      "independentRectContainment": true,
+      "samples": 104,
+      "species": 12,
+      "authoredZoomLevels": [
+        0.7,
+        1,
+        1.3,
+        1.5
+      ],
+      "quarterRotations": 4,
+      "maximumFrontFillRatio": {
+        "skipjack": 0.8413150446201728,
+        "mahi": 0.8892824746728912,
+        "cod": 0.8674986924582381,
+        "trevally": 0.8010013859446455,
+        "bigeye": 0.84072776732406,
+        "halibut": 0.8160876762576219,
+        "grouper": 0.867745872435531,
+        "alfonsino": 0.9063194088819551,
+        "mackerel": 0.841310268495141,
+        "redsnapper": 0.9063267901660951,
+        "yellowfin": 0.8407372575465256,
+        "snapper": 0.9063240609517912
+      },
+      "modelControlsPreserveSave": true,
+      "originalGenuineSourceByteExact": true,
+      "otherProgressSettingsExact": true,
+      "onlyGearChanged": true,
+      "return": {
+        "returnedToFishing": true,
+        "returnedScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "returnedSurfaceCamera": true,
+        "returnedHudCentralClear": true,
+        "returnedHudButtons": 2,
+        "returnedHudRatio": 0.049358975142240524
+      }
+    },
+    "tablet": {
+      "status": "PASS_NATIVE_JOURNAL_GEOMETRIC_CLEARANCE",
+      "device": "tablet",
+      "points": 3868,
+      "catches": 21,
+      "newCatch": false,
+      "independentRectContainment": true,
+      "samples": 104,
+      "species": 12,
+      "authoredZoomLevels": [
+        0.7,
+        1,
+        1.3,
+        1.5
+      ],
+      "quarterRotations": 4,
+      "maximumFrontFillRatio": {
+        "halibut": 0.8314756774902343,
+        "grouper": 0.8391725158691407,
+        "cod": 0.8391716003417968,
+        "skipjack": 0.76082275390625,
+        "redsnapper": 0.8741329956054688,
+        "mahi": 0.8545341491699219,
+        "bigeye": 0.760081787109375,
+        "yellowfin": 0.7600802612304688,
+        "snapper": 0.8741360473632812,
+        "mackerel": 0.7612318420410156,
+        "alfonsino": 0.8741331481933594,
+        "trevally": 0.8407888793945313
+      },
+      "modelControlsPreserveSave": true,
+      "originalGenuineSourceByteExact": true,
+      "otherProgressSettingsExact": true,
+      "onlyGearChanged": true,
+      "return": {
+        "returnedToFishing": true,
+        "returnedScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "returnedSurfaceCamera": true,
+        "returnedHudCentralClear": true,
+        "returnedHudButtons": 2,
+        "returnedHudRatio": 0.0182711873203516
+      }
+    }
+  },
+  "sourceVerification": {
+    "status": "PASS_TARGETED_HEADLESS_ANIMATED_ENVELOPE",
+    "oldHead": "153174241b79180840951ac3cb2b22d70b219ec9",
+    "otherOldSourceFilesExact": 612,
+    "allExistingModelsMapsTexturesAnimationsExact": true,
+    "proceduralGeometryCodeUnchanged": true,
+    "proceduralCleanupOnly": true,
+    "editor": 1,
+    "play": 10,
+    "samples": 3456,
+    "species": 12,
+    "zooms": [
+      0.7,
+      1,
+      1.5
+    ],
+    "rotations": 12,
+    "offGridSwimPhases": 8,
+    "minimumFrontFillRatio": {
+      "cod": 0.8153484902045227,
+      "yellowfin": 0.8156284918827966,
+      "bigeye": 0.8156284918827966,
+      "alfonsino": 0.8151011859320135,
+      "mackerel": 0.8156284918827966,
+      "redsnapper": 0.8151011859320135,
+      "grouper": 0.8153484902045227,
+      "mahi": 0.8158057716226064,
+      "skipjack": 0.8156284918827966,
+      "trevally": 0.8564469108426623,
+      "halibut": 0.8897807103631968,
+      "snapper": 0.8151011859320135
+    },
+    "cacheRootStable": true,
+    "sameFrameYaw": true,
+    "liveAnimator": true,
+    "zoomChangesSize": true,
+    "saveByteExact": true,
+    "redMinimumFill": 0.411669612,
+    "scope": "Finite controlled samples with actual production UI and independently probed deformed geometry; not native/OS touch/final art/science/physical"
+  },
+  "nativeSamples": 208,
+  "nativeImages": 34,
+  "oldFilesByteExact": 192,
+  "oldPrimaryFiles": 99,
+  "media": {
+    "status": "VISUALLY_REVIEWED_PRESENTATION_FILL_AND_CLEARANCE_PASS",
+    "files": 28,
+    "clips": [
+      {
+        "device": "phone",
+        "path": "art/previews/journal-animation-envelope/phone-zoom-and-rotate.mp4",
+        "start": 17.599005365371703,
+        "stop": 22.085563755035402,
+        "duration": 4.486558389663699,
+        "rawDuration": 23.331667,
+        "visualSamples": 6,
+        "visualSampleTimes": [
+          0.1,
+          0.9473116779327398,
+          1.7946233558654798,
+          2.6419350337982195,
+          3.4892467117309596,
+          4.336558389663699
+        ],
+        "noAudio": true,
+        "colorExposureEdits": false,
+        "note": "Owned native Simulator game display; only bounded trim/resize/30fps output sampling, not runtimeFPS or OS touch."
+      },
+      {
+        "device": "tablet",
+        "path": "art/previews/journal-animation-envelope/tablet-zoom-and-rotate.mp4",
+        "start": 17.731836223602294,
+        "stop": 22.186433410644533,
+        "duration": 4.454597187042239,
+        "rawDuration": 23.41,
+        "visualSamples": 6,
+        "visualSampleTimes": [
+          0.1,
+          0.9409194374084479,
+          1.7818388748168958,
+          2.6227583122253435,
+          3.4636777496337916,
+          4.304597187042239
+        ],
+        "noAudio": true,
+        "colorExposureEdits": false,
+        "note": "Owned native Simulator game display; only bounded trim/resize/30fps output sampling, not runtimeFPS or OS touch."
+      }
+    ],
+    "review": {
+      "recordingSamplesViewed": 12,
+      "evenAcrossBothClips": true,
+      "originalsViewed": [
+        "phone-halibut-zoom150-turn0.png",
+        "phone-trevally-zoom150-turn0.png",
+        "phone-back-to-fishing.png",
+        "tablet-halibut-zoom150-turn0.png",
+        "tablet-trevally-zoom150-turn0.png",
+        "tablet-back-to-fishing.png"
+      ],
+      "comparisonViewed": "tablet-before-after-1_3.jpg",
+      "presentation": "Larger complete fish visible within controls; default-scale cap avoids edge-on magnification; ready view keeps two edge icons and empty central HUD",
+      "art": "PARTIAL: existing simplified anatomy, black eye/gill seam, fin edges, materials, rocks and water remain candidates; not final art/science/child/physical qualification"
+    }
+  },
+  "maximumZoomFrontFillRatio": {
+    "phone": {
+      "trevally": 0.8010013859446455,
+      "halibut": 0.8160876762576219
+    },
+    "tablet": {
+      "trevally": 0.8407888793945313,
+      "halibut": 0.8314756774902343
+    }
+  },
+  "visualIssue": "Prior tiny presentation addressed with source-bound sampled segmented envelope; existing A0 eye/material/anatomy quality and full product remain open.",
+  "finalArtScienceUserChildPhysical": "NOT_QUALIFIED",
+  "goal": "ACTIVE_FULL_PRODUCT_PARTIAL",
+  "thresholds": {
+    "allSpeciesMinimumFrontAxis": 0.75,
+    "authoredMinimumFrontAxis": 0.78,
+    "unchangedAfterNativeFailures": true,
+    "geometryPaddingModelUnits": 0.012,
+    "uiPaddingPoints": 4,
+    "noExtraPercentageShrink": true
+  },
+  "historicalFailuresRetained": [
+    "bake-a empty vertex section",
+    "fill-red snapper .411669612",
+    "validation-source float serialization",
+    "phone-check A authored .751435/.763207",
+    "tablet-check B four prototypes .745464-.746160"
+  ],
+  "scope": "Current finite source and native presentation checks only. Full product, A0 art, science/user/child/physical and current TestFlight install remain open.",
+  "publicMedia": [
+    {
+      "path": "art/previews/journal-animation-envelope/phone-back-to-fishing.png",
+      "sha256": "4be7b424c16851d2c95b797a9255cf7c29601182789983f0c2e9d8344afcc22c"
+    },
+    {
+      "path": "art/previews/journal-animation-envelope/phone-before-after-1_3.jpg",
+      "sha256": "57c457e25180e2558040c69e5dd4caff9a26b207bcaef15e08b083d94acdef1b"
+    },
+    {
+      "path": "art/previews/journal-animation-envelope/phone-halibut-zoom100-turn0.png",
+      "sha256": "18f102ef409cb994dc208ac8f72bbbaa27fd8226fb559411b81522290a2df1d5"
+    },
+    {
+      "path": "art/previews/journal-animation-envelope/phone-halibut-zoom130-turn0.png",
+      "sha256": "a1086db8f9fd4ae55dfd8e91374a96c1e755c9cb2548544fef3a5d5141e2c5a1"
+    },
+    {
+      "path": "art/previews/journal-animation-envelope/phone-halibut-zoom150-turn0.png",
+      "sha256": "b05e53911fdac7de0edf5fc30d91d4add82f86220d9713fb8137c89608084955"
+    },
+    {
+      "path": "art/previews/journal-animation-envelope/phone-halibut-zoom150-turn1.png",
+      "sha256": "a928890f6c89f940515cdf6b2278eaf411e0659c86a8846a3dfc1eaa2c09b227"
+    },
+    {
+      "path": "art/previews/journal-animation-envelope/phone-halibut-zoom70-turn0.png",
+      "sha256": "7c69342a94ca8585ded0861d23959cff73d6e08011650cb4170b38cfbac71adb"
+    },
+    {
+      "path": "art/previews/journal-animation-envelope/phone-recording-contact.jpg",
+      "sha256": "703c243ab2a33f67d6ee36d038835597e70046f53f1b117a1b64b4a208b34275"
+    },
+    {
+      "path": "art/previews/journal-animation-envelope/phone-trevally-zoom100-turn0.png",
+      "sha256": "816437fe5f1f1865c85f8b5b22428da500c6087e1327675c68e6e278609e2929"
+    },
+    {
+      "path": "art/previews/journal-animation-envelope/phone-trevally-zoom130-turn0.png",
+      "sha256": "c4bb4aea2270e11ec8b5497cb6cfc506c6eec218524a03dd74d2c5c60962a6d9"
+    },
+    {
+      "path": "art/previews/journal-animation-envelope/phone-trevally-zoom150-turn0.png",
+      "sha256": "330c48abffb8165a960abb172ed66e6d0a232b0bebf4ee451f0705f028bfe2a0"
+    },
+    {
+      "path": "art/previews/journal-animation-envelope/phone-trevally-zoom150-turn1.png",
+      "sha256": "c90edc0e8e723557d4950f35f4111625dbb4e79fabd5ede1f1629234fc89d428"
+    },
+    {
+      "path": "art/previews/journal-animation-envelope/phone-trevally-zoom70-turn0.png",
+      "sha256": "9b4db6aed650e09613506b8a0ba95839fa8660c1d871b9b59023699876487279"
+    },
+    {
+      "path": "art/previews/journal-animation-envelope/phone-zoom-and-rotate.mp4",
+      "sha256": "8e151f89f9aec23173dae32c9a2ec4101aaca4dcc948089bff6660c5d7d8cfc5"
+    },
+    {
+      "path": "art/previews/journal-animation-envelope/tablet-back-to-fishing.png",
+      "sha256": "f2fa56809bb745195f3c2c6e21517bacf55b26a3351767928409c1b90ca7c222"
+    },
+    {
+      "path": "art/previews/journal-animation-envelope/tablet-before-after-1_3.jpg",
+      "sha256": "c39642a2888e6f90b81b13c9c7423b2c907155bfd7118c7d0272aeff3fc92152"
+    },
+    {
+      "path": "art/previews/journal-animation-envelope/tablet-halibut-zoom100-turn0.png",
+      "sha256": "9f261d604e641b92c242dbdb76618537c54f87e2e5cc1ef15c272b7db2561aa0"
+    },
+    {
+      "path": "art/previews/journal-animation-envelope/tablet-halibut-zoom130-turn0.png",
+      "sha256": "374c34414ccf6970e1a396a22b15833c9827fa558c92e2cd94196ef585ac258c"
+    },
+    {
+      "path": "art/previews/journal-animation-envelope/tablet-halibut-zoom150-turn0.png",
+      "sha256": "d8881883efd562ca720d952e22564ff9dad8473e02ad534553bbe01061d7c0d8"
+    },
+    {
+      "path": "art/previews/journal-animation-envelope/tablet-halibut-zoom150-turn1.png",
+      "sha256": "4f5ac65da7d684b7a6479e5b21a680626fdd8475d0fc122208c9a23e779e1175"
+    },
+    {
+      "path": "art/previews/journal-animation-envelope/tablet-halibut-zoom70-turn0.png",
+      "sha256": "b2683b8744cfa6fafc021a0854cd502169e5311ae4db7f64ff6d1688542f5eda"
+    },
+    {
+      "path": "art/previews/journal-animation-envelope/tablet-recording-contact.jpg",
+      "sha256": "76ca0e8a3063f67cfe621ad92bf57143777274889f2208bfb61baaecb5c4dbfe"
+    },
+    {
+      "path": "art/previews/journal-animation-envelope/tablet-trevally-zoom100-turn0.png",
+      "sha256": "655b18e259e7d3994b6184dd877853622e1f3feafd8190ca12245f16cb140271"
+    },
+    {
+      "path": "art/previews/journal-animation-envelope/tablet-trevally-zoom130-turn0.png",
+      "sha256": "2c422863d5449a6e6c7e9ea49e333fbb40cdebae923205d05621bda88d8c4336"
+    },
+    {
+      "path": "art/previews/journal-animation-envelope/tablet-trevally-zoom150-turn0.png",
+      "sha256": "7cc50c806e06f6b0a359f28628ea00b450a53ef94d2765cb39652d61fc23ab9f"
+    },
+    {
+      "path": "art/previews/journal-animation-envelope/tablet-trevally-zoom150-turn1.png",
+      "sha256": "6aeeddcd3f532df3a2d21b27953beb774e8772bf7ce9423202f4b86c82b6db07"
+    },
+    {
+      "path": "art/previews/journal-animation-envelope/tablet-trevally-zoom70-turn0.png",
+      "sha256": "ada00bb1dc28cc2a9029a53171d7f7929f79b35aeda40800b8409145abc92aa7"
+    },
+    {
+      "path": "art/previews/journal-animation-envelope/tablet-zoom-and-rotate.mp4",
+      "sha256": "6d3330dae6b7d96a6bd9baeedf928034ac26c68a1896a0295f082585f0e59154"
+    }
+  ],
+  "sourceCI": {
+    "headSha": "d01af7d070b2b1716e090ab61a047db1037f24dd",
+    "status": "completed",
+    "conclusion": "success",
+    "url": "https://github.com/arthurwangwsx-code/OceanAngler/actions/runs/45573707341"
+  },
+  "currentRecordIntegrity": {
+    "status": "PASS_CURRENT_INCREMENT_EXCLUDING_RUNNING_SELF",
+    "historicalOverall": "INCOMPLETE",
+    "newCompleted": 34,
+    "newStarts": 35,
+    "oldObjectsUnchanged": true,
+    "receiptsAndBindingsVerified": true,
+    "completedIntervalsDisjoint": true,
+    "onlyRunningSelfPending": true,
+    "failuresRetained": [
+      {
+        "receipt": "measurements/journal-envelope-bake-a.json",
+        "exitCode": 1
+      },
+      {
+        "receipt": "measurements/journal-envelope-fill-red.json",
+        "exitCode": 2
+      },
+      {
+        "receipt": "measurements/journal-envelope-validation-source.json",
+        "exitCode": 1
+      },
+      {
+        "receipt": "measurements/journal-envelope-phone-check.json",
+        "exitCode": 1
+      },
+      {
+        "receipt": "measurements/journal-envelope-tablet-check-b.json",
+        "exitCode": 1
+      }
+    ],
+    "scope": "Own local state/receipt integrity; not formal independent CLI audit or product acceptance"
+  },
+  "currentMeasurementsIncludingAuditSelf": 35,
+  "currentFinishedMeasurements": 35,
+  "historicalIndependentAudit": "INCOMPLETE"
+}

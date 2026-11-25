@@ -3622,6 +3622,129 @@
         }
       ],
       "note": "Own actual three-LOD mesh sample envelope:65 swim phases and authored idle too, up to32 occupied longitudinal sections and12mm margin. Source fingerprints prevent stale data. Finite sampled presentation bounds, not continuous biomechanics or finished art."
+    },
+    {
+      "id": "journal-animation-envelope-native-review",
+      "author": "OceanAngler contributors",
+      "source": "OceanAngler native owned Simulator frame captures and bounded display recordings; source d01af7d",
+      "license": "MIT",
+      "redistribution": true,
+      "status": "PRESENTATION_SIZE_AND_CLEARANCE_REVIEWED_ART_PARTIAL",
+      "artifacts": [
+        {
+          "path": "art/previews/journal-animation-envelope/phone-back-to-fishing.png",
+          "sha256": "4be7b424c16851d2c95b797a9255cf7c29601182789983f0c2e9d8344afcc22c"
+        },
+        {
+          "path": "art/previews/journal-animation-envelope/phone-before-after-1_3.jpg",
+          "sha256": "57c457e25180e2558040c69e5dd4caff9a26b207bcaef15e08b083d94acdef1b"
+        },
+        {
+          "path": "art/previews/journal-animation-envelope/phone-halibut-zoom100-turn0.png",
+          "sha256": "18f102ef409cb994dc208ac8f72bbbaa27fd8226fb559411b81522290a2df1d5"
+        },
+        {
+          "path": "art/previews/journal-animation-envelope/phone-halibut-zoom130-turn0.png",
+          "sha256": "a1086db8f9fd4ae55dfd8e91374a96c1e755c9cb2548544fef3a5d5141e2c5a1"
+        },
+        {
+          "path": "art/previews/journal-animation-envelope/phone-halibut-zoom150-turn0.png",
+          "sha256": "b05e53911fdac7de0edf5fc30d91d4add82f86220d9713fb8137c89608084955"
+        },
+        {
+          "path": "art/previews/journal-animation-envelope/phone-halibut-zoom150-turn1.png",
+          "sha256": "a928890f6c89f940515cdf6b2278eaf411e0659c86a8846a3dfc1eaa2c09b227"
+        },
+        {
+          "path": "art/previews/journal-animation-envelope/phone-halibut-zoom70-turn0.png",
+          "sha256": "7c69342a94ca8585ded0861d23959cff73d6e08011650cb4170b38cfbac71adb"
+        },
+        {
+          "path": "art/previews/journal-animation-envelope/phone-recording-contact.jpg",
+          "sha256": "703c243ab2a33f67d6ee36d038835597e70046f53f1b117a1b64b4a208b34275"
+        },
+        {
+          "path": "art/previews/journal-animation-envelope/phone-trevally-zoom100-turn0.png",
+          "sha256": "816437fe5f1f1865c85f8b5b22428da500c6087e1327675c68e6e278609e2929"
+        },
+        {
+          "path": "art/previews/journal-animation-envelope/phone-trevally-zoom130-turn0.png",
+          "sha256": "c4bb4aea2270e11ec8b5497cb6cfc506c6eec218524a03dd74d2c5c60962a6d9"
+        },
+        {
+          "path": "art/previews/journal-animation-envelope/phone-trevally-zoom150-turn0.png",
+          "sha256": "330c48abffb8165a960abb172ed66e6d0a232b0bebf4ee451f0705f028bfe2a0"
+        },
+        {
+          "path": "art/previews/journal-animation-envelope/phone-trevally-zoom150-turn1.png",
+          "sha256": "c90edc0e8e723557d4950f35f4111625dbb4e79fabd5ede1f1629234fc89d428"
+        },
+        {
+          "path": "art/previews/journal-animation-envelope/phone-trevally-zoom70-turn0.png",
+          "sha256": "9b4db6aed650e09613506b8a0ba95839fa8660c1d871b9b59023699876487279"
+        },
+        {
+          "path": "art/previews/journal-animation-envelope/phone-zoom-and-rotate.mp4",
+          "sha256": "8e151f89f9aec23173dae32c9a2ec4101aaca4dcc948089bff6660c5d7d8cfc5"
+        },
+        {
+          "path": "art/previews/journal-animation-envelope/tablet-back-to-fishing.png",
+          "sha256": "f2fa56809bb745195f3c2c6e21517bacf55b26a3351767928409c1b90ca7c222"
+        },
+        {
+          "path": "art/previews/journal-animation-envelope/tablet-before-after-1_3.jpg",
+          "sha256": "c39642a2888e6f90b81b13c9c7423b2c907155bfd7118c7d0272aeff3fc92152"
+        },
+        {
+          "path": "art/previews/journal-animation-envelope/tablet-halibut-zoom100-turn0.png",
+          "sha256": "9f261d604e641b92c242dbdb76618537c54f87e2e5cc1ef15c272b7db2561aa0"
+        },
+        {
+          "path": "art/previews/journal-animation-envelope/tablet-halibut-zoom130-turn0.png",
+          "sha256": "374c34414ccf6970e1a396a22b15833c9827fa558c92e2cd94196ef585ac258c"
+        },
+        {
+          "path": "art/previews/journal-animation-envelope/tablet-halibut-zoom150-turn0.png",
+          "sha256": "d8881883efd562ca720d952e22564ff9dad8473e02ad534553bbe01061d7c0d8"
+        },
+        {
+          "path": "art/previews/journal-animation-envelope/tablet-halibut-zoom150-turn1.png",
+          "sha256": "4f5ac65da7d684b7a6479e5b21a680626fdd8475d0fc122208c9a23e779e1175"
+        },
+        {
+          "path": "art/previews/journal-animation-envelope/tablet-halibut-zoom70-turn0.png",
+          "sha256": "b2683b8744cfa6fafc021a0854cd502169e5311ae4db7f64ff6d1688542f5eda"
+        },
+        {
+          "path": "art/previews/journal-animation-envelope/tablet-recording-contact.jpg",
+          "sha256": "76ca0e8a3063f67cfe621ad92bf57143777274889f2208bfb61baaecb5c4dbfe"
+        },
+        {
+          "path": "art/previews/journal-animation-envelope/tablet-trevally-zoom100-turn0.png",
+          "sha256": "655b18e259e7d3994b6184dd877853622e1f3feafd8190ca12245f16cb140271"
+        },
+        {
+          "path": "art/previews/journal-animation-envelope/tablet-trevally-zoom130-turn0.png",
+          "sha256": "2c422863d5449a6e6c7e9ea49e333fbb40cdebae923205d05621bda88d8c4336"
+        },
+        {
+          "path": "art/previews/journal-animation-envelope/tablet-trevally-zoom150-turn0.png",
+          "sha256": "7cc50c806e06f6b0a359f28628ea00b450a53ef94d2765cb39652d61fc23ab9f"
+        },
+        {
+          "path": "art/previews/journal-animation-envelope/tablet-trevally-zoom150-turn1.png",
+          "sha256": "6aeeddcd3f532df3a2d21b27953beb774e8772bf7ce9423202f4b86c82b6db07"
+        },
+        {
+          "path": "art/previews/journal-animation-envelope/tablet-trevally-zoom70-turn0.png",
+          "sha256": "ada00bb1dc28cc2a9029a53171d7f7929f79b35aeda40800b8409145abc92aa7"
+        },
+        {
+          "path": "art/previews/journal-animation-envelope/tablet-zoom-and-rotate.mp4",
+          "sha256": "6d3330dae6b7d96a6bd9baeedf928034ac26c68a1896a0295f082585f0e59154"
+        }
+      ],
+      "note": "Own game media only. Both actual recordings sampled evenly across each clip, plus actual max front/return PNG and same1.3x comparison reviewed. Models larger with complete control clearance; existing A0 art and full product still open. No personal media/audio/color/exposure edits; output30fps is not runtimeFPS."
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."

@@ -6,4 +6,10 @@
 
 最大正面投影在可用宽/高中的较大比值目标至少75%，两套原创鱼在双端目标至少78%；完整身体仍需保持在真实控件反推的区域内，且查看不写进度。旋转时不超过默认正面尺寸，避免薄边朝向被自动放大成巨物。用独立于制作用采样的中间姿态、全周角度、缩放上下限、自然动画与原生图片核对；不能以单纯加大比例或放宽越界条件通过。
 
-生成包络不会让现有样板自动成为成品模型。拟真美术、科学/用户A1–A3、儿童和真实设备等仍独立开放。实现IN_PROGRESS，验收NOT_RUN，apply不勾选。
+生成包络不会让现有样板自动成为成品模型。取景局部IMPLEMENTED，1Editor/10Play及双端各104自然样本、原图/录屏审阅PASS；两套原创鱼最大正面80%–84%，192旧进度文件字节保持。拟真美术、科学/用户A1–A3、儿童和真实设备等仍独立开放。4.11及完整产品IN_PROGRESS/PARTIAL，apply不勾选。
+
+源数据在Unity中通过 `python3 tools/game.py journal-envelope` 生成；16份实际输入摘要与固定Unity版本写入资源，`python3 tools/validate.py` 可发现资源陈旧。修改现有模型/骨骼导入、动画或程序生成源后须重新生成，不手工伪造范围或摘要。
+
+编辑器检查为 `python3 tools/game.py tests --test-platform EditMode --test-filter JournalEnvelopeAssetTests`。受控检查为 `python3 tools/game.py tests --label journalenveloperepro --test-platform PlayMode --test-filter JournalFramingTests`，每次换新的label保留隔离结果。原生构建沿用项目模拟器导出流程；`--ocean-gear-review` 配合 `--ocean-journal-framing-review` 使用独立存档目录，观察自然游动的真正帧末，不注入姿态或延迟首帧。当前12可钓种必须有对应包络；未知新模型仍采用保守回退。
+
+边距最终由每段各方向12毫米和UI内缩4点明确提供，求解直接容纳这些已留边的范围，不再叠加百分比缩小。定向检查的3456个实际中间姿态、默认正面大小、同帧输入、缓存稳定与存档保护共同约束；不能只通过“看起来更大”而放松任何越界检查。结果见[动画范围与实际画面](../reports/journal-animation-envelope.md)。
