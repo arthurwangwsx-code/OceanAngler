@@ -1,0 +1,55 @@
+{
+  "implementation": "IMPLEMENTED",
+  "acceptance": "PARTIAL",
+  "sourceCommit": "639144a36ff89745cc214c53045be39399ddd31d",
+  "sourceDigest": "14ee6a290104e1a423e29cbeb2d089b4e22d06090fbcd14e9ebd7aac61bbb789",
+  "verification": {
+    "editorPassed": 83,
+    "playModePassed": 15,
+    "developerPhases": 3,
+    "developerChecks": 361,
+    "pythonPassed": 12,
+    "fontGlyphs": 723,
+    "requirements": 13,
+    "tasks": 15
+  },
+  "developer": {
+    "zeroPointHabitats": 3,
+    "zeroPointGear": 20,
+    "fullJournalModels": 12,
+    "observations": 3,
+    "realTestCatches": 1,
+    "realTestPoints": 284,
+    "normalPrimaryAndBackupByteIdentical": true,
+    "sceneReload": true,
+    "externalProcessRestart": "NOT_RUN"
+  },
+  "native": {
+    "status": "BLOCKED",
+    "cause": "OFFICIAL_STORAGE_GUARD_REFUSED_LOW_SPACE",
+    "unityExport": "PASS",
+    "originalExportDigest": "73e761f25a92a3349863411a91ee8aa30490b59a3bf2917884a2236f947826fc",
+    "preparedVariantDigest": "4edfb8ea208a200d681a984498d31f758a4ee9daa041f032dda696ff79ed9365",
+    "compilerStarted": false,
+    "newAppBuilt": false,
+    "freeBeforeBytes": 121050984448,
+    "requestedReservationBytes": 2147483648,
+    "hardFloorBytes": 128849018880,
+    "otherReservedBytes": 0,
+    "minimumFreeBytes": 130996502528,
+    "shortfallBytes": 9945518080,
+    "guardReceipt": "run-25c71b72db52488ca0c553ae5bd2f558"
+  },
+  "distribution": {
+    "personalPhone": "NOT_UPDATED",
+    "testFlight": "NOT_UPDATED",
+    "currentSourceInstalled": "NOT_RUN"
+  },
+  "records": {
+    "ended": 33,
+    "failedOrBlockedRetained": 7,
+    "oldObjectsUnchanged": true,
+    "historicalOverall": "INCOMPLETE"
+  },
+  "scope": "Current source rule/headless UI verification and genuine write-failure fixture; no current native images, external-process, physical, child or final-art acceptance"
+}

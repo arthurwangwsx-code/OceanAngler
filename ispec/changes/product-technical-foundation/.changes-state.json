@@ -18254,6 +18254,61 @@
       "executable": "python3",
       "commandDigest": "85cd9cdc2d0e90e39ee0ddabce79fdf3bae2b03b919d9c0f24c85d42f9e10f14",
       "receiptPath": "measurements/developer-mode-static-a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "7a64a2b0-59f5-47c0-adf0-e84498d87e98",
+      "startedAt": "2026-11-25T12:38:37.876Z",
+      "executable": "python3",
+      "commandDigest": "2eef44dd2e26dcaf35903c276c0a1f4125dc29e23109059bc59bd1d05d6c0090",
+      "receiptPath": "measurements/developer-mode-simulator-export-a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "72204175-eaad-4050-898a-a45180da44fb",
+      "startedAt": "2026-11-25T12:39:22.782Z",
+      "executable": "python3",
+      "commandDigest": "dba0001cc860634d9b843e66e3248fa0a691f1e24a5d3b69ca8ba27db1dbd565",
+      "receiptPath": "measurements/developer-mode-native-build-a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "a1257fa6-aba0-4d6d-855b-d454a216971d",
+      "startedAt": "2026-11-25T12:40:53.848Z",
+      "executable": "python3",
+      "commandDigest": "c7c935e1ba437ae7729f6ab91f81bc25ffeba9b54f0e4cfe8a4d89028a8747a4",
+      "receiptPath": "measurements/developer-mode-python-tests.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "lint",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "da30e923-df90-47c7-a3d7-7aeb5b34001a",
+      "startedAt": "2026-11-25T12:42:55.385Z",
+      "executable": "python3",
+      "commandDigest": "0eeb6db609c1f4c5d63b41b9b14011bf2f6d0e0b0f9de6151bd9dcfd80e84e5a",
+      "receiptPath": "measurements/developer-mode-static-final.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "lint",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "93cd2a33-616a-47e9-bacb-99c822e43a51",
+      "startedAt": "2026-11-25T12:43:11.587Z",
+      "executable": "python3",
+      "commandDigest": "3909552ec95e7af31d9e6be1668cf1284a573597a4321b4911429c355673d5b9",
+      "receiptPath": "measurements/developer-mode-final-records.json"
     }
   ],
   "runMeasurements": [
@@ -46923,6 +46978,101 @@
       "receipt": {
         "path": "measurements/developer-mode-static-a.json",
         "sha256": "2b99e28edaf49a19b0b00b1b607abca1b1529f502df4d3ab6c01b8c84bdfb793"
+      }
+    },
+    {
+      "id": "7a64a2b0-59f5-47c0-adf0-e84498d87e98",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "2eef44dd2e26dcaf35903c276c0a1f4125dc29e23109059bc59bd1d05d6c0090",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T12:38:37.876Z",
+      "finishedAt": "2026-11-25T12:39:15.578Z",
+      "durationMs": 37667.438834,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/developer-mode-simulator-export-a.json",
+        "sha256": "6d8a1f112a2ba60a7298474406d53a9d53e555580b5bc3d5d5ac6fa9e5d9e04f"
+      }
+    },
+    {
+      "id": "72204175-eaad-4050-898a-a45180da44fb",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "dba0001cc860634d9b843e66e3248fa0a691f1e24a5d3b69ca8ba27db1dbd565",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T12:39:22.782Z",
+      "finishedAt": "2026-11-25T12:39:34.715Z",
+      "durationMs": 11898.180666999999,
+      "exitCode": 3,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/developer-mode-native-build-a.json",
+        "sha256": "7347b4b3e23a4a20ba937d2049e23277aef533aefbd35c785fa416ecd6e85025"
+      }
+    },
+    {
+      "id": "a1257fa6-aba0-4d6d-855b-d454a216971d",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "c7c935e1ba437ae7729f6ab91f81bc25ffeba9b54f0e4cfe8a4d89028a8747a4",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T12:40:53.848Z",
+      "finishedAt": "2026-11-25T12:40:54.082Z",
+      "durationMs": 202.40337500000004,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/developer-mode-python-tests.json",
+        "sha256": "953fc56087d7d8bae297b5df8625d236ff94f0b593490443351e90cf0cd48fef"
+      }
+    },
+    {
+      "id": "da30e923-df90-47c7-a3d7-7aeb5b34001a",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "0eeb6db609c1f4c5d63b41b9b14011bf2f6d0e0b0f9de6151bd9dcfd80e84e5a",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-25T12:42:55.385Z",
+      "finishedAt": "2026-11-25T12:42:57.424Z",
+      "durationMs": 2005.8406250000003,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/developer-mode-static-final.json",
+        "sha256": "ac49a6387288b47c719e8331f75e39c57fd0d846f3d2006ab0b202fe9c8d8e09"
+      }
+    },
+    {
+      "id": "93cd2a33-616a-47e9-bacb-99c822e43a51",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "3909552ec95e7af31d9e6be1668cf1284a573597a4321b4911429c355673d5b9",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-25T12:43:11.587Z",
+      "finishedAt": "2026-11-25T12:43:11.721Z",
+      "durationMs": 92.50474999999994,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/developer-mode-final-records.json",
+        "sha256": "730e2df5b6623972cbd36585ec12ca40dae9a033065d33ed45e437e93ac9718c"
       }
     }
   ]
