@@ -1,0 +1,184 @@
+{
+  "implementation": "IMPLEMENTED",
+  "artAcceptance": "PARTIAL_NOT_ACCEPTED",
+  "overallProductAcceptance": "PARTIAL",
+  "sourceBaseCommit": "e43d8bd2c22f3257d09762490b0e1534bef5872b",
+  "sourceDigest": "1879cb2e9be376f92161615e38425a44e73b4dd4ea6a670b56f17570c5a014de",
+  "editor": {
+    "result": "Passed",
+    "total": "50",
+    "passed": "50",
+    "failed": "0",
+    "end-time": "2026-11-24 00:15:00Z"
+  },
+  "headlessPlayMode": {
+    "result": "Passed",
+    "total": "10",
+    "passed": "10",
+    "failed": "0",
+    "end-time": "2026-11-24 00:16:27Z"
+  },
+  "macCompilation": "PASS",
+  "releaseToolTests": {
+    "total": 11,
+    "passed": 11
+  },
+  "sourceGeometry": {
+    "status": "ENGINEERING_CHECKS_PASS",
+    "sourceLabel": "channelbuild5",
+    "validationLabel": "channelvalidate5",
+    "triangles": {
+      "Seabed_LOD0": 3236,
+      "Seabed_LOD1": 1618,
+      "Seabed_LOD2": 646,
+      "Islands_LOD0": 4212,
+      "Islands_LOD1": 2106,
+      "Islands_LOD2": 842,
+      "Outcrops_LOD0": 19152,
+      "Outcrops_LOD1": 9576,
+      "Outcrops_LOD2": 3830,
+      "Kelp_LOD0": 12600,
+      "Kelp_LOD1": 5040,
+      "Kelp_LOD2": 1800,
+      "Boat_LOD0": 1240,
+      "Boat_LOD1": 620,
+      "Boat_LOD2": 242,
+      "Mooring_LOD0": 1412,
+      "Mooring_LOD1": 706,
+      "Mooring_LOD2": 282,
+      "Water_LOD0": 512
+    },
+    "solidCounts": {
+      "Seabed": 1,
+      "Islands": 3,
+      "Outcrops": 14,
+      "Kelp": 90
+    },
+    "groundedIslandProfiles": 45,
+    "corridorProfiles": [
+      {
+        "lod": 0,
+        "heights": [
+          -6.284999847412109,
+          -6.552753448486328,
+          -6.714622497558594,
+          -6.393795013427734,
+          -6.42717170715332
+        ]
+      },
+      {
+        "lod": 1,
+        "heights": [
+          -6.284999847412109,
+          -6.526041030883789,
+          -6.746337890625,
+          -6.383014678955078,
+          -6.434274673461914
+        ]
+      },
+      {
+        "lod": 2,
+        "heights": [
+          -6.293575286865234,
+          -6.515186309814453,
+          -6.720802307128906,
+          -6.386564254760742,
+          -6.41172981262207
+        ]
+      }
+    ],
+    "details": "reports/nearshore-channel-geometry.json"
+  },
+  "unityClearance": {
+    "fishingSamples": 198,
+    "observationSamples": 384,
+    "triangleBounds": 69144,
+    "scope": "finite sampled conservative fishing/actual A0 observation bounds against all three LODs; not continuous collision proof"
+  },
+  "gpu": {
+    "status": "PASS",
+    "scope": "isolated Editor GPU water fixture; no player UI/device acceptance",
+    "width": 1440,
+    "height": 900,
+    "reflectionPasses": 2,
+    "reflectionVariance": 0.021596118807792664,
+    "waveDifference": 0.008025551214814186,
+    "graphics": "Metal",
+    "released": true,
+    "initialDifference": 0.0
+  },
+  "previews": {
+    "studio": 4,
+    "editorMetal": 8,
+    "viewed": 12,
+    "playerOrDevice": false
+  },
+  "nativePlayer": "NOT_RUN; CUA observed locked Mac",
+  "physicalDevice": "NOT_RUN for this source; build 4 local installation is a separate frozen candidate",
+  "childAndParent": "NOT_RUN",
+  "testFlightAndInstalledBuild4IncludesThisChange": false,
+  "initialPlayModeFailure": {
+    "measurementId": "3a0f0141-0f99-4b06-a583-d4ae4ff24fce",
+    "total": 10,
+    "passed": 9,
+    "failed": 1,
+    "reason": "Test assumed the constructor object name survived Unity prefab saving; corrected to exact component type and singleton state",
+    "retryPassed": 10,
+    "retained": true
+  },
+  "retainedSourceFailures": [
+    "generic leaf decimator produced open edges",
+    "thin leaf signed volume world-coordinate float32 cancellation and eight real inward lowest-LOD components",
+    "first GPU numeric checks passed but round island visuals rejected"
+  ],
+  "knownArtIssues": [
+    "regular cone-like island silhouettes",
+    "hard soil/stone material boundary",
+    "repeated rounded rocks and leaves",
+    "sparse seabed composition",
+    "washed-out Cycles studio lighting"
+  ],
+  "remainingHabitat": "slope runtime prototype",
+  "metrics": {
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "binding": "VERIFIED",
+    "independentReceiptAudit": "INCOMPLETE",
+    "measurements": [
+      "176366a0-3cc6-4c8d-b3b8-9d90cef311f0",
+      "8713ef07-47df-4358-9243-f54cc68c2b4f",
+      "46254136-d626-4247-b2f9-fd8a247c35b7",
+      "01908f96-debd-4b3a-a0d1-8c554bc275f0",
+      "1440f49a-9b5e-4551-a586-0f4e30aae375",
+      "da6c2936-fdaa-4ee5-a40a-c27887335f73",
+      "3a0f0141-0f99-4b06-a583-d4ae4ff24fce",
+      "0691fe3d-ecce-42e2-b66a-cd69aa8cdde3",
+      "c090797d-8369-4ac8-adae-eaf9df3f52b5",
+      "486be0f2-3856-4217-bcac-1c3ffb44b1cb",
+      "a4e875c7-5fd6-4429-8452-d434d8595225",
+      "0f917be0-6f95-4291-8529-70372e4c66ab",
+      "975f65e0-0f91-4678-a13e-2440d7bb164e",
+      "addb58ea-849d-4b4d-92f7-a20781246bdc"
+    ]
+  },
+  "publicationAudit": {
+    "status": "PASS",
+    "trackedFiles": 682,
+    "issues": []
+  },
+  "validatedCommit": "fd14dbb2ffe6ed455e2ec5f3dbf1edf74e654ccd",
+  "ci": {
+    "status": "SUCCESS",
+    "url": "https://github.com/arthurwangwsx-code/OceanAngler/actions/runs/45296371726",
+    "scope": "GitHub scope/hash/publication and release-tool tests; not Unity/device acceptance"
+  },
+  "headlessPlayModeScenario": {
+    "habitatRoundTrips": 3,
+    "habitats": [
+      "channel",
+      "bay",
+      "slope"
+    ],
+    "channelCatchRecords": 3,
+    "input": "UI events plus rule-driven line control; no touch/device acceptance"
+  }
+}

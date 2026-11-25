@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "71ce6e2d-ae77-4590-9f23-64cb9c0d884b",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "b9404fedd5fba2bc42d199d3505d39bbb4f8dccea8d3e7435598e9ed1b525454",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-25T14:04:16.713Z",
+    "finishedAt": "2026-11-25T14:04:56.118Z",
+    "durationMs": 39368.9565,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "args": [
+      "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b/.local/bluefin-gill-gpu-qa/unity-step.py",
+      "dev9play",
+      "tests",
+      "--test-platform",
+      "PlayMode",
+      "--test-filter",
+      "DeveloperModeTests",
+      "--label",
+      "dev9play20261125"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b/.local/bluefin-gill-gpu-qa/unity-step.py",
+    "dev9play",
+    "tests",
+    "--test-platform",
+    "PlayMode",
+    "--test-filter",
+    "DeveloperModeTests",
+    "--label",
+    "dev9play20261125"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T14:04:16.713Z",
+  "finishedAt": "2026-11-25T14:04:56.118Z",
+  "durationMs": 39368.9565
+}

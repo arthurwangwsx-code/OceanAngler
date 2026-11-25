@@ -1,0 +1,158 @@
+{
+  "date": "2026-11-24",
+  "sourceBaseCommit": "66eda667be9ab4662e1da13ac00007b4d7f3d674",
+  "testedSourceDigest": "8c66ead46d24d2f03850187cc793bd62349049cb43f435415a72eeb07a8ba800",
+  "implementation": "IMPLEMENTED",
+  "scope": "Three ambient bluefin instances in the first bay; not new species or hook-target ecology",
+  "overallProductAcceptance": "PARTIAL",
+  "artAcceptance": "PARTIAL",
+  "scientificReview": "PENDING",
+  "instances": 3,
+  "newSpecies": 0,
+  "sourceModel": "Models/Bluefin",
+  "instanceScales": [
+    0.18,
+    0.22,
+    0.26
+  ],
+  "space": {
+    "centre": [
+      2.0,
+      2.3536534,
+      13.0
+    ],
+    "extents": [
+      3.5,
+      1.5663466,
+      5.0
+    ],
+    "solidCeiling": 0.20730686,
+    "safetyRadius": 0.48,
+    "extraGap": 0.1,
+    "checkedTriangles": 137054,
+    "environmentLods": 3,
+    "actualMaximumSwimBodyRadius": 0.4035961,
+    "swimPosesChecked": 7,
+    "bodyLodsChecked": 3,
+    "status": "PASS_STATIC_VOLUME_ONLY"
+  },
+  "motion": {
+    "simulatedSeconds": 1200,
+    "steps": 36000,
+    "hz": 30,
+    "minimumCentreSeparation": 1.103076,
+    "neighbourInteractions": 216000,
+    "separationResponses": 60814,
+    "boundaryCorrections": 0,
+    "deterministic60HzPartition": true,
+    "status": "PASS_SIMULATION_ONLY"
+  },
+  "editorTests": {
+    "result": "Passed",
+    "total": "34",
+    "passed": "34",
+    "failed": "0",
+    "end-time": "2026-11-23 21:18:21Z"
+  },
+  "editorMeasurement": "48930286-b245-406b-a9d0-dceff6123f3b",
+  "playModeTests": {
+    "result": "Passed",
+    "total": "7",
+    "passed": "7",
+    "failed": "0",
+    "end-time": "2026-11-23 21:19:49Z"
+  },
+  "playModeMeasurement": "b5f69c01-9e23-4e05-af39-3e67c885c94c",
+  "sceneChecks": [
+    "Fixed population reuses object IDs",
+    "Ambient colliders disabled; target identity distinct",
+    "Pause and reduced motion freeze positions; presentation flags match",
+    "Gear/journal hide ambience",
+    "Existing four catches, save/retry, journal/reset and audio checks preserved"
+  ],
+  "macCompilation": {
+    "status": "PASS",
+    "measurement": "8e4dc6e5-6f58-4cf4-b82e-a3e37f396e80"
+  },
+  "gpuFixture": {
+    "status": "PASS",
+    "scope": "isolated Editor Metal scene with sampled swim poses; no player/UI/device qualification",
+    "graphics": "Metal",
+    "members": 3,
+    "images": 7,
+    "width": 1440,
+    "height": 900,
+    "visibleDifference": 1.1015290510840714e-05,
+    "minimumMovement": 2.6971774101257324
+  },
+  "gpuMeasurement": "a8635c4b-6814-460a-8091-79e748b768c7",
+  "gpuReview": {
+    "status": "ALL_SEVEN_INSPECTED",
+    "lod": 0,
+    "scope": "Manual imported animation samples and simulated roots; actual player animation/window not qualified"
+  },
+  "fontVerify": {
+    "status": "PASS",
+    "characters": 688,
+    "measurement": "9bb00e8e-3f5a-458f-96f8-75b68d9e3c51"
+  },
+  "retainedFailures": [
+    {
+      "measurement": "e302737f-2cd5-4e39-a261-7e4017e8918c",
+      "reason": "Initial horizontal region had insufficient free water; builder refused, moved region without weakening clearance"
+    },
+    {
+      "measurement": "719e888f-894c-45f0-a838-6b0adc7452bf",
+      "reason": "Measurement applied renderer scale twice; BakeMesh useScale=true compensated before TransformPoint; no model or threshold change"
+    }
+  ],
+  "nativeWindow": {
+    "status": "NOT_RUN_CURRENT_SOURCE",
+    "desktop": "BLOCKED_MAC_LOCKED_CONFIRMED_BY_CUA",
+    "newLaunch": false
+  },
+  "testFlight": {
+    "build": "3",
+    "sourceCommit": "05c8cc7cd5abf747e6a174cc154e4f575e35e422",
+    "includesThisChange": false,
+    "installation": "NOT_RUN"
+  },
+  "performance": {
+    "physicalDevices": "NOT_RUN",
+    "additionalAnimators": 3,
+    "shadowCasting": false,
+    "meshesAndMaterials": "shared",
+    "srpBatcher": "Affected PropertyBlock renderers excluded",
+    "runtimeLod": "Existing three-level distance LOD; fixture fixes LOD0"
+  },
+  "knownOpen": [
+    "Distant small fish and overall natural appearance; user/science review",
+    "Actual player UI/animation and physical-device cost",
+    "Feeding/bite perception AI and three protected observation encounters",
+    "Other eleven complete fish models, gear and two habitats",
+    "A1-A3, child/parent playtests and full product"
+  ],
+  "metrics": {
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "binding": "VERIFIED",
+    "independentReceiptAudit": "INCOMPLETE",
+    "verifiedMeasurements": [
+      "48930286-b245-406b-a9d0-dceff6123f3b",
+      "b5f69c01-9e23-4e05-af39-3e67c885c94c",
+      "8e4dc6e5-6f58-4cf4-b82e-a3e37f396e80",
+      "a8635c4b-6814-460a-8091-79e748b768c7",
+      "9bb00e8e-3f5a-458f-96f8-75b68d9e3c51",
+      "c5998088-dc62-4258-972f-6c7bc69460f6",
+      "d7787ec0-76e3-4291-8207-28907d24ec23",
+      "85bd3797-76a2-4349-af23-a91336fdae54",
+      "35f43af1-7ca7-43b0-aa9a-54ed1e350211",
+      "e302737f-2cd5-4e39-a261-7e4017e8918c",
+      "719e888f-894c-45f0-a838-6b0adc7452bf"
+    ]
+  },
+  "publicationAudit": {
+    "status": "PASS",
+    "trackedFiles": 511,
+    "measurement": "85bd3797-76a2-4349-af23-a91336fdae54"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "cf730516-ac78-4272-bd52-63d967df324f",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "cdb377ed2ef55b1bd874afb1d373853d337c1c1a7dca4ee501a3e8f58d53146e",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-24T20:16:48.343Z",
+    "finishedAt": "2026-11-24T20:17:10.727Z",
+    "durationMs": 22338.085208,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      "tools/game.py",
+      "tests",
+      "--test-platform",
+      "EditMode",
+      "--test-filter",
+      "AuthoredFishMaterialTests;FinTissueTests;EncounterGeometryTests"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    "tools/game.py",
+    "tests",
+    "--test-platform",
+    "EditMode",
+    "--test-filter",
+    "AuthoredFishMaterialTests;FinTissueTests;EncounterGeometryTests"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T20:16:48.343Z",
+  "finishedAt": "2026-11-24T20:17:10.727Z",
+  "durationMs": 22338.085208
+}

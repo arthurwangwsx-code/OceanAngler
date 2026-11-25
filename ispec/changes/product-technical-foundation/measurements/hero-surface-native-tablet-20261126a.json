@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "93036c28-afb9-425f-af00-e396a5d862aa",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "b0843d4d1bed6598eeb9783192938e21b036642257a27f81be8c3390177d4e3e",
+    "category": "e2e",
+    "executable": "python3",
+    "startedAt": "2026-11-25T18:01:09.552Z",
+    "finishedAt": "2026-11-25T18:02:18.929Z",
+    "durationMs": 69351.429542,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "args": [
+      "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b/.local/hero-surface-qa/run-developer-native.py",
+      "headsurfacetablet20261126a",
+      "--device",
+      "tablet"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b/.local/hero-surface-qa/run-developer-native.py",
+    "headsurfacetablet20261126a",
+    "--device",
+    "tablet"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T18:01:09.552Z",
+  "finishedAt": "2026-11-25T18:02:18.929Z",
+  "durationMs": 69351.429542
+}

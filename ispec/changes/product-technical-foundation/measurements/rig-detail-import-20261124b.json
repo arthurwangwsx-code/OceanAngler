@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "a5ad4170-905d-428a-8935-f7c909e8536c",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "dfb8ed7302e5ff8413fb727e2d4691c68fb1ebde29cd122319eef3578978ef0e",
+    "category": "compile",
+    "executable": "python3",
+    "startedAt": "2026-11-24T13:08:15.574Z",
+    "finishedAt": "2026-11-24T13:08:25.158Z",
+    "durationMs": 9552.692833000001,
+    "exitCode": 1,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      "tools/game.py",
+      "spinning-rig"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    "tools/game.py",
+    "spinning-rig"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 1,
+  "startedAt": "2026-11-24T13:08:15.574Z",
+  "finishedAt": "2026-11-24T13:08:25.158Z",
+  "durationMs": 9552.692833000001
+}

@@ -1,0 +1,431 @@
+{
+  "scope": "integrated Mac native rendering, isolated UI event path and text/target metrics; not device or final art acceptance",
+  "status": "PASS",
+  "sourceBaseCommit": "3b0693003e4e5073fff4ed66ea31e508fb51c394",
+  "testedSourceDigest": "5e0a4644da8df111697c8018467daef5b599cb403dea505cbfa57ea095e4916c",
+  "profiles": [
+    {
+      "status": "PASS",
+      "exitCode": 0,
+      "checks": [
+        "visible-hit-target:继续探索",
+        "authored-spinning-rig-loaded",
+        "rig-guides-and-bend-bones",
+        "rig-single-lod-owner",
+        "rig-line-through-guides",
+        "authored-bluefin-loaded",
+        "authored-three-lods-single-owner",
+        "authored-seven-motion-states",
+        "authored-hook-at-mouth",
+        "authored-swim-actually-deforms-tail",
+        "authored-renderer-materials",
+        "authored-bay-loaded",
+        "visible-hit-target:看看海湾",
+        "observation-pauses-fishing",
+        "surface-camera-above-water",
+        "visible-hit-target:潜入水下",
+        "underwater-camera-below-water",
+        "visible-hit-target:换个角度",
+        "reef-camera-actually-changes",
+        "visible-hit-target:返回钓鱼",
+        "observation-return-keeps-pause",
+        "fishing-camera-restored",
+        "visible-hit-target:按住蓄力 · 松手抛竿",
+        "cast-to-bite",
+        "visible-hit-target:提竿",
+        "strike-to-fighting",
+        "visible-hit-target:按住收线",
+        "controlled-catch",
+        "rig-crank-rotor-drive",
+        "rig-spool-stroke-bounded",
+        "rig-loaded-line-through-guides",
+        "visible-hit-target:记录并放流",
+        "release-and-persist",
+        "visible-hit-target:图鉴",
+        "visible-hit-target:钓具",
+        "visible-hit-target:观察入门钓组",
+        "gear-view-pauses-fishing",
+        "visible-hit-target:近看卷线器",
+        "visible-hit-target:试摇卷线器",
+        "gear-preview-real-winding",
+        "gear-preview-spool-actually-oscillates",
+        "visible-hit-target:停止收线演示",
+        "gear-demo-stops-on-release",
+        "visible-hit-target:旋转钓组",
+        "visible-hit-target:查看全竿",
+        "visible-hit-target:返回钓具",
+        "visible-hit-target:任务",
+        "visible-hit-target:设置",
+        "visible-hit-target:左手操作    已关闭",
+        "left-hand-setting",
+        "visible-hit-target:家长区与隐私",
+        "visible-hit-target:13",
+        "visible-hit-target:查看隐私与字体许可",
+        "visible-hit-target:返回家长区",
+        "visible-hit-target:清除游戏进度",
+        "reset-first-confirm-does-not-delete",
+        "visible-hit-target:取消并返回设置",
+        "cancel-reset-keeps-catches",
+        "visible-hit-target:出海",
+        "navigation-clears-held-input"
+      ],
+      "failures": [],
+      "catches": 1,
+      "points": 244,
+      "screenshots": {
+        "07-bay-surface.png": [
+          1440,
+          900
+        ],
+        "07-gear-whole.png": [
+          1440,
+          900
+        ],
+        "06-left-handed.png": [
+          1440,
+          900
+        ],
+        "11-bay-reef.png": [
+          1440,
+          900
+        ],
+        "04-gear.png": [
+          1440,
+          900
+        ],
+        "05-tasks.png": [
+          1440,
+          900
+        ],
+        "02-catch.png": [
+          1440,
+          900
+        ],
+        "10-settings.png": [
+          1440,
+          900
+        ],
+        "03-journal.png": [
+          1440,
+          900
+        ],
+        "09-release.png": [
+          1440,
+          900
+        ],
+        "08-bay-underwater.png": [
+          1440,
+          900
+        ],
+        "01-fishing.png": [
+          1440,
+          900
+        ]
+      },
+      "pixelsPerPoint": 1.0,
+      "safeWidthPoints": 1440.0,
+      "safeHeightPoints": 900.0,
+      "runLabel": "authored-desktop2",
+      "measurementId": "4bb470de-e09c-42d5-8517-e6742ffdb879",
+      "platform": "Mac native isolated save; logical-size profile only"
+    },
+    {
+      "status": "PASS",
+      "exitCode": 0,
+      "checks": [
+        "visible-hit-target:继续探索",
+        "authored-spinning-rig-loaded",
+        "rig-guides-and-bend-bones",
+        "rig-single-lod-owner",
+        "rig-line-through-guides",
+        "authored-bluefin-loaded",
+        "authored-three-lods-single-owner",
+        "authored-seven-motion-states",
+        "authored-hook-at-mouth",
+        "authored-swim-actually-deforms-tail",
+        "authored-renderer-materials",
+        "authored-bay-loaded",
+        "visible-hit-target:海域与装备",
+        "visible-hit-target:看看海湾",
+        "observation-pauses-fishing",
+        "surface-camera-above-water",
+        "visible-hit-target:潜入水下",
+        "underwater-camera-below-water",
+        "visible-hit-target:换个角度",
+        "reef-camera-actually-changes",
+        "visible-hit-target:返回钓鱼",
+        "observation-return-keeps-pause",
+        "visible-hit-target:收起准备",
+        "fishing-camera-restored",
+        "visible-hit-target:按住蓄力 · 松手抛竿",
+        "cast-to-bite",
+        "visible-hit-target:提竿",
+        "strike-to-fighting",
+        "visible-hit-target:按住收线",
+        "controlled-catch",
+        "rig-crank-rotor-drive",
+        "rig-spool-stroke-bounded",
+        "rig-loaded-line-through-guides",
+        "visible-hit-target:记录并放流",
+        "release-and-persist",
+        "visible-hit-target:图鉴",
+        "visible-hit-target:钓具",
+        "visible-hit-target:观察入门钓组",
+        "gear-view-pauses-fishing",
+        "visible-hit-target:近看卷线器",
+        "visible-hit-target:试摇卷线器",
+        "gear-preview-real-winding",
+        "gear-preview-spool-actually-oscillates",
+        "visible-hit-target:停止收线演示",
+        "gear-demo-stops-on-release",
+        "visible-hit-target:旋转钓组",
+        "visible-hit-target:查看全竿",
+        "visible-hit-target:返回钓具",
+        "visible-hit-target:任务",
+        "visible-hit-target:设置",
+        "visible-hit-target:左手操作    已关闭",
+        "left-hand-setting",
+        "visible-hit-target:家长区与隐私",
+        "visible-hit-target:16",
+        "visible-hit-target:查看隐私与字体许可",
+        "visible-hit-target:返回家长区",
+        "visible-hit-target:清除游戏进度",
+        "reset-first-confirm-does-not-delete",
+        "visible-hit-target:取消并返回设置",
+        "cancel-reset-keeps-catches",
+        "visible-hit-target:出海",
+        "navigation-clears-held-input"
+      ],
+      "failures": [],
+      "catches": 1,
+      "points": 253,
+      "screenshots": {
+        "07-bay-surface.png": [
+          2556,
+          1180
+        ],
+        "07-gear-whole.png": [
+          2556,
+          1180
+        ],
+        "06-left-handed.png": [
+          2556,
+          1180
+        ],
+        "11-bay-reef.png": [
+          2556,
+          1180
+        ],
+        "04-gear.png": [
+          2556,
+          1180
+        ],
+        "05-tasks.png": [
+          2556,
+          1180
+        ],
+        "02-catch.png": [
+          2556,
+          1180
+        ],
+        "10-settings.png": [
+          2556,
+          1180
+        ],
+        "03-journal.png": [
+          2556,
+          1180
+        ],
+        "09-release.png": [
+          2556,
+          1180
+        ],
+        "08-bay-underwater.png": [
+          2556,
+          1180
+        ],
+        "01-fishing.png": [
+          2556,
+          1180
+        ]
+      },
+      "pixelsPerPoint": 3.0,
+      "safeWidthPoints": 758.0,
+      "safeHeightPoints": 372.3333435058594,
+      "runLabel": "authored-phone1",
+      "measurementId": "ef57df83-ea49-4ecf-abbd-9f4bd9a35942",
+      "platform": "Mac native isolated save; logical-size profile only"
+    },
+    {
+      "status": "PASS",
+      "exitCode": 0,
+      "checks": [
+        "visible-hit-target:继续探索",
+        "authored-spinning-rig-loaded",
+        "rig-guides-and-bend-bones",
+        "rig-single-lod-owner",
+        "rig-line-through-guides",
+        "authored-bluefin-loaded",
+        "authored-three-lods-single-owner",
+        "authored-seven-motion-states",
+        "authored-hook-at-mouth",
+        "authored-swim-actually-deforms-tail",
+        "authored-renderer-materials",
+        "authored-bay-loaded",
+        "visible-hit-target:看看海湾",
+        "observation-pauses-fishing",
+        "surface-camera-above-water",
+        "visible-hit-target:潜入水下",
+        "underwater-camera-below-water",
+        "visible-hit-target:换个角度",
+        "reef-camera-actually-changes",
+        "visible-hit-target:返回钓鱼",
+        "observation-return-keeps-pause",
+        "fishing-camera-restored",
+        "visible-hit-target:按住蓄力 · 松手抛竿",
+        "cast-to-bite",
+        "visible-hit-target:提竿",
+        "strike-to-fighting",
+        "visible-hit-target:按住收线",
+        "controlled-catch",
+        "rig-crank-rotor-drive",
+        "rig-spool-stroke-bounded",
+        "rig-loaded-line-through-guides",
+        "visible-hit-target:记录并放流",
+        "release-and-persist",
+        "visible-hit-target:图鉴",
+        "visible-hit-target:钓具",
+        "visible-hit-target:观察入门钓组",
+        "gear-view-pauses-fishing",
+        "visible-hit-target:近看卷线器",
+        "visible-hit-target:试摇卷线器",
+        "gear-preview-real-winding",
+        "gear-preview-spool-actually-oscillates",
+        "visible-hit-target:停止收线演示",
+        "gear-demo-stops-on-release",
+        "visible-hit-target:旋转钓组",
+        "visible-hit-target:查看全竿",
+        "visible-hit-target:返回钓具",
+        "visible-hit-target:任务",
+        "visible-hit-target:设置",
+        "visible-hit-target:左手操作    已关闭",
+        "left-hand-setting",
+        "visible-hit-target:家长区与隐私",
+        "visible-hit-target:15",
+        "visible-hit-target:查看隐私与字体许可",
+        "visible-hit-target:返回家长区",
+        "visible-hit-target:清除游戏进度",
+        "reset-first-confirm-does-not-delete",
+        "visible-hit-target:取消并返回设置",
+        "cancel-reset-keeps-catches",
+        "visible-hit-target:出海",
+        "navigation-clears-held-input"
+      ],
+      "failures": [],
+      "catches": 1,
+      "points": 181,
+      "screenshots": {
+        "07-bay-surface.png": [
+          2048,
+          1536
+        ],
+        "07-gear-whole.png": [
+          2048,
+          1536
+        ],
+        "06-left-handed.png": [
+          2048,
+          1536
+        ],
+        "11-bay-reef.png": [
+          2048,
+          1536
+        ],
+        "04-gear.png": [
+          2048,
+          1536
+        ],
+        "05-tasks.png": [
+          2048,
+          1536
+        ],
+        "02-catch.png": [
+          2048,
+          1536
+        ],
+        "10-settings.png": [
+          2048,
+          1536
+        ],
+        "03-journal.png": [
+          2048,
+          1536
+        ],
+        "09-release.png": [
+          2048,
+          1536
+        ],
+        "08-bay-underwater.png": [
+          2048,
+          1536
+        ],
+        "01-fishing.png": [
+          2048,
+          1536
+        ]
+      },
+      "pixelsPerPoint": 2.0,
+      "safeWidthPoints": 1024.0,
+      "safeHeightPoints": 768.0,
+      "runLabel": "authored-tablet1",
+      "measurementId": "8afb0905-0fbc-41be-b8d3-51dc84ac7a07",
+      "platform": "Mac native isolated save; logical-size profile only"
+    }
+  ],
+  "failureHistory": [
+    {
+      "runLabel": "authored-desktop1",
+      "status": "FAIL",
+      "measurementId": "97ec4593-cdfb-47e6-a02b-e91a505ba777",
+      "failures": [
+        "clipped-text:fishing:已装备 入门轻竿 · 入门纺车 轻型鱼线 · 软虫拟饵",
+        "clipped-text:bay-surface:看看沙地和礁石， 让珊瑚安静生长。",
+        "clipped-text:bay-underwater:看看沙地和礁石， 让珊瑚安静生长。",
+        "clipped-text:landed:已装备 入门轻竿 · 入门纺车 轻型鱼线 · 软虫拟饵",
+        "clipped-text:gear-preview:鱼线穿过导环， 摇柄带动收线。",
+        "clipped-text:gear-closeup:鱼线穿过导环， 摇柄带动收线。",
+        "clipped-text:left-handed:已装备 入门轻竿 · 入门纺车 轻型鱼线 · 软虫拟饵"
+      ],
+      "fix": "enlarged desktop equipment summary and two-line inspection descriptions; retained 44pt compact targets; fresh rerun with 12 snapshots passed"
+    }
+  ],
+  "visualReview": {
+    "status": "PARTIAL",
+    "reviewed": "12 desktop snapshots; selected phone/tablet fishing, reel and settings/list/environment snapshots",
+    "findings": [
+      "Fish body highlight is too strong and head/body seam is visible; further silhouette/material work required.",
+      "Surface lacks convincing wave/reflection/shore-depth layers.",
+      "Reef rocks look like thin open shells in close view; geometry and placement need correction.",
+      "Coral and seagrass remain sparse/repetitive; environment is a prototype.",
+      "Tablet reel-inspection title appears absent in captured frame; investigate rendering before visual sign-off."
+    ],
+    "publishedUnmodifiedPreviews": "art/previews/runtime",
+    "userArtReview": "PENDING"
+  },
+  "actualIOSInstallation": "NOT_RUN",
+  "actualDeviceTouchAndSafeArea": "NOT_RUN",
+  "twentyMinuteDeviceRun": "NOT_RUN",
+  "childFirstFishObservation": "NOT_RUN",
+  "finalA1A2A3": "NOT_PASSED",
+  "testFlightBuild2IncludesTheseSourceChanges": false,
+  "measurementAudit": {
+    "status": "INCOMPLETE",
+    "latestCommandsBoundToActiveAttempt": true,
+    "issues": [
+      "expectation-not-declared",
+      "receipt-missing-or-invalid"
+    ],
+    "stageCompleted": false,
+    "note": "CLI command measurements and retained local logs are not an independently verified or complete product-acceptance audit."
+  }
+}

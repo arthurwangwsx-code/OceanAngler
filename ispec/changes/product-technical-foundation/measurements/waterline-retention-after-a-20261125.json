@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "5fd54b9b-e132-4794-af85-8d3ff7a8c206",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "9c4637b8847468e4451100269e72036ee7b85c908542c45d278c8b56407f9767",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-24T23:11:45.613Z",
+    "finishedAt": "2026-11-24T23:11:52.606Z",
+    "durationMs": 6970.173624999999,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/waterline-qa/retention.py",
+      "after"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/waterline-qa/retention.py",
+    "after"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T23:11:45.613Z",
+  "finishedAt": "2026-11-24T23:11:52.606Z",
+  "durationMs": 6970.173624999999
+}

@@ -1,0 +1,206 @@
+{
+  "scope": "saved-spinning-rig-engineering",
+  "checks": [
+    "网格存在：Rod_LOD0",
+    "UV范围有效：Rod_LOD0",
+    "竿身骨骼权重有效：Rod_LOD0",
+    "网格存在：Rod_LOD1",
+    "UV范围有效：Rod_LOD1",
+    "竿身骨骼权重有效：Rod_LOD1",
+    "网格存在：Rod_LOD2",
+    "UV范围有效：Rod_LOD2",
+    "竿身骨骼权重有效：Rod_LOD2",
+    "网格存在：Housing_LOD0",
+    "UV范围有效：Housing_LOD0",
+    "网格存在：Housing_LOD1",
+    "UV范围有效：Housing_LOD1",
+    "网格存在：Housing_LOD2",
+    "UV范围有效：Housing_LOD2",
+    "网格存在：Rotor_LOD0",
+    "UV范围有效：Rotor_LOD0",
+    "网格存在：Rotor_LOD1",
+    "UV范围有效：Rotor_LOD1",
+    "网格存在：Rotor_LOD2",
+    "UV范围有效：Rotor_LOD2",
+    "网格存在：Spool_LOD0",
+    "UV范围有效：Spool_LOD0",
+    "网格存在：Spool_LOD1",
+    "UV范围有效：Spool_LOD1",
+    "网格存在：Spool_LOD2",
+    "UV范围有效：Spool_LOD2",
+    "网格存在：Crank_LOD0",
+    "UV范围有效：Crank_LOD0",
+    "网格存在：Crank_LOD1",
+    "UV范围有效：Crank_LOD1",
+    "网格存在：Crank_LOD2",
+    "UV范围有效：Crank_LOD2",
+    "网格存在：Lure_LOD0",
+    "UV范围有效：Lure_LOD0",
+    "网格存在：Lure_LOD1",
+    "UV范围有效：Lure_LOD1",
+    "网格存在：Lure_LOD2",
+    "UV范围有效：Lure_LOD2",
+    "网格存在：BailWire_LOD0",
+    "UV范围有效：BailWire_LOD0",
+    "网格存在：BailWire_LOD1",
+    "UV范围有效：BailWire_LOD1",
+    "网格存在：BailWire_LOD2",
+    "UV范围有效：BailWire_LOD2",
+    "LOD实际递减：Rod",
+    "LOD实际递减：Housing",
+    "LOD实际递减：Rotor",
+    "LOD实际递减：Spool",
+    "LOD实际递减：Crank",
+    "LOD实际递减：Lure",
+    "LOD实际递减：BailWire",
+    "全竿物理长度2.35米",
+    "机构中心正确：RotorPivot",
+    "机构中心正确：SpoolPivot",
+    "机构中心正确：CrankPivot",
+    "机构中心正确：BailPivot",
+    "导环与变形后网格对齐：rest/Guide0",
+    "导环初始位置正确：Guide0",
+    "导环与变形后网格对齐：rest/Guide1",
+    "导环初始位置正确：Guide1",
+    "导环与变形后网格对齐：rest/Guide2",
+    "导环初始位置正确：Guide2",
+    "导环与变形后网格对齐：rest/Guide3",
+    "导环初始位置正确：Guide3",
+    "导环与变形后网格对齐：rest/Guide4",
+    "导环初始位置正确：Guide4",
+    "导环与变形后网格对齐：rest/Guide5",
+    "导环初始位置正确：Guide5",
+    "导环与变形后网格对齐：rest/Guide6",
+    "导环初始位置正确：Guide6",
+    "导环与变形后网格对齐：rest/Guide7",
+    "导环初始位置正确：Guide7",
+    "导环与变形后网格对齐：rest/Guide8",
+    "导环初始位置正确：Guide8",
+    "导环与变形后网格对齐：loaded/Guide0",
+    "导环与变形后网格对齐：loaded/Guide1",
+    "导环与变形后网格对齐：loaded/Guide2",
+    "导环与变形后网格对齐：loaded/Guide3",
+    "导环与变形后网格对齐：loaded/Guide4",
+    "导环与变形后网格对齐：loaded/Guide5",
+    "导环与变形后网格对齐：loaded/Guide6",
+    "导环与变形后网格对齐：loaded/Guide7",
+    "导环与变形后网格对齐：loaded/Guide8",
+    "贴图可解析：Rig_Carbon",
+    "贴图可解析：Rig_Carbon_Normal",
+    "贴图可解析：Rig_Cork",
+    "贴图可解析：Rig_Cork_Normal"
+  ],
+  "failures": [],
+  "lods": {
+    "Rod_LOD0": {
+      "triangles": 24844,
+      "invalidUVLoops": 0
+    },
+    "Rod_LOD1": {
+      "triangles": 11178,
+      "invalidUVLoops": 0
+    },
+    "Rod_LOD2": {
+      "triangles": 4967,
+      "invalidUVLoops": 0
+    },
+    "Housing_LOD0": {
+      "triangles": 4118,
+      "invalidUVLoops": 0
+    },
+    "Housing_LOD1": {
+      "triangles": 1853,
+      "invalidUVLoops": 0
+    },
+    "Housing_LOD2": {
+      "triangles": 823,
+      "invalidUVLoops": 0
+    },
+    "Rotor_LOD0": {
+      "triangles": 1950,
+      "invalidUVLoops": 0
+    },
+    "Rotor_LOD1": {
+      "triangles": 876,
+      "invalidUVLoops": 0
+    },
+    "Rotor_LOD2": {
+      "triangles": 390,
+      "invalidUVLoops": 0
+    },
+    "Spool_LOD0": {
+      "triangles": 7472,
+      "invalidUVLoops": 0
+    },
+    "Spool_LOD1": {
+      "triangles": 3362,
+      "invalidUVLoops": 0
+    },
+    "Spool_LOD2": {
+      "triangles": 1494,
+      "invalidUVLoops": 0
+    },
+    "Crank_LOD0": {
+      "triangles": 1156,
+      "invalidUVLoops": 0
+    },
+    "Crank_LOD1": {
+      "triangles": 520,
+      "invalidUVLoops": 0
+    },
+    "Crank_LOD2": {
+      "triangles": 230,
+      "invalidUVLoops": 0
+    },
+    "Lure_LOD0": {
+      "triangles": 3228,
+      "invalidUVLoops": 0
+    },
+    "Lure_LOD1": {
+      "triangles": 1452,
+      "invalidUVLoops": 0
+    },
+    "Lure_LOD2": {
+      "triangles": 644,
+      "invalidUVLoops": 0
+    },
+    "BailWire_LOD0": {
+      "triangles": 652,
+      "invalidUVLoops": 0
+    },
+    "BailWire_LOD1": {
+      "triangles": 292,
+      "invalidUVLoops": 0
+    },
+    "BailWire_LOD2": {
+      "triangles": 130,
+      "invalidUVLoops": 0
+    }
+  },
+  "guideErrors": {
+    "rest": [
+      2.64868456704782e-06,
+      2.648683101592249e-06,
+      2.6486821857020923e-06,
+      2.648216132416012e-06,
+      1.6852288383532176e-06,
+      1.6852284402766132e-06,
+      1.6854612909890088e-06,
+      1.6854611590689472e-06,
+      1.685228241238276e-06
+    ],
+    "loaded": [
+      2.6494495746304077e-06,
+      2.6493652974225595e-06,
+      2.6511776401707817e-06,
+      2.651033123115611e-06,
+      1.6989066072011975e-06,
+      1.687663986787865e-06,
+      1.692610305913171e-06,
+      1.6966302384031119e-06,
+      1.6863652690921955e-06
+    ]
+  },
+  "visualAcceptance": "NOT_ACCEPTED",
+  "status": "ENGINEERING_CHECKS_PASS"
+}

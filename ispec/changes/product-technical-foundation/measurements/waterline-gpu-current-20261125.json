@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "b30315dc-9f9e-4286-bc7e-a3e15822257e",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "07958b669db0e9c35d3505147fde1c6004620d56244a1ade643e3a90c86b36a0",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-24T22:58:56.672Z",
+    "finishedAt": "2026-11-24T22:59:10.031Z",
+    "durationMs": 13327.54025,
+    "exitCode": 1,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      "tools/game.py",
+      "waterline-review",
+      "--review-target",
+      "ios",
+      "--label",
+      "waterline20261125d"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    "tools/game.py",
+    "waterline-review",
+    "--review-target",
+    "ios",
+    "--label",
+    "waterline20261125d"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 1,
+  "startedAt": "2026-11-24T22:58:56.672Z",
+  "finishedAt": "2026-11-24T22:59:10.031Z",
+  "durationMs": 13327.54025
+}

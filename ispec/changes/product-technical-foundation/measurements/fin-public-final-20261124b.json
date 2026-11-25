@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "f925cab7-a0f8-41dd-af67-a7f8267e27a2",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "d48bf0aded6ec7e877e0bafa41e696c79a03eacf8c6571c73f9ef0b5110fdf07",
+    "category": "lint",
+    "executable": "python3",
+    "startedAt": "2026-11-24T12:30:24.294Z",
+    "finishedAt": "2026-11-24T12:30:33.404Z",
+    "durationMs": 9067.688166999998,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/fin-tissue-qa/public-final-checks.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/fin-tissue-qa/public-final-checks.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T12:30:24.294Z",
+  "finishedAt": "2026-11-24T12:30:33.404Z",
+  "durationMs": 9067.688166999998
+}

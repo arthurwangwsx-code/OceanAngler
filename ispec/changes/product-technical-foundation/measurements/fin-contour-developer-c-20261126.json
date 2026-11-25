@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "03b24c52-3a7c-4eeb-b433-c823cb08b536",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "930fb69bd2430f99dfa52966173141d230d9019af2d389315b1bafc5a97a2f4f",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-25T16:53:32.149Z",
+    "finishedAt": "2026-11-25T16:54:13.920Z",
+    "durationMs": 41731.806832999995,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "args": [
+      "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b/.local/fin-contour-qa/unity-step.py",
+      "developer-c",
+      "tests",
+      "--test-platform",
+      "PlayMode",
+      "--test-filter",
+      "DeveloperModeTests",
+      "--label",
+      "fincontourdeveloper20261126c"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b/.local/fin-contour-qa/unity-step.py",
+    "developer-c",
+    "tests",
+    "--test-platform",
+    "PlayMode",
+    "--test-filter",
+    "DeveloperModeTests",
+    "--label",
+    "fincontourdeveloper20261126c"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T16:53:32.149Z",
+  "finishedAt": "2026-11-25T16:54:13.920Z",
+  "durationMs": 41731.806832999995
+}

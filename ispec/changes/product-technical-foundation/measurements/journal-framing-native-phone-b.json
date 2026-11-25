@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "00de70c8-e136-44c2-bd80-7da66986f3b1",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "acadd00025f60b0f5f4d5a2b0827dd625a2bce3dac4687dd0e771663f54ffe6e",
+    "category": "e2e",
+    "executable": "python3",
+    "startedAt": "2026-11-25T07:03:27.743Z",
+    "finishedAt": "2026-11-25T07:03:41.499Z",
+    "durationMs": 13731.912542,
+    "exitCode": 1,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/journal-framing-qa/record-and-run.py",
+      "journalframephoneb",
+      "--device",
+      "phone"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/journal-framing-qa/record-and-run.py",
+    "journalframephoneb",
+    "--device",
+    "phone"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 1,
+  "startedAt": "2026-11-25T07:03:27.743Z",
+  "finishedAt": "2026-11-25T07:03:41.499Z",
+  "durationMs": 13731.912542
+}

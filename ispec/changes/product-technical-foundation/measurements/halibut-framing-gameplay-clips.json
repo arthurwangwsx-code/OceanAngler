@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "a3982013-eefb-4883-8c59-3647d912c0f4",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "a2ed32acd2543caa0cd799b3b41e116302144145caa538a186248ec32bc826d8",
+    "category": "compile",
+    "executable": "python3",
+    "startedAt": "2026-11-25T04:24:21.421Z",
+    "finishedAt": "2026-11-25T04:24:28.821Z",
+    "durationMs": 7372.346542,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/halibut-encounter-qa/make-clips.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/halibut-encounter-qa/make-clips.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T04:24:21.421Z",
+  "finishedAt": "2026-11-25T04:24:28.821Z",
+  "durationMs": 7372.346542
+}

@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "a3fb58ea-0d8a-41f9-83c6-5a74c1fa85d6",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "2ea2ea7266d5ca541e407b2cc48799588a269a4c7976d6231fe8333d1537a8c2",
+    "category": "e2e",
+    "executable": "python3",
+    "startedAt": "2026-11-24T19:20:26.075Z",
+    "finishedAt": "2026-11-24T19:22:52.868Z",
+    "durationMs": 146695.885417,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/hud-contrast-qa/run-native.py",
+      "immersive",
+      "hudcontrast20261125pad1",
+      "--device",
+      "tablet"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/hud-contrast-qa/run-native.py",
+    "immersive",
+    "hudcontrast20261125pad1",
+    "--device",
+    "tablet"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T19:20:26.075Z",
+  "finishedAt": "2026-11-24T19:22:52.868Z",
+  "durationMs": 146695.885417
+}

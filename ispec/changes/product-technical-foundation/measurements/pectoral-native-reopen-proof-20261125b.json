@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "f9cf2166-9b06-49e7-b68a-e5548944d2ab",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "72d3d7c75d2e01816bb5d3046d3a9444da4c770328a89d3e69e075d5d50dcb11",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-24T18:57:37.816Z",
+    "finishedAt": "2026-11-24T18:57:38.529Z",
+    "durationMs": 673.641167,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/pectoral-native-qa/reopen-check.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/pectoral-native-qa/reopen-check.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T18:57:37.816Z",
+  "finishedAt": "2026-11-24T18:57:38.529Z",
+  "durationMs": 673.641167
+}

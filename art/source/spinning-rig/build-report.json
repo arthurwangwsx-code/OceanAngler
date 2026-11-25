@@ -1,0 +1,197 @@
+{
+  "status": "CANDIDATE",
+  "units": "metres",
+  "length": 2.35,
+  "lods": {
+    "Rod_LOD0": 22888,
+    "Rod_LOD1": 10128,
+    "Rod_LOD2": 4136,
+    "Housing_LOD0": 4116,
+    "Housing_LOD1": 1778,
+    "Housing_LOD2": 704,
+    "Rotor_LOD0": 1420,
+    "Rotor_LOD1": 608,
+    "Rotor_LOD2": 234,
+    "Spool_LOD0": 8608,
+    "Spool_LOD1": 3640,
+    "Spool_LOD2": 2230,
+    "Crank_LOD0": 1156,
+    "Crank_LOD1": 494,
+    "Crank_LOD2": 192,
+    "Lure_LOD0": 3212,
+    "Lure_LOD1": 1372,
+    "Lure_LOD2": 534,
+    "BailWire_LOD0": 1116,
+    "BailWire_LOD1": 476,
+    "BailWire_LOD2": 190,
+    "LineRoller_LOD0": 896,
+    "LineRoller_LOD1": 560,
+    "LineRoller_LOD2": 336
+  },
+  "bones": [
+    "Butt",
+    "RodBone0",
+    "RodBone1",
+    "RodBone2",
+    "RodBone3",
+    "RodBone4",
+    "RodBone5",
+    "RodBone6",
+    "RodBone7",
+    "RodBone8",
+    "RodBone9"
+  ],
+  "guides": [
+    {
+      "name": "Guide0",
+      "bone": "RodBone1",
+      "position": [
+        0,
+        -0.053,
+        0.72
+      ],
+      "radius": 0.028
+    },
+    {
+      "name": "Guide1",
+      "bone": "RodBone3",
+      "position": [
+        0,
+        -0.038,
+        1.03
+      ],
+      "radius": 0.022
+    },
+    {
+      "name": "Guide2",
+      "bone": "RodBone4",
+      "position": [
+        0,
+        -0.027,
+        1.31
+      ],
+      "radius": 0.016
+    },
+    {
+      "name": "Guide3",
+      "bone": "RodBone5",
+      "position": [
+        0,
+        -0.02,
+        1.55
+      ],
+      "radius": 0.011
+    },
+    {
+      "name": "Guide4",
+      "bone": "RodBone7",
+      "position": [
+        0,
+        -0.015,
+        1.76
+      ],
+      "radius": 0.0085
+    },
+    {
+      "name": "Guide5",
+      "bone": "RodBone8",
+      "position": [
+        0,
+        -0.012,
+        1.94
+      ],
+      "radius": 0.0065
+    },
+    {
+      "name": "Guide6",
+      "bone": "RodBone9",
+      "position": [
+        0,
+        -0.009,
+        2.1
+      ],
+      "radius": 0.005
+    },
+    {
+      "name": "Guide7",
+      "bone": "RodBone9",
+      "position": [
+        0,
+        -0.007,
+        2.23
+      ],
+      "radius": 0.004
+    },
+    {
+      "name": "Guide8",
+      "bone": "RodBone9",
+      "position": [
+        0,
+        -0.005,
+        2.35
+      ],
+      "radius": 0.003
+    }
+  ],
+  "pivots": [
+    "RotorPivot",
+    "SpoolPivot",
+    "CrankPivot",
+    "BailPivot",
+    "LurePivot",
+    "LineRollerPivot"
+  ],
+  "detail": {
+    "components": 8,
+    "lod0Budget": 43420,
+    "winding": "one visible continuous25-turn layer, not dynamic line volume",
+    "roller": "hollow grooved shell, independent pivot and bearing spindle",
+    "optics": "stock original materials; human/device acceptance open",
+    "solidReductionGuards": [
+      {
+        "part": "GuideBinding1",
+        "requested": 0.43,
+        "retained": 0.645,
+        "retries": 1
+      },
+      {
+        "part": "GuideBinding1.001",
+        "requested": 0.43,
+        "retained": 0.645,
+        "retries": 1
+      },
+      {
+        "part": "GuideBinding2",
+        "requested": 0.43,
+        "retained": 0.645,
+        "retries": 1
+      },
+      {
+        "part": "GuideBinding2.001",
+        "requested": 0.43,
+        "retained": 0.645,
+        "retries": 1
+      },
+      {
+        "part": "GuideBinding3",
+        "requested": 0.17,
+        "retained": 0.255,
+        "retries": 1
+      },
+      {
+        "part": "GuideBinding3.001",
+        "requested": 0.17,
+        "retained": 0.255,
+        "retries": 1
+      },
+      {
+        "part": "GuideBinding6",
+        "requested": 0.17,
+        "retained": 0.255,
+        "retries": 1
+      }
+    ]
+  },
+  "artAcceptance": "NOT_ACCEPTED",
+  "source": "tools/art_spinning_rig.py"
+}

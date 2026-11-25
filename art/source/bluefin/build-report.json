@@ -5,18 +5,18 @@
   "blender": "5.3.0",
   "lods": {
     "Bluefin_LOD0": {
-      "triangles": 20960,
-      "vertices": 10957,
+      "triangles": 24739,
+      "vertices": 12885,
       "uvLayers": 1
     },
     "Bluefin_LOD1": {
-      "triangles": 8384,
-      "vertices": 4669,
+      "triangles": 10679,
+      "vertices": 5765,
       "uvLayers": 1
     },
     "Bluefin_LOD2": {
-      "triangles": 3143,
-      "vertices": 2041,
+      "triangles": 4899,
+      "vertices": 3048,
       "uvLayers": 1
     }
   },
@@ -41,15 +41,523 @@
     "pelvicR",
     "jaw",
     "pectoralL",
-    "pectoralR"
+    "pectoralLMid",
+    "pectoralLTip",
+    "pectoralR",
+    "pectoralRMid",
+    "pectoralRTip"
   ],
   "maps": {
-    "Bluefin_Fin.png": "41e1f50108dd69e51670f0ce4d12a656fcdca9044f81bb8ca3c97c231062dae7",
-    "Bluefin_Roughness.png": "bbf7d89ccc378b816ffe950830620542fff26b36e8ea92cc49945cec45f8c9bf",
-    "Bluefin_MetallicSmoothness.png": "bab39656767a9824493fa68d526c7c7ef703c598d59cd395567e2546d6711d68",
-    "Bluefin_BaseColor.png": "c13e873046dafa938a0de22624298373ba13315a6de860132c550f8968eb483f",
-    "Bluefin_Normal.png": "00d944237d2f379f16accfb8fd1cf768b3c22ff79dccaab2636c97247dc5d63f"
+    "Bluefin_Iris.png": "920e67001c9b4c9d7413cf956a17bd7a23447481636c6df99455f1f80052c279",
+    "Bluefin_Fin_Roughness.png": "2d142ea0a0708ee8855c44ec0d135e067abe524c624da414bc68ef947dd1e89e",
+    "Bluefin_Fin.png": "455e948892fce6278a7b5fbd1a8a20352272c6e4d6f4454f77eeb909790a5fa8",
+    "Bluefin_Fin_Normal.png": "0484cee7df56545813b2635ec14ae9e5a6fae5d1203d36452ede2d44cbc1ab30",
+    "Bluefin_Fin_MetallicSmoothness.png": "35aeee5a17e984ecc81683eb944c9ec6d310171856149635f130cfb88e4ca72c",
+    "Bluefin_Roughness.png": "e84ebdb6581ea835014dfa6085f8636ad48f44fd0544a2f080a108d98cec915c",
+    "Bluefin_MetallicSmoothness.png": "a36fac61f41493501675e1a1cfb171f0cdd718648d0eb3e3ac8c8f56a52d56bc",
+    "Bluefin_BaseColor.png": "51b39875e79feb17cde7a370ccfe3e78dd25fcc28f415fdae76700452003ee8f",
+    "Bluefin_Normal.png": "e8f83e511693e6001147c1203f259243dac9a403899f77414b3b2ad2d2c76a19"
   },
   "artAcceptance": "NOT_ACCEPTED",
-  "note": "Original authoring candidate; scientific, runtime, deformation, LOD and human visual gates remain separate."
+  "finTissueSamples": [
+    {
+      "fin": "FirstDorsal_8Spines",
+      "t": 0.25,
+      "point": [
+        -0.3162499964237213,
+        0.0027320508379489183,
+        0.42632031440734863
+      ],
+      "normal": [
+        0.010114524513483047,
+        -0.9948920607566833,
+        0.10043644160032272
+      ]
+    },
+    {
+      "fin": "FirstDorsal_8Spines",
+      "t": 0.58,
+      "point": [
+        -0.30799999833106995,
+        0.00374276889488101,
+        0.4515240490436554
+      ],
+      "normal": [
+        -0.006608446594327688,
+        -0.9993273615837097,
+        -0.036071233451366425
+      ]
+    },
+    {
+      "fin": "FirstDorsal_8Spines",
+      "t": 0.92,
+      "point": [
+        -0.2994999885559082,
+        0.000960000092163682,
+        0.477491557598114
+      ],
+      "normal": [
+        -0.034965381026268005,
+        -0.990848958492279,
+        -0.13036757707595825
+      ]
+    },
+    {
+      "fin": "SecondDorsal_23Rays",
+      "t": 0.25,
+      "point": [
+        0.41102272272109985,
+        0.0027320508379489183,
+        0.23434048891067505
+      ],
+      "normal": [
+        0.03977147862315178,
+        -0.9942166805267334,
+        0.09975645691156387
+      ]
+    },
+    {
+      "fin": "SecondDorsal_23Rays",
+      "t": 0.58,
+      "point": [
+        0.4330727159976959,
+        0.00374276889488101,
+        0.2536485195159912
+      ],
+      "normal": [
+        -0.015725811943411827,
+        -0.9992490410804749,
+        -0.03541317954659462
+      ]
+    },
+    {
+      "fin": "SecondDorsal_23Rays",
+      "t": 0.92,
+      "point": [
+        0.4557908773422241,
+        0.000960000092163682,
+        0.2735416293144226
+      ],
+      "normal": [
+        -0.0625215396285057,
+        -0.990080714225769,
+        -0.125822052359581
+      ]
+    },
+    {
+      "fin": "Anal_19Rays",
+      "t": 0.25,
+      "point": [
+        0.45124998688697815,
+        0.0027320508379489183,
+        -0.18590602278709412
+      ],
+      "normal": [
+        -0.038868505507707596,
+        0.9938817024230957,
+        0.10338396579027176
+      ]
+    },
+    {
+      "fin": "Anal_19Rays",
+      "t": 0.58,
+      "point": [
+        0.47306662797927856,
+        0.00374276889488101,
+        -0.2047043889760971
+      ],
+      "normal": [
+        0.01555334497243166,
+        0.9992111921310425,
+        -0.03653860092163086
+      ]
+    },
+    {
+      "fin": "Anal_19Rays",
+      "t": 0.92,
+      "point": [
+        0.4955444633960724,
+        0.000960000092163682,
+        -0.2240723967552185
+      ],
+      "normal": [
+        0.06256282329559326,
+        0.9896747469902039,
+        -0.12895673513412476
+      ]
+    },
+    {
+      "fin": "Caudal_DeepFork",
+      "t": 0.25,
+      "point": [
+        0.9839229583740234,
+        0.0027320508379489183,
+        -0.008879612199962139
+      ],
+      "normal": [
+        0.043872538954019547,
+        -0.9988491535186768,
+        0.019382376223802567
+      ]
+    },
+    {
+      "fin": "Caudal_DeepFork",
+      "t": 0.58,
+      "point": [
+        1.0551011562347412,
+        0.00374276889488101,
+        -0.018050502985715866
+      ],
+      "normal": [
+        -0.016074368730187416,
+        -0.9998379945755005,
+        -0.008104829117655754
+      ]
+    },
+    {
+      "fin": "Caudal_DeepFork",
+      "t": 0.92,
+      "point": [
+        1.1284363269805908,
+        0.000960000092163682,
+        -0.027499301359057426
+      ],
+      "normal": [
+        -0.05986276641488075,
+        -0.9977117776870728,
+        -0.03142614662647247
+      ]
+    },
+    {
+      "fin": "Pectoral_L",
+      "t": 0.25,
+      "point": [
+        -0.38719889521598816,
+        0.19535355269908905,
+        -0.06117255613207817
+      ],
+      "normal": [
+        0.32693228125572205,
+        -0.9405573010444641,
+        -0.09201756864786148
+      ]
+    },
+    {
+      "fin": "Pectoral_L",
+      "t": 0.58,
+      "point": [
+        -0.2647014856338501,
+        0.23942464590072632,
+        -0.08912032097578049
+      ],
+      "normal": [
+        0.2963734269142151,
+        -0.9482096433639526,
+        -0.114285409450531
+      ]
+    },
+    {
+      "fin": "Pectoral_L",
+      "t": 0.92,
+      "point": [
+        -0.13849201798439026,
+        0.2810071110725403,
+        -0.11791498959064484
+      ],
+      "normal": [
+        0.28300508856773376,
+        -0.954908013343811,
+        -0.08977098762989044
+      ]
+    },
+    {
+      "fin": "Pelvic_L",
+      "t": 0.25,
+      "point": [
+        -0.2175000011920929,
+        0.10047724097967148,
+        -0.30895835161209106
+      ],
+      "normal": [
+        -0.09995702654123306,
+        0.748650074005127,
+        0.6553866863250732
+      ]
+    },
+    {
+      "fin": "Pelvic_L",
+      "t": 0.58,
+      "point": [
+        -0.14379999041557312,
+        0.1315116137266159,
+        -0.33398330211639404
+      ],
+      "normal": [
+        -0.12481651455163956,
+        0.8185027241706848,
+        0.5607799291610718
+      ]
+    },
+    {
+      "fin": "Pelvic_L",
+      "t": 0.92,
+      "point": [
+        -0.06786666810512543,
+        0.15966230630874634,
+        -0.3597666621208191
+      ],
+      "normal": [
+        -0.1221148893237114,
+        0.8494284749031067,
+        0.5133801698684692
+      ]
+    },
+    {
+      "fin": "Pectoral_R",
+      "t": 0.25,
+      "point": [
+        -0.38719889521598816,
+        -0.18988944590091705,
+        -0.06117255613207817
+      ],
+      "normal": [
+        -0.30031538009643555,
+        -0.952876091003418,
+        0.04286966472864151
+      ]
+    },
+    {
+      "fin": "Pectoral_R",
+      "t": 0.58,
+      "point": [
+        -0.2647014856338501,
+        -0.23193910717964172,
+        -0.08912032097578049
+      ],
+      "normal": [
+        -0.30170711874961853,
+        -0.9416769742965698,
+        0.14905430376529694
+      ]
+    },
+    {
+      "fin": "Pectoral_R",
+      "t": 0.92,
+      "point": [
+        -0.13849201798439026,
+        -0.279087096452713,
+        -0.11791498959064484
+      ],
+      "normal": [
+        -0.2893173098564148,
+        -0.9202969670295715,
+        0.2633422017097473
+      ]
+    },
+    {
+      "fin": "Pelvic_R",
+      "t": 0.25,
+      "point": [
+        -0.2175000011920929,
+        -0.09501314908266068,
+        -0.30895835161209106
+      ],
+      "normal": [
+        0.07798414677381516,
+        0.7937352657318115,
+        -0.6032435297966003
+      ]
+    },
+    {
+      "fin": "Pelvic_R",
+      "t": 0.58,
+      "point": [
+        -0.14379999041557312,
+        -0.12402607500553131,
+        -0.33398330211639404
+      ],
+      "normal": [
+        0.1374148577451706,
+        0.8060367107391357,
+        -0.5756925940513611
+      ]
+    },
+    {
+      "fin": "Pelvic_R",
+      "t": 0.92,
+      "point": [
+        -0.06786666810512543,
+        -0.15774229168891907,
+        -0.3597666621208191
+      ],
+      "normal": [
+        0.17744174599647522,
+        0.8094655871391296,
+        -0.559714138507843
+      ]
+    }
+  ],
+  "finTissue": {
+    "membraneMaterial": "Bluefin_Fins",
+    "rayMaterial": "Bluefin_Rays",
+    "nominalRootThickness": 0.0018,
+    "nominalTipThickness": 0.00045,
+    "opacity": "authored pigment alpha, not measured biological transmission",
+    "shadow": "opaque geometric rays; runtime transparent membrane shadow disabled"
+  },
+  "note": "Original authoring candidate; scientific, runtime, deformation, LOD and human visual gates remain separate.",
+  "mapUpdateMode": "Existing blend image datablocks only; geometry,rig,UV,actions and external-texture FBX retained",
+  "motionRecipe": "periodic-analytic-tangents-v1",
+  "motionUpdateScope": "Saved actions and FBX update only; no geometry, UV, weights, rig rest structure or texture regeneration",
+  "headSurfaceRecipe": "continuous-eye-v1",
+  "headSurfaceUpdate": {
+    "Bluefin_LOD0": {
+      "oldVertices": 12775,
+      "removedPupilVertices": 676,
+      "curvedIrisVertices": 386,
+      "vertices": 12099,
+      "triangles": 23320
+    },
+    "Bluefin_LOD1": {
+      "oldVertices": 5171,
+      "removedPupilVertices": 211,
+      "curvedIrisVertices": 184,
+      "vertices": 4960,
+      "triangles": 9450
+    },
+    "Bluefin_LOD2": {
+      "oldVertices": 2078,
+      "removedPupilVertices": 54,
+      "curvedIrisVertices": 67,
+      "vertices": 2024,
+      "triangles": 3598
+    }
+  },
+  "headSurfaceSource": "tools/art_bluefin_head_surface.py",
+  "gillRecipe": "triangle-integrated-opercular-rim-v4",
+  "gillUpdate": {
+    "Bluefin_LOD0": {
+      "vertices": 12449,
+      "triangles": 24028,
+      "lift": 0,
+      "halfWidth": 0.0009,
+      "segments": 32,
+      "subdividedOriginalSkinFaces": 52,
+      "stitchedJunctions": 379
+    },
+    "Bluefin_LOD1": {
+      "vertices": 5095,
+      "triangles": 9728,
+      "lift": 0,
+      "halfWidth": 0.001,
+      "segments": 16,
+      "subdividedOriginalSkinFaces": 66,
+      "stitchedJunctions": 188
+    },
+    "Bluefin_LOD2": {
+      "vertices": 2195,
+      "triangles": 3948,
+      "lift": 0,
+      "halfWidth": 0.0012,
+      "segments": 6,
+      "subdividedOriginalSkinFaces": 66,
+      "stitchedJunctions": 88
+    }
+  },
+  "pectoralFlex": {
+    "recipe": "paired-distal-curl-v3",
+    "motionPeakRadians": {
+      "idle": 0.00675,
+      "swim": 0.01275,
+      "turn": 0.018,
+      "burst": 0.01425,
+      "bite": 0.00975,
+      "hooked": 0.0165,
+      "release": 0.015
+    },
+    "membraneRefinement": {
+      "Bluefin_LOD0": {
+        "splitFaces": 0,
+        "newVertices": 0
+      },
+      "Bluefin_LOD1": {
+        "splitFaces": 0,
+        "newVertices": 0
+      },
+      "Bluefin_LOD2": {
+        "splitFaces": 0,
+        "newVertices": 0
+      }
+    },
+    "additionalBones": 4,
+    "totalBones": 16,
+    "rootFractionUnchanged": 0.25,
+    "maximumWeightsPerFinVertex": 2,
+    "components": {
+      "Bluefin_LOD0": {
+        "pectoralL": {
+          "vertices": 799,
+          "rootQuarterUnchanged": 304
+        },
+        "pectoralR": {
+          "vertices": 797,
+          "rootQuarterUnchanged": 302
+        }
+      },
+      "Bluefin_LOD1": {
+        "pectoralL": {
+          "vertices": 501,
+          "rootQuarterUnchanged": 110
+        },
+        "pectoralR": {
+          "vertices": 503,
+          "rootQuarterUnchanged": 110
+        }
+      },
+      "Bluefin_LOD2": {
+        "pectoralL": {
+          "vertices": 534,
+          "rootQuarterUnchanged": 110
+        },
+        "pectoralR": {
+          "vertices": 535,
+          "rootQuarterUnchanged": 110
+        }
+      }
+    },
+    "scope": "Authored flexible paired-fin animation; only coplanar paired-fin membrane refinement; original vertices, maps, body, rays and original bones/curves retained, not measured Caranx biomechanics or final art acceptance"
+  },
+  "mouthSurface": {
+    "recipe": "separate-internal-mouth-roof-v1",
+    "lods": {
+      "Bluefin_LOD0": {
+        "removedHiddenRoofFaces": 5,
+        "splitBoundaryEdges": 10,
+        "retainedFaces": 12509,
+        "retainedFaceDigest": "ad57f41a9a9bcf63ba910e0557191a30cea24f5343cc332999dadd702397581c",
+        "allRetainedFaceGeometryWindingUvWeightsExact": true,
+        "triangles": 24739,
+        "vertices": 12885
+      },
+      "Bluefin_LOD1": {
+        "removedHiddenRoofFaces": 5,
+        "splitBoundaryEdges": 6,
+        "retainedFaces": 6227,
+        "retainedFaceDigest": "f46eca241526af76a14b86d84d3cd267e9d0830064baf175896be9d5214afbe1",
+        "allRetainedFaceGeometryWindingUvWeightsExact": true,
+        "triangles": 10679,
+        "vertices": 5765
+      },
+      "Bluefin_LOD2": {
+        "removedHiddenRoofFaces": 5,
+        "splitBoundaryEdges": 4,
+        "retainedFaces": 2997,
+        "retainedFaceDigest": "33f5e80d5243caceabeba8defe1638fa570682bb8e619da03a5972da33218949",
+        "allRetainedFaceGeometryWindingUvWeightsExact": true,
+        "triangles": 4899,
+        "vertices": 3048
+      }
+    },
+    "scope": "Hidden jaw roof and normal separation only; not complete mouth anatomy/art acceptance"
+  }
 }

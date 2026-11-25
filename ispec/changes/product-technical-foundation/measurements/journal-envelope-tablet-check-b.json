@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "ef2fcb3a-3eed-4ab2-9fd7-c203cb91f071",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "8e72d5a615153de9e397a5124436df9d2169f2fba4ee2f546f7786e194bf63e4",
+    "category": "e2e",
+    "executable": "python3",
+    "startedAt": "2026-11-25T08:04:56.236Z",
+    "finishedAt": "2026-11-25T08:04:56.377Z",
+    "durationMs": 113.94654100000002,
+    "exitCode": 1,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/journal-envelope-qa/verify-native.py",
+      "journalenvelopetabletb"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/journal-envelope-qa/verify-native.py",
+    "journalenvelopetabletb"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 1,
+  "startedAt": "2026-11-25T08:04:56.236Z",
+  "finishedAt": "2026-11-25T08:04:56.377Z",
+  "durationMs": 113.94654100000002
+}

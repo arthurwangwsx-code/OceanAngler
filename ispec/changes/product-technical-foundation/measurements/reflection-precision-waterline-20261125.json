@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "50b4c25a-496c-4dd3-8c14-aefc9dd852fd",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "504e86f192b9d5a3b53a6a593a2d0ceb03ad98828474d8828c4d6a83d688c320",
+    "category": "gpu-regression",
+    "executable": "python3",
+    "startedAt": "2026-11-25T00:44:43.302Z",
+    "finishedAt": "2026-11-25T00:45:21.226Z",
+    "durationMs": 37582.905416999994,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      "tools/game.py",
+      "waterline-review",
+      "--label",
+      "reflectionprecision20261125"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    "tools/game.py",
+    "waterline-review",
+    "--label",
+    "reflectionprecision20261125"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T00:44:43.302Z",
+  "finishedAt": "2026-11-25T00:45:21.226Z",
+  "durationMs": 37582.905416999994
+}

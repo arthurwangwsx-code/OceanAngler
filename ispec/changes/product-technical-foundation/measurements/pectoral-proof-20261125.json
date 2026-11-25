@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "b21b8fbb-a472-421d-b7bf-38fe9c8cbeff",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "64921cce5a58ecb3a703b63963ea9f77cece9d3fef497fb20439754dd5e191ac",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-24T18:31:28.533Z",
+    "finishedAt": "2026-11-24T18:31:28.811Z",
+    "durationMs": 249.92775000000006,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/pectoral-qa/prepare-report.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/pectoral-qa/prepare-report.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T18:31:28.533Z",
+  "finishedAt": "2026-11-24T18:31:28.811Z",
+  "durationMs": 249.92775000000006
+}

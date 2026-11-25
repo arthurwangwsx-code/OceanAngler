@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "b40ce4da-ca82-4142-9de9-c5c2cf6ea9d2",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "dfe342c61036acbac3f8befe41d0e2d5b87a731dce85664c39dda1887d967fd4",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-24T21:14:31.928Z",
+    "finishedAt": "2026-11-24T21:15:35.414Z",
+    "durationMs": 63442.205167,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/beta8-qa/poll-apple.py",
+      "apple-poll-second.json"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/beta8-qa/poll-apple.py",
+    "apple-poll-second.json"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T21:14:31.928Z",
+  "finishedAt": "2026-11-24T21:15:35.414Z",
+  "durationMs": 63442.205167
+}

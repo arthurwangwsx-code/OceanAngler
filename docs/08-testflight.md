@@ -28,3 +28,23 @@ Test notes应明确：早期原型，测试抛竿/张力/收鱼/积分/存档/�
 每次原生导出必须使用新目录；首次iOS切换可能自动补写Unity平台设置，冻结检查会拒绝这类源码变化。审阅并提交真实配置后重新导出，不给已变化源码的产物补造冻结回执。归档使用冻结源码SHA、源码摘要与原生目录摘要；导出后检查IPA中的App标识和版本。上传前先核对同版本、同构建的Apple记录，并审计已有组。ATTEMPTED日志不是上传失败的证明，网络中断时先查Apple处理状态和私有传输日志。
 
 原始签名日志、描述文件、IPA、设备标识及截图仅存本机忽略目录，不进入公开仓库。设备验收必须说明安装来自TestFlight还是开发侧载；仅发现设备或成功启动同bundle不能证明TestFlight安装链路。
+
+2026-11-24：0.1.0 (2)冻结于2971b11，已通过签名/身份校验、内部专用导出、上传与Apple VALID处理，并核实本人组中的构建分配。指定邮箱arthur.wang.wsx@gmail.com已在该组内，邀请为INVITED，尚未验证实际安装。详见[本次脱敏回执](../reports/testflight-0.1.0-2.json)及[设备复核步骤](09-current-beta-review.md)。候选包最低iOS/iPadOS 17，首鱼/首钓组/首海湾仍待美术与设备验收；旧build1的冻结产物及历史回执保留。
+
+2026-11-24发行更新：0.1.0 (3)冻结05c8cc7，30项Editor、7项无画面PlayMode和11项发布工具检查通过；Unity iOS冻结导出、Xcode签名/身份校验、内部专用IPA、上传及Apple VALID/INTERNAL_ONLY通过，已分配本人授权两账号组，测试说明与反馈邮箱读回一致。指定邮箱仍INVITED，安装/运行NOT_RUN。该包包含build2之后的累计修复；科学/用户美术、当前实际画面、触控、听感、20分钟性能及完整产品仍未通过。见[build 3回执](../reports/testflight-0.1.0-3.json)及[设备复核](12-beta3-review.md)。独立receipt审计仍INCOMPLETE，3.4、4.1–4.3及apply未完成。
+
+2026-11-24发行更新：0.1.0 (4)冻结ee7ba50，41项Editor、8项无画面PlayMode和11项发布工具检查通过，冻结提交CI通过；Unity iOS导出、签名/身份校验、内部专用IPA、归档与IPA静态元数据检查、上传和Apple VALID/INTERNAL_ONLY通过。本人授权两账号组已核实，含arthur.wang.wsx@gmail.com，指定邮箱邀请当前为INVITED，测试说明/反馈邮箱读回一致。包含build 3之后的三条环境鱼、阶段抛投/接近/收鱼、共享遭遇选择与重复抛竿保护，以及蓝鳍鲹鳍色/比例/阴影改进；积分/概率未变。本轮没有新原生玩家窗口或真机证据，实际安装、触控、20分钟性能/恢复、儿童/科学/美术A1–A3及完整产品仍未通过，其他模型/海域及观察交互仍缺。独立receipt审计INCOMPLETE，2.4、3.4、4.1–4.3及apply保持未完成。 见[build 4回执](../reports/testflight-0.1.0-4.json)。
+
+## 用户要求的当前iPhone安装
+
+2026-11-24用户要求有阶段性可运行进展时安装到当前iPhone。已用冻结build 4归档生成仅当前已注册iPhone可用的本地release-testing（Ad Hoc）包，沿用本项目现有分发私钥，未创建/撤销证书；签名/身份/设备范围及Unity Data一致性检查后，devicectl安装、读回、启动和后续运行进程读回通过。它是本地安装来源，不能替代TestFlight设备安装证据，详见[本地回执](../reports/iphone-local-0.1.0-4.md)。当前主界面视觉/真实触控仍待确认。
+
+单设备描述文件须绑定本App、已有证书和明确目标设备；写请求未知先回查，禁止盲目重发。依据[Apple Profiles说明](https://developer.apple.com/documentation/appstoreconnectapi/profiles/)与[Profile创建属性](https://developer.apple.com/documentation/appstoreconnectapi/profilecreaterequest/data-data.dictionary/attributes-data.dictionary)。原始设备标识、profile、IPA及设备日志只存本机忽略目录。使用devicectl启动时，设备及输出等选项放在bundle参数之前，避免作为应用参数被捕获。出现锁屏/信任/OS授权阻碍应让用户完成，不绕过权限；不卸载应用来解决更新或签名问题，以保护进度。
+
+2026-11-24 build 5交付：0.1.0 (5)冻结a6bcf8e，50项Editor、10项无画面PlayMode、11项发布工具、源码CI、iOS导出/签名归档、内部专用IPA/静态元数据/上传及Apple VALID/INTERNAL_ONLY/IN_BETA_TESTING通过，本人授权两账号组和说明已读回，指定邮箱仍INVITED。见[发行回执](../reports/testflight-0.1.0-5.json)。同源码已用复用的单设备profile本地更新当前iPhone 17 Pro Max / iOS 27.3，从4到5未卸载/清档，安装构建号/启动和随后同进程查询通过，见[本地回执](../reports/iphone-local-0.1.0-5.md)。这不证明TestFlight来源安装、主界面/触控、个人进度或20分钟资格；首次成功观察记录升级存档后旧4不能读取，继续使用新版，不清档降级。保护观察/近海候选已纳入，但完整模型/海域、美术A1–A3、用户/科学/儿童和双设备仍未完成；独立receipt审计INCOMPLETE，3.4及完整产品出口保持未完成。
+
+2026-11-25 build 6交付：0.1.0 (6)冻结648b4ce，完整60项Editor、20项无画面PlayMode及12项发布保护通过；两组长流程分别34轮完整成长/20轮连续钓鱼，场景重建恢复另验。源码CI、iOS导出、签名归档、内部专用IPA与静态元数据、上传及Apple VALID/INTERNAL_ONLY/IN_BETA_TESTING通过，本人授权两账号组和说明已读回，指定邮箱状态INVITED。新增沉浸页面/底部收鱼、陆坡环境候选、鱼体眼口/薄鳍及钓组滚轮/绕线/主轴；积分和随机概率未改。未更新个人手机，本版TestFlight来源安装/实际触控/真实双设备20分钟未验，其他完整模型/科学/用户/儿童/美术A1–A3仍未完成。首次入口解析失败及直接执行红/绿修复保留；历史独立记录审计INCOMPLETE，apply及完整产品保持未完成。见[build 6回执](../reports/testflight-0.1.0-6.json)及[设备复核](27-beta6-review.md)。
+
+2026-11-25 build 7交付：0.1.0 (7)冻结653d3a7，60项Editor、21项无画面PlayMode及12项发布保护通过；完整成长20轮覆盖12鱼/20装备/18任务，场景重建恢复3915分/20条/3观察，另一组连续20轮恢复3167分/20条/3观察。iOS原生冻结、签名/身份归档、内部专用IPA与静态元数据、单次上传和Apple VALID/INTERNAL_ONLY/IN_BETA_TESTING通过，本人授权两账号组和测试说明已读回，指定邮箱状态INVITED。900秒休息提醒通过原边缘提示及暂停/首页继续按钮确认，没有新增常驻HUD；保留沉浸式分层页面、左右手和图形操作，积分/随机概率/存档格式未变。本轮未更新个人手机，TestFlight来源安装、真实触控/双设备20分钟、拟真美术/其他完整模型、用户/科学/儿童验收仍未完成；历史独立记录审计仍INCOMPLETE，完整产品及apply保持未完成。见[build 7回执](../reports/testflight-0.1.0-7.json)和[设备复核](29-beta7-review.md)。
+
+2026-11-25 build8交付：0.1.0 (8)冻结1bdfa78，60项Editor、21项完整无画面PlayMode、12项发布保护及源码CI通过。全内容30轮覆盖12鱼种/18任务/20装备并检查30次重复放流，场景重建恢复5547分/30鱼获/3观察；独立连续20轮恢复3767分/20鱼获/3观察。iOS原生冻结、签名归档、内部专用IPA与静态元数据、单次上传、Apple VALID/INTERNAL_ONLY/IN_BETA_TESTING及本人授权两账号组通过，指定邮箱邀请状态INVITED。本版累计胸鳍曲线、远距鳍面、中性体色与仪表描边，保留沉浸式分层页面、左右手和休息提醒。没有操作实体iPhone；TestFlight来源实际安装、真实触控/双设备20分钟、最终拟真美术/其他成品模型、用户/科学/儿童仍未验收，完整产品及apply未完成。见[发行回执](../reports/testflight-0.1.0-8.json)。

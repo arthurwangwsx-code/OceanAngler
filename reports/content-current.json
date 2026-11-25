@@ -1,0 +1,346 @@
+{
+  "status": "PARTIAL",
+  "functionalContentStatus": "PASS",
+  "implementation": "CURRENT_EXISTING_SOURCE_UNCHANGED",
+  "distribution": "LOCAL_SIMULATOR_ONLY_NOT_TESTFLIGHT",
+  "source": {
+    "sourceCommit": "45b04aa7081f12c8dd4e4a3aeb32e1b7754aa51c",
+    "sourceDigest": "545ceab933ee4a3504f4147933f81d594af01e9ebe7a5fc9e90b939de625b03a",
+    "projectSettingsSha256": "bea92e9b5c8b678dd130d48c1f43acaf939b56cacce33928a5a45af6da0a4585"
+  },
+  "appDigest": "8f8d883bc70bdd8299893c521a0438d4a7e10a80bfe9799d1a77e9b0355f169f",
+  "verificationHeadBeforeEvidence": "eac06b35e7b20c137beea21200cae4ed022916ae",
+  "native": {
+    "phone": {
+      "label": "contentcurrentphone1",
+      "status": "PASS",
+      "scope": "independent persisted ledger/catalog validation; native automatic EventSystem, not OS touch",
+      "rounds": 26,
+      "points": 4482,
+      "species": 12,
+      "tasks": 18,
+      "gear": 20,
+      "observations": 3,
+      "duplicateReleaseTaps": 26,
+      "firstRoundSeconds": 22.30135154724121,
+      "totalSeconds": 498.34442138671875,
+      "renderedFrames": 38,
+      "saveSha256": "ae2058d7fcec2fd9a39d4d9a8393331fe489731f90e4fe19d3eba4ce6c0df4a5",
+      "source": {
+        "sourceCommit": "45b04aa7081f12c8dd4e4a3aeb32e1b7754aa51c",
+        "sourceDigest": "545ceab933ee4a3504f4147933f81d594af01e9ebe7a5fc9e90b939de625b03a",
+        "projectSettingsSha256": "bea92e9b5c8b678dd130d48c1f43acaf939b56cacce33928a5a45af6da0a4585"
+      },
+      "appDigest": "8f8d883bc70bdd8299893c521a0438d4a7e10a80bfe9799d1a77e9b0355f169f",
+      "taskValues": {
+        "task-01": 26,
+        "task-02": 26,
+        "task-03": 26,
+        "task-04": 26,
+        "task-05": 12,
+        "task-06": 12,
+        "task-07": 12,
+        "task-08": 12,
+        "task-09": 15,
+        "task-10": 7,
+        "task-11": 4,
+        "task-12": 26,
+        "task-13": 26,
+        "task-14": 26,
+        "task-15": 16,
+        "task-16": 16,
+        "task-17": 4482,
+        "task-18": 4482
+      },
+      "habitatCounts": {
+        "bay": 15,
+        "channel": 7,
+        "slope": 4
+      },
+      "modeCounts": {
+        "assisted": 10,
+        "standard": 16
+      },
+      "allPngsDecoded": true,
+      "perRoundTaskValuesRecomputed": true,
+      "perRoundLedgerVerified": true,
+      "restart": {
+        "status": "PASS",
+        "scope": "Native Simulator new process with same actual UI-produced full-content save; main score viewed; tasks recomputed from unchanged disk ledger, not OS task-page interaction",
+        "newProcessObserved": true,
+        "catches": 26,
+        "species": 12,
+        "tasks": 18,
+        "unlockedGear": 20,
+        "observations": 3,
+        "points": 4482,
+        "checksumValid": true,
+        "saveBytesUnchanged": true,
+        "saveSha256": "ae2058d7fcec2fd9a39d4d9a8393331fe489731f90e4fe19d3eba4ce6c0df4a5",
+        "mainFrameViewed": true,
+        "visibleScoreMatches": true
+      },
+      "finalProofReceipt": "measurements/content-current-phone-proof-20261125.json",
+      "finalRestartReceipt": "measurements/content-current-phone-restart-20261125.json"
+    },
+    "tablet": {
+      "label": "contentcurrentpad1",
+      "status": "PASS",
+      "scope": "independent persisted ledger/catalog validation; native automatic EventSystem, not OS touch",
+      "rounds": 27,
+      "points": 4710,
+      "species": 12,
+      "tasks": 18,
+      "gear": 20,
+      "observations": 3,
+      "duplicateReleaseTaps": 27,
+      "firstRoundSeconds": 22.36697769165039,
+      "totalSeconds": 523.4437866210938,
+      "renderedFrames": 38,
+      "saveSha256": "b7596201b4ffd59b098cc900ec3b9a021cc3ad0c00f3562f98d8bc0a857bf52c",
+      "source": {
+        "sourceCommit": "45b04aa7081f12c8dd4e4a3aeb32e1b7754aa51c",
+        "sourceDigest": "545ceab933ee4a3504f4147933f81d594af01e9ebe7a5fc9e90b939de625b03a",
+        "projectSettingsSha256": "bea92e9b5c8b678dd130d48c1f43acaf939b56cacce33928a5a45af6da0a4585"
+      },
+      "appDigest": "8f8d883bc70bdd8299893c521a0438d4a7e10a80bfe9799d1a77e9b0355f169f",
+      "taskValues": {
+        "task-01": 27,
+        "task-02": 27,
+        "task-03": 27,
+        "task-04": 27,
+        "task-05": 12,
+        "task-06": 12,
+        "task-07": 12,
+        "task-08": 12,
+        "task-09": 17,
+        "task-10": 6,
+        "task-11": 4,
+        "task-12": 27,
+        "task-13": 27,
+        "task-14": 27,
+        "task-15": 17,
+        "task-16": 17,
+        "task-17": 4710,
+        "task-18": 4710
+      },
+      "habitatCounts": {
+        "bay": 17,
+        "channel": 6,
+        "slope": 4
+      },
+      "modeCounts": {
+        "assisted": 10,
+        "standard": 17
+      },
+      "allPngsDecoded": true,
+      "perRoundTaskValuesRecomputed": true,
+      "perRoundLedgerVerified": true,
+      "restart": {
+        "status": "PASS",
+        "scope": "Native Simulator new process with same actual UI-produced full-content save; main score viewed; tasks recomputed from unchanged disk ledger, not OS task-page interaction",
+        "newProcessObserved": true,
+        "catches": 27,
+        "species": 12,
+        "tasks": 18,
+        "unlockedGear": 20,
+        "observations": 3,
+        "points": 4710,
+        "checksumValid": true,
+        "saveBytesUnchanged": true,
+        "saveSha256": "b7596201b4ffd59b098cc900ec3b9a021cc3ad0c00f3562f98d8bc0a857bf52c",
+        "mainFrameViewed": true,
+        "visibleScoreMatches": true
+      },
+      "finalProofReceipt": "measurements/content-current-tablet-proof-b-20261125.json",
+      "finalRestartReceipt": "measurements/content-current-tablet-restart-b-20261125.json"
+    }
+  },
+  "existingSaves": {
+    "status": "PASS",
+    "files": 105,
+    "primary": 55,
+    "byteIdentical": true
+  },
+  "review": {
+    "contactSheets": 4,
+    "allJourneyFramesOnContacts": true,
+    "scope": "Contact sheets and selected full-size originals only; not all original frames or natural motion review"
+  },
+  "artifacts": [
+    {
+      "path": "art/previews/content-current/phone-contact-1.png",
+      "sha256": "a2154be6e927f0fdcb75d29f73187e0d424836bc306cabcd28cf400aa4267c24"
+    },
+    {
+      "path": "art/previews/content-current/phone-contact-2.png",
+      "sha256": "ad3ed24fa0e407da8deb6216b1210673bb7ad5a8647a5c4f1969f528d092fb74"
+    },
+    {
+      "path": "art/previews/content-current/phone-content-tasks-header.png",
+      "sha256": "42ede9496aeaa75420d82299407aaada4bdb5fb3b50ef7ab9f84e82544c26b6a"
+    },
+    {
+      "path": "art/previews/content-current/phone-content-tasks-row-09.png",
+      "sha256": "9fb4e3096750df0114511d60faba34e6c1ac48acd6630730d3e0c24705352fcf"
+    },
+    {
+      "path": "art/previews/content-current/phone-restart-main.png",
+      "sha256": "4d68ac84d3aa933943079ec093f6fa1914f6bbde7b5714bb1a57d7518c313669"
+    },
+    {
+      "path": "art/previews/content-current/tablet-contact-1.png",
+      "sha256": "5e3d30786722ab0a0e0a445c99c780fc523a484acc950bc13d33fe6261fc2330"
+    },
+    {
+      "path": "art/previews/content-current/tablet-contact-2.png",
+      "sha256": "f3f7b96675967965b3ad9e989ca192986ff3945959054fb8e3c1e608612f3c72"
+    },
+    {
+      "path": "art/previews/content-current/tablet-content-tasks-header.png",
+      "sha256": "530fb8ad5bda6340f1cacec6453f5c99640710c9ba25ec47293c43aa63f9799c"
+    },
+    {
+      "path": "art/previews/content-current/tablet-content-tasks-row-09.png",
+      "sha256": "c394db0a707a5661efa4e0c8e85b5ff34c1fd1bab8f89a01d256f6aa7502e11d"
+    },
+    {
+      "path": "art/previews/content-current/tablet-restart-main.png",
+      "sha256": "6298a004094d738a13f544096d39c4d6cbb52baacf4848b691c7a815f99c6e4f"
+    },
+    {
+      "path": "art/previews/content-current/phone-prototype-halibut.png",
+      "sha256": "2d0eaca9b131d364d1f385a68b3425aa857533a74d5692396c98f96437459f69"
+    }
+  ],
+  "historicalRecordAudit": "INCOMPLETE",
+  "personalPhoneUntouched": true,
+  "testflightUnchanged": true,
+  "pending": [
+    "Full realistic12-fish/observation/gear art; first-set user direction before batch production",
+    "Science and child play, actual icon comprehension",
+    "OS touch, physical iPhone/iPad20-minute performance and recovery",
+    "Actual TestFlight installation from current distributed build; this local increment is not uploaded"
+  ],
+  "incrementRecordAudit": {
+    "status": "RECEIPTS_VERIFIED_KNOWN_OVERLAP_EXCLUDED",
+    "historicalOverall": "INCOMPLETE",
+    "newCompleted": 16,
+    "newStarts": 16,
+    "oldObjectsUnchanged": true,
+    "receiptsAndBindingsVerified": true,
+    "allIntervalsDisjoint": false,
+    "eligibleIntervalsDisjoint": true,
+    "knownOverlapSeconds": 2.27,
+    "excludedReceipts": [
+      "measurements/content-current-tablet-proof-20261125.json",
+      "measurements/content-current-tablet-restart-20261125.json"
+    ],
+    "serialReplacementReceipts": [
+      "measurements/content-current-tablet-proof-b-20261125.json",
+      "measurements/content-current-tablet-restart-b-20261125.json"
+    ],
+    "onlyRunningSelfPending": false,
+    "failuresRetained": [],
+    "scope": "Own state/receipt integrity, not independent CLI compliance or product acceptance",
+    "selfReceiptVerified": true
+  },
+  "measurements": [
+    {
+      "id": "df2e157f-fc2b-474a-ac44-5043c36040a8",
+      "receipt": "measurements/content-current-saves-before-20261125.json",
+      "exitCode": 0,
+      "durationMs": 732.0002079999999
+    },
+    {
+      "id": "d0178d6e-e2af-44dd-b77a-3ec0c5c918fa",
+      "receipt": "measurements/content-current-phone-20261125.json",
+      "exitCode": 0,
+      "durationMs": 507620.37420799996
+    },
+    {
+      "id": "8a31d2d9-35a5-473c-859a-c701a1deee21",
+      "receipt": "measurements/content-current-phone-proof-20261125.json",
+      "exitCode": 0,
+      "durationMs": 2475.8957499999997
+    },
+    {
+      "id": "2269c26d-a261-4038-bc7f-49d209bc6b78",
+      "receipt": "measurements/content-current-phone-restart-20261125.json",
+      "exitCode": 0,
+      "durationMs": 13919.068083
+    },
+    {
+      "id": "1faff46f-6258-4960-960a-7f5f4cd3e73c",
+      "receipt": "measurements/content-current-phone-restart-proof-20261125.json",
+      "exitCode": 0,
+      "durationMs": 130.71616600000004
+    },
+    {
+      "id": "6a52715c-beb2-43d0-8de4-445d4dfabc76",
+      "receipt": "measurements/content-current-tablet-20261125.json",
+      "exitCode": 0,
+      "durationMs": 534156.394542
+    },
+    {
+      "id": "86527967-07d2-4001-be71-837edf6abed7",
+      "receipt": "measurements/content-current-tablet-proof-20261125.json",
+      "exitCode": 0,
+      "durationMs": 11502.89925
+    },
+    {
+      "id": "ae9149cc-86dd-4f4c-af3d-fd2e04ae40ac",
+      "receipt": "measurements/content-current-tablet-restart-20261125.json",
+      "exitCode": 0,
+      "durationMs": 21901.547708000002
+    },
+    {
+      "id": "0e171fe9-0f8c-494c-8bdb-920815af3e9a",
+      "receipt": "measurements/content-current-tablet-proof-b-20261125.json",
+      "exitCode": 0,
+      "durationMs": 8860.579458
+    },
+    {
+      "id": "17844f5a-ee77-4f37-be50-c0f187132b1e",
+      "receipt": "measurements/content-current-tablet-restart-b-20261125.json",
+      "exitCode": 0,
+      "durationMs": 27108.022375
+    },
+    {
+      "id": "56cf96c4-f34f-46e7-94ad-b94e0c7687b0",
+      "receipt": "measurements/content-current-tablet-restart-proof-20261125.json",
+      "exitCode": 0,
+      "durationMs": 141.22024999999985
+    },
+    {
+      "id": "856af426-192a-447a-a921-2819c5902f53",
+      "receipt": "measurements/content-current-saves-final-20261125.json",
+      "exitCode": 0,
+      "durationMs": 1985.179375
+    },
+    {
+      "id": "09560b4e-e0ff-421e-8181-2aadad4872e1",
+      "receipt": "measurements/content-current-public-validate-20261125.json",
+      "exitCode": 0,
+      "durationMs": 868.243833
+    },
+    {
+      "id": "726509e4-fcc2-4d4c-a8ed-4f9239da2d26",
+      "receipt": "measurements/content-current-public-audit-20261125.json",
+      "exitCode": 0,
+      "durationMs": 1157.558708
+    },
+    {
+      "id": "43311fbc-930d-400d-b254-89f0b807089d",
+      "receipt": "measurements/content-current-final-binding-20261125.json",
+      "exitCode": 0,
+      "durationMs": 1309.633542
+    },
+    {
+      "id": "75bb6ecb-48f3-4a05-8d8d-c206cb3aead6",
+      "receipt": "measurements/content-current-final-records-20261125.json",
+      "exitCode": 0,
+      "durationMs": 113.62916700000005
+    }
+  ]
+}

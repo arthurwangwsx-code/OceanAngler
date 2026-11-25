@@ -13,6 +13,7 @@ namespace OceanAngler.Editor
         [Serializable] sealed class ReleaseConfig { public string bundleId,appId,teamId,version,build,displayName; }
         public static void Prepare()
         {
+            AudioAssetBuilder.Prepare();
             const string folder = "Assets/OceanAngler/Generated";
             if (!AssetDatabase.IsValidFolder(folder)) AssetDatabase.CreateFolder("Assets/OceanAngler", "Generated");
             var pipeline = AssetDatabase.LoadAssetAtPath<UniversalRenderPipelineAsset>(folder + "/OceanURP.asset");
@@ -29,14 +30,20 @@ namespace OceanAngler.Editor
             GraphicsSettings.defaultRenderPipeline = pipeline;
             QualitySettings.renderPipeline = pipeline;
             pipeline.msaaSampleCount=4;EditorUtility.SetDirty(pipeline);
+            AlignMsaaProfiles();
+            var waterRenderer=AssetDatabase.LoadAssetAtPath<UniversalRendererData>(folder+"/OceanRenderer.asset");waterRenderer.copyDepthMode=CopyDepthMode.AfterOpaques;EditorUtility.SetDirty(waterRenderer);
+            ApplyRenderQuality();
             EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Single);
             RenderSettings.ambientLight = new Color(0.35f, 0.55f, 0.65f);
+            // Keep the runtime EXP2 fog variant in scene-based shader stripping.
+            RenderSettings.fog=true;RenderSettings.fogMode=FogMode.ExponentialSquared;RenderSettings.fogDensity=.035f;RenderSettings.fogColor=new Color(.075f,.42f,.49f);
             var camera = new GameObject("Camera").AddComponent<Camera>();
             camera.tag = "MainCamera"; camera.transform.position = new Vector3(0, 3, -7);
             camera.transform.LookAt(new Vector3(0, 0, 2));
             camera.backgroundColor = new Color(0.1f, 0.45f, 0.65f); camera.clearFlags = CameraClearFlags.SolidColor;
             camera.gameObject.AddComponent<AudioListener>();
             var light = new GameObject("Sun").AddComponent<Light>(); light.type = LightType.Directional; light.intensity = 1.3f;
+            light.shadows=LightShadows.Soft;light.shadowStrength=.7f;
             light.transform.rotation = Quaternion.Euler(45, -30, 0);
             var root = new GameObject("OceanGame");
             root.AddComponent<GameController>();
@@ -71,14 +78,33 @@ namespace OceanAngler.Editor
             mat.color = color; EditorUtility.SetDirty(mat);
             obj.GetComponent<Renderer>().sharedMaterial = mat;
         }
+        // The iOS default quality profile can differ from the current Editor
+        // profile. Set its native backbuffer sample count before the first URP
+        // frame instead of relying on the pipeline constructor to resize it.
+        public static void AlignMsaaProfiles()
+        {
+            var pipeline=AssetDatabase.LoadAssetAtPath<UniversalRenderPipelineAsset>("Assets/OceanAngler/Generated/OceanURP.asset");
+            if(pipeline==null)throw new InvalidOperationException("Prepare the render pipeline before aligning quality profiles");
+            int prior=QualitySettings.GetQualityLevel();
+            try{for(int i=0;i<QualitySettings.names.Length;i++){QualitySettings.SetQualityLevel(i,false);QualitySettings.antiAliasing=pipeline.msaaSampleCount;}}
+            finally{QualitySettings.SetQualityLevel(prior,false);}
+            AssetDatabase.SaveAssets();
+        }
         public static void ApplyRenderQuality()
         {
             var pipeline=AssetDatabase.LoadAssetAtPath<UniversalRenderPipelineAsset>("Assets/OceanAngler/Generated/OceanURP.asset");
             if(pipeline==null)throw new InvalidOperationException("Missing canonical URP asset");
-            pipeline.msaaSampleCount=4;EditorUtility.SetDirty(pipeline);
+            pipeline.msaaSampleCount=4;pipeline.shadowDistance=24;pipeline.mainLightShadowmapResolution=1024;
+            pipeline.shadowDepthBias=2;pipeline.shadowNormalBias=0;
+            // URP 17 exposes these setters only internally. Use its actual
+            // serialized Editor fields, rather than modifying package sources.
+            var serialized=new SerializedObject(pipeline);var soft=serialized.FindProperty("m_SoftShadowsSupported");var quality=serialized.FindProperty("m_SoftShadowQuality");
+            if(soft==null||quality==null)throw new InvalidOperationException("URP soft-shadow fields changed");
+            soft.boolValue=true;quality.intValue=(int)SoftShadowQuality.Low;serialized.ApplyModifiedPropertiesWithoutUndo();EditorUtility.SetDirty(pipeline);
         }
         public static void ExportMac()
         {
+            AudioAssetBuilder.Validate();
             var output = Environment.GetEnvironmentVariable("OCEAN_MAC_OUTPUT");
             if (string.IsNullOrEmpty(output)) throw new Exception("Mac output required");
             var result = BuildPipeline.BuildPlayer(EditorBuildSettings.scenes.Select(x => x.path).ToArray(), output, BuildTarget.StandaloneOSX, BuildOptions.Development);
@@ -86,6 +112,7 @@ namespace OceanAngler.Editor
         }
         public static void ExportIOS()
         {
+            AudioAssetBuilder.Validate();
             var number = Environment.GetEnvironmentVariable("OCEAN_BUILD_NUMBER");
             if (!int.TryParse(number, out int n) || n < 1) throw new Exception("Positive build number required");
             if(PlayerSettings.iOS.buildNumber!=number)throw new Exception("Build number must match committed release configuration; run prepare first");
@@ -93,6 +120,26 @@ namespace OceanAngler.Editor
             if (string.IsNullOrEmpty(output) || System.IO.Directory.Exists(output)) throw new Exception("A new export path is required");
             var result = BuildPipeline.BuildPlayer(EditorBuildSettings.scenes.Select(x => x.path).ToArray(), output, BuildTarget.iOS, BuildOptions.None);
             if (result.summary.result != BuildResult.Succeeded) throw new Exception("iOS export failed");
+        }
+        public static void ExportIOSSimulator()
+        {
+            AudioAssetBuilder.Validate();
+            var output=Environment.GetEnvironmentVariable("OCEAN_SIMULATOR_OUTPUT");
+            bool append=Environment.GetEnvironmentVariable("OCEAN_SIMULATOR_APPEND")=="1";
+            if(string.IsNullOrEmpty(output)||System.IO.Directory.Exists(output)!=append)throw new Exception("Explicit new or retained append simulator export required");
+            if(append&&!System.IO.File.Exists(System.IO.Path.Combine(output,"Unity-iPhone.xcodeproj/project.pbxproj")))throw new Exception("Existing Xcode project required");
+            var sdk=PlayerSettings.iOS.sdkVersion;var architecture=PlayerSettings.iOS.simulatorSdkArchitecture;
+            try
+            {
+                PlayerSettings.iOS.sdkVersion=iOSSdkVersion.SimulatorSDK;
+                PlayerSettings.iOS.simulatorSdkArchitecture=AppleMobileArchitectureSimulator.ARM64;
+                var result=BuildPipeline.BuildPlayer(EditorBuildSettings.scenes.Select(x=>x.path).ToArray(),output,BuildTarget.iOS,BuildOptions.Development|(append?BuildOptions.AcceptExternalModificationsToPlayer:BuildOptions.None));
+                if(result.summary.result!=BuildResult.Succeeded)throw new Exception("iOS simulator export failed");
+            }
+            finally
+            {
+                PlayerSettings.iOS.sdkVersion=sdk;PlayerSettings.iOS.simulatorSdkArchitecture=architecture;AssetDatabase.SaveAssets();
+            }
         }
     }
 }

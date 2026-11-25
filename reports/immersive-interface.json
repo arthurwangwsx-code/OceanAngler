@@ -1,0 +1,386 @@
+{
+  "status": "IMPLEMENTED_SIMULATOR_PASS_USER_NOT_RUN",
+  "source": {
+    "sourceCommit": "df6b58057e24deff6c1e0c67890a0fbcc970a32d",
+    "sourceDigest": "ad8430900a33dd8c36d52b517b1908ef6fd84c2760f172cc66c0249a35c869d3",
+    "projectSettingsSha256": "487dd5cc37a763cb9f23702f91a10b6680094d7b2165050d05327b1376c0d54d"
+  },
+  "appDigest": "ed43d5677b80527912f95c5c0809a7c7c16bf54ae983fe5e793bfbba0d9fe6b3",
+  "distribution": "LOCAL_SIMULATOR_ONLY_NOT_TESTFLIGHT",
+  "version": "0.1.0",
+  "bundleBuild": "5",
+  "native": [
+    {
+      "status": "PASS",
+      "label": "immersive20261124phone2",
+      "scope": "native15-frame focused immersive navigation from genuine copy;1 new settled fish and1 unfinished exit; not full progression or OS touch",
+      "source": {
+        "sourceCommit": "df6b58057e24deff6c1e0c67890a0fbcc970a32d",
+        "sourceDigest": "ad8430900a33dd8c36d52b517b1908ef6fd84c2760f172cc66c0249a35c869d3",
+        "projectSettingsSha256": "487dd5cc37a763cb9f23702f91a10b6680094d7b2165050d05327b1376c0d54d"
+      },
+      "appDigest": "ed43d5677b80527912f95c5c0809a7c7c16bf54ae983fe5e793bfbba0d9fe6b3",
+      "input": {
+        "sourceLabel": "content20261124phone1",
+        "sourceCommit": "0bea41d0df348c0256a33dfbd8701119ff2b1e63",
+        "sourceAppDigest": "a671481c855c163b0a508b275fdcb6d164b03a55ab7ae903df18154618f5e829",
+        "saveSha256": "e0732947026735bab64f2f84354b984788df2a4a7d759a8fbf752e83e14ef339",
+        "sourceCatches": 25,
+        "sourcePoints": 4455,
+        "method": "byte-identical copy of real native UI journey save into new isolated root; no generated records or points"
+      },
+      "originalBytesUnchanged": true,
+      "originalCatchRecordsUnchanged": true,
+      "otherFieldsAndSettingsUnchanged": true,
+      "catchesBefore": 25,
+      "catchesAfter": 26,
+      "pointsBefore": 4455,
+      "pointsAfter": 4661,
+      "newFishId": "skipjack",
+      "maxHudRatio": 0.12034111469984055,
+      "samples": [
+        {
+          "phase": "Ready",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0890224352478981
+        },
+        {
+          "phase": "Waiting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0890224352478981
+        },
+        {
+          "phase": "Bite",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0890224352478981
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.12034111469984055
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.12034111469984055
+        },
+        {
+          "phase": "Ready",
+          "leftHanded": true,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0890224352478981
+        },
+        {
+          "phase": "Waiting",
+          "leftHanded": true,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0890224352478981
+        },
+        {
+          "phase": "Bite",
+          "leftHanded": true,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0890224352478981
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": true,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.12034111469984055
+        }
+      ],
+      "capturedFrames": 15,
+      "checks": [
+        "immersive-isolated-save-root",
+        "immersive-ready-valid-save",
+        "visible-hit-target:继续探索",
+        "visible-hit-target:暂停",
+        "visible-hit-target:设置",
+        "visible-hit-target:出海",
+        "visible-hit-target:返回首页",
+        "visible-hit-target:海域与装备",
+        "immersive-separate-preparation",
+        "immersive-departure-visible-without-scrolling",
+        "immersive-departure-inside-safe-area",
+        "visible-hit-target:开始钓鱼",
+        "immersive-active-play",
+        "immersive-only-pause-and-current-action",
+        "immersive-no-global-chrome-or-panels",
+        "immersive-hud-under-15-percent-and-central-view-clear-Ready",
+        "immersive-meters-only-while-fighting",
+        "visible-hit-target:按住蓄力 · 松手抛竿",
+        "immersive-menu-cancels-cast-charge",
+        "immersive-hud-under-15-percent-and-central-view-clear-Waiting",
+        "immersive-normal-bite",
+        "immersive-hud-under-15-percent-and-central-view-clear-Bite",
+        "visible-hit-target:提竿",
+        "immersive-hud-under-15-percent-and-central-view-clear-Fighting",
+        "visible-hit-target:按住收线",
+        "immersive-pause-releases-held-reel",
+        "immersive-pause-freezes-current-fish",
+        "immersive-settings-retain-catch",
+        "visible-hit-target:上一级",
+        "immersive-back-does-not-resume",
+        "visible-hit-target:结束本次 · 返回准备",
+        "visible-hit-target:取消，继续留在这里",
+        "immersive-exit-cancel-keeps-current-fish",
+        "immersive-focus-loss-cancels-input",
+        "immersive-focus-return-awaits-continue",
+        "immersive-real-fish-landed",
+        "visible-hit-target:记录并放流",
+        "immersive-one-real-record",
+        "visible-hit-target:左手操作    已关闭",
+        "visible-hit-target:确认结束并返回准备",
+        "immersive-confirm-exit-to-preparation",
+        "immersive-unrecorded-exit-preserves-existing-disk-ledger",
+        "visible-hit-target:左手操作    已开启",
+        "immersive-restored-settings-real-disk-ledger"
+      ],
+      "afterCopySha256": "534d51254818bbeb14ed3c9ba9907ad44a1f2b0f5257ef663f334401a64056ed"
+    },
+    {
+      "status": "PASS",
+      "label": "immersive20261124pad2",
+      "scope": "native15-frame focused immersive navigation from genuine copy;1 new settled fish and1 unfinished exit; not full progression or OS touch",
+      "source": {
+        "sourceCommit": "df6b58057e24deff6c1e0c67890a0fbcc970a32d",
+        "sourceDigest": "ad8430900a33dd8c36d52b517b1908ef6fd84c2760f172cc66c0249a35c869d3",
+        "projectSettingsSha256": "487dd5cc37a763cb9f23702f91a10b6680094d7b2165050d05327b1376c0d54d"
+      },
+      "appDigest": "ed43d5677b80527912f95c5c0809a7c7c16bf54ae983fe5e793bfbba0d9fe6b3",
+      "input": {
+        "sourceLabel": "content20261124pad1",
+        "sourceCommit": "0bea41d0df348c0256a33dfbd8701119ff2b1e63",
+        "sourceAppDigest": "a671481c855c163b0a508b275fdcb6d164b03a55ab7ae903df18154618f5e829",
+        "saveSha256": "4478f13dfe86006428506b1200d0557d845040120946d158f493bb5fc9b6325f",
+        "sourceCatches": 20,
+        "sourcePoints": 3703,
+        "method": "byte-identical copy of real native UI journey save into new isolated root; no generated records or points"
+      },
+      "originalBytesUnchanged": true,
+      "originalCatchRecordsUnchanged": true,
+      "otherFieldsAndSettingsUnchanged": true,
+      "catchesBefore": 20,
+      "catchesAfter": 21,
+      "pointsBefore": 3703,
+      "pointsAfter": 3798,
+      "newFishId": "skipjack",
+      "maxHudRatio": 0.04454661160707474,
+      "samples": [
+        {
+          "phase": "Ready",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.03295338898897171
+        },
+        {
+          "phase": "Waiting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.03295338898897171
+        },
+        {
+          "phase": "Bite",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.03295338898897171
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.04454661160707474
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.04454661160707474
+        },
+        {
+          "phase": "Ready",
+          "leftHanded": true,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.03295338898897171
+        },
+        {
+          "phase": "Waiting",
+          "leftHanded": true,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.03295338898897171
+        },
+        {
+          "phase": "Bite",
+          "leftHanded": true,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.03295338898897171
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": true,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.04454661160707474
+        }
+      ],
+      "capturedFrames": 15,
+      "checks": [
+        "immersive-isolated-save-root",
+        "immersive-ready-valid-save",
+        "visible-hit-target:继续探索",
+        "visible-hit-target:暂停",
+        "visible-hit-target:设置",
+        "visible-hit-target:出海",
+        "visible-hit-target:返回首页",
+        "visible-hit-target:海域与装备",
+        "immersive-separate-preparation",
+        "immersive-departure-visible-without-scrolling",
+        "immersive-departure-inside-safe-area",
+        "visible-hit-target:开始钓鱼",
+        "immersive-active-play",
+        "immersive-only-pause-and-current-action",
+        "immersive-no-global-chrome-or-panels",
+        "immersive-hud-under-15-percent-and-central-view-clear-Ready",
+        "immersive-meters-only-while-fighting",
+        "visible-hit-target:按住蓄力 · 松手抛竿",
+        "immersive-menu-cancels-cast-charge",
+        "immersive-hud-under-15-percent-and-central-view-clear-Waiting",
+        "immersive-normal-bite",
+        "immersive-hud-under-15-percent-and-central-view-clear-Bite",
+        "visible-hit-target:提竿",
+        "immersive-hud-under-15-percent-and-central-view-clear-Fighting",
+        "visible-hit-target:按住收线",
+        "immersive-pause-releases-held-reel",
+        "immersive-pause-freezes-current-fish",
+        "immersive-settings-retain-catch",
+        "visible-hit-target:上一级",
+        "immersive-back-does-not-resume",
+        "visible-hit-target:结束本次 · 返回准备",
+        "visible-hit-target:取消，继续留在这里",
+        "immersive-exit-cancel-keeps-current-fish",
+        "immersive-focus-loss-cancels-input",
+        "immersive-focus-return-awaits-continue",
+        "immersive-real-fish-landed",
+        "visible-hit-target:记录并放流",
+        "immersive-one-real-record",
+        "visible-hit-target:左手操作    已关闭",
+        "visible-hit-target:确认结束并返回准备",
+        "immersive-confirm-exit-to-preparation",
+        "immersive-unrecorded-exit-preserves-existing-disk-ledger",
+        "visible-hit-target:左手操作    已开启",
+        "immersive-restored-settings-real-disk-ledger"
+      ],
+      "afterCopySha256": "9582c3b38e8dba9b7218fe2899ad007be00d3aec661ea4f4f80724d700b93497"
+    }
+  ],
+  "tests": {
+    "initialUI": {
+      "source": "5184472",
+      "editor": 52,
+      "focusedPlayMode": 6,
+      "scope": "before source freeze; last edit only routed two legacy Smoke entry navigations through the already-tested waited JourneyClick; current immersive review unchanged"
+    },
+    "finalDepartureFix": {
+      "source": "df6b580",
+      "focusedPlayMode": 4,
+      "editorNotRerun": true
+    },
+    "font": {
+      "characters": 722,
+      "license": "OFL-1.1"
+    }
+  },
+  "retention": {
+    "status": "PASS",
+    "originalFilesByteIdentical": 5
+  },
+  "reopening": {
+    "status": "AGENT_VISUAL_PASS_FILE_BYTES_UNCHANGED",
+    "fileBytesUnchanged": true,
+    "catches": 26,
+    "points": 4661,
+    "sha256": "78338ed53b55f1527dfa6c234230f9c07d2225d5347aa463d5d8f532f79544e8",
+    "note": "New process; initial5-second frame was Unity splash, retained separately. This later own-Simulator frame needs human inspection.",
+    "visualReview": "AGENT_REVIEWED_HOME_POINTS_MATCH_4661",
+    "coldStartupQualification": "NOT_RUN",
+    "captureStatus": "CAPTURED_REQUIRES_VISUAL_REVIEW"
+  },
+  "images": {
+    "initialContactFrames": 30,
+    "finalContactFrames": 30,
+    "contacts": 4,
+    "initialOriginalsViewed": 4,
+    "finalOriginalsViewed": 9,
+    "reopeningOriginalsViewed": 2,
+    "publicOriginals": 8
+  },
+  "failuresRetained": [
+    {
+      "measurement": "ea8a83df-bdd2-4783-9567-7328b911047a",
+      "exitCode": 2,
+      "reason": "new menu graphics clicked before canvas frame"
+    },
+    {
+      "measurement": "bef6d96d-966e-4cab-96cd-5ecfac5144cf",
+      "exitCode": 2,
+      "reason": "actual text clipping"
+    },
+    {
+      "measurement": "eb74c427-c985-408a-8913-104b2d0ef3e4",
+      "exitCode": 2,
+      "reason": "departure inside scrolling content"
+    }
+  ],
+  "firstNative": {
+    "source": "5184472",
+    "appDigest": "c31043417f0f63b9e8d861ab8249e8d3a9bed63e5f58e5b9d2bae6c7b0bc2d31",
+    "functional": "PASS",
+    "phonePrimaryDepartureDiscovery": "PARTIAL_REPAIRED_IN_FINAL",
+    "frames": 30
+  },
+  "osTouch": "NOT_RUN_CURRENT_UI",
+  "physicalDevice": "NOT_RUN",
+  "testFlight": "UNCHANGED_THIS_INCREMENT",
+  "wholeProduct": "PARTIAL",
+  "historicalMeasurementAudit": "INCOMPLETE",
+  "measurementBindingAudit": {
+    "status": "NEW_SERIAL_RECORDS_PASS",
+    "historicalOverall": "INCOMPLETE",
+    "committedRecordsPreserved": 761,
+    "newCompletedBeforeAudit": 51,
+    "newFailureExitCodes": {
+      "138f90f1-2d54-40d3-9467-46e2af082e19": 2,
+      "ea8a83df-bdd2-4783-9567-7328b911047a": 2,
+      "bef6d96d-966e-4cab-96cd-5ecfac5144cf": 2,
+      "eb74c427-c985-408a-8913-104b2d0ef3e4": 2
+    },
+    "note": "Historical missing starts/output-only gaps unchanged; no records fabricated",
+    "auditCompletionVerified": true,
+    "newCompletedIncludingAudit": 52,
+    "actualIntervalsDisjoint": true,
+    "scope": "state-journal start/completion/binding only; not independent CLI receipt compliance"
+  },
+  "independentMeasurementAudit": "INCOMPLETE"
+}

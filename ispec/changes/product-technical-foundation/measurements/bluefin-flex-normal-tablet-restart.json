@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "7d031f3b-8589-4fe5-b4cb-489c50e21587",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "f088f135540c0ab736b77e4ed836166605c87c2d64aa52397f48d1cdd543e1e9",
+    "category": "e2e",
+    "executable": "python3",
+    "startedAt": "2026-11-25T16:09:09.129Z",
+    "finishedAt": "2026-11-25T16:09:25.407Z",
+    "durationMs": 16248.448500000002,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "args": [
+      "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b/.local/bluefin-flex-qa/content-run-native.py",
+      "capture",
+      "normalflextablet20261125arestart",
+      "--device",
+      "tablet",
+      "--save-from",
+      "normalflextablet20261125a"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b/.local/bluefin-flex-qa/content-run-native.py",
+    "capture",
+    "normalflextablet20261125arestart",
+    "--device",
+    "tablet",
+    "--save-from",
+    "normalflextablet20261125a"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T16:09:09.129Z",
+  "finishedAt": "2026-11-25T16:09:25.407Z",
+  "durationMs": 16248.448500000002
+}

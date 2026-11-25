@@ -1,0 +1,2303 @@
+{
+  "status": "PARTIAL",
+  "implementation": "IN_PROGRESS",
+  "wholeProduct": "INCOMPLETE",
+  "sourceStatus": "ENGINEERING_CHECKS_PASS",
+  "beforeWinding": {
+    "status": "FAIL",
+    "scope": "actual saved triangle radial envelope and8008BVH rays perLOD; conservative diagnostic clearances, not CAD tolerances or human art acceptance",
+    "checks": [
+      "\u4fdd\u7559\u65e2\u6709\u4e09\u6863\u9762\u9884\u7b97 0",
+      "\u5b9e\u9645\u7ebf\u6750\u4e0e\u7ebf\u676f\u7f51\u683c\u5b58\u5728 0",
+      "\u771f\u5b9e\u7ed5\u7ebf\u4e09\u89d2\u9762\u4e0e\u7ebf\u676f\u81f3\u5c1110\u5fae\u7c73\u8bca\u65ad\u95f4\u9699 0",
+      "\u516b\u7ecf\u7ebf\u5b9e\u9645\u53ef\u8fa825\u5708\u53ca\u7aef\u70b9 0",
+      "\u4fdd\u7559\u65e2\u6709\u4e09\u6863\u9762\u9884\u7b97 1",
+      "\u5b9e\u9645\u7ebf\u6750\u4e0e\u7ebf\u676f\u7f51\u683c\u5b58\u5728 1",
+      "\u516b\u7ecf\u7ebf\u5b9e\u9645\u53ef\u8fa825\u5708\u53ca\u7aef\u70b9 1",
+      "\u4fdd\u7559\u65e2\u6709\u4e09\u6863\u9762\u9884\u7b97 2",
+      "\u5b9e\u9645\u7ebf\u6750\u4e0e\u7ebf\u676f\u7f51\u683c\u5b58\u5728 2"
+    ],
+    "failures": [
+      "\u771f\u5b9e\u7ed5\u7ebf\u4e09\u89d2\u9762\u4e0e\u7ebf\u676f\u81f3\u5c1110\u5fae\u7c73\u8bca\u65ad\u95f4\u9699 1",
+      "\u771f\u5b9e\u7ed5\u7ebf\u4e09\u89d2\u9762\u4e0e\u7ebf\u676f\u81f3\u5c1110\u5fae\u7c73\u8bca\u65ad\u95f4\u9699 2",
+      "\u516b\u7ecf\u7ebf\u5b9e\u9645\u53ef\u8fa825\u5708\u53ca\u7aef\u70b9 2"
+    ],
+    "triangles": [
+      43412,
+      19090,
+      8368
+    ],
+    "budgets": [
+      43420,
+      19533,
+      8678
+    ],
+    "samples": [
+      {
+        "lod": 0,
+        "materialTriangles": {
+          "Rig_Metal": 572,
+          "Rig_Line": 7208,
+          "Rig_Black": 252,
+          "Rig_Accent": 576
+        },
+        "minimumLineRadius": 0.03102988534599515,
+        "maximumLineRadius": 0.03240001201629639,
+        "maximumClippedBarrelRadius": 0.031000007999037564,
+        "minimumRadialClearance": 2.987734695758526e-05,
+        "meridianRidges": [
+          26,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25
+        ]
+      },
+      {
+        "lod": 1,
+        "materialTriangles": {
+          "Rig_Metal": 244,
+          "Rig_Line": 3098,
+          "Rig_Black": 108,
+          "Rig_Accent": 246
+        },
+        "minimumLineRadius": 0.030485266030300936,
+        "maximumLineRadius": 0.032361301646927076,
+        "maximumClippedBarrelRadius": 0.031168872735926233,
+        "minimumRadialClearance": -0.0006836067056252976,
+        "meridianRidges": [
+          26,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25
+        ]
+      },
+      {
+        "lod": 2,
+        "materialTriangles": {
+          "Rig_Metal": 96,
+          "Rig_Line": 1838,
+          "Rig_Black": 42,
+          "Rig_Accent": 96
+        },
+        "minimumLineRadius": 0.02977912549373341,
+        "maximumLineRadius": 0.03255546357932563,
+        "maximumClippedBarrelRadius": 0.03247284782554944,
+        "minimumRadialClearance": -0.002693722331816032,
+        "meridianRidges": [
+          24,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25
+        ]
+      }
+    ]
+  },
+  "winding": {
+    "status": "ENGINEERING_CHECKS_PASS",
+    "scope": "actual saved triangle radial envelope and8008BVH rays perLOD; conservative diagnostic clearances, not CAD tolerances or human art acceptance",
+    "checks": [
+      "\u4fdd\u7559\u65e2\u6709\u4e09\u6863\u9762\u9884\u7b97 0",
+      "\u5b9e\u9645\u7ebf\u6750\u4e0e\u7ebf\u676f\u7f51\u683c\u5b58\u5728 0",
+      "\u771f\u5b9e\u7ed5\u7ebf\u4e09\u89d2\u9762\u4e0e\u7ebf\u676f\u81f3\u5c1110\u5fae\u7c73\u8bca\u65ad\u95f4\u9699 0",
+      "\u516b\u7ecf\u7ebf\u5b9e\u9645\u53ef\u8fa825\u5708\u53ca\u7aef\u70b9 0",
+      "\u4fdd\u7559\u65e2\u6709\u4e09\u6863\u9762\u9884\u7b97 1",
+      "\u5b9e\u9645\u7ebf\u6750\u4e0e\u7ebf\u676f\u7f51\u683c\u5b58\u5728 1",
+      "\u771f\u5b9e\u7ed5\u7ebf\u4e09\u89d2\u9762\u4e0e\u7ebf\u676f\u81f3\u5c1110\u5fae\u7c73\u8bca\u65ad\u95f4\u9699 1",
+      "\u516b\u7ecf\u7ebf\u5b9e\u9645\u53ef\u8fa825\u5708\u53ca\u7aef\u70b9 1",
+      "\u4fdd\u7559\u65e2\u6709\u4e09\u6863\u9762\u9884\u7b97 2",
+      "\u5b9e\u9645\u7ebf\u6750\u4e0e\u7ebf\u676f\u7f51\u683c\u5b58\u5728 2",
+      "\u771f\u5b9e\u7ed5\u7ebf\u4e09\u89d2\u9762\u4e0e\u7ebf\u676f\u81f3\u5c1110\u5fae\u7c73\u8bca\u65ad\u95f4\u9699 2",
+      "\u516b\u7ecf\u7ebf\u5b9e\u9645\u53ef\u8fa825\u5708\u53ca\u7aef\u70b9 2"
+    ],
+    "failures": [],
+    "triangles": [
+      43412,
+      19056,
+      8556
+    ],
+    "budgets": [
+      43420,
+      19533,
+      8678
+    ],
+    "samples": [
+      {
+        "lod": 0,
+        "materialTriangles": {
+          "Rig_Metal": 572,
+          "Rig_Line": 7208,
+          "Rig_Black": 252,
+          "Rig_Accent": 576
+        },
+        "minimumLineRadius": 0.03102988534599515,
+        "maximumLineRadius": 0.03240001201629639,
+        "maximumClippedBarrelRadius": 0.031000007999037564,
+        "minimumRadialClearance": 2.987734695758526e-05,
+        "meridianRidges": [
+          26,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25
+        ]
+      },
+      {
+        "lod": 1,
+        "materialTriangles": {
+          "Rig_Metal": 284,
+          "Rig_Line": 3002,
+          "Rig_Black": 108,
+          "Rig_Accent": 246
+        },
+        "minimumLineRadius": 0.031184333825582503,
+        "maximumLineRadius": 0.03240001201629639,
+        "maximumClippedBarrelRadius": 0.031000007457010256,
+        "minimumRadialClearance": 0.00018432636857224766,
+        "meridianRidges": [
+          26,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25
+        ]
+      },
+      {
+        "lod": 2,
+        "materialTriangles": {
+          "Rig_Metal": 140,
+          "Rig_Line": 1952,
+          "Rig_Black": 42,
+          "Rig_Accent": 96
+        },
+        "minimumLineRadius": 0.031187158222466264,
+        "maximumLineRadius": 0.03295000703448806,
+        "maximumClippedBarrelRadius": 0.031000007457010256,
+        "minimumRadialClearance": 0.00018715076545600812,
+        "meridianRidges": [
+          26,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25
+        ]
+      }
+    ]
+  },
+  "windingOnlyLod0Invariants": {
+    "status": "GEOMETRY_INVARIANTS_PASS_WITH_UV_DIFFERENCES",
+    "scope": "actual oriented polygon geometry, positions/weights/world matrices and sharp flags unchanged; all raw UV differences retained; not full buffer/UV identity or human art acceptance",
+    "geometryDifferences": [],
+    "otherDifferences": [],
+    "uvDifferences": [
+      {
+        "part": "Housing_LOD0",
+        "material": "Rig_Metal",
+        "maxComponentDelta": 5.960464477539063e-08,
+        "shaderNodeTypes": [
+          "BSDF_PRINCIPLED",
+          "OUTPUT_MATERIAL"
+        ],
+        "constantShader": true
+      },
+      {
+        "part": "Housing_LOD0",
+        "material": "Rig_Metal",
+        "maxComponentDelta": 5.960464477539063e-08,
+        "shaderNodeTypes": [
+          "BSDF_PRINCIPLED",
+          "OUTPUT_MATERIAL"
+        ],
+        "constantShader": true
+      },
+      {
+        "part": "Housing_LOD0",
+        "material": "Rig_Metal",
+        "maxComponentDelta": 5.960464477539063e-08,
+        "shaderNodeTypes": [
+          "BSDF_PRINCIPLED",
+          "OUTPUT_MATERIAL"
+        ],
+        "constantShader": true
+      },
+      {
+        "part": "Housing_LOD0",
+        "material": "Rig_Metal",
+        "maxComponentDelta": 5.960464477539063e-08,
+        "shaderNodeTypes": [
+          "BSDF_PRINCIPLED",
+          "OUTPUT_MATERIAL"
+        ],
+        "constantShader": true
+      },
+      {
+        "part": "Housing_LOD0",
+        "material": "Rig_Black",
+        "maxComponentDelta": 5.960464477539063e-08,
+        "shaderNodeTypes": [
+          "BSDF_PRINCIPLED",
+          "OUTPUT_MATERIAL"
+        ],
+        "constantShader": true
+      },
+      {
+        "part": "Housing_LOD0",
+        "material": "Rig_Black",
+        "maxComponentDelta": 5.960464477539063e-08,
+        "shaderNodeTypes": [
+          "BSDF_PRINCIPLED",
+          "OUTPUT_MATERIAL"
+        ],
+        "constantShader": true
+      },
+      {
+        "part": "Housing_LOD0",
+        "material": "Rig_Black",
+        "maxComponentDelta": 5.960464477539063e-08,
+        "shaderNodeTypes": [
+          "BSDF_PRINCIPLED",
+          "OUTPUT_MATERIAL"
+        ],
+        "constantShader": true
+      },
+      {
+        "part": "Housing_LOD0",
+        "material": "Rig_Black",
+        "maxComponentDelta": 5.960464477539063e-08,
+        "shaderNodeTypes": [
+          "BSDF_PRINCIPLED",
+          "OUTPUT_MATERIAL"
+        ],
+        "constantShader": true
+      },
+      {
+        "part": "Housing_LOD0",
+        "material": "Rig_Black",
+        "maxComponentDelta": 5.960464477539063e-08,
+        "shaderNodeTypes": [
+          "BSDF_PRINCIPLED",
+          "OUTPUT_MATERIAL"
+        ],
+        "constantShader": true
+      },
+      {
+        "part": "Housing_LOD0",
+        "material": "Rig_Black",
+        "maxComponentDelta": 5.960464477539063e-08,
+        "shaderNodeTypes": [
+          "BSDF_PRINCIPLED",
+          "OUTPUT_MATERIAL"
+        ],
+        "constantShader": true
+      },
+      {
+        "part": "Housing_LOD0",
+        "material": "Rig_Black",
+        "maxComponentDelta": 5.960464477539063e-08,
+        "shaderNodeTypes": [
+          "BSDF_PRINCIPLED",
+          "OUTPUT_MATERIAL"
+        ],
+        "constantShader": true
+      },
+      {
+        "part": "Housing_LOD0",
+        "material": "Rig_Black",
+        "maxComponentDelta": 5.960464477539063e-08,
+        "shaderNodeTypes": [
+          "BSDF_PRINCIPLED",
+          "OUTPUT_MATERIAL"
+        ],
+        "constantShader": true
+      }
+    ]
+  },
+  "strictFullIdentityTests": {
+    "first": "FAIL_RAW_BUFFER_ORDER",
+    "second": "FAIL_HOUSING_UV_TAIL_DIFFERENCES",
+    "preserved": true
+  },
+  "play": {
+    "status": "PASS",
+    "passed": 13,
+    "failed": 0,
+    "scope": "13selected headlessPlayMode tests including16-frame QA flow; not rendered or full-suite qualification"
+  },
+  "gpu": {
+    "status": "PASS",
+    "scope": "isolated imported rig Metal HDR/manual presentation; not Player UI or device qualification",
+    "graphics": "Metal",
+    "target": "R16G16B16A16_SFloat",
+    "quality": "Medium",
+    "width": 1440,
+    "height": 1000,
+    "samples": 4,
+    "images": 31,
+    "shots": [
+      {
+        "name": "lod0-rest",
+        "changedPixels": 0
+      },
+      {
+        "name": "lod0-winding-a",
+        "changedPixels": 0
+      },
+      {
+        "name": "lod0-winding-b",
+        "changedPixels": 0
+      },
+      {
+        "name": "lod0-open-bail",
+        "changedPixels": 0
+      },
+      {
+        "name": "production-reverse",
+        "changedPixels": 0
+      },
+      {
+        "name": "production-roller",
+        "changedPixels": 0
+      },
+      {
+        "name": "production-whole",
+        "changedPixels": 0
+      },
+      {
+        "name": "lod1-rest",
+        "changedPixels": 0
+      },
+      {
+        "name": "lod1-winding-a",
+        "changedPixels": 0
+      },
+      {
+        "name": "lod1-winding-b",
+        "changedPixels": 0
+      },
+      {
+        "name": "lod1-open-bail",
+        "changedPixels": 0
+      },
+      {
+        "name": "lod2-rest",
+        "changedPixels": 0
+      },
+      {
+        "name": "lod2-winding-a",
+        "changedPixels": 0
+      },
+      {
+        "name": "lod2-winding-b",
+        "changedPixels": 0
+      },
+      {
+        "name": "lod2-open-bail",
+        "changedPixels": 0
+      }
+    ]
+  },
+  "settingsRestoration": {
+    "before": {
+      "game/ProjectSettings/QualitySettings.asset": "abebac834787e63425b147d6e02589440cd5134d66fafbd862fb5d237424c573",
+      "game/ProjectSettings/GraphicsSettings.asset": "012fa87054bf6e9fbb0607568cfa287968396f9d3a27d3376432024e8684340d"
+    },
+    "after": {
+      "game/ProjectSettings/QualitySettings.asset": "abebac834787e63425b147d6e02589440cd5134d66fafbd862fb5d237424c573",
+      "game/ProjectSettings/GraphicsSettings.asset": "012fa87054bf6e9fbb0607568cfa287968396f9d3a27d3376432024e8684340d"
+    },
+    "identical": true
+  },
+  "turntable": {
+    "status": "PASS",
+    "scope": "two actual36-frame source orbits, full rig8 assemblies and reel6 assemblies; fixed per-orbit camera scale and required bounding boxes inside4percent margin; not native gameplay or user art acceptance",
+    "orbits": [
+      {
+        "name": "whole-turn",
+        "assemblies": [
+          "BailWire",
+          "Crank",
+          "Housing",
+          "LineRoller",
+          "Lure",
+          "Rod",
+          "Rotor",
+          "Spool"
+        ],
+        "center": [
+          -0.03508913889527321,
+          -0.08749999105930328,
+          1.1896473169326782
+        ],
+        "fixedOrthoScale": 4.055617885155811,
+        "frames": [
+          {
+            "name": "whole-turn-000",
+            "angleDegrees": 0,
+            "minX": 0.47795382142066956,
+            "maxX": 0.5220461487770081,
+            "minY": 0.0599999725818634,
+            "maxY": 0.939999520778656
+          },
+          {
+            "name": "whole-turn-001",
+            "angleDegrees": 10,
+            "minX": 0.4737716317176819,
+            "maxX": 0.5221519470214844,
+            "minY": 0.0599999725818634,
+            "maxY": 0.939999520778656
+          },
+          {
+            "name": "whole-turn-002",
+            "angleDegrees": 20,
+            "minX": 0.4703863561153412,
+            "maxX": 0.5243761539459229,
+            "minY": 0.06000032648444176,
+            "maxY": 0.9399998784065247
+          },
+          {
+            "name": "whole-turn-003",
+            "angleDegrees": 30,
+            "minX": 0.4679008722305298,
+            "maxX": 0.526991069316864,
+            "minY": 0.06000019237399101,
+            "maxY": 0.9399996995925903
+          },
+          {
+            "name": "whole-turn-004",
+            "angleDegrees": 40,
+            "minX": 0.46639078855514526,
+            "maxX": 0.5290910601615906,
+            "minY": 0.06000019237399101,
+            "maxY": 0.9399996995925903
+          },
+          {
+            "name": "whole-turn-005",
+            "angleDegrees": 50,
+            "minX": 0.46590179204940796,
+            "maxX": 0.5303071141242981,
+            "minY": 0.060000017285346985,
+            "maxY": 0.939999520778656
+          },
+          {
+            "name": "whole-turn-006",
+            "angleDegrees": 60,
+            "minX": 0.4664488136768341,
+            "maxX": 0.5306021571159363,
+            "minY": 0.06000015139579773,
+            "maxY": 0.9399996995925903
+          },
+          {
+            "name": "whole-turn-007",
+            "angleDegrees": 70,
+            "minX": 0.4680151045322418,
+            "maxX": 0.5299672484397888,
+            "minY": 0.06000037118792534,
+            "maxY": 0.9399998784065247
+          },
+          {
+            "name": "whole-turn-008",
+            "angleDegrees": 80,
+            "minX": 0.47055384516716003,
+            "maxX": 0.5284223556518555,
+            "minY": 0.06000015139579773,
+            "maxY": 0.9399996995925903
+          },
+          {
+            "name": "whole-turn-009",
+            "angleDegrees": 90,
+            "minX": 0.47398674488067627,
+            "maxX": 0.5260133147239685,
+            "minY": 0.06000019237399101,
+            "maxY": 0.9399996995925903
+          },
+          {
+            "name": "whole-turn-010",
+            "angleDegrees": 100,
+            "minX": 0.47320982813835144,
+            "maxX": 0.5254174470901489,
+            "minY": 0.06000032648444176,
+            "maxY": 0.9399998784065247
+          },
+          {
+            "name": "whole-turn-011",
+            "angleDegrees": 110,
+            "minX": 0.47078099846839905,
+            "maxX": 0.5240489840507507,
+            "minY": 0.0599999725818634,
+            "maxY": 0.939999520778656
+          },
+          {
+            "name": "whole-turn-012",
+            "angleDegrees": 120,
+            "minX": 0.4692402184009552,
+            "maxX": 0.5219501256942749,
+            "minY": 0.06000019237399101,
+            "maxY": 0.9399996995925903
+          },
+          {
+            "name": "whole-turn-013",
+            "angleDegrees": 130,
+            "minX": 0.4686339497566223,
+            "maxX": 0.5191841721534729,
+            "minY": 0.06000015139579773,
+            "maxY": 0.9399996995925903
+          },
+          {
+            "name": "whole-turn-014",
+            "angleDegrees": 140,
+            "minX": 0.4689807593822479,
+            "maxX": 0.5158353447914124,
+            "minY": 0.06000032648444176,
+            "maxY": 0.9399998784065247
+          },
+          {
+            "name": "whole-turn-015",
+            "angleDegrees": 150,
+            "minX": 0.4702700078487396,
+            "maxX": 0.5131131410598755,
+            "minY": 0.06000019237399101,
+            "maxY": 0.9399996995925903
+          },
+          {
+            "name": "whole-turn-016",
+            "angleDegrees": 160,
+            "minX": 0.47246262431144714,
+            "maxX": 0.5166264772415161,
+            "minY": 0.060000017285346985,
+            "maxY": 0.939999520778656
+          },
+          {
+            "name": "whole-turn-017",
+            "angleDegrees": 170,
+            "minX": 0.47549188137054443,
+            "maxX": 0.519634485244751,
+            "minY": 0.06000032648444176,
+            "maxY": 0.9399998784065247
+          },
+          {
+            "name": "whole-turn-018",
+            "angleDegrees": 180,
+            "minX": 0.47795364260673523,
+            "maxX": 0.5220459699630737,
+            "minY": 0.060000017285346985,
+            "maxY": 0.939999520778656
+          },
+          {
+            "name": "whole-turn-019",
+            "angleDegrees": 190,
+            "minX": 0.47784823179244995,
+            "maxX": 0.5262285470962524,
+            "minY": 0.06000032648444176,
+            "maxY": 0.9399998784065247
+          },
+          {
+            "name": "whole-turn-020",
+            "angleDegrees": 200,
+            "minX": 0.4756239056587219,
+            "maxX": 0.529613733291626,
+            "minY": 0.060000017285346985,
+            "maxY": 0.939999520778656
+          },
+          {
+            "name": "whole-turn-021",
+            "angleDegrees": 210,
+            "minX": 0.4730089604854584,
+            "maxX": 0.532099187374115,
+            "minY": 0.06000019237399101,
+            "maxY": 0.9399996995925903
+          },
+          {
+            "name": "whole-turn-022",
+            "angleDegrees": 220,
+            "minX": 0.4709090292453766,
+            "maxX": 0.5336093306541443,
+            "minY": 0.06000032648444176,
+            "maxY": 0.9399998784065247
+          },
+          {
+            "name": "whole-turn-023",
+            "angleDegrees": 230,
+            "minX": 0.46969303488731384,
+            "maxX": 0.5340983271598816,
+            "minY": 0.06000015139579773,
+            "maxY": 0.9399996995925903
+          },
+          {
+            "name": "whole-turn-024",
+            "angleDegrees": 240,
+            "minX": 0.4693978726863861,
+            "maxX": 0.5335512161254883,
+            "minY": 0.06000019237399101,
+            "maxY": 0.9399996995925903
+          },
+          {
+            "name": "whole-turn-025",
+            "angleDegrees": 250,
+            "minX": 0.4700326919555664,
+            "maxX": 0.531984806060791,
+            "minY": 0.0599999725818634,
+            "maxY": 0.939999520778656
+          },
+          {
+            "name": "whole-turn-026",
+            "angleDegrees": 260,
+            "minX": 0.4715777337551117,
+            "maxX": 0.5294463038444519,
+            "minY": 0.06000037118792534,
+            "maxY": 0.9399998784065247
+          },
+          {
+            "name": "whole-turn-027",
+            "angleDegrees": 270,
+            "minX": 0.4739866554737091,
+            "maxX": 0.5260132551193237,
+            "minY": 0.06000019237399101,
+            "maxY": 0.9399996995925903
+          },
+          {
+            "name": "whole-turn-028",
+            "angleDegrees": 280,
+            "minX": 0.4745824635028839,
+            "maxX": 0.5267900824546814,
+            "minY": 0.06000015139579773,
+            "maxY": 0.9399996995925903
+          },
+          {
+            "name": "whole-turn-029",
+            "angleDegrees": 290,
+            "minX": 0.47595107555389404,
+            "maxX": 0.5292190909385681,
+            "minY": 0.06000037118792534,
+            "maxY": 0.9399998784065247
+          },
+          {
+            "name": "whole-turn-030",
+            "angleDegrees": 300,
+            "minX": 0.4780498445034027,
+            "maxX": 0.5307597517967224,
+            "minY": 0.06000015139579773,
+            "maxY": 0.9399996995925903
+          },
+          {
+            "name": "whole-turn-031",
+            "angleDegrees": 310,
+            "minX": 0.48081567883491516,
+            "maxX": 0.5313659310340881,
+            "minY": 0.060000017285346985,
+            "maxY": 0.939999520778656
+          },
+          {
+            "name": "whole-turn-032",
+            "angleDegrees": 320,
+            "minX": 0.48416459560394287,
+            "maxX": 0.5310191512107849,
+            "minY": 0.06000019237399101,
+            "maxY": 0.9399996995925903
+          },
+          {
+            "name": "whole-turn-033",
+            "angleDegrees": 330,
+            "minX": 0.48688676953315735,
+            "maxX": 0.5297299027442932,
+            "minY": 0.06000019237399101,
+            "maxY": 0.9399996995925903
+          },
+          {
+            "name": "whole-turn-034",
+            "angleDegrees": 340,
+            "minX": 0.4833734333515167,
+            "maxX": 0.5275372862815857,
+            "minY": 0.06000032648444176,
+            "maxY": 0.9399998784065247
+          },
+          {
+            "name": "whole-turn-035",
+            "angleDegrees": 350,
+            "minX": 0.4803653359413147,
+            "maxX": 0.5245079398155212,
+            "minY": 0.0599999725818634,
+            "maxY": 0.939999520778656
+          }
+        ]
+      },
+      {
+        "name": "turn",
+        "assemblies": [
+          "BailWire",
+          "Crank",
+          "Housing",
+          "LineRoller",
+          "Rotor",
+          "Spool"
+        ],
+        "center": [
+          -0.03508913889527321,
+          -0.10299999266862869,
+          0.44830000400543213
+        ],
+        "fixedOrthoScale": 0.4919323731552364,
+        "frames": [
+          {
+            "name": "turn-000",
+            "angleDegrees": 0,
+            "minX": 0.31824561953544617,
+            "maxX": 0.6817543506622314,
+            "minY": 0.06000009551644325,
+            "maxY": 0.9399993419647217
+          },
+          {
+            "name": "turn-001",
+            "angleDegrees": 10,
+            "minX": 0.2892376780509949,
+            "maxX": 0.6880972981452942,
+            "minY": 0.06000009551644325,
+            "maxY": 0.9399993419647217
+          },
+          {
+            "name": "turn-002",
+            "angleDegrees": 20,
+            "minX": 0.2666335105895996,
+            "maxX": 0.711739718914032,
+            "minY": 0.060000594705343246,
+            "maxY": 0.9399998188018799
+          },
+          {
+            "name": "turn-003",
+            "angleDegrees": 30,
+            "minX": 0.251120001077652,
+            "maxX": 0.7289484143257141,
+            "minY": 0.06000068411231041,
+            "maxY": 0.9399998784065247
+          },
+          {
+            "name": "turn-004",
+            "angleDegrees": 40,
+            "minX": 0.24316877126693726,
+            "maxX": 0.7392008304595947,
+            "minY": 0.06000027805566788,
+            "maxY": 0.9399994611740112
+          },
+          {
+            "name": "turn-005",
+            "angleDegrees": 50,
+            "minX": 0.2430211901664734,
+            "maxX": 0.7421851754188538,
+            "minY": 0.06000000238418579,
+            "maxY": 0.9399992823600769
+          },
+          {
+            "name": "turn-006",
+            "angleDegrees": 60,
+            "minX": 0.2506818175315857,
+            "maxX": 0.7378109097480774,
+            "minY": 0.06000027805566788,
+            "maxY": 0.9399994611740112
+          },
+          {
+            "name": "turn-007",
+            "angleDegrees": 70,
+            "minX": 0.26591750979423523,
+            "maxX": 0.7262105941772461,
+            "minY": 0.06000063940882683,
+            "maxY": 0.9399998188018799
+          },
+          {
+            "name": "turn-008",
+            "angleDegrees": 80,
+            "minX": 0.28826627135276794,
+            "maxX": 0.7077374458312988,
+            "minY": 0.060000229626894,
+            "maxY": 0.9399994611740112
+          },
+          {
+            "name": "turn-009",
+            "angleDegrees": 90,
+            "minX": 0.3170481026172638,
+            "maxX": 0.6829520463943481,
+            "minY": 0.06000036746263504,
+            "maxY": 0.939999520778656
+          },
+          {
+            "name": "turn-010",
+            "angleDegrees": 100,
+            "minX": 0.3101639747619629,
+            "maxX": 0.6829651594161987,
+            "minY": 0.06000063940882683,
+            "maxY": 0.9399998784065247
+          },
+          {
+            "name": "turn-011",
+            "angleDegrees": 110,
+            "minX": 0.28871938586235046,
+            "maxX": 0.6774183511734009,
+            "minY": 0.06000041216611862,
+            "maxY": 0.9399996399879456
+          },
+          {
+            "name": "turn-012",
+            "angleDegrees": 120,
+            "minX": 0.2736953794956207,
+            "maxX": 0.6664817333221436,
+            "minY": 0.06000005081295967,
+            "maxY": 0.9399993419647217
+          },
+          {
+            "name": "turn-013",
+            "angleDegrees": 130,
+            "minX": 0.2655467092990875,
+            "maxX": 0.6504858136177063,
+            "minY": 0.0600004568696022,
+            "maxY": 0.9399996399879456
+          },
+          {
+            "name": "turn-014",
+            "angleDegrees": 140,
+            "minX": 0.2645224630832672,
+            "maxX": 0.6299182176589966,
+            "minY": 0.060000229626894,
+            "maxY": 0.9399994611740112
+          },
+          {
+            "name": "turn-015",
+            "angleDegrees": 150,
+            "minX": 0.2706526517868042,
+            "maxX": 0.623862624168396,
+            "minY": 0.06000032275915146,
+            "maxY": 0.939999520778656
+          },
+          {
+            "name": "turn-016",
+            "angleDegrees": 160,
+            "minX": 0.28375184535980225,
+            "maxX": 0.6478499174118042,
+            "minY": 0.06000032275915146,
+            "maxY": 0.939999520778656
+          },
+          {
+            "name": "turn-017",
+            "angleDegrees": 170,
+            "minX": 0.3034209907054901,
+            "maxX": 0.6673442125320435,
+            "minY": 0.060000550001859665,
+            "maxY": 0.9399997591972351
+          },
+          {
+            "name": "turn-018",
+            "angleDegrees": 180,
+            "minX": 0.31824544072151184,
+            "maxX": 0.6817541718482971,
+            "minY": 0.06000009551644325,
+            "maxY": 0.9399993419647217
+          },
+          {
+            "name": "turn-019",
+            "angleDegrees": 190,
+            "minX": 0.31190288066864014,
+            "maxX": 0.710762619972229,
+            "minY": 0.060000550001859665,
+            "maxY": 0.9399997591972351
+          },
+          {
+            "name": "turn-020",
+            "angleDegrees": 200,
+            "minX": 0.2882603704929352,
+            "maxX": 0.7333665490150452,
+            "minY": 0.060000550001859665,
+            "maxY": 0.9399997591972351
+          },
+          {
+            "name": "turn-021",
+            "angleDegrees": 210,
+            "minX": 0.2710516154766083,
+            "maxX": 0.7488800287246704,
+            "minY": 0.06000032275915146,
+            "maxY": 0.939999520778656
+          },
+          {
+            "name": "turn-022",
+            "angleDegrees": 220,
+            "minX": 0.2607991695404053,
+            "maxX": 0.756831169128418,
+            "minY": 0.060000229626894,
+            "maxY": 0.9399994611740112
+          },
+          {
+            "name": "turn-023",
+            "angleDegrees": 230,
+            "minX": 0.25781476497650146,
+            "maxX": 0.7569787502288818,
+            "minY": 0.06000036746263504,
+            "maxY": 0.9399995803833008
+          },
+          {
+            "name": "turn-024",
+            "angleDegrees": 240,
+            "minX": 0.2621890604496002,
+            "maxX": 0.7493181824684143,
+            "minY": 0.06000005081295967,
+            "maxY": 0.9399992823600769
+          },
+          {
+            "name": "turn-025",
+            "angleDegrees": 250,
+            "minX": 0.2737896144390106,
+            "maxX": 0.7340826392173767,
+            "minY": 0.06000050529837608,
+            "maxY": 0.9399996995925903
+          },
+          {
+            "name": "turn-026",
+            "angleDegrees": 260,
+            "minX": 0.292262464761734,
+            "maxX": 0.7117337584495544,
+            "minY": 0.06000063940882683,
+            "maxY": 0.9399998784065247
+          },
+          {
+            "name": "turn-027",
+            "angleDegrees": 270,
+            "minX": 0.31704795360565186,
+            "maxX": 0.6829519271850586,
+            "minY": 0.06000036746263504,
+            "maxY": 0.939999520778656
+          },
+          {
+            "name": "turn-028",
+            "angleDegrees": 280,
+            "minX": 0.31703490018844604,
+            "maxX": 0.6898360848426819,
+            "minY": 0.060000229626894,
+            "maxY": 0.9399994611740112
+          },
+          {
+            "name": "turn-029",
+            "angleDegrees": 290,
+            "minX": 0.3225814998149872,
+            "maxX": 0.7112804651260376,
+            "minY": 0.06000063940882683,
+            "maxY": 0.9399998188018799
+          },
+          {
+            "name": "turn-030",
+            "angleDegrees": 300,
+            "minX": 0.33351826667785645,
+            "maxX": 0.7263046503067017,
+            "minY": 0.06000027805566788,
+            "maxY": 0.9399994611740112
+          },
+          {
+            "name": "turn-031",
+            "angleDegrees": 310,
+            "minX": 0.3495137691497803,
+            "maxX": 0.7344529032707214,
+            "minY": 0.06000000238418579,
+            "maxY": 0.9399992823600769
+          },
+          {
+            "name": "turn-032",
+            "angleDegrees": 320,
+            "minX": 0.3700817823410034,
+            "maxX": 0.7354775071144104,
+            "minY": 0.06000027805566788,
+            "maxY": 0.9399994611740112
+          },
+          {
+            "name": "turn-033",
+            "angleDegrees": 330,
+            "minX": 0.376137375831604,
+            "maxX": 0.7293473482131958,
+            "minY": 0.06000068411231041,
+            "maxY": 0.9399998784065247
+          },
+          {
+            "name": "turn-034",
+            "angleDegrees": 340,
+            "minX": 0.3521502614021301,
+            "maxX": 0.7162483334541321,
+            "minY": 0.060000594705343246,
+            "maxY": 0.9399997591972351
+          },
+          {
+            "name": "turn-035",
+            "angleDegrees": 350,
+            "minX": 0.33265557885169983,
+            "maxX": 0.6965787410736084,
+            "minY": 0.06000009551644325,
+            "maxY": 0.9399993419647217
+          }
+        ]
+      }
+    ],
+    "videos": [
+      {
+        "name": "reel-turntable",
+        "sha256": "b7881c7187c061e608e50999707d10aa38cd6759517d3f5b0162a06f76fce56e",
+        "video": {
+          "width": 960,
+          "height": 640,
+          "r_frame_rate": "12/1",
+          "duration": "3.000000",
+          "nb_read_frames": "36"
+        },
+        "sourceFrames": [
+          {
+            "name": "turn-000.png",
+            "sha256": "f9e70b3aac223b8d1eb4f2a53cd0b276e24705ee7483bbeff71d5162fabd5081"
+          },
+          {
+            "name": "turn-001.png",
+            "sha256": "0c83711b7b1ae5c6e6329c6eb65304edd93041ab28b39dec51a9fd39d46991aa"
+          },
+          {
+            "name": "turn-002.png",
+            "sha256": "5295225f4e5ec41520b8c9d86341051d62bf40e655f936af2b3b779bc9c5d6b7"
+          },
+          {
+            "name": "turn-003.png",
+            "sha256": "749830b4d830eadadad185d8fc5080b51148899a25a4824be54801752f435ae8"
+          },
+          {
+            "name": "turn-004.png",
+            "sha256": "826cf952ec41c37849b6a78af8605528be2a7704c5a95c216ed300da2769da49"
+          },
+          {
+            "name": "turn-005.png",
+            "sha256": "a10a5f7bf47a84fcd4b77496d1ce7bea2a4a085a8cd51ae1ea412cc498e5b688"
+          },
+          {
+            "name": "turn-006.png",
+            "sha256": "eaceabe9b40f2332968057e5b37ddce9c8ea74d63652cbc22298d25b01959ad5"
+          },
+          {
+            "name": "turn-007.png",
+            "sha256": "f35e29c76188a80abcf894e4eb620a0f418536663129365537c66cf76b6b6604"
+          },
+          {
+            "name": "turn-008.png",
+            "sha256": "7295e9b2de5c48da382e2f4aaab6462fcac2d8c47157df1df80780e7dec4a393"
+          },
+          {
+            "name": "turn-009.png",
+            "sha256": "75730decb2b85fec0cf813631d0cde907befd7b5bca0e55a893f670a8e387427"
+          },
+          {
+            "name": "turn-010.png",
+            "sha256": "5e1be23ba881844f2ec28f0ec37e5b6fdc568e9b4cfece68d83156166e0bc758"
+          },
+          {
+            "name": "turn-011.png",
+            "sha256": "68e1b8da0af2f24d202c0fda8b6ae8579528112e9cd4fe99e3ea1268355f7b02"
+          },
+          {
+            "name": "turn-012.png",
+            "sha256": "9d2e3aff4ba6d960da6aa58a2996ab39a977dcd4e110e65334c392b80be325b5"
+          },
+          {
+            "name": "turn-013.png",
+            "sha256": "70c4368c0a633c2da3d9952208b2a72914a1344335dcf8aa599ec4f29509582c"
+          },
+          {
+            "name": "turn-014.png",
+            "sha256": "e32772e1a9f7dabb6f372239f83f688ed3ade16ee0b8aba4cd9311adea4b3ad5"
+          },
+          {
+            "name": "turn-015.png",
+            "sha256": "cb8269b8a7ebf8f852b567d46c9743f1d59d8c39bb574b38eb4c189d3c9d4767"
+          },
+          {
+            "name": "turn-016.png",
+            "sha256": "2c3aefbf92c6c926acf884dc05146646ba248f8b1cfc88eed577e70a2560c12a"
+          },
+          {
+            "name": "turn-017.png",
+            "sha256": "c2af8830a236efa1992d908c01282f4a9be3d55feaecf850a3d995582e453b15"
+          },
+          {
+            "name": "turn-018.png",
+            "sha256": "0305b9b5f3631a33c35905e5bc848242bdfb1b66a2c685bb0c65688e35b3482c"
+          },
+          {
+            "name": "turn-019.png",
+            "sha256": "d04c0722f687fd0b244a3493e6c478ef53472da24dd4d5a51cf08f01c1711da0"
+          },
+          {
+            "name": "turn-020.png",
+            "sha256": "2819a77382cf29947c86b5fca68b93c212d667694f22649d7b6a7934070d53f1"
+          },
+          {
+            "name": "turn-021.png",
+            "sha256": "f6c6488edd4e31b73504756018ad4c53d7ee258608dbadf0701ce36d04d56c4e"
+          },
+          {
+            "name": "turn-022.png",
+            "sha256": "db05c0bc373e8e80b776d9741b97ac40f78bf88c8bea2e460da8c42f04bf4a1f"
+          },
+          {
+            "name": "turn-023.png",
+            "sha256": "8dfdefe9dea5bf68bf845fe9665bc578fcaf10c0697bf0c385e2de7bdc2f35b2"
+          },
+          {
+            "name": "turn-024.png",
+            "sha256": "390a168d6bb5007912eafc1b26dd3cd19cd6ea1f7cebe6fc65ed582b477f388b"
+          },
+          {
+            "name": "turn-025.png",
+            "sha256": "86b2d62c705ca5fc7132854b23ffc0970eb467e3b5fddcbc4893734892df082e"
+          },
+          {
+            "name": "turn-026.png",
+            "sha256": "3d0a67184ec8a2d9b8b944f2a58532da9d738ba034e3fa4167a4f854049545be"
+          },
+          {
+            "name": "turn-027.png",
+            "sha256": "5335605f508a7b8d78a90f923e2a26d49f3e7bd176175138ecd94f18a814b242"
+          },
+          {
+            "name": "turn-028.png",
+            "sha256": "4e0c6c0fc3a78a50693c74ed076cfbac84b53f0945e3c6a209624b51fa1a1d57"
+          },
+          {
+            "name": "turn-029.png",
+            "sha256": "1620f78fae30bc5d1520cc3d8786ab580d73ad4a6c5e423857c5f223681f27da"
+          },
+          {
+            "name": "turn-030.png",
+            "sha256": "8a06ba28c4d2dda00ea03fad3df7e3bfa1dcec8cf743ae7b5402540f1823e9fb"
+          },
+          {
+            "name": "turn-031.png",
+            "sha256": "588b8f31b90c452db4ad9dee1c45c6c59aad01cddf3d10abc076dd143a238547"
+          },
+          {
+            "name": "turn-032.png",
+            "sha256": "8297db3fb4161934f293e17bcb29edb1a76c280766b1e77f103aa271ed3d8a4e"
+          },
+          {
+            "name": "turn-033.png",
+            "sha256": "8c8d4eefea554bf351a2812a9af92836731f65af2038de031684e9e5c7d5f4b3"
+          },
+          {
+            "name": "turn-034.png",
+            "sha256": "0e1d88e07136e34ace31cbf4212c54ba899ac635b6add7a166d5a6021d0c7e71"
+          },
+          {
+            "name": "turn-035.png",
+            "sha256": "94353d5a275e191ee6c8d42239a604e26aa929aedb3980f341d37c7273df10d4"
+          }
+        ]
+      },
+      {
+        "name": "whole-turntable",
+        "sha256": "3053bf62a06b2dc74fe079aaec361ccd749a5305394a74c1fdbe637ee75f1ec9",
+        "video": {
+          "width": 960,
+          "height": 640,
+          "r_frame_rate": "12/1",
+          "duration": "3.000000",
+          "nb_read_frames": "36"
+        },
+        "sourceFrames": [
+          {
+            "name": "whole-turn-000.png",
+            "sha256": "58b1a2d2b814ab81df54ec51b48f67371ad058e64af931cc7e84c9918f27d516"
+          },
+          {
+            "name": "whole-turn-001.png",
+            "sha256": "1b33d71b9a859b84f5aba9c969ab3c6dab78cbb18ee822fb454a6674ec0482d3"
+          },
+          {
+            "name": "whole-turn-002.png",
+            "sha256": "3f41b2c86eeb2f2c534d8cf42318ea8e294039308b3d54dc35e3f77aa20a225d"
+          },
+          {
+            "name": "whole-turn-003.png",
+            "sha256": "894525c3fc713806b84701c05526a537791a81651f192c39c8c36bdb56894aca"
+          },
+          {
+            "name": "whole-turn-004.png",
+            "sha256": "ce7aeea64abe19dfcde419b01fa6e888a70338f20c822485e8767a70c799d6b4"
+          },
+          {
+            "name": "whole-turn-005.png",
+            "sha256": "39ae93b211389017c519b43692b7b3361bfdcbff5df3e79041a234f1bc7f535c"
+          },
+          {
+            "name": "whole-turn-006.png",
+            "sha256": "5e7243fc0e5e36fe35110d6c818b10e8c1be2567d93c8442e69a3c682874fe19"
+          },
+          {
+            "name": "whole-turn-007.png",
+            "sha256": "21f073cdb7c08ec27b0c5267b777fb80f56db9342d17c83d33fc09dd0c9d1919"
+          },
+          {
+            "name": "whole-turn-008.png",
+            "sha256": "905c6d8d33fb10ea2add252763ba77d81e9f26de16087da2ad8fd8dfdae3b098"
+          },
+          {
+            "name": "whole-turn-009.png",
+            "sha256": "df27680613a0a3d338b7d23c9ffe51665dfc10e8539e73afa88411053f9d5536"
+          },
+          {
+            "name": "whole-turn-010.png",
+            "sha256": "517a7a9ce15f320bf4873d79c52a5007ea3cbc8fa4bedfd7f786b7e0b674e576"
+          },
+          {
+            "name": "whole-turn-011.png",
+            "sha256": "933a56a1424967ef647ee0dac85475d890cc075da6fafc37070e11a05e513d89"
+          },
+          {
+            "name": "whole-turn-012.png",
+            "sha256": "1da63ff75e6dfd0145e4d86b25db2e28b14d23f979ae0e73161408752e3e53b8"
+          },
+          {
+            "name": "whole-turn-013.png",
+            "sha256": "41fc9929887c0e47d90beb6d124f684ee0e36457705f38ad4e14a41da42a8cf7"
+          },
+          {
+            "name": "whole-turn-014.png",
+            "sha256": "78bbbf652b5f020a0059fa3729c1f03210fd921bc37ad5ef96722a2ef5b5893a"
+          },
+          {
+            "name": "whole-turn-015.png",
+            "sha256": "1803c6303b80cd1d611ee22add0c4b5e3fd992cbc0a2d4d89ce6b7e01c0e9b2a"
+          },
+          {
+            "name": "whole-turn-016.png",
+            "sha256": "ba240bf741816a637607f16caab31b2055d58e31fc52732fa0ea59b08d97502f"
+          },
+          {
+            "name": "whole-turn-017.png",
+            "sha256": "e2806fc0c766bc442e98a6c38c139a77c180537fa66100ec13255206f33709b9"
+          },
+          {
+            "name": "whole-turn-018.png",
+            "sha256": "e3d20458955faa65cb0bc0a0482939f83b54e399a906169ca70745f2ac057e03"
+          },
+          {
+            "name": "whole-turn-019.png",
+            "sha256": "83e103bb938b24a8fc9bbf0969f7bae7755d639692665ecb387e506dc278ab83"
+          },
+          {
+            "name": "whole-turn-020.png",
+            "sha256": "dbd6d23604092552a223c6e65e55e016c24b69969817cf6eef4c5798017740bb"
+          },
+          {
+            "name": "whole-turn-021.png",
+            "sha256": "f7f5d3b62e52c8258fe1c0059dee624ecbcc117743a7c4e54ed19d64229614ee"
+          },
+          {
+            "name": "whole-turn-022.png",
+            "sha256": "589f73059d4f335edcd6b336fb6e048e0f1e3b11dcdb4deb41507e7c0363a4ca"
+          },
+          {
+            "name": "whole-turn-023.png",
+            "sha256": "2684f6aa2d9b34393865980df3c8faac4009b5a8c70b89b0dc617e3fafc0f6a0"
+          },
+          {
+            "name": "whole-turn-024.png",
+            "sha256": "f38218d02c4206b237fb5513b322ae3526093d224f8ce8f1cb4451c0ee4d1cb4"
+          },
+          {
+            "name": "whole-turn-025.png",
+            "sha256": "db3de109c581fdde6b8c84ebce3bb5021b96c0a2512beec850170fe8f1e46e5f"
+          },
+          {
+            "name": "whole-turn-026.png",
+            "sha256": "15114944dc40c72530e725c4be931b73fc180303449799a25fd126c893544d08"
+          },
+          {
+            "name": "whole-turn-027.png",
+            "sha256": "40dca34af6d193d4f985528f18743633c9d71f33bb37a69b16f13724d697d42d"
+          },
+          {
+            "name": "whole-turn-028.png",
+            "sha256": "dd7efad4ce839d5e394efc2d875ec55a38daa931f47e9721f21e6cfd32530b78"
+          },
+          {
+            "name": "whole-turn-029.png",
+            "sha256": "9f3cec2a4352fd6b5f1d88ab0991b01cab89cc8903129cb941e66e1cd256b3d5"
+          },
+          {
+            "name": "whole-turn-030.png",
+            "sha256": "6dab892047f48563505d8b4712f4efd6ea55421806dfe563a5d5f414c57dd004"
+          },
+          {
+            "name": "whole-turn-031.png",
+            "sha256": "bac2e936e1cc808f8e9a84152bebc0928a8187153ead3afd1d006d16c828cfa4"
+          },
+          {
+            "name": "whole-turn-032.png",
+            "sha256": "6016d39279aef025b4e0eb184f132b88c0c794430c69387f43e2413b5958c42d"
+          },
+          {
+            "name": "whole-turn-033.png",
+            "sha256": "d2cf2d9abc2e5d4c62fbf6ca31780dd744dc7deb8c97616804bdd9f3c5c1909f"
+          },
+          {
+            "name": "whole-turn-034.png",
+            "sha256": "b42e827c7f7831b84220409cac4740c3ffef86bcb6b86ad352f26f03803310f2"
+          },
+          {
+            "name": "whole-turn-035.png",
+            "sha256": "44e7385fe9a02a1ca1ef1bf5c4f21adb0a5baee12344691367d8ea64a7262004"
+          }
+        ]
+      }
+    ]
+  },
+  "native": {
+    "status": "PASS",
+    "phone": {
+      "status": "PASS",
+      "label": "wind20261124phone1",
+      "scope": "native16-frame with forcedLOD1/2 diagnostics normal first-tutorial rig EventSystem flow; no injected progress, OS touch, full progression, CAD or physical-device qualification",
+      "source": {
+        "sourceCommit": "3fe4504bd928dc227fc70626fc38c30e4832cb25",
+        "sourceDigest": "ddc45c28942042da7e19257184ed82b91d4e0a6c6996ac2b06c13f9ac0345db8",
+        "projectSettingsSha256": "487dd5cc37a763cb9f23702f91a10b6680094d7b2165050d05327b1376c0d54d"
+      },
+      "appDigest": "43ec7760b781aaaf2a055302f9f001efc59900e0ac64e6f3bfc93902a94fd5cd",
+      "catches": 1,
+      "points": 185,
+      "fishId": "trevally",
+      "saveSha256": "33e0c5e8d604960d88fcfafd17619b52eb4c10ca4ec16eda3fa4982e66f4eb97",
+      "samples": [
+        {
+          "view": "rig-rest",
+          "phase": "Ready",
+          "rollerRoute": true,
+          "requestedLod": -1,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 0.0,
+          "guideError": 0.0,
+          "surfaceGap": 0.00035079196095466614,
+          "tangentDot": 3.0200928449630737e-05,
+          "payoutPlaneError": 0.09602906554937363,
+          "payoutRadiusError": 0.06881250441074371,
+          "lineWidth": 0.000699999975040555
+        },
+        {
+          "view": "rig-forced-lod1",
+          "phase": "Ready",
+          "rollerRoute": true,
+          "requestedLod": 1,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 0.0,
+          "guideError": 0.0,
+          "surfaceGap": 0.00035079196095466614,
+          "tangentDot": 3.0200928449630737e-05,
+          "payoutPlaneError": 0.09602906554937363,
+          "payoutRadiusError": 0.06881250441074371,
+          "lineWidth": 0.000699999975040555
+        },
+        {
+          "view": "rig-forced-lod2",
+          "phase": "Ready",
+          "rollerRoute": true,
+          "requestedLod": 2,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 0.0,
+          "guideError": 0.0,
+          "surfaceGap": 0.00035079196095466614,
+          "tangentDot": 3.0200928449630737e-05,
+          "payoutPlaneError": 0.09602906554937363,
+          "payoutRadiusError": 0.06881250441074371,
+          "lineWidth": 0.000699999975040555
+        },
+        {
+          "view": "rig-winding-a",
+          "phase": "Ready",
+          "rollerRoute": true,
+          "requestedLod": -1,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 224.18727111816406,
+          "guideError": 0.0,
+          "surfaceGap": 0.0003501158207654953,
+          "tangentDot": 4.015490412712097e-05,
+          "payoutPlaneError": 0.08085478097200394,
+          "payoutRadiusError": 0.06458531320095062,
+          "lineWidth": 0.000699999975040555
+        },
+        {
+          "view": "rig-winding-b",
+          "phase": "Ready",
+          "rollerRoute": true,
+          "requestedLod": -1,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 236.22320556640625,
+          "guideError": 0.0,
+          "surfaceGap": 0.0003494825214147568,
+          "tangentDot": 2.5525689125061035e-05,
+          "payoutPlaneError": 0.08237836509943008,
+          "payoutRadiusError": 0.06483916938304901,
+          "lineWidth": 0.000699999975040555
+        },
+        {
+          "view": "rig-angle-0",
+          "phase": "Ready",
+          "rollerRoute": true,
+          "requestedLod": -1,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 235.2769317626953,
+          "guideError": 0.0,
+          "surfaceGap": 0.0003507714718580246,
+          "tangentDot": 3.053247928619385e-05,
+          "payoutPlaneError": 0.059980444610118866,
+          "payoutRadiusError": 0.05923280119895935,
+          "lineWidth": 0.000699999975040555
+        },
+        {
+          "view": "rig-angle-1",
+          "phase": "Ready",
+          "rollerRoute": true,
+          "requestedLod": -1,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 235.2769317626953,
+          "guideError": 0.0,
+          "surfaceGap": 0.0003506708890199661,
+          "tangentDot": 3.268010914325714e-05,
+          "payoutPlaneError": 0.05998048186302185,
+          "payoutRadiusError": 0.05923298001289368,
+          "lineWidth": 0.000699999975040555
+        },
+        {
+          "view": "rig-angle-2",
+          "phase": "Ready",
+          "rollerRoute": true,
+          "requestedLod": -1,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 235.2769317626953,
+          "guideError": 0.0,
+          "surfaceGap": 0.00035037286579608917,
+          "tangentDot": 9.752810001373291e-06,
+          "payoutPlaneError": 0.05998191982507706,
+          "payoutRadiusError": 0.05923314392566681,
+          "lineWidth": 0.000699999975040555
+        },
+        {
+          "view": "rig-whole",
+          "phase": "Ready",
+          "rollerRoute": true,
+          "requestedLod": -1,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 235.2769317626953,
+          "guideError": 0.0,
+          "surfaceGap": 0.0003501097671687603,
+          "tangentDot": 2.396106719970703e-05,
+          "payoutPlaneError": 0.010489534586668015,
+          "payoutRadiusError": 0.010190939530730247,
+          "lineWidth": 0.000699999975040555
+        },
+        {
+          "view": "ready",
+          "phase": "Ready",
+          "rollerRoute": true,
+          "requestedLod": -1,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 235.2769317626953,
+          "guideError": 0.0,
+          "surfaceGap": 0.0009999722242355347,
+          "tangentDot": 2.2292137145996094e-05,
+          "payoutPlaneError": 0.008830155245959759,
+          "payoutRadiusError": 0.00817287527024746,
+          "lineWidth": 0.0020000000949949026
+        },
+        {
+          "view": "casting-open-bail",
+          "phase": "Casting",
+          "rollerRoute": false,
+          "requestedLod": -1,
+          "bailDegrees": 60.003719329833984,
+          "rollerDegrees": 235.2769317626953,
+          "guideError": 0.0,
+          "surfaceGap": 0.000999972689896822,
+          "tangentDot": 2.8401613235473633e-05,
+          "payoutPlaneError": 0.0,
+          "payoutRadiusError": 5.471520125865936e-09,
+          "lineWidth": 0.0020000000949949026
+        },
+        {
+          "view": "waiting-line-contact",
+          "phase": "Waiting",
+          "rollerRoute": true,
+          "requestedLod": -1,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 235.2769317626953,
+          "guideError": 0.0,
+          "surfaceGap": 0.0009999722242355347,
+          "tangentDot": 2.2292137145996094e-05,
+          "payoutPlaneError": 0.008830155245959759,
+          "payoutRadiusError": 0.00817287527024746,
+          "lineWidth": 0.0020000000949949026
+        },
+        {
+          "view": "fighting",
+          "phase": "Fighting",
+          "rollerRoute": true,
+          "requestedLod": -1,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 235.2769317626953,
+          "guideError": 0.0,
+          "surfaceGap": 0.0009999722242355347,
+          "tangentDot": 2.2292137145996094e-05,
+          "payoutPlaneError": 0.008830155245959759,
+          "payoutRadiusError": 0.00817287527024746,
+          "lineWidth": 0.0020000000949949026
+        },
+        {
+          "view": "landed",
+          "phase": "Landed",
+          "rollerRoute": true,
+          "requestedLod": -1,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 92.13934326171875,
+          "guideError": 0.0,
+          "surfaceGap": 0.0009999754838645458,
+          "tangentDot": 2.4184584617614746e-05,
+          "payoutPlaneError": 0.014819181524217129,
+          "payoutRadiusError": 0.009778419509530067,
+          "lineWidth": 0.0020000000949949026
+        },
+        {
+          "view": "release",
+          "phase": "Ready",
+          "rollerRoute": true,
+          "requestedLod": -1,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 92.13934326171875,
+          "guideError": 0.0,
+          "surfaceGap": 0.0010000420734286308,
+          "tangentDot": 1.3764947652816772e-05,
+          "payoutPlaneError": 0.014817196875810623,
+          "payoutRadiusError": 0.00977783091366291,
+          "lineWidth": 0.0020000000949949026
+        }
+      ],
+      "capturedFrames": 16,
+      "rollerTravel": 2024.1873779296875,
+      "renderProbe": {
+        "graphics": "Metal",
+        "quality": "Medium",
+        "hdrAfter": true,
+        "halfHdrSamples": 4,
+        "desiredSamples": 4
+      },
+      "checks": [
+        "rig-detail-new-normal-tutorial-save",
+        "visible-hit-target:\u9493\u5177",
+        "visible-hit-target:\u89c2\u5bdf\u5165\u95e8\u9493\u7ec4",
+        "visible-hit-target:\u8fd1\u770b\u5377\u7ebf\u5668",
+        "rig-detail-inspection-pauses-fishing",
+        "rig-detail-present",
+        "rig-detail-eight-assemblies-three-lods-single-owner",
+        "rig-detail-guides-and-groove-contact-rig-rest",
+        "rig-detail-active-line-route-rig-rest",
+        "rendered-inspection-title:rig-rest",
+        "rig-detail-guides-and-groove-contact-rig-forced-lod1",
+        "rig-detail-active-line-route-rig-forced-lod1",
+        "rendered-inspection-title:rig-forced-lod1",
+        "rig-detail-guides-and-groove-contact-rig-forced-lod2",
+        "rig-detail-active-line-route-rig-forced-lod2",
+        "rendered-inspection-title:rig-forced-lod2",
+        "visible-hit-target:\u8bd5\u6447\u5377\u7ebf\u5668",
+        "rig-detail-real-roller-turns",
+        "rig-detail-guides-and-groove-contact-rig-winding-a",
+        "rig-detail-active-line-route-rig-winding-a",
+        "rendered-inspection-title:rig-winding-a",
+        "rig-detail-guides-and-groove-contact-rig-winding-b",
+        "rig-detail-active-line-route-rig-winding-b",
+        "rendered-inspection-title:rig-winding-b",
+        "visible-hit-target:\u505c\u6b62\u6536\u7ebf\u6f14\u793a",
+        "rig-detail-stopped-roller-freezes",
+        "visible-hit-target:\u65cb\u8f6c\u9493\u7ec4",
+        "rig-detail-guides-and-groove-contact-rig-angle-0",
+        "rig-detail-active-line-route-rig-angle-0",
+        "rendered-inspection-title:rig-angle-0",
+        "rig-detail-guides-and-groove-contact-rig-angle-1",
+        "rig-detail-active-line-route-rig-angle-1",
+        "rendered-inspection-title:rig-angle-1",
+        "rig-detail-guides-and-groove-contact-rig-angle-2",
+        "rig-detail-active-line-route-rig-angle-2",
+        "rendered-inspection-title:rig-angle-2",
+        "visible-hit-target:\u67e5\u770b\u5168\u7aff",
+        "rig-detail-guides-and-groove-contact-rig-whole",
+        "rig-detail-active-line-route-rig-whole",
+        "rendered-inspection-title:rig-whole",
+        "visible-hit-target:\u8fd4\u56de\u9493\u5177",
+        "visible-hit-target:\u51fa\u6d77",
+        "visible-hit-target:\u7ee7\u7eed\u63a2\u7d22",
+        "rig-detail-guides-and-groove-contact-ready",
+        "rig-detail-active-line-route-ready",
+        "visible-hit-target:\u6309\u4f4f\u84c4\u529b \u00b7 \u677e\u624b\u629b\u7aff",
+        "rig-detail-natural-cast-bypasses-roller",
+        "rig-detail-guides-and-groove-contact-casting-open-bail",
+        "rig-detail-active-line-route-casting-open-bail",
+        "rig-detail-waiting-restores-roller",
+        "rig-detail-guides-and-groove-contact-waiting-line-contact",
+        "rig-detail-active-line-route-waiting-line-contact",
+        "rig-detail-natural-bite",
+        "visible-hit-target:\u63d0\u7aff",
+        "rig-detail-guides-and-groove-contact-fighting",
+        "rig-detail-active-line-route-fighting",
+        "visible-hit-target:\u6309\u4f4f\u6536\u7ebf",
+        "rig-detail-normal-landed",
+        "rig-detail-guides-and-groove-contact-landed",
+        "rig-detail-active-line-route-landed",
+        "visible-hit-target:\u8bb0\u5f55\u5e76\u653e\u6d41",
+        "rig-detail-guides-and-groove-contact-release",
+        "rig-detail-active-line-route-release",
+        "rig-detail-first-hero-recorded-once",
+        "visible-hit-target:\u6682\u505c"
+      ]
+    },
+    "tablet": {
+      "status": "PASS",
+      "label": "wind20261124pad1",
+      "scope": "native16-frame with forcedLOD1/2 diagnostics normal first-tutorial rig EventSystem flow; no injected progress, OS touch, full progression, CAD or physical-device qualification",
+      "source": {
+        "sourceCommit": "3fe4504bd928dc227fc70626fc38c30e4832cb25",
+        "sourceDigest": "ddc45c28942042da7e19257184ed82b91d4e0a6c6996ac2b06c13f9ac0345db8",
+        "projectSettingsSha256": "487dd5cc37a763cb9f23702f91a10b6680094d7b2165050d05327b1376c0d54d"
+      },
+      "appDigest": "43ec7760b781aaaf2a055302f9f001efc59900e0ac64e6f3bfc93902a94fd5cd",
+      "catches": 1,
+      "points": 258,
+      "fishId": "trevally",
+      "saveSha256": "6d544b0a7b74b3a2e2c7f0ead5c1fe3c35049009d9b208a37dd4c502d7fdcd23",
+      "samples": [
+        {
+          "view": "rig-rest",
+          "phase": "Ready",
+          "rollerRoute": true,
+          "requestedLod": -1,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 0.0,
+          "guideError": 0.0,
+          "surfaceGap": 0.00035079196095466614,
+          "tangentDot": 3.0200928449630737e-05,
+          "payoutPlaneError": 0.09602906554937363,
+          "payoutRadiusError": 0.06881250441074371,
+          "lineWidth": 0.000699999975040555
+        },
+        {
+          "view": "rig-forced-lod1",
+          "phase": "Ready",
+          "rollerRoute": true,
+          "requestedLod": 1,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 0.0,
+          "guideError": 0.0,
+          "surfaceGap": 0.00035079196095466614,
+          "tangentDot": 3.0200928449630737e-05,
+          "payoutPlaneError": 0.09602906554937363,
+          "payoutRadiusError": 0.06881250441074371,
+          "lineWidth": 0.000699999975040555
+        },
+        {
+          "view": "rig-forced-lod2",
+          "phase": "Ready",
+          "rollerRoute": true,
+          "requestedLod": 2,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 0.0,
+          "guideError": 0.0,
+          "surfaceGap": 0.00035079196095466614,
+          "tangentDot": 3.0200928449630737e-05,
+          "payoutPlaneError": 0.09602906554937363,
+          "payoutRadiusError": 0.06881250441074371,
+          "lineWidth": 0.000699999975040555
+        },
+        {
+          "view": "rig-winding-a",
+          "phase": "Ready",
+          "rollerRoute": true,
+          "requestedLod": -1,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 224.17796325683594,
+          "guideError": 0.0,
+          "surfaceGap": 0.0003502052277326584,
+          "tangentDot": 2.7451664209365845e-05,
+          "payoutPlaneError": 0.08085518330335617,
+          "payoutRadiusError": 0.06458587944507599,
+          "lineWidth": 0.000699999975040555
+        },
+        {
+          "view": "rig-winding-b",
+          "phase": "Ready",
+          "rollerRoute": true,
+          "requestedLod": -1,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 232.2296142578125,
+          "guideError": 0.0,
+          "surfaceGap": 0.0003495756536722183,
+          "tangentDot": 2.3290514945983887e-05,
+          "payoutPlaneError": 0.08249471336603165,
+          "payoutRadiusError": 0.06486807763576508,
+          "lineWidth": 0.000699999975040555
+        },
+        {
+          "view": "rig-angle-0",
+          "phase": "Ready",
+          "rollerRoute": true,
+          "requestedLod": -1,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 240.5286865234375,
+          "guideError": 0.0,
+          "surfaceGap": 0.00035050511360168457,
+          "tangentDot": 1.4662742614746094e-05,
+          "payoutPlaneError": 0.060073062777519226,
+          "payoutRadiusError": 0.059255629777908325,
+          "lineWidth": 0.000699999975040555
+        },
+        {
+          "view": "rig-angle-1",
+          "phase": "Ready",
+          "rollerRoute": true,
+          "requestedLod": -1,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 240.5286865234375,
+          "guideError": 0.0,
+          "surfaceGap": 0.00035038217902183533,
+          "tangentDot": 2.5756657123565674e-05,
+          "payoutPlaneError": 0.06007262319326401,
+          "payoutRadiusError": 0.059255629777908325,
+          "lineWidth": 0.000699999975040555
+        },
+        {
+          "view": "rig-angle-2",
+          "phase": "Ready",
+          "rollerRoute": true,
+          "requestedLod": -1,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 240.5286865234375,
+          "guideError": 0.0,
+          "surfaceGap": 0.00035008229315280914,
+          "tangentDot": 3.294646739959717e-05,
+          "payoutPlaneError": 0.06007303297519684,
+          "payoutRadiusError": 0.05925546586513519,
+          "lineWidth": 0.000699999975040555
+        },
+        {
+          "view": "rig-whole",
+          "phase": "Ready",
+          "rollerRoute": true,
+          "requestedLod": -1,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 240.5286865234375,
+          "guideError": 0.0,
+          "surfaceGap": 0.00035003433004021645,
+          "tangentDot": 2.3558735847473145e-05,
+          "payoutPlaneError": 0.010506445541977882,
+          "payoutRadiusError": 0.010194970294833183,
+          "lineWidth": 0.000699999975040555
+        },
+        {
+          "view": "ready",
+          "phase": "Ready",
+          "rollerRoute": true,
+          "requestedLod": -1,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 240.5286865234375,
+          "guideError": 0.0,
+          "surfaceGap": 0.0010000583715736866,
+          "tangentDot": 2.300739288330078e-05,
+          "payoutPlaneError": 0.00884674210101366,
+          "payoutRadiusError": 0.008176928386092186,
+          "lineWidth": 0.0020000000949949026
+        },
+        {
+          "view": "casting-open-bail",
+          "phase": "Casting",
+          "rollerRoute": false,
+          "requestedLod": -1,
+          "bailDegrees": 60.000274658203125,
+          "rollerDegrees": 240.5286865234375,
+          "guideError": 0.0,
+          "surfaceGap": 0.0010000267066061497,
+          "tangentDot": 1.284480094909668e-05,
+          "payoutPlaneError": 1.862645149230957e-09,
+          "payoutRadiusError": 1.7462298274040222e-09,
+          "lineWidth": 0.0020000000949949026
+        },
+        {
+          "view": "waiting-line-contact",
+          "phase": "Waiting",
+          "rollerRoute": true,
+          "requestedLod": -1,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 240.5286865234375,
+          "guideError": 0.0,
+          "surfaceGap": 0.0010000583715736866,
+          "tangentDot": 2.300739288330078e-05,
+          "payoutPlaneError": 0.00884674210101366,
+          "payoutRadiusError": 0.008176928386092186,
+          "lineWidth": 0.0020000000949949026
+        },
+        {
+          "view": "fighting",
+          "phase": "Fighting",
+          "rollerRoute": true,
+          "requestedLod": -1,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 240.5286865234375,
+          "guideError": 0.0,
+          "surfaceGap": 0.0010000583715736866,
+          "tangentDot": 2.300739288330078e-05,
+          "payoutPlaneError": 0.00884674210101366,
+          "payoutRadiusError": 0.008176928386092186,
+          "lineWidth": 0.0020000000949949026
+        },
+        {
+          "view": "landed",
+          "phase": "Landed",
+          "rollerRoute": true,
+          "requestedLod": -1,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 254.43780517578125,
+          "guideError": 0.0,
+          "surfaceGap": 0.0010000155307352543,
+          "tangentDot": 2.7455389499664307e-05,
+          "payoutPlaneError": 0.015837199985980988,
+          "payoutRadiusError": 0.0100827906280756,
+          "lineWidth": 0.0020000000949949026
+        },
+        {
+          "view": "release",
+          "phase": "Ready",
+          "rollerRoute": true,
+          "requestedLod": -1,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 254.43780517578125,
+          "guideError": 0.0,
+          "surfaceGap": 0.0010000336915254593,
+          "tangentDot": 9.797513484954834e-06,
+          "payoutPlaneError": 0.015834609046578407,
+          "payoutRadiusError": 0.010081911459565163,
+          "lineWidth": 0.0020000000949949026
+        }
+      ],
+      "capturedFrames": 16,
+      "rollerTravel": 2024.1781005859375,
+      "renderProbe": {
+        "graphics": "Metal",
+        "quality": "Medium",
+        "hdrAfter": true,
+        "halfHdrSamples": 4,
+        "desiredSamples": 4
+      },
+      "checks": [
+        "rig-detail-new-normal-tutorial-save",
+        "visible-hit-target:\u9493\u5177",
+        "visible-hit-target:\u89c2\u5bdf\u5165\u95e8\u9493\u7ec4",
+        "visible-hit-target:\u8fd1\u770b\u5377\u7ebf\u5668",
+        "rig-detail-inspection-pauses-fishing",
+        "rig-detail-present",
+        "rig-detail-eight-assemblies-three-lods-single-owner",
+        "rig-detail-guides-and-groove-contact-rig-rest",
+        "rig-detail-active-line-route-rig-rest",
+        "rendered-inspection-title:rig-rest",
+        "rig-detail-guides-and-groove-contact-rig-forced-lod1",
+        "rig-detail-active-line-route-rig-forced-lod1",
+        "rendered-inspection-title:rig-forced-lod1",
+        "rig-detail-guides-and-groove-contact-rig-forced-lod2",
+        "rig-detail-active-line-route-rig-forced-lod2",
+        "rendered-inspection-title:rig-forced-lod2",
+        "visible-hit-target:\u8bd5\u6447\u5377\u7ebf\u5668",
+        "rig-detail-real-roller-turns",
+        "rig-detail-guides-and-groove-contact-rig-winding-a",
+        "rig-detail-active-line-route-rig-winding-a",
+        "rendered-inspection-title:rig-winding-a",
+        "rig-detail-guides-and-groove-contact-rig-winding-b",
+        "rig-detail-active-line-route-rig-winding-b",
+        "rendered-inspection-title:rig-winding-b",
+        "visible-hit-target:\u505c\u6b62\u6536\u7ebf\u6f14\u793a",
+        "rig-detail-stopped-roller-freezes",
+        "visible-hit-target:\u65cb\u8f6c\u9493\u7ec4",
+        "rig-detail-guides-and-groove-contact-rig-angle-0",
+        "rig-detail-active-line-route-rig-angle-0",
+        "rendered-inspection-title:rig-angle-0",
+        "rig-detail-guides-and-groove-contact-rig-angle-1",
+        "rig-detail-active-line-route-rig-angle-1",
+        "rendered-inspection-title:rig-angle-1",
+        "rig-detail-guides-and-groove-contact-rig-angle-2",
+        "rig-detail-active-line-route-rig-angle-2",
+        "rendered-inspection-title:rig-angle-2",
+        "visible-hit-target:\u67e5\u770b\u5168\u7aff",
+        "rig-detail-guides-and-groove-contact-rig-whole",
+        "rig-detail-active-line-route-rig-whole",
+        "rendered-inspection-title:rig-whole",
+        "visible-hit-target:\u8fd4\u56de\u9493\u5177",
+        "visible-hit-target:\u51fa\u6d77",
+        "visible-hit-target:\u7ee7\u7eed\u63a2\u7d22",
+        "rig-detail-guides-and-groove-contact-ready",
+        "rig-detail-active-line-route-ready",
+        "visible-hit-target:\u6309\u4f4f\u84c4\u529b \u00b7 \u677e\u624b\u629b\u7aff",
+        "rig-detail-natural-cast-bypasses-roller",
+        "rig-detail-guides-and-groove-contact-casting-open-bail",
+        "rig-detail-active-line-route-casting-open-bail",
+        "rig-detail-waiting-restores-roller",
+        "rig-detail-guides-and-groove-contact-waiting-line-contact",
+        "rig-detail-active-line-route-waiting-line-contact",
+        "rig-detail-natural-bite",
+        "visible-hit-target:\u63d0\u7aff",
+        "rig-detail-guides-and-groove-contact-fighting",
+        "rig-detail-active-line-route-fighting",
+        "visible-hit-target:\u6309\u4f4f\u6536\u7ebf",
+        "rig-detail-normal-landed",
+        "rig-detail-guides-and-groove-contact-landed",
+        "rig-detail-active-line-route-landed",
+        "visible-hit-target:\u8bb0\u5f55\u5e76\u653e\u6d41",
+        "rig-detail-guides-and-groove-contact-release",
+        "rig-detail-active-line-route-release",
+        "rig-detail-first-hero-recorded-once",
+        "visible-hit-target:\u6682\u505c"
+      ]
+    }
+  },
+  "artAcceptance": "NOT_ACCEPTED",
+  "distribution": "NO_PERSONAL_DEVICE_OR_TESTFLIGHT_UPDATE",
+  "shaft": {
+    "status": "ENGINEERING_CHECKS_PASS",
+    "scope": "actual source rotor/spool axial faces and72radial metal-shaft samples across authored+/-6mm spool stroke; not internal gears, CAD, manufacturing or physical-device acceptance",
+    "checks": [
+      "\u771f\u5b9e\u8f6c\u5b50\u4e0e\u7ebf\u676f\u8f74\u5411\u754c\u9762 0",
+      "\u5f80\u590d\u5168\u8de8\u5ea6\u6709\u771f\u5b9e\u91d1\u5c5e\u4e3b\u8f74 0",
+      "\u771f\u5b9e\u8f6c\u5b50\u4e0e\u7ebf\u676f\u8f74\u5411\u754c\u9762 1",
+      "\u5f80\u590d\u5168\u8de8\u5ea6\u6709\u771f\u5b9e\u91d1\u5c5e\u4e3b\u8f74 1",
+      "\u771f\u5b9e\u8f6c\u5b50\u4e0e\u7ebf\u676f\u8f74\u5411\u754c\u9762 2",
+      "\u5f80\u590d\u5168\u8de8\u5ea6\u6709\u771f\u5b9e\u91d1\u5c5e\u4e3b\u8f74 2"
+    ],
+    "failures": [],
+    "samples": [
+      {
+        "lod": 0,
+        "visibleGapsAtStroke": [
+          0.011000007390975952,
+          0.017000019550323486,
+          0.02300003170967102
+        ],
+        "shaftRadii": [
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.003999999767576803,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155
+        ],
+        "missingSamples": 0
+      },
+      {
+        "lod": 1,
+        "visibleGapsAtStroke": [
+          0.010994255542755127,
+          0.01699426770210266,
+          0.022994279861450195
+        ],
+        "shaftRadii": [
+          0.003999999767576803,
+          0.004000000222324155,
+          0.003999999767576803,
+          0.003999999767576803,
+          0.003999999767576803,
+          0.003999999767576803,
+          0.004000000222324155,
+          0.003999999767576803,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.003999999767576803,
+          0.003999999767576803,
+          0.003999999767576803,
+          0.004000000222324155,
+          0.003999999767576803,
+          0.004000000222324155,
+          0.003999999767576803,
+          0.003999999767576803,
+          0.003999999767576803,
+          0.004000000222324155,
+          0.003999999767576803,
+          0.004000000222324155
+        ],
+        "missingSamples": 0
+      },
+      {
+        "lod": 2,
+        "visibleGapsAtStroke": [
+          0.011338889598846436,
+          0.01733890175819397,
+          0.023338913917541504
+        ],
+        "shaftRadii": [
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155,
+          0.004000000222324155
+        ],
+        "missingSamples": 0
+      }
+    ]
+  },
+  "shaftLod0Change": {
+    "status": "EXPECTED_HOUSING_CHANGE_OTHER7_EXACT",
+    "scope": "all8 savedLOD0 assemblies: exact world matrix, position/weight/edge multisets and oriented material/smooth/corner-UV polygons; explicit shaft repair changes Housing; other7 assemblies retain exact canonical geometry/weights/UV/sharp flags; no numeric tolerance",
+    "before": {
+      "BailWire_LOD0": {
+        "matrix": "eba91ea447c2a18c1510229bb460a99bcd030ed6bde4091c466992e0dbafb3d1",
+        "positions": "c0329c898025ff05f221c2d345413adffe5f47230ffad0454cc49c082486ed0d",
+        "weights": "96a38eb47a20b3d2f71c7a59cff2d4942b6e2abc9815b3775fc285d29dd37306",
+        "orientedFacesWithCornerUV": "31a324585ea1ef1d1dd5c2fa0e9159f72340847af49e62514ed37e779edce3cc",
+        "edgesWithSharpFlags": "9758de6d92291005fce87f9b57a97a7465359efa3095eff3a39001d9725489c7"
+      },
+      "Crank_LOD0": {
+        "matrix": "eba91ea447c2a18c1510229bb460a99bcd030ed6bde4091c466992e0dbafb3d1",
+        "positions": "64f1f7ff000ee53d5a7a7355fa3437559d1915a4ea07fc722a6a27cb3585345a",
+        "weights": "65d1d24ae68aea1519e9b2ef5e2448d0d4d2b45d4702336dd5edda29147fb8d7",
+        "orientedFacesWithCornerUV": "ca30e660f1eca8cc2d0181ba2b28d46d61d24b4c86a91e8211c094ebbcaa9a41",
+        "edgesWithSharpFlags": "623ffedccfaa65d2a531e32427b0488b21b5afee6951f83b2626bed8238fc9a7"
+      },
+      "Housing_LOD0": {
+        "matrix": "eba91ea447c2a18c1510229bb460a99bcd030ed6bde4091c466992e0dbafb3d1",
+        "positions": "a1ac9352085f212a69c6df9a09308f6f05429090047787e8326a47aecce20126",
+        "weights": "02fd3a4999d42b14b53ac2ef2d00fd4c8cb3298b88f5fd7bb58721159a2c22fd",
+        "orientedFacesWithCornerUV": "420b56cbaee452acc3f6c605ebabad4ceccc69bca339f57838939541b01e6c86",
+        "edgesWithSharpFlags": "fbc8db1ec0652d82f49227c674a345af05e3c03ddf1d948b7cc8ec78b59700a8"
+      },
+      "LineRoller_LOD0": {
+        "matrix": "eba91ea447c2a18c1510229bb460a99bcd030ed6bde4091c466992e0dbafb3d1",
+        "positions": "d0539f708ff2166b236c1c8c5d283ac49f4291268850a4b78222d9d6e61ecda4",
+        "weights": "05d61830016b7c022dd67795b459c063f4f227898cd508003099d7c9e3919106",
+        "orientedFacesWithCornerUV": "4635a49b3a043ada4c60101432e2b9714603e08efe6d56203b6d1e8b5c40c2c1",
+        "edgesWithSharpFlags": "9e58e051b0e6b3894fd390092e54ae3ae26c558f09eb141757ad2a40c2132486"
+      },
+      "Lure_LOD0": {
+        "matrix": "eba91ea447c2a18c1510229bb460a99bcd030ed6bde4091c466992e0dbafb3d1",
+        "positions": "b7ecf4a771131cb3fd1e1595934534d38e8cd3fae03f725396ceaa9dadf2c1bf",
+        "weights": "237df576aa7e60c14959851de0fae0b53ee4c623c9648ffa1ee15165ddf02c75",
+        "orientedFacesWithCornerUV": "d176d80788ae7af9639e1c2284a67bcb1a95d7186671b348ac0f51f677e86c49",
+        "edgesWithSharpFlags": "d247b779e67acd02860ad1362a7d64b680b1fbc7c829759db539f880468c1d9e"
+      },
+      "Rod_LOD0": {
+        "matrix": "eba91ea447c2a18c1510229bb460a99bcd030ed6bde4091c466992e0dbafb3d1",
+        "positions": "6ad630f2bcc88ea4cf83f5378b15362306a6e438679533f2aa49abeb7963fd7c",
+        "weights": "7c1583cdb041405a501370d9bf5682c6089770297ce9a9ac37b6aca488a90c09",
+        "orientedFacesWithCornerUV": "82a0517796675e04006d255325603a295883dd48099d3ad1f9f1ab586f3892c1",
+        "edgesWithSharpFlags": "7c2fe93a48565e7c71ede03b5dd0dd16d6acbc6b674f1813622aa86436db9356"
+      },
+      "Rotor_LOD0": {
+        "matrix": "eba91ea447c2a18c1510229bb460a99bcd030ed6bde4091c466992e0dbafb3d1",
+        "positions": "9bfce3603c7067f4c44ab87e2ed713d7095ca11de428a297ba370ee74ee528eb",
+        "weights": "e88b6a890c8dc963f6471d409c4952d3d2200a19c61d66bcc832e0141f3f4515",
+        "orientedFacesWithCornerUV": "e6ea1b1f2ac11f1d5de30ba6be85f6a9cae9312c057c160d6a65bc94c6c76fbc",
+        "edgesWithSharpFlags": "f58ec8f142fd18f8133c4924027f4d609800df7120025edf5be13d06c6cad08c"
+      },
+      "Spool_LOD0": {
+        "matrix": "eba91ea447c2a18c1510229bb460a99bcd030ed6bde4091c466992e0dbafb3d1",
+        "positions": "638f035d89368562fc1fe2cf9562361e6c59bf21797cddf415b1e6dad9accdb3",
+        "weights": "230587b0646d39c67def863da0c352ef1f59d1eeca1f7058ba90cd16b6ea4028",
+        "orientedFacesWithCornerUV": "370510ae46603633e8e62f278b3485e4695a2f0b4574ec3ce5f0a13d1cfc4a78",
+        "edgesWithSharpFlags": "d445d6f54dda3c60d85d17e0b510ece8198fea8312907a73b07529835ee39197"
+      }
+    },
+    "after": {
+      "BailWire_LOD0": {
+        "matrix": "eba91ea447c2a18c1510229bb460a99bcd030ed6bde4091c466992e0dbafb3d1",
+        "positions": "c0329c898025ff05f221c2d345413adffe5f47230ffad0454cc49c082486ed0d",
+        "weights": "96a38eb47a20b3d2f71c7a59cff2d4942b6e2abc9815b3775fc285d29dd37306",
+        "orientedFacesWithCornerUV": "31a324585ea1ef1d1dd5c2fa0e9159f72340847af49e62514ed37e779edce3cc",
+        "edgesWithSharpFlags": "9758de6d92291005fce87f9b57a97a7465359efa3095eff3a39001d9725489c7"
+      },
+      "Crank_LOD0": {
+        "matrix": "eba91ea447c2a18c1510229bb460a99bcd030ed6bde4091c466992e0dbafb3d1",
+        "positions": "64f1f7ff000ee53d5a7a7355fa3437559d1915a4ea07fc722a6a27cb3585345a",
+        "weights": "65d1d24ae68aea1519e9b2ef5e2448d0d4d2b45d4702336dd5edda29147fb8d7",
+        "orientedFacesWithCornerUV": "ca30e660f1eca8cc2d0181ba2b28d46d61d24b4c86a91e8211c094ebbcaa9a41",
+        "edgesWithSharpFlags": "623ffedccfaa65d2a531e32427b0488b21b5afee6951f83b2626bed8238fc9a7"
+      },
+      "Housing_LOD0": {
+        "matrix": "eba91ea447c2a18c1510229bb460a99bcd030ed6bde4091c466992e0dbafb3d1",
+        "positions": "cca1dc37f993bd5b46fcc712cbcf158fda34f25ebf784a9b9a95bf1533e0f962",
+        "weights": "81d88d194eec0c39cada52c3a328b73e8c64170cfb9f0e4f006fdf3b28553981",
+        "orientedFacesWithCornerUV": "5b619f68c4353b08936c101dc4b33d6f684ef13dbc8767611d5b6b865158e5b4",
+        "edgesWithSharpFlags": "726fae507d88dd9a910725095c12647f8bcea196a336202cf1b03c1d0ab19550"
+      },
+      "LineRoller_LOD0": {
+        "matrix": "eba91ea447c2a18c1510229bb460a99bcd030ed6bde4091c466992e0dbafb3d1",
+        "positions": "d0539f708ff2166b236c1c8c5d283ac49f4291268850a4b78222d9d6e61ecda4",
+        "weights": "05d61830016b7c022dd67795b459c063f4f227898cd508003099d7c9e3919106",
+        "orientedFacesWithCornerUV": "4635a49b3a043ada4c60101432e2b9714603e08efe6d56203b6d1e8b5c40c2c1",
+        "edgesWithSharpFlags": "9e58e051b0e6b3894fd390092e54ae3ae26c558f09eb141757ad2a40c2132486"
+      },
+      "Lure_LOD0": {
+        "matrix": "eba91ea447c2a18c1510229bb460a99bcd030ed6bde4091c466992e0dbafb3d1",
+        "positions": "b7ecf4a771131cb3fd1e1595934534d38e8cd3fae03f725396ceaa9dadf2c1bf",
+        "weights": "237df576aa7e60c14959851de0fae0b53ee4c623c9648ffa1ee15165ddf02c75",
+        "orientedFacesWithCornerUV": "d176d80788ae7af9639e1c2284a67bcb1a95d7186671b348ac0f51f677e86c49",
+        "edgesWithSharpFlags": "d247b779e67acd02860ad1362a7d64b680b1fbc7c829759db539f880468c1d9e"
+      },
+      "Rod_LOD0": {
+        "matrix": "eba91ea447c2a18c1510229bb460a99bcd030ed6bde4091c466992e0dbafb3d1",
+        "positions": "6ad630f2bcc88ea4cf83f5378b15362306a6e438679533f2aa49abeb7963fd7c",
+        "weights": "7c1583cdb041405a501370d9bf5682c6089770297ce9a9ac37b6aca488a90c09",
+        "orientedFacesWithCornerUV": "82a0517796675e04006d255325603a295883dd48099d3ad1f9f1ab586f3892c1",
+        "edgesWithSharpFlags": "7c2fe93a48565e7c71ede03b5dd0dd16d6acbc6b674f1813622aa86436db9356"
+      },
+      "Rotor_LOD0": {
+        "matrix": "eba91ea447c2a18c1510229bb460a99bcd030ed6bde4091c466992e0dbafb3d1",
+        "positions": "9bfce3603c7067f4c44ab87e2ed713d7095ca11de428a297ba370ee74ee528eb",
+        "weights": "e88b6a890c8dc963f6471d409c4952d3d2200a19c61d66bcc832e0141f3f4515",
+        "orientedFacesWithCornerUV": "e6ea1b1f2ac11f1d5de30ba6be85f6a9cae9312c057c160d6a65bc94c6c76fbc",
+        "edgesWithSharpFlags": "f58ec8f142fd18f8133c4924027f4d609800df7120025edf5be13d06c6cad08c"
+      },
+      "Spool_LOD0": {
+        "matrix": "eba91ea447c2a18c1510229bb460a99bcd030ed6bde4091c466992e0dbafb3d1",
+        "positions": "638f035d89368562fc1fe2cf9562361e6c59bf21797cddf415b1e6dad9accdb3",
+        "weights": "230587b0646d39c67def863da0c352ef1f59d1eeca1f7058ba90cd16b6ea4028",
+        "orientedFacesWithCornerUV": "370510ae46603633e8e62f278b3485e4695a2f0b4574ec3ce5f0a13d1cfc4a78",
+        "edgesWithSharpFlags": "d445d6f54dda3c60d85d17e0b510ece8198fea8312907a73b07529835ee39197"
+      }
+    },
+    "differences": {
+      "Housing_LOD0": [
+        "positions",
+        "weights",
+        "orientedFacesWithCornerUV",
+        "edgesWithSharpFlags"
+      ]
+    },
+    "identical": false
+  },
+  "supersededBeforeInstall": {
+    "sourceCommit": "33cf4dd42d1a62b4f6c0d30ce78449d3e4a0a83b",
+    "app": "6264c9c16b60b008c14650161b972c179f952a8676a5d5ba7b01bc979e799514",
+    "reason": "visible shaft absent in source turntable; sourceA compiled only, never installed"
+  },
+  "agentVisualReview": {
+    "sourceFramesViaContactSheets": 72,
+    "gpuFirstRepeatPairs": 15,
+    "originalLod0AndLod2Viewed": true,
+    "userArtAcceptance": "NOT_RUN",
+    "nativeFinalReview": "both 16-frame contact sheets; phone reel/forcedLOD2/landed, tablet forcedLOD2, preserved paused home original images reviewed; source studio, Player and product art acceptance remain separate"
+  },
+  "retention": {
+    "status": "PASS",
+    "previousPrimaryFiles": 20,
+    "byteIdentical": true,
+    "scope": "actual current owned app containers; no restore, replay, uninstall or personal-device operations"
+  },
+  "reopen": {
+    "status": "BYTES_AND_SCREEN_CAPTURE_PASS",
+    "catches": 26,
+    "points": 4622,
+    "saveBytesUnchanged": true,
+    "saveSha256": "e3913747a21f851fbee465ecb7d406d6bbdb7c78702e1f54f6e7d23dc64d0bec",
+    "frameSha256": "d664dfe8dbb22dab8056eaf30bea3efe4664dcf23ea241437c0439417cef3eb5",
+    "automaticFishingFlags": false,
+    "qaArguments": [
+      "--ocean-save-root",
+      "--ocean-simulator-probe"
+    ],
+    "agentVisualReview": "paused home visibly shows 4622; screenshot hash unchanged"
+  },
+  "recordIntegrity": {
+    "status": "NEW_RECORDS_INTEGRITY_PASS",
+    "historicalOverall": "INCOMPLETE",
+    "baselineCompleted": 940,
+    "baselineStarts": 936,
+    "newCompleted": 34,
+    "newStarts": 34,
+    "totalCompleted": 974,
+    "totalStarts": 970,
+    "oldObjectsUnchanged": true,
+    "actualReceiptsAndBindingsVerified": true,
+    "newIntervalsDisjoint": true,
+    "overlaps": [],
+    "newFailures": [
+      {
+        "id": "75d41bd8-c781-4fa4-94de-667be2ba02d3",
+        "receipt": "measurements/rig-winding-red-20261124a.json",
+        "exitCode": 1
+      },
+      {
+        "id": "ebebcc5d-3704-4a89-9e8a-7662c71c6df8",
+        "receipt": "measurements/rig-winding-lod0-identity-20261124a.json",
+        "exitCode": 1
+      },
+      {
+        "id": "a49cb4ef-6ff5-4fa8-aa8a-09acf1fdc701",
+        "receipt": "measurements/rig-winding-lod0-identity-20261124b.json",
+        "exitCode": 1
+      },
+      {
+        "id": "995a309b-dde0-477d-8704-02ad7b5f4336",
+        "receipt": "measurements/rig-winding-shaft-red-20261124b.json",
+        "exitCode": 1
+      }
+    ],
+    "scope": "actual local state/start/completion/receipt integrity for this increment only; not formal independent CLI compliance or product acceptance"
+  },
+  "publicChecks": {
+    "status": "PASS",
+    "fontCharacters": 724,
+    "publicationTrackedFiles": 1184,
+    "scope": "font, requirements, publication/license registration, branch policy and diff checks; not art or full product acceptance"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "a16d24b9-a24a-48dd-ac3a-47953ef671c9",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "7a3a53eab623e4862464257f2ad0f2a17c0027d8ffa34444986c4dc134615836",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-25T00:34:17.335Z",
+    "finishedAt": "2026-11-25T00:34:40.851Z",
+    "durationMs": 23220.68275,
+    "exitCode": 2,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      "tools/game.py",
+      "tests",
+      "--test-platform",
+      "EditMode",
+      "--test-filter",
+      "OceanAngler.Tests.WaterlinePresentationTests.RepeatingAnUnchangedReadyPoseDoesNotMoveTheLureOrLine",
+      "--label",
+      "reflectionposecandidate20261125"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    "tools/game.py",
+    "tests",
+    "--test-platform",
+    "EditMode",
+    "--test-filter",
+    "OceanAngler.Tests.WaterlinePresentationTests.RepeatingAnUnchangedReadyPoseDoesNotMoveTheLureOrLine",
+    "--label",
+    "reflectionposecandidate20261125"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 2,
+  "startedAt": "2026-11-25T00:34:17.335Z",
+  "finishedAt": "2026-11-25T00:34:40.851Z",
+  "durationMs": 23220.68275
+}

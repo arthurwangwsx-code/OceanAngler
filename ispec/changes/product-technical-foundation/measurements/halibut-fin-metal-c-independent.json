@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "bd21ed31-d537-4247-b642-b4bf48d7c93e",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "84e696b292255d34d9f3ef6fe35f167460c8697c236d6aafb1959e4565a71d15",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-25T05:53:51.125Z",
+    "finishedAt": "2026-11-25T05:53:57.841Z",
+    "durationMs": 6692.037167,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/halibut-fin-qa/verify-metal.py",
+      "halibutFinC",
+      ".local/halibut-fin-qa/metal-c-independent.json"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/halibut-fin-qa/verify-metal.py",
+    "halibutFinC",
+    ".local/halibut-fin-qa/metal-c-independent.json"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T05:53:51.125Z",
+  "finishedAt": "2026-11-25T05:53:57.841Z",
+  "durationMs": 6692.037167
+}

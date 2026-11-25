@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "6a85145e-0b97-40e5-8b7a-40aac961ad9c",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "bb714160493a947abb92b098b1f304047a09e1a6ad0dca4c39cdd36f5dc38916",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-24T17:27:25.196Z",
+    "finishedAt": "2026-11-24T17:27:25.328Z",
+    "durationMs": 104.399583,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/rest-qa/audit-records.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/rest-qa/audit-records.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T17:27:25.196Z",
+  "finishedAt": "2026-11-24T17:27:25.328Z",
+  "durationMs": 104.399583
+}

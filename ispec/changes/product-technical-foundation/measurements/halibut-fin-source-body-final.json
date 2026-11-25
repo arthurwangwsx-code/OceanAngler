@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "536aa8cb-1d0c-4368-b44b-39d46ccac7a4",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "86b1f27242668d9e0d5214d31b89d26f92ef8cd596ef1c042fde81bb8ccb15a2",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-25T06:17:23.136Z",
+    "finishedAt": "2026-11-25T06:17:23.762Z",
+    "durationMs": 601.188,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/halibut-fin-qa/verify-source.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/halibut-fin-qa/verify-source.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T06:17:23.136Z",
+  "finishedAt": "2026-11-25T06:17:23.762Z",
+  "durationMs": 601.188
+}

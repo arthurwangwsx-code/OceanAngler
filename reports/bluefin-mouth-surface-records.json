@@ -1,0 +1,29 @@
+{
+  "status": "PASS_LOCAL_INCREMENT_INTEGRITY",
+  "baselineEnded": 1826,
+  "endedBeforeThisAudit": 38,
+  "failedOrBlockedRetained": [
+    {
+      "receipt": "measurements/hero-surface-mouth-red-20261126a.json",
+      "exitCode": 1,
+      "errorCode": null
+    },
+    {
+      "receipt": "measurements/hero-surface-editor-20261126a.json",
+      "exitCode": 2,
+      "errorCode": null
+    },
+    {
+      "receipt": "measurements/hero-surface-source-checks-20261126a.json",
+      "exitCode": 1,
+      "errorCode": null
+    }
+  ],
+  "oldMeasurementObjectsUnchanged": true,
+  "oldReceiptHashesUnchanged": true,
+  "newReceiptHashesAndBindingsCorrect": true,
+  "newEndedIntervalsSerial": true,
+  "auditOwnMeasurementPending": "7d752a13-03f2-4d33-aa3f-64c7abc5c99b",
+  "formalHistoricalAudit": "INCOMPLETE",
+  "scope": "Only local object/hash/receipt binding and new-increment serial chronology; no retroactive recovery of older missing execution evidence, physical/art or full-product acceptance"
+}

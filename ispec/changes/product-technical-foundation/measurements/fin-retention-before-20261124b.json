@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "e737018d-64b8-4b9c-b70e-96271255bd0b",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "6859d87fb0956098becc5f052ad3032253aa1fe07eec4a46452586325d9c2ea9",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-24T12:19:09.694Z",
+    "finishedAt": "2026-11-24T12:19:16.606Z",
+    "durationMs": 6873.516083,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/fin-tissue-qa/retention-b.py",
+      "before"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/fin-tissue-qa/retention-b.py",
+    "before"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T12:19:09.694Z",
+  "finishedAt": "2026-11-24T12:19:16.606Z",
+  "durationMs": 6873.516083
+}

@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "a3a5c73b-76ad-426a-8fae-9c6d9aae3a4b",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "175c5b1ce9f8be3ffda86a60df81721cdbf193b4cd658ab44134142e1dc88935",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-25T08:58:46.419Z",
+    "finishedAt": "2026-11-25T08:58:46.731Z",
+    "durationMs": 269.006583,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/bluefin-eye-qa/verify-source.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/bluefin-eye-qa/verify-source.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T08:58:46.419Z",
+  "finishedAt": "2026-11-25T08:58:46.731Z",
+  "durationMs": 269.006583
+}

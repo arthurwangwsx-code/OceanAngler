@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "9c4f279d-f273-4f4b-b901-bbb2240b28ed",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "03dd1b5f21404ad1f0ed216b6b5e92bad46ddab89ab572daa79c5440d21b29ca",
+    "category": "e2e",
+    "executable": "python3",
+    "startedAt": "2026-11-25T04:47:50.444Z",
+    "finishedAt": "2026-11-25T04:58:53.855Z",
+    "durationMs": 663349.692542,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/deep-lighting-qa/sample-species.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/deep-lighting-qa/sample-species.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T04:47:50.444Z",
+  "finishedAt": "2026-11-25T04:58:53.855Z",
+  "durationMs": 663349.692542
+}

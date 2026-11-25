@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "0c4d318f-9bfc-47d6-888b-d277e71d8824",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "d171f85b6880c0ef056bb9905d5a292741d41a8897faf9d0f87d6e9e1f87e85e",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-24T23:07:54.399Z",
+    "finishedAt": "2026-11-24T23:08:03.144Z",
+    "durationMs": 8719.322084,
+    "exitCode": 2,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      "tools/game.py",
+      "tests",
+      "--test-platform",
+      "EditMode",
+      "--test-filter",
+      "IdleAndExpiredSplashNeverUploadNonFiniteShaderInputs",
+      "--label",
+      "waterlinesplashred20261125a"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    "tools/game.py",
+    "tests",
+    "--test-platform",
+    "EditMode",
+    "--test-filter",
+    "IdleAndExpiredSplashNeverUploadNonFiniteShaderInputs",
+    "--label",
+    "waterlinesplashred20261125a"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 2,
+  "startedAt": "2026-11-24T23:07:54.399Z",
+  "finishedAt": "2026-11-24T23:08:03.144Z",
+  "durationMs": 8719.322084
+}

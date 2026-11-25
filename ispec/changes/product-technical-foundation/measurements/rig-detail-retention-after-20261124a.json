@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "9dd4ddbc-58a7-4a75-9520-82dacb0bf393",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "c8cdc77e110b80629400486e8e9e940ef7abdb009b23d1226db5c667bb479a9d",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-24T14:21:16.082Z",
+    "finishedAt": "2026-11-24T14:21:20.516Z",
+    "durationMs": 4400.8555,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/rig-detail-qa/retention.py",
+      "after"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/rig-detail-qa/retention.py",
+    "after"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T14:21:16.082Z",
+  "finishedAt": "2026-11-24T14:21:20.516Z",
+  "durationMs": 4400.8555
+}

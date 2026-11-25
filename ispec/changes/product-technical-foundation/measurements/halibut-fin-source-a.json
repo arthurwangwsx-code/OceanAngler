@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "938bd388-ffdb-4970-b987-ccbdaf4b73f6",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "214655a646bdc80eaac1b31ec323bbaf42e13667245d949819ba497f0f652bc9",
+    "category": "test",
+    "executable": "Blender",
+    "startedAt": "2026-11-25T05:26:31.547Z",
+    "finishedAt": "2026-11-25T05:26:36.460Z",
+    "durationMs": 4883.579041,
+    "exitCode": 1,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "/Applications/Blender.app/Contents/MacOS/Blender",
+    "args": [
+      "--background",
+      "art/source/halibut/Halibut.blend",
+      "--threads",
+      "4",
+      "--python-exit-code",
+      "1",
+      "--python",
+      "tools/art_validate_halibut_fin_motion.py",
+      "--",
+      "--reference",
+      ".local/halibut-fin-qa/reference.json",
+      "--output",
+      ".local/halibut-fin-qa/source-a"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "/Applications/Blender.app/Contents/MacOS/Blender",
+    "--background",
+    "art/source/halibut/Halibut.blend",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "tools/art_validate_halibut_fin_motion.py",
+    "--",
+    "--reference",
+    ".local/halibut-fin-qa/reference.json",
+    "--output",
+    ".local/halibut-fin-qa/source-a"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 1,
+  "startedAt": "2026-11-25T05:26:31.547Z",
+  "finishedAt": "2026-11-25T05:26:36.460Z",
+  "durationMs": 4883.579041
+}

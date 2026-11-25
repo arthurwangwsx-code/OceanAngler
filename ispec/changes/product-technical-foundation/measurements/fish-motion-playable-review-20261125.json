@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "4aa0dba9-eadf-4870-a525-abacf386c029",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "ee7d50889ef5ff166e98f1349ecb40cfd68264715486029f5ace6422ca8c5b8f",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-24T21:37:13.682Z",
+    "finishedAt": "2026-11-24T21:37:40.870Z",
+    "durationMs": 27161.269666,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      "tools/game.py",
+      "motion-review",
+      "--label",
+      "fishmotion20261125b",
+      "--review-target",
+      "ios",
+      "--motion-reference",
+      ".local/fish-motion-qa/Bluefin-before.fbx"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    "tools/game.py",
+    "motion-review",
+    "--label",
+    "fishmotion20261125b",
+    "--review-target",
+    "ios",
+    "--motion-reference",
+    ".local/fish-motion-qa/Bluefin-before.fbx"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T21:37:13.682Z",
+  "finishedAt": "2026-11-24T21:37:40.870Z",
+  "durationMs": 27161.269666
+}

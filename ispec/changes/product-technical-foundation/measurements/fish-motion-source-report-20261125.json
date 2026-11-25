@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "e0daeae9-c2f1-42f9-b561-068cbaf2afdc",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "023cf68165861e937c5c2951244554a0b0f6b75336521353b0d3d64cb6baf659",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-24T21:59:48.881Z",
+    "finishedAt": "2026-11-24T21:59:49.102Z",
+    "durationMs": 161.29904199999987,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/fish-motion-qa/prepare-source-report.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/fish-motion-qa/prepare-source-report.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T21:59:48.881Z",
+  "finishedAt": "2026-11-24T21:59:49.102Z",
+  "durationMs": 161.29904199999987
+}

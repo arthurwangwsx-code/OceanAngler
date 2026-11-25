@@ -1,0 +1,186 @@
+{
+  "status": "ISOLATED_ANATOMICAL_CANDIDATE_ENGINEERING_PASS_ART_PARTIAL",
+  "baseCommit": "ca44a18fc533f263cb98d5409132b933b53385a0",
+  "implementation": "IN_PROGRESS",
+  "acceptance": {
+    "sourceEngineering": "PASS",
+    "unityImport": "PASS",
+    "targetedEditor": "PASS",
+    "isolatedMetal": "PASS",
+    "anatomyVisual": "PARTIAL",
+    "mouthVisual": "FAIL",
+    "naturalMotion": "NOT_ACCEPTED",
+    "science": "PENDING",
+    "user": "PENDING",
+    "A1_A3": "NOT_ACCEPTED",
+    "encounterJournalIntegration": "NOT_RUN",
+    "currentCandidatePlayer": "NOT_RUN",
+    "physical": "NOT_RUN",
+    "completeProduct": "PARTIAL"
+  },
+  "lodTriangles": {
+    "Halibut_LOD0": 20336,
+    "Halibut_LOD1": 8134,
+    "Halibut_LOD2": 3049
+  },
+  "sourceChecks": 122,
+  "sampledPoses": 35,
+  "bodyWidth": 0.9498222470283508,
+  "bodyThickness": 0.15391111373901367,
+  "tailConcavity": 0.1788945198059082,
+  "distanceUVReduction": [
+    {
+      "lod": 1,
+      "beforeMin": -0.009893481619656086,
+      "beforeMax": 1.0032761096954346,
+      "clampedCoordinates": 376
+    },
+    {
+      "lod": 2,
+      "beforeMin": -0.017021046951413155,
+      "beforeMax": 1.010401725769043,
+      "clampedCoordinates": 275
+    }
+  ],
+  "editorTests": {
+    "passed": 5,
+    "failed": 0,
+    "cases": [
+      "OceanAngler.Tests.BluefinMotionTests.RuntimeLoopsKeepClosedValueAndMatchingBoundaryVelocity",
+      "OceanAngler.Tests.HalibutAssetTests.CandidateUsesSevenEditableClipsWithClosedCyclicBoundaries",
+      "OceanAngler.Tests.HalibutAssetTests.ImportedCandidatePreservesHorizontalFlatBodyAndBothEyedSideEyes",
+      "OceanAngler.Tests.HalibutAssetTests.MouthHookMovesWithActualImportedJawAndSwimDeformsTail",
+      "OceanAngler.Tests.HalibutAssetTests.TechnicalTexturesRemainLinearAndOrdinaryFishMapsStayWithinOneK"
+    ]
+  },
+  "metal": {
+    "status": "PASS",
+    "scope": "isolated imported halibut Editor Metal; not Player, science, visual or device acceptance",
+    "graphics": "Metal",
+    "images": 24,
+    "pairs": 12,
+    "maxChannelDifference": 0,
+    "firstDrawStable": true,
+    "biteHookTravel": 0.09487726539373398
+  },
+  "finalPngDecoded": 67,
+  "video": {
+    "width": 960,
+    "height": 640,
+    "r_frame_rate": "12/1",
+    "nb_read_frames": "36",
+    "scope": "source studio turntable at 12fps; not runtime performance"
+  },
+  "baseline": {
+    "filesChecked": 968,
+    "byteIdentical": 966,
+    "expectedChanged": [
+      "art/asset-manifest.json",
+      "game/Assets/OceanAngler/Editor/BluefinMotionCurves.cs"
+    ],
+    "allExistingRuntimeAndModelBytesUnchanged": true
+  },
+  "existingNativeArtifact": {
+    "appDigest": "70218eb51543d4542eeffdf1f4d512e53f0b3cc0cc96ae36e00c92869be0aa43",
+    "byteIdentical": true,
+    "newBuild": false,
+    "newInstall": false
+  },
+  "failedAttempts": [
+    {
+      "receipt": "halibut-source-validation-a.json",
+      "reason": "distance LOD UV excursions"
+    },
+    {
+      "receipt": "halibut-import-tests-a.json",
+      "reason": "3 failures: duplicated FBX scale in fixture, static-curve noise, single phase local-unit motion sample"
+    },
+    {
+      "receipt": "halibut-import-tests-b.json",
+      "reason": "1 retained eye coordinate failure, confirmed 100x duplicated scale"
+    }
+  ],
+  "visualRejections": [
+    {
+      "label": "halibut-review-b",
+      "reason": "overlapping studio LODs and clipped tail"
+    },
+    {
+      "label": "halibutA",
+      "reason": "eye closeup captured wrong side"
+    },
+    {
+      "label": "halibutB/bite-mouth",
+      "reason": "lip/gum connection unfinished; teeth appear detached; do not integrate as finished art"
+    }
+  ],
+  "remaining": [
+    "mouth rim, gum and gill anatomy",
+    "eye sockets and material finesse",
+    "marginal fin and pectoral natural motion",
+    "user/science/A1-A3 review",
+    "production selection and journal framing",
+    "candidate iPhone/iPad Simulator and saved progress",
+    "physical devices, child usability, TestFlight-source install"
+  ],
+  "personalPhoneOrTestFlightChange": false,
+  "historicalRecordAudit": "INCOMPLETE",
+  "evidence": {
+    "halibut-evidence-verify.json": "8ac30ac7826b11064c58f28f1bb465ee4ae6b4bfc1dfe66dc6218094b656d0bf",
+    "halibut-import-tests-a.json": "69a2ecf689188506a51707299102ea0ec1b1fb6f2d41bfee6eb7e75a4aa541b4",
+    "halibut-import-tests-b.json": "660e883040945108a3028a5cfba24292465e4813eee6ee25e734cde8a6ccd2e2",
+    "halibut-import-tests-c.json": "30256246784e99d83608ce1d6b2445f2db9827a6e33380862cde4c89d0378496",
+    "halibut-metal-review-a.json": "8603e046f2cd7cb23be7c0c1e1f191ffeda23c5b591643c9cbeb65f1b9b55ee6",
+    "halibut-metal-review-b.json": "15e1f2dc9fb41426a78e249c5ce7ed71640bcd266166a4e70a19bfca8ab63197",
+    "halibut-source-build-a.json": "2624b53703f1c39c16d05f73759a2038d8c8edf5af1a2b3c7740110ccbd61938",
+    "halibut-source-build-b.json": "7c5dd4eec782530bd1c68b6d085eae20478d2d1043808437dc89de8469763f5c",
+    "halibut-source-build-c.json": "7d93e36e20f972ef4d8bd321b61e28ede12efec74a88ab5d563ea640ad83fea9",
+    "halibut-source-review-b.json": "d748b0d194af5e3853f3f03b93cd69791587e69b92d6ccdba14d66fca69a7b29",
+    "halibut-source-review-c.json": "218bdabc3fc2a3b194543fd20546cd5ae2ad7f88e3e02c178f9f7ebaa0f153e2",
+    "halibut-source-turntable-c.json": "f2b607018326fcf3cc9bff2104263a1c37a214a3b02107bec7ea9ae65d49a10c",
+    "halibut-source-validation-a.json": "be5a996323ac5fb77eed2515823a2d585eeba9c5713ae8d50b94b6e6967c7b60",
+    "halibut-source-validation-b.json": "ec3e7c7f5958cb60b8a0d8d620e7d3c1feb90e2178f36f451e3a653169a2f043",
+    "halibut-source-validation-c.json": "c431cc1586f7d1b745d7f60994863001851b9eb4e941d110ac825f3cebbb83e1",
+    "halibut-turntable-video.json": "b76562f0cff902eeb316c779929d3a58c8619a99bf34c9212e70450d32283729",
+    "halibut-unity-import-a.json": "a7fc3df1dee4c84091c50578de451493b1d52fa49946d77b392bdb318dd00072"
+  },
+  "candidateSource": {
+    "art/source/halibut/Halibut.blend": "bda33d70f23650259dbd309d6457c126f112e621d277275e8c22ae065ac2aeeb",
+    "game/Assets/OceanAngler/Art/Halibut/Halibut.fbx": "bf74e3407e9536d00962156db93c1df9ebb0b6a9538b1d8dfdadd53fe10dae2c",
+    "game/Assets/OceanAngler/Resources/Models/Halibut.prefab": "5dc5b2de1b8022dd47e013864f49566902e6c4bbd9f687c1c1b22083531b6ec7"
+  },
+  "recordIntegrity": {
+    "status": "PASS_CURRENT_INCREMENT_EXCLUDING_RUNNING_SELF",
+    "historicalOverall": "INCOMPLETE",
+    "newCompleted": 21,
+    "newStarts": 22,
+    "oldObjectsUnchanged": true,
+    "receiptsAndBindingsVerified": true,
+    "completedIntervalsDisjoint": true,
+    "onlyRunningSelfPending": true,
+    "failuresRetained": [
+      {
+        "receipt": "measurements/halibut-source-validation-a.json",
+        "exitCode": 1
+      },
+      {
+        "receipt": "measurements/halibut-import-tests-a.json",
+        "exitCode": 2
+      },
+      {
+        "receipt": "measurements/halibut-import-tests-b.json",
+        "exitCode": 2
+      }
+    ],
+    "scope": "Own local state/receipt integrity; not formal independent CLI audit or product acceptance"
+  },
+  "toolRegression": {
+    "passed": 12,
+    "failed": 0
+  },
+  "foundationValidation": {
+    "status": "PASS",
+    "requirements": 12,
+    "tasks": 14
+  }
+}

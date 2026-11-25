@@ -1,0 +1,133 @@
+{
+  "status": "PASS_TARGETED_TEST_FIXTURE",
+  "scope": "Callback injection and real EventSystem continue with in-memory meter boundaries only; not real OS focus, device, natural gameplay, GPU or art qualification",
+  "runtimeFilesByteIdentical": 462,
+  "playPassed": 6,
+  "labelChecksInSuite": 808,
+  "fixtureReceipts": {
+    "meter-values-before-after": {
+      "status": "PASS",
+      "scope": "Headless real UI meter boundary and optional lifecycle-callback injection; not OS focus, natural fishing, child or device qualification",
+      "injectedFocusLoss": false,
+      "saveBytesUnchanged": true,
+      "hands": 2,
+      "valuesPerHand": 101,
+      "labelChecks": 404,
+      "focusPauses": 0,
+      "explicitResumes": 0,
+      "postSaveSha256": "1ea96bf9a4e0c4339942fb11fcfb11d7ea3d4be52082f86b773a145a43ff3387",
+      "postSaveChecksumValid": true,
+      "syntheticCatchOrPointsPersisted": false
+    },
+    "meter-focus-before-after": {
+      "status": "PASS",
+      "scope": "Headless real UI meter boundary and optional lifecycle-callback injection; not OS focus, natural fishing, child or device qualification",
+      "injectedFocusLoss": true,
+      "saveBytesUnchanged": true,
+      "hands": 2,
+      "valuesPerHand": 101,
+      "labelChecks": 404,
+      "focusPauses": 2,
+      "explicitResumes": 2,
+      "postSaveSha256": "1ea96bf9a4e0c4339942fb11fcfb11d7ea3d4be52082f86b773a145a43ff3387",
+      "postSaveChecksumValid": true,
+      "syntheticCatchOrPointsPersisted": false
+    }
+  },
+  "controlledRed": "Fighting paused=True page=出海 at first meter value0",
+  "historicalMeadowNullCause": "UNCONFIRMED_NOT_UNIQUELY_ATTRIBUTABLE",
+  "existingNativeArtifact": {
+    "source": {
+      "sourceCommit": "0d143e006d5b272f89426e508752e7cb0ff26783",
+      "sourceDigest": "234555190fc7fd8990365d85c275222730b692d79effbde2658419bb2a53d077",
+      "projectSettingsSha256": "bea92e9b5c8b678dd130d48c1f43acaf939b56cacce33928a5a45af6da0a4585"
+    },
+    "appDigest": "70218eb51543d4542eeffdf1f4d512e53f0b3cc0cc96ae36e00c92869be0aa43",
+    "byteIdentical": true,
+    "newNativeBuild": false
+  },
+  "runtimeOrModelChange": false,
+  "productAcceptance": "PARTIAL",
+  "testSourcePath": "game/Assets/OceanAngler/Tests/PlayMode/ImmersiveNavigationTests.cs",
+  "testSourceSha256": "63f1190861ca681d6f3fab1dc118d7ed6adff0513de03e7cdac04a7fd38d6f92",
+  "sourceBaseCommit": "93d7165f12c2de7f10881f579e4b3c3a17bd8935",
+  "runtimeManifestSha256": "c83d8fc10421ad76e67cdb3ef68c4681cb9254c2c6d637fe4bd972887d57acd1",
+  "historicalRecordAudit": "INCOMPLETE",
+  "personalPhoneUntouched": true,
+  "testflightUnchanged": true,
+  "newNativeBuild": false,
+  "incrementRecordAudit": {
+    "status": "PASS_CURRENT_INCREMENT_9_COMPLETED_9_STARTED",
+    "historicalOverall": "INCOMPLETE",
+    "newCompleted": 9,
+    "newStarts": 9,
+    "oldObjectsUnchanged": true,
+    "receiptsAndBindingsVerified": true,
+    "completedIntervalsDisjoint": true,
+    "onlyRunningSelfPending": false,
+    "failuresRetained": [
+      {
+        "receipt": "measurements/meter-focus-red-20261125.json",
+        "exitCode": 2
+      }
+    ],
+    "scope": "Own actual local state/receipt integrity, not formal independent CLI audit or product acceptance",
+    "selfReceiptVerified": true
+  },
+  "measurements": [
+    {
+      "id": "0cf219c0-8edc-4a00-b2b8-568ebd39a8a2",
+      "receipt": "measurements/meter-focus-red-20261125.json",
+      "exitCode": 2,
+      "durationMs": 16505.621125
+    },
+    {
+      "id": "0826b039-236d-4f51-bb0e-6f3535587aeb",
+      "receipt": "measurements/meter-focus-green-20261125.json",
+      "exitCode": 0,
+      "durationMs": 17541.528625
+    },
+    {
+      "id": "9fd23980-b2a8-49b0-b557-aaf3d9723998",
+      "receipt": "measurements/meter-fixture-suite-20261125.json",
+      "exitCode": 0,
+      "durationMs": 58886.111542
+    },
+    {
+      "id": "5ade5d54-134b-4bb0-a676-4acbffe49a3a",
+      "receipt": "measurements/meter-fixture-suite-b-20261125.json",
+      "exitCode": 0,
+      "durationMs": 57938.457542
+    },
+    {
+      "id": "b7be8d60-ae10-4285-837c-d03f1db36e91",
+      "receipt": "measurements/meter-fixture-ledger-proof-20261125.json",
+      "exitCode": 0,
+      "durationMs": 482.14650000000006
+    },
+    {
+      "id": "61d6c65f-acaf-43dc-9c89-0703f119d073",
+      "receipt": "measurements/meter-fixture-public-validate-20261125.json",
+      "exitCode": 0,
+      "durationMs": 697.7314999999999
+    },
+    {
+      "id": "a872718a-2178-47de-9950-7376cfeb020b",
+      "receipt": "measurements/meter-fixture-public-audit-20261125.json",
+      "exitCode": 0,
+      "durationMs": 677.840625
+    },
+    {
+      "id": "323f5d6a-ef6f-4061-9f41-ceb772a31654",
+      "receipt": "measurements/meter-fixture-final-binding-20261125.json",
+      "exitCode": 0,
+      "durationMs": 1173.205125
+    },
+    {
+      "id": "02e35d28-18d7-42a1-b5a2-380981f6358a",
+      "receipt": "measurements/meter-fixture-final-records-20261125.json",
+      "exitCode": 0,
+      "durationMs": 202.34912500000019
+    }
+  ]
+}

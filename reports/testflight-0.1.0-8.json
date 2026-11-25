@@ -1,0 +1,133 @@
+{
+  "verifiedAt": "2026-11-24T21:17:00.970948+00:00",
+  "appId": "6838308856",
+  "bundleId": "com.arthur.OceanAngler",
+  "version": "0.1.0",
+  "build": "8",
+  "processingState": "VALID",
+  "buildId": "c27cf68b-2161-445f-8ca6-4ec0756e7500",
+  "actualInstallation": "NOT_RUN",
+  "internalBuildState": "IN_BETA_TESTING",
+  "sourceCommit": "1bdfa785237701ab2c7675031142d526f66c0e28",
+  "sourceDigest": "32c455de065963cf5d659193ba860809444de9ffcb7f5fefa36202619aa781cd",
+  "nativeExport": "PASS",
+  "nativeDigest": "0e94937ce6c0595704db88359a8209ffa9ac94760ce41efd280dc4c9f197ed74",
+  "archiveSignatureAndIdentity": "PASS",
+  "archiveDigest": "0716adee3588b2875bdd95bb1be3379e83f729ec6553c1fc4dead729c02f15ee",
+  "internalOnlyExport": "PASS",
+  "localExportIpaBytes": 114566412,
+  "localExportIpaSha256": "392b5a452bcedbfcb70f04c2cf42708f63901c8420a0b23dce32eb12a3fc7bff",
+  "uploadTransport": "PASS",
+  "buildAudienceType": "INTERNAL_ONLY",
+  "usesNonExemptEncryption": false,
+  "uploadedDate": "2026-11-24T13:12:10-08:00",
+  "expirationDate": "2027-02-22T13:12:10-08:00",
+  "groupName": "OceanAngler Personal",
+  "isInternalGroup": true,
+  "publicLinkEnabled": false,
+  "authorizedAccountsOnly": true,
+  "approvedAccountCount": 2,
+  "accessibleGroups": 1,
+  "explicitTesterEmail": "arthur.wang.wsx@gmail.com",
+  "explicitTesterInvitationState": "INVITED",
+  "testerCount": 2,
+  "assignedBuild": true,
+  "betaNotes": "VERIFIED",
+  "feedbackEmail": "arthur.wang.wsx@gmail.com",
+  "minimumOS": "17.0",
+  "deviceFamilies": [
+    1,
+    2
+  ],
+  "staticPermissionUsageKeys": [],
+  "networkBehaviorAcceptance": "NOT_RUN",
+  "physical20MinuteQualification": "NOT_RUN",
+  "artQualification": "PARTIAL",
+  "overallProductAcceptance": "PARTIAL",
+  "contentScope": "Cumulative build7 plus pectoral curve, distance fin detail, neutral body albedo and HUD meter outline; no scoring, odds or save schema changes",
+  "editorTests": {
+    "result": "Passed",
+    "total": "60",
+    "passed": "60",
+    "failed": "0",
+    "end-time": "2026-11-24 20:40:09Z"
+  },
+  "headlessPlayModeTests": {
+    "result": "Passed",
+    "total": "21",
+    "passed": "21",
+    "failed": "0",
+    "end-time": "2026-11-24 20:57:22Z"
+  },
+  "releaseGuardTests": 12,
+  "actualTouchAcceptance": "NOT_RUN",
+  "currentReleasePlayerVisualAcceptance": "NOT_RUN",
+  "priorSimulatorEvidence": {
+    "report": "reports/bluefin-neutral-albedo.json",
+    "frozenSource": "201534b0df86767bfcf9434dde2dc2e2fc74800e",
+    "scope": "Same game implementation before release build/settings/notes update; dual15frame normal fishing and menus, not this signed release on physical devices"
+  },
+  "actualDeviceProgressMigration": "NOT_RUN",
+  "sourceCi": {
+    "commit": "1bdfa785237701ab2c7675031142d526f66c0e28",
+    "status": "PASS",
+    "url": "https://github.com/arthurwangwsx-code/OceanAngler/actions/runs/45486406208"
+  },
+  "metrics": {
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "binding": "PASS",
+    "independentReceiptAudit": "INCOMPLETE",
+    "incrementIntegrity": {
+      "status": "NEW_RECORDS_INTEGRITY_PASS",
+      "historicalOverall": "INCOMPLETE",
+      "baselineCompleted": 1155,
+      "baselineStarts": 1150,
+      "newCompleted": 25,
+      "newStarts": 25,
+      "totalCompleted": 1180,
+      "totalStarts": 1175,
+      "oldObjectsUnchanged": true,
+      "actualReceiptsAndBindingsVerified": true,
+      "newIntervalsDisjoint": true,
+      "overlaps": [],
+      "newFailures": [],
+      "scope": "actual local state/start/completion/receipt integrity for this increment only; not formal independent CLI compliance or product acceptance"
+    }
+  },
+  "journeys": {
+    "content-journey": {
+      "status": "PASS",
+      "rounds": 30,
+      "points": 5547,
+      "catches": 30,
+      "duplicateReleaseTaps": 30,
+      "inspectedSpecies": 12,
+      "equippedGear": 20,
+      "sceneRestart": {
+        "status": "PASS",
+        "scope": "headless scene/controller reload, not OS process restart",
+        "points": 5547,
+        "catches": 30,
+        "observations": 3
+      },
+      "scope": "headless PlayMode EventSystem journey; no rendered-frame/device acceptance"
+    },
+    "continuous-journey": {
+      "status": "PASS",
+      "rounds": 20,
+      "points": 3767,
+      "catches": 20,
+      "duplicateReleaseTaps": 0,
+      "inspectedSpecies": 0,
+      "equippedGear": 0,
+      "sceneRestart": {
+        "status": "PASS",
+        "scope": "headless scene/controller reload, not OS process restart",
+        "points": 3767,
+        "catches": 20,
+        "observations": 3
+      },
+      "scope": "headless PlayMode EventSystem journey; no rendered-frame/device acceptance"
+    }
+  }
+}

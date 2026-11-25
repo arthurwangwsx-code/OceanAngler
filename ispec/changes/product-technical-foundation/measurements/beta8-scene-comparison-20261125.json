@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "9569df02-a981-4929-a7d9-99675bd9aa1e",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "cf2bd67b177809788fcda0c1c3f844573565bee32477487c3499e4545a0ae912",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-24T20:37:44.206Z",
+    "finishedAt": "2026-11-24T20:37:44.391Z",
+    "durationMs": 153.32624999999996,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/beta8-qa/compare_scene.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/beta8-qa/compare_scene.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T20:37:44.206Z",
+  "finishedAt": "2026-11-24T20:37:44.391Z",
+  "durationMs": 153.32624999999996
+}

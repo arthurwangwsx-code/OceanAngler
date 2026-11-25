@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "b3987425-5954-4345-88a3-bf3c7c1caf1e",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "f9d8db2de9df713c43cf54654a1d219ce2d77dd756dbe4be2a5f93567e74b62e",
+    "category": "e2e",
+    "executable": "python3",
+    "startedAt": "2026-11-25T12:56:23.280Z",
+    "finishedAt": "2026-11-25T12:56:49.653Z",
+    "durationMs": 26335.893957999997,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      "tools/game.py",
+      "gill-review",
+      "--review-target",
+      "ios",
+      "--label",
+      "bluefingill20261125motionsa"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    "tools/game.py",
+    "gill-review",
+    "--review-target",
+    "ios",
+    "--label",
+    "bluefingill20261125motionsa"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T12:56:23.280Z",
+  "finishedAt": "2026-11-25T12:56:49.653Z",
+  "durationMs": 26335.893957999997
+}

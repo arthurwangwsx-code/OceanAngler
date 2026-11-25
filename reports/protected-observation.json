@@ -1,0 +1,137 @@
+{
+  "implementation": "IMPLEMENTED",
+  "interactionAcceptance": "PARTIAL",
+  "artAcceptance": "PROTOTYPE_A0_NOT_ACCEPTED",
+  "overallProductAcceptance": "PARTIAL",
+  "sourceBaseCommit": "6411781878e8f84ef241efa479185e7aeaf8c924",
+  "sourceDigest": "f7ecd9b8ad92e4aae517b10e4884e1b8b7328d2c235dd459f1d8a7b5303e3c91",
+  "editor": {
+    "result": "Passed",
+    "total": "46",
+    "passed": "46",
+    "failed": "0",
+    "end-time": "2026-11-23 23:16:48Z"
+  },
+  "headlessPlayMode": {
+    "result": "Passed",
+    "total": "9",
+    "passed": "9",
+    "failed": "0",
+    "end-time": "2026-11-23 23:18:05Z"
+  },
+  "macCompilation": "PASS",
+  "nativePlayer": "NOT_RUN; CUA observed locked Mac this turn",
+  "physicalDevice": "NOT_RUN",
+  "childAndParent": "NOT_RUN",
+  "testFlightBuild4IncludesThisChange": false,
+  "testFlightFrozenSource": "ee7ba501a8922b01bffe2cb60fd4f793e3b5914e",
+  "gpu": {
+    "status": "PASS",
+    "scope": "A0 interaction models, isolated Editor Metal samples, no UI/player/device/art acceptance",
+    "graphics": "Metal",
+    "maximumInitialDifference": 0.0,
+    "initialDrawSamples": 3,
+    "images": 13,
+    "width": 1440,
+    "height": 900,
+    "species": [
+      {
+        "id": "green-turtle",
+        "triangles": 5824,
+        "parts": 16,
+        "hasCollider": false,
+        "catchVisual": false
+      },
+      {
+        "id": "bottlenose-dolphin",
+        "triangles": 4124,
+        "parts": 9,
+        "hasCollider": false,
+        "catchVisual": false
+      },
+      {
+        "id": "whale-shark",
+        "triangles": 8928,
+        "parts": 19,
+        "hasCollider": false,
+        "catchVisual": false
+      }
+    ]
+  },
+  "viewedIndependentImages": 10,
+  "registeredOriginalImages": 14,
+  "rejectedFirstDrawCandidate": {
+    "engineCommand": "PASS within original scope",
+    "visual": "REJECTED_FIRST_DRAW_COLOR",
+    "retained": true
+  },
+  "saveSchema": {
+    "accepted": [
+      1,
+      2
+    ],
+    "firstObservationUpgradesTo": 2,
+    "future3Rejected": true,
+    "oldBuild4RejectsVersion2": true,
+    "actualDeviceUpgradeAndRollback": "NOT_RUN"
+  },
+  "observationRecords": {
+    "ids": [
+      "green-turtle",
+      "bottlenose-dolphin",
+      "whale-shark"
+    ],
+    "rewards": 0,
+    "catchCountAndTasksUnchanged": true,
+    "duplicateDoesNotWrite": true,
+    "saveFailureRetry": "PASS"
+  },
+  "sceneGeometry": {
+    "layouts": 2,
+    "sampledPoses": 512,
+    "environmentTriangleBounds": 137054,
+    "result": "PASS",
+    "scope": "Sampled aggregate turtle renderer AABBs against all three static bay LOD triangle AABBs; not continuous collision/occlusion or other habitat qualification"
+  },
+  "journalLayout": {
+    "species": 3,
+    "widths": [
+      240,
+      310,
+      500
+    ],
+    "cases": 9,
+    "result": "PASS"
+  },
+  "font": {
+    "characters": 718,
+    "verification": "PASS"
+  },
+  "metrics": {
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "binding": "VERIFIED",
+    "independentReceiptAudit": "INCOMPLETE",
+    "verifiedMeasurements": [
+      "fc11e668-ce00-43e1-9a43-39668b7729bc",
+      "10b86713-a2c3-4d13-bf90-08ad19b831fd",
+      "d56fa256-1ae8-48d4-ac5d-2d037e7a48b5",
+      "bee01e5f-b811-4865-9751-d4722c3ba1ba",
+      "331ac575-b3ac-4dd7-b37e-de087178f509",
+      "3c0aeece-57b1-4ea6-b96a-5febdc0067ef",
+      "7866ae6b-6409-4d28-8098-d54f40ae8c05",
+      "1ce6ea53-580a-4700-945b-069bbf57d61a",
+      "4c294bab-3faa-48f1-9fd7-0fbda79772a0",
+      "f43c8912-9bfb-405a-b35a-f7f2ef9cedc2",
+      "ad25b837-8dfd-489b-a321-8dcee00bfc29",
+      "743e545c-7670-4ae2-bfef-0498d0777c86",
+      "8276a287-2724-4e87-9adc-45574c42a4d1",
+      "7989b99e-ccd4-4009-868a-60b2de09b9fe",
+      "831baa62-6dba-4202-b676-8dba3522bc7c"
+    ]
+  },
+  "publicationAudit": {
+    "status": "PASS",
+    "trackedFiles": 598,
+    "measurement": "7989b99e-ccd4-4009-868a-60b2de09b9fe"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "218559d3-b9b6-4f4f-8ebc-b2550b80b40a",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "424d47bf6071d8b028bfa8b74c070db09d466bbaa8847de7d2fac55abf77739e",
+    "category": "compile",
+    "executable": "python3",
+    "startedAt": "2026-11-24T12:20:20.345Z",
+    "finishedAt": "2026-11-24T12:24:20.333Z",
+    "durationMs": 239949.12541699997,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/fin-tissue-qa/build-b.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/fin-tissue-qa/build-b.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T12:20:20.345Z",
+  "finishedAt": "2026-11-24T12:24:20.333Z",
+  "durationMs": 239949.12541699997
+}

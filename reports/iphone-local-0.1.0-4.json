@@ -1,0 +1,54 @@
+{
+  "verifiedAt": "2026-11-23T23:56:28.833082+00:00",
+  "status": "INSTALLED_LAUNCHED_AND_RUNNING",
+  "appName": "海洋小钓手",
+  "bundleId": "com.arthur.OceanAngler",
+  "version": "0.1.0",
+  "build": "4",
+  "sourceCommit": "ee7ba501a8922b01bffe2cb60fd4f793e3b5914e",
+  "sourceDigest": "47d2298e7964469402089adc96cbdd21939c5b3163194a1ad28344db8adc1b06",
+  "distribution": "LOCAL_AD_HOC_SINGLE_DEVICE",
+  "deviceModel": "iPhone 17 Pro Max",
+  "osVersion": "27.3",
+  "authorizedDeviceCount": 1,
+  "existingSigningCertificateReused": true,
+  "newCertificateCreated": false,
+  "originalTestFlightArchiveUnchanged": true,
+  "unityGameDataUnchanged": true,
+  "unityDataFolderCount": 1,
+  "localIpaSha256": "75889af301bbbc80d8e1c8e698e7651c2b11b73b26041ada52939cbb1495fdbb",
+  "localIpaBytes": 38140695,
+  "installedAppReadback": "PASS",
+  "processLaunch": "PASS",
+  "subsequentProcessReadback": "PASS",
+  "mainScreenVisual": "NOT_RUN; user confirmation requested",
+  "actualTouchAcceptance": "NOT_RUN",
+  "physical20MinuteQualification": "NOT_RUN",
+  "testFlightDeviceInstallation": "NOT_RUN",
+  "newObservationAndChannelWorkIncluded": false,
+  "initialLaunchCommand": {
+    "result": "ARGUMENT_PARSING_FAILED",
+    "exitCode": 64,
+    "installationSucceededBeforeLaunch": true,
+    "correctedLaunchAndReadback": "PASS",
+    "installWasNotRepeated": true
+  },
+  "metrics": {
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "binding": "VERIFIED",
+    "independentReceiptAudit": "INCOMPLETE",
+    "measurements": [
+      "3513ba83-20d7-4998-9a6c-76a9df522cb4",
+      "362d79a6-1151-462f-a170-df41cb087072",
+      "b363e347-9db5-4a88-a4e4-333a8d7883e4",
+      "52e7208a-1f51-4992-aa04-c2e5d3494498",
+      "9a2f91ce-de03-4e21-9bb4-87e5af609954",
+      "be08f1d4-699e-422d-bc34-e744c36a4cb3"
+    ]
+  },
+  "publicationAudit": {
+    "status": "PASS",
+    "trackedFiles": 600,
+    "scope": "New public documentation and existing tracked candidates; unfinished nearshore working files are excluded from this documentation commit"
+  }
+}

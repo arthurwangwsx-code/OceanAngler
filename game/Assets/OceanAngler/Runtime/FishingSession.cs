@@ -13,12 +13,15 @@ namespace OceanAngler
         public CatchRecord Catch { get; private set; }
         public bool Assisted { get; private set; }
         public float CastPower { get; private set; }
+        // Presentation reads the same paused/clamped clock as the simulation.
+        public float PhaseProgress => Math.Max(0,Math.Min(1,Phase==FishingPhase.Casting?phaseTime/.8f:Phase==FishingPhase.Waiting?phaseTime/biteDelay:Phase==FishingPhase.Fighting?Progress:Phase==FishingPhase.Landed?1:0));
         public int Rescues { get; private set; }
         float phaseTime, fightTime, overload, unsafeTime, retrieveSpeed = 1, resistance = 1, biteDelay = 3;
         FishDefinition fish;
         public void Cast(FishDefinition target, ProgressData data, ContentCatalog catalog, Random random, float power = 0.6f)
         {
             if (Paused || Phase != FishingPhase.Ready) return;
+            target=catalog.Fish(target?.id);
             if (target.habitatId != data.habitatId) throw new ArgumentException("Fish outside selected habitat");
             fish = target; Assisted = data.settings.assisted || !data.tutorialComplete;
             CastPower = Math.Max(0.3f, Math.Min(1, power));
@@ -67,7 +70,7 @@ namespace OceanAngler
             }
         }
         void Enter(FishingPhase next) { Phase = next; phaseTime = 0; }
-        public void FinishRelease() { if (!Paused && Phase == FishingPhase.Landed) { Catch = null; Enter(FishingPhase.Ready); } }
+        public void FinishRelease() { if (!Paused && Phase == FishingPhase.Landed) Cancel(); }
         public void Retry() { if (!Paused && Phase == FishingPhase.Escaped) { Catch = null; Enter(FishingPhase.Ready); } }
         public void Cancel() { Catch = null; Tension = Progress = 0; Enter(FishingPhase.Ready); }
     }

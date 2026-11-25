@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "5347650d-d9c6-4677-a7b9-21410525aae4",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "b8f9e18e0449d3e72596819d1a4bb7583d6a0b90d82ef16d7e7cfe135096ca64",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-25T03:35:08.737Z",
+    "finishedAt": "2026-11-25T03:35:10.627Z",
+    "durationMs": 1850.8990000000001,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/halibut-mouth-qa/verify-source.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/halibut-mouth-qa/verify-source.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T03:35:08.737Z",
+  "finishedAt": "2026-11-25T03:35:10.627Z",
+  "durationMs": 1850.8990000000001
+}

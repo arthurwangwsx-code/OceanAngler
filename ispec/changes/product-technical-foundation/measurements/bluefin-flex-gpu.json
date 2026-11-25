@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "da7365ad-7708-4cac-9095-4f9465a577f2",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "d84910f6febc952029fff7096a7e3d83bdf222d8fa1fa3a758a52a8262cdf132",
+    "category": "e2e",
+    "executable": "python3",
+    "startedAt": "2026-11-25T15:43:22.607Z",
+    "finishedAt": "2026-11-25T15:43:49.522Z",
+    "durationMs": 26885.34275,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "args": [
+      "tools/game.py",
+      "pectoral-motion-review",
+      "--review-target",
+      "ios",
+      "--label",
+      "bluefinflex20261125a"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "tools/game.py",
+    "pectoral-motion-review",
+    "--review-target",
+    "ios",
+    "--label",
+    "bluefinflex20261125a"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T15:43:22.607Z",
+  "finishedAt": "2026-11-25T15:43:49.522Z",
+  "durationMs": 26885.34275
+}

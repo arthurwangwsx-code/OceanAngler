@@ -1,0 +1,1287 @@
+{
+  "status": "PARTIAL",
+  "implementation": "IN_PROGRESS",
+  "wholeProduct": "INCOMPLETE",
+  "sourceStatus": "ENGINEERING_CHECKS_PASS",
+  "triangles": {
+    "0": 43412,
+    "1": 19090,
+    "2": 8368
+  },
+  "parts": {
+    "Rod_LOD0": {
+      "faces": 11144,
+      "components": 79,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 1.0334736800898446e-08
+    },
+    "Rod_LOD1": {
+      "faces": 7320,
+      "components": 79,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 4.979254489871072e-09
+    },
+    "Rod_LOD2": {
+      "faces": 3328,
+      "components": 79,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 2.079506184581257e-09
+    },
+    "Housing_LOD0": {
+      "faces": 2178,
+      "components": 14,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 1.0990520752096773e-07
+    },
+    "Housing_LOD1": {
+      "faces": 1288,
+      "components": 14,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 1.0745966452436612e-07
+    },
+    "Housing_LOD2": {
+      "faces": 556,
+      "components": 14,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 9.664759647737738e-08
+    },
+    "Rotor_LOD0": {
+      "faces": 718,
+      "components": 5,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 7.693366548936549e-07
+    },
+    "Rotor_LOD1": {
+      "faces": 415,
+      "components": 5,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 7.579234247453175e-07
+    },
+    "Rotor_LOD2": {
+      "faces": 206,
+      "components": 5,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 7.364625675618243e-07
+    },
+    "Spool_LOD0": {
+      "faces": 4230,
+      "components": 4,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 1.9166990032739077e-06
+    },
+    "Spool_LOD1": {
+      "faces": 2238,
+      "components": 4,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 1.9293282162644024e-06
+    },
+    "Spool_LOD2": {
+      "faces": 1468,
+      "components": 4,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 1.5593949581546576e-06
+    },
+    "Crank_LOD0": {
+      "faces": 612,
+      "components": 4,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 5.698776384662186e-07
+    },
+    "Crank_LOD1": {
+      "faces": 354,
+      "components": 4,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 5.610512217983291e-07
+    },
+    "Crank_LOD2": {
+      "faces": 170,
+      "components": 4,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 5.391419612035646e-07
+    },
+    "Lure_LOD0": {
+      "faces": 1704,
+      "components": 9,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 2.022788017635228e-08
+    },
+    "Lure_LOD1": {
+      "faces": 997,
+      "components": 9,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 1.952741837439223e-08
+    },
+    "Lure_LOD2": {
+      "faces": 466,
+      "components": 9,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 1.2826042582325894e-08
+    },
+    "BailWire_LOD0": {
+      "faces": 540,
+      "components": 5,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 1.2824978806725862e-07
+    },
+    "BailWire_LOD1": {
+      "faces": 344,
+      "components": 5,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 1.1844615920945473e-07
+    },
+    "BailWire_LOD2": {
+      "faces": 168,
+      "components": 5,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 6.783785511407155e-08
+    },
+    "LineRoller_LOD0": {
+      "faces": 448,
+      "components": 1,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 6.882334923289258e-07
+    },
+    "LineRoller_LOD1": {
+      "faces": 280,
+      "components": 1,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 6.813367007000783e-07
+    },
+    "LineRoller_LOD2": {
+      "faces": 168,
+      "components": 1,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 6.614570423310456e-07
+    }
+  },
+  "continuousLine": {
+    "0": {
+      "faces": 3602,
+      "components": 1,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 3.8860448705209575e-06
+    },
+    "1": {
+      "faces": 1805,
+      "components": 1,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 2.3465305706977616e-06
+    },
+    "2": {
+      "faces": 1270,
+      "components": 1,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "inconsistentEdges": 0,
+      "zeroAreaFaces": 0,
+      "nonPositiveIslands": 0,
+      "minimumVolume": 1.8337470776633186e-06
+    }
+  },
+  "actualBoreGrooveSamples": 72,
+  "gpu": {
+    "status": "PASS",
+    "scope": "isolated imported rig Metal HDR/manual presentation; not Player UI or device qualification",
+    "graphics": "Metal",
+    "target": "R16G16B16A16_SFloat",
+    "quality": "Medium",
+    "width": 1440,
+    "height": 1000,
+    "samples": 4,
+    "images": 31,
+    "shots": [
+      {
+        "name": "lod0-rest",
+        "changedPixels": 0
+      },
+      {
+        "name": "lod0-winding-a",
+        "changedPixels": 0
+      },
+      {
+        "name": "lod0-winding-b",
+        "changedPixels": 0
+      },
+      {
+        "name": "lod0-open-bail",
+        "changedPixels": 0
+      },
+      {
+        "name": "production-reverse",
+        "changedPixels": 0
+      },
+      {
+        "name": "production-roller",
+        "changedPixels": 0
+      },
+      {
+        "name": "production-whole",
+        "changedPixels": 0
+      },
+      {
+        "name": "lod1-rest",
+        "changedPixels": 0
+      },
+      {
+        "name": "lod1-winding-a",
+        "changedPixels": 0
+      },
+      {
+        "name": "lod1-winding-b",
+        "changedPixels": 0
+      },
+      {
+        "name": "lod1-open-bail",
+        "changedPixels": 0
+      },
+      {
+        "name": "lod2-rest",
+        "changedPixels": 0
+      },
+      {
+        "name": "lod2-winding-a",
+        "changedPixels": 0
+      },
+      {
+        "name": "lod2-winding-b",
+        "changedPixels": 0
+      },
+      {
+        "name": "lod2-open-bail",
+        "changedPixels": 0
+      }
+    ]
+  },
+  "settingsRestoration": {
+    "before": {
+      "game/ProjectSettings/QualitySettings.asset": "abebac834787e63425b147d6e02589440cd5134d66fafbd862fb5d237424c573",
+      "game/ProjectSettings/GraphicsSettings.asset": "012fa87054bf6e9fbb0607568cfa287968396f9d3a27d3376432024e8684340d"
+    },
+    "after": {
+      "game/ProjectSettings/QualitySettings.asset": "abebac834787e63425b147d6e02589440cd5134d66fafbd862fb5d237424c573",
+      "game/ProjectSettings/GraphicsSettings.asset": "012fa87054bf6e9fbb0607568cfa287968396f9d3a27d3376432024e8684340d"
+    },
+    "identical": true
+  },
+  "editor": {
+    "status": "PASS",
+    "passed": 60,
+    "failed": 0,
+    "scope": "Editor automated checks, not physical-device acceptance"
+  },
+  "targetedPlay": {
+    "status": "PASS",
+    "passed": 13,
+    "failed": 0,
+    "scope": "Editor automated checks, not physical-device acceptance"
+  },
+  "native": {
+    "status": "PASS",
+    "phone": {
+      "status": "PASS",
+      "label": "rig20261124phone1",
+      "scope": "native14-frame normal first-tutorial rig EventSystem flow; no injected progress, OS touch, full progression, CAD or physical-device qualification",
+      "source": {
+        "sourceCommit": "9e2b9dd64b387c658fafc471276393e8714bbd2e",
+        "sourceDigest": "66731f7f5405c7968aec7fff009accdfe009ec016bdbe3632d153c2639e7ff5b",
+        "projectSettingsSha256": "487dd5cc37a763cb9f23702f91a10b6680094d7b2165050d05327b1376c0d54d"
+      },
+      "appDigest": "fb2f9a66211eb22c1986461aa2cecac7f746affa3906c0748e3a9ef0bc97d32f",
+      "catches": 1,
+      "points": 194,
+      "fishId": "trevally",
+      "saveSha256": "ab84bcc4f57831a019e2f64722f47b162510604410a8daeb8948800a452b3999",
+      "samples": [
+        {
+          "view": "rig-rest",
+          "phase": "Ready",
+          "rollerRoute": true,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 0.0,
+          "guideError": 0.0,
+          "surfaceGap": 0.00035079196095466614,
+          "tangentDot": 3.0200928449630737e-05,
+          "payoutPlaneError": 0.09602906554937363,
+          "payoutRadiusError": 0.06881250441074371,
+          "lineWidth": 0.000699999975040555
+        },
+        {
+          "view": "rig-winding-a",
+          "phase": "Ready",
+          "rollerRoute": true,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 224.112548828125,
+          "guideError": 0.0,
+          "surfaceGap": 0.00035007111728191376,
+          "tangentDot": 3.460422158241272e-05,
+          "payoutPlaneError": 0.08085830509662628,
+          "payoutRadiusError": 0.06458593904972076,
+          "lineWidth": 0.000699999975040555
+        },
+        {
+          "view": "rig-winding-b",
+          "phase": "Ready",
+          "rollerRoute": true,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 223.18307495117188,
+          "guideError": 0.0,
+          "surfaceGap": 0.000349605455994606,
+          "tangentDot": 1.6048550605773926e-05,
+          "payoutPlaneError": 0.08275414258241653,
+          "payoutRadiusError": 0.06493182480335236,
+          "lineWidth": 0.000699999975040555
+        },
+        {
+          "view": "rig-angle-0",
+          "phase": "Ready",
+          "rollerRoute": true,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 222.74319458007812,
+          "guideError": 0.0,
+          "surfaceGap": 0.00035052932798862457,
+          "tangentDot": 4.367530345916748e-05,
+          "payoutPlaneError": 0.0597708635032177,
+          "payoutRadiusError": 0.0591818243265152,
+          "lineWidth": 0.000699999975040555
+        },
+        {
+          "view": "rig-angle-1",
+          "phase": "Ready",
+          "rollerRoute": true,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 222.74319458007812,
+          "guideError": 0.0,
+          "surfaceGap": 0.00035026296973228455,
+          "tangentDot": 1.1928379535675049e-05,
+          "payoutPlaneError": 0.05977203696966171,
+          "payoutRadiusError": 0.059182047843933105,
+          "lineWidth": 0.000699999975040555
+        },
+        {
+          "view": "rig-angle-2",
+          "phase": "Ready",
+          "rollerRoute": true,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 222.74319458007812,
+          "guideError": 0.0,
+          "surfaceGap": 0.0003506392240524292,
+          "tangentDot": 3.612041473388672e-05,
+          "payoutPlaneError": 0.05977150797843933,
+          "payoutRadiusError": 0.05918170511722565,
+          "lineWidth": 0.000699999975040555
+        },
+        {
+          "view": "rig-whole",
+          "phase": "Ready",
+          "rollerRoute": true,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 222.74319458007812,
+          "guideError": 0.0,
+          "surfaceGap": 0.0003500129096210003,
+          "tangentDot": 2.3014843463897705e-05,
+          "payoutPlaneError": 0.010450899600982666,
+          "payoutRadiusError": 0.010181421414017677,
+          "lineWidth": 0.000699999975040555
+        },
+        {
+          "view": "ready",
+          "phase": "Ready",
+          "rollerRoute": true,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 222.74319458007812,
+          "guideError": 0.0,
+          "surfaceGap": 0.0010000145994126797,
+          "tangentDot": 1.8656253814697266e-05,
+          "payoutPlaneError": 0.008792943321168423,
+          "payoutRadiusError": 0.00816378928720951,
+          "lineWidth": 0.0020000000949949026
+        },
+        {
+          "view": "casting-open-bail",
+          "phase": "Casting",
+          "rollerRoute": false,
+          "bailDegrees": 63.02892303466797,
+          "rollerDegrees": 222.74319458007812,
+          "guideError": 0.0,
+          "surfaceGap": 0.0009999624453485012,
+          "tangentDot": 2.130866050720215e-05,
+          "payoutPlaneError": 2.2351741790771484e-08,
+          "payoutRadiusError": 1.664739102125168e-08,
+          "lineWidth": 0.0020000000949949026
+        },
+        {
+          "view": "waiting-line-contact",
+          "phase": "Waiting",
+          "rollerRoute": true,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 222.74319458007812,
+          "guideError": 0.0,
+          "surfaceGap": 0.0010000145994126797,
+          "tangentDot": 1.8656253814697266e-05,
+          "payoutPlaneError": 0.008792943321168423,
+          "payoutRadiusError": 0.00816378928720951,
+          "lineWidth": 0.0020000000949949026
+        },
+        {
+          "view": "fighting",
+          "phase": "Fighting",
+          "rollerRoute": true,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 222.74319458007812,
+          "guideError": 0.0,
+          "surfaceGap": 0.0010000145994126797,
+          "tangentDot": 1.8656253814697266e-05,
+          "payoutPlaneError": 0.008792943321168423,
+          "payoutRadiusError": 0.00816378928720951,
+          "lineWidth": 0.0020000000949949026
+        },
+        {
+          "view": "landed",
+          "phase": "Landed",
+          "rollerRoute": true,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 299.3071594238281,
+          "guideError": 0.0,
+          "surfaceGap": 0.0010000425390899181,
+          "tangentDot": 3.7789344787597656e-05,
+          "payoutPlaneError": 0.00982658565044403,
+          "payoutRadiusError": 0.00841871090233326,
+          "lineWidth": 0.0020000000949949026
+        },
+        {
+          "view": "release",
+          "phase": "Ready",
+          "rollerRoute": true,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 299.3071594238281,
+          "guideError": 0.0,
+          "surfaceGap": 0.0009999689646065235,
+          "tangentDot": 4.152953624725342e-05,
+          "payoutPlaneError": 0.009828722104430199,
+          "payoutRadiusError": 0.008419336751103401,
+          "lineWidth": 0.0020000000949949026
+        }
+      ],
+      "capturedFrames": 14,
+      "rollerTravel": 2024.1126708984375,
+      "renderProbe": {
+        "graphics": "Metal",
+        "quality": "Medium",
+        "hdrAfter": true,
+        "halfHdrSamples": 4,
+        "desiredSamples": 4
+      },
+      "checks": [
+        "rig-detail-new-normal-tutorial-save",
+        "visible-hit-target:\u9493\u5177",
+        "visible-hit-target:\u89c2\u5bdf\u5165\u95e8\u9493\u7ec4",
+        "visible-hit-target:\u8fd1\u770b\u5377\u7ebf\u5668",
+        "rig-detail-inspection-pauses-fishing",
+        "rig-detail-present",
+        "rig-detail-eight-assemblies-three-lods-single-owner",
+        "rig-detail-guides-and-groove-contact-rig-rest",
+        "rig-detail-active-line-route-rig-rest",
+        "rendered-inspection-title:rig-rest",
+        "visible-hit-target:\u8bd5\u6447\u5377\u7ebf\u5668",
+        "rig-detail-real-roller-turns",
+        "rig-detail-guides-and-groove-contact-rig-winding-a",
+        "rig-detail-active-line-route-rig-winding-a",
+        "rendered-inspection-title:rig-winding-a",
+        "rig-detail-guides-and-groove-contact-rig-winding-b",
+        "rig-detail-active-line-route-rig-winding-b",
+        "rendered-inspection-title:rig-winding-b",
+        "visible-hit-target:\u505c\u6b62\u6536\u7ebf\u6f14\u793a",
+        "rig-detail-stopped-roller-freezes",
+        "visible-hit-target:\u65cb\u8f6c\u9493\u7ec4",
+        "rig-detail-guides-and-groove-contact-rig-angle-0",
+        "rig-detail-active-line-route-rig-angle-0",
+        "rendered-inspection-title:rig-angle-0",
+        "rig-detail-guides-and-groove-contact-rig-angle-1",
+        "rig-detail-active-line-route-rig-angle-1",
+        "rendered-inspection-title:rig-angle-1",
+        "rig-detail-guides-and-groove-contact-rig-angle-2",
+        "rig-detail-active-line-route-rig-angle-2",
+        "rendered-inspection-title:rig-angle-2",
+        "visible-hit-target:\u67e5\u770b\u5168\u7aff",
+        "rig-detail-guides-and-groove-contact-rig-whole",
+        "rig-detail-active-line-route-rig-whole",
+        "rendered-inspection-title:rig-whole",
+        "visible-hit-target:\u8fd4\u56de\u9493\u5177",
+        "visible-hit-target:\u51fa\u6d77",
+        "visible-hit-target:\u7ee7\u7eed\u63a2\u7d22",
+        "rig-detail-guides-and-groove-contact-ready",
+        "rig-detail-active-line-route-ready",
+        "visible-hit-target:\u6309\u4f4f\u84c4\u529b \u00b7 \u677e\u624b\u629b\u7aff",
+        "rig-detail-natural-cast-bypasses-roller",
+        "rig-detail-guides-and-groove-contact-casting-open-bail",
+        "rig-detail-active-line-route-casting-open-bail",
+        "rig-detail-waiting-restores-roller",
+        "rig-detail-guides-and-groove-contact-waiting-line-contact",
+        "rig-detail-active-line-route-waiting-line-contact",
+        "rig-detail-natural-bite",
+        "visible-hit-target:\u63d0\u7aff",
+        "rig-detail-guides-and-groove-contact-fighting",
+        "rig-detail-active-line-route-fighting",
+        "visible-hit-target:\u6309\u4f4f\u6536\u7ebf",
+        "rig-detail-normal-landed",
+        "rig-detail-guides-and-groove-contact-landed",
+        "rig-detail-active-line-route-landed",
+        "visible-hit-target:\u8bb0\u5f55\u5e76\u653e\u6d41",
+        "rig-detail-guides-and-groove-contact-release",
+        "rig-detail-active-line-route-release",
+        "rig-detail-first-hero-recorded-once",
+        "visible-hit-target:\u6682\u505c"
+      ]
+    },
+    "tablet": {
+      "status": "PASS",
+      "label": "rig20261124pad1",
+      "scope": "native14-frame normal first-tutorial rig EventSystem flow; no injected progress, OS touch, full progression, CAD or physical-device qualification",
+      "source": {
+        "sourceCommit": "9e2b9dd64b387c658fafc471276393e8714bbd2e",
+        "sourceDigest": "66731f7f5405c7968aec7fff009accdfe009ec016bdbe3632d153c2639e7ff5b",
+        "projectSettingsSha256": "487dd5cc37a763cb9f23702f91a10b6680094d7b2165050d05327b1376c0d54d"
+      },
+      "appDigest": "fb2f9a66211eb22c1986461aa2cecac7f746affa3906c0748e3a9ef0bc97d32f",
+      "catches": 1,
+      "points": 207,
+      "fishId": "trevally",
+      "saveSha256": "af6a8b5916761d10060c25204761564a1675e4f9b44148dda80c1c3b1500dc84",
+      "samples": [
+        {
+          "view": "rig-rest",
+          "phase": "Ready",
+          "rollerRoute": true,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 0.0,
+          "guideError": 0.0,
+          "surfaceGap": 0.00035079196095466614,
+          "tangentDot": 3.0200928449630737e-05,
+          "payoutPlaneError": 0.09602906554937363,
+          "payoutRadiusError": 0.06881250441074371,
+          "lineWidth": 0.000699999975040555
+        },
+        {
+          "view": "rig-winding-a",
+          "phase": "Ready",
+          "rollerRoute": true,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 223.24560546875,
+          "guideError": 0.0,
+          "surfaceGap": 0.0003501158207654953,
+          "tangentDot": 3.2473355531692505e-05,
+          "payoutPlaneError": 0.08090100437402725,
+          "payoutRadiusError": 0.06459850072860718,
+          "lineWidth": 0.000699999975040555
+        },
+        {
+          "view": "rig-winding-b",
+          "phase": "Ready",
+          "rollerRoute": true,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 222.8031005859375,
+          "guideError": 0.0,
+          "surfaceGap": 0.00034966878592967987,
+          "tangentDot": 3.1620264053344727e-05,
+          "payoutPlaneError": 0.08276486396789551,
+          "payoutRadiusError": 0.06493410468101501,
+          "lineWidth": 0.000699999975040555
+        },
+        {
+          "view": "rig-angle-0",
+          "phase": "Ready",
+          "rollerRoute": true,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 222.6661834716797,
+          "guideError": 0.0,
+          "surfaceGap": 0.00035037286579608917,
+          "tangentDot": 2.12937593460083e-05,
+          "payoutPlaneError": 0.05977054685354233,
+          "payoutRadiusError": 0.059181615710258484,
+          "lineWidth": 0.000699999975040555
+        },
+        {
+          "view": "rig-angle-1",
+          "phase": "Ready",
+          "rollerRoute": true,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 222.6661834716797,
+          "guideError": 0.0,
+          "surfaceGap": 0.0003506392240524292,
+          "tangentDot": 2.8818845748901367e-05,
+          "payoutPlaneError": 0.05977034196257591,
+          "payoutRadiusError": 0.059181421995162964,
+          "lineWidth": 0.000699999975040555
+        },
+        {
+          "view": "rig-angle-2",
+          "phase": "Ready",
+          "rollerRoute": true,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 222.6661834716797,
+          "guideError": 0.0,
+          "surfaceGap": 0.00035008229315280914,
+          "tangentDot": 2.5697052478790283e-05,
+          "payoutPlaneError": 0.05977101996541023,
+          "payoutRadiusError": 0.059181854128837585,
+          "lineWidth": 0.000699999975040555
+        },
+        {
+          "view": "rig-whole",
+          "phase": "Ready",
+          "rollerRoute": true,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 222.6661834716797,
+          "guideError": 0.0,
+          "surfaceGap": 0.0003500846214592457,
+          "tangentDot": 1.9624829292297363e-05,
+          "payoutPlaneError": 0.010450661182403564,
+          "payoutRadiusError": 0.010181384161114693,
+          "lineWidth": 0.000699999975040555
+        },
+        {
+          "view": "ready",
+          "phase": "Ready",
+          "rollerRoute": true,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 222.6661834716797,
+          "guideError": 0.0,
+          "surfaceGap": 0.0010001068003475666,
+          "tangentDot": 2.5153160095214844e-05,
+          "payoutPlaneError": 0.00879262387752533,
+          "payoutRadiusError": 0.008163666352629662,
+          "lineWidth": 0.0020000000949949026
+        },
+        {
+          "view": "casting-open-bail",
+          "phase": "Casting",
+          "rollerRoute": false,
+          "bailDegrees": 60.006858825683594,
+          "rollerDegrees": 222.6661834716797,
+          "guideError": 0.0,
+          "surfaceGap": 0.0010000295005738735,
+          "tangentDot": 2.518296241760254e-05,
+          "payoutPlaneError": 2.2351741790771484e-08,
+          "payoutRadiusError": 1.664739102125168e-08,
+          "lineWidth": 0.0020000000949949026
+        },
+        {
+          "view": "waiting-line-contact",
+          "phase": "Waiting",
+          "rollerRoute": true,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 222.6661834716797,
+          "guideError": 0.0,
+          "surfaceGap": 0.0010001068003475666,
+          "tangentDot": 2.5153160095214844e-05,
+          "payoutPlaneError": 0.00879262387752533,
+          "payoutRadiusError": 0.008163666352629662,
+          "lineWidth": 0.0020000000949949026
+        },
+        {
+          "view": "fighting",
+          "phase": "Fighting",
+          "rollerRoute": true,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 222.6661834716797,
+          "guideError": 0.0,
+          "surfaceGap": 0.0010001068003475666,
+          "tangentDot": 2.5153160095214844e-05,
+          "payoutPlaneError": 0.00879262387752533,
+          "payoutRadiusError": 0.008163666352629662,
+          "lineWidth": 0.0020000000949949026
+        },
+        {
+          "view": "landed",
+          "phase": "Landed",
+          "rollerRoute": true,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 150.53591918945312,
+          "guideError": 0.0,
+          "surfaceGap": 0.0010000723414123058,
+          "tangentDot": 4.902482032775879e-05,
+          "payoutPlaneError": 0.009681007824838161,
+          "payoutRadiusError": 0.008352728560566902,
+          "lineWidth": 0.0020000000949949026
+        },
+        {
+          "view": "release",
+          "phase": "Ready",
+          "rollerRoute": true,
+          "bailDegrees": 0.0,
+          "rollerDegrees": 150.53591918945312,
+          "guideError": 0.0,
+          "surfaceGap": 0.0010000970214605331,
+          "tangentDot": 3.394484519958496e-05,
+          "payoutPlaneError": 0.009683754295110703,
+          "payoutRadiusError": 0.008353428915143013,
+          "lineWidth": 0.0020000000949949026
+        }
+      ],
+      "capturedFrames": 14,
+      "rollerTravel": 2023.2454833984375,
+      "renderProbe": {
+        "graphics": "Metal",
+        "quality": "Medium",
+        "hdrAfter": true,
+        "halfHdrSamples": 4,
+        "desiredSamples": 4
+      },
+      "checks": [
+        "rig-detail-new-normal-tutorial-save",
+        "visible-hit-target:\u9493\u5177",
+        "visible-hit-target:\u89c2\u5bdf\u5165\u95e8\u9493\u7ec4",
+        "visible-hit-target:\u8fd1\u770b\u5377\u7ebf\u5668",
+        "rig-detail-inspection-pauses-fishing",
+        "rig-detail-present",
+        "rig-detail-eight-assemblies-three-lods-single-owner",
+        "rig-detail-guides-and-groove-contact-rig-rest",
+        "rig-detail-active-line-route-rig-rest",
+        "rendered-inspection-title:rig-rest",
+        "visible-hit-target:\u8bd5\u6447\u5377\u7ebf\u5668",
+        "rig-detail-real-roller-turns",
+        "rig-detail-guides-and-groove-contact-rig-winding-a",
+        "rig-detail-active-line-route-rig-winding-a",
+        "rendered-inspection-title:rig-winding-a",
+        "rig-detail-guides-and-groove-contact-rig-winding-b",
+        "rig-detail-active-line-route-rig-winding-b",
+        "rendered-inspection-title:rig-winding-b",
+        "visible-hit-target:\u505c\u6b62\u6536\u7ebf\u6f14\u793a",
+        "rig-detail-stopped-roller-freezes",
+        "visible-hit-target:\u65cb\u8f6c\u9493\u7ec4",
+        "rig-detail-guides-and-groove-contact-rig-angle-0",
+        "rig-detail-active-line-route-rig-angle-0",
+        "rendered-inspection-title:rig-angle-0",
+        "rig-detail-guides-and-groove-contact-rig-angle-1",
+        "rig-detail-active-line-route-rig-angle-1",
+        "rendered-inspection-title:rig-angle-1",
+        "rig-detail-guides-and-groove-contact-rig-angle-2",
+        "rig-detail-active-line-route-rig-angle-2",
+        "rendered-inspection-title:rig-angle-2",
+        "visible-hit-target:\u67e5\u770b\u5168\u7aff",
+        "rig-detail-guides-and-groove-contact-rig-whole",
+        "rig-detail-active-line-route-rig-whole",
+        "rendered-inspection-title:rig-whole",
+        "visible-hit-target:\u8fd4\u56de\u9493\u5177",
+        "visible-hit-target:\u51fa\u6d77",
+        "visible-hit-target:\u7ee7\u7eed\u63a2\u7d22",
+        "rig-detail-guides-and-groove-contact-ready",
+        "rig-detail-active-line-route-ready",
+        "visible-hit-target:\u6309\u4f4f\u84c4\u529b \u00b7 \u677e\u624b\u629b\u7aff",
+        "rig-detail-natural-cast-bypasses-roller",
+        "rig-detail-guides-and-groove-contact-casting-open-bail",
+        "rig-detail-active-line-route-casting-open-bail",
+        "rig-detail-waiting-restores-roller",
+        "rig-detail-guides-and-groove-contact-waiting-line-contact",
+        "rig-detail-active-line-route-waiting-line-contact",
+        "rig-detail-natural-bite",
+        "visible-hit-target:\u63d0\u7aff",
+        "rig-detail-guides-and-groove-contact-fighting",
+        "rig-detail-active-line-route-fighting",
+        "visible-hit-target:\u6309\u4f4f\u6536\u7ebf",
+        "rig-detail-normal-landed",
+        "rig-detail-guides-and-groove-contact-landed",
+        "rig-detail-active-line-route-landed",
+        "visible-hit-target:\u8bb0\u5f55\u5e76\u653e\u6d41",
+        "rig-detail-guides-and-groove-contact-release",
+        "rig-detail-active-line-route-release",
+        "rig-detail-first-hero-recorded-once",
+        "visible-hit-target:\u6682\u505c"
+      ]
+    }
+  },
+  "artAcceptance": "NOT_ACCEPTED",
+  "distribution": "NO_PERSONAL_DEVICE_OR_TESTFLIGHT_UPDATE",
+  "immersive": {
+    "status": "PASS",
+    "phone": {
+      "status": "PASS",
+      "label": "rigimmersive20261124phone1",
+      "scope": "fresh normal tutorial hero with native15-frame immersive EventSystem flow; no RNG/points injection, OS touch, whole progression, biological optical or device qualification",
+      "source": {
+        "sourceCommit": "9e2b9dd64b387c658fafc471276393e8714bbd2e",
+        "sourceDigest": "66731f7f5405c7968aec7fff009accdfe009ec016bdbe3632d153c2639e7ff5b",
+        "projectSettingsSha256": "487dd5cc37a763cb9f23702f91a10b6680094d7b2165050d05327b1376c0d54d"
+      },
+      "appDigest": "fb2f9a66211eb22c1986461aa2cecac7f746affa3906c0748e3a9ef0bc97d32f",
+      "catches": 1,
+      "points": 226,
+      "fishId": "trevally",
+      "saveSha256": "65e67d8396b4e2da42be8908742e5e767a89ff131efdd7640323d51c292de5f7",
+      "maxHudRatio": 0.12227564305067062,
+      "samples": [
+        {
+          "phase": "Ready",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0890224352478981
+        },
+        {
+          "phase": "Waiting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0890224352478981
+        },
+        {
+          "phase": "Bite",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0890224352478981
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.12034111469984055
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.12034111469984055
+        },
+        {
+          "phase": "Landed",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.12227564305067062
+        },
+        {
+          "phase": "Ready",
+          "leftHanded": true,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0890224352478981
+        },
+        {
+          "phase": "Waiting",
+          "leftHanded": true,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0890224352478981
+        },
+        {
+          "phase": "Bite",
+          "leftHanded": true,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0890224352478981
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": true,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.12034111469984055
+        }
+      ],
+      "capturedFrames": 15,
+      "renderProbe": {
+        "graphics": "Metal",
+        "quality": "Medium",
+        "hdrAfter": true,
+        "halfHdrSamples": 4,
+        "desiredSamples": 4
+      },
+      "checks": [
+        "immersive-isolated-save-root",
+        "immersive-ready-valid-save",
+        "visible-hit-target:\u7ee7\u7eed\u63a2\u7d22",
+        "visible-hit-target:\u6682\u505c",
+        "visible-hit-target:\u8bbe\u7f6e",
+        "visible-hit-target:\u51fa\u6d77",
+        "visible-hit-target:\u8fd4\u56de\u9996\u9875",
+        "visible-hit-target:\u6d77\u57df\u4e0e\u88c5\u5907",
+        "immersive-separate-preparation",
+        "immersive-departure-visible-without-scrolling",
+        "immersive-departure-inside-safe-area",
+        "visible-hit-target:\u5f00\u59cb\u9493\u9c7c",
+        "immersive-active-play",
+        "immersive-only-pause-and-current-action",
+        "immersive-no-global-chrome-or-panels",
+        "immersive-hud-under-15-percent-and-central-view-clear-Ready",
+        "immersive-meters-only-while-fighting",
+        "visible-hit-target:\u6309\u4f4f\u84c4\u529b \u00b7 \u677e\u624b\u629b\u7aff",
+        "immersive-menu-cancels-cast-charge",
+        "immersive-hud-under-15-percent-and-central-view-clear-Waiting",
+        "immersive-normal-bite",
+        "immersive-hud-under-15-percent-and-central-view-clear-Bite",
+        "visible-hit-target:\u63d0\u7aff",
+        "immersive-hud-under-15-percent-and-central-view-clear-Fighting",
+        "visible-hit-target:\u6309\u4f4f\u6536\u7ebf",
+        "immersive-pause-releases-held-reel",
+        "immersive-pause-freezes-current-fish",
+        "immersive-settings-retain-catch",
+        "visible-hit-target:\u4e0a\u4e00\u7ea7",
+        "immersive-back-does-not-resume",
+        "visible-hit-target:\u7ed3\u675f\u672c\u6b21 \u00b7 \u8fd4\u56de\u51c6\u5907",
+        "visible-hit-target:\u53d6\u6d88\uff0c\u7ee7\u7eed\u7559\u5728\u8fd9\u91cc",
+        "immersive-exit-cancel-keeps-current-fish",
+        "immersive-focus-loss-cancels-input",
+        "immersive-focus-return-awaits-continue",
+        "immersive-real-fish-landed",
+        "immersive-hud-under-15-percent-and-central-view-clear-Landed",
+        "visible-hit-target:\u8bb0\u5f55\u5e76\u653e\u6d41",
+        "immersive-one-real-record",
+        "visible-hit-target:\u5de6\u624b\u64cd\u4f5c    \u5df2\u5173\u95ed",
+        "visible-hit-target:\u786e\u8ba4\u7ed3\u675f\u5e76\u8fd4\u56de\u51c6\u5907",
+        "immersive-confirm-exit-to-preparation",
+        "immersive-unrecorded-exit-preserves-existing-disk-ledger",
+        "visible-hit-target:\u5de6\u624b\u64cd\u4f5c    \u5df2\u5f00\u542f",
+        "immersive-restored-settings-real-disk-ledger"
+      ]
+    },
+    "tablet": {
+      "status": "PASS",
+      "label": "rigimmersive20261124pad2",
+      "scope": "fresh normal tutorial hero with native15-frame immersive EventSystem flow; no RNG/points injection, OS touch, whole progression, biological optical or device qualification",
+      "source": {
+        "sourceCommit": "9e2b9dd64b387c658fafc471276393e8714bbd2e",
+        "sourceDigest": "66731f7f5405c7968aec7fff009accdfe009ec016bdbe3632d153c2639e7ff5b",
+        "projectSettingsSha256": "487dd5cc37a763cb9f23702f91a10b6680094d7b2165050d05327b1376c0d54d"
+      },
+      "appDigest": "fb2f9a66211eb22c1986461aa2cecac7f746affa3906c0748e3a9ef0bc97d32f",
+      "catches": 1,
+      "points": 257,
+      "fishId": "trevally",
+      "saveSha256": "5530b7b92d5fe3f1bb3a18d47ebdb8902d6e03826af310fba3f716add8ff2d3c",
+      "maxHudRatio": 0.045262712985277176,
+      "samples": [
+        {
+          "phase": "Ready",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.03295338898897171
+        },
+        {
+          "phase": "Waiting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.03295338898897171
+        },
+        {
+          "phase": "Bite",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.03295338898897171
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.04454661160707474
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.04454661160707474
+        },
+        {
+          "phase": "Landed",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.045262712985277176
+        },
+        {
+          "phase": "Ready",
+          "leftHanded": true,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.03295338898897171
+        },
+        {
+          "phase": "Waiting",
+          "leftHanded": true,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.03295338898897171
+        },
+        {
+          "phase": "Bite",
+          "leftHanded": true,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.03295338898897171
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": true,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.04454661160707474
+        }
+      ],
+      "capturedFrames": 15,
+      "renderProbe": {
+        "graphics": "Metal",
+        "quality": "Medium",
+        "hdrAfter": true,
+        "halfHdrSamples": 4,
+        "desiredSamples": 4
+      },
+      "checks": [
+        "immersive-isolated-save-root",
+        "immersive-ready-valid-save",
+        "visible-hit-target:\u7ee7\u7eed\u63a2\u7d22",
+        "visible-hit-target:\u6682\u505c",
+        "visible-hit-target:\u8bbe\u7f6e",
+        "visible-hit-target:\u51fa\u6d77",
+        "visible-hit-target:\u8fd4\u56de\u9996\u9875",
+        "visible-hit-target:\u6d77\u57df\u4e0e\u88c5\u5907",
+        "immersive-separate-preparation",
+        "immersive-departure-visible-without-scrolling",
+        "immersive-departure-inside-safe-area",
+        "visible-hit-target:\u5f00\u59cb\u9493\u9c7c",
+        "immersive-active-play",
+        "immersive-only-pause-and-current-action",
+        "immersive-no-global-chrome-or-panels",
+        "immersive-hud-under-15-percent-and-central-view-clear-Ready",
+        "immersive-meters-only-while-fighting",
+        "visible-hit-target:\u6309\u4f4f\u84c4\u529b \u00b7 \u677e\u624b\u629b\u7aff",
+        "immersive-menu-cancels-cast-charge",
+        "immersive-hud-under-15-percent-and-central-view-clear-Waiting",
+        "immersive-normal-bite",
+        "immersive-hud-under-15-percent-and-central-view-clear-Bite",
+        "visible-hit-target:\u63d0\u7aff",
+        "immersive-hud-under-15-percent-and-central-view-clear-Fighting",
+        "visible-hit-target:\u6309\u4f4f\u6536\u7ebf",
+        "immersive-pause-releases-held-reel",
+        "immersive-pause-freezes-current-fish",
+        "immersive-settings-retain-catch",
+        "visible-hit-target:\u4e0a\u4e00\u7ea7",
+        "immersive-back-does-not-resume",
+        "visible-hit-target:\u7ed3\u675f\u672c\u6b21 \u00b7 \u8fd4\u56de\u51c6\u5907",
+        "visible-hit-target:\u53d6\u6d88\uff0c\u7ee7\u7eed\u7559\u5728\u8fd9\u91cc",
+        "immersive-exit-cancel-keeps-current-fish",
+        "immersive-focus-loss-cancels-input",
+        "immersive-focus-return-awaits-continue",
+        "immersive-real-fish-landed",
+        "immersive-hud-under-15-percent-and-central-view-clear-Landed",
+        "visible-hit-target:\u8bb0\u5f55\u5e76\u653e\u6d41",
+        "immersive-one-real-record",
+        "visible-hit-target:\u5de6\u624b\u64cd\u4f5c    \u5df2\u5173\u95ed",
+        "visible-hit-target:\u786e\u8ba4\u7ed3\u675f\u5e76\u8fd4\u56de\u51c6\u5907",
+        "immersive-confirm-exit-to-preparation",
+        "immersive-unrecorded-exit-preserves-existing-disk-ledger",
+        "visible-hit-target:\u5de6\u624b\u64cd\u4f5c    \u5df2\u5f00\u542f",
+        "immersive-restored-settings-real-disk-ledger"
+      ]
+    }
+  },
+  "retention": {
+    "status": "PASS",
+    "previousFiles": 15,
+    "byteIdentical": true,
+    "method": "strict before/after bytes from current owned app containers; no restore or replay"
+  },
+  "reopen": {
+    "status": "BYTES_AND_AGENT_VISUAL_REVIEW_PASS",
+    "catches": 26,
+    "points": 4622,
+    "saveBytesUnchanged": true,
+    "saveSha256": "e3913747a21f851fbee465ecb7d406d6bbdb7c78702e1f54f6e7d23dc64d0bec",
+    "frameSha256": "f1313a40ddeee40ef63b978f49718c9445d8b51407c7b776ae624938ce786c9f",
+    "automaticFishingFlags": false,
+    "qaArguments": [
+      "--ocean-save-root",
+      "--ocean-simulator-probe"
+    ],
+    "visualReview": "AGENT_VIEWED_HOME_4622_POINTS_NOT_USER_ACCEPTANCE",
+    "originalReceiptStatus": "BYTES_AND_SCREEN_CAPTURE_PASS_REQUIRES_VISUAL_REVIEW"
+  },
+  "visualReview": {
+    "scope": "four contact sheets for58 qualifying native frames; selected phone reel/fighting/landed/settings/exit and tablet landed originals",
+    "status": "AGENT_REVIEWED",
+    "artAcceptance": "NOT_ACCEPTED",
+    "userAcceptance": "NOT_RUN"
+  },
+  "recordIntegrity": {
+    "status": "INTEGRITY_PASS_WITH_EXCLUDED_OVERLAP",
+    "historicalOverall": "INCOMPLETE",
+    "baselineCompleted": 896,
+    "baselineStarts": 892,
+    "newCompleted": 44,
+    "newStarts": 44,
+    "totalCompleted": 940,
+    "totalStarts": 936,
+    "oldObjectsUnchanged": true,
+    "actualReceiptsAndBindingsVerified": true,
+    "newIntervalsDisjoint": false,
+    "qualifiedIntervalsDisjoint": true,
+    "overlaps": [
+      [
+        "b895b5aa-25d2-44dc-a8a0-af44c814819d",
+        "920b1b84-bfcc-42d1-b5a5-c7f8888ec937"
+      ]
+    ],
+    "excludedForSeriality": [
+      "b895b5aa-25d2-44dc-a8a0-af44c814819d",
+      "920b1b84-bfcc-42d1-b5a5-c7f8888ec937"
+    ],
+    "qualifiedReplacements": [
+      "measurements/rig-detail-immersive-phone-proof-20261124b.json",
+      "measurements/rig-detail-immersive-pad-20261124b.json",
+      "measurements/rig-detail-immersive-pad-proof-20261124b.json"
+    ],
+    "newFailures": [
+      {
+        "id": "fc04aea2-1a01-4d70-b834-762b59366dd0",
+        "receipt": "measurements/rig-detail-red-20261124a.json",
+        "exitCode": 1
+      },
+      {
+        "id": "1a184df0-5a49-4986-9181-073bdb0121ee",
+        "receipt": "measurements/rig-detail-source-20261124a.json",
+        "exitCode": 1
+      },
+      {
+        "id": "b022568d-18ad-456c-bea3-c3115292afab",
+        "receipt": "measurements/rig-detail-volume-20261124a.json",
+        "exitCode": 1
+      },
+      {
+        "id": "a5ad4170-905d-428a-8935-f7c909e8536c",
+        "receipt": "measurements/rig-detail-import-20261124b.json",
+        "exitCode": 1
+      },
+      {
+        "id": "44447e47-d940-47b3-88ed-ed149197cffe",
+        "receipt": "measurements/rig-detail-play-20261124c.json",
+        "exitCode": 2
+      },
+      {
+        "id": "85ecefd7-1637-4fc4-8e0a-8264aaf2415a",
+        "receipt": "measurements/rig-detail-roller-play-20261124d.json",
+        "exitCode": 2
+      },
+      {
+        "id": "f75d26a7-4f9c-4f1b-aaef-77754a1cc8a3",
+        "receipt": "measurements/rig-detail-gpu-20261124d.json",
+        "exitCode": 1
+      },
+      {
+        "id": "2f9a114d-d256-4f88-89ce-25d149a32065",
+        "receipt": "measurements/rig-detail-path-red-20261124f.json",
+        "exitCode": 2
+      }
+    ],
+    "scope": "all original records retained; one91ms orchestration overlap excluded and replaced by actual serial reruns; no repair or invented records; not formal historical CLI compliance or product acceptance"
+  }
+}

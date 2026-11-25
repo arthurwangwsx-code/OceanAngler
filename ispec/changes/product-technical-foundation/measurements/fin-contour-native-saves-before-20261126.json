@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "344ff48d-615c-48f3-8b35-93cab1835919",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "5641073d9ae07cc8e678418deb76de024f5f3534b79518188876338b549d4928",
+    "category": "e2e",
+    "executable": "python3",
+    "startedAt": "2026-11-25T17:04:38.538Z",
+    "finishedAt": "2026-11-25T17:04:39.461Z",
+    "durationMs": 894.8588750000001,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "args": [
+      "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b/.local/fin-contour-qa/native-save-protect.py",
+      "before"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b/.local/fin-contour-qa/native-save-protect.py",
+    "before"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T17:04:38.538Z",
+  "finishedAt": "2026-11-25T17:04:39.461Z",
+  "durationMs": 894.8588750000001
+}

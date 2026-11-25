@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "4af77416-ace2-4b58-88f5-55944b3aacb1",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "9389e38b1a0f51f645c752ffd8b831087356c3c33cdb8623217ac1ec2589f7aa",
+    "category": "compile",
+    "executable": "python3",
+    "startedAt": "2026-11-24T21:49:56.213Z",
+    "finishedAt": "2026-11-24T21:50:14.982Z",
+    "durationMs": 18731.676541999997,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/fish-motion-qa/encode-previews-b.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/fish-motion-qa/encode-previews-b.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T21:49:56.213Z",
+  "finishedAt": "2026-11-24T21:50:14.982Z",
+  "durationMs": 18731.676541999997
+}

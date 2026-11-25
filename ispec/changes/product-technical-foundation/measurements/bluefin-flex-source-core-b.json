@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "1ed2b783-d608-4680-afee-b97432f46b06",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "6d39fa890469da89ee36db1528c4a2604c4466934a93cccc49ea8836b6837dab",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-25T15:25:23.065Z",
+    "finishedAt": "2026-11-25T15:25:25.788Z",
+    "durationMs": 2698.624208,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "args": [
+      "tools/art.py",
+      "validate",
+      "--asset",
+      "bluefin",
+      "--label",
+      "bluefinflexcore20261125b"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "tools/art.py",
+    "validate",
+    "--asset",
+    "bluefin",
+    "--label",
+    "bluefinflexcore20261125b"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T15:25:23.065Z",
+  "finishedAt": "2026-11-25T15:25:25.788Z",
+  "durationMs": 2698.624208
+}

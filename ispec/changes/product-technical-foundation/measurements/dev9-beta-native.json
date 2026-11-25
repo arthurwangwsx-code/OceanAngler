@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "f39ded60-a53a-486b-9eeb-e0e5255ae0d6",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "cbed9319e74ff5ebfde365fc32041a9408b9698a184433b7eca4d5c9fd9ee1a2",
+    "category": "compile",
+    "executable": "python3",
+    "startedAt": "2026-11-25T14:13:29.254Z",
+    "finishedAt": "2026-11-25T14:14:27.930Z",
+    "durationMs": 58648.049917,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "args": [
+      ".local/dev9-qa/beta-step.py",
+      "native"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    ".local/dev9-qa/beta-step.py",
+    "native"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T14:13:29.254Z",
+  "finishedAt": "2026-11-25T14:14:27.930Z",
+  "durationMs": 58648.049917
+}

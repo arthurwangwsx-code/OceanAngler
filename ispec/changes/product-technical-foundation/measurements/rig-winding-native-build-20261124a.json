@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "9c9961b6-8ec7-46ef-9fcb-85564aff70d2",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "e9c8b48790a14bdca262b9ae3082633d9acb7f7c5de8782906fc1cbcb452755f",
+    "category": "compile",
+    "executable": "python3",
+    "startedAt": "2026-11-24T14:56:59.173Z",
+    "finishedAt": "2026-11-24T15:00:12.235Z",
+    "durationMs": 193024.16600000003,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/rig-winding-qa/build.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/rig-winding-qa/build.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T14:56:59.173Z",
+  "finishedAt": "2026-11-24T15:00:12.235Z",
+  "durationMs": 193024.16600000003
+}

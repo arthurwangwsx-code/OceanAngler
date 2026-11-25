@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "8a31d2d9-35a5-473c-859a-c701a1deee21",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "8f161917b318220e84697a6c3600f21337971aa66ca03bbe7f8871f433059d5b",
+    "category": "verification",
+    "executable": "python3",
+    "startedAt": "2026-11-25T01:42:47.077Z",
+    "finishedAt": "2026-11-25T01:42:49.590Z",
+    "durationMs": 2475.8957499999997,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/content-current-qa/verify-native.py",
+      "contentcurrentphone1"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/content-current-qa/verify-native.py",
+    "contentcurrentphone1"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T01:42:47.077Z",
+  "finishedAt": "2026-11-25T01:42:49.590Z",
+  "durationMs": 2475.8957499999997
+}

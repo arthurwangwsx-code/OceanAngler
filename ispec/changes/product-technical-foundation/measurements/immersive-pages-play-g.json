@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "c97a2503-3800-4a41-96a4-bfded4a5e2be",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "54784639f6be24aec98b409d842da179ca9b16c4bb1c06704af0b2a33dde3fdb",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-25T10:00:59.029Z",
+    "finishedAt": "2026-11-25T10:01:28.046Z",
+    "durationMs": 28990.10775,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      "tools/game.py",
+      "tests",
+      "--test-platform",
+      "PlayMode",
+      "--label",
+      "immersivepagesplay20261125g",
+      "--test-filter",
+      "JournalFramingTests;IntegratedWorldTests;ImmersiveNavigationTests.DedicatedPagesKeepModelClearAndBackReturnsToTheirActualSource"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    "tools/game.py",
+    "tests",
+    "--test-platform",
+    "PlayMode",
+    "--label",
+    "immersivepagesplay20261125g",
+    "--test-filter",
+    "JournalFramingTests;IntegratedWorldTests;ImmersiveNavigationTests.DedicatedPagesKeepModelClearAndBackReturnsToTheirActualSource"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T10:00:59.029Z",
+  "finishedAt": "2026-11-25T10:01:28.046Z",
+  "durationMs": 28990.10775
+}

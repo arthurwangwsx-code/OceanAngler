@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "8e5d0bf8-23b0-49ca-a365-ac1347c18899",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "d3649ae94e12690cfa216eec395228f2c608336d40ff1cdcf4cf38a1ef642d35",
+    "category": "e2e",
+    "executable": "python3",
+    "startedAt": "2026-11-25T08:55:41.521Z",
+    "finishedAt": "2026-11-25T08:55:50.712Z",
+    "durationMs": 9166.037167,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      "tools/game.py",
+      "fish-review",
+      "--review-target",
+      "ios",
+      "--label",
+      "bluefineyegpu20261125"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    "tools/game.py",
+    "fish-review",
+    "--review-target",
+    "ios",
+    "--label",
+    "bluefineyegpu20261125"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T08:55:41.521Z",
+  "finishedAt": "2026-11-25T08:55:50.712Z",
+  "durationMs": 9166.037167
+}

@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "51be8990-e7a2-458a-965a-50394b402045",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "df94a608e5bfe15ea7b115e4b8bf2378fc6b907c29b8df1c785f5e0c1ab6928c",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-24T19:22:54.660Z",
+    "finishedAt": "2026-11-24T19:23:02.285Z",
+    "durationMs": 7599.86125,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/hud-contrast-qa/retention.py",
+      "after"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/hud-contrast-qa/retention.py",
+    "after"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T19:22:54.660Z",
+  "finishedAt": "2026-11-24T19:23:02.285Z",
+  "durationMs": 7599.86125
+}

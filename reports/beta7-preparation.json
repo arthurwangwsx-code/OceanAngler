@@ -1,0 +1,100 @@
+{
+  "status": "PREPARATION_PASS_RELEASE_READBACK_PASS",
+  "preparedAt": "2026-11-24T17:50:31.010227+00:00",
+  "version": "0.1.0",
+  "build": "7",
+  "baseCommit": "1da95fc3c10bbdf51810d4de8464855e30edc75c",
+  "editorTests": {
+    "result": "Passed",
+    "total": "60",
+    "passed": "60",
+    "failed": "0",
+    "end-time": "2026-11-24 17:35:38Z"
+  },
+  "headlessPlayModeTests": {
+    "result": "Passed",
+    "total": "21",
+    "passed": "21",
+    "failed": "0",
+    "end-time": "2026-11-24 17:50:00Z"
+  },
+  "releaseGuardTests": 12,
+  "sceneSemanticComparison": {
+    "status": "PASS",
+    "scope": "Generated scene semantic comparison; game object names, component class/script identity and internal references normalized; all other serialized values compared",
+    "baseCommit": "1da95fc3c10bbdf51810d4de8464855e30edc75c",
+    "blocks": 20,
+    "changedSemanticObjects": [],
+    "canonicalSha256": "053ede9f9dc4b5125737c7376200291c15baf2a13f04f05e7670c04c27408c1a"
+  },
+  "previousSimulatorEvidence": "reports/rest-reminder.json",
+  "scope": "Release build/notes preparation for verified rest reminder game implementation; no new physical-device or art acceptance",
+  "freeze": "PASS",
+  "archive": "PASS",
+  "upload": "PASS",
+  "actualInstallation": "NOT_RUN",
+  "actualSystemTouch": "NOT_RUN",
+  "artAcceptance": "PARTIAL",
+  "wholeProduct": "PARTIAL",
+  "historicalIndependentAudit": "INCOMPLETE",
+  "cacheMaintenance": {
+    "completedIntermediateCaches": 10,
+    "allProductsUnchanged": true,
+    "scope": "Project-owned completed Simulator intermediate caches only; retained app products,exports,logs,saves and receipts"
+  },
+  "journeys": {
+    "content-journey": {
+      "status": "PASS",
+      "scope": "headless PlayMode EventSystem journey; no rendered-frame/device acceptance",
+      "completedRounds": 20,
+      "duplicateReleaseTaps": 20,
+      "sceneRestart": {
+        "status": "PASS",
+        "scope": "headless scene/controller reload, not OS process restart",
+        "points": 3915,
+        "catches": 20,
+        "observations": 3
+      },
+      "allTasksComplete": true,
+      "inspectedSpeciesCount": 12,
+      "equippedGearCount": 20
+    },
+    "continuous-journey": {
+      "status": "PASS",
+      "scope": "headless PlayMode EventSystem journey; no rendered-frame/device acceptance",
+      "completedRounds": 20,
+      "duplicateReleaseTaps": 0,
+      "sceneRestart": {
+        "status": "PASS",
+        "scope": "headless scene/controller reload, not OS process restart",
+        "points": 3167,
+        "catches": 20,
+        "observations": 3
+      },
+      "allTasksComplete": true,
+      "inspectedSpeciesCount": 0,
+      "equippedGearCount": 0
+    }
+  },
+  "metrics": {
+    "status": "NEW_RECORDS_INTEGRITY_PASS",
+    "historicalOverall": "INCOMPLETE",
+    "baselineCompleted": 1024,
+    "baselineStarts": 1020,
+    "newCompleted": 12,
+    "newStarts": 12,
+    "totalCompleted": 1036,
+    "totalStarts": 1032,
+    "oldObjectsUnchanged": true,
+    "actualReceiptsAndBindingsVerified": true,
+    "newIntervalsDisjoint": true,
+    "overlaps": [],
+    "newFailures": [],
+    "scope": "actual local state/start/completion/receipt integrity for this increment only; not formal independent CLI compliance or product acceptance"
+  },
+  "releaseReport": "reports/testflight-0.1.0-7.json",
+  "frozenSource": "653d3a793626962ed899fac96254eb9594353c63",
+  "sourceDigest": "9a1e8c6957de4f35345421f3afbd1363c1300edd85147c101c07411a49ee4951",
+  "appleProcessing": "VALID",
+  "internalGroup": "VERIFIED"
+}

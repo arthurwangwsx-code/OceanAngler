@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "cc78fd08-d1b5-4b26-b778-c47cde127449",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "2368157cfb9c7909ed042b723ce432f63f244d33ed453442180f0ed85c7606d3",
+    "category": "e2e",
+    "executable": "python3",
+    "startedAt": "2026-11-25T14:04:57.995Z",
+    "finishedAt": "2026-11-25T14:05:03.389Z",
+    "durationMs": 5368.385417,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "args": [
+      "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b/.local/dev9-qa/retain.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b/.local/dev9-qa/retain.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T14:04:57.995Z",
+  "finishedAt": "2026-11-25T14:05:03.389Z",
+  "durationMs": 5368.385417
+}

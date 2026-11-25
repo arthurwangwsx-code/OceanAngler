@@ -1,0 +1,61 @@
+{
+  "status": "TESTED_CANDIDATE_NOT_RELEASED",
+  "version": "0.1.0",
+  "build": "5",
+  "sourceBaseCommit": "fd14dbb2ffe6ed455e2ec5f3dbf1edf74e654ccd",
+  "sourceDigest": "9b92ba1037a966603330f153f5c2f682306e457444231bc51b7d83ec36b3fc12",
+  "editor": {
+    "result": "Passed",
+    "total": "50",
+    "passed": "50",
+    "failed": "0",
+    "end-time": "2026-11-24 00:24:37Z"
+  },
+  "headlessPlayMode": {
+    "result": "Passed",
+    "total": "10",
+    "passed": "10",
+    "failed": "0",
+    "end-time": "2026-11-24 00:25:13Z"
+  },
+  "releaseToolTests": {
+    "passed": 11,
+    "total": 11
+  },
+  "prepare": "PASS",
+  "sceneSemanticComparison": "reports/beta5-scene-comparison.json",
+  "projectSettingsChange": "iPhone build number 4 to 5",
+  "plannedChanges": [
+    "protected observation journal and schema upgrade on first successful record",
+    "nearshore authored habitat candidate and shared view/switching"
+  ],
+  "nativeFreeze": "NOT_RUN",
+  "archive": "NOT_RUN",
+  "testFlightUpload": "NOT_RUN",
+  "appleProcessing": "NOT_RUN",
+  "deviceUpdate": "NOT_RUN; local iPhone still frozen build 4",
+  "artAcceptance": "PARTIAL_NOT_ACCEPTED",
+  "fullProduct": "PARTIAL",
+  "independentReceiptAudit": "INCOMPLETE",
+  "sourceContentCI": {
+    "commit": "fd14dbb2ffe6ed455e2ec5f3dbf1edf74e654ccd",
+    "status": "SUCCESS",
+    "url": "https://github.com/arthurwangwsx-code/OceanAngler/actions/runs/45296371726",
+    "scope": "nearshore source content before build 5 release metadata; not build 5 freeze CI"
+  },
+  "metrics": {
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "binding": "VERIFIED",
+    "independentReceiptAudit": "INCOMPLETE",
+    "measurements": [
+      "4779e350-3db3-40e5-97a9-30bcc9ccc39e",
+      "87168e2d-358b-4dbe-b2d5-9d070b2d0d78",
+      "a0979f46-8892-472d-b96e-e29aff0986f4",
+      "05d57659-304d-4464-8662-508736a54b76",
+      "738e737c-c481-4dc0-9a47-7de39c9e8eed",
+      "3e0b02f8-2c05-4531-8878-a53f8bab8a6e",
+      "a00141e9-010b-45a8-8592-e83dffb84b4a",
+      "a7d2b3e0-54a0-4959-8720-765fbe845323"
+    ]
+  }
+}

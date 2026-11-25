@@ -1,0 +1,41 @@
+{
+  "status": "PASS_CURRENT_INCREMENT_EXCLUDING_RUNNING_SELF",
+  "historicalOverall": "INCOMPLETE",
+  "newCompleted": 32,
+  "newStarts": 33,
+  "oldObjectsUnchanged": true,
+  "receiptsAndBindingsVerified": true,
+  "completedIntervalsDisjoint": true,
+  "onlyRunningSelfPending": true,
+  "failuresRetained": [
+    {
+      "receipt": "measurements/bluefin-gill-source-red.json",
+      "exitCode": 1
+    },
+    {
+      "receipt": "measurements/bluefin-gill-source-a.json",
+      "exitCode": 1
+    },
+    {
+      "receipt": "measurements/bluefin-gill-integrated-original-red.json",
+      "exitCode": 1
+    },
+    {
+      "receipt": "measurements/bluefin-gill-source-b.json",
+      "exitCode": 1
+    },
+    {
+      "receipt": "measurements/bluefin-gill-source-c.json",
+      "exitCode": 1
+    },
+    {
+      "receipt": "measurements/developer-mode-play-a.json",
+      "exitCode": 2
+    },
+    {
+      "receipt": "measurements/developer-mode-native-build-a.json",
+      "exitCode": 3
+    }
+  ],
+  "scope": "Own local state/receipt integrity; not formal independent CLI audit or product acceptance"
+}

@@ -1,0 +1,610 @@
+{
+  "status": "DUAL_NATIVE_SCOPED_PASS_FULL_PRODUCT_PARTIAL",
+  "implementation": "IMPLEMENTED_CANDIDATE",
+  "wholeProduct": "PARTIAL",
+  "source": {
+    "sourceCommit": "f2abf498f81ccfc5ee6d4e45e149c386165496a9",
+    "sourceDigest": "f1aad882a037109f35f3667a2916aa33adc6d74a54c125d8d80f4a0e46738e0f",
+    "projectSettingsSha256": "15b80559faa4f4758454e50942f82ac04a1473bc6e4cf968ee7c497d7a3a3620"
+  },
+  "distribution": "LOCAL_SIMULATOR_ONLY_NOT_TESTFLIGHT",
+  "appDigest": "f4ca92e461d35fc04aeb2607991cb4805eef1982d15238f53a5ff4cc0a7b2480",
+  "architectures": [
+    "arm64"
+  ],
+  "deviceFamilies": [
+    1,
+    2
+  ],
+  "bundleVersion": "0.1.0",
+  "bundleBuild": "7",
+  "phone": {
+    "status": "PASS",
+    "label": "pect20261125phone1",
+    "scope": "native15-frame immersive EventSystem first-tutorial flow for pectoral geometry candidate; no RNG/points injection; not900-second rest-trigger, child, OS touch, full progression or physical20-minute qualification",
+    "source": {
+      "sourceCommit": "f2abf498f81ccfc5ee6d4e45e149c386165496a9",
+      "sourceDigest": "f1aad882a037109f35f3667a2916aa33adc6d74a54c125d8d80f4a0e46738e0f",
+      "projectSettingsSha256": "15b80559faa4f4758454e50942f82ac04a1473bc6e4cf968ee7c497d7a3a3620"
+    },
+    "appDigest": "f4ca92e461d35fc04aeb2607991cb4805eef1982d15238f53a5ff4cc0a7b2480",
+    "externalMeasurementDurationMs": 64556.938875,
+    "catches": 1,
+    "points": 198,
+    "fishId": "trevally",
+    "saveSha256": "a2ca0ef2dfdc42618a749d124197741e0d3c9faea4081ca1a17afbfaeee0b68d",
+    "maxHudRatio": 0.12227564305067062,
+    "samples": [
+      {
+        "phase": "Ready",
+        "leftHanded": false,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.0890224352478981
+      },
+      {
+        "phase": "Waiting",
+        "leftHanded": false,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.0890224352478981
+      },
+      {
+        "phase": "Bite",
+        "leftHanded": false,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.0890224352478981
+      },
+      {
+        "phase": "Fighting",
+        "leftHanded": false,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.12034111469984055
+      },
+      {
+        "phase": "Fighting",
+        "leftHanded": false,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.12034111469984055
+      },
+      {
+        "phase": "Landed",
+        "leftHanded": false,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.12227564305067062
+      },
+      {
+        "phase": "Ready",
+        "leftHanded": true,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.0890224352478981
+      },
+      {
+        "phase": "Waiting",
+        "leftHanded": true,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.0890224352478981
+      },
+      {
+        "phase": "Bite",
+        "leftHanded": true,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.0890224352478981
+      },
+      {
+        "phase": "Fighting",
+        "leftHanded": true,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.12034111469984055
+      }
+    ],
+    "capturedFrames": 15,
+    "renderProbe": {
+      "graphics": "Metal",
+      "quality": "Medium",
+      "hdrAfter": true,
+      "halfHdrSamples": 4,
+      "desiredSamples": 4
+    },
+    "checks": [
+      "immersive-isolated-save-root",
+      "immersive-ready-valid-save",
+      "visible-hit-target:继续探索",
+      "visible-hit-target:暂停",
+      "visible-hit-target:设置",
+      "visible-hit-target:出海",
+      "visible-hit-target:返回首页",
+      "visible-hit-target:海域与装备",
+      "immersive-separate-preparation",
+      "immersive-departure-visible-without-scrolling",
+      "immersive-departure-inside-safe-area",
+      "visible-hit-target:开始钓鱼",
+      "immersive-active-play",
+      "immersive-only-pause-and-current-action",
+      "immersive-no-global-chrome-or-panels",
+      "immersive-hud-under-15-percent-and-central-view-clear-Ready",
+      "immersive-meters-only-while-fighting",
+      "visible-hit-target:按住蓄力 · 松手抛竿",
+      "immersive-menu-cancels-cast-charge",
+      "immersive-hud-under-15-percent-and-central-view-clear-Waiting",
+      "immersive-normal-bite",
+      "immersive-hud-under-15-percent-and-central-view-clear-Bite",
+      "visible-hit-target:提竿",
+      "immersive-hud-under-15-percent-and-central-view-clear-Fighting",
+      "visible-hit-target:按住收线",
+      "immersive-pause-releases-held-reel",
+      "immersive-pause-freezes-current-fish",
+      "immersive-settings-retain-catch",
+      "visible-hit-target:上一级",
+      "immersive-back-does-not-resume",
+      "visible-hit-target:结束本次 · 返回准备",
+      "visible-hit-target:取消，继续留在这里",
+      "immersive-exit-cancel-keeps-current-fish",
+      "immersive-focus-loss-cancels-input",
+      "immersive-focus-return-awaits-continue",
+      "immersive-real-fish-landed",
+      "immersive-hud-under-15-percent-and-central-view-clear-Landed",
+      "visible-hit-target:记录并放流",
+      "immersive-one-real-record",
+      "visible-hit-target:左手操作    已关闭",
+      "visible-hit-target:确认结束并返回准备",
+      "immersive-confirm-exit-to-preparation",
+      "immersive-unrecorded-exit-preserves-existing-disk-ledger",
+      "visible-hit-target:左手操作    已开启",
+      "immersive-restored-settings-real-disk-ledger"
+    ]
+  },
+  "tablet": {
+    "status": "PASS",
+    "label": "pect20261125pad1",
+    "scope": "native15-frame immersive EventSystem first-tutorial flow for pectoral geometry candidate; no RNG/points injection; not900-second rest-trigger, child, OS touch, full progression or physical20-minute qualification",
+    "source": {
+      "sourceCommit": "f2abf498f81ccfc5ee6d4e45e149c386165496a9",
+      "sourceDigest": "f1aad882a037109f35f3667a2916aa33adc6d74a54c125d8d80f4a0e46738e0f",
+      "projectSettingsSha256": "15b80559faa4f4758454e50942f82ac04a1473bc6e4cf968ee7c497d7a3a3620"
+    },
+    "appDigest": "f4ca92e461d35fc04aeb2607991cb4805eef1982d15238f53a5ff4cc0a7b2480",
+    "externalMeasurementDurationMs": 79944.132417,
+    "catches": 1,
+    "points": 250,
+    "fishId": "trevally",
+    "saveSha256": "df1786f2d6fff2ff7e51bad04104b231809b60fba3caa9d55636a6037b5e65f0",
+    "maxHudRatio": 0.045262712985277176,
+    "samples": [
+      {
+        "phase": "Ready",
+        "leftHanded": false,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.03295338898897171
+      },
+      {
+        "phase": "Waiting",
+        "leftHanded": false,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.03295338898897171
+      },
+      {
+        "phase": "Bite",
+        "leftHanded": false,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.03295338898897171
+      },
+      {
+        "phase": "Fighting",
+        "leftHanded": false,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.04454661160707474
+      },
+      {
+        "phase": "Fighting",
+        "leftHanded": false,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.04454661160707474
+      },
+      {
+        "phase": "Landed",
+        "leftHanded": false,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.045262712985277176
+      },
+      {
+        "phase": "Ready",
+        "leftHanded": true,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.03295338898897171
+      },
+      {
+        "phase": "Waiting",
+        "leftHanded": true,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.03295338898897171
+      },
+      {
+        "phase": "Bite",
+        "leftHanded": true,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.03295338898897171
+      },
+      {
+        "phase": "Fighting",
+        "leftHanded": true,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.04454661160707474
+      }
+    ],
+    "capturedFrames": 15,
+    "renderProbe": {
+      "graphics": "Metal",
+      "quality": "Medium",
+      "hdrAfter": true,
+      "halfHdrSamples": 4,
+      "desiredSamples": 4
+    },
+    "checks": [
+      "immersive-isolated-save-root",
+      "immersive-ready-valid-save",
+      "visible-hit-target:继续探索",
+      "visible-hit-target:暂停",
+      "visible-hit-target:设置",
+      "visible-hit-target:出海",
+      "visible-hit-target:返回首页",
+      "visible-hit-target:海域与装备",
+      "immersive-separate-preparation",
+      "immersive-departure-visible-without-scrolling",
+      "immersive-departure-inside-safe-area",
+      "visible-hit-target:开始钓鱼",
+      "immersive-active-play",
+      "immersive-only-pause-and-current-action",
+      "immersive-no-global-chrome-or-panels",
+      "immersive-hud-under-15-percent-and-central-view-clear-Ready",
+      "immersive-meters-only-while-fighting",
+      "visible-hit-target:按住蓄力 · 松手抛竿",
+      "immersive-menu-cancels-cast-charge",
+      "immersive-hud-under-15-percent-and-central-view-clear-Waiting",
+      "immersive-normal-bite",
+      "immersive-hud-under-15-percent-and-central-view-clear-Bite",
+      "visible-hit-target:提竿",
+      "immersive-hud-under-15-percent-and-central-view-clear-Fighting",
+      "visible-hit-target:按住收线",
+      "immersive-pause-releases-held-reel",
+      "immersive-pause-freezes-current-fish",
+      "immersive-settings-retain-catch",
+      "visible-hit-target:上一级",
+      "immersive-back-does-not-resume",
+      "visible-hit-target:结束本次 · 返回准备",
+      "visible-hit-target:取消，继续留在这里",
+      "immersive-exit-cancel-keeps-current-fish",
+      "immersive-focus-loss-cancels-input",
+      "immersive-focus-return-awaits-continue",
+      "immersive-real-fish-landed",
+      "immersive-hud-under-15-percent-and-central-view-clear-Landed",
+      "visible-hit-target:记录并放流",
+      "immersive-one-real-record",
+      "visible-hit-target:左手操作    已关闭",
+      "visible-hit-target:确认结束并返回准备",
+      "immersive-confirm-exit-to-preparation",
+      "immersive-unrecorded-exit-preserves-existing-disk-ledger",
+      "visible-hit-target:左手操作    已开启",
+      "immersive-restored-settings-real-disk-ledger"
+    ]
+  },
+  "retention": {
+    "status": "PASS",
+    "originalFiles": 24,
+    "allByteIdentical": true,
+    "method": "Current owned app container ownership and exact original bytes; no restore,uninstall or replay",
+    "checks": [
+      {
+        "device": "phone",
+        "label": "journeyphone20b",
+        "sha256": "dc70f508b5864e6cdc6023b4dc072a82f66ff597514a7a438f2a7e077544d249",
+        "bytes": 5340,
+        "byteIdentical": true
+      },
+      {
+        "device": "phone",
+        "label": "irismanual1",
+        "sha256": "fa0f36bbd8cd270015f5d27e99f32111bdf3b42c4f6eb5b79203abfc64c31520",
+        "bytes": 680,
+        "byteIdentical": true
+      },
+      {
+        "device": "phone",
+        "label": "content20261124phone1",
+        "sha256": "e0732947026735bab64f2f84354b984788df2a4a7d759a8fbf752e83e14ef339",
+        "bytes": 6554,
+        "byteIdentical": true
+      },
+      {
+        "device": "tablet",
+        "label": "journeypad20b",
+        "sha256": "48a974861099ef885791c545c4691f14d69642a733a486144ea80333671d7e3e",
+        "bytes": 5342,
+        "byteIdentical": true
+      },
+      {
+        "device": "tablet",
+        "label": "content20261124pad1",
+        "sha256": "4478f13dfe86006428506b1200d0557d845040120946d158f493bb5fc9b6325f",
+        "bytes": 5333,
+        "byteIdentical": true
+      },
+      {
+        "device": "phone",
+        "label": "immersive20261124phone2",
+        "sha256": "534d51254818bbeb14ed3c9ba9907ad44a1f2b0f5257ef663f334401a64056ed",
+        "bytes": 6797,
+        "byteIdentical": true
+      },
+      {
+        "device": "tablet",
+        "label": "immersive20261124pad2",
+        "sha256": "9582c3b38e8dba9b7218fe2899ad007be00d3aec661ea4f4f80724d700b93497",
+        "bytes": 5578,
+        "byteIdentical": true
+      },
+      {
+        "device": "phone",
+        "label": "slope20261124phone1",
+        "sha256": "4512a416171ee835ab57627b4e5d4e24a909f70dae791471d155e6bd6547099f",
+        "bytes": 6791,
+        "byteIdentical": true
+      },
+      {
+        "device": "tablet",
+        "label": "slope20261124pad1",
+        "sha256": "4783d991a0b008c1a3e6f20b3b863eb63b5ed4b69ed96a25be9d0ae57c33450e",
+        "bytes": 5570,
+        "byteIdentical": true
+      },
+      {
+        "device": "phone",
+        "label": "slope20261124phone2",
+        "sha256": "e3913747a21f851fbee465ecb7d406d6bbdb7c78702e1f54f6e7d23dc64d0bec",
+        "bytes": 6796,
+        "byteIdentical": true
+      },
+      {
+        "device": "tablet",
+        "label": "slope20261124pad2",
+        "sha256": "4c29e2c9aaa20de210b8d0a2533bea32fdf684a59c21cc0fd44d79b25bfb4ff9",
+        "bytes": 5572,
+        "byteIdentical": true
+      },
+      {
+        "device": "phone",
+        "label": "fin20261124phone1",
+        "sha256": "bf78585d1464d62418b3a80f92fb4bf3496cd88d12cc33a7f669e3a50bae9c7a",
+        "bytes": 680,
+        "byteIdentical": true
+      },
+      {
+        "device": "tablet",
+        "label": "fin20261124pad1",
+        "sha256": "345541c68472f92fa97ec9eba7ad40a79fa1f1731e9672901db4ca5b27298c12",
+        "bytes": 680,
+        "byteIdentical": true
+      },
+      {
+        "device": "phone",
+        "label": "fin20261124phone2",
+        "sha256": "e465c389295bbd1a1a0567972084a478519d4d616dd5811d72c7a272b24ec7fb",
+        "bytes": 680,
+        "byteIdentical": true
+      },
+      {
+        "device": "tablet",
+        "label": "fin20261124pad2",
+        "sha256": "0faf82ce572e46e00920c3801da66ffdf13536941e8d6ab3585a6fa64df9d0e9",
+        "bytes": 681,
+        "byteIdentical": true
+      },
+      {
+        "device": "phone",
+        "label": "rig20261124phone1",
+        "sha256": "ab84bcc4f57831a019e2f64722f47b162510604410a8daeb8948800a452b3999",
+        "bytes": 680,
+        "byteIdentical": true
+      },
+      {
+        "device": "tablet",
+        "label": "rig20261124pad1",
+        "sha256": "af6a8b5916761d10060c25204761564a1675e4f9b44148dda80c1c3b1500dc84",
+        "bytes": 681,
+        "byteIdentical": true
+      },
+      {
+        "device": "phone",
+        "label": "rigimmersive20261124phone1",
+        "sha256": "65e67d8396b4e2da42be8908742e5e767a89ff131efdd7640323d51c292de5f7",
+        "bytes": 680,
+        "byteIdentical": true
+      },
+      {
+        "device": "tablet",
+        "label": "rigimmersive20261124pad1",
+        "sha256": "f9c744871938ced9ccef11010987468db86317bb888f97685a0638f2d7d2e2e7",
+        "bytes": 679,
+        "byteIdentical": true
+      },
+      {
+        "device": "tablet",
+        "label": "rigimmersive20261124pad2",
+        "sha256": "5530b7b92d5fe3f1bb3a18d47ebdb8902d6e03826af310fba3f716add8ff2d3c",
+        "bytes": 680,
+        "byteIdentical": true
+      },
+      {
+        "device": "phone",
+        "label": "wind20261124phone1",
+        "sha256": "33e0c5e8d604960d88fcfafd17619b52eb4c10ca4ec16eda3fa4982e66f4eb97",
+        "bytes": 678,
+        "byteIdentical": true
+      },
+      {
+        "device": "tablet",
+        "label": "wind20261124pad1",
+        "sha256": "6d544b0a7b74b3a2e2c7f0ead5c1fe3c35049009d9b208a37dd4c502d7fdcd23",
+        "bytes": 680,
+        "byteIdentical": true
+      },
+      {
+        "device": "phone",
+        "label": "rest20261125phone1",
+        "sha256": "1934e91295d151cd92fe3024d850c266ef642ef33be196066bb78ced734f6dab",
+        "bytes": 679,
+        "byteIdentical": true
+      },
+      {
+        "device": "tablet",
+        "label": "rest20261125pad1",
+        "sha256": "bac67873e6efd9a385f441378ff9267675f631a61e0fca1e4accf083b813b99d",
+        "bytes": 679,
+        "byteIdentical": true
+      }
+    ]
+  },
+  "reopened": {
+    "status": "BYTES_AND_SCREEN_CAPTURE_PASS_REQUIRES_VISUAL_REVIEW",
+    "catches": 26,
+    "points": 4622,
+    "saveBytesUnchanged": true,
+    "saveSha256": "e3913747a21f851fbee465ecb7d406d6bbdb7c78702e1f54f6e7d23dc64d0bec",
+    "frameSha256": "d664dfe8dbb22dab8056eaf30bea3efe4664dcf23ea241437c0439417cef3eb5",
+    "automaticFishingFlags": false,
+    "qaArguments": [
+      "--ocean-save-root",
+      "--ocean-simulator-probe"
+    ],
+    "agentVisualReview": "PASS_VISIBLE_PAUSED_HOME4622",
+    "originalLaunchProcessStillAlive": true,
+    "agentRelaunchAfterInitialCapture": false
+  },
+  "initialReopenObservation": {
+    "status": "INITIAL_CAPTURE_REJECTED_AND_PROOF_FAILED_THEN_SAME_PROCESS_READY",
+    "observed": "Fixed5-second OS screenshot was all black; probe absent at first proof. Original process alive and probe subsequently observed. Unchanged helper rerun after readiness; no relaunch or data mutation.",
+    "failedMeasurement": "measurements/pectoral-native-reopen-proof-20261125.json",
+    "initialFrameSha256": "ff084b6a9af5cba190cc35222a932186d8b7e5211f0521845cc6efb0a5d03154",
+    "coldStartQualification": "NOT_RUN_NO_STARTUP_DURATION_OR_PHYSICAL_PERFORMANCE_CLAIM"
+  },
+  "agentVisualReview": {
+    "status": "SELECTED_ORIGINALS_AND_BOTH_CONTACT_SHEETS_REVIEWED_VISUAL_PARTIAL",
+    "published": [
+      {
+        "path": "art/previews/bluefin-pectoral-native/phone-landed.png",
+        "sha256": "d4b425d38aa989d9bc9c83677de961631482f3b97b9d6d56a97de972c83b001a"
+      },
+      {
+        "path": "art/previews/bluefin-pectoral-native/tablet-landed.png",
+        "sha256": "5979f812ebc901251df0bf4427a0f3b7c0d86c4cd63bef30ec9a9058f5d638b5"
+      },
+      {
+        "path": "art/previews/bluefin-pectoral-native/phone-fighting.png",
+        "sha256": "9e3ab57060d1d1f5881fa8157cb2370d83da4e2d2d5be83718e6ff27a7e5bc2a"
+      },
+      {
+        "path": "art/previews/bluefin-pectoral-native/phone-pause.png",
+        "sha256": "04a6b2513870a0de34c9b2cd071b65fe9a115284712b7010182616a12a9744a7"
+      },
+      {
+        "path": "art/previews/bluefin-pectoral-native/tablet-left-ready.png",
+        "sha256": "d57953da5a6c9df035d76c7a9f888572e6933f75f52030170c40f334ae21c37d"
+      },
+      {
+        "path": "art/previews/bluefin-pectoral-native/reopened-home.png",
+        "sha256": "d664dfe8dbb22dab8056eaf30bea3efe4664dcf23ea241437c0439417cef3eb5"
+      }
+    ],
+    "art": "Pectoral root intact in these actual frames; speckling, rigidity and plastic impression remain unaccepted",
+    "ui": "HUD footprint/central clear passed. Fighting meter white text has weak contrast on light sand; needs styling refinement. Not children acceptance",
+    "reopened": "Actual paused home4622 viewed; original26catches/raw bytes verified"
+  },
+  "publishedFrames": [
+    {
+      "path": "art/previews/bluefin-pectoral-native/phone-landed.png",
+      "sha256": "d4b425d38aa989d9bc9c83677de961631482f3b97b9d6d56a97de972c83b001a"
+    },
+    {
+      "path": "art/previews/bluefin-pectoral-native/tablet-landed.png",
+      "sha256": "5979f812ebc901251df0bf4427a0f3b7c0d86c4cd63bef30ec9a9058f5d638b5"
+    },
+    {
+      "path": "art/previews/bluefin-pectoral-native/phone-fighting.png",
+      "sha256": "9e3ab57060d1d1f5881fa8157cb2370d83da4e2d2d5be83718e6ff27a7e5bc2a"
+    },
+    {
+      "path": "art/previews/bluefin-pectoral-native/phone-pause.png",
+      "sha256": "04a6b2513870a0de34c9b2cd071b65fe9a115284712b7010182616a12a9744a7"
+    },
+    {
+      "path": "art/previews/bluefin-pectoral-native/tablet-left-ready.png",
+      "sha256": "d57953da5a6c9df035d76c7a9f888572e6933f75f52030170c40f334ae21c37d"
+    },
+    {
+      "path": "art/previews/bluefin-pectoral-native/reopened-home.png",
+      "sha256": "d664dfe8dbb22dab8056eaf30bea3efe4664dcf23ea241437c0439417cef3eb5"
+    }
+  ],
+  "uiVisualAcceptance": "PARTIAL_FIGHT_METER_TEXT_LOW_CONTRAST_ON_LIGHT_SAND",
+  "artAcceptance": "PARTIAL",
+  "userDirection": "PENDING_EXISTING_FIRST_SET_REVIEW",
+  "scienceAcceptance": "NOT_RUN",
+  "childrenAcceptance": "NOT_RUN",
+  "actualSystemTouch": "NOT_RUN",
+  "physical20MinuteQualification": "NOT_RUN",
+  "testFlight": {
+    "build": "7",
+    "frozenSource": "653d3a793626962ed899fac96254eb9594353c63",
+    "updated": false,
+    "newCandidateIncluded": false
+  },
+  "metrics": {
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "incrementAudit": {
+      "status": "NEW_RECORDS_INTEGRITY_PASS",
+      "historicalOverall": "INCOMPLETE",
+      "baselineCompleted": 1073,
+      "baselineStarts": 1068,
+      "newCompleted": 15,
+      "newStarts": 15,
+      "totalCompleted": 1088,
+      "totalStarts": 1083,
+      "oldObjectsUnchanged": true,
+      "actualReceiptsAndBindingsVerified": true,
+      "newIntervalsDisjoint": true,
+      "overlaps": [],
+      "newFailures": [
+        {
+          "id": "ba39523f-dee4-49fe-a796-0d671a311b39",
+          "receipt": "measurements/pectoral-native-reopen-proof-20261125.json",
+          "exitCode": 1
+        },
+        {
+          "id": "341cb0cf-d611-473e-aa2d-7d64168d08dc",
+          "receipt": "measurements/pectoral-native-public-checks-20261125.json",
+          "exitCode": 2
+        }
+      ],
+      "scope": "actual local state/start/completion/receipt integrity for this increment only; not formal independent CLI compliance or product acceptance"
+    },
+    "historicalIndependentAudit": "INCOMPLETE"
+  }
+}

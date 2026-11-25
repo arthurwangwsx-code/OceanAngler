@@ -13,7 +13,8 @@ namespace OceanAngler
     }
     [Serializable] public sealed class GameSettings
     {
-        public bool assisted = true, leftHanded, reducedMotion, sound = true, haptics = true;
+        public bool assisted = true, leftHanded, reducedMotion, sound = true, haptics = true, music;
+        public bool underwaterOnly;
     }
     [Serializable] public sealed class ProgressData
     {
@@ -22,11 +23,19 @@ namespace OceanAngler
         public string habitatId = "bay", rodId = "rod-1", reelId = "reel-1", lineId = "line-1", lureId = "lure-1";
         public List<CatchRecord> catches = new List<CatchRecord>();
         public GameSettings settings = new GameSettings();
+        public List<string> observations = new List<string>();
         public ProgressData Clone() => JsonUtility.FromJson<ProgressData>(JsonUtility.ToJson(this));
-        public void Validate(ContentCatalog catalog)
+        public void Validate(ContentCatalog catalog, bool developerSandbox = false)
         {
-            if (schemaVersion != 1) throw new InvalidOperationException("Unsupported save version");
-            if (settings == null || catches == null || totalPoints < 0) throw new InvalidOperationException("Invalid save");
+            if (schemaVersion != 1 && schemaVersion != 2) throw new InvalidOperationException("Unsupported save version");
+            if (settings == null || catches == null || observations == null || totalPoints < 0) throw new InvalidOperationException("Invalid save");
+            if(schemaVersion==1&&observations.Count!=0)throw new InvalidOperationException("Observation records require save version 2");
+            if(observations.Distinct().Count()!=observations.Count)throw new InvalidOperationException("Duplicate observation");
+            foreach(var id in observations)
+            {
+                var habitat=catalog.Habitat(catalog.Observation(id).habitatId);
+                if(!developerSandbox&&habitat.unlockPoints>totalPoints)throw new InvalidOperationException("Locked observation");
+            }
             long expected = 0; var ids = new HashSet<string>();
             foreach (var c in catches)
             {
@@ -35,11 +44,12 @@ namespace OceanAngler
                 expected += c.awardedPoints;
             }
             if (expected != totalPoints) throw new InvalidOperationException("Point ledger mismatch");
-            if (catalog.Habitat(habitatId).unlockPoints > totalPoints) throw new InvalidOperationException("Locked habitat in save");
+            var selectedHabitat=catalog.Habitat(habitatId);
+            if (!developerSandbox&&selectedHabitat.unlockPoints > totalPoints) throw new InvalidOperationException("Locked habitat in save");
             foreach (var pair in new[] { (rodId,"rod"), (reelId,"reel"), (lineId,"line"), (lureId,"lure") })
             {
                 var g = catalog.Gear(pair.Item1);
-                if (g.category != pair.Item2 || g.unlockPoints > totalPoints) throw new InvalidOperationException("Invalid loadout");
+                if (g.category != pair.Item2 || !developerSandbox&&g.unlockPoints > totalPoints) throw new InvalidOperationException("Invalid loadout");
             }
         }
         public static void ValidateCatch(CatchRecord c, ContentCatalog catalog)
@@ -53,6 +63,20 @@ namespace OceanAngler
     }
     public static class TaskProgress
     {
+        public static bool Gentle(CatchRecord record)=>record.skillPoints>=25;
+        public static string GoalText(TaskDefinition task,ContentCatalog catalog)
+        {
+            switch(task.kind)
+            {
+                case "catches":return "在任意海域记录并放流 "+task.target+" 条鱼。";
+                case "species":return "发现并放流 "+task.target+" 种鱼，同种鱼不重复计数。";
+                case "habitat":return "在"+catalog.Habitat(task.targetId).name+"记录并放流 "+task.target+" 条鱼。";
+                case "safe":return "警戒时松手降张力，记录 "+task.target+" 次轻柔放流。";
+                case "standard":return "关闭初学辅助，以标准模式放流 "+task.target+" 条鱼。";
+                case "points":return "累计获得 "+task.target+" 研究积分，不会扣除。";
+                default:throw new ArgumentException("Unknown task kind");
+            }
+        }
         public static int Value(TaskDefinition t, ProgressData p)
         {
             switch (t.kind)
@@ -60,7 +84,7 @@ namespace OceanAngler
                 case "catches": return p.catches.Count;
                 case "species": return p.catches.Select(c => c.fishId).Distinct().Count();
                 case "habitat": return p.catches.Count(c => c.habitatId == t.targetId);
-                case "safe": return p.catches.Count(c => c.skillPoints >= 25);
+                case "safe": return p.catches.Count(Gentle);
                 case "standard": return p.catches.Count(c => c.mode == "standard");
                 case "points": return p.totalPoints;
                 default: throw new ArgumentException("Unknown task kind");

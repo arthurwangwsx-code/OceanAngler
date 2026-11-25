@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "50215167-bca1-4b39-9637-470472614566",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "431cc7e35b96ae199969db799a54c36f051b60f2faa1acebacc490406258de0a",
+    "category": "artifact-retention",
+    "executable": "python3",
+    "startedAt": "2026-11-25T00:12:33.826Z",
+    "finishedAt": "2026-11-25T00:12:40.147Z",
+    "durationMs": 6274.524332999999,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/reflection-native-qa/retain-exports.py",
+      "--restore-only"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/reflection-native-qa/retain-exports.py",
+    "--restore-only"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T00:12:33.826Z",
+  "finishedAt": "2026-11-25T00:12:40.147Z",
+  "durationMs": 6274.524332999999
+}

@@ -5,6 +5,13 @@
 
 ## Requirements
 
+### Requirement: REQ-13 本人开发者模式
+The system SHALL provide an explicit parent-area developer mode that removes point unlock requirements for all habitats, gear, fish journal models and observation content while keeping normal and test progress isolated.
+
+#### Scenario: REQ-13 acceptance
+- **WHEN** 本人确认进入开发者模式
+- **THEN** 零积分可以使用全部三海域、二十件钓具、十二种图鉴模型及三观察，进度独立保存；取消不切换，关闭还原正常进度，重启保持选择，写入失败不换态，正常模式原门槛继续有效。必须提供实际测试和页面证据，不以加分或伪造鱼获代替解锁。
+
 ### Requirement: REQ-01 儿童钓鱼完整循环
 The system SHALL satisfy the P0 contract: 能从抛竿完成至放流并再次抛竿，20次无卡死。
 
@@ -60,6 +67,10 @@ The system SHALL satisfy the P1 contract: 横屏安全区、左右手、减弱�
 #### Scenario: REQ-08 acceptance
 - **WHEN** 对应阶段执行验收
 - **THEN** 必须提供以下证据：横屏安全区、左右手、减弱动态、非纯颜色提示，未运行不得写 PASS。
+
+#### Scenario: REQ-08 gentle rest reminder
+- **WHEN** 未暂停游玩累计900秒
+- **THEN** 仅在准备抛竿时借用原边缘提示，暂停/首页复用原继续按钮和说明；不自动暂停、不遮挡提竿/控线/收鱼。普通导航不清除，主动确认继续才开启下一周期，不改变已有积分、记录或设置。计时边界、原生实际时间/画面与儿童体验分别验收。
 
 ### Requirement: REQ-09 隐私家长区
 The system SHALL satisfy the P1 contract: 无跟踪SDK或隐私权限，清档与外链经家长区。

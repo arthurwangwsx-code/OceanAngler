@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "d12ebc0f-efcf-4637-9de8-ccf0294dd690",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "cdb082d13c1066a5760852616715d0fad0e5ec9cde54907cb3777cdf098df4e7",
+    "category": "verification",
+    "executable": "python3",
+    "startedAt": "2026-11-25T02:30:29.558Z",
+    "finishedAt": "2026-11-25T02:30:31.456Z",
+    "durationMs": 1805.162084,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/meadow-qa/final-check.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/meadow-qa/final-check.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T02:30:29.558Z",
+  "finishedAt": "2026-11-25T02:30:31.456Z",
+  "durationMs": 1805.162084
+}

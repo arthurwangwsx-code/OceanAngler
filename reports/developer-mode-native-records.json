@@ -1,0 +1,39 @@
+{
+  "status": "PASS_LOCAL_INCREMENT_INTEGRITY",
+  "baselineEnded": 1685,
+  "endedBeforeThisAudit": 51,
+  "failedOrBlockedRetained": [
+    {
+      "receipt": "measurements/bluefin-gill-binding-red.json",
+      "exitCode": 1,
+      "errorCode": null
+    },
+    {
+      "receipt": "measurements/bluefin-gill-rebind-import.json",
+      "exitCode": 1,
+      "errorCode": null
+    },
+    {
+      "receipt": "measurements/developer-mode-back-route-red.json",
+      "exitCode": 1,
+      "errorCode": null
+    },
+    {
+      "receipt": "measurements/beta9-apple-preflight.json",
+      "exitCode": 1,
+      "errorCode": null
+    },
+    {
+      "receipt": "measurements/dev9-native.json",
+      "exitCode": 65,
+      "errorCode": null
+    }
+  ],
+  "oldMeasurementObjectsUnchanged": true,
+  "oldReceiptHashesUnchanged": true,
+  "newReceiptHashesAndBindingsCorrect": true,
+  "newEndedIntervalsSerial": true,
+  "auditOwnMeasurementPending": "c8cd1901-7baa-4210-b226-a859f4cc9e80",
+  "formalHistoricalAudit": "INCOMPLETE",
+  "scope": "Only local object/hash/receipt binding and new-increment serial chronology; no retroactive recovery of older missing execution evidence, physical/art or full-product acceptance"
+}

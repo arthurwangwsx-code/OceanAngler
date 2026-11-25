@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "6a3816c5-3073-4db4-b5b7-38bb7ec6c12f",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "7dd5f61badb913cd1ad15c48af984ff846fddd13ec082699e60aeceed1c71855",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-25T18:07:58.731Z",
+    "finishedAt": "2026-11-25T18:07:58.855Z",
+    "durationMs": 97.23891599999996,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "args": [
+      "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b/.local/hero-surface-qa/audit-records.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b/.local/hero-surface-qa/audit-records.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T18:07:58.731Z",
+  "finishedAt": "2026-11-25T18:07:58.855Z",
+  "durationMs": 97.23891599999996
+}

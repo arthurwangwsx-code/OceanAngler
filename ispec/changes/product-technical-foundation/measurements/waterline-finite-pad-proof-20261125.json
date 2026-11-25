@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "e0a043de-0031-4fa6-a52f-a1faea29658c",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "a9a44f73663982d0fc1c2673784d9a384f5edf590ed7f88217ba56304f13223d",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-24T23:22:59.948Z",
+    "finishedAt": "2026-11-24T23:23:00.057Z",
+    "durationMs": 76.27783299999999,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/waterline-qa/verify-native-b.py",
+      "waterline20261125pad1",
+      "waterline-finite-pad-20261125.json"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/waterline-qa/verify-native-b.py",
+    "waterline20261125pad1",
+    "waterline-finite-pad-20261125.json"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T23:22:59.948Z",
+  "finishedAt": "2026-11-24T23:23:00.057Z",
+  "durationMs": 76.27783299999999
+}

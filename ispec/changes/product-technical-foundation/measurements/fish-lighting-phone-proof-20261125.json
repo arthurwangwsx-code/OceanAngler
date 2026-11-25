@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "371167e3-9cb3-45d2-bebf-3afd91900426",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "27aa38c45f52dfb0258b7ee39c134c4bc58b3fb408853026e4681bdc0a5e00a4",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-24T20:27:15.928Z",
+    "finishedAt": "2026-11-24T20:27:16.035Z",
+    "durationMs": 81.96754199999998,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/fish-lighting-qa/verify-native.py",
+      "fishlighting20261125phone1",
+      "fish-lighting-phone-20261125.json"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/fish-lighting-qa/verify-native.py",
+    "fishlighting20261125phone1",
+    "fish-lighting-phone-20261125.json"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T20:27:15.928Z",
+  "finishedAt": "2026-11-24T20:27:16.035Z",
+  "durationMs": 81.96754199999998
+}

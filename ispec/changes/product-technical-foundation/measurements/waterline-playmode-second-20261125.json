@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "da9dca9e-7be6-4779-87c4-58a3033c065f",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "65b4573f8e44827baa3c218dada50cab58b09f4ee4b7b78955fc26d9e13f5aad",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-24T22:53:48.972Z",
+    "finishedAt": "2026-11-24T22:54:30.996Z",
+    "durationMs": 41976.401999999995,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      "tools/game.py",
+      "tests",
+      "--test-platform",
+      "PlayMode",
+      "--test-filter",
+      "MinimalHudAndHierarchicalMenusPreserveFishingAndPersistOnlyRecordedFish",
+      "--label",
+      "waterlineplay20261125b"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    "tools/game.py",
+    "tests",
+    "--test-platform",
+    "PlayMode",
+    "--test-filter",
+    "MinimalHudAndHierarchicalMenusPreserveFishingAndPersistOnlyRecordedFish",
+    "--label",
+    "waterlineplay20261125b"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T22:53:48.972Z",
+  "finishedAt": "2026-11-24T22:54:30.996Z",
+  "durationMs": 41976.401999999995
+}

@@ -1,0 +1,123 @@
+{
+  "verifiedAt": "2026-11-24T16:18:55.838612+00:00",
+  "appId": "6838308856",
+  "bundleId": "com.arthur.OceanAngler",
+  "version": "0.1.0",
+  "build": "6",
+  "processingState": "VALID",
+  "buildId": "22bc2786-3330-4998-b646-e72703b50120",
+  "actualInstallation": "NOT_RUN",
+  "internalBuildState": "IN_BETA_TESTING",
+  "sourceCommit": "648b4ce8d9c22f3e2a24ddf3bbe658d822023c2a",
+  "sourceDigest": "2625263c7ed5aaace780872e499fe555be0363c7e3011bd84a344222300f54d8",
+  "nativeExport": "PASS",
+  "nativeDigest": "f6ceaab3a1ba554c20a065096db78427dd10f14fc9c1405508e21e7924dfea2f",
+  "archiveSignatureAndIdentity": "PASS",
+  "archiveDigest": "b8b97d94ac62e83e629706dd4141e6916eaecd2605d97eba17d7f3c1e6015669",
+  "internalOnlyExport": "PASS",
+  "localExportIpaBytes": 114572849,
+  "localExportIpaSha256": "eb69b6c05f7719369d95318ae698c4611fadff09670741b8400b0dc8b917055b",
+  "uploadTransport": "PASS",
+  "buildAudienceType": "INTERNAL_ONLY",
+  "usesNonExemptEncryption": false,
+  "uploadedDate": "2026-11-24T08:15:55-08:00",
+  "expirationDate": "2027-02-22T08:15:55-08:00",
+  "groupName": "OceanAngler Personal",
+  "isInternalGroup": true,
+  "publicLinkEnabled": false,
+  "authorizedAccountsOnly": true,
+  "approvedAccountCount": 2,
+  "accessibleGroups": 1,
+  "explicitTesterEmail": "arthur.wang.wsx@gmail.com",
+  "explicitTesterInvitationState": "INVITED",
+  "testerCount": 2,
+  "assignedBuild": true,
+  "betaNotes": "VERIFIED",
+  "feedbackEmail": "arthur.wang.wsx@gmail.com",
+  "minimumOS": "17.0",
+  "deviceFamilies": [
+    1,
+    2
+  ],
+  "staticPermissionUsageKeys": [],
+  "networkBehaviorAcceptance": "NOT_RUN",
+  "physical20MinuteQualification": "NOT_RUN",
+  "artQualification": "PARTIAL",
+  "overallProductAcceptance": "PARTIAL",
+  "contentScope": "Cumulative build 5 plus immersive hierarchical navigation and compact landed HUD, journal/gear/task feedback, authored slope habitat, hero fish eye/jaw/thin-fin updates, spinning roller/winding/main shaft and inspection, iOS HDR/MSAA startup fixes. Other species/gear/observation shapes and final art remain incomplete; scoring and random odds unchanged",
+  "editorTests": {
+    "result": "Passed",
+    "total": "60",
+    "passed": "60",
+    "failed": "0",
+    "end-time": "2026-11-24 15:42:47Z"
+  },
+  "headlessPlayModeTests": {
+    "result": "Passed",
+    "total": "20",
+    "passed": "20",
+    "failed": "0",
+    "end-time": "2026-11-24 16:00:50Z"
+  },
+  "releaseGuardTests": 12,
+  "actualTouchAcceptance": "NOT_RUN",
+  "currentReleasePlayerVisualAcceptance": "NOT_RUN",
+  "priorSimulatorEvidence": {
+    "report": "reports/spinning-rig-winding.json",
+    "frozenSource": "3fe4504bd928dc227fc70626fc38c30e4832cb25",
+    "scope": "same game implementation before release build/settings/notes update; dual 16-frame rigs, not this signed release on physical devices"
+  },
+  "actualDeviceProgressMigration": "NOT_RUN",
+  "sourceCi": {
+    "commit": "648b4ce8d9c22f3e2a24ddf3bbe658d822023c2a",
+    "status": "PASS",
+    "url": "https://github.com/arthurwangwsx-code/OceanAngler/actions/runs/45432868381"
+  },
+  "metrics": {
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "binding": "ACTUAL_LOCAL_RECEIPT_HASH_AND_ATTEMPT_BINDINGS_PASS",
+    "independentReceiptAudit": "INCOMPLETE",
+    "incrementAudit": {
+      "status": "NEW_RECORDS_INTEGRITY_PASS",
+      "historicalOverall": "INCOMPLETE",
+      "baselineCompleted": 974,
+      "baselineStarts": 970,
+      "newCompleted": 28,
+      "newStarts": 28,
+      "totalCompleted": 1002,
+      "totalStarts": 998,
+      "oldObjectsUnchanged": true,
+      "actualReceiptsAndBindingsVerified": true,
+      "newIntervalsDisjoint": true,
+      "overlaps": [],
+      "newFailures": [
+        {
+          "id": "2a040b89-0ed0-4c6b-8825-a0dc2be4ffd8",
+          "receipt": "measurements/beta6-preflight-20261124.json",
+          "exitCode": 1
+        },
+        {
+          "id": "77370df4-156b-433c-8a8d-e046345251c9",
+          "receipt": "measurements/beta6-preflight-20261124b.json",
+          "exitCode": 1
+        },
+        {
+          "id": "f7bbb2b5-ebaa-4a3f-af64-bb7b97892b69",
+          "receipt": "measurements/beta6-native-export-20261125.json",
+          "exitCode": 1
+        },
+        {
+          "id": "ce18a846-d8a9-466b-979c-d9007f77e4c2",
+          "receipt": "measurements/beta6-python-entry-preview-20261125.json",
+          "exitCode": 1
+        },
+        {
+          "id": "24441965-e3b8-43aa-aa98-5d38f22f30fa",
+          "receipt": "measurements/beta6-direct-entry-red-20261125.json",
+          "exitCode": 1
+        }
+      ],
+      "scope": "actual local state/start/completion/receipt integrity for this increment only; not formal independent CLI compliance or product acceptance"
+    }
+  }
+}

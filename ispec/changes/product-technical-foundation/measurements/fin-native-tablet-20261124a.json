@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "e1573cb3-a147-499d-a0b8-06903f006afa",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "e7b9d626de5fda9df6641c25428f74c0a2a960da6800fbe96934eec73a1611d0",
+    "category": "e2e",
+    "executable": "python3",
+    "startedAt": "2026-11-24T12:12:51.375Z",
+    "finishedAt": "2026-11-24T12:13:57.177Z",
+    "durationMs": 65767.539083,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/fin-tissue-qa/run-native.py",
+      "immersive",
+      "fin20261124pad1",
+      "--device",
+      "tablet"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/fin-tissue-qa/run-native.py",
+    "immersive",
+    "fin20261124pad1",
+    "--device",
+    "tablet"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T12:12:51.375Z",
+  "finishedAt": "2026-11-24T12:13:57.177Z",
+  "durationMs": 65767.539083
+}

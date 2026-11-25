@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "b5c1aade-cc93-4db4-83d5-37b95d3634c1",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "174037474f9ebfb7ec7e282b3ae5e0f1b7b00267bfbdfb3fda98df1e2c2b473a",
+    "category": "e2e",
+    "executable": "python3",
+    "startedAt": "2026-11-25T17:00:04.851Z",
+    "finishedAt": "2026-11-25T17:00:07.687Z",
+    "durationMs": 2792.0857499999997,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "args": [
+      "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b/.local/fin-contour-qa/gpu-contact.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b/.local/fin-contour-qa/gpu-contact.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T17:00:04.851Z",
+  "finishedAt": "2026-11-25T17:00:07.687Z",
+  "durationMs": 2792.0857499999997
+}

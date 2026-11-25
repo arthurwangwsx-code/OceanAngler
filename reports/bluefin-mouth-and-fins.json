@@ -1,0 +1,455 @@
+{
+  "date": "2026-11-24",
+  "sourceBaseCommit": "df00ad02a1ffdbc46daa9f51b022fb0e3db75fbd",
+  "testedSourceDigest": "2aed885708e32372daa398bc58c651f8b52c29c0b7dea6e277a7e9586b557e8d",
+  "sourceBlendSha256": "30732e8a3a2d3f5597533e1fc3d02d60b58b272a8289ce44934ae9bf0b3d2d06",
+  "implementation": "IMPLEMENTED",
+  "scope": "hero-fish mouth/jaw/fin and per-submesh presentation color fix; source engineering and isolated imported-prefab GPU fixture",
+  "artAcceptance": "PARTIAL",
+  "scientificReview": "PENDING",
+  "userReview": "PENDING",
+  "overallProductAcceptance": "PARTIAL",
+  "sourceBefore": {
+    "scope": "saved-blend-engineering",
+    "visualAcceptance": "NOT_ACCEPTED",
+    "lods": {
+      "Bluefin_LOD0": {
+        "triangles": 20720,
+        "invalidWeightVertices": 0,
+        "invalidUVLoops": 0
+      },
+      "Bluefin_LOD1": {
+        "triangles": 8288,
+        "invalidWeightVertices": 0,
+        "invalidUVLoops": 0
+      },
+      "Bluefin_LOD2": {
+        "triangles": 3108,
+        "invalidWeightVertices": 0,
+        "invalidUVLoops": 0
+      }
+    },
+    "motion": {
+      "idle": {
+        "tailRotationRange": 0.06613948801532388,
+        "jawRotationRange": 0.004999999888241291,
+        "maximumGillDistanceToBody": 0.002394790994003415
+      },
+      "swim": {
+        "tailRotationRange": 0.0346224419772625,
+        "jawRotationRange": 2.449293581093244e-18,
+        "maximumGillDistanceToBody": 0.002394977258518338
+      },
+      "turn": {
+        "tailRotationRange": 0.20888365246355534,
+        "jawRotationRange": 0.004999999888241291,
+        "maximumGillDistanceToBody": 0.0023983691353350878
+      },
+      "burst": {
+        "tailRotationRange": 0.27558119781315327,
+        "jawRotationRange": 0.004999999888241291,
+        "maximumGillDistanceToBody": 0.0023953935597091913
+      },
+      "bite": {
+        "tailRotationRange": 0.11023248359560966,
+        "jawRotationRange": 0.3199999928474426,
+        "maximumGillDistanceToBody": 0.0023949150927364826
+      },
+      "hooked": {
+        "tailRotationRange": 0.3306974433362484,
+        "jawRotationRange": 0.3199999928474426,
+        "maximumGillDistanceToBody": 0.0023955644574016333
+      },
+      "release": {
+        "tailRotationRange": 0.038950249552726746,
+        "jawRotationRange": 2.449293581093244e-18,
+        "maximumGillDistanceToBody": 0.002395031275227666
+      }
+    },
+    "failures": [
+      "前下唇实际绑定下颌而非头骨",
+      "口腔是有纵深的内壁而非单片盖板",
+      "鳍膜条段使用单个鳍条间隔UV",
+      "咬钩实际变形下唇随下颌张开"
+    ],
+    "checks": [
+      "可编辑骨骼存在",
+      "三个实际LOD存在",
+      "LOD0面数递减",
+      "LOD0全部顶点权重归一且非空",
+      "LOD0 UV有限且位于贴图范围",
+      "LOD0无非法顶点",
+      "LOD0使用共同骨骼",
+      "LOD1面数递减",
+      "LOD1全部顶点权重归一且非空",
+      "LOD1 UV有限且位于贴图范围",
+      "LOD1无非法顶点",
+      "LOD1使用共同骨骼",
+      "LOD2面数递减",
+      "LOD2全部顶点权重归一且非空",
+      "LOD2 UV有限且位于贴图范围",
+      "LOD2无非法顶点",
+      "LOD2使用共同骨骼",
+      "LOD0在候选面数预算内",
+      "颌/尾/成对鳍均有独立骨骼",
+      "可独立检查的前下唇几何存在",
+      "贴图文件存在：Bluefin_BaseColor",
+      "贴图文件存在：Bluefin_Fin",
+      "贴图文件存在：Bluefin_Normal",
+      "贴图文件存在：Bluefin_Roughness",
+      "语义动作存在：idle",
+      "语义动作具有真实尾摆：idle",
+      "变形后鳃缘紧贴鱼体：idle",
+      "语义动作存在：swim",
+      "语义动作具有真实尾摆：swim",
+      "变形后鳃缘紧贴鱼体：swim",
+      "语义动作存在：turn",
+      "语义动作具有真实尾摆：turn",
+      "变形后鳃缘紧贴鱼体：turn",
+      "语义动作存在：burst",
+      "语义动作具有真实尾摆：burst",
+      "变形后鳃缘紧贴鱼体：burst",
+      "语义动作存在：bite",
+      "语义动作具有真实尾摆：bite",
+      "咬钩动作有实际下颌运动",
+      "变形后鳃缘紧贴鱼体：bite",
+      "语义动作存在：hooked",
+      "语义动作具有真实尾摆：hooked",
+      "变形后鳃缘紧贴鱼体：hooked",
+      "语义动作存在：release",
+      "语义动作具有真实尾摆：release",
+      "变形后鳃缘紧贴鱼体：release"
+    ],
+    "mouth": {
+      "lowerLipVertices": 76,
+      "meanJawWeight": 0.0,
+      "liningDepth": 0,
+      "biteLipDisplacement": 0.0
+    },
+    "finUvStripFaces": 0,
+    "status": "FAIL"
+  },
+  "sourceBeforeMeasurement": "28c1a56b-5c70-4ef9-889a-849260b1dcfa",
+  "sourceAfter": {
+    "scope": "saved-blend-engineering",
+    "visualAcceptance": "NOT_ACCEPTED",
+    "lods": {
+      "Bluefin_LOD0": {
+        "triangles": 24164,
+        "invalidWeightVertices": 0,
+        "invalidUVLoops": 0
+      },
+      "Bluefin_LOD1": {
+        "triangles": 9664,
+        "invalidWeightVertices": 0,
+        "invalidUVLoops": 0
+      },
+      "Bluefin_LOD2": {
+        "triangles": 3624,
+        "invalidWeightVertices": 0,
+        "invalidUVLoops": 0
+      }
+    },
+    "motion": {
+      "idle": {
+        "tailRotationRange": 0.06613948801532388,
+        "jawRotationRange": 0.004999999888241291,
+        "maximumGillDistanceToBody": 0.002394790994003415
+      },
+      "swim": {
+        "tailRotationRange": 0.0346224419772625,
+        "jawRotationRange": 2.449293581093244e-18,
+        "maximumGillDistanceToBody": 0.002394977258518338
+      },
+      "turn": {
+        "tailRotationRange": 0.20888365246355534,
+        "jawRotationRange": 0.004999999888241291,
+        "maximumGillDistanceToBody": 0.0023983691353350878
+      },
+      "burst": {
+        "tailRotationRange": 0.27558119781315327,
+        "jawRotationRange": 0.004999999888241291,
+        "maximumGillDistanceToBody": 0.0023953935597091913
+      },
+      "bite": {
+        "tailRotationRange": 0.11023248359560966,
+        "jawRotationRange": 0.3199999928474426,
+        "maximumGillDistanceToBody": 0.0023949150927364826
+      },
+      "hooked": {
+        "tailRotationRange": 0.3306974433362484,
+        "jawRotationRange": 0.3199999928474426,
+        "maximumGillDistanceToBody": 0.0023955644574016333
+      },
+      "release": {
+        "tailRotationRange": 0.038950249552726746,
+        "jawRotationRange": 2.449293581093244e-18,
+        "maximumGillDistanceToBody": 0.002395031275227666
+      }
+    },
+    "failures": [],
+    "checks": [
+      "可编辑骨骼存在",
+      "三个实际LOD存在",
+      "LOD0面数递减",
+      "LOD0全部顶点权重归一且非空",
+      "LOD0 UV有限且位于贴图范围",
+      "LOD0无非法顶点",
+      "LOD0使用共同骨骼",
+      "LOD1面数递减",
+      "LOD1全部顶点权重归一且非空",
+      "LOD1 UV有限且位于贴图范围",
+      "LOD1无非法顶点",
+      "LOD1使用共同骨骼",
+      "LOD2面数递减",
+      "LOD2全部顶点权重归一且非空",
+      "LOD2 UV有限且位于贴图范围",
+      "LOD2无非法顶点",
+      "LOD2使用共同骨骼",
+      "LOD0在候选面数预算内",
+      "颌/尾/成对鳍均有独立骨骼",
+      "可独立检查的前下唇几何存在",
+      "前下唇实际绑定下颌而非头骨",
+      "口腔是有纵深的内壁而非单片盖板",
+      "口腔喉壁朝向口内而非背向观察者",
+      "鳍膜条段使用单个鳍条间隔UV",
+      "背部四边面不跨越整幅纹理的UV接缝",
+      "贴图文件存在：Bluefin_BaseColor",
+      "贴图文件存在：Bluefin_Fin",
+      "贴图文件存在：Bluefin_Normal",
+      "贴图文件存在：Bluefin_Roughness",
+      "语义动作存在：idle",
+      "语义动作具有真实尾摆：idle",
+      "变形后鳃缘紧贴鱼体：idle",
+      "语义动作存在：swim",
+      "语义动作具有真实尾摆：swim",
+      "变形后鳃缘紧贴鱼体：swim",
+      "语义动作存在：turn",
+      "语义动作具有真实尾摆：turn",
+      "变形后鳃缘紧贴鱼体：turn",
+      "语义动作存在：burst",
+      "语义动作具有真实尾摆：burst",
+      "变形后鳃缘紧贴鱼体：burst",
+      "语义动作存在：bite",
+      "张口时侧向射线命中朝内的口腔壁",
+      "语义动作具有真实尾摆：bite",
+      "咬钩动作有实际下颌运动",
+      "咬钩实际变形下唇随下颌张开",
+      "咬钩下唇向下张开而非转入头部",
+      "咬钩下唇无明显横向扭转",
+      "变形后鳃缘紧贴鱼体：bite",
+      "语义动作存在：hooked",
+      "语义动作具有真实尾摆：hooked",
+      "变形后鳃缘紧贴鱼体：hooked",
+      "语义动作存在：release",
+      "语义动作具有真实尾摆：release",
+      "变形后鳃缘紧贴鱼体：release"
+    ],
+    "mouth": {
+      "lowerLipVertices": 10,
+      "meanJawWeight": 1.0,
+      "liningDepth": 0.22400003671646118,
+      "throatNormalX": -1.0,
+      "farWallRayDistance": 0.05151721090078354,
+      "farWallNormalY": -0.9500250816345215,
+      "biteLipDisplacement": 0.061317427353846966,
+      "biteLipVerticalDisplacement": -0.06072927359491587,
+      "biteLipSidewaysDrift": 6.332993685020938e-09
+    },
+    "finUvStripFaces": 1284,
+    "maximumBackUvSpan": 0.03450150787830353,
+    "status": "ENGINEERING_CHECKS_PASS"
+  },
+  "sourceAfterMeasurement": "24e4fc32-8683-41b0-b835-0f60b289e268",
+  "sourceBuildMeasurement": "a4abba1f-f5e7-474d-9a41-4588eda5d097",
+  "unityImportMeasurement": "123b2527-f991-4437-8f2d-7d09871b812b",
+  "gpuMeasurement": "95eb9b96-fbdf-46ba-944c-6c8ca8a4efa0",
+  "gpuFixture": {
+    "status": "PASS",
+    "scope": "isolated imported-fish Editor GPU fixture; no player UI/device acceptance",
+    "graphics": "Metal",
+    "initialPassScope": "Production material initialization; first/repeated isolated draw checked; no player-startup claim",
+    "width": 1440,
+    "height": 960,
+    "images": 6,
+    "initialPassImages": 2,
+    "importedJawAngle": 18.036840438842773,
+    "idleInitialDifference": 0.0,
+    "biteInitialDifference": 0.0,
+    "singleSidedLining": true,
+    "firstDrawStable": true
+  },
+  "materialPresentation": {
+    "method": "per-renderer, per-material-index MaterialPropertyBlock; shared asset materials remain read-only; no material clones",
+    "regression": "Color restoration, repeated initialization, release and reinitialization PASS",
+    "firstDrawFix": "Both poses RGB normalized mean difference 0 between first and repeat after per-index blocks",
+    "scope": "Isolated fixture only; does not prove player startup or a general Unity engine defect",
+    "performanceTradeoff": "MaterialPropertyBlock excludes affected renderers from SRP Batcher. Physical-device CPU/GPU budget NOT_RUN; no global batcher setting changed",
+    "reference": "https://docs.unity.cn/6000.0/Documentation/Manual/SRPBatcher.html"
+  },
+  "sourceRenderMeasurements": {
+    "idle": "23ee6b08-e9e2-4724-9b9f-a1652a1620f5",
+    "bite": "8e14f92e-5b18-47a7-b90b-b046221313ad",
+    "turntable": "295057f8-3f5b-4d25-88ae-8028e8e378a0"
+  },
+  "sourceReview": {
+    "status": "RENDERED_AND_INSPECTED",
+    "scope": "Blender Cycles studio only",
+    "idleViews": 6,
+    "biteViews": 2,
+    "turntableFrames": 36,
+    "turntableInspectedFrames": [
+      0,
+      9,
+      18,
+      27
+    ],
+    "acceptance": "PARTIAL"
+  },
+  "video": {
+    "status": "PASS",
+    "codec": "h264",
+    "width": 960,
+    "height": 640,
+    "frames": 36,
+    "duration": 3.0,
+    "encodeMeasurement": "05e6ed93-223d-4aa5-b03f-a7a656ff9e62",
+    "probeMeasurement": "def01358-5212-4def-9f42-7ffb7a38f750"
+  },
+  "editorTests": {
+    "result": "Passed",
+    "total": "30",
+    "passed": "30",
+    "failed": "0",
+    "end-time": "2026-11-23 20:23:14Z"
+  },
+  "editorMeasurement": "a977492e-ae67-44a1-817c-2ca0f33505b2",
+  "playModeTests": {
+    "result": "Passed",
+    "total": "7",
+    "passed": "7",
+    "failed": "0",
+    "end-time": "2026-11-23 20:26:29Z"
+  },
+  "playModeMeasurement": "b3a1a155-e304-4c9b-ae98-bcda7ec7518a",
+  "macCompilation": {
+    "status": "PASS",
+    "measurement": "be12c402-9ece-455e-b564-718bdb4d6ba2"
+  },
+  "retainedFailedMeasurements": [
+    {
+      "measurement": "28c1a56b-5c70-4ef9-889a-849260b1dcfa",
+      "reason": "Original lower lip bound to head; no visible lip displacement/lining/per-strip UV"
+    },
+    {
+      "measurement": "ea21c6a6-2361-4f6a-b32b-70eeba142b0a",
+      "reason": "Oral throat normal reversed"
+    },
+    {
+      "measurement": "10044311-84bb-44a1-b886-0cca2277b236",
+      "reason": "Back faces cross nearly whole UV texture"
+    },
+    {
+      "measurement": "7076262c-ef13-499a-ba31-774ecef65f3c",
+      "reason": "Four UV loop corners outside range"
+    },
+    {
+      "measurement": "241da480-1370-44c9-a598-ea73e07f5b97",
+      "reason": "Jaw opens inward/up and twists sideways"
+    },
+    {
+      "measurement": "9c410e3a-b1c4-403e-be28-40b6dcab5d6c",
+      "reason": "Review selected preview and formal clips; require unique formal clip"
+    },
+    {
+      "measurement": "13de4dfc-6093-410b-8c3f-e58902f728fa",
+      "reason": "First/repeat color mismatch despite production clone initialization"
+    },
+    {
+      "measurement": "f758f679-0191-408d-b971-749c2902917d",
+      "reason": "First/repeat mismatch persists after two real Editor updates"
+    },
+    {
+      "measurement": "c68d469a-3751-440c-9b0c-e6c2ec08cb8c",
+      "reason": "Old material ownership regression failed in Editor; replaced cloning with explicit indexed property blocks"
+    },
+    {
+      "measurement": "1fa69e1b-cca7-475e-b683-4df525bf53c7",
+      "reason": "Invalid play-tests CLI action; no Unity job launched; corrected to tests --test-platform PlayMode"
+    }
+  ],
+  "retainedPartialPasses": [
+    {
+      "measurement": "e8dbcd31-4ee2-4458-b120-7bea76a043f9",
+      "limitation": "Magnitude-only jaw check missed wrong direction; superseded by actual downward/sideways checks"
+    },
+    {
+      "measurement": "cabe992d-15be-4e1a-8286-27d5c80cad4b",
+      "limitation": "Earlier GPU receipt did not qualify first draw; bad first images retained; final fixture now explicitly rejects mismatch"
+    }
+  ],
+  "nativeWindow": {
+    "status": "NOT_RUN_CURRENT_SOURCE",
+    "desktop": "BLOCKED_MAC_LOCKED_CONFIRMED_BY_CUA",
+    "priorAttempt": "FAIL_TIMEOUT before first screenshot",
+    "priorMeasurement": "f8486d06-f78e-42e9-96be-631431c35cb4",
+    "newAttempt": false,
+    "reason": "Requires manual unlock; no repeat launch against unchanged locked desktop"
+  },
+  "testFlight": {
+    "version": "0.1.0",
+    "build": "2",
+    "sourceCommit": "2971b116db9b5dd18dd59ce837d8a2e8625875e9",
+    "includesThisChange": false,
+    "physicalInstallation": "NOT_RUN"
+  },
+  "knownOpen": [
+    "Eyes, bright lip edges, scute highlights and local mouth transitions remain visually artificial",
+    "Human scientific review, user art direction and A1-A3",
+    "Current native player startup/UI and physical iPhone/iPad touch/performance",
+    "Remaining eleven authored fish, observation creatures, gear and two habitats",
+    "Child/parent playtest and first-fish timing; twenty actual UI catch loops"
+  ],
+  "metrics": {
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "binding": "VERIFIED",
+    "independentReceiptAudit": "INCOMPLETE",
+    "verifiedMeasurements": [
+      "28c1a56b-5c70-4ef9-889a-849260b1dcfa",
+      "24e4fc32-8683-41b0-b835-0f60b289e268",
+      "a4abba1f-f5e7-474d-9a41-4588eda5d097",
+      "123b2527-f991-4437-8f2d-7d09871b812b",
+      "95eb9b96-fbdf-46ba-944c-6c8ca8a4efa0",
+      "23ee6b08-e9e2-4724-9b9f-a1652a1620f5",
+      "8e14f92e-5b18-47a7-b90b-b046221313ad",
+      "295057f8-3f5b-4d25-88ae-8028e8e378a0",
+      "05e6ed93-223d-4aa5-b03f-a7a656ff9e62",
+      "def01358-5212-4def-9f42-7ffb7a38f750",
+      "a977492e-ae67-44a1-817c-2ca0f33505b2",
+      "b3a1a155-e304-4c9b-ae98-bcda7ec7518a",
+      "be12c402-9ece-455e-b564-718bdb4d6ba2",
+      "ea21c6a6-2361-4f6a-b32b-70eeba142b0a",
+      "10044311-84bb-44a1-b886-0cca2277b236",
+      "7076262c-ef13-499a-ba31-774ecef65f3c",
+      "241da480-1370-44c9-a598-ea73e07f5b97",
+      "9c410e3a-b1c4-403e-be28-40b6dcab5d6c",
+      "13de4dfc-6093-410b-8c3f-e58902f728fa",
+      "f758f679-0191-408d-b971-749c2902917d",
+      "c68d469a-3751-440c-9b0c-e6c2ec08cb8c",
+      "1fa69e1b-cca7-475e-b683-4df525bf53c7",
+      "e8dbcd31-4ee2-4458-b120-7bea76a043f9",
+      "cabe992d-15be-4e1a-8286-27d5c80cad4b"
+    ]
+  },
+  "publicationAudit": {
+    "status": "PASS",
+    "trackedFiles": 486,
+    "measurement": "496049ff-9ff4-44e2-95b8-c4e1655bf8d5"
+  },
+  "validation": {
+    "status": "PASS",
+    "requirements": 12,
+    "tasks": 14,
+    "measurement": "e142203f-fc13-42df-ad7c-0e4f71d4b9e3"
+  }
+}

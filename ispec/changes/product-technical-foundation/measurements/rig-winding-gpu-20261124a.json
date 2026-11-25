@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "79684b65-2484-417d-ba66-8710921de205",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "e2ab37b67c33442038dcd87399e9cd67524b828731f6c98c93602e4b75873475",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-24T14:46:44.753Z",
+    "finishedAt": "2026-11-24T14:47:01.103Z",
+    "durationMs": 16281.6005,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/rig-winding-qa/gpu-check.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/rig-winding-qa/gpu-check.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T14:46:44.753Z",
+  "finishedAt": "2026-11-24T14:47:01.103Z",
+  "durationMs": 16281.6005
+}

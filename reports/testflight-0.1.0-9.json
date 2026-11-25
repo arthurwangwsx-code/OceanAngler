@@ -1,0 +1,37 @@
+{
+  "status": "INTERNAL_GROUP_READY",
+  "version": "0.1.0",
+  "build": "9",
+  "source": {
+    "sourceCommit": "5e4f9700468e045bac40e631f5ab018a5f8e6ad7",
+    "sourceDigest": "17a84537c126d9a4f3d46edf34d87b13abf87bb6beb39ae2d1219c4db5844434",
+    "projectSettingsSha256": "b8a690cbe44deea983180bc8f1a8028ce6c42c9cf8d0b570ff0a06930d4747b3"
+  },
+  "nativeDigest": "689dbf4098ab1cf16239b17d6269c5bc33f22c7948070e86780311450c8e36f8",
+  "archiveDigest": "f52cf4126048e71dad9358a3eb3c0ca5c0fed6f5f26ea128478fc38c0ca94c35",
+  "executableSha256": "d956a9d7f311db90bdece43182b0424e7e2ec8ffbfbaa9fa018ea6cfa6c21724",
+  "ipaSha256": "7c7b6ca2972a65685ed8e66920f13b6682c4e674e0fd8000bca0532137e2cfa0",
+  "ipaBytes": 117035946,
+  "apple": {
+    "appId": "6838308856",
+    "bundleId": "com.arthur.OceanAngler",
+    "version": "0.1.0",
+    "build": "9",
+    "processingState": "VALID",
+    "buildId": "3f11fefa-0bec-4bfe-a088-784a2bb9822c",
+    "actualInstallation": "NOT_RUN",
+    "internalBuildState": "IN_BETA_TESTING"
+  },
+  "buildAudienceType": "INTERNAL_ONLY",
+  "authorizedAccountsOnly": true,
+  "testerCount": 2,
+  "arthurTesterEmail": "arthur.wang.wsx@gmail.com",
+  "arthurTesterState": "INVITED",
+  "notesVerified": true,
+  "actualTestFlightInstallation": "NOT_RUN",
+  "personalPhone": "NOT_TOUCHED_SIMULATOR_ONLY_STEER",
+  "storageRun": "run-cfedb7e56c7a4bbb820ab218dee9de84",
+  "reservationGiB": 26,
+  "scope": "Frozen signed production iOS archive, verified internal-only IPA, one upload, live Apple processing, notes and own internal group assignment. Simulator results share source digest but do not prove this signed binary launched on a physical device.",
+  "verifiedAtUtc": "2026-11-25T14:27:10.157575+00:00"
+}

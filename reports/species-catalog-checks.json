@@ -1,0 +1,42 @@
+{
+  "scope": "species-reference-index-and-observation-catalog-guard",
+  "status": "PASS",
+  "sourceBaseCommit": "88c9fe895881df12ed4951ff5f372399b3e5c54b",
+  "testedSourceDigest": "12dae50df65098072ad3f0c046d3e792e43e923346e6a0e40d71c0779244f15f",
+  "referenceSha256": "3ba3ed2e3f65aa0df0d0b4816b8d1fdc456ee9fa7bd7c2350c1b20ef5a701c35",
+  "referenceCount": 15,
+  "catchCandidates": 12,
+  "observationOnlyEntries": 3,
+  "fishIdsAndGameStatsChanged": false,
+  "newModelsCreated": 0,
+  "observationModels": "NOT_IMPLEMENTED",
+  "observationSceneEncounters": "NOT_IMPLEMENTED",
+  "observationJournal": "NOT_IMPLEMENTED",
+  "expertScientificReview": "PENDING",
+  "referenceRoleAndNameIntegrity": "PASS",
+  "editorTests": {
+    "total": 27,
+    "passed": 27,
+    "failed": 0,
+    "finishedAt": "2026-11-23 17:33:34Z"
+  },
+  "headlessPlayMode": {
+    "total": 7,
+    "passed": 7,
+    "failed": 0,
+    "runLabel": "species1",
+    "finishedAt": "2026-11-23 17:35:05Z"
+  },
+  "macCompilation": "PASS",
+  "observationTargetAndRewardRejection": "PASS",
+  "guardScope": "catalog IDs and settlement; does not prove scene visuals, encounter interactions or biological acceptance",
+  "sourceMediaCopied": false,
+  "userArtDirectionReview": "PENDING",
+  "visualAcceptance": "NOT_RUN",
+  "deviceAcceptance": "NOT_RUN",
+  "overallProductAcceptance": "PARTIAL",
+  "distribution": {
+    "currentBuild": "0.1.0 (2)",
+    "includesTheseChanges": false
+  }
+}

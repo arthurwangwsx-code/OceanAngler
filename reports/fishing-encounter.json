@@ -1,0 +1,126 @@
+{
+  "date": "2026-11-24",
+  "sourceBaseCommit": "3b4f01af4f3649bfbf087b886544d1b9bac46469",
+  "testedSourceDigest": "8c927945d2e64f765cc3d6d66809406f0e48e9afb67071a3b7b1c4a8ea7f3ca2",
+  "implementation": "IMPLEMENTED",
+  "scope": "Scripted cast/approach/retrieve presentation and animated mouth attachment; not fish perception AI or full fishing physics",
+  "overallProductAcceptance": "PARTIAL",
+  "artAcceptance": "PARTIAL",
+  "editorTests": {
+    "result": "Passed",
+    "total": "39",
+    "passed": "39",
+    "failed": "0",
+    "end-time": "2026-11-23 21:38:50Z"
+  },
+  "editorMeasurement": "e1af1cd5-681b-414d-a392-d9a629b35771",
+  "playModeTests": {
+    "result": "Passed",
+    "total": "8",
+    "passed": "8",
+    "failed": "0",
+    "end-time": "2026-11-23 21:39:08Z"
+  },
+  "playModeMeasurement": "9eafadef-2739-49aa-aaca-60b821e81024",
+  "macCompilation": {
+    "status": "PASS",
+    "measurement": "10f56639-2246-4d41-afd9-c0c64bb498fa"
+  },
+  "gpuFixture": {
+    "status": "PASS",
+    "scope": "isolated Editor Metal phase samples; no player UI, continuous runtime or device qualification",
+    "graphics": "Metal",
+    "images": 8,
+    "width": 1440,
+    "height": 900,
+    "maximumLineError": 6.39883012354403e-07,
+    "maximumLureError": 6.531061558234796e-07,
+    "approachDistance": 4.148493766784668
+  },
+  "gpuMeasurement": "f9e6ea24-9a96-4df3-9531-27fa812820b7",
+  "gpuReview": "ALL_EIGHT_INSPECTED",
+  "geometry": {
+    "status": "PASS_SAMPLED_BOUNDING_VOLUMES_ONLY",
+    "target": "Bluefin",
+    "fishLods": 3,
+    "animation": "swim at 0.2 seconds",
+    "sampledPositions": 132,
+    "environmentLods": 3,
+    "environmentTriangles": 137054,
+    "powerEndpoints": [
+      0.3,
+      1
+    ],
+    "layoutLanes": [
+      -1.3,
+      0,
+      1.3
+    ],
+    "ambientSchoolSweptVolumeDisjoint": true
+  },
+  "lineGeometry": {
+    "status": "PASS_THREE_LOD0_POSES_ONLY",
+    "phases": [
+      "Bite",
+      "Fighting",
+      "Landed"
+    ],
+    "animationTime": 0.2,
+    "mouthConnectionExcludedRadius": 0.12
+  },
+  "retainedFailures": [
+    {
+      "measurement": "cbbb21df-4026-4917-ab10-e1f25c8d9218",
+      "reason": "Editor MonoBehaviour SendMessage lifecycle assertion; replaced with explicit idempotent initialization/presentation path, did not ignore log"
+    },
+    {
+      "measurement": "025164fb-a130-426f-b85c-7a382d78471c",
+      "reason": "Initial long low approach overlaps rear plate coral conservative bounds"
+    },
+    {
+      "measurement": "9ee1661c-48b2-4ef2-a846-022f75199749",
+      "reason": "Raised path still overlaps school safety depth; shortened start, unchanged clearance assertion"
+    }
+  ],
+  "nativeWindow": {
+    "status": "NOT_RUN_CURRENT_SOURCE",
+    "desktop": "BLOCKED_MAC_LOCKED_CONFIRMED_BY_CUA",
+    "newLaunch": false
+  },
+  "physicalDevices": "NOT_RUN",
+  "testFlight": {
+    "build": "3",
+    "sourceCommit": "05c8cc7cd5abf747e6a174cc154e4f575e35e422",
+    "includesThisChange": false,
+    "installation": "NOT_RUN"
+  },
+  "knownOpen": [
+    "Continuous actual player/UI phase review and iPhone/iPad controls",
+    "All animation poses/species collision qualification",
+    "Fish perception AI, protected observation encounters and complete content",
+    "User/science art review A1-A3, child first fish and 20 actual UI catches",
+    "20-minute physical-device performance and installation"
+  ],
+  "metrics": {
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "binding": "VERIFIED",
+    "independentReceiptAudit": "INCOMPLETE",
+    "verifiedMeasurements": [
+      "e1af1cd5-681b-414d-a392-d9a629b35771",
+      "9eafadef-2739-49aa-aaca-60b821e81024",
+      "f9e6ea24-9a96-4df3-9531-27fa812820b7",
+      "10f56639-2246-4d41-afd9-c0c64bb498fa",
+      "061ee981-c5ff-4473-a677-d999f7eecd25",
+      "f4b6bb97-23c5-4252-a19c-ac38461bf0a9",
+      "d87b9e58-66c2-499b-a14a-0265766330d9",
+      "c3cf4047-1572-4332-81f1-2b55592d279d"
+    ]
+  },
+  "sourceChecks": {
+    "requirements": 12,
+    "tasks": 14,
+    "publicationTrackedFiles": 527,
+    "releaseToolTests": 11,
+    "status": "PASS"
+  }
+}

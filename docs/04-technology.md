@@ -18,10 +18,12 @@ Ready → Casting → Waiting → BiteWindow → Fighting → Landed → Release
 鱼 AI：巡游 → 注意拟饵 → 接近 → 试探 → 咬钩 → 被钓/逃离；周围鱼群用低频 flocking 和距离裁剪。可钓概率由物种/水层/饵/时间决定，教程强制确定性；不能后台无限创建鱼对象。所有对象池有上限。
 
 ## 存档与恢复
-本地 JSON schemaVersion=1，临时文件写完 flush 后原子替换，保留上一份 .bak。启动校验结构/范围/ID，主文件损坏则恢复备份，均失败提示新建且保留旧文件。迁移先备份再写，禁止静默清空。结算使用 catchId 去重；崩溃重开不重复奖励。积分变更与捕获记录同一次写入。
+本地JSON envelope版本1，payload兼容schemaVersion 1/2（首次观察提交才升2），临时文件写完 flush 后原子替换，保留上一份 .bak。启动校验结构/范围/ID，主文件损坏则恢复备份，均失败提示新建且保留旧文件。迁移先备份再写，禁止静默清空。结算使用 catchId 去重；崩溃重开不重复奖励。积分变更与捕获记录同一次写入。
 
 ## 渲染与性能目标
-URP Forward，烘焙环境、受控单主光、候选 2x MSAA，动态分辨率/质量等级；不默认开启 SSAO、实时平面反射或大面积多层透明。水面/水下 shader 分级，高档焦散/反射与低档近似保持玩法可见性一致。透明鳍和水面 overdraw 专项检查。
+URP Forward，受控单主光，当前候选4x MSAA；移动端质量等级仍待真机测量。不默认开启SSAO或大面积多层透明。首海湾仅水上观察启用按视图变化更新的平面倒影，最长边768像素、最多半分辨率；静态镜头复用，水下跳过，退出禁用时释放。水面读取opaque颜色和深度，renderer在AfterOpaques生成深度，早于透明水面。波面与片元细纹分开，远处细纹淡出，水深控制透射衰减；两种水上视图、两种水下视图的Editor离屏证据与实际原生/真机分别验收，见[水面修复记录](../reports/water-rendering.md)。透明鳍、水面overdraw、反射成本与质量分级继续做真机专项检查。
+
+英雄鱼表现采用按renderer子材质索引设置MaterialPropertyBlock，保存源颜色/平滑度，轮廓隐藏恢复和销毁清理不改共享资产、不克隆材质。它修复当前隔离Editor场景首次绘制的颜色异常；首图/重复图差值强制检查，不能以预热后图替换失败首图。相关renderer不使用SRP Batcher，移动端CPU/GPU成本待测，不能由工程检查认定性能达标。见[口部、鳍条与材质记录](../reports/bluefin-mouth-and-fins.md)。
 
 初始预算（非实测结果）：中档 A15 60fps，最低档 30fps；P95 帧耗分别 ≤16.7/33.3ms；峰值内存 <900MB；首场景冷启动 <8s；首包 <500MB。场景可见三角面初始 <500k、draw calls <150、主要阴影 <50m。真机 20 分钟含温升和后台恢复，记录 CPU/GPU、内存、掉帧，不用 Editor fps 代替。
 
@@ -32,3 +34,13 @@ Unity .meta 入库，Library/Temp/build/凭据不入库，包版本固定，首�
 
 ## 当前实现决策
 ContentCatalog.json作为首批数据真值，由运行时和测试共享校验；暂不额外维护ScriptableObject副本，以避免两套数据漂移。ProgressService先写临时文件并flush/原子替换后才发布内存状态。损坏文件转存，未来版本不静默降级；家长区恢复保留原件。规则测试与Mac运行检验分别记录，规则20次循环不等于真机20次触控验收。
+
+首海湾环境表现：BayFishSchool只维护三条现有蓝鳍鲹实例，SchoolMotion以30Hz固定步长组合引导路径、邻近方向/聚合与分离。生成器从导入网格推导净空体积，独立检查全部三LOD；运行时不重复扫描网格。非鉴赏状态复用实例，暂停/减弱动态停住，模型鉴赏隐藏；碰撞器关闭，不进入捕获/积分。OceanWorld.TargetFish提供明确的当前可钓/鉴赏目标。该环境层不代表已完成拟饵感知AI、保护观察生物或多物种生态；额外Animator/蒙皮/PropertyBlock成本待真机，见[鱼群记录](../reports/bay-school.md)。
+
+钓鱼表现：FishingEncounter消费FishingSession.PhaseProgress与暂停后的表现时钟，生成固定抛投/接近/控线路径；没有改变模拟状态或存档。AuthoredSpinningRig在LateUpdate读取活动目标的HookPosition，拟饵鼻端与目标对齐，Bite/Fighting/Landed连接独立于收线输入。初始化和表现步显式、幂等，可由Editor调用同一生产入口。当前路径及有限蒙皮/环境采样仅验证首个蓝鳍鲹候选，不代表感知AI、连续碰撞、所有物种或实际触控，见[阶段表现](../reports/fishing-encounter.md)。
+
+遭遇选择：EncounterSelection是GameController与成长模拟唯一共享选择路径，维持当前海域内等概率和教程固定；观察目录不参加选择，非Ready抛竿在入口返回。1000种子路线通过同一FishingSession、ProgressService/SaveStore及每次重新加载测量，不能以测试自行选定新鱼代替随机遭遇，也不以规则秒数推断真实儿童时间。稀有度/拟饵偏好尚未实现，见[随机成长基线](../reports/encounter-balance.md)。
+
+当前主光阴影候选为1024图、单级联、24米、Low软过滤（4次PCF）、深度/法线偏移2/0；保留投射/接收。只升分辨率未解决鱼身阶梯状自阴影，偏移对照后选用现配置，生成场景规范化后仅Sun的Hard→Soft有语义变化。配置在ApplyRenderQuality集中设置；URP 17.3软阴影setter为internal，Editor用实际SerializedObject字段写入，字段变化明确报错。更早远影淡出、软采样、鳍atlas增容和PropertyBlock成本需设备验证，不能以Editor图替代，见[表面与阴影证据](../reports/bluefin-palette.md)。
+
+保护观察后续架构：ObservationEncounter/ObservationVisual与FishingSession/FishVisual分离，观察页暂停钓鱼并隐藏钓组；观察ID进入独立列表，不参与积分/鱼获/任务。SaveStore继续校验和/原子替换，payload接受schema 1/2，只有首次观察成功提交才升级2；旧build 4将其视为未来版本并拒绝覆盖，实际设备回退另验。场景中心视口+主动计时只作交互门禁，不能推定无遮挡。首次绘制常量为各MeshRenderer固定PropertyBlock，相关实例不使用SRP Batcher；三个首次/重复样本RGB差为0，成本待真机。形体仅为A0，详见[设计与限制](14-protected-observation.md)。

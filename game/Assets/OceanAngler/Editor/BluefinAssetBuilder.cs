@@ -10,7 +10,9 @@ namespace OceanAngler.Editor
     {
         const string Folder="Assets/OceanAngler/Art/Bluefin";
         static readonly string[] Semantics={"idle","swim","turn","burst","bite","hooked","release"};
-        public static void Prepare()
+        public static void Prepare()=>Prepare(false);
+        public static void PrepareHeadSurface()=>Prepare(true);
+        static void Prepare(bool preservePresentation)
         {
             AssetDatabase.Refresh();
             foreach(string file in Directory.GetFiles(Folder,"*.png"))
@@ -19,25 +21,65 @@ namespace OceanAngler.Editor
                 bool normal=file.Contains("_Normal"),linear=normal||file.Contains("_Roughness")||file.Contains("_MetallicSmoothness");
                 importer.textureType=normal?TextureImporterType.NormalMap:TextureImporterType.Default;
                 importer.sRGBTexture=!linear;importer.alphaIsTransparency=false;importer.maxTextureSize=2048;
+                if(Path.GetFileName(file).StartsWith("Bluefin_Fin")||file.EndsWith("Bluefin_Iris.png"))importer.wrapMode=TextureWrapMode.Clamp;
                 importer.textureCompression=TextureImporterCompression.CompressedHQ;importer.SaveAndReimport();
             }
             var skin=CreateMaterial("Bluefin_Skin",Color.white,.65f);
-            skin.SetTexture("_BaseMap",Texture("Bluefin_BaseColor"));skin.SetTexture("_BumpMap",Texture("Bluefin_Normal"));skin.SetFloat("_BumpScale",.6f);skin.EnableKeyword("_NORMALMAP");
+            skin.SetTexture("_BaseMap",Texture("Bluefin_BaseColor"));skin.SetTexture("_BumpMap",Texture("Bluefin_Normal"));skin.SetFloat("_BumpScale",.35f);skin.EnableKeyword("_NORMALMAP");
             skin.SetTexture("_MetallicGlossMap",Texture("Bluefin_MetallicSmoothness"));skin.SetFloat("_Smoothness",1);skin.EnableKeyword("_METALLICSPECGLOSSMAP");
-            var fins=CreateMaterial("Bluefin_Fins",Color.white,.66f);fins.SetTexture("_BaseMap",Texture("Bluefin_Fin"));
-            var iris=CreateMaterial("Bluefin_Iris",new Color(.35f,.43f,.27f),.76f);
+            var fins=CreateMaterial("Bluefin_Fins",Color.white,.50f);fins.SetTexture("_BaseMap",Texture("Bluefin_Fin"));
+            fins.SetTexture("_BumpMap",Texture("Bluefin_Fin_Normal"));fins.SetFloat("_BumpScale",.6f);fins.EnableKeyword("_NORMALMAP");fins.SetTexture("_MetallicGlossMap",Texture("Bluefin_Fin_MetallicSmoothness"));fins.SetFloat("_Smoothness",1);fins.EnableKeyword("_METALLICSPECGLOSSMAP");
+            fins.SetFloat("_Surface",1);fins.SetFloat("_Blend",0);fins.SetFloat("_BlendModePreserveSpecular",1);fins.SetFloat("_AlphaClip",0);BaseShaderGUI.SetupMaterialBlendMode(fins);fins.SetShaderPassEnabled("ShadowCaster",false);fins.SetShaderPassEnabled("DepthOnly",false);
+            var rays=CreateMaterial("Bluefin_Rays",Color.white,.52f);rays.SetTexture("_BaseMap",Texture("Bluefin_Fin"));rays.SetFloat("_Surface",0);rays.SetFloat("_AlphaClip",0);BaseShaderGUI.SetupMaterialBlendMode(rays);rays.SetShaderPassEnabled("ShadowCaster",true);rays.SetShaderPassEnabled("DepthOnly",true);
+            var gill=CreateMaterial("Bluefin_Gill",new Color(.21f,.25f,.24f),.42f);
+            var oral=CreateMaterial("Bluefin_Oral",new Color(.065f,.043f,.037f),.22f);
+            var iris=CreateMaterial("Bluefin_Iris",Color.white,.88f);iris.SetTexture("_BaseMap",Texture("Bluefin_Iris"));
             var dark=CreateMaterial("Bluefin_Dark",new Color(.009f,.023f,.029f),.77f);
-            foreach(var material in new[]{skin,fins,iris,dark})EditorUtility.SetDirty(material);
+            foreach(var material in new[]{skin,fins,rays,gill,oral,iris,dark})EditorUtility.SetDirty(material);
             var model=(ModelImporter)AssetImporter.GetAtPath(Folder+"/Bluefin.fbx");
             model.animationType=ModelImporterAnimationType.Generic;model.avatarSetup=ModelImporterAvatarSetup.CreateFromThisModel;
+            // Preserve the small, authored paired-fin motion through FBX import.
+            model.animationCompression=ModelImporterAnimationCompression.Off;
             model.importAnimation=true;model.importVisibility=false;model.importBlendShapes=false;
             model.materialImportMode=ModelImporterMaterialImportMode.ImportStandard;
-            foreach(var material in new[]{skin,fins,iris,dark})model.AddRemap(new AssetImporter.SourceAssetIdentifier(typeof(Material),material.name),material);
+            foreach(var material in new[]{skin,fins,rays,gill,oral,iris,dark})model.AddRemap(new AssetImporter.SourceAssetIdentifier(typeof(Material),material.name),material);
             model.SaveAndReimport();
             var definitions=model.defaultClipAnimations;
-            foreach(var clip in definitions)clip.loopTime=true;
+            foreach(var clip in definitions)clip.loopTime=clip.name!="release"&&!clip.name.EndsWith("|release");
             model.clipAnimations=definitions;model.SaveAndReimport();
             var clips=AssetDatabase.LoadAllAssetsAtPath(Folder+"/Bluefin.fbx").OfType<AnimationClip>().Where(c=>!c.name.StartsWith("__preview__")).ToArray();
+            if(preservePresentation)
+            {
+                // This authoring path changes head surface geometry/materials only.
+                // Keep the reviewed runtime curves and prefab transforms;
+                // re-exported FBX conversion can otherwise rewrite low bits.
+                var existing=Resources.Load<GameObject>("Models/Bluefin");if(existing==null)throw new InvalidOperationException("Existing reviewed Bluefin prefab required");
+                var meshes=AssetDatabase.LoadAllAssetsAtPath(Folder+"/Bluefin.fbx").OfType<Mesh>().ToArray();var skins=existing.GetComponentsInChildren<SkinnedMeshRenderer>(true);
+                if(skins.Length!=3||skins.Any(r=>!meshes.Contains(r.sharedMesh)))throw new InvalidOperationException("Existing prefab must reference the current imported three LOD meshes");
+                var motions=existing.GetComponentInChildren<Animator>().runtimeAnimatorController.animationClips;
+                if(!Semantics.OrderBy(s=>s).SequenceEqual(motions.Select(c=>c.name).OrderBy(s=>s))||motions.Any(c=>!AssetDatabase.GetAssetPath(c).StartsWith(Folder+"/Motions/")))throw new InvalidOperationException("Existing reviewed seven runtime clips required");
+                // A new FBX can reorder its submeshes while preserving mesh
+                // fileIDs. The saved prefab does not automatically reorder its
+                // material array: an iris can then receive the dark material.
+                // Copy the current imported bindings, retaining the reviewed
+                // transforms, runtime clips and every other prefab property.
+                var importedRenderers=AssetDatabase.LoadAssetAtPath<GameObject>(Folder+"/Bluefin.fbx").GetComponentsInChildren<SkinnedMeshRenderer>(true);
+                string prefabPath=AssetDatabase.GetAssetPath(existing);
+                var contents=PrefabUtility.LoadPrefabContents(prefabPath);
+                try
+                {
+                    foreach(var renderer in contents.GetComponentsInChildren<SkinnedMeshRenderer>(true))
+                    {
+                        var importedRenderer=importedRenderers.Single(r=>r.name==renderer.name&&r.sharedMesh==renderer.sharedMesh);
+                        var materials=importedRenderer.sharedMaterials;
+                        if(materials.Length!=renderer.sharedMesh.subMeshCount||materials.Any(m=>m==null||m.shader.name!="Universal Render Pipeline/Lit"))throw new InvalidOperationException("Current imported material bindings required");
+                        renderer.sharedMaterials=materials;
+                    }
+                    PrefabUtility.SaveAsPrefabAsset(contents,prefabPath);
+                }
+                finally{PrefabUtility.UnloadPrefabContents(contents);}
+                AssetDatabase.SaveAssets();Debug.Log("BLUEFIN_HEAD_SURFACE_IMPORTED_EXISTING_PRESENTATION_PRESERVED");return;
+            }
             string controllerPath=Folder+"/Bluefin.controller";
             var controller=AssetDatabase.LoadAssetAtPath<AnimatorController>(controllerPath);
             if(controller==null)controller=AnimatorController.CreateAnimatorControllerAtPath(controllerPath);
@@ -46,9 +88,9 @@ namespace OceanAngler.Editor
             {
                 var clip=clips.SingleOrDefault(c=>c.name==semantic||c.name.EndsWith("|"+semantic));
                 if(clip==null)throw new InvalidOperationException("Missing imported motion "+semantic+"; found "+string.Join(",",clips.Select(c=>c.name)));
-                var settings=AnimationUtility.GetAnimationClipSettings(clip);settings.loopTime=true;AnimationUtility.SetAnimationClipSettings(clip,settings);
+                var settings=AnimationUtility.GetAnimationClipSettings(clip);settings.loopTime=semantic!="release";AnimationUtility.SetAnimationClipSettings(clip,settings);
                 var state=stateMachine.states.Select(s=>s.state).FirstOrDefault(s=>s.name==semantic)??stateMachine.AddState(semantic);
-                state.motion=clip;if(semantic=="swim")stateMachine.defaultState=state;
+                state.motion=BluefinMotionCurves.Build(clip,semantic);if(semantic=="swim")stateMachine.defaultState=state;
             }
             var source=AssetDatabase.LoadAssetAtPath<GameObject>(Folder+"/Bluefin.fbx");var root=new GameObject("BluefinCandidate");
             var alignment=new GameObject("CoordinateAlignment");alignment.transform.SetParent(root.transform,false);alignment.transform.localRotation=Quaternion.Euler(0,180,0);
@@ -62,7 +104,10 @@ namespace OceanAngler.Editor
                 for(int i=0;i<3;i++)
                 {
                     var renderer=renderers.Single(r=>r.name=="Bluefin_LOD"+i);renderer.enabled=true;renderer.gameObject.SetActive(true);
-                    renderer.updateWhenOffscreen=false;lods[i]=new LOD(i==0?.08f:i==1?.03f:.008f,new Renderer[]{renderer});
+                    // The group's bounding size is its longest dimension.
+                    // Reserve complete internal cylinders for close views;
+                    // distance meshes retain opaque outline rays and fin PBR.
+                    renderer.updateWhenOffscreen=false;lods[i]=new LOD(i==0?.70f:i==1?.16f:.008f,new Renderer[]{renderer});
                 }
                 var group=root.GetComponent<LODGroup>();if(group==null)group=root.AddComponent<LODGroup>();group.SetLODs(lods);group.RecalculateBounds();
                 var visual=root.AddComponent<AuthoredFishVisual>();
@@ -82,7 +127,7 @@ namespace OceanAngler.Editor
         {
             string path=Folder+"/"+name+".mat";var material=AssetDatabase.LoadAssetAtPath<Material>(path);
             if(material==null){material=new Material(Shader.Find("Universal Render Pipeline/Lit"));AssetDatabase.CreateAsset(material,path);}
-            material.color=color;material.SetFloat("_Metallic",0);material.SetFloat("_Smoothness",smoothness);return material;
+            material.color=color;material.SetColor("_Color",color);material.SetFloat("_Metallic",0);material.SetFloat("_Smoothness",smoothness);return material;
         }
     }
 }

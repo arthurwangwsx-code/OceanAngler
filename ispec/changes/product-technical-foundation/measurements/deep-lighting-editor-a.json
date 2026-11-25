@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "246fe7d4-5596-48e4-aabb-374c760fe025",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "de075df64288426cc681abe424692a66de3511a67883e88c0ecdcc70fce175b8",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-25T04:36:25.156Z",
+    "finishedAt": "2026-11-25T04:36:36.638Z",
+    "durationMs": 11454.435458,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      "tools/game.py",
+      "tests",
+      "--test-platform",
+      "EditMode",
+      "--test-filter",
+      "SlopeHabitatTests"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    "tools/game.py",
+    "tests",
+    "--test-platform",
+    "EditMode",
+    "--test-filter",
+    "SlopeHabitatTests"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T04:36:25.156Z",
+  "finishedAt": "2026-11-25T04:36:36.638Z",
+  "durationMs": 11454.435458
+}

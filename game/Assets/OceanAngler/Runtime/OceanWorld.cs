@@ -2,90 +2,127 @@ using System;
 using UnityEngine;
 namespace OceanAngler
 {
-    public sealed class OceanWorld : MonoBehaviour
+    public sealed partial class OceanWorld : MonoBehaviour
     {
-        GameController game;GameUI ui;Transform fishRoot,rodTip;FishVisual fish;LineRenderer line;
+        GameController game;GameUI ui;Transform fishRoot;FishVisual fish;AuthoredSpinningRig gear;
         string fishId,habitat;
-        Transform[] rodSegments;
-        Material wood,metal,water;
+        MarineHabitat activeHabitat;
         Camera view;
+        public FishVisual TargetFish=>fish;
+        public MarineHabitat ActiveHabitat=>activeHabitat;
+        public ObservationEncounter Observations {get;private set;}
         float visualTime;
+        Vector3 fishHookLocal;
+        CatchRecord releasing;
+        float releaseTime;
+        Vector3 releaseStart,releaseHeading;
+        bool awaitingNextFish;
+        const float ReleaseDuration=2.4f;
+        public void ResetProfilePresentation()
+        {
+            releasing=null;awaitingNextFish=false;releaseTime=0;visualTime=0;
+            cameraInitialized=false;splashBegan=float.NegativeInfinity;
+        }
         void Start()
         {
             game=GetComponent<GameController>();ui=GetComponent<GameUI>();view=Camera.main;
-            wood=Mat(new Color(.47f,.28f,.12f),.25f);metal=Mat(new Color(.17f,.22f,.23f),.7f,.7f);water=Mat(new Color(.025f,.4f,.53f),.85f);
-            MakeEnvironment();MakeGear();SelectFish(game.Content.fish[0].id);
+            RenderSettings.ambientLight=new Color(.2f,.32f,.38f);
+            Observations=gameObject.AddComponent<ObservationEncounter>();
+            game.Released+=BeginRelease;
+            if(game.Progress.RequiresRecovery)return;
+            SwitchHabitat(game.Progress.Data.habitatId);MakeGear();SelectFish(game.Content.fish[0].id);
         }
-        Material Mat(Color color,float smooth,float metallic=0) {var m=SurfaceMaterial.Create();m.color=color;m.SetFloat("_Smoothness",smooth);m.SetFloat("_Metallic",metallic);return m;}
-        void MakeEnvironment()
+        void SwitchHabitat(string id)
         {
-            view.transform.position=new Vector3(0,1.25f,-6.5f);view.transform.LookAt(new Vector3(0,.45f,1));view.fieldOfView=42;
-            RenderSettings.fog=true;RenderSettings.fogColor=new Color(.04f,.31f,.41f);RenderSettings.fogMode=FogMode.ExponentialSquared;RenderSettings.fogDensity=.028f;RenderSettings.ambientLight=new Color(.2f,.32f,.38f);
-            var sand=Mat(new Color(.36f,.34f,.25f),.15f);Box("Sand",new Vector3(0,-1.1f,4),new Vector3(80,.12f,80),sand);
-            Box("Surface",new Vector3(0,4.5f,4),new Vector3(80,.05f,80),water);
-            var random=new System.Random(41);var rock=Mat(new Color(.19f,.32f,.30f),.2f);var coral=Mat(new Color(.55f,.33f,.25f),.15f);
-            for(int i=0;i<26;i++)
+            if(activeHabitat!=null){if(activeHabitat.lighting!=null)activeHabitat.lighting.Restore();activeHabitat.gameObject.SetActive(false);Destroy(activeHabitat.gameObject);activeHabitat=null;}
+            habitat=id;var resource=MarineHabitat.ResourceFor(id);
+            if(resource!=null)
             {
-                float x=(float)random.NextDouble()*32-16,z=5+(float)random.NextDouble()*20;float size=.4f+(float)random.NextDouble()*2;
-                var obj=GameObject.CreatePrimitive(PrimitiveType.Sphere);obj.name="ReefRock";obj.transform.position=new Vector3(x,-.8f,z);obj.transform.localScale=new Vector3(size,size*.65f,size);obj.GetComponent<Renderer>().sharedMaterial=rock;Destroy(obj.GetComponent<Collider>());
-                if(i%3==0)for(int j=0;j<5;j++)Cylinder("CoralBranch",new Vector3(x,-.8f,z),new Vector3(x+Mathf.Sin(j*1.2f)*.3f,-.1f+j*.1f,z+Mathf.Cos(j)*.3f),.05f,coral);
+                var prefab=Resources.Load<GameObject>(resource);if(prefab==null)throw new InvalidOperationException("Missing authored habitat "+id);
+                activeHabitat=Instantiate(prefab).GetComponent<MarineHabitat>();if(activeHabitat==null)throw new InvalidOperationException("Habitat presentation missing "+id);
             }
-            for(int i=0;i<6;i++)Box("PierPlank",new Vector3(-4.2f+i*.4f,1.7f,2),new Vector3(.38f,.15f,9),wood);
-            for(int i=0;i<3;i++)Cylinder("PierPost",new Vector3(-4.1f,-1,1+i*3),new Vector3(-4.1f,2,1+i*3),.12f,wood);
-            var light=new GameObject("WaterFill").AddComponent<Light>();light.type=LightType.Point;light.color=new Color(.37f,.79f,.86f);light.intensity=2.5f;light.range=15;light.transform.position=new Vector3(0,3,0);
+            else throw new InvalidOperationException("No authored habitat registered for "+id);
         }
         void MakeGear()
         {
-            rodSegments=new Transform[12];var carbon=Mat(new Color(.06f,.11f,.12f),.6f,.3f);
-            for(int i=0;i<12;i++)rodSegments[i]=Cylinder("RodSection"+i,Vector3.zero,Vector3.up,.02f,carbon).transform;
-            var grip=Mat(new Color(.20f,.15f,.10f),.2f);
-            Cylinder("CorkGrip",new Vector3(1.8f,-.1f,-1.9f),new Vector3(1.6f,.22f,-1.55f),.065f,grip);
-            Cylinder("ReelSeat",new Vector3(1.68f,.02f,-1.75f),new Vector3(1.65f,-.25f,-1.7f),.025f,metal);
-            Cylinder("Spool",new Vector3(1.57f,-.22f,-1.72f),new Vector3(1.75f,-.22f,-1.72f),.095f,metal);
-            Cylinder("ReelHandle",new Vector3(1.78f,-.22f,-1.72f),new Vector3(1.89f,-.4f,-1.72f),.022f,metal);
-            Cylinder("HandleGrip",new Vector3(1.89f,-.4f,-1.72f),new Vector3(1.98f,-.4f,-1.72f),.03f,grip);
-            var obj=new GameObject("FishingLine");line=obj.AddComponent<LineRenderer>();line.sharedMaterial=Mat(new Color(.8f,.92f,.91f),.3f);line.positionCount=24;line.startWidth=.009f;line.endWidth=.003f;
-            rodTip=new GameObject("RodTip").transform;
+            var prefab=Resources.Load<GameObject>("Models/SpinningRig");if(prefab==null)throw new InvalidOperationException("Missing authored spinning rig prefab");
+            gear=Instantiate(prefab).GetComponent<AuthoredSpinningRig>();
         }
-        GameObject Box(string name,Vector3 pos,Vector3 scale,Material material)
-        {var o=GameObject.CreatePrimitive(PrimitiveType.Cube);o.name=name;o.transform.position=pos;o.transform.localScale=scale;o.GetComponent<Renderer>().sharedMaterial=material;Destroy(o.GetComponent<Collider>());return o;}
-        GameObject Cylinder(string name,Vector3 from,Vector3 to,float radius,Material material)
-        {var o=GameObject.CreatePrimitive(PrimitiveType.Cylinder);o.name=name;Between(o.transform,from,to,radius);o.GetComponent<Renderer>().sharedMaterial=material;Destroy(o.GetComponent<Collider>());return o;}
-        static void Between(Transform t,Vector3 a,Vector3 b,float radius) {t.position=(a+b)*.5f;t.up=(b-a).normalized;t.localScale=new Vector3(radius*2,Vector3.Distance(a,b)*.5f,radius*2);}
         void SelectFish(string id)
         {
             if(fishRoot!=null)Destroy(fishRoot.gameObject);
-            var authored=id=="trevally"?Resources.Load<GameObject>("Models/Bluefin"):null;
+            string resource=id=="trevally"?"Models/Bluefin":id=="halibut"?"Models/Halibut":null;
+            var authored=resource==null?null:Resources.Load<GameObject>(resource);
+            if(resource!=null&&authored==null)throw new InvalidOperationException("Missing authored fish "+id);
             if(authored!=null){fishRoot=Instantiate(authored).transform;fish=fishRoot.GetComponent<AuthoredFishVisual>();}
             else{fishRoot=new GameObject("Fish-"+id).transform;var prototype=fishRoot.gameObject.AddComponent<FishModel>();prototype.Initialize(game.Content.Fish(id));fish=prototype;}
             fishId=id;
+            fishHookLocal=fishRoot.InverseTransformPoint(fish.HookPosition);
+            CacheJournalGeometryBounds();
+        }
+        void BeginRelease(CatchRecord caught)
+        {
+            releasing=caught;releaseTime=0;awaitingNextFish=true;
+            releaseStart=fishRoot.position;releaseHeading=fishRoot.TransformDirection(Vector3.left);
+        }
+        void PresentRelease(bool paused)
+        {
+            if(!paused)releaseTime+=Time.deltaTime;
+            float u=Mathf.SmoothStep(0,1,Mathf.Clamp01(releaseTime/ReleaseDuration)),v=1-u;
+            var p1=releaseStart+releaseHeading*.8f;var p2=releaseStart+new Vector3(-2,.12f,4);var p3=releaseStart+new Vector3(-2,.15f,12);
+            fishRoot.position=v*v*v*releaseStart+3*v*v*u*p1+3*v*u*u*p2+u*u*u*p3;
+            var direction=3*v*v*(p1-releaseStart)+6*v*u*(p2-p1)+3*u*u*(p3-p2);
+            fishRoot.rotation=Quaternion.Euler(0,Mathf.Atan2(direction.z,-direction.x)*Mathf.Rad2Deg,-3);
+            fishRoot.localScale=Vector3.one;fish.semantic=releaseTime<.4f?"turn":"release";fish.speed=1;
+            if(releaseTime>=ReleaseDuration){releasing=null;fishRoot.gameObject.SetActive(false);}
+        }
+        void PoseFishingGear(bool leftHanded)
+        {
+            PoseGearAtWaterline(gear,activeHabitat.SeaLevel,leftHanded);
         }
         void Update()
         {
             if(game==null||game.Progress.RequiresRecovery)return;
-            var data=game.Progress.Data;string desired=ui.FocusedFish??game.Session.Catch?.fishId??System.Array.Find(game.Content.fish,f=>f.habitatId==data.habitatId).id;
+            var data=game.Progress.Data;bool reduced=data.settings.reducedMotion;
+            bool habitatChanged=habitat!=data.habitatId;
+            if(habitatChanged){SwitchHabitat(data.habitatId);cameraInitialized=false;splashBegan=float.NegativeInfinity;}
+            if(gear==null)MakeGear();
+            if(game.Session.Phase!=FishingPhase.Ready||habitatChanged){releasing=null;awaitingNextFish=false;}
+            if(ui.FocusedFish!=null||ui.InspectingGear||ui.InspectingHabitat||ui.InspectingObservation||reduced)releasing=null;
+            string desired=ui.FocusedFish??releasing?.fishId??game.Session.Catch?.fishId??(awaitingNextFish?fishId:System.Array.Find(game.Content.fish,f=>f.habitatId==data.habitatId).id);
             if(desired!=fishId)SelectFish(desired);
-            bool reduced=data.settings.reducedMotion;if(!reduced&&!game.Session.Paused)visualTime+=Time.deltaTime;float time=reduced?0:visualTime;
+            fishRoot.gameObject.SetActive(!ui.InspectingGear&&!ui.InspectingHabitat&&!ui.InspectingObservation&&(!awaitingNextFish||releasing!=null||ui.FocusedFish!=null));gear.gameObject.SetActive(ui.FocusedFish==null&&!ui.InspectingHabitat&&!ui.InspectingObservation);
+            if(!reduced&&!game.Session.Paused)visualTime+=Time.deltaTime;float time=reduced?0:visualTime;
             fish.reducedMotion=reduced;fish.paused=ui.FocusedFish!=null?ui.ModelPaused:game.Session.Paused;fish.speed=game.Session.Phase==FishingPhase.Fighting?1.6f:1;
             bool journal=ui.FocusedFish!=null;
             fish.semantic=journal?"swim":game.Session.Phase==FishingPhase.Fighting?"hooked":game.Session.Phase==FishingPhase.Bite?"bite":game.Session.Phase==FishingPhase.Casting?"burst":game.Session.Phase==FishingPhase.Landed?"idle":"swim";
-            fishRoot.position=journal?new Vector3(ui.CompactViewer?-1.3f:2.35f,ui.CompactViewer?.7f:1.35f,1.2f):new Vector3((ui.Compact?(data.settings.leftHanded?1.3f:-1.3f):0)+Mathf.Sin(time*.3f)*.18f,.30f+Mathf.Sin(time*.5f)*.05f,1.2f);
+            if(!ui.InspectingGear)PoseFishingGear(data.settings.leftHanded);
+            var pose=FishingEncounter.Evaluate(game.Session.Phase,game.Session.PhaseProgress,game.Session.CastPower,fishHookLocal,gear.CastOrigin,ui.Compact?(data.settings.leftHanded?1.3f:-1.3f):0,time,reduced,activeHabitat.SeaLevel);
+            fishRoot.position=journal?JournalReferencePosition():pose.fishPosition;
             fishRoot.localScale=Vector3.one*(journal?ui.ModelZoom:1);
-            fishRoot.rotation=Quaternion.Euler(0,journal?-25+ui.ModelYaw:-25+Mathf.Sin(time*.3f)*7,-3);
-            bool discovered=game.Progress.Data.catches.Exists(c=>c.fishId==fishId);fish.SetSilhouette(journal&&!discovered);
-            float t=game.Session.Tension;Vector3 start=new Vector3(1.6f,.22f,-1.55f),tip=new Vector3(.7f,2.6f,1.3f);
-            Vector3 prev=start;
-            for(int i=0;i<12;i++)
+            fishRoot.rotation=journal?JournalRotation():pose.fishRotation;
+            if(releasing!=null)PresentRelease(game.Session.Paused);
+            bool discovered=game.Progress.Data.catches.Exists(c=>c.fishId==fishId);fish.SetSilhouette(journal&&!discovered&&!game.DeveloperMode);
+            float t=game.Session.Tension;
+            if(ui.InspectingGear)
             {
-                float u=(i+1)/12f;Vector3 point=Vector3.Lerp(start,tip,u)+new Vector3(-.35f,-t*.75f,.18f)*u*u;Between(rodSegments[i],prev,point,Mathf.Lerp(.026f,.006f,u));prev=point;
+                float scale=ui.GearCloseup?6.5f:1.15f;gear.transform.localScale=Vector3.one*scale;gear.transform.rotation=Quaternion.Euler(ui.GearCloseup?-28:-6,ui.GearYaw,6);
+                var focus=ui.GearCloseup?gear.inspectionCenter:new Vector3(0,1.16f,0);gear.transform.position=new Vector3(0,.85f,1.2f)-gear.transform.TransformVector(focus);
+                gear.Drive(.45f,ui.GearReelingDemo,false,reduced,false,Vector3.zero,true);
             }
-            rodTip.position=prev;Vector3 endpoint=game.Session.Phase==FishingPhase.Fighting?fish.HookPosition:new Vector3(-.1f,.2f,2);
-            for(int i=0;i<24;i++){float u=i/23f;line.SetPosition(i,Vector3.Lerp(prev,endpoint,u)+Vector3.down*Mathf.Sin(u*Mathf.PI)*(1-t)*.2f);}
-            if(habitat!=data.habitatId)
+            else
             {
-                habitat=data.habitatId;Color color=habitat=="bay"?new Color(.04f,.34f,.44f):habitat=="channel"?new Color(.035f,.20f,.35f):new Color(.025f,.10f,.22f);RenderSettings.fogColor=color;view.backgroundColor=color;
+                bool hooked=game.Session.Phase==FishingPhase.Fighting||game.Session.Phase==FishingPhase.Landed;
+                bool attached=hooked||game.Session.Phase==FishingPhase.Bite;
+                gear.Drive(t,game.Reeling,game.Session.Paused,reduced,game.Session.Phase==FishingPhase.Casting,pose.lurePosition,false,hooked,attached?fish:null);
             }
+            UpdateWaterlineCamera(pose.lurePosition);
+            if(activeHabitat!=null&&activeHabitat.reflection!=null)activeHabitat.reflection.TrackSubject(gear.transform);
+            if(activeHabitat!=null)activeHabitat.Present(view,ui.InspectingHabitat,ui.InspectingHabitat&&ui.HabitatSurfaceView||FishingSurfaceView,ui.HabitatAngle,game.Session.Paused,reduced,ui.FocusedFish==null&&!ui.InspectingGear&&!ui.InspectingObservation,ui.InspectingHabitat?ui.HabitatCompositionOffset:0,FishingSurfaceView);
+            if(activeHabitat!=null)PresentFlatfishCamera(reduced);
+            Observations.Present(ui.ObservingSpecies,view,ui.Compact,reduced,Time.unscaledDeltaTime);
+            if(activeHabitat!=null&&activeHabitat.lighting!=null)activeHabitat.lighting.AimCameraFill(view);
         }
-        void OnDestroy(){if(wood!=null)Destroy(wood);if(metal!=null)Destroy(metal);if(water!=null)Destroy(water);}
+        void OnDestroy(){if(game!=null)game.Released-=BeginRelease;if(activeHabitat!=null)Destroy(activeHabitat.gameObject);}
     }
 }

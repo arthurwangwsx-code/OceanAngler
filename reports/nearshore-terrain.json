@@ -1,0 +1,238 @@
+{
+  "implementation": "IMPLEMENTED_CANDIDATE",
+  "artAcceptance": "PARTIAL_NOT_ACCEPTED",
+  "overallProductAcceptance": "PARTIAL",
+  "sourceBaseCommit": "91cb2382c01cee9bc2c96513a0a01572502ee93d",
+  "sourceDigest": "cdb5d6feb28db8b560a9046974fa651dca6cb39f4cddaf2c1dcb4b6aad2a1490",
+  "sourceGeometry": {
+    "status": "ENGINEERING_CHECKS_PASS",
+    "validationLabel": "channelvalidate7",
+    "assetLabel": "channelbuild7",
+    "lod0Triangles": 61810,
+    "groundedIslandProfiles": 45,
+    "blendProfiles": [
+      {
+        "lod": 0,
+        "vertices": 11835,
+        "values": 11835,
+        "minimum": 0.0,
+        "maximum": 0.9989498853683472,
+        "intermediate": 2201
+      },
+      {
+        "lod": 1,
+        "vertices": 5920,
+        "values": 5920,
+        "minimum": 0.0,
+        "maximum": 0.9989498853683472,
+        "intermediate": 2201
+      },
+      {
+        "lod": 2,
+        "vertices": 2371,
+        "values": 2371,
+        "minimum": 0.0,
+        "maximum": 0.9983838200569153,
+        "intermediate": 1034
+      }
+    ],
+    "details": "reports/nearshore-terrain-geometry.json"
+  },
+  "editor": {
+    "result": "Passed",
+    "total": "51",
+    "passed": "51",
+    "failed": "0",
+    "end-time": "2026-11-24 01:25:17Z"
+  },
+  "headlessPlayMode": {
+    "result": "Passed",
+    "total": "10",
+    "passed": "10",
+    "failed": "0",
+    "end-time": "2026-11-24 01:26:18Z"
+  },
+  "macCompilation": "PASS",
+  "gpu": {
+    "main": {
+      "status": "PARTIAL_STATIC_RGB_DIFFERENCE",
+      "scope": "isolated Editor GPU water fixture; no player UI/device acceptance",
+      "staticMatchCheck": "PARTIAL_STATIC_RGB_DIFFERENCE",
+      "width": 1440,
+      "height": 900,
+      "reflectionPasses": 4,
+      "validatedMaterials": 32,
+      "initialChangedPixels": 0,
+      "repeatChangedPixels": 12,
+      "samples": 4,
+      "staticDraws": 3,
+      "reflectionVariance": 0.022745562717318535,
+      "waveDifference": 0.008043037727475166,
+      "graphics": "Metal",
+      "released": true,
+      "representedEachDraw": true,
+      "exactStaticMatch": false,
+      "initialDifference": 0.0,
+      "repeatDifference": 0.003921568393707275
+    },
+    "earlierTwoSamplePasses": [
+      {
+        "status": "PASS",
+        "scope": "isolated Editor GPU water fixture; no player UI/device acceptance",
+        "width": 1440,
+        "height": 900,
+        "reflectionPasses": 4,
+        "validatedMaterials": 32,
+        "initialChangedPixels": 0,
+        "repeatChangedPixels": 0,
+        "samples": 4,
+        "reflectionVariance": 0.026343129575252533,
+        "waveDifference": 0.008898687548935413,
+        "graphics": "Metal",
+        "released": true,
+        "representedEachDraw": true,
+        "exactStaticMatch": true,
+        "initialDifference": 0.0,
+        "repeatDifference": 0.0
+      },
+      {
+        "status": "PASS",
+        "scope": "isolated Editor GPU water fixture; no player UI/device acceptance",
+        "width": 1440,
+        "height": 900,
+        "reflectionPasses": 4,
+        "validatedMaterials": 32,
+        "initialChangedPixels": 0,
+        "repeatChangedPixels": 0,
+        "samples": 4,
+        "reflectionVariance": 0.0261676162481308,
+        "waveDifference": 0.008893313817679882,
+        "graphics": "Metal",
+        "released": true,
+        "representedEachDraw": true,
+        "exactStaticMatch": true,
+        "initialDifference": 0.0,
+        "repeatDifference": 0.0
+      }
+    ],
+    "scope": "Latest 4xMSAA result PARTIAL; 12 pixels differ by max 1/255 between static draws. Material/reflection/wave/release checks completed. Two earlier runs passed exact RGB but do not override the latest partial result.",
+    "noPlayerOrDevice": true
+  },
+  "previews": {
+    "finalGpuFrames": 11,
+    "sourceStudioFrames": 4,
+    "rejectedUvClose": 1,
+    "totalRegistered": 16,
+    "viewed": 16,
+    "gpuSnapshot": "channel13scope",
+    "staticSameViewFrames": 3,
+    "exactDuplicateFilesInLatest": 1
+  },
+  "earlierSamplingEvidence": {
+    "noRepresent": "channel6control: 21 pixels, max 1/255; exact match failed",
+    "singleSample": "channel7single: exact 3-draw PASS, control only; runtime MSAA kept 4",
+    "explicitResolve": "channel8resolve: invalid first frame, REJECTED and code reverted",
+    "cameraGuard": "did not fix; code reverted",
+    "rawFailuresRetained": true,
+    "gateRelaxed": false,
+    "rootCauseProven": false,
+    "generalBitwiseDeterminism": "NOT_PROVEN",
+    "latestStrictResult": "channel13scope PARTIAL: 12 pixels max 1/255; original zero threshold retained"
+  },
+  "shader": {
+    "source": "game/Assets/OceanAngler/Shaders/CoastalTerrain.shader",
+    "projection": "world triplanar with continuous vertex soil weight",
+    "worstCaseTextureSamples": 18,
+    "sourcePreview": "Cycles world box/bump approximation",
+    "phoneAndTabletCost": "NOT_RUN"
+  },
+  "nativePlayer": "NOT_RUN; CUA observed locked Mac",
+  "physicalDevice": "NOT_RUN for this source",
+  "childAndParent": "NOT_RUN",
+  "scientificAndUserArtReview": "NOT_RUN",
+  "includedInPublishedAndLocallyInstalledBuild5": false,
+  "publishedBuild5Source": "a6bcf8ee82b90fa1fd3b856873233b838c415189",
+  "knownArtIssues": [
+    "procedural fracture-line pattern",
+    "smooth cliff geometry",
+    "repeated rocks and leaves",
+    "sparse seabed/shore detail",
+    "source lighting still requires calibration"
+  ],
+  "metrics": {
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "binding": "VERIFIED",
+    "independentReceiptAudit": "INCOMPLETE",
+    "measurements": [
+      "4315caab-2428-4e8e-801f-05793afc4ae5",
+      "b5bfd173-9cd5-4b02-a823-f14a8eaccc2a",
+      "9a81cc7e-068c-4d70-9f83-f3ad6ffdae0c",
+      "e88066aa-d313-476b-bd1d-e852422a0959",
+      "013696af-387a-42db-8907-7398f4b310d1",
+      "3c98d4e6-c542-4a69-9266-442e8e58a1fd",
+      "f55502fc-16e6-4f4f-af1a-83c21375ddb5",
+      "25beb844-a810-4960-a929-c3c31d2c9ba8",
+      "979e1a2e-320d-4f6b-a080-bfbc560bc87f",
+      "d6bffeee-e760-4f14-a190-ea60ec7bb99e",
+      "f7a5a5d9-60d3-45a1-89ce-0fa6ba4dc8ef",
+      "b57c3cd7-5859-409d-bbe1-b5078a33366a",
+      "a5fcb645-24dc-441e-b579-33afb1c13249",
+      "3bdb346b-660f-499e-aadd-dd72d9d23307",
+      "4cbf1c94-ad1e-42aa-8ec2-1de29e700ad2",
+      "47d56306-d06d-433a-8330-c8bbcc700128",
+      "3b4c7a18-4854-4bc2-988f-0c00821cbcd7",
+      "dba0e6f3-f90c-488d-bce0-d38937b96beb",
+      "56d9652c-ef26-4de3-954b-57378d17e635",
+      "32dd6684-0e9a-4f9a-b0c7-2f98c835751f",
+      "b12f61e5-10d8-415c-9618-e3bbbc42711b",
+      "60bc5b5a-ecbb-4e1a-ba5e-e73644c4c744",
+      "6661d0f1-43a3-4bac-9032-b885c4f8e94d",
+      "25a6daf8-98e3-41dc-bce9-02b0580b5c66",
+      "6925ff05-6c86-40f3-b651-e962f0c78925",
+      "5ca8b712-3e2d-4da1-af1b-d40da394b0f5",
+      "046c5df4-1133-4ca2-bbe0-cb116b88c0df",
+      "b15c37c7-def4-49be-8989-8f299eb7ae07"
+    ],
+    "nonzeroMeasurements": [
+      "25a6daf8-98e3-41dc-bce9-02b0580b5c66",
+      "3c98d4e6-c542-4a69-9266-442e8e58a1fd",
+      "979e1a2e-320d-4f6b-a080-bfbc560bc87f",
+      "b57c3cd7-5859-409d-bbe1-b5078a33366a",
+      "d6bffeee-e760-4f14-a190-ea60ec7bb99e",
+      "e88066aa-d313-476b-bd1d-e852422a0959",
+      "f55502fc-16e6-4f4f-af1a-83c21375ddb5"
+    ]
+  },
+  "bayControl": {
+    "status": "PASS",
+    "reflectionPasses": 2,
+    "validatedMaterials": 101,
+    "samples": 4,
+    "reflectionVariance": 0.022449390962719917,
+    "waveDifference": 0.006169817876070738,
+    "released": true,
+    "staticDraws": 0,
+    "staticMatchCheck": "NOT_RUN"
+  },
+  "engineeringAcceptance": "PARTIAL_GPU_STATIC_MATCH",
+  "crossProcessRenderCalibration": {
+    "status": "NOT_QUALIFIED",
+    "comparison": "channel11triplanar versus channel13scope surface RGB",
+    "maximumByteDifference": 80,
+    "meanAbsoluteByteDifference": 6.126113425925926,
+    "note": "Separate Editor processes; environment not pinned, cause unproven; not same-run temporal variation and not physical player proof"
+  },
+  "unityClearanceLog": "CHANNEL_CORRIDOR_CLEAR fishing=198 observation=384 triangles=102200",
+  "publicationAudit": {
+    "status": "PASS",
+    "trackedFiles": 712,
+    "issues": []
+  },
+  "validatedCommit": "e9fe2a341e8181c510ea5494c28f92db0ceafaf3",
+  "sourceCi": {
+    "commit": "e9fe2a341e8181c510ea5494c28f92db0ceafaf3",
+    "status": "SUCCESS",
+    "url": "https://github.com/arthurwangwsx-code/OceanAngler/actions/runs/45306599497",
+    "scope": "Source/asset hashes, publication and release-tool checks only; does not override graphics PARTIAL or device NOT_RUN"
+  }
+}

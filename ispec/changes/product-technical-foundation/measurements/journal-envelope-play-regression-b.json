@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "0709fdc4-ad42-4828-8a19-6b9914982dce",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "41ab4635f1d2676c9a86c38037410cdc0e0d426c608ad7e79fa578cb391d2698",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-25T07:57:11.274Z",
+    "finishedAt": "2026-11-25T07:58:40.034Z",
+    "durationMs": 88719.32183300001,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      "tools/game.py",
+      "tests",
+      "--label",
+      "journalenveloperegressionb",
+      "--test-platform",
+      "PlayMode",
+      "--test-filter",
+      "JournalFramingTests;HalibutWorldTests;HalibutFinAnimationTests;FishAnimationTests;ImmersiveNavigationTests"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    "tools/game.py",
+    "tests",
+    "--label",
+    "journalenveloperegressionb",
+    "--test-platform",
+    "PlayMode",
+    "--test-filter",
+    "JournalFramingTests;HalibutWorldTests;HalibutFinAnimationTests;FishAnimationTests;ImmersiveNavigationTests"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T07:57:11.274Z",
+  "finishedAt": "2026-11-25T07:58:40.034Z",
+  "durationMs": 88719.32183300001
+}

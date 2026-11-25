@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "9c3576c6-e4f2-442e-9742-c277fc450286",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "2ebae4807d14d0a143d6dc79720f5926a3a785281aa952b703a7be6bce9871ad",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-25T14:54:26.244Z",
+    "finishedAt": "2026-11-25T14:56:25.720Z",
+    "durationMs": 119449.355167,
+    "exitCode": 1,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "args": [
+      "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b/.local/bluefin-flex-qa/unity-step.py",
+      "flexeditor",
+      "tests"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b/.local/bluefin-flex-qa/unity-step.py",
+    "flexeditor",
+    "tests"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 1,
+  "startedAt": "2026-11-25T14:54:26.244Z",
+  "finishedAt": "2026-11-25T14:56:25.720Z",
+  "durationMs": 119449.355167
+}

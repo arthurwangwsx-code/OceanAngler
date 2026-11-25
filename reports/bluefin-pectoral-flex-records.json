@@ -1,0 +1,69 @@
+{
+  "status": "PASS_LOCAL_INCREMENT_INTEGRITY",
+  "baselineEnded": 1737,
+  "endedBeforeThisAudit": 60,
+  "failedOrBlockedRetained": [
+    {
+      "receipt": "measurements/bluefin-flex-baseline-phone.json",
+      "exitCode": 1,
+      "errorCode": null
+    },
+    {
+      "receipt": "measurements/bluefin-flex-source-red.json",
+      "exitCode": 1,
+      "errorCode": null
+    },
+    {
+      "receipt": "measurements/bluefin-flex-source-green.json",
+      "exitCode": 1,
+      "errorCode": null
+    },
+    {
+      "receipt": "measurements/bluefin-flex-editor.json",
+      "exitCode": 1,
+      "errorCode": null
+    },
+    {
+      "receipt": "measurements/bluefin-flex-source-cohesion.json",
+      "exitCode": 1,
+      "errorCode": null
+    },
+    {
+      "receipt": "measurements/bluefin-flex-surface-build.json",
+      "exitCode": 1,
+      "errorCode": null
+    },
+    {
+      "receipt": "measurements/bluefin-flex-source-green-c.json",
+      "exitCode": 1,
+      "errorCode": null
+    },
+    {
+      "receipt": "measurements/bluefin-flex-source-green-d.json",
+      "exitCode": 1,
+      "errorCode": null
+    },
+    {
+      "receipt": "measurements/bluefin-flex-source-cohesion-b.json",
+      "exitCode": 1,
+      "errorCode": null
+    },
+    {
+      "receipt": "measurements/bluefin-flex-play-b.json",
+      "exitCode": 1,
+      "errorCode": null
+    },
+    {
+      "receipt": "measurements/bluefin-flex-play-c.json",
+      "exitCode": 1,
+      "errorCode": null
+    }
+  ],
+  "oldMeasurementObjectsUnchanged": true,
+  "oldReceiptHashesUnchanged": true,
+  "newReceiptHashesAndBindingsCorrect": true,
+  "newEndedIntervalsSerial": true,
+  "auditOwnMeasurementPending": "062f4890-11fe-4651-a4b3-6c8b1791476b",
+  "formalHistoricalAudit": "INCOMPLETE",
+  "scope": "Only local object/hash/receipt binding and new-increment serial chronology; no retroactive recovery of older missing execution evidence, physical/art or full-product acceptance"
+}

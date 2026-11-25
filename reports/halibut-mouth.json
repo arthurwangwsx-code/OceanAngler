@@ -1,0 +1,144 @@
+{
+  "status": "SOURCE_IMPORTED_AND_PRODUCTION_LOGIC_PASS_VISUAL_PARTIAL",
+  "baseCommit": "eed9320c4df0c5c89af271cefde4a3b7207c7247",
+  "sourceChecks": 160,
+  "poseSamples": 35,
+  "toothRootsPerPose": 12,
+  "toothRootMaxDistance": 4.1500643419567496e-05,
+  "oldMouthOpenEdges": 112,
+  "newMouthOpenEdges": 0,
+  "lods": {
+    "Halibut_LOD0": 20784,
+    "Halibut_LOD1": 8312,
+    "Halibut_LOD2": 3117
+  },
+  "editorPassed": 6,
+  "playPassed": 3,
+  "metal": {
+    "status": "PASS",
+    "scope": "isolated imported halibut Editor Metal; not Player, science, visual or device acceptance",
+    "graphics": "Metal",
+    "images": 24,
+    "pairs": 12,
+    "maxChannelDifference": 0,
+    "firstDrawStable": true,
+    "biteHookTravel": 0.09487726539373398
+  },
+  "pngDecoded": 31,
+  "existingFilesChecked": 1035,
+  "existingByteIdentical": 1023,
+  "expectedChanged": [
+    "art/asset-manifest.json",
+    "art/source/halibut/Halibut.blend",
+    "art/source/halibut/README.md",
+    "art/source/halibut/build-report.json",
+    "game/Assets/OceanAngler/Art/Halibut/Halibut.fbx",
+    "game/Assets/OceanAngler/Art/Halibut/Halibut.fbx.meta",
+    "game/Assets/OceanAngler/Art/Halibut/Halibut_BaseColor.png",
+    "game/Assets/OceanAngler/Art/Halibut/Halibut_Dark.mat",
+    "game/Assets/OceanAngler/Editor/HalibutAssetBuilder.cs",
+    "game/Assets/OceanAngler/Resources/Models/Halibut.prefab",
+    "game/Assets/OceanAngler/Runtime/OceanWorld.cs",
+    "game/Assets/OceanAngler/Tests/Editor/HalibutAssetTests.cs"
+  ],
+  "uiBytesUnchanged": true,
+  "otherHalibutMapsUnchanged": true,
+  "runtimeFactoryIntegrated": true,
+  "journalTiltDegrees": -55,
+  "visual": "PARTIAL: lip highlight, eye socket, gill and tail proportions, fin motion remain",
+  "currentCandidateNative": "PASS_TARGETED_JOURNAL_AND_GEAR_ONLY",
+  "physicalUserScienceA1_A3": "NOT_ACCEPTED",
+  "completeProduct": "PARTIAL",
+  "historicAudit": "INCOMPLETE",
+  "nativeArtifact": {
+    "source": {
+      "sourceCommit": "88c68797301075501a16ea53af4b77258bca9790",
+      "sourceDigest": "7658788767b0aa25998a7fc61f0b4cbe4b08a11725f3c3a0b815d0edc52b8627",
+      "projectSettingsSha256": "bea92e9b5c8b678dd130d48c1f43acaf939b56cacce33928a5a45af6da0a4585"
+    },
+    "appDigest": "7dc15a24ed91fdb438c556fb65c8393dd012eaa97ca4302a7f3aa4c093b3de3b",
+    "platform": "iphonesimulator",
+    "architectures": [
+      "arm64"
+    ],
+    "version": "0.1.0",
+    "bundleBuild": "8",
+    "deviceFamilies": [
+      1,
+      2
+    ],
+    "distribution": "LOCAL_SIMULATOR_ONLY_NOT_TESTFLIGHT"
+  },
+  "native": [
+    {
+      "status": "PASS",
+      "scope": "same new native Simulator binary; copied genuine old progress, twenty equipment selections and twelve model notices, actual halibut journal frame; not new progression or native halibut catch, OS touch or physical qualification",
+      "source": {
+        "sourceCommit": "88c68797301075501a16ea53af4b77258bca9790",
+        "sourceDigest": "7658788767b0aa25998a7fc61f0b4cbe4b08a11725f3c3a0b815d0edc52b8627",
+        "projectSettingsSha256": "bea92e9b5c8b678dd130d48c1f43acaf939b56cacce33928a5a45af6da0a4585"
+      },
+      "appDigest": "7dc15a24ed91fdb438c556fb65c8393dd012eaa97ca4302a7f3aa4c093b3de3b",
+      "device": "phone",
+      "capturedFrames": 6,
+      "equipped": 20,
+      "modelStatuses": 12,
+      "catches": 25,
+      "points": 4455,
+      "saveSha256": "24c50b6890ae33e8bda2140d1c844d39dc9a9ecea5688dd5e03074dbc1499c80",
+      "ledgerAndSettingsPreserved": true,
+      "copySerializationAddsOnlyUnderwaterDefaultFalse": true
+    },
+    {
+      "status": "PASS",
+      "scope": "same new native Simulator binary; copied genuine old progress, twenty equipment selections and twelve model notices, actual halibut journal frame; not new progression or native halibut catch, OS touch or physical qualification",
+      "source": {
+        "sourceCommit": "88c68797301075501a16ea53af4b77258bca9790",
+        "sourceDigest": "7658788767b0aa25998a7fc61f0b4cbe4b08a11725f3c3a0b815d0edc52b8627",
+        "projectSettingsSha256": "bea92e9b5c8b678dd130d48c1f43acaf939b56cacce33928a5a45af6da0a4585"
+      },
+      "appDigest": "7dc15a24ed91fdb438c556fb65c8393dd012eaa97ca4302a7f3aa4c093b3de3b",
+      "device": "tablet",
+      "capturedFrames": 6,
+      "equipped": 20,
+      "modelStatuses": 12,
+      "catches": 20,
+      "points": 3703,
+      "saveSha256": "480eb4218239ed165372d1fb1fcdeecbf794c37f2b19aa631a83cc905b24e4d8",
+      "ledgerAndSettingsPreserved": true,
+      "copySerializationAddsOnlyUnderwaterDefaultFalse": true
+    }
+  ],
+  "existingProgressFilesByteIdentical": 113,
+  "personalPhoneOrTestFlightChange": false,
+  "nativeLimits": "No new natural growth, native halibut catch/hook/release, OS touch, child, physical or A1-A3 qualification",
+  "recordIntegrity": {
+    "status": "PASS_CURRENT_INCREMENT_EXCLUDING_RUNNING_SELF",
+    "historicalOverall": "INCOMPLETE",
+    "newCompleted": 24,
+    "newStarts": 25,
+    "oldObjectsUnchanged": true,
+    "receiptsAndBindingsVerified": true,
+    "completedIntervalsDisjoint": true,
+    "onlyRunningSelfPending": true,
+    "failuresRetained": [
+      {
+        "receipt": "measurements/halibut-mouth-controlled-red.json",
+        "exitCode": 1
+      },
+      {
+        "receipt": "measurements/halibut-world-play-a.json",
+        "exitCode": 2
+      },
+      {
+        "receipt": "measurements/halibut-world-play-b.json",
+        "exitCode": 2
+      },
+      {
+        "receipt": "measurements/halibut-mouth-native-verify.json",
+        "exitCode": 1
+      }
+    ],
+    "scope": "Own local state/receipt integrity; not formal independent CLI audit or product acceptance"
+  }
+}

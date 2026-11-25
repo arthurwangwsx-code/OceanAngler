@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "d0053484-8a72-4a7a-b82e-ed18198c00d5",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "1831571161da6228303e1904c7fcdb952492c5c8be5617fa9f1a46b82b1611a4",
+    "category": "e2e",
+    "executable": "python3",
+    "startedAt": "2026-11-25T15:59:51.210Z",
+    "finishedAt": "2026-11-25T15:59:53.149Z",
+    "durationMs": 1909.946833,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "args": [
+      "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b/.local/bluefin-flex-qa/content-verify-native.py",
+      "normalflexphone20261125a"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b/.local/bluefin-flex-qa/content-verify-native.py",
+    "normalflexphone20261125a"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T15:59:51.210Z",
+  "finishedAt": "2026-11-25T15:59:53.149Z",
+  "durationMs": 1909.946833
+}

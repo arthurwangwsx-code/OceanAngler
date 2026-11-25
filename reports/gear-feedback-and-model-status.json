@@ -1,0 +1,154 @@
+{
+  "status": "FOCUSED_FUNCTIONAL_PASS_ART_PARTIAL",
+  "source": {
+    "sourceCommit": "858369746f79420e4ffa4a14bbca7f6c55d25ee0",
+    "sourceDigest": "e7c71cece9022bcc228320c1e0781d6a4c7b403186b050ee58e494387bc01b4f",
+    "projectSettingsSha256": "487dd5cc37a763cb9f23702f91a10b6680094d7b2165050d05327b1376c0d54d"
+  },
+  "appDigest": "3643828a30a9e8752901ad987282dc39408e4b14959a0c1c24a3e060ab2962a8",
+  "native": [
+    {
+      "status": "PASS",
+      "label": "gear20261124phone1",
+      "scope": "focused20gear/12prototype-status native UI from byte-identical copy of genuine prior full-catch save; no new fishing",
+      "source": {
+        "sourceCommit": "858369746f79420e4ffa4a14bbca7f6c55d25ee0",
+        "sourceDigest": "e7c71cece9022bcc228320c1e0781d6a4c7b403186b050ee58e494387bc01b4f",
+        "projectSettingsSha256": "487dd5cc37a763cb9f23702f91a10b6680094d7b2165050d05327b1376c0d54d"
+      },
+      "appDigest": "3643828a30a9e8752901ad987282dc39408e4b14959a0c1c24a3e060ab2962a8",
+      "input": {
+        "sourceLabel": "content20261124phone1",
+        "sourceCommit": "0bea41d0df348c0256a33dfbd8701119ff2b1e63",
+        "sourceAppDigest": "a671481c855c163b0a508b275fdcb6d164b03a55ab7ae903df18154618f5e829",
+        "saveSha256": "e0732947026735bab64f2f84354b984788df2a4a7d759a8fbf752e83e14ef339",
+        "sourceCatches": 25,
+        "sourcePoints": 4455,
+        "method": "byte-identical copy of real native UI journey save into new isolated root; no generated records or points"
+      },
+      "originalBytesUnchanged": true,
+      "progressAndSettingsUnchanged": true,
+      "finalCopyLoadout": {
+        "lineId": "line-1",
+        "lureId": "lure-1",
+        "reelId": "reel-1",
+        "rodId": "rod-1"
+      },
+      "catches": 25,
+      "points": 4455,
+      "observations": 3,
+      "modelStatuses": [
+        "trevally",
+        "snapper",
+        "grouper",
+        "redsnapper",
+        "mackerel",
+        "skipjack",
+        "mahi",
+        "yellowfin",
+        "bigeye",
+        "alfonsino",
+        "cod",
+        "halibut"
+      ],
+      "capturedFrames": 6,
+      "maxNormalizedScrollDelta": 0.0,
+      "sourceOriginalSha256": "e0732947026735bab64f2f84354b984788df2a4a7d759a8fbf752e83e14ef339",
+      "afterCopySha256": "08e9d6e6e30b18e46f93b32edc67443736b309165c623bd79078454959727279"
+    },
+    {
+      "status": "PASS",
+      "label": "gear20261124pad1",
+      "scope": "focused20gear/12prototype-status native UI from byte-identical copy of genuine prior full-catch save; no new fishing",
+      "source": {
+        "sourceCommit": "858369746f79420e4ffa4a14bbca7f6c55d25ee0",
+        "sourceDigest": "e7c71cece9022bcc228320c1e0781d6a4c7b403186b050ee58e494387bc01b4f",
+        "projectSettingsSha256": "487dd5cc37a763cb9f23702f91a10b6680094d7b2165050d05327b1376c0d54d"
+      },
+      "appDigest": "3643828a30a9e8752901ad987282dc39408e4b14959a0c1c24a3e060ab2962a8",
+      "input": {
+        "sourceLabel": "content20261124pad1",
+        "sourceCommit": "0bea41d0df348c0256a33dfbd8701119ff2b1e63",
+        "sourceAppDigest": "a671481c855c163b0a508b275fdcb6d164b03a55ab7ae903df18154618f5e829",
+        "saveSha256": "4478f13dfe86006428506b1200d0557d845040120946d158f493bb5fc9b6325f",
+        "sourceCatches": 20,
+        "sourcePoints": 3703,
+        "method": "byte-identical copy of real native UI journey save into new isolated root; no generated records or points"
+      },
+      "originalBytesUnchanged": true,
+      "progressAndSettingsUnchanged": true,
+      "finalCopyLoadout": {
+        "lineId": "line-1",
+        "lureId": "lure-1",
+        "reelId": "reel-1",
+        "rodId": "rod-1"
+      },
+      "catches": 20,
+      "points": 3703,
+      "observations": 3,
+      "modelStatuses": [
+        "trevally",
+        "snapper",
+        "grouper",
+        "redsnapper",
+        "mackerel",
+        "skipjack",
+        "mahi",
+        "yellowfin",
+        "bigeye",
+        "alfonsino",
+        "cod",
+        "halibut"
+      ],
+      "capturedFrames": 6,
+      "maxNormalizedScrollDelta": 0.0,
+      "sourceOriginalSha256": "4478f13dfe86006428506b1200d0557d845040120946d158f493bb5fc9b6325f",
+      "afterCopySha256": "5e18545f3daf4608f2594d48d3f5f461549dca517850dbfce0b02c6a43d291fa"
+    }
+  ],
+  "gearPerDevice": 20,
+  "prototypeLabelsPerDevice": 12,
+  "newFishingRounds": 0,
+  "redRegression": {
+    "measurement": "138f90f1-2d54-40d3-9467-46e2af082e19",
+    "exitCode": 2,
+    "item": "rod-6",
+    "before": 0,
+    "after": 1,
+    "selectedVisible": false,
+    "topHitMatches": false
+  },
+  "greenTests": {
+    "focusedPlayMode": 1,
+    "editor": 52,
+    "saveFailureRetry": true
+  },
+  "osInput": {
+    "visibleRod2Click": "PASS",
+    "heroWarning": "PASS",
+    "scroll": "NOT_CONFIRMED",
+    "note": "Two drags interpreted as tab/item click; one scroll did not move; cause not distinguished"
+  },
+  "retention": {
+    "files": 5,
+    "byteIdentical": true
+  },
+  "images": {
+    "nativeContactFrames": 12,
+    "contacts": 2,
+    "nativeOriginalsViewed": 6,
+    "manualOriginalsViewed": 2,
+    "publicOriginals": 6
+  },
+  "physicalDevice": "NOT_RUN",
+  "testFlight": "UNCHANGED",
+  "fullProduct": "PARTIAL",
+  "historicalMeasurementAudit": "INCOMPLETE",
+  "measurementBindingAudit": {
+    "committedRecordsPreserved": 761,
+    "newRecordsBound": true,
+    "historicalOverall": "INCOMPLETE",
+    "scope": "state-journal start/completion/binding only; not independent CLI receipt compliance"
+  },
+  "independentMeasurementAudit": "INCOMPLETE"
+}

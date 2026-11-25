@@ -1,0 +1,117 @@
+{
+  "verifiedAt": "2026-11-24T18:05:14.965968+00:00",
+  "appId": "6838308856",
+  "bundleId": "com.arthur.OceanAngler",
+  "version": "0.1.0",
+  "build": "7",
+  "processingState": "VALID",
+  "buildId": "8f3074c8-e17e-4a20-8077-79a73e0a40a0",
+  "actualInstallation": "NOT_RUN",
+  "internalBuildState": "IN_BETA_TESTING",
+  "sourceCommit": "653d3a793626962ed899fac96254eb9594353c63",
+  "sourceDigest": "9a1e8c6957de4f35345421f3afbd1363c1300edd85147c101c07411a49ee4951",
+  "nativeExport": "PASS",
+  "nativeDigest": "98f7764582d6369c9032ae23d5780158b6be99c9781f3563be7de808634d3638",
+  "archiveSignatureAndIdentity": "PASS",
+  "archiveDigest": "20e4cbb35fd8adf0c143d9ce536688c4c7d04cc63c03ed1f1ba7f232091fe104",
+  "internalOnlyExport": "PASS",
+  "localExportIpaBytes": 114579401,
+  "localExportIpaSha256": "92b430556ac28936c2ed5710f2fda1157502fcf6d3ca39186be6bf46b7ee3624",
+  "uploadTransport": "PASS",
+  "buildAudienceType": "INTERNAL_ONLY",
+  "usesNonExemptEncryption": false,
+  "uploadedDate": "2026-11-24T10:02:19-08:00",
+  "expirationDate": "2027-02-22T10:02:19-08:00",
+  "groupName": "OceanAngler Personal",
+  "isInternalGroup": true,
+  "publicLinkEnabled": false,
+  "authorizedAccountsOnly": true,
+  "approvedAccountCount": 2,
+  "accessibleGroups": 1,
+  "explicitTesterEmail": "arthur.wang.wsx@gmail.com",
+  "explicitTesterInvitationState": "INVITED",
+  "testerCount": 2,
+  "assignedBuild": true,
+  "betaNotes": "VERIFIED",
+  "feedbackEmail": "arthur.wang.wsx@gmail.com",
+  "minimumOS": "17.0",
+  "deviceFamilies": [
+    1,
+    2
+  ],
+  "staticPermissionUsageKeys": [],
+  "networkBehaviorAcceptance": "NOT_RUN",
+  "physical20MinuteQualification": "NOT_RUN",
+  "artQualification": "PARTIAL",
+  "overallProductAcceptance": "PARTIAL",
+  "contentScope": "Cumulative build6 plus rest reminder acknowledgement via existing edge hint and pause/home menu; quiet waiting hint preserved; no new HUD, scoring, odds or save schema changes",
+  "editorTests": {
+    "result": "Passed",
+    "total": "60",
+    "passed": "60",
+    "failed": "0",
+    "end-time": "2026-11-24 17:35:38Z"
+  },
+  "headlessPlayModeTests": {
+    "result": "Passed",
+    "total": "21",
+    "passed": "21",
+    "failed": "0",
+    "end-time": "2026-11-24 17:50:00Z"
+  },
+  "releaseGuardTests": 12,
+  "actualTouchAcceptance": "NOT_RUN",
+  "currentReleasePlayerVisualAcceptance": "NOT_RUN",
+  "priorSimulatorEvidence": {
+    "report": "reports/rest-reminder.json",
+    "frozenSource": "7a96e4783175dcc3fa72a9a3f2c7e9b220c461e1",
+    "scope": "same game implementation before release build/settings/notes update; dual19frame real rest timers and normal fishing, not this signed release on physical devices"
+  },
+  "actualDeviceProgressMigration": "NOT_RUN",
+  "sourceCi": {
+    "commit": "653d3a793626962ed899fac96254eb9594353c63",
+    "status": "PASS",
+    "url": "https://github.com/arthurwangwsx-code/OceanAngler/actions/runs/45453098239"
+  },
+  "metrics": {
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "binding": "PARTIAL_RETAINED_START_GAP_AND_OVERLAP",
+    "independentReceiptAudit": "INCOMPLETE",
+    "incrementAudit": {
+      "status": "PARTIAL_RETAINED_START_GAP_AND_OVERLAP",
+      "historicalOverall": "INCOMPLETE",
+      "baselineCompleted": 1024,
+      "baselineStarts": 1020,
+      "newCompleted": 27,
+      "newStarts": 26,
+      "totalCompleted": 1051,
+      "totalStarts": 1046,
+      "oldObjectsUnchanged": true,
+      "allActualReceiptHashesAndMeasurementBodiesVerified": true,
+      "startBindings": "PARTIAL_ONE_MISSING_ORIGINAL_START_NOT_REPAIRED",
+      "missingNewStartIds": [
+        "ea4cdbf8-a4cd-4687-bd2f-ada37878f550"
+      ],
+      "newIntervalsDisjoint": false,
+      "overlaps": [
+        [
+          "ea4cdbf8-a4cd-4687-bd2f-ada37878f550",
+          "b164768b-6d96-41bc-9849-f8bfa8ccf2dc"
+        ]
+      ],
+      "newFailures": [
+        {
+          "id": "84c6790c-597c-44c5-b175-46cbb7eda27a",
+          "receipt": "measurements/beta7-delivery-audit-20261125b.json",
+          "exitCode": 1
+        }
+      ],
+      "serializedPublicCheckRecovery": {
+        "status": "PASS",
+        "measurementId": "c354b500-b6f0-4bec-9880-f39a842d18a6",
+        "receipt": "measurements/beta7-delivery-public-checks-20261125b.json"
+      },
+      "scope": "No repair/deletion of original start/completion records. Two post-release documentation checks overlapped; one original start lost. Exact anomalies retained and no additional anomalies found. Serial replacement checks passed. This is not full independent compliance or product acceptance."
+    }
+  }
+}

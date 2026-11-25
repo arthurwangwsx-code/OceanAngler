@@ -1,0 +1,730 @@
+{
+  "status": "SCOPED_NEUTRAL_ALBEDO_SOURCE_EDITOR_AND_DUAL_NATIVE_PASS_ART_PARTIAL",
+  "wholeProduct": "PARTIAL",
+  "source": {
+    "sourceCommit": "201534b0df86767bfcf9434dde2dc2e2fc74800e",
+    "sourceDigest": "18d26b17df5b633c5ed5ef5f1a60c374f6a789aecd4144fec7e553dd1df5f25f",
+    "projectSettingsSha256": "15b80559faa4f4758454e50942f82ac04a1473bc6e4cf968ee7c497d7a3a3620"
+  },
+  "appDigest": "d9a89297f5079302a535240af90b6db915229ae1f34897b9175339a41d0c1a30",
+  "distribution": "LOCAL_SIMULATOR_ONLY_NOT_TESTFLIGHT",
+  "sourceIdentity": {
+    "status": "ALL_LOD_IDENTITY_AND_SINGLE_ALBEDO_CHANGE_PASS",
+    "allLodsIdentical": true,
+    "canonicalPrecision": 6,
+    "geometryUvWeightsAndMaterialRoleHashes": {
+      "0": "c1f8843a12cfee15597eb1ae4111a5fa0a99c271d5c0f7b73df8388d59912680",
+      "1": "041cfca584eb635adefd401b63d3986a5322b2633862ec6b956551f80d20e864",
+      "2": "5083d1174a62df3b02bd68eb4577a040d60113ae2d3a9d557b6271dad3870024"
+    },
+    "fbxByteIdentical": true,
+    "unchangedPngs": 8,
+    "changedPng": "Bluefin_BaseColor.png",
+    "blendSha256": "2778aaf6cf711c7b8631c7068205908fffb3873905cd9cf9d68330f426615085"
+  },
+  "linkedAlbedo": {
+    "status": "PASS",
+    "scope": "actual linked saved-blend base-color pixels versus exported PNG loaded through the same Blender decoder; no biological or colorimetric acceptance",
+    "sourceType": "FILE",
+    "width": 2048,
+    "height": 1024,
+    "maxDifference": 0.0
+  },
+  "sourceChecks": {
+    "status": "ENGINEERING_CHECKS_PASS",
+    "checks": 189,
+    "motions": 7,
+    "poses": 35,
+    "wallSamples": 72
+  },
+  "tests": {
+    "editmode": {
+      "result": "Passed",
+      "total": "5",
+      "passed": "5",
+      "failed": "0",
+      "start-time": "2026-11-24 20:16:59Z",
+      "end-time": "2026-11-24 20:17:00Z"
+    },
+    "playmode": {
+      "result": "Passed",
+      "total": "2",
+      "passed": "2",
+      "failed": "0",
+      "start-time": "2026-11-24 20:18:09Z",
+      "end-time": "2026-11-24 20:18:16Z"
+    }
+  },
+  "gpu": {
+    "status": "PASS",
+    "scope": "CoralBay stable-reference Editor GPU lighting controls; initial draw separately retained and unqualified; not Player,art,science or physical qualification",
+    "graphics": "Metal",
+    "quality": "Medium",
+    "target": "R16G16B16A16_SFloat",
+    "defaultReflection": "Default-Skybox-Cubemap",
+    "ambientMode": "Skybox",
+    "images": 18,
+    "samples": 4,
+    "probeResolution": 128,
+    "probeMips": 8,
+    "defaultReflectionDecode": {
+      "x": 5.0,
+      "y": 1.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "reflectionIntensity": 1.0,
+    "views": [
+      {
+        "view": "game",
+        "initialChangedPixels": 42,
+        "baselineRepeatPixels": 0,
+        "noEnvironmentPixels": 1275,
+        "localProbePixels": 39889,
+        "probeRepeatPixels": 0
+      },
+      {
+        "view": "near",
+        "initialChangedPixels": 0,
+        "baselineRepeatPixels": 0,
+        "noEnvironmentPixels": 7616,
+        "localProbePixels": 75899,
+        "probeRepeatPixels": 0
+      },
+      {
+        "view": "reverse",
+        "initialChangedPixels": 0,
+        "baselineRepeatPixels": 0,
+        "noEnvironmentPixels": 9048,
+        "localProbePixels": 44112,
+        "probeRepeatPixels": 0
+      }
+    ]
+  },
+  "graphicsSettingsRestore": {
+    "status": "PASS",
+    "scope": "Restore only known Editor reflection-review color-temperature initialization; preserve all caller settings",
+    "beforeSha256": "012fa87054bf6e9fbb0607568cfa287968396f9d3a27d3376432024e8684340d",
+    "restoredSha256": "012fa87054bf6e9fbb0607568cfa287968396f9d3a27d3376432024e8684340d"
+  },
+  "localReflectionProbe": "DIAGNOSTIC_ONLY_NOT_ADOPTED_IN_PRODUCTION",
+  "productionRuntimeResourceAndProjectSettingsFiles": "UNCHANGED_FROM_8a1c68c",
+  "phone": {
+    "status": "PASS",
+    "label": "fishlighting20261125phone1",
+    "scope": "native15-frame immersive EventSystem first-tutorial flow for neutral hero body albedo with unchanged model geometry and UI; no RNG/points injection; not900-second rest-trigger, child, OS touch, full progression or physical20-minute qualification",
+    "source": {
+      "sourceCommit": "201534b0df86767bfcf9434dde2dc2e2fc74800e",
+      "sourceDigest": "18d26b17df5b633c5ed5ef5f1a60c374f6a789aecd4144fec7e553dd1df5f25f",
+      "projectSettingsSha256": "15b80559faa4f4758454e50942f82ac04a1473bc6e4cf968ee7c497d7a3a3620"
+    },
+    "appDigest": "d9a89297f5079302a535240af90b6db915229ae1f34897b9175339a41d0c1a30",
+    "externalMeasurementDurationMs": 76498.658875,
+    "catches": 1,
+    "points": 222,
+    "fishId": "trevally",
+    "saveSha256": "fceb134c2b9d0a113f46d276d663f0b5bb3d2e848162c0136359078f87b82acc",
+    "maxHudRatio": 0.12227564305067062,
+    "samples": [
+      {
+        "phase": "Ready",
+        "leftHanded": false,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.0890224352478981
+      },
+      {
+        "phase": "Waiting",
+        "leftHanded": false,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.0890224352478981
+      },
+      {
+        "phase": "Bite",
+        "leftHanded": false,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.0890224352478981
+      },
+      {
+        "phase": "Fighting",
+        "leftHanded": false,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.12034111469984055
+      },
+      {
+        "phase": "Fighting",
+        "leftHanded": false,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.12034111469984055
+      },
+      {
+        "phase": "Landed",
+        "leftHanded": false,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.12227564305067062
+      },
+      {
+        "phase": "Ready",
+        "leftHanded": true,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.0890224352478981
+      },
+      {
+        "phase": "Waiting",
+        "leftHanded": true,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.0890224352478981
+      },
+      {
+        "phase": "Bite",
+        "leftHanded": true,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.0890224352478981
+      },
+      {
+        "phase": "Fighting",
+        "leftHanded": true,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.12034111469984055
+      }
+    ],
+    "capturedFrames": 15,
+    "renderProbe": {
+      "graphics": "Metal",
+      "quality": "Medium",
+      "hdrAfter": true,
+      "halfHdrSamples": 4,
+      "desiredSamples": 4
+    },
+    "checks": [
+      "immersive-isolated-save-root",
+      "immersive-ready-valid-save",
+      "visible-hit-target:继续探索",
+      "visible-hit-target:暂停",
+      "visible-hit-target:设置",
+      "visible-hit-target:出海",
+      "visible-hit-target:返回首页",
+      "visible-hit-target:海域与装备",
+      "immersive-separate-preparation",
+      "immersive-departure-visible-without-scrolling",
+      "immersive-departure-inside-safe-area",
+      "visible-hit-target:开始钓鱼",
+      "immersive-active-play",
+      "immersive-only-pause-and-current-action",
+      "immersive-no-global-chrome-or-panels",
+      "immersive-hud-under-15-percent-and-central-view-clear-Ready",
+      "immersive-meters-only-while-fighting",
+      "visible-hit-target:按住蓄力 · 松手抛竿",
+      "immersive-menu-cancels-cast-charge",
+      "immersive-hud-under-15-percent-and-central-view-clear-Waiting",
+      "immersive-normal-bite",
+      "immersive-hud-under-15-percent-and-central-view-clear-Bite",
+      "visible-hit-target:提竿",
+      "immersive-hud-under-15-percent-and-central-view-clear-Fighting",
+      "visible-hit-target:按住收线",
+      "immersive-pause-releases-held-reel",
+      "immersive-pause-freezes-current-fish",
+      "immersive-settings-retain-catch",
+      "visible-hit-target:上一级",
+      "immersive-back-does-not-resume",
+      "visible-hit-target:结束本次 · 返回准备",
+      "visible-hit-target:取消，继续留在这里",
+      "immersive-exit-cancel-keeps-current-fish",
+      "immersive-focus-loss-cancels-input",
+      "immersive-focus-return-awaits-continue",
+      "immersive-real-fish-landed",
+      "immersive-hud-under-15-percent-and-central-view-clear-Landed",
+      "visible-hit-target:记录并放流",
+      "immersive-one-real-record",
+      "visible-hit-target:左手操作    已关闭",
+      "visible-hit-target:确认结束并返回准备",
+      "immersive-confirm-exit-to-preparation",
+      "immersive-unrecorded-exit-preserves-existing-disk-ledger",
+      "visible-hit-target:左手操作    已开启",
+      "immersive-restored-settings-real-disk-ledger"
+    ]
+  },
+  "tablet": {
+    "status": "PASS",
+    "label": "fishlighting20261125pad1",
+    "scope": "native15-frame immersive EventSystem first-tutorial flow for neutral hero body albedo with unchanged model geometry and UI; no RNG/points injection; not900-second rest-trigger, child, OS touch, full progression or physical20-minute qualification",
+    "source": {
+      "sourceCommit": "201534b0df86767bfcf9434dde2dc2e2fc74800e",
+      "sourceDigest": "18d26b17df5b633c5ed5ef5f1a60c374f6a789aecd4144fec7e553dd1df5f25f",
+      "projectSettingsSha256": "15b80559faa4f4758454e50942f82ac04a1473bc6e4cf968ee7c497d7a3a3620"
+    },
+    "appDigest": "d9a89297f5079302a535240af90b6db915229ae1f34897b9175339a41d0c1a30",
+    "externalMeasurementDurationMs": 62904.78125,
+    "catches": 1,
+    "points": 191,
+    "fishId": "trevally",
+    "saveSha256": "d4255a66da5338663c5a683fa468bd86213ab93eaff16d1783a0dd6d8959c684",
+    "maxHudRatio": 0.045262712985277176,
+    "samples": [
+      {
+        "phase": "Ready",
+        "leftHanded": false,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.03295338898897171
+      },
+      {
+        "phase": "Waiting",
+        "leftHanded": false,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.03295338898897171
+      },
+      {
+        "phase": "Bite",
+        "leftHanded": false,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.03295338898897171
+      },
+      {
+        "phase": "Fighting",
+        "leftHanded": false,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.04454661160707474
+      },
+      {
+        "phase": "Fighting",
+        "leftHanded": false,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.04454661160707474
+      },
+      {
+        "phase": "Landed",
+        "leftHanded": false,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.045262712985277176
+      },
+      {
+        "phase": "Ready",
+        "leftHanded": true,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.03295338898897171
+      },
+      {
+        "phase": "Waiting",
+        "leftHanded": true,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.03295338898897171
+      },
+      {
+        "phase": "Bite",
+        "leftHanded": true,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.03295338898897171
+      },
+      {
+        "phase": "Fighting",
+        "leftHanded": true,
+        "centralClear": true,
+        "buttons": 2,
+        "occupiedRatio": 0.04454661160707474
+      }
+    ],
+    "capturedFrames": 15,
+    "renderProbe": {
+      "graphics": "Metal",
+      "quality": "Medium",
+      "hdrAfter": true,
+      "halfHdrSamples": 4,
+      "desiredSamples": 4
+    },
+    "checks": [
+      "immersive-isolated-save-root",
+      "immersive-ready-valid-save",
+      "visible-hit-target:继续探索",
+      "visible-hit-target:暂停",
+      "visible-hit-target:设置",
+      "visible-hit-target:出海",
+      "visible-hit-target:返回首页",
+      "visible-hit-target:海域与装备",
+      "immersive-separate-preparation",
+      "immersive-departure-visible-without-scrolling",
+      "immersive-departure-inside-safe-area",
+      "visible-hit-target:开始钓鱼",
+      "immersive-active-play",
+      "immersive-only-pause-and-current-action",
+      "immersive-no-global-chrome-or-panels",
+      "immersive-hud-under-15-percent-and-central-view-clear-Ready",
+      "immersive-meters-only-while-fighting",
+      "visible-hit-target:按住蓄力 · 松手抛竿",
+      "immersive-menu-cancels-cast-charge",
+      "immersive-hud-under-15-percent-and-central-view-clear-Waiting",
+      "immersive-normal-bite",
+      "immersive-hud-under-15-percent-and-central-view-clear-Bite",
+      "visible-hit-target:提竿",
+      "immersive-hud-under-15-percent-and-central-view-clear-Fighting",
+      "visible-hit-target:按住收线",
+      "immersive-pause-releases-held-reel",
+      "immersive-pause-freezes-current-fish",
+      "immersive-settings-retain-catch",
+      "visible-hit-target:上一级",
+      "immersive-back-does-not-resume",
+      "visible-hit-target:结束本次 · 返回准备",
+      "visible-hit-target:取消，继续留在这里",
+      "immersive-exit-cancel-keeps-current-fish",
+      "immersive-focus-loss-cancels-input",
+      "immersive-focus-return-awaits-continue",
+      "immersive-real-fish-landed",
+      "immersive-hud-under-15-percent-and-central-view-clear-Landed",
+      "visible-hit-target:记录并放流",
+      "immersive-one-real-record",
+      "visible-hit-target:左手操作    已关闭",
+      "visible-hit-target:确认结束并返回准备",
+      "immersive-confirm-exit-to-preparation",
+      "immersive-unrecorded-exit-preserves-existing-disk-ledger",
+      "visible-hit-target:左手操作    已开启",
+      "immersive-restored-settings-real-disk-ledger"
+    ]
+  },
+  "retention": {
+    "status": "PASS",
+    "originalFiles": 30,
+    "allByteIdentical": true,
+    "checks": [
+      {
+        "device": "phone",
+        "label": "journeyphone20b",
+        "sha256": "dc70f508b5864e6cdc6023b4dc072a82f66ff597514a7a438f2a7e077544d249",
+        "bytes": 5340,
+        "byteIdentical": true
+      },
+      {
+        "device": "phone",
+        "label": "irismanual1",
+        "sha256": "fa0f36bbd8cd270015f5d27e99f32111bdf3b42c4f6eb5b79203abfc64c31520",
+        "bytes": 680,
+        "byteIdentical": true
+      },
+      {
+        "device": "phone",
+        "label": "content20261124phone1",
+        "sha256": "e0732947026735bab64f2f84354b984788df2a4a7d759a8fbf752e83e14ef339",
+        "bytes": 6554,
+        "byteIdentical": true
+      },
+      {
+        "device": "tablet",
+        "label": "journeypad20b",
+        "sha256": "48a974861099ef885791c545c4691f14d69642a733a486144ea80333671d7e3e",
+        "bytes": 5342,
+        "byteIdentical": true
+      },
+      {
+        "device": "tablet",
+        "label": "content20261124pad1",
+        "sha256": "4478f13dfe86006428506b1200d0557d845040120946d158f493bb5fc9b6325f",
+        "bytes": 5333,
+        "byteIdentical": true
+      },
+      {
+        "device": "phone",
+        "label": "immersive20261124phone2",
+        "sha256": "534d51254818bbeb14ed3c9ba9907ad44a1f2b0f5257ef663f334401a64056ed",
+        "bytes": 6797,
+        "byteIdentical": true
+      },
+      {
+        "device": "tablet",
+        "label": "immersive20261124pad2",
+        "sha256": "9582c3b38e8dba9b7218fe2899ad007be00d3aec661ea4f4f80724d700b93497",
+        "bytes": 5578,
+        "byteIdentical": true
+      },
+      {
+        "device": "phone",
+        "label": "slope20261124phone1",
+        "sha256": "4512a416171ee835ab57627b4e5d4e24a909f70dae791471d155e6bd6547099f",
+        "bytes": 6791,
+        "byteIdentical": true
+      },
+      {
+        "device": "tablet",
+        "label": "slope20261124pad1",
+        "sha256": "4783d991a0b008c1a3e6f20b3b863eb63b5ed4b69ed96a25be9d0ae57c33450e",
+        "bytes": 5570,
+        "byteIdentical": true
+      },
+      {
+        "device": "phone",
+        "label": "slope20261124phone2",
+        "sha256": "e3913747a21f851fbee465ecb7d406d6bbdb7c78702e1f54f6e7d23dc64d0bec",
+        "bytes": 6796,
+        "byteIdentical": true
+      },
+      {
+        "device": "tablet",
+        "label": "slope20261124pad2",
+        "sha256": "4c29e2c9aaa20de210b8d0a2533bea32fdf684a59c21cc0fd44d79b25bfb4ff9",
+        "bytes": 5572,
+        "byteIdentical": true
+      },
+      {
+        "device": "phone",
+        "label": "fin20261124phone1",
+        "sha256": "bf78585d1464d62418b3a80f92fb4bf3496cd88d12cc33a7f669e3a50bae9c7a",
+        "bytes": 680,
+        "byteIdentical": true
+      },
+      {
+        "device": "tablet",
+        "label": "fin20261124pad1",
+        "sha256": "345541c68472f92fa97ec9eba7ad40a79fa1f1731e9672901db4ca5b27298c12",
+        "bytes": 680,
+        "byteIdentical": true
+      },
+      {
+        "device": "phone",
+        "label": "fin20261124phone2",
+        "sha256": "e465c389295bbd1a1a0567972084a478519d4d616dd5811d72c7a272b24ec7fb",
+        "bytes": 680,
+        "byteIdentical": true
+      },
+      {
+        "device": "tablet",
+        "label": "fin20261124pad2",
+        "sha256": "0faf82ce572e46e00920c3801da66ffdf13536941e8d6ab3585a6fa64df9d0e9",
+        "bytes": 681,
+        "byteIdentical": true
+      },
+      {
+        "device": "phone",
+        "label": "rig20261124phone1",
+        "sha256": "ab84bcc4f57831a019e2f64722f47b162510604410a8daeb8948800a452b3999",
+        "bytes": 680,
+        "byteIdentical": true
+      },
+      {
+        "device": "tablet",
+        "label": "rig20261124pad1",
+        "sha256": "af6a8b5916761d10060c25204761564a1675e4f9b44148dda80c1c3b1500dc84",
+        "bytes": 681,
+        "byteIdentical": true
+      },
+      {
+        "device": "phone",
+        "label": "rigimmersive20261124phone1",
+        "sha256": "65e67d8396b4e2da42be8908742e5e767a89ff131efdd7640323d51c292de5f7",
+        "bytes": 680,
+        "byteIdentical": true
+      },
+      {
+        "device": "tablet",
+        "label": "rigimmersive20261124pad1",
+        "sha256": "f9c744871938ced9ccef11010987468db86317bb888f97685a0638f2d7d2e2e7",
+        "bytes": 679,
+        "byteIdentical": true
+      },
+      {
+        "device": "tablet",
+        "label": "rigimmersive20261124pad2",
+        "sha256": "5530b7b92d5fe3f1bb3a18d47ebdb8902d6e03826af310fba3f716add8ff2d3c",
+        "bytes": 680,
+        "byteIdentical": true
+      },
+      {
+        "device": "phone",
+        "label": "wind20261124phone1",
+        "sha256": "33e0c5e8d604960d88fcfafd17619b52eb4c10ca4ec16eda3fa4982e66f4eb97",
+        "bytes": 678,
+        "byteIdentical": true
+      },
+      {
+        "device": "tablet",
+        "label": "wind20261124pad1",
+        "sha256": "6d544b0a7b74b3a2e2c7f0ead5c1fe3c35049009d9b208a37dd4c502d7fdcd23",
+        "bytes": 680,
+        "byteIdentical": true
+      },
+      {
+        "device": "phone",
+        "label": "rest20261125phone1",
+        "sha256": "1934e91295d151cd92fe3024d850c266ef642ef33be196066bb78ced734f6dab",
+        "bytes": 679,
+        "byteIdentical": true
+      },
+      {
+        "device": "tablet",
+        "label": "rest20261125pad1",
+        "sha256": "bac67873e6efd9a385f441378ff9267675f631a61e0fca1e4accf083b813b99d",
+        "bytes": 679,
+        "byteIdentical": true
+      },
+      {
+        "device": "phone",
+        "label": "pect20261125phone1",
+        "sha256": "a2ca0ef2dfdc42618a749d124197741e0d3c9faea4081ca1a17afbfaeee0b68d",
+        "bytes": 680,
+        "byteIdentical": true
+      },
+      {
+        "device": "tablet",
+        "label": "pect20261125pad1",
+        "sha256": "df1786f2d6fff2ff7e51bad04104b231809b60fba3caa9d55636a6037b5e65f0",
+        "bytes": 680,
+        "byteIdentical": true
+      },
+      {
+        "device": "phone",
+        "label": "hudcontrast20261125phone1",
+        "sha256": "cd4ec6c8f200718cfa3d94b9719dba57a45c5f914e6208f545b32475a0b17e82",
+        "bytes": 681,
+        "byteIdentical": true
+      },
+      {
+        "device": "tablet",
+        "label": "hudcontrast20261125pad1",
+        "sha256": "522ab73f021bb0021245cc14db49a0092abc72b72c9633767168d519e527c579",
+        "bytes": 681,
+        "byteIdentical": true
+      },
+      {
+        "device": "phone",
+        "label": "finscreen20261125phone1",
+        "sha256": "44ccc90427d4993e0756e4a9d0201051fdf5025ac8c7641e0cea4d7bc3b5520b",
+        "bytes": 679,
+        "byteIdentical": true
+      },
+      {
+        "device": "tablet",
+        "label": "finscreen20261125pad1",
+        "sha256": "e24c4805e22a895a949e59b9a34d91511e5a96725002b726bf408f72706734f2",
+        "bytes": 679,
+        "byteIdentical": true
+      }
+    ]
+  },
+  "visualReview": {
+    "bothContactSheetsViewed": true,
+    "sourceOriginalsViewed": 2,
+    "nativeOriginalsViewed": 4,
+    "observations": [
+      "Selected source near before/current originals and both native fighting/landed originals viewed. Body reads more silver grey with less green; blue fins and spots retained.",
+      "Selected native frames retain sparse corner controls, clear central scene and continuous fin silhouettes."
+    ],
+    "remaining": [
+      "Plastic appearance, near thin-line aliasing, rigidity and natural motion remain partial.",
+      "Not all 18 GPU or 30 native originals individually reviewed; no cold-start, physical touch, child or scientific qualification."
+    ]
+  },
+  "artifacts": [
+    {
+      "path": "art/previews/bluefin-neutral-albedo/near-albedo-before.png",
+      "sha256": "8e9231a86d55b196236b3e077f60cad1c60850bd71f55def6bca15a49d5dba24"
+    },
+    {
+      "path": "art/previews/bluefin-neutral-albedo/near-albedo-candidate.png",
+      "sha256": "c5aafaf9b86b69c5fff1aa6bb40cb0f739f4791a282de7edf7e3cc8c0c0f8a40"
+    },
+    {
+      "path": "art/previews/bluefin-neutral-albedo/phone-fighting.png",
+      "sha256": "2dfc88f41143e83c922e48489ff4bf2983064a3228f9678c391b911f0ab5e255"
+    },
+    {
+      "path": "art/previews/bluefin-neutral-albedo/phone-landed.png",
+      "sha256": "f08b9ce27326d981e3992273162b93d510c10909b34f440aada96cc0ff7db7ec"
+    },
+    {
+      "path": "art/previews/bluefin-neutral-albedo/tablet-fighting.png",
+      "sha256": "34092fd90037470c788f763bd1191bad4ea11b8201abccfd21be1a7fa466f7f6"
+    },
+    {
+      "path": "art/previews/bluefin-neutral-albedo/tablet-landed.png",
+      "sha256": "2f115992ad29f30b8761959001518ca84eaf9ac1a8e36b356e6b9623ec49aa60"
+    }
+  ],
+  "rejections": [
+    {
+      "kind": "first-GPU",
+      "status": "FAIL",
+      "reason": "First submit scene material initialization drift; retained initial/reference images"
+    },
+    {
+      "kind": "second-GPU",
+      "status": "FAIL",
+      "reason": "Residual42-pixel initial drift; retained. Later stable-reference diagnostic and exact repeat checks do not qualify player cold start."
+    },
+    {
+      "kind": "full-rebuild-source",
+      "status": "FAIL",
+      "reason": "Unexpected actual distance-LOD identity differences; preserve rejected blend/FBX,restore original meshes/use maps-only update; no precision relaxation"
+    },
+    {
+      "kind": "localProbe",
+      "status": "NOT_ADOPTED",
+      "reason": "No clear visual improvement on selected hero views; existing default sky reflection observed"
+    }
+  ],
+  "cache": {
+    "status": "COMPLETE_ORIGINAL_SIMULATOR_PACKAGES_UNCHANGED",
+    "scope": "Only one completed own Simulator Xcode Intermediates.noindex; preserve the original app package in place, native exports, signed releases, sources, QA saves and logs. No other project cache touched.",
+    "intermediateKilobytes": 1263064,
+    "originalAppDigestUnchanged": true
+  },
+  "limits": [
+    "Stable Editor reference does not qualify player first draw or cold start",
+    "Not all18 GPU or30 native originals individually viewed",
+    "Plastic appearance,near thin lines,natural motion and full realistic art remain partial",
+    "No new full test suite,complete growth or900-second rest run",
+    "EventSystem automation is not OS touch,child or physical20-minute qualification",
+    "RGB is authored art,not biological/colorimetric measurement; no reference photography sampled"
+  ],
+  "testFlight": {
+    "build": 7,
+    "sourceCommit": "653d3a793626962ed899fac96254eb9594353c63",
+    "updated": false,
+    "actualInstallation": "NOT_RUN"
+  },
+  "metrics": {
+    "status": "NEW_RECORDS_INTEGRITY_PASS",
+    "historicalOverall": "INCOMPLETE",
+    "baselineCompleted": 1121,
+    "baselineStarts": 1116,
+    "newCompleted": 34,
+    "newStarts": 34,
+    "totalCompleted": 1155,
+    "totalStarts": 1150,
+    "oldObjectsUnchanged": true,
+    "actualReceiptsAndBindingsVerified": true,
+    "newIntervalsDisjoint": true,
+    "overlaps": [],
+    "newFailures": [
+      {
+        "id": "52ae29b2-10f1-4bb5-b559-73923ebdac16",
+        "receipt": "measurements/fish-lighting-baseline-gpu-20261125.json",
+        "exitCode": 1
+      },
+      {
+        "id": "39e18808-f3c5-4ab7-98ea-53166bfa535b",
+        "receipt": "measurements/fish-lighting-bindings-gpu-20261125.json",
+        "exitCode": 1
+      },
+      {
+        "id": "ef527c9a-7c02-4b2e-8692-f1cfa6a3e3c9",
+        "receipt": "measurements/fish-lighting-source-identity-20261125.json",
+        "exitCode": 1
+      }
+    ],
+    "scope": "actual local state/start/completion/receipt integrity for this increment only; not formal independent CLI compliance or product acceptance"
+  }
+}

@@ -11,7 +11,9 @@
       "maxLength": 65,
       "strength": 1,
       "basePoints": 60,
-      "note": "先观察体型、鱼鳍与游动，再选择合适的拟饵。物种知识与分布仍待科学审校。"
+      "note": "第二背鳍、臀鳍和尾鳍呈鲜蓝色，上半身可见蓝黑色小斑点。",
+      "scientificName": "Caranx melampygus",
+      "naturalHabitat": "热带印度—太平洋珊瑚礁环境，可单独或小群活动。"
     },
     {
       "id": "snapper",
@@ -24,7 +26,9 @@
       "maxLength": 46,
       "strength": 0.85,
       "basePoints": 55,
-      "note": "先观察体型、鱼鳍与游动，再选择合适的拟饵。物种知识与分布仍待科学审校。"
+      "note": "高而侧扁的体型、分叉尾鳍，鲜活个体的胸鳍、腹鳍与臀鳍带黄色。",
+      "scientificName": "Acanthopagrus latus",
+      "naturalHabitat": "沿岸砂泥底、河口与潟湖等环境。"
     },
     {
       "id": "grouper",
@@ -37,7 +41,9 @@
       "maxLength": 62,
       "strength": 1.1,
       "basePoints": 70,
-      "note": "先观察体型、鱼鳍与游动，再选择合适的拟饵。物种知识与分布仍待科学审校。"
+      "note": "身体粗壮、口大、尾鳍圆，灰褐体侧有橙红色小斑点及隐约暗带。",
+      "scientificName": "Epinephelus akaara",
+      "naturalHabitat": "西太平洋近岸岩礁环境。"
     },
     {
       "id": "redsnapper",
@@ -50,7 +56,9 @@
       "maxLength": 52,
       "strength": 0.95,
       "basePoints": 65,
-      "note": "先观察体型、鱼鳍与游动，再选择合适的拟饵。物种知识与分布仍待科学审校。"
+      "note": "红色体表、较长三角形头部和明显犬齿。",
+      "scientificName": "Lutjanus campechanus",
+      "naturalHabitat": "西大西洋陆棚；幼鱼常见于砂泥底，成鱼常靠近礁石等底部结构。"
     },
     {
       "id": "mackerel",
@@ -63,7 +71,9 @@
       "maxLength": 48,
       "strength": 1.05,
       "basePoints": 80,
-      "note": "先观察体型、鱼鳍与游动，再选择合适的拟饵。物种知识与分布仍待科学审校。"
+      "note": "纺锤形身体，蓝绿色背部有多条黑色波纹，腹部银白。",
+      "scientificName": "Scomber scombrus",
+      "naturalHabitat": "大西洋水域的群游鱼类。"
     },
     {
       "id": "skipjack",
@@ -76,7 +86,9 @@
       "maxLength": 85,
       "strength": 1.2,
       "basePoints": 90,
-      "note": "先观察体型、鱼鳍与游动，再选择合适的拟饵。物种知识与分布仍待科学审校。"
+      "note": "背部深紫蓝色，银色腹侧有四至六条沿身体纵向延伸的暗带。",
+      "scientificName": "Katsuwonus pelamis",
+      "naturalHabitat": "热带及亚热带大洋，常成群活动。"
     },
     {
       "id": "mahi",
@@ -89,7 +101,9 @@
       "maxLength": 115,
       "strength": 1.3,
       "basePoints": 100,
-      "note": "先观察体型、鱼鳍与游动，再选择合适的拟饵。物种知识与分布仍待科学审校。"
+      "note": "蓝绿色背部与金色或银色下半身十分醒目，体侧还有深浅斑点。",
+      "scientificName": "Coryphaena hippurus",
+      "naturalHabitat": "温暖的离岸表层水域。"
     },
     {
       "id": "yellowfin",
@@ -102,7 +116,9 @@
       "maxLength": 140,
       "strength": 1.4,
       "basePoints": 110,
-      "note": "先观察体型、鱼鳍与游动，再选择合适的拟饵。物种知识与分布仍待科学审校。"
+      "note": "流线形体躯、深蓝背部与黄色鳍；成体第二背鳍、臀鳍可明显延长。",
+      "scientificName": "Thunnus albacares",
+      "naturalHabitat": "热带及亚热带温暖大洋，具有长距离迁移行为。"
     },
     {
       "id": "bigeye",
@@ -115,7 +131,9 @@
       "maxLength": 150,
       "strength": 1.5,
       "basePoints": 130,
-      "note": "先观察体型、鱼鳍与游动，再选择合适的拟饵。物种知识与分布仍待科学审校。"
+      "note": "相较黄鳍金枪鱼，眼睛通常更大；后方小鳍为黄色并带黑边。",
+      "scientificName": "Thunnus obesus",
+      "naturalHabitat": "跨太平洋、大西洋与印度洋分布的迁移性鱼类。"
     },
     {
       "id": "alfonsino",
@@ -128,7 +146,9 @@
       "maxLength": 48,
       "strength": 1.15,
       "basePoints": 100,
-      "note": "先观察体型、鱼鳍与游动，再选择合适的拟饵。物种知识与分布仍待科学审校。"
+      "note": "身体较高，头背呈橙红色，体侧银粉色，眼睛很大。",
+      "scientificName": "Beryx splendens",
+      "naturalHabitat": "深水近底及海山环境，参考资料常见深度为200至400米。"
     },
     {
       "id": "cod",
@@ -141,7 +161,9 @@
       "maxLength": 100,
       "strength": 1.25,
       "basePoints": 115,
-      "note": "先观察体型、鱼鳍与游动，再选择合适的拟饵。物种知识与分布仍待科学审校。"
+      "note": "灰褐色身体带有暗色斑纹，腹部较浅，下巴长着一根像胡须的触须。",
+      "scientificName": "Gadus macrocephalus",
+      "naturalHabitat": "北太平洋沿岸与陆棚环境，存在季节性深浅移动。"
     },
     {
       "id": "halibut",
@@ -154,7 +176,9 @@
       "maxLength": 140,
       "strength": 1.4,
       "basePoints": 125,
-      "note": "先观察体型、鱼鳍与游动，再选择合适的拟饵。物种知识与分布仍待科学审校。"
+      "note": "成体属于右眼型比目鱼，口较大、侧线弯曲、尾缘内凹。",
+      "scientificName": "Hippoglossus hippoglossus",
+      "naturalHabitat": "北大西洋海底及上陆坡，可见于砂、砾或黏土底。"
     }
   ],
   "habitats": [
@@ -465,6 +489,35 @@
       "target": 1800,
       "targetId": "",
       "name": "走进深蓝"
+    }
+  ],
+  "observations": [
+    {
+      "id": "green-turtle",
+      "name": "绿海龟",
+      "scientificName": "Chelonia mydas",
+      "habitatId": "bay",
+      "note": "仅供安静观察，不投饵、不挂钩。",
+      "recognition": "背甲较扁，头部较小，四肢像桨。它需要浮到水面呼吸。",
+      "naturalHabitat": "幼体离开外海后，常到近岸浅水觅食；成体主要吃海草和藻类。"
+    },
+    {
+      "id": "bottlenose-dolphin",
+      "name": "宽吻海豚",
+      "scientificName": "Tursiops truncatus",
+      "habitatId": "channel",
+      "note": "仅供安静观察，不投饵、不挂钩。",
+      "recognition": "短而粗的吻部，灰色背部和较浅的腹部。它是需要呼吸空气的哺乳动物。",
+      "naturalHabitat": "生活在温带和热带的沿岸与外海，包括海湾、河口等环境。"
+    },
+    {
+      "id": "whale-shark",
+      "name": "鲸鲨",
+      "scientificName": "Rhincodon typus",
+      "habitatId": "channel",
+      "note": "仅供安静观察，不投饵、不挂钩。",
+      "recognition": "宽而扁的头部，深色背侧有浅色斑纹，身体两侧有明显隆脊。",
+      "naturalHabitat": "生活在热带及暖温带的大陆架与外海，以滤食方式取食小型动物。"
     }
   ]
 }

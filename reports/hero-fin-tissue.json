@@ -1,0 +1,1000 @@
+{
+  "status": "PARTIAL",
+  "implementation": "IN_PROGRESS",
+  "wholeProduct": "INCOMPLETE",
+  "sourceStatus": "ENGINEERING_CHECKS_PASS",
+  "gpu": {
+    "status": "PASS",
+    "scope": "isolated imported-hero Metal HDR fixture; not Player UI, biological transmission or device qualification",
+    "graphics": "Metal",
+    "target": "R16G16B16A16_SFloat",
+    "quality": "Medium",
+    "samples": 4,
+    "width": 1440,
+    "height": 960,
+    "images": 21,
+    "measurements": [
+      {
+        "lod": 0,
+        "interiorPixels": 75669,
+        "transmittedPixels": 50625,
+        "opaqueChangedPixels": 0,
+        "staticChangedPixels": 0,
+        "meanBackgroundTransfer": 0.23607444763183594
+      },
+      {
+        "lod": 1,
+        "interiorPixels": 76382,
+        "transmittedPixels": 50827,
+        "opaqueChangedPixels": 0,
+        "staticChangedPixels": 0,
+        "meanBackgroundTransfer": 0.2370195984840393
+      },
+      {
+        "lod": 2,
+        "interiorPixels": 77532,
+        "transmittedPixels": 52618,
+        "opaqueChangedPixels": 0,
+        "staticChangedPixels": 0,
+        "meanBackgroundTransfer": 0.236164391040802
+      }
+    ]
+  },
+  "settingsRestoration": {
+    "before": {
+      "game/ProjectSettings/QualitySettings.asset": "abebac834787e63425b147d6e02589440cd5134d66fafbd862fb5d237424c573",
+      "game/ProjectSettings/GraphicsSettings.asset": "012fa87054bf6e9fbb0607568cfa287968396f9d3a27d3376432024e8684340d"
+    },
+    "after": {
+      "game/ProjectSettings/QualitySettings.asset": "abebac834787e63425b147d6e02589440cd5134d66fafbd862fb5d237424c573",
+      "game/ProjectSettings/GraphicsSettings.asset": "012fa87054bf6e9fbb0607568cfa287968396f9d3a27d3376432024e8684340d"
+    },
+    "identical": true
+  },
+  "editor": {
+    "status": "PASS",
+    "passed": 59,
+    "failed": 0,
+    "scope": "full fin-candidate suite before subsequent landing UI correction",
+    "sourceCommit": "4223d8db1c0d649a0ae3ed5f022ea90327813160"
+  },
+  "native": {
+    "phone": {
+      "status": "PASS",
+      "label": "fin20261124phone2",
+      "scope": "fresh normal tutorial hero with native15-frame immersive EventSystem flow; no RNG/points injection, OS touch, whole progression, biological optical or device qualification",
+      "source": {
+        "sourceCommit": "d99cd12f29254f6b267e2469d8b6a970fcf2126b",
+        "sourceDigest": "763211e394f18917628c3fec941a019aecad13c122aa5dbf7b9899556296811d",
+        "projectSettingsSha256": "487dd5cc37a763cb9f23702f91a10b6680094d7b2165050d05327b1376c0d54d"
+      },
+      "appDigest": "dfe2c8661d0e7f543de249a25a6bb03656385b56fabf55a6e31e21680987ad9b",
+      "catches": 1,
+      "points": 231,
+      "fishId": "trevally",
+      "saveSha256": "e465c389295bbd1a1a0567972084a478519d4d616dd5811d72c7a272b24ec7fb",
+      "maxHudRatio": 0.12227564305067062,
+      "samples": [
+        {
+          "phase": "Ready",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0890224352478981
+        },
+        {
+          "phase": "Waiting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0890224352478981
+        },
+        {
+          "phase": "Bite",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0890224352478981
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.12034111469984055
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.12034111469984055
+        },
+        {
+          "phase": "Landed",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.12227564305067062
+        },
+        {
+          "phase": "Ready",
+          "leftHanded": true,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0890224352478981
+        },
+        {
+          "phase": "Waiting",
+          "leftHanded": true,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0890224352478981
+        },
+        {
+          "phase": "Bite",
+          "leftHanded": true,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0890224352478981
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": true,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.12034111469984055
+        }
+      ],
+      "capturedFrames": 15,
+      "renderProbe": {
+        "graphics": "Metal",
+        "quality": "Medium",
+        "hdrAfter": true,
+        "halfHdrSamples": 4,
+        "desiredSamples": 4
+      }
+    },
+    "tablet": {
+      "status": "PASS",
+      "label": "fin20261124pad2",
+      "scope": "fresh normal tutorial hero with native15-frame immersive EventSystem flow; no RNG/points injection, OS touch, whole progression, biological optical or device qualification",
+      "source": {
+        "sourceCommit": "d99cd12f29254f6b267e2469d8b6a970fcf2126b",
+        "sourceDigest": "763211e394f18917628c3fec941a019aecad13c122aa5dbf7b9899556296811d",
+        "projectSettingsSha256": "487dd5cc37a763cb9f23702f91a10b6680094d7b2165050d05327b1376c0d54d"
+      },
+      "appDigest": "dfe2c8661d0e7f543de249a25a6bb03656385b56fabf55a6e31e21680987ad9b",
+      "catches": 1,
+      "points": 180,
+      "fishId": "trevally",
+      "saveSha256": "0faf82ce572e46e00920c3801da66ffdf13536941e8d6ab3585a6fa64df9d0e9",
+      "maxHudRatio": 0.045262712985277176,
+      "samples": [
+        {
+          "phase": "Ready",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.03295338898897171
+        },
+        {
+          "phase": "Waiting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.03295338898897171
+        },
+        {
+          "phase": "Bite",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.03295338898897171
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.04454661160707474
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.04454661160707474
+        },
+        {
+          "phase": "Landed",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.045262712985277176
+        },
+        {
+          "phase": "Ready",
+          "leftHanded": true,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.03295338898897171
+        },
+        {
+          "phase": "Waiting",
+          "leftHanded": true,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.03295338898897171
+        },
+        {
+          "phase": "Bite",
+          "leftHanded": true,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.03295338898897171
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": true,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.04454661160707474
+        }
+      ],
+      "capturedFrames": 15,
+      "renderProbe": {
+        "graphics": "Metal",
+        "quality": "Medium",
+        "hdrAfter": true,
+        "halfHdrSamples": 4,
+        "desiredSamples": 4
+      }
+    }
+  },
+  "scope": "first hero only; no new species, points, HUD or save changes",
+  "art": "NOT_ACCEPTED",
+  "scientific": "NOT_ACCEPTED",
+  "user": "NOT_ACCEPTED",
+  "physicalDevice": "NOT_RUN",
+  "sourceFinTissue": {
+    "status": "ENGINEERING_CHECKS_PASS",
+    "scope": "saved source mesh wall rays, material roles and real texture data; not art or device acceptance",
+    "checks": [
+      "八片鳍各三处独立壁厚取样入口",
+      "鳍膜与实体鳍条材质分离",
+      "膜的实际透明度来自纹理而非固定不透明常量",
+      "实体鳍条仍完全不透明",
+      "实际鳍膜PNG保留RGBA而非RGB",
+      "膜色素透明度有限且保留浓淡",
+      "膜中真实透光区域与较密实根部均存在",
+      "实际PBR尺寸 Bluefin_Fin_Normal",
+      "技术图线性色彩空间 Bluefin_Fin_Normal",
+      "实际PBR尺寸 Bluefin_Fin_Roughness",
+      "技术图线性色彩空间 Bluefin_Fin_Roughness",
+      "实际PBR尺寸 Bluefin_Fin_MetallicSmoothness",
+      "技术图线性色彩空间 Bluefin_Fin_MetallicSmoothness",
+      "三LOD均保留透明膜与实体鳍条 0",
+      "实际双壁厚度 (0, 'FirstDorsal_8Spines', 0.25)",
+      "实际双壁厚度 (0, 'FirstDorsal_8Spines', 0.58)",
+      "实际双壁厚度 (0, 'FirstDorsal_8Spines', 0.92)",
+      "实际双壁厚度 (0, 'SecondDorsal_23Rays', 0.25)",
+      "实际双壁厚度 (0, 'SecondDorsal_23Rays', 0.58)",
+      "实际双壁厚度 (0, 'SecondDorsal_23Rays', 0.92)",
+      "实际双壁厚度 (0, 'Anal_19Rays', 0.25)",
+      "实际双壁厚度 (0, 'Anal_19Rays', 0.58)",
+      "实际双壁厚度 (0, 'Anal_19Rays', 0.92)",
+      "实际双壁厚度 (0, 'Caudal_DeepFork', 0.25)",
+      "实际双壁厚度 (0, 'Caudal_DeepFork', 0.58)",
+      "实际双壁厚度 (0, 'Caudal_DeepFork', 0.92)",
+      "实际双壁厚度 (0, 'Pectoral_L', 0.25)",
+      "实际双壁厚度 (0, 'Pectoral_L', 0.58)",
+      "实际双壁厚度 (0, 'Pectoral_L', 0.92)",
+      "实际双壁厚度 (0, 'Pelvic_L', 0.25)",
+      "实际双壁厚度 (0, 'Pelvic_L', 0.58)",
+      "实际双壁厚度 (0, 'Pelvic_L', 0.92)",
+      "实际双壁厚度 (0, 'Pectoral_R', 0.25)",
+      "实际双壁厚度 (0, 'Pectoral_R', 0.58)",
+      "实际双壁厚度 (0, 'Pectoral_R', 0.92)",
+      "实际双壁厚度 (0, 'Pelvic_R', 0.25)",
+      "实际双壁厚度 (0, 'Pelvic_R', 0.58)",
+      "实际双壁厚度 (0, 'Pelvic_R', 0.92)",
+      "保存网格根部至末端渐薄 (0, 'Caudal_DeepFork')",
+      "保存网格根部至末端渐薄 (0, 'Pelvic_L')",
+      "保存网格根部至末端渐薄 (0, 'SecondDorsal_23Rays')",
+      "保存网格根部至末端渐薄 (0, 'Pelvic_R')",
+      "保存网格根部至末端渐薄 (0, 'FirstDorsal_8Spines')",
+      "保存网格根部至末端渐薄 (0, 'Pectoral_R')",
+      "保存网格根部至末端渐薄 (0, 'Anal_19Rays')",
+      "保存网格根部至末端渐薄 (0, 'Pectoral_L')",
+      "三LOD均保留透明膜与实体鳍条 1",
+      "实际双壁厚度 (1, 'FirstDorsal_8Spines', 0.25)",
+      "实际双壁厚度 (1, 'FirstDorsal_8Spines', 0.58)",
+      "实际双壁厚度 (1, 'FirstDorsal_8Spines', 0.92)",
+      "实际双壁厚度 (1, 'SecondDorsal_23Rays', 0.25)",
+      "实际双壁厚度 (1, 'SecondDorsal_23Rays', 0.58)",
+      "实际双壁厚度 (1, 'SecondDorsal_23Rays', 0.92)",
+      "实际双壁厚度 (1, 'Anal_19Rays', 0.25)",
+      "实际双壁厚度 (1, 'Anal_19Rays', 0.58)",
+      "实际双壁厚度 (1, 'Anal_19Rays', 0.92)",
+      "实际双壁厚度 (1, 'Caudal_DeepFork', 0.25)",
+      "实际双壁厚度 (1, 'Caudal_DeepFork', 0.58)",
+      "实际双壁厚度 (1, 'Caudal_DeepFork', 0.92)",
+      "实际双壁厚度 (1, 'Pectoral_L', 0.25)",
+      "实际双壁厚度 (1, 'Pectoral_L', 0.58)",
+      "实际双壁厚度 (1, 'Pectoral_L', 0.92)",
+      "实际双壁厚度 (1, 'Pelvic_L', 0.25)",
+      "实际双壁厚度 (1, 'Pelvic_L', 0.58)",
+      "实际双壁厚度 (1, 'Pelvic_L', 0.92)",
+      "实际双壁厚度 (1, 'Pectoral_R', 0.25)",
+      "实际双壁厚度 (1, 'Pectoral_R', 0.58)",
+      "实际双壁厚度 (1, 'Pectoral_R', 0.92)",
+      "实际双壁厚度 (1, 'Pelvic_R', 0.25)",
+      "实际双壁厚度 (1, 'Pelvic_R', 0.58)",
+      "实际双壁厚度 (1, 'Pelvic_R', 0.92)",
+      "保存网格根部至末端渐薄 (1, 'Caudal_DeepFork')",
+      "保存网格根部至末端渐薄 (1, 'Pelvic_L')",
+      "保存网格根部至末端渐薄 (1, 'SecondDorsal_23Rays')",
+      "保存网格根部至末端渐薄 (1, 'Pelvic_R')",
+      "保存网格根部至末端渐薄 (1, 'FirstDorsal_8Spines')",
+      "保存网格根部至末端渐薄 (1, 'Pectoral_R')",
+      "保存网格根部至末端渐薄 (1, 'Anal_19Rays')",
+      "保存网格根部至末端渐薄 (1, 'Pectoral_L')",
+      "三LOD均保留透明膜与实体鳍条 2",
+      "实际双壁厚度 (2, 'FirstDorsal_8Spines', 0.25)",
+      "实际双壁厚度 (2, 'FirstDorsal_8Spines', 0.58)",
+      "实际双壁厚度 (2, 'FirstDorsal_8Spines', 0.92)",
+      "实际双壁厚度 (2, 'SecondDorsal_23Rays', 0.25)",
+      "实际双壁厚度 (2, 'SecondDorsal_23Rays', 0.58)",
+      "实际双壁厚度 (2, 'SecondDorsal_23Rays', 0.92)",
+      "实际双壁厚度 (2, 'Anal_19Rays', 0.25)",
+      "实际双壁厚度 (2, 'Anal_19Rays', 0.58)",
+      "实际双壁厚度 (2, 'Anal_19Rays', 0.92)",
+      "实际双壁厚度 (2, 'Caudal_DeepFork', 0.25)",
+      "实际双壁厚度 (2, 'Caudal_DeepFork', 0.58)",
+      "实际双壁厚度 (2, 'Caudal_DeepFork', 0.92)",
+      "实际双壁厚度 (2, 'Pectoral_L', 0.25)",
+      "实际双壁厚度 (2, 'Pectoral_L', 0.58)",
+      "实际双壁厚度 (2, 'Pectoral_L', 0.92)",
+      "实际双壁厚度 (2, 'Pelvic_L', 0.25)",
+      "实际双壁厚度 (2, 'Pelvic_L', 0.58)",
+      "实际双壁厚度 (2, 'Pelvic_L', 0.92)",
+      "实际双壁厚度 (2, 'Pectoral_R', 0.25)",
+      "实际双壁厚度 (2, 'Pectoral_R', 0.58)",
+      "实际双壁厚度 (2, 'Pectoral_R', 0.92)",
+      "实际双壁厚度 (2, 'Pelvic_R', 0.25)",
+      "实际双壁厚度 (2, 'Pelvic_R', 0.58)",
+      "实际双壁厚度 (2, 'Pelvic_R', 0.92)",
+      "保存网格根部至末端渐薄 (2, 'Caudal_DeepFork')",
+      "保存网格根部至末端渐薄 (2, 'Pelvic_L')",
+      "保存网格根部至末端渐薄 (2, 'SecondDorsal_23Rays')",
+      "保存网格根部至末端渐薄 (2, 'Pelvic_R')",
+      "保存网格根部至末端渐薄 (2, 'FirstDorsal_8Spines')",
+      "保存网格根部至末端渐薄 (2, 'Pectoral_R')",
+      "保存网格根部至末端渐薄 (2, 'Anal_19Rays')",
+      "保存网格根部至末端渐薄 (2, 'Pectoral_L')"
+    ],
+    "failures": [],
+    "alpha": {
+      "minimum": 0.6313725709915161,
+      "maximum": 0.9686275124549866,
+      "translucentFraction": 0.8288803100585938,
+      "denseFraction": 0.04416656494140625
+    },
+    "faces": {
+      "0": {
+        "membraneFaces": 1594,
+        "opaqueRayFaces": 2530
+      },
+      "1": {
+        "membraneFaces": 904,
+        "opaqueRayFaces": 2287
+      },
+      "2": {
+        "membraneFaces": 444,
+        "opaqueRayFaces": 729
+      }
+    },
+    "wallProfiles": [
+      {
+        "lod": 0,
+        "fin": "FirstDorsal_8Spines",
+        "t": 0.25,
+        "thickness": 0.0013675199633560373
+      },
+      {
+        "lod": 0,
+        "fin": "FirstDorsal_8Spines",
+        "t": 0.58,
+        "thickness": 0.0008643983405628041
+      },
+      {
+        "lod": 0,
+        "fin": "FirstDorsal_8Spines",
+        "t": 0.92,
+        "thickness": 0.0005077501789897059
+      },
+      {
+        "lod": 0,
+        "fin": "SecondDorsal_23Rays",
+        "t": 0.25,
+        "thickness": 0.0013587281713140081
+      },
+      {
+        "lod": 0,
+        "fin": "SecondDorsal_23Rays",
+        "t": 0.58,
+        "thickness": 0.0008575818072343662
+      },
+      {
+        "lod": 0,
+        "fin": "SecondDorsal_23Rays",
+        "t": 0.92,
+        "thickness": 0.0005042890881271744
+      },
+      {
+        "lod": 0,
+        "fin": "Anal_19Rays",
+        "t": 0.25,
+        "thickness": 0.001359165257523047
+      },
+      {
+        "lod": 0,
+        "fin": "Anal_19Rays",
+        "t": 0.58,
+        "thickness": 0.0008579664167676014
+      },
+      {
+        "lod": 0,
+        "fin": "Anal_19Rays",
+        "t": 0.92,
+        "thickness": 0.0005045687153619224
+      },
+      {
+        "lod": 0,
+        "fin": "Caudal_DeepFork",
+        "t": 0.25,
+        "thickness": 0.001353574789483185
+      },
+      {
+        "lod": 0,
+        "fin": "Caudal_DeepFork",
+        "t": 0.58,
+        "thickness": 0.0008542339897697595
+      },
+      {
+        "lod": 0,
+        "fin": "Caudal_DeepFork",
+        "t": 0.92,
+        "thickness": 0.0005023606150552003
+      },
+      {
+        "lod": 0,
+        "fin": "Pectoral_L",
+        "t": 0.25,
+        "thickness": 0.0013568864361864824
+      },
+      {
+        "lod": 0,
+        "fin": "Pectoral_L",
+        "t": 0.58,
+        "thickness": 0.0008570761339873258
+      },
+      {
+        "lod": 0,
+        "fin": "Pectoral_L",
+        "t": 0.92,
+        "thickness": 0.0005026610395169697
+      },
+      {
+        "lod": 0,
+        "fin": "Pelvic_L",
+        "t": 0.25,
+        "thickness": 0.0013386442379856721
+      },
+      {
+        "lod": 0,
+        "fin": "Pelvic_L",
+        "t": 0.58,
+        "thickness": 0.0008378566342658451
+      },
+      {
+        "lod": 0,
+        "fin": "Pelvic_L",
+        "t": 0.92,
+        "thickness": 0.0004945418445939662
+      },
+      {
+        "lod": 0,
+        "fin": "Pectoral_R",
+        "t": 0.25,
+        "thickness": 0.001357717104738869
+      },
+      {
+        "lod": 0,
+        "fin": "Pectoral_R",
+        "t": 0.58,
+        "thickness": 0.0008562269398967734
+      },
+      {
+        "lod": 0,
+        "fin": "Pectoral_R",
+        "t": 0.92,
+        "thickness": 0.0005024834205266246
+      },
+      {
+        "lod": 0,
+        "fin": "Pelvic_R",
+        "t": 0.25,
+        "thickness": 0.0013424951734025763
+      },
+      {
+        "lod": 0,
+        "fin": "Pelvic_R",
+        "t": 0.58,
+        "thickness": 0.0008402166314187794
+      },
+      {
+        "lod": 0,
+        "fin": "Pelvic_R",
+        "t": 0.92,
+        "thickness": 0.0004953711995372406
+      },
+      {
+        "lod": 1,
+        "fin": "FirstDorsal_8Spines",
+        "t": 0.25,
+        "thickness": 0.0013759602982978895
+      },
+      {
+        "lod": 1,
+        "fin": "FirstDorsal_8Spines",
+        "t": 0.58,
+        "thickness": 0.0008759650871432071
+      },
+      {
+        "lod": 1,
+        "fin": "FirstDorsal_8Spines",
+        "t": 0.92,
+        "thickness": 0.0005266175069345562
+      },
+      {
+        "lod": 1,
+        "fin": "SecondDorsal_23Rays",
+        "t": 0.25,
+        "thickness": 0.0013636824076334957
+      },
+      {
+        "lod": 1,
+        "fin": "SecondDorsal_23Rays",
+        "t": 0.58,
+        "thickness": 0.0008662916239035409
+      },
+      {
+        "lod": 1,
+        "fin": "SecondDorsal_23Rays",
+        "t": 0.92,
+        "thickness": 0.0005215378122593555
+      },
+      {
+        "lod": 1,
+        "fin": "Anal_19Rays",
+        "t": 0.25,
+        "thickness": 0.0013641789089829832
+      },
+      {
+        "lod": 1,
+        "fin": "Anal_19Rays",
+        "t": 0.58,
+        "thickness": 0.0008667852298487636
+      },
+      {
+        "lod": 1,
+        "fin": "Anal_19Rays",
+        "t": 0.92,
+        "thickness": 0.000521870349651138
+      },
+      {
+        "lod": 1,
+        "fin": "Caudal_DeepFork",
+        "t": 0.25,
+        "thickness": 0.001359144388197868
+      },
+      {
+        "lod": 1,
+        "fin": "Caudal_DeepFork",
+        "t": 0.58,
+        "thickness": 0.0008625396916473215
+      },
+      {
+        "lod": 1,
+        "fin": "Caudal_DeepFork",
+        "t": 0.92,
+        "thickness": 0.0005191473473971939
+      },
+      {
+        "lod": 1,
+        "fin": "Pectoral_L",
+        "t": 0.25,
+        "thickness": 0.0013650530704180932
+      },
+      {
+        "lod": 1,
+        "fin": "Pectoral_L",
+        "t": 0.58,
+        "thickness": 0.0008623977573570203
+      },
+      {
+        "lod": 1,
+        "fin": "Pectoral_L",
+        "t": 0.92,
+        "thickness": 0.0005196699875467385
+      },
+      {
+        "lod": 1,
+        "fin": "Pelvic_L",
+        "t": 0.25,
+        "thickness": 0.0013495917544249854
+      },
+      {
+        "lod": 1,
+        "fin": "Pelvic_L",
+        "t": 0.58,
+        "thickness": 0.0008440818368116317
+      },
+      {
+        "lod": 1,
+        "fin": "Pelvic_L",
+        "t": 0.92,
+        "thickness": 0.0005106134565809354
+      },
+      {
+        "lod": 1,
+        "fin": "Pectoral_R",
+        "t": 0.25,
+        "thickness": 0.0013657441811248756
+      },
+      {
+        "lod": 1,
+        "fin": "Pectoral_R",
+        "t": 0.58,
+        "thickness": 0.0008623341837664497
+      },
+      {
+        "lod": 1,
+        "fin": "Pectoral_R",
+        "t": 0.92,
+        "thickness": 0.0005187761266405604
+      },
+      {
+        "lod": 1,
+        "fin": "Pelvic_R",
+        "t": 0.25,
+        "thickness": 0.0013537176513042164
+      },
+      {
+        "lod": 1,
+        "fin": "Pelvic_R",
+        "t": 0.58,
+        "thickness": 0.000849473216608266
+      },
+      {
+        "lod": 1,
+        "fin": "Pelvic_R",
+        "t": 0.92,
+        "thickness": 0.0005120874085686484
+      },
+      {
+        "lod": 2,
+        "fin": "FirstDorsal_8Spines",
+        "t": 0.25,
+        "thickness": 0.0014978691043065798
+      },
+      {
+        "lod": 2,
+        "fin": "FirstDorsal_8Spines",
+        "t": 0.58,
+        "thickness": 0.0010813261891384211
+      },
+      {
+        "lod": 2,
+        "fin": "FirstDorsal_8Spines",
+        "t": 0.92,
+        "thickness": 0.0005773507092036712
+      },
+      {
+        "lod": 2,
+        "fin": "SecondDorsal_23Rays",
+        "t": 0.25,
+        "thickness": 0.0014751709087976786
+      },
+      {
+        "lod": 2,
+        "fin": "SecondDorsal_23Rays",
+        "t": 0.58,
+        "thickness": 0.0010376276678571363
+      },
+      {
+        "lod": 2,
+        "fin": "SecondDorsal_23Rays",
+        "t": 0.92,
+        "thickness": 0.0005692577828147761
+      },
+      {
+        "lod": 2,
+        "fin": "Anal_19Rays",
+        "t": 0.25,
+        "thickness": 0.0014765414983166987
+      },
+      {
+        "lod": 2,
+        "fin": "Anal_19Rays",
+        "t": 0.58,
+        "thickness": 0.001040717314429432
+      },
+      {
+        "lod": 2,
+        "fin": "Anal_19Rays",
+        "t": 0.92,
+        "thickness": 0.00057017247550272
+      },
+      {
+        "lod": 2,
+        "fin": "Caudal_DeepFork",
+        "t": 0.25,
+        "thickness": 0.0014580761181149109
+      },
+      {
+        "lod": 2,
+        "fin": "Caudal_DeepFork",
+        "t": 0.58,
+        "thickness": 0.001014812277057808
+      },
+      {
+        "lod": 2,
+        "fin": "Caudal_DeepFork",
+        "t": 0.92,
+        "thickness": 0.0005592274883023323
+      },
+      {
+        "lod": 2,
+        "fin": "Pectoral_L",
+        "t": 0.25,
+        "thickness": 0.001443237230890326
+      },
+      {
+        "lod": 2,
+        "fin": "Pectoral_L",
+        "t": 0.58,
+        "thickness": 0.001018823753612499
+      },
+      {
+        "lod": 2,
+        "fin": "Pectoral_L",
+        "t": 0.92,
+        "thickness": 0.0005544002164444179
+      },
+      {
+        "lod": 2,
+        "fin": "Pelvic_L",
+        "t": 0.25,
+        "thickness": 0.0014171593222128567
+      },
+      {
+        "lod": 2,
+        "fin": "Pelvic_L",
+        "t": 0.58,
+        "thickness": 0.001011576482765301
+      },
+      {
+        "lod": 2,
+        "fin": "Pelvic_L",
+        "t": 0.92,
+        "thickness": 0.0005511203820800296
+      },
+      {
+        "lod": 2,
+        "fin": "Pectoral_R",
+        "t": 0.25,
+        "thickness": 0.0014400946992713009
+      },
+      {
+        "lod": 2,
+        "fin": "Pectoral_R",
+        "t": 0.58,
+        "thickness": 0.0010304589673446874
+      },
+      {
+        "lod": 2,
+        "fin": "Pectoral_R",
+        "t": 0.92,
+        "thickness": 0.0005570208357673399
+      },
+      {
+        "lod": 2,
+        "fin": "Pelvic_R",
+        "t": 0.25,
+        "thickness": 0.0014903746821666615
+      },
+      {
+        "lod": 2,
+        "fin": "Pelvic_R",
+        "t": 0.58,
+        "thickness": 0.0010316559136184888
+      },
+      {
+        "lod": 2,
+        "fin": "Pelvic_R",
+        "t": 0.92,
+        "thickness": 0.0005557215225871143
+      }
+    ]
+  },
+  "triangles": [
+    24664,
+    9864,
+    3699
+  ],
+  "materialSlots": 7,
+  "measurements": [
+    "measurements/fin-all-editor-20261124d.json",
+    "measurements/fin-author-20261124a.json",
+    "measurements/fin-author-20261124b.json",
+    "measurements/fin-author-20261124c.json",
+    "measurements/fin-editor-20261124c.json",
+    "measurements/fin-gpu-20261124a.json",
+    "measurements/fin-gpu-20261124b.json",
+    "measurements/fin-gpu-20261124c.json",
+    "measurements/fin-gpu-20261124d.json",
+    "measurements/fin-import-20261124c.json",
+    "measurements/fin-landing-play-20261124b.json",
+    "measurements/fin-landing-red-20261124a.json",
+    "measurements/fin-native-independent-20261124a.json",
+    "measurements/fin-native-independent-20261124b.json",
+    "measurements/fin-native-phone-20261124a.json",
+    "measurements/fin-native-phone-20261124b.json",
+    "measurements/fin-native-tablet-20261124a.json",
+    "measurements/fin-native-tablet-20261124b.json",
+    "measurements/fin-play-20261124d.json",
+    "measurements/fin-public-final-20261124b.json",
+    "measurements/fin-public-prebuild-20261124a.json",
+    "measurements/fin-public-prebuild-20261124b.json",
+    "measurements/fin-public-prebuild-20261124c.json",
+    "measurements/fin-record-integrity-20261124b.json",
+    "measurements/fin-reopen-20261124b.json",
+    "measurements/fin-reopen-check-20261124b.json",
+    "measurements/fin-retention-after-20261124a.json",
+    "measurements/fin-retention-after-20261124b.json",
+    "measurements/fin-retention-before-20261124a.json",
+    "measurements/fin-retention-before-20261124b.json",
+    "measurements/fin-simulator-build-20261124a.json",
+    "measurements/fin-simulator-build-20261124b.json",
+    "measurements/fin-source-20261124a.json",
+    "measurements/fin-source-20261124b.json",
+    "measurements/fin-source-20261124c.json",
+    "measurements/fin-source-red-20261124a.json",
+    "measurements/fin-studio-20261124c.json",
+    "measurements/fin-tool-tests-20261124a.json"
+  ],
+  "playMode": {
+    "result": "Passed",
+    "total": "3",
+    "passed": "3",
+    "failed": "0",
+    "duration": "33.1199177",
+    "scope": "FishAnimationTests, IntegratedWorldTests and ImmersiveNavigationTests only; no GPU or full progression claim",
+    "sourceCommit": "4223d8db1c0d649a0ae3ed5f022ea90327813160"
+  },
+  "firstNative": {
+    "status": "FUNCTIONAL_PASS_VISUAL_PARTIAL",
+    "source": "4223d8db1c0d649a0ae3ed5f022ea90327813160",
+    "appDigest": "e34380d4884a6365ecfc3533d43de07d20cd5194a26b1f40ac78b4915c8836bf",
+    "framesPerDevice": 15,
+    "phonePoints": 228,
+    "tabletPoints": 183,
+    "reason": "old result card overlaps hero dorsal fin; landing excluded from old HUD measurement"
+  },
+  "landingRegression": {
+    "red": "2e1b05ac-419b-4fe1-8618-f3d749aebe02",
+    "redExitCode": 2,
+    "green": "6b8eb39e-5326-4c59-8487-2475f0cb194d",
+    "scope": "include all visible panel backgrounds and Landed in real HUD union and central-clear checks",
+    "greenExitCode": 0,
+    "targetedPlayPassed": 3
+  },
+  "source": {
+    "sourceCommit": "d99cd12f29254f6b267e2469d8b6a970fcf2126b",
+    "sourceDigest": "763211e394f18917628c3fec941a019aecad13c122aa5dbf7b9899556296811d",
+    "projectSettingsSha256": "487dd5cc37a763cb9f23702f91a10b6680094d7b2165050d05327b1376c0d54d"
+  },
+  "appDigest": "dfe2c8661d0e7f543de249a25a6bb03656385b56fabf55a6e31e21680987ad9b",
+  "distribution": "LOCAL_SIMULATOR_ONLY_NOT_TESTFLIGHT",
+  "retention": {
+    "a": {
+      "files": 11,
+      "status": "BYTE_IDENTICAL",
+      "method": "current own containers; original bytes, no restore/replay"
+    },
+    "b": {
+      "files": 13,
+      "status": "BYTE_IDENTICAL",
+      "method": "current own containers; original bytes, no restore/replay"
+    }
+  },
+  "reopening": {
+    "status": "PASS_WITH_ORIGINAL_FRAME_REVIEW",
+    "catches": 26,
+    "points": 4622,
+    "saveBytesUnchanged": true,
+    "saveSha256": "e3913747a21f851fbee465ecb7d406d6bbdb7c78702e1f54f6e7d23dc64d0bec",
+    "frameSha256": "47a86399a468775482300af0a635df2fbbac5dd6cbc1ac294185034262cbef1a",
+    "automaticFishingFlags": false,
+    "qaArguments": [
+      "--ocean-save-root",
+      "--ocean-simulator-probe"
+    ]
+  },
+  "visualReview": {
+    "sourceStudioImages": 8,
+    "sourceContactSheets": 1,
+    "gpuProductionViews": 9,
+    "gpuProductionContactSheets": 1,
+    "nativeFinalFrames": 30,
+    "nativeFinalContactSheets": 2,
+    "nativeFinalLandedOriginals": 2,
+    "reopenedOriginal": 1,
+    "scope": "original fish still prototype; no art/scientific/user acceptance"
+  },
+  "measurementBindingAudit": {
+    "status": "NEW_RECORDS_INTEGRITY_PASS",
+    "historicalOverall": "INCOMPLETE",
+    "baselineCompleted": 858,
+    "baselineStarts": 854,
+    "newCompleted": 37,
+    "newStarts": 38,
+    "totalCompleted": 895,
+    "totalStarts": 892,
+    "oldObjectsUnchanged": true,
+    "actualReceiptsAndBindingsVerified": true,
+    "newIntervalsDisjoint": true,
+    "overlaps": [],
+    "newFailures": [
+      {
+        "id": "9eb8ff9d-9143-4009-9f61-2f280809cae5",
+        "receipt": "measurements/fin-source-red-20261124a.json",
+        "exitCode": 1
+      },
+      {
+        "id": "8931daff-5110-4c92-b2b4-6e819f4a15a4",
+        "receipt": "measurements/fin-source-20261124a.json",
+        "exitCode": 1
+      },
+      {
+        "id": "a78cc276-88cc-48b3-8693-9742759b3788",
+        "receipt": "measurements/fin-source-20261124b.json",
+        "exitCode": 1
+      },
+      {
+        "id": "ba22fb77-3650-4a91-b149-ca6437b5ee83",
+        "receipt": "measurements/fin-gpu-20261124a.json",
+        "exitCode": 1
+      },
+      {
+        "id": "44c279a8-9d1f-49e5-b5c3-051d55ebd67c",
+        "receipt": "measurements/fin-gpu-20261124b.json",
+        "exitCode": 1
+      },
+      {
+        "id": "2e1b05ac-419b-4fe1-8618-f3d749aebe02",
+        "receipt": "measurements/fin-landing-red-20261124a.json",
+        "exitCode": 2
+      }
+    ],
+    "scope": "37 actual completed records plus returned integrity-audit completion verified; old objects preserved; new intervals disjoint; formal historical compliance still INCOMPLETE",
+    "newCompletedIncludingAudit": 38,
+    "newStartsIncludingAudit": 38,
+    "totalCompletedIncludingAudit": 896,
+    "totalStartsIncludingAudit": 892,
+    "auditCompletionReceiptVerified": true
+  }
+}

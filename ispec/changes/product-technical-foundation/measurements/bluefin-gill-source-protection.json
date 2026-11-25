@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "7e7fd300-7527-4c4a-8f07-f058e40ccd46",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "8a3b74f178f107cafa49a5dda197a08b5e67b6b6bf5c5dcc3c61ff39e0d359b3",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-25T13:10:17.211Z",
+    "finishedAt": "2026-11-25T13:10:18.169Z",
+    "durationMs": 932.954958,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/bluefin-gill-gpu-qa/verify-protection.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/bluefin-gill-gpu-qa/verify-protection.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T13:10:17.211Z",
+  "finishedAt": "2026-11-25T13:10:18.169Z",
+  "durationMs": 932.954958
+}

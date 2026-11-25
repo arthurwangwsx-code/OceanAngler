@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "f1ddc4e6-3f97-4254-8a14-312566cfa5a8",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "f980e13532973feacc42835176179bd844fb39aa89abdfe031473973b3064eea",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-25T05:40:46.632Z",
+    "finishedAt": "2026-11-25T05:41:53.972Z",
+    "durationMs": 67310.826625,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      "tools/game.py",
+      "tests",
+      "--test-platform",
+      "PlayMode",
+      "--test-filter",
+      "HalibutWorldTests;HalibutFinAnimationTests;FishAnimationTests;ImmersiveNavigationTests",
+      "--label",
+      "halibutfinplayb"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    "tools/game.py",
+    "tests",
+    "--test-platform",
+    "PlayMode",
+    "--test-filter",
+    "HalibutWorldTests;HalibutFinAnimationTests;FishAnimationTests;ImmersiveNavigationTests",
+    "--label",
+    "halibutfinplayb"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T05:40:46.632Z",
+  "finishedAt": "2026-11-25T05:41:53.972Z",
+  "durationMs": 67310.826625
+}

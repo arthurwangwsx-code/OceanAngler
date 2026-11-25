@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "11ac7e67-46f6-47c3-8b58-d829b5f422af",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "4f575323ae20c4d8a893a78df8a1802499254a6249c2f2f9ff6395fa148dd318",
+    "category": "compile",
+    "executable": "python3",
+    "startedAt": "2026-11-25T14:05:03.937Z",
+    "finishedAt": "2026-11-25T14:05:46.810Z",
+    "durationMs": 42840.981375,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "args": [
+      "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b/.local/dev9-qa/export.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b/.local/dev9-qa/export.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T14:05:03.937Z",
+  "finishedAt": "2026-11-25T14:05:46.810Z",
+  "durationMs": 42840.981375
+}

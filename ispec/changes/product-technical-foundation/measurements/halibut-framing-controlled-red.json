@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "41a0fbf1-69c3-46a6-9e13-b6b24f8ff40a",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "abdc80667bb4680bda30e7e01caea4fd6c8acfc040327578306d5d026cc75664",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-25T04:01:56.753Z",
+    "finishedAt": "2026-11-25T04:02:08.789Z",
+    "durationMs": 11974.999167,
+    "exitCode": 2,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      "tools/game.py",
+      "tests",
+      "--test-platform",
+      "PlayMode",
+      "--test-filter",
+      "HalibutWorldTests",
+      "--label",
+      "halibutframered"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    "tools/game.py",
+    "tests",
+    "--test-platform",
+    "PlayMode",
+    "--test-filter",
+    "HalibutWorldTests",
+    "--label",
+    "halibutframered"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 2,
+  "startedAt": "2026-11-25T04:01:56.753Z",
+  "finishedAt": "2026-11-25T04:02:08.789Z",
+  "durationMs": 11974.999167
+}

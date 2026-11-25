@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "dcd951bc-7318-4d6b-9dd0-bf1d40e04ce2",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "b0d4e5789253588ce7727efc213505b32e4f74d04a5a208d1f0518b3d9ee87d6",
+    "category": "e2e",
+    "executable": "python3",
+    "startedAt": "2026-11-25T13:32:26.755Z",
+    "finishedAt": "2026-11-25T13:32:31.560Z",
+    "durationMs": 4771.54475,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/bluefin-gill-gpu-qa/native-contact.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/bluefin-gill-gpu-qa/native-contact.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T13:32:26.755Z",
+  "finishedAt": "2026-11-25T13:32:31.560Z",
+  "durationMs": 4771.54475
+}

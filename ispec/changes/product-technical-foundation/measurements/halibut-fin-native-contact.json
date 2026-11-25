@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "e3383c66-623d-42e7-982b-6537deebd14b",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "74496123feea8f210adab5ab387cceb992ad97a83c4d9348776c4f8ccf1ef600",
+    "category": "compile",
+    "executable": "python3",
+    "startedAt": "2026-11-25T06:25:51.020Z",
+    "finishedAt": "2026-11-25T06:25:51.574Z",
+    "durationMs": 518.968125,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/halibut-fin-qa/refine-native-contact.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/halibut-fin-qa/refine-native-contact.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T06:25:51.020Z",
+  "finishedAt": "2026-11-25T06:25:51.574Z",
+  "durationMs": 518.968125
+}

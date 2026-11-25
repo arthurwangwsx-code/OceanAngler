@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "27b483a8-2283-4730-980b-a8a1f586cc0e",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "633fa46d5eca9a667a5b4fd8c4bc7faaa95c812627e9ae8191b8c33daff53c10",
+    "category": "compile",
+    "executable": "python3",
+    "startedAt": "2026-11-24T16:11:19.138Z",
+    "finishedAt": "2026-11-24T16:15:01.765Z",
+    "durationMs": 222585.682083,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      "tools/beta.py",
+      "upload",
+      "--build",
+      "6",
+      "--apply"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    "tools/beta.py",
+    "upload",
+    "--build",
+    "6",
+    "--apply"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T16:11:19.138Z",
+  "finishedAt": "2026-11-24T16:15:01.765Z",
+  "durationMs": 222585.682083
+}

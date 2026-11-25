@@ -1,15 +1,17 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """Frozen-source, app-scoped OceanAngler internal beta delivery."""
 import argparse,hashlib,json,os,plistlib,re,subprocess,urllib.parse,zipfile
 from pathlib import Path
 from asc import APP_ID,BUNDLE,Client,credentials
+from storage_gate import storage_command
 ROOT=Path(__file__).resolve().parents[1];RELEASE=json.loads((ROOT/'publication/release.json').read_text());VERSION=RELEASE['version'];TEAM=RELEASE['teamId'];LOCAL=ROOT/'.local/beta'
 
 def read(path):return json.loads(path.read_text())
 def write(path,value):path.parent.mkdir(parents=True,exist_ok=True);path.write_text(json.dumps(value,indent=2)+'\n')
 def command(args,log):
     log.parent.mkdir(parents=True,exist_ok=True)
-    with log.open('w') as output:r=subprocess.run([str(x) for x in args],cwd=ROOT,stdout=output,stderr=subprocess.STDOUT)
+    with log.open('w') as output:r=subprocess.run(storage_command([str(x) for x in args],ROOT),cwd=ROOT,stdout=output,stderr=subprocess.STDOUT)
     if r.returncode:raise RuntimeError('Command failed; inspect private '+log.name)
 def hash_files(base,paths):
     h=hashlib.sha256()
@@ -175,8 +177,20 @@ def self_only(client,number):
 def notes(client,number):
     state=status(client,number)
     if not state['buildId']:return state
-    description='海洋小钓手私人开发测试。钓鱼、积分、存档、图鉴、装备和任务已接入；模型与海域仍为样板，儿童试玩、手机触控与长时间真机性能尚未完成验收。'
-    whatsnew='请测试抛竿、提竿、按住收线/松手降张力、放流、重开后的积分与记录、左右手和暂停恢复。含12鱼种数据、3海域入口及18任务；场景和鱼/钓具美术尚非最终质量。仅本人内部测试，不代表完整产品验收。'
+    description='海洋小钓手私人开发测试。钓鱼、积分、存档、图鉴、装备和任务已接入；3D内容仍为早期候选，儿童试玩、实际手机画面、触控与长时间性能尚未完成验收。'
+    whatsnew='本次整合记录成功后的转向放流、18项任务指引、独立音效与探索音乐、海湾倒影和连续岸线，修复鱼体口部/鳍纹、礁石与标题显示。图鉴新增12物种学名、辨识及自然栖息环境、滚动详情与视角重置。请检查首屏颜色、近景口鳍、水上/水下和滚动文字；测试抛竿、张力、记录放流、后台恢复及重开后进度。观察或返回页面后应保持暂停，主动继续才恢复；音乐默认关闭，可在设置开启。仅首鱼、首套钓组和首海湾是独立源模型候选，其余模型/海域仍为样板，观察生物尚未进入场景。当前包的实际手机/iPad画面、触控、听感与20分钟性能未验，科学/美术及儿童试玩未完成；仅本人内部测试。'
+    if number=='4':
+        whatsnew='本次加入首海湾三条环境鱼群、抛投与鱼接近拟饵/收鱼的分阶段表现；环境鱼不参与奖励。首蓝鳍鲹调整灰银/灰铜皮肤、蓝黑斑、鳍色与比例，并修正当前采样下的近景块状阴影。图鉴、18任务、音频、记录后转向放流和后台暂停继续保留，未调整积分或随机概率。请检查首次进入与图鉴返回时颜色，抛竿到放流全过程的鱼线/拟饵连接，暂停/后台后主动继续、重开后存档，水上/水下与长文字。音乐默认关闭。仅首鱼、首套钓组和首海湾是独立源模型候选，其余模型/海域仍为样板，保护观察交互未完成。美术/科学、儿童试玩、实际iPhone/iPad画面、触控、听感和20分钟性能尚未验收；本包仅本人内部测试。'
+    if number=='5':
+        whatsnew='本次加入三种保护观察对象的独立图鉴、主动观察和记录；保护生物只供观察，不进入钓鱼或积分奖励。近海航道加入独立海床、岩岛、植物和系泊艇候选，共用水上/水下观察，海域切换只创建当前环境。请在自然解锁海域后检查反复往返、换角度、暂停/减弱动态、记录后重开，以及原有抛竿到记录放流、积分、装备和音频设置。观察页面离开或退后台后须主动继续；音乐默认关闭。首次成功记录保护观察会升级本地存档，旧build 4不能读取该新存档，请继续使用本版，不删档降级。三种观察形体仍是A0样板，近海岛形/材质边界和重复岩体/叶片尚需完善，陆坡及其他鱼种/钓具仍需完整制作；并未达到最终拟真美术。实际iPhone/iPad触控、画面、听感、20分钟性能、儿童/科学/用户和A1–A3验收仍待完成；仅本人内部测试，积分和随机概率未改。'
+    if number=='6':
+        whatsnew='本次加入沉浸式页面层级：游玩保留暂停、当前动作和必要收线仪表；首页、海域装备准备、图鉴、任务、设置与退出确认分层进入，收鱼信息移到底部。图形触控配中文短标签并支持左右手，打开页面或退后台取消按住，主动继续才恢复。三海域均接入独立源候选，陆坡新增峡谷、研究潜器和测量艇；蓝鳍鲹修正眼口与薄鳍，首套钓组新增滚线轮、连续绕线、可见主轴及鉴赏。请检查菜单往返、长文滚动、控线中暂停与后台、抛竿到记录放流的鱼线和近景，并重开核对原有积分、鱼获、任务、装备与设置；不要卸载或清档。旧build 5进度应保留，首次保护观察仍升级存档，旧build 4不能读取新版进度。本次不调整积分或随机概率，音乐默认关闭。模拟器程序流程已验证，仍不代表真机触控、听感、20分钟性能或儿童体验。其他鱼种、钓具和观察形体仍有样板，全部海域及首套模型仍未通过最终拟真美术、科学及用户验收；仅本人内部测试。'
+    if number=='7':
+        whatsnew='本次补齐沉浸式界面的休息提醒：实际游玩累计约15分钟后，在原边缘提示和暂停菜单显示提醒，点“休息好了，继续”才开始下一周期；普通页面往返不会清除提醒。等待提示仍会淡出，没有增加常驻遮挡。保留build 6的分层首页、海域装备准备、图鉴、任务、设置、统一退出确认和图形触控，支持左右手。请检查菜单往返、暂停/后台后主动继续、正常抛竿到记录放流，并重开核对已有积分、鱼获、装备、任务及设置；不要卸载或清档。双端模拟器真实计时和流程已验证，仍不代表实际iPhone/iPad触控、听感或20分钟性能通过。音乐默认关闭，积分和随机概率未改。首鱼、首套钓组和三海域仍为候选，其他鱼种、钓具及观察形体仍有样板；拟真美术、用户/科学和儿童验收尚未完成。仅本人内部测试，旧build 4不能读取首次保护观察后升级的存档，请继续使用新版。'
+    if number=='8':
+        whatsnew='本次细化首条蓝鳍鲹胸鳍与远距鳍面：近景保留实体鳍条，远距减少细小线条闪烁；身体调整为较中性的灰银/灰铜，保留蓝色鳍与斑点。控线仪表增加深色描边，亮沙背景更易读，未新增常驻面板。保留分层首页、准备、图鉴、任务、设置、统一退出、左右手图形触控和约15分钟的休息提醒；游玩中央留给鱼与场景。请测试正常抛竿到记录放流，控线中暂停/后台后主动继续，页面往返及左右手按钮，并重开核对原积分、鱼获、装备、任务和设置；不要卸载或清档。音乐默认关闭，积分和随机概率未改。双端模拟器流程已通过，仍不代表真机触控、儿童理解或20分钟性能合格。首鱼、首套钓组、三海域仍为美术候选，其他物种/钓具/观察形体仍有样板，塑料感与自然游动仍需完善；用户/科学/儿童和最终拟真美术未验收。仅本人内部测试；首次保护观察升级后的进度旧build 4不能读取，请继续使用新版。'
+    if number=='9':
+        whatsnew='本次加入本人测试用开发者模式：首页或暂停→设置→家长区与隐私→验证→开发者模式→开启并确认。零积分即可体验全部三海域、二十钓具、三种保护观察及十二鱼种图鉴模型；钓鱼、记录与任务仍按真实玩法进行，不伪造积分。测试进度与正常进度分别保存，关闭恢复原正常进度和积分门槛，重开保留上次模式；切换成功回准备并保持暂停，正常游玩不增加模式常驻面板。请测试开关、取消、重启、全部入口与记录放流，不要卸载或清档。另修复蓝鳍鲹模型更新后的眼口与鳍面材质绑定和切换后返回旧确认页问题，整理手机确认页提示。双端模拟器检查不代表真机触控、儿童体验或20分钟性能通过。音乐默认关闭，正常积分规则和随机概率未改；其余成品模型、最终拟真美术、用户/科学/儿童及双真机仍待验。仅本人内部测试。'
     for resource,parent,identifier,relation,field,text in [('betaAppLocalizations','apps',APP_ID,'app','description',description),('betaBuildLocalizations','builds',state['buildId'],'build','whatsNew',whatsnew)]:
         path='/v1/'+parent+'/'+identifier+'/'+resource;existing=items(client,path);match=next((x for x in existing if x['attributes']['locale']=='zh-Hans'),None);attributes={field:text}
         if resource=='betaAppLocalizations':attributes['feedbackEmail']='arthur.wang.wsx@gmail.com'

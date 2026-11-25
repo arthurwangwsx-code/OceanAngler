@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "828999de-a818-427d-882b-63bf5dabc524",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "b3e462558609db24a8546847def02208ad06035b48181ef114f1d4a194f40843",
+    "category": "compile",
+    "executable": "python3",
+    "startedAt": "2026-11-25T11:41:15.596Z",
+    "finishedAt": "2026-11-25T11:41:17.749Z",
+    "durationMs": 2111.8281669999997,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/bluefin-gill-qa/build.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/bluefin-gill-qa/build.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T11:41:15.596Z",
+  "finishedAt": "2026-11-25T11:41:17.749Z",
+  "durationMs": 2111.8281669999997
+}

@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "26f40973-82e9-43bc-871b-0738634b069a",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "05d14c761e8e6b6db1dd81b0a8e9e0bd561ebfcf236180b2faface7f97cd2798",
+    "category": "e2e",
+    "executable": "python3",
+    "startedAt": "2026-11-25T08:41:56.408Z",
+    "finishedAt": "2026-11-25T08:42:47.027Z",
+    "durationMs": 50582.824833,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      "tools/art.py",
+      "review",
+      "--asset",
+      "bluefin",
+      "--label",
+      "bluefineyeafter20261125a",
+      "--eyes-only"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    "tools/art.py",
+    "review",
+    "--asset",
+    "bluefin",
+    "--label",
+    "bluefineyeafter20261125a",
+    "--eyes-only"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T08:41:56.408Z",
+  "finishedAt": "2026-11-25T08:42:47.027Z",
+  "durationMs": 50582.824833
+}

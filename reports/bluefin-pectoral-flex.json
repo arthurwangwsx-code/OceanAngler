@@ -1,0 +1,308 @@
+{
+  "status": "PARTIAL",
+  "implementation": "IMPLEMENTED",
+  "engineeringAcceptance": "PASS",
+  "finalArtAcceptance": "PARTIAL",
+  "source": {
+    "sourceCommit": "2f10c4f6b463d60a7a37c6b6e1a6ed4bbe5c6c6d",
+    "sourceDigest": "7556e33d2477ff18fe0531c028a29791351d1ac5e6ddd95cc47684a4c089b73e",
+    "projectSettingsSha256": "b8a690cbe44deea983180bc8f1a8028ce6c42c9cf8d0b570ff0a06930d4747b3"
+  },
+  "appDigest": "b16c920bfeb35a48d24d5bbc9645c5c12eef3ccefa968125fb3939c4ac7a40d4",
+  "distribution": "LOCAL_SIMULATOR_ONLY_NOT_TESTFLIGHT9",
+  "reportedAtUTC": "2026-11-25T16:14:10.978320+00:00",
+  "sourceEngineering": {
+    "checks": 309,
+    "bones": 16,
+    "minimumOuterNonRigidMillimetres": 7.221630718097041,
+    "maximumAdditionalRayMembraneSeparationMillimetres": 0.2620329905766994,
+    "cohesionCases": 42,
+    "surfaceIdentity": {
+      "Bluefin_LOD0": {
+        "originalVertices": 12449,
+        "newVertices": 426,
+        "newTriangles": 24748,
+        "protectedPolygons": 11558,
+        "maximumSurfaceDistance": 1.7582828155750814e-08,
+        "maximumUvError": 7.619174882123048e-07,
+        "oldMembraneArea": 0.340489938284918,
+        "newMembraneArea": 0.3404899454291126
+      },
+      "Bluefin_LOD1": {
+        "originalVertices": 5095,
+        "newVertices": 664,
+        "newTriangles": 10688,
+        "protectedPolygons": 5336,
+        "maximumSurfaceDistance": 2.7296315784216835e-08,
+        "maximumUvError": 9.175792290427864e-07,
+        "oldMembraneArea": 0.34256255424770643,
+        "newMembraneArea": 0.34256255674469216
+      },
+      "Bluefin_LOD2": {
+        "originalVertices": 2195,
+        "newVertices": 849,
+        "newTriangles": 4908,
+        "protectedPolygons": 2346,
+        "maximumSurfaceDistance": 2.4577278469107567e-08,
+        "maximumUvError": 1.5110771454107663e-06,
+        "oldMembraneArea": 0.3675160100797257,
+        "newMembraneArea": 0.3675160327377398
+      }
+    },
+    "repeatAuthoring": {
+      "maximumWeightDifference": 0,
+      "savedToSource": false
+    },
+    "scope": "Membrane-only original triangle subdivision, original vertices/protected polygons/maps/12 bone rest and original curves retained. Finite source-pose/segment samples subtract original rest separation; not absolute-zero-gap, all-time collision or measured fish biomechanics"
+  },
+  "editorTests": {
+    "action": "tests",
+    "exitCode": 0,
+    "id": "2",
+    "testcasecount": "85",
+    "result": "Passed",
+    "total": "85",
+    "passed": "85",
+    "failed": "0",
+    "inconclusive": "0",
+    "skipped": "0",
+    "asserts": "0",
+    "engine-version": "3.5.0.0",
+    "clr-version": "4.0.30319.42000",
+    "start-time": "2026-11-25 15:35:10Z",
+    "end-time": "2026-11-25 15:37:01Z",
+    "duration": "110.7332563"
+  },
+  "playTests": {
+    "action": "tests",
+    "exitCode": 0,
+    "id": "2",
+    "testcasecount": "5",
+    "result": "Passed",
+    "total": "5",
+    "passed": "5",
+    "failed": "0",
+    "inconclusive": "0",
+    "skipped": "0",
+    "asserts": "0",
+    "engine-version": "3.5.0.0",
+    "clr-version": "4.0.30319.42000",
+    "start-time": "2026-11-25 15:42:49Z",
+    "end-time": "2026-11-25 15:43:20Z",
+    "duration": "30.9885009"
+  },
+  "toolTests": 12,
+  "gpu": {
+    "status": "PASS",
+    "graphics": "Metal",
+    "platform": "iOS",
+    "format": "R16G16B16A16_SFloat",
+    "samples": 4,
+    "views": 84,
+    "images": 336,
+    "maximumRepeatPixels": 0,
+    "minimumAblationPixels": 4368,
+    "minimumViewportMargin": 0.12930893898010254,
+    "scope": "Editor GPU actual runtime clips with new-control bind-pose ablation; discrete samples, not continuous Animator/Player, runtime FPS, measured fish biomechanics or final art acceptance"
+  },
+  "nativeJournal": {
+    "phone": {
+      "samples": 17,
+      "observedSpanDegrees": {
+        "leftMid": 1.458253546699867,
+        "leftTip": 1.0884540062727115,
+        "rightMid": 1.4582530205330095,
+        "rightTip": 1.088453579390842
+      },
+      "minimumObservedSpanDegrees": 1.088453579390842,
+      "pauseDriftDegrees": 0.0,
+      "resumeTravelDegrees": 0.47642219066619873,
+      "normalCatchesAndPointsUnchanged": true,
+      "originalInputBytesUnchanged": true
+    },
+    "tablet": {
+      "samples": 17,
+      "observedSpanDegrees": {
+        "leftMid": 1.458540171515629,
+        "leftTip": 1.083112355545977,
+        "rightMid": 1.4585392372427004,
+        "rightTip": 1.083111288344887
+      },
+      "minimumObservedSpanDegrees": 1.083111288344887,
+      "pauseDriftDegrees": 0.0,
+      "resumeTravelDegrees": 0.47642219066619873,
+      "normalCatchesAndPointsUnchanged": true,
+      "originalInputBytesUnchanged": true
+    }
+  },
+  "normalJourneys": {
+    "phone": {
+      "rounds": 20,
+      "points": 4160,
+      "species": 12,
+      "tasks": 18,
+      "gear": 20,
+      "observations": 3,
+      "duplicateReleaseTaps": 20,
+      "firstRoundSeconds": 22.418052673339844,
+      "totalSeconds": 419.1295166015625,
+      "renderedFrames": 38,
+      "saveSha256": "15e40a1e5d56f97944cf6a2a3b7c0718c9b9dd3e6577579ba0886b942f4d1f2e",
+      "habitatCounts": {
+        "bay": 9,
+        "channel": 4,
+        "slope": 7
+      },
+      "modeCounts": {
+        "assisted": 10,
+        "standard": 10
+      },
+      "restartFileShaUnchanged": true
+    },
+    "tablet": {
+      "rounds": 26,
+      "points": 5417,
+      "species": 12,
+      "tasks": 18,
+      "gear": 20,
+      "observations": 3,
+      "duplicateReleaseTaps": 26,
+      "firstRoundSeconds": 22.38230323791504,
+      "totalSeconds": 532.382568359375,
+      "renderedFrames": 38,
+      "saveSha256": "be7af876331bf263b83b966b62002034292da4cdc62dc141c916aae6a452d74a",
+      "habitatCounts": {
+        "bay": 6,
+        "channel": 10,
+        "slope": 10
+      },
+      "modeCounts": {
+        "assisted": 10,
+        "standard": 16
+      },
+      "restartFileShaUnchanged": true
+    }
+  },
+  "existingProgressProtection": {
+    "status": "PASS",
+    "files": 232,
+    "normalPrimaryFiles": 115,
+    "scope": "All files captured before installing this candidate, including earlier failed-route run; exact bytes preserved"
+  },
+  "visualReview": {
+    "status": "REVIEWED_ENGINEERING_PARTIAL_ART",
+    "reviewedAtUTC": "2026-11-25T16:13:01.068029+00:00",
+    "nativeContactSheets": 12,
+    "nativeFramesInContacts": 98,
+    "nativeModelFullSizeFrames": 8,
+    "normalFullSizeFrames": 6,
+    "gpuContactSheets": 6,
+    "gpuActiveViewsInContacts": 84,
+    "gpuHeldComparisonsInContacts": 42,
+    "gpuFullSizeFrames": 4,
+    "findings": [
+      "Model and page controls visible in selected actual captures, no new gameplay HUD",
+      "Actual restart menus show 4160 and 5417 points",
+      "Thin lines/spikes in close fish view, dark opposite fixture, gill rim and plastic appearance remain",
+      "Other species and observation/environment visuals remain prototypes"
+    ],
+    "scope": "Finite actual image review only. No full continuous natural-motion, scientific, user, child, OS touch or physical-device acceptance"
+  },
+  "failuresRetained": [
+    {
+      "receipt": "measurements/bluefin-flex-baseline-phone.json",
+      "exitCode": 1
+    },
+    {
+      "receipt": "measurements/bluefin-flex-source-red.json",
+      "exitCode": 1
+    },
+    {
+      "receipt": "measurements/bluefin-flex-source-green.json",
+      "exitCode": 1
+    },
+    {
+      "receipt": "measurements/bluefin-flex-editor.json",
+      "exitCode": 1
+    },
+    {
+      "receipt": "measurements/bluefin-flex-source-cohesion.json",
+      "exitCode": 1
+    },
+    {
+      "receipt": "measurements/bluefin-flex-surface-build.json",
+      "exitCode": 1
+    },
+    {
+      "receipt": "measurements/bluefin-flex-source-green-c.json",
+      "exitCode": 1
+    },
+    {
+      "receipt": "measurements/bluefin-flex-source-green-d.json",
+      "exitCode": 1
+    },
+    {
+      "receipt": "measurements/bluefin-flex-source-cohesion-b.json",
+      "exitCode": 1
+    },
+    {
+      "receipt": "measurements/bluefin-flex-play-b.json",
+      "exitCode": 1
+    },
+    {
+      "receipt": "measurements/bluefin-flex-play-c.json",
+      "exitCode": 1
+    }
+  ],
+  "storage": {
+    "nativeRun": "run-b11c71f2fecf4637b3ef36f3e298bf0e",
+    "expectedGiB": 14,
+    "stableExportAndSDKCacheReused": true,
+    "previousGeneratedSource5e4RawRetained": true,
+    "olderGeneratedSource834Archive": {
+      "sha256": "c6ad2070d6e19a02ec78f91d8357fbf6f2b40590698f772ae17836b603252c74",
+      "realExtractionBytesModesSymlinksVerified": true
+    },
+    "scope": "Local retention is not an independent backup; physical release8/9 untouched",
+    "closingRun": "run-a2cca858d7794dc38e56b20c4c092bcf",
+    "closingExpectedGiB": 2,
+    "closingScope": "Receipt/own preview publication/final static checks only; no compiler or installation",
+    "finalFreeGB": 192.5,
+    "finalFreeGiB": 179.28,
+    "daily200GBTargetMetAtClosing": false,
+    "hardStopGiB": 120
+  },
+  "sourceCI": {
+    "conclusion": "success",
+    "databaseId": 45649076611,
+    "headSha": "2f10c4f6b463d60a7a37c6b6e1a6ed4bbe5c6c6d",
+    "name": "Foundation validation",
+    "status": "completed"
+  },
+  "testflight": {
+    "currentCandidateUploaded": false,
+    "previousModeBuild": "0.1.0 (9)",
+    "previousModeSource": "5e4f9700468e045bac40e631f5ab018a5f8e6ad7",
+    "previousDeliveryReceipt": "reports/testflight-0.1.0-9.json",
+    "actualInstallation": "NOT_RUN",
+    "liveRefresh": "NOT_CONFIRMED_THIS_INCREMENT"
+  },
+  "formalHistoricalAudit": "INCOMPLETE",
+  "fullProduct": "PARTIAL",
+  "openAcceptance": [
+    "Natural/final realistic art including thin lines, gill rim and plastic appearance",
+    "First hero/whole rig user direction and scientific A1-A3 review",
+    "Other complete species/gear/observation/environment assets",
+    "Child first-fish and icon comprehension",
+    "OS touch, minimum OS, physical iPhone/iPad 20-minute performance and recovery",
+    "Actual TestFlight installation"
+  ],
+  "recordIntegrity": {
+    "status": "PASS_LOCAL_INCREMENT_INTEGRITY",
+    "baselineEnded": 1737,
+    "newEnded": 61,
+    "failedRetained": 11,
+    "auditOwnMeasurementEndedSuccessfully": true,
+    "formalHistoricalAudit": "INCOMPLETE"
+  }
+}

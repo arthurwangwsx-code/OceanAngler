@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "698f3ad2-61f6-445b-a379-0d3c56a42856",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "133ebe483836ffa05550e8f8c72c814ecbd2257c0b229d979815c434a1c6acc5",
+    "category": "e2e",
+    "executable": "python3",
+    "startedAt": "2026-11-25T08:03:51.707Z",
+    "finishedAt": "2026-11-25T08:04:48.838Z",
+    "durationMs": 57063.679959,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/journal-envelope-qa/record-and-run.py",
+      "journalenvelopetabletb",
+      "--device",
+      "tablet"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/journal-envelope-qa/record-and-run.py",
+    "journalenvelopetabletb",
+    "--device",
+    "tablet"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T08:03:51.707Z",
+  "finishedAt": "2026-11-25T08:04:48.838Z",
+  "durationMs": 57063.679959
+}

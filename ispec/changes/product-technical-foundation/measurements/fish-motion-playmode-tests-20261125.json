@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "0d9fd90a-0916-45dc-bbc4-6c842b4d1a30",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "9d2fffe346b871b162f0273b21d89095c005d1f076c41a8f4788380fd576fae9",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-24T21:46:19.300Z",
+    "finishedAt": "2026-11-24T21:46:32.089Z",
+    "durationMs": 12764.156042,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      "tools/game.py",
+      "tests",
+      "--test-platform",
+      "PlayMode",
+      "--test-filter",
+      "FishAnimationTests;SceneIntegrationTests",
+      "--label",
+      "fishmotion20261125a"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    "tools/game.py",
+    "tests",
+    "--test-platform",
+    "PlayMode",
+    "--test-filter",
+    "FishAnimationTests;SceneIntegrationTests",
+    "--label",
+    "fishmotion20261125a"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T21:46:19.300Z",
+  "finishedAt": "2026-11-24T21:46:32.089Z",
+  "durationMs": 12764.156042
+}

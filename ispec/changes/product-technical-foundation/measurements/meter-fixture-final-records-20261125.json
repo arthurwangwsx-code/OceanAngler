@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "02e35d28-18d7-42a1-b5a2-380981f6358a",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "cf53b4c1c67d3339004e8253d4c5cbfc1d1a778639494c3959439216e052b39c",
+    "category": "verification",
+    "executable": "python3",
+    "startedAt": "2026-11-25T02:47:58.102Z",
+    "finishedAt": "2026-11-25T02:47:58.367Z",
+    "durationMs": 202.34912500000019,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/meter-fixture-qa/audit-records.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/meter-fixture-qa/audit-records.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T02:47:58.102Z",
+  "finishedAt": "2026-11-25T02:47:58.367Z",
+  "durationMs": 202.34912500000019
+}

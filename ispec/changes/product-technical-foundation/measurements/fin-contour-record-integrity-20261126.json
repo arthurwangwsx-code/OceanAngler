@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "78b9a54f-da42-4c85-b97d-173cf458b153",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "ea0b0e4c9d2e0e5ae67a53f626567f2110d5054932b0d27164c97c2b9c74c60d",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-25T17:18:41.188Z",
+    "finishedAt": "2026-11-25T17:18:41.307Z",
+    "durationMs": 91.70545799999996,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "args": [
+      "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b/.local/fin-contour-qa/audit-records.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b/.local/fin-contour-qa/audit-records.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T17:18:41.188Z",
+  "finishedAt": "2026-11-25T17:18:41.307Z",
+  "durationMs": 91.70545799999996
+}

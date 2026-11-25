@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "87f9edcc-d384-4b80-929c-b5229752e0ec",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "b449cedf77939af44b83932d535bac005c2b75d463bda0af2e37b802c56237f0",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-24T20:32:42.668Z",
+    "finishedAt": "2026-11-24T20:32:42.768Z",
+    "durationMs": 75.97758299999998,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/fish-lighting-qa/audit-records.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/fish-lighting-qa/audit-records.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T20:32:42.668Z",
+  "finishedAt": "2026-11-24T20:32:42.768Z",
+  "durationMs": 75.97758299999998
+}

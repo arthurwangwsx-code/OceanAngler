@@ -1,0 +1,280 @@
+{
+  "version": 1,
+  "checkedDate": "2026-11-24",
+  "status": "REFERENCES_CHECKED_EXPERT_REVIEW_PENDING",
+  "purpose": "建模与科普制作依据，尚非科学人工验收或完整游戏资产",
+  "scopeNotes": [
+    "游戏三海域为复合研究场景，不表示所有物种在同一现实海湾共存。",
+    "ContentCatalog中的尺寸和重量上下界为游戏采样参数，不是真实物种的最大值或完整范围。",
+    "放流演出为游戏反馈，不用于证明现实捕获后的存活率。",
+    "辨识要点来自所列一手机构资料；建模清单为据此形成的项目设计要求。",
+    "仅记录来源链接和自行整理的事实，没有下载或再分发网页照片、插画或第三方3D模型。",
+    "中文俗名、年龄/性别差异、保育现状和最终可钓候选名单仍需科学人工复核。"
+  ],
+  "species": [
+    {
+      "catalogId": "trevally",
+      "name": "蓝鳍鲹",
+      "scientificName": "Caranx melampygus",
+      "role": "catch-candidate",
+      "recognition": "第二背鳍、臀鳍和尾鳍呈鲜蓝色，上半身可见蓝黑色小斑点。",
+      "habitat": "热带印度—太平洋珊瑚礁环境，可单独或小群活动。",
+      "modelChecklist": [
+        "蓝色不应只涂在尾部",
+        "细小斑点与灰铜色背部应有层次",
+        "首条源候选仍须近景与实际水下审阅"
+      ],
+      "sources": [
+        "https://australian.museum/learn/animals/fishes/bluefin-trevally-caranx-melampygus-cuvier-1833/",
+        "https://fishesofaustralia.net.au/home/species/1652"
+      ],
+      "expertReview": "PENDING"
+    },
+    {
+      "catalogId": "snapper",
+      "name": "黄鳍鲷",
+      "scientificName": "Acanthopagrus latus",
+      "role": "catch-candidate",
+      "recognition": "高而侧扁的体型、分叉尾鳍，鲜活个体的胸鳍、腹鳍与臀鳍带黄色。",
+      "habitat": "沿岸砂泥底、河口与潟湖等环境。",
+      "modelChecklist": [
+        "保持棘鲷体型，不能按内部旧ID画成笛鲷",
+        "保留鳃盖黑边与黄色鳍的辨识关系",
+        "参考库标准中文名为黄鳍棘鲷，俗名与种复合群资料需复核"
+      ],
+      "sources": [
+        "https://fishdb.sinica.edu.tw/taxon/382634-fishdb"
+      ],
+      "expertReview": "PENDING"
+    },
+    {
+      "catalogId": "grouper",
+      "name": "赤点石斑鱼",
+      "scientificName": "Epinephelus akaara",
+      "role": "catch-candidate",
+      "recognition": "身体粗壮、口大、尾鳍圆，灰褐体侧有橙红色小斑点及隐约暗带。",
+      "habitat": "西太平洋近岸岩礁环境。",
+      "modelChecklist": [
+        "圆尾与大口不能沿用鲹的分叉尾",
+        "斑点应分布于头部、体侧和相应鳍部",
+        "保育资料复核后再确认最终可钓呈现"
+      ],
+      "reviewFlags": [
+        "中研院物种页显示IUCN EN，页面基础资料更新于2015年；需核对当前IUCN原评估，不能据此推定各地法律状态或直接给予可持续标签。"
+      ],
+      "sources": [
+        "https://fishdb.sinica.edu.tw/taxon/382526-fishdb"
+      ],
+      "expertReview": "PENDING"
+    },
+    {
+      "catalogId": "redsnapper",
+      "name": "红笛鲷",
+      "scientificName": "Lutjanus campechanus",
+      "role": "catch-candidate",
+      "recognition": "红色体表、较长三角形头部和明显犬齿。",
+      "habitat": "西大西洋陆棚；幼鱼常见于砂泥底，成鱼常靠近礁石等底部结构。",
+      "modelChecklist": [
+        "与黄鳍棘鲷使用不同头口和鳍部结构",
+        "确定为Lutjanus campechanus候选后保持学名与纹理一致"
+      ],
+      "sources": [
+        "https://www.fisheries.noaa.gov/species/red-snapper"
+      ],
+      "expertReview": "PENDING"
+    },
+    {
+      "catalogId": "mackerel",
+      "name": "大西洋鲭",
+      "scientificName": "Scomber scombrus",
+      "role": "catch-candidate",
+      "recognition": "纺锤形身体，蓝绿色背部有多条黑色波纹，腹部银白。",
+      "habitat": "大西洋水域的群游鱼类。",
+      "modelChecklist": [
+        "波纹主要位于体侧上半部",
+        "两枚主要背鳍应分别表达"
+      ],
+      "sources": [
+        "https://www.fisheries.noaa.gov/species/atlantic-mackerel"
+      ],
+      "expertReview": "PENDING"
+    },
+    {
+      "catalogId": "skipjack",
+      "name": "鲣",
+      "scientificName": "Katsuwonus pelamis",
+      "role": "catch-candidate",
+      "recognition": "背部深紫蓝色，银色腹侧有四至六条沿身体纵向延伸的暗带。",
+      "habitat": "热带及亚热带大洋，常成群活动。",
+      "modelChecklist": [
+        "暗带位于下侧与腹部，不能套用鲭背部的波纹方向",
+        "侧线与胸甲区鳞片不能做成均匀覆盖的大鳞片"
+      ],
+      "sources": [
+        "https://www.fisheries.noaa.gov/species/pacific-skipjack-tuna"
+      ],
+      "expertReview": "PENDING"
+    },
+    {
+      "catalogId": "mahi",
+      "name": "鬼头刀",
+      "scientificName": "Coryphaena hippurus",
+      "role": "catch-candidate",
+      "recognition": "活体常见蓝绿色背部和金银色下半身；成年雄鱼额部较方，雌鱼较圆。",
+      "habitat": "温暖的离岸表层水域。",
+      "modelChecklist": [
+        "源文件注明所建性别与成长阶段",
+        "不能把雄鱼方额当作所有个体的共同特征",
+        "保留长背鳍轮廓，避免普通鲹换色"
+      ],
+      "sources": [
+        "https://www.fisheries.noaa.gov/species/atlantic-mahimahi/seafood",
+        "https://www.fisheries.noaa.gov/species/pacific-mahimahi"
+      ],
+      "expertReview": "PENDING"
+    },
+    {
+      "catalogId": "yellowfin",
+      "name": "黄鳍金枪鱼",
+      "scientificName": "Thunnus albacares",
+      "role": "catch-candidate",
+      "recognition": "流线形体躯、深蓝背部与黄色鳍；成体第二背鳍、臀鳍可明显延长。",
+      "habitat": "热带及亚热带温暖大洋，具有长距离迁移行为。",
+      "modelChecklist": [
+        "区分成体和幼体的鳍长",
+        "与大眼金枪鱼分别审阅眼径、体高及鳍缘，不能仅换色"
+      ],
+      "sources": [
+        "https://www.fisheries.noaa.gov/species/pacific-yellowfin-tuna/seafood",
+        "https://www.fisheries.noaa.gov/national/seafood-commerce-certification/scientific-names-trade-monitored-species",
+        "https://www.fisheries.noaa.gov/species/pacific-yellowfin-tuna"
+      ],
+      "expertReview": "PENDING"
+    },
+    {
+      "catalogId": "bigeye",
+      "name": "大眼金枪鱼",
+      "scientificName": "Thunnus obesus",
+      "role": "catch-candidate",
+      "recognition": "相较黄鳍金枪鱼，眼睛通常更大；后方小鳍为黄色并带黑边。",
+      "habitat": "跨太平洋、大西洋与印度洋分布的迁移性鱼类。",
+      "modelChecklist": [
+        "以相近成长阶段比较眼径与体形",
+        "保留小鳍黑边与较深体躯的辨识差异"
+      ],
+      "sources": [
+        "https://www.fisheries.noaa.gov/species/pacific-bigeye-tuna",
+        "https://repository.library.noaa.gov/view/noaa/23154/noaa_23154_DS1.pdf",
+        "https://www.fisheries.noaa.gov/species/atlantic-bigeye-tuna"
+      ],
+      "expertReview": "PENDING"
+    },
+    {
+      "catalogId": "alfonsino",
+      "name": "金目鲷",
+      "scientificName": "Beryx splendens",
+      "role": "catch-candidate",
+      "recognition": "体高、橙红色头背、银粉色侧面和大眼睛，尾部深分叉。",
+      "habitat": "深水近底及海山环境，参考资料常见深度为200至400米。",
+      "modelChecklist": [
+        "大眼与高体结构独立建模",
+        "陆坡海域布景应与真实深水习性区别于明亮浅礁",
+        "灯光保持儿童可读性属于艺术取舍，不能当作真实深度光照"
+      ],
+      "sources": [
+        "https://www.afma.gov.au/species/alfonsino"
+      ],
+      "expertReview": "PENDING"
+    },
+    {
+      "catalogId": "cod",
+      "name": "太平洋鳕",
+      "scientificName": "Gadus macrocephalus",
+      "role": "catch-candidate",
+      "recognition": "灰褐斑纹、浅色腹部、发达的下颌须；鳕属具有三背鳍、两臀鳍。",
+      "habitat": "北太平洋沿岸与陆棚环境，存在季节性深浅移动。",
+      "modelChecklist": [
+        "必须有下颌须与分离的三背鳍、两臀鳍",
+        "当前grouper形态标签只是样板，不能用石斑轮廓作为成品"
+      ],
+      "sources": [
+        "https://www.fisheries.noaa.gov/species/pacific-cod",
+        "https://www.fao.org/4/t0243e/T0243E07.pdf"
+      ],
+      "expertReview": "PENDING"
+    },
+    {
+      "catalogId": "halibut",
+      "name": "大西洋庸鲽",
+      "scientificName": "Hippoglossus hippoglossus",
+      "role": "catch-candidate",
+      "recognition": "成体属于右眼型比目鱼，口较大、侧线弯曲、尾缘内凹。",
+      "habitat": "北大西洋海底及上陆坡，可见于砂、砾或黏土底。",
+      "modelChecklist": [
+        "两眼位于右侧，不能保留左右对称双眼",
+        "眼侧与盲侧分别做材质和姿态审阅",
+        "贴底游动与上下方观察镜头独立检查"
+      ],
+      "reviewFlags": [
+        "NOAA页面的资源评估针对特定美国种群，不能当作全球保育等级；最终可钓呈现需复核。"
+      ],
+      "sources": [
+        "https://www.fisheries.noaa.gov/species/atlantic-halibut",
+        "https://www.dfo-mpo.gc.ca/species-especes/profiles-profils/atl-halibut-fletan-atl-eng.html"
+      ],
+      "expertReview": "PENDING"
+    },
+    {
+      "catalogId": "green-turtle",
+      "name": "绿海龟",
+      "scientificName": "Chelonia mydas",
+      "role": "observation-only",
+      "recognition": "硬壳海龟，背甲可为褐、灰或橄榄色；中央五块盾片、两侧各四块盾片。",
+      "habitat": "不同成长阶段使用大洋与近岸环境，需要到水面呼吸。",
+      "modelChecklist": [
+        "不能因为名字而做成整只鲜绿色",
+        "甲片布局、四肢鳍状结构和上浮呼吸分别审阅",
+        "只观察，不设置嘴部挂钩或鱼获奖励"
+      ],
+      "sources": [
+        "https://www.fisheries.noaa.gov/species/green-turtle"
+      ],
+      "expertReview": "PENDING"
+    },
+    {
+      "catalogId": "bottlenose-dolphin",
+      "name": "宽吻海豚",
+      "scientificName": "Tursiops truncatus",
+      "role": "observation-only",
+      "recognition": "灰色体躯、短粗吻部，是哺乳动物；尾叶水平展开。",
+      "habitat": "近岸和离岸水域均有不同种群。",
+      "modelChecklist": [
+        "尾叶水平展开，游动不能复用鱼类左右甩尾",
+        "吻部与背鳍轮廓单独审阅",
+        "只观察，不进入钓鱼目标或鱼获奖励"
+      ],
+      "sources": [
+        "https://www.fisheries.noaa.gov/species/common-bottlenose-dolphin",
+        "https://www.aoml.noaa.gov/ftp/od/library/NicodemusDolphins.pdf"
+      ],
+      "expertReview": "PENDING"
+    },
+    {
+      "catalogId": "whale-shark",
+      "name": "鲸鲨",
+      "scientificName": "Rhincodon typus",
+      "role": "observation-only",
+      "recognition": "大型鱼类，深色背侧具有浅色斑点和条纹，腹部较浅；通过滤食获取小型食物。",
+      "habitat": "热带及温暖水域，可活动于大陆棚和离岸大洋。",
+      "modelChecklist": [
+        "鲸鲨是鲨鱼，不能做成鲸或海豚的水平尾叶",
+        "侧面纵向隆脊与斑点条纹分层制作",
+        "观察路径与钓线保持独立，不设置可钓命中"
+      ],
+      "sources": [
+        "https://australian.museum/learn/animals/fishes/whale-shark-rhincodon-typus-smith-1828/"
+      ],
+      "expertReview": "PENDING"
+    }
+  ]
+}

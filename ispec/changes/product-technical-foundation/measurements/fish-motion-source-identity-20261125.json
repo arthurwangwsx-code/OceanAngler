@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "eb99ce21-f14e-48f9-9995-cf3775ee1dac",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "c224a8e10d23ec32a113edc8eb69e5b19ca7cc1cdc128f8eebddb350b00c3865",
+    "category": "test",
+    "executable": "Blender",
+    "startedAt": "2026-11-24T21:27:55.323Z",
+    "finishedAt": "2026-11-24T21:28:00.959Z",
+    "durationMs": 5599.249959,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "/Applications/Blender.app/Contents/MacOS/Blender",
+    "args": [
+      "--background",
+      "--threads",
+      "8",
+      "--python-exit-code",
+      "1",
+      "--python",
+      ".local/fish-motion-qa/compare-source.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "/Applications/Blender.app/Contents/MacOS/Blender",
+    "--background",
+    "--threads",
+    "8",
+    "--python-exit-code",
+    "1",
+    "--python",
+    ".local/fish-motion-qa/compare-source.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T21:27:55.323Z",
+  "finishedAt": "2026-11-24T21:28:00.959Z",
+  "durationMs": 5599.249959
+}

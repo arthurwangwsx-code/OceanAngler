@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "35444d54-05e1-4ce7-8bb5-174e0153a857",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "1a3444d8b31d06db9deff840a19de41ef86e77d8fc78f1c0daa04fae553fa195",
+    "category": "gpu-regression",
+    "executable": "python3",
+    "startedAt": "2026-11-24T23:47:55.272Z",
+    "finishedAt": "2026-11-24T23:48:06.094Z",
+    "durationMs": 10777.453833,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      "tools/game.py",
+      "reflection-review",
+      "--label",
+      "reflection20261125green"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    "tools/game.py",
+    "reflection-review",
+    "--label",
+    "reflection20261125green"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T23:47:55.272Z",
+  "finishedAt": "2026-11-24T23:48:06.094Z",
+  "durationMs": 10777.453833
+}

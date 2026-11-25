@@ -1,0 +1,123 @@
+{
+  "date": "2026-11-24",
+  "sourceBaseCommit": "f8b0a30cc16fc6771e605333d5140e1e1fb6385c",
+  "testedSourceDigest": "b98b20e0f4aa1e203ef84ceb83628d5e6d9c1afa15fe239388cf0aecb54a2e73",
+  "implementation": "IMPLEMENTED",
+  "scope": "first-bay water rendering candidate; isolated Editor GPU fixture",
+  "artAcceptance": "PARTIAL",
+  "overallProductAcceptance": "PARTIAL",
+  "editorTests": {
+    "result": "Passed",
+    "total": "29",
+    "passed": "29",
+    "failed": "0",
+    "end-time": "2026-11-23 19:23:54Z"
+  },
+  "playModeTests": {
+    "result": "Passed",
+    "total": "7",
+    "passed": "7",
+    "failed": "0",
+    "end-time": "2026-11-23 19:24:16Z"
+  },
+  "editorMeasurement": "951e049f-522c-4b0a-a038-2e04112f2e1d",
+  "playModeMeasurement": "72766510-7c0f-418d-8b3e-7c4316776f7c",
+  "gpuMeasurement": "c32bda0e-9f70-4132-a76d-f0517ea284d8",
+  "gpuFixture": {
+    "status": "PASS",
+    "scope": "isolated Editor GPU water fixture; no player UI/device acceptance",
+    "width": 1440,
+    "height": 900,
+    "reflectionPasses": 2,
+    "reflectionVariance": 0.02543231099843979,
+    "waveDifference": 0.0064166393131017685,
+    "graphics": "Metal",
+    "released": true
+  },
+  "nativeWindow": {
+    "status": "NOT_VERIFIED",
+    "attemptResult": "FAIL_TIMEOUT",
+    "measurement": "f8486d06-f78e-42e9-96be-631431c35cb4",
+    "timeoutSeconds": 140,
+    "screenshots": 0,
+    "receiptPresent": false,
+    "desktopCause": "UNKNOWN; window read timed out; user confirmation pending",
+    "retry": "No repeated launch without observed state change"
+  },
+  "macCompilation": "PASS",
+  "depthFix": {
+    "before": "AfterTransparents; current opaque depth unavailable to water",
+    "after": "AfterOpaques",
+    "visualComparison": "same Editor fixture camera; 16px corner artifact removed; depth transmission restored"
+  },
+  "reflection": {
+    "maximumLongEdge": 768,
+    "maximumScale": 0.5,
+    "texture": "ARGB32, depth16, bilinear",
+    "fixtureSize": [
+      720,
+      450
+    ],
+    "cache": "view/size; underwater skipped; release on disable/destroy",
+    "mobileMemoryAndPerformance": "NOT_RUN"
+  },
+  "knownOpen": [
+    "Repeated sand/vegetation and simplified shoreline",
+    "Coral/science and user art review",
+    "Player UI with new water and actual pause visual review",
+    "Physical iPhone/iPad installation, touch, 20-minute performance",
+    "Other fish/gear/habitats and observation models"
+  ],
+  "metrics": {
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "binding": "VERIFIED",
+    "independentReceiptAudit": "INCOMPLETE",
+    "verifiedMeasurements": [
+      "72766510-7c0f-418d-8b3e-7c4316776f7c",
+      "951e049f-522c-4b0a-a038-2e04112f2e1d",
+      "c32bda0e-9f70-4132-a76d-f0517ea284d8",
+      "e6ff8cef-5b7c-4976-8fb9-a2a10f5e24fb",
+      "f8486d06-f78e-42e9-96be-631431c35cb4",
+      "e9baaa9c-a05c-4593-a111-194a864fe3de",
+      "f210a0d1-08f9-4c48-b15f-b1703f89e698",
+      "02021ade-ed1b-4471-b554-cd05be2caafc",
+      "55a0f155-e4e6-429a-be43-64ac55a0b642",
+      "8cc87b33-3a75-444e-81f5-062f5f5c8b77"
+    ]
+  },
+  "testFlight": {
+    "version": "0.1.0",
+    "build": "2",
+    "sourceCommit": "2971b116db9b5dd18dd59ce837d8a2e8625875e9",
+    "includesThisChange": false,
+    "physicalInstallation": "NOT_RUN"
+  },
+  "macCompilationMeasurement": "e6ff8cef-5b7c-4976-8fb9-a2a10f5e24fb",
+  "publicationAudit": {
+    "status": "PASS",
+    "trackedFiles": 445
+  },
+  "fontCoverage": {
+    "status": "PASS",
+    "characters": 590
+  },
+  "deliveryGuardTests": {
+    "passed": 11,
+    "total": 11
+  },
+  "retainedChecksAndFailures": [
+    {
+      "measurement": "d75e6dc4-8383-450a-9811-b5684c1d872d",
+      "issue": "Editor disable did not release reflection",
+      "fix": "ExecuteAlways lifecycle; subsequent fixture release check passed"
+    },
+    {
+      "measurement": "9d128315-61b0-4218-8326-185870947e91",
+      "role": "depth-order corrected fixture"
+    },
+    {
+      "measurement": "3abe8030-87b5-4879-85e2-c5481e835fc2",
+      "role": "numeric fixture passed but visual review found depth artifact; not art acceptance"
+    }
+  ]
+}

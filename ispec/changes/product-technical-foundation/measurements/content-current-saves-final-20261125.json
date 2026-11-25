@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "856af426-192a-447a-a921-2819c5902f53",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "1ca109699329f3cc0884d3520ea1c20ff74a409d139c4e16ba4f629994365540",
+    "category": "verification",
+    "executable": "python3",
+    "startedAt": "2026-11-25T01:54:35.727Z",
+    "finishedAt": "2026-11-25T01:54:37.782Z",
+    "durationMs": 1985.179375,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/content-current-qa/retain-saves.py",
+      "after",
+      "final"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/content-current-qa/retain-saves.py",
+    "after",
+    "final"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T01:54:35.727Z",
+  "finishedAt": "2026-11-25T01:54:37.782Z",
+  "durationMs": 1985.179375
+}

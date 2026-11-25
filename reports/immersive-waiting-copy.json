@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "scope": "当前提示修正源码的三项既有沉浸导航无画面PlayMode回归；不代表新原生模拟器包或TestFlight构建",
+  "sourceFile": "game/Assets/OceanAngler/Runtime/GameUI.cs",
+  "sourceSha256": "5fb49db6e9d576436d27789f4de436746ee8454f2c160be299254e09a09bce23",
+  "projectSettingsUnchanged": true,
+  "tests": {
+    "id": "2",
+    "testcasecount": "3",
+    "result": "Passed",
+    "total": "3",
+    "passed": "3",
+    "failed": "0",
+    "inconclusive": "0",
+    "skipped": "0",
+    "asserts": "0",
+    "engine-version": "3.5.0.0",
+    "clr-version": "4.0.30319.42000",
+    "start-time": "2026-11-24 23:35:57Z",
+    "end-time": "2026-11-24 23:36:33Z",
+    "duration": "35.7198969"
+  },
+  "implementation": "IMPLEMENTED",
+  "acceptance": {
+    "headlessPlayMode": "PASS",
+    "newNativeSimulatorBuild": "NOT_RUN",
+    "newTestFlightBuild": "NOT_RUN",
+    "childUnderstanding": "NOT_RUN",
+    "physicalDevice": "NOT_RUN"
+  },
+  "measurementReceipt": "ispec/changes/product-technical-foundation/measurements/immersive-copy-play-20261125.json",
+  "priorNativeEvidence": {
+    "sourceCommit": "1317bc4b42958c2d94cb2c76854cc1765a851b3b",
+    "report": "reports/waterline-casting.json",
+    "scope": "此前原生二进制的证据，不作为当前提示修正源码的原生验收"
+  },
+  "hudRegionsAdded": 0,
+  "currentProductStatus": "IN_PROGRESS",
+  "releaseBuildUnchanged": "0.1.0 (8)"
+}

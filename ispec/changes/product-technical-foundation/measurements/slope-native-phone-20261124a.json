@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "b8cdf56a-e2d1-4f97-9731-d56a6e2ad43f",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "0bbed370e478956e249cddf2cf364f1cf64f1102b27a5a51011c5e9cdd1df8c3",
+    "category": "e2e",
+    "executable": "python3",
+    "startedAt": "2026-11-24T10:48:47.188Z",
+    "finishedAt": "2026-11-24T10:50:59.710Z",
+    "durationMs": 132477.37783399998,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/slope-qa/run-native.py",
+      "slope",
+      "slope20261124phone1",
+      "--device",
+      "phone",
+      "--save-from",
+      "content20261124phone1"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/slope-qa/run-native.py",
+    "slope",
+    "slope20261124phone1",
+    "--device",
+    "phone",
+    "--save-from",
+    "content20261124phone1"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T10:48:47.188Z",
+  "finishedAt": "2026-11-24T10:50:59.710Z",
+  "durationMs": 132477.37783399998
+}

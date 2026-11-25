@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "bdce1898-b393-4fb7-90d0-923d3755a817",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "4a47640a24e4c6715de428ab5fe89c9e6b58a1996b0000191531b8a993160a2f",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-25T15:03:05.792Z",
+    "finishedAt": "2026-11-25T15:03:40.319Z",
+    "durationMs": 34493.784208,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "args": [
+      "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b/.local/bluefin-flex-qa/unity-step.py",
+      "flexplay",
+      "tests",
+      "--test-platform",
+      "PlayMode",
+      "--test-filter",
+      "BluefinPectoralAnimationTests;FishAnimationTests;JournalFramingTests;IntegratedWorldTests",
+      "--label",
+      "bluefinflexplay20261125a"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b/.local/bluefin-flex-qa/unity-step.py",
+    "flexplay",
+    "tests",
+    "--test-platform",
+    "PlayMode",
+    "--test-filter",
+    "BluefinPectoralAnimationTests;FishAnimationTests;JournalFramingTests;IntegratedWorldTests",
+    "--label",
+    "bluefinflexplay20261125a"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T15:03:05.792Z",
+  "finishedAt": "2026-11-25T15:03:40.319Z",
+  "durationMs": 34493.784208
+}

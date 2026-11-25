@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "ce53706e-13e5-4ed5-8e99-5a721c6f97af",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "65e4345046a76f0c2125ac3df6b2ed75385d232987ebeb14a7b4a5074ed87ff4",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-25T07:26:36.857Z",
+    "finishedAt": "2026-11-25T07:26:37.102Z",
+    "durationMs": 174.78387500000008,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/journal-framing-qa/audit-records.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/journal-framing-qa/audit-records.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T07:26:36.857Z",
+  "finishedAt": "2026-11-25T07:26:37.102Z",
+  "durationMs": 174.78387500000008
+}

@@ -17,7 +17,7 @@ namespace OceanAngler
                 double points=OceanLandscapePointWidth();
                 return points>0?(float)(Screen.width/points):1;
 #else
-                var args=Environment.GetCommandLineArgs();int index=Array.IndexOf(args,"--ocean-point-scale");
+                var args=LaunchArguments.Get();int index=Array.IndexOf(args,"--ocean-point-scale");
                 return index>=0&&index+1<args.Length&&float.TryParse(args[index+1],NumberStyles.Float,CultureInfo.InvariantCulture,out float scale)?Mathf.Clamp(scale,1,4):1;
 #endif
             }
@@ -27,7 +27,7 @@ namespace OceanAngler
             get
             {
 #if !UNITY_IOS || UNITY_EDITOR
-                var args=Environment.GetCommandLineArgs();int index=Array.IndexOf(args,"--ocean-safe-insets");
+                var args=LaunchArguments.Get();int index=Array.IndexOf(args,"--ocean-safe-insets");
                 if(index>=0&&index+1<args.Length)
                 {
                     var v=args[index+1].Split(',');

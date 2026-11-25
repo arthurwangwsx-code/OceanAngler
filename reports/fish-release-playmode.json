@@ -1,0 +1,87 @@
+{
+  "scope": "unreleased-fish-release-scene-and-imported-animation",
+  "status": "PASS",
+  "sourceBaseCommit": "841e19dd758005f2718653bc2068b7b61adf6aef",
+  "testedSourceDigest": "82e01d76c90481a973f28f39286258eb37851ce904be31298a17977b22cb4c3f",
+  "runLabel": "release5",
+  "startedAt": "2026-11-23 17:10:44Z",
+  "finishedAt": "2026-11-23 17:10:51Z",
+  "total": 7,
+  "passed": 7,
+  "failed": 0,
+  "tests": [
+    {
+      "name": "ReleaseUsesImportedNonLoopingMotionAndFreezesTheActualTail",
+      "result": "Passed"
+    },
+    {
+      "name": "ObservationGearDemoAndFishingShareOnePausedWorld",
+      "result": "Passed"
+    },
+    {
+      "name": "CastingOpensActualBailAndClosingRestoresIt",
+      "result": "Passed"
+    },
+    {
+      "name": "ImportedAssembliesHaveOneLodOwnerAndRealMechanicalParents",
+      "result": "Passed"
+    },
+    {
+      "name": "LoadedSkinMovesWithGuideAnchorsAndLineReachesHookTarget",
+      "result": "Passed"
+    },
+    {
+      "name": "PauseStopAndReducedMotionFreezeActualMechanisms",
+      "result": "Passed"
+    },
+    {
+      "name": "WindingMovesActualCrankRotorAndOscillatingSpool",
+      "result": "Passed"
+    }
+  ],
+  "editorTests": {
+    "total": 25,
+    "passed": 25,
+    "failed": 0,
+    "finishedAt": "2026-11-23 17:12:14Z"
+  },
+  "macCompilation": "PASS",
+  "saveIsolation": "fresh --ocean-save-root under ignored unity-test-saves; no personal saves",
+  "sceneReleaseScenarios": {
+    "persistedReleasedCatches": 4,
+    "uniqueCatchIds": 4,
+    "writeFailureRetainsCatchAndLoad": "PASS",
+    "successfulRetry": "PASS",
+    "duplicateReleaseDoesNotReward": "PASS",
+    "releasedRodReturnsToRest": "PASS",
+    "turnThenReleaseAndTravel": "PASS",
+    "pauseFreezesDeparture": "PASS",
+    "immediateRecast": "PASS",
+    "reducedMotionSkipsTravel": "PASS",
+    "journalCancelsDeparture": "PASS"
+  },
+  "importedAnimation": {
+    "turnState": "PASS",
+    "releaseNonLooping": "PASS",
+    "actualTailMovement": "PASS",
+    "pauseAndReducedMotionFreezeTail": "PASS",
+    "headlessCullingOverride": true
+  },
+  "failureHistory": [
+    {
+      "runLabel": "release1",
+      "passed": 6,
+      "failed": 1,
+      "reason": "Reduced-motion release selected an unnecessary hidden fallback fish; retained target reference became invalid. Source now retains departing actor until replacement is needed."
+    }
+  ],
+  "distribution": {
+    "currentBuild": "0.1.0 (2)",
+    "frozenCommit": "2971b116db9b5dd18dd59ce837d8a2e8625875e9",
+    "includesTheseChanges": false
+  },
+  "visualAcceptance": "NOT_RUN",
+  "touchAcceptance": "NOT_RUN",
+  "deviceAcceptance": "NOT_RUN",
+  "overallProductAcceptance": "PARTIAL"
+}

@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "926448e7-b8db-4911-9f6d-6edc68b6fdf7",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "184a37cf8a9515f2f8d409ff80c43a8d5cca0cdab3bd0c70f5ceeef5cd0c53f5",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-24T22:17:00.744Z",
+    "finishedAt": "2026-11-24T22:17:00.907Z",
+    "durationMs": 132.36579099999994,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/fish-motion-qa/verify-native.py",
+      "fishmotion20261125pad1",
+      "fish-motion-pad-20261125.json"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/fish-motion-qa/verify-native.py",
+    "fishmotion20261125pad1",
+    "fish-motion-pad-20261125.json"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T22:17:00.744Z",
+  "finishedAt": "2026-11-24T22:17:00.907Z",
+  "durationMs": 132.36579099999994
+}

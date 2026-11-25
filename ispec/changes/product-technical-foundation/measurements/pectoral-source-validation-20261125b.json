@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "42fe967d-40c8-4606-96d8-dcf393ffb700",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "541119e09183da987391e50fe702a9ff3bd65e1dea8271798e4d3ffd20f339f2",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-24T18:25:27.986Z",
+    "finishedAt": "2026-11-24T18:25:36.151Z",
+    "durationMs": 8133.717124999999,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      "tools/art.py",
+      "validate",
+      "--label",
+      "pectoral-validate20261125b"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    "tools/art.py",
+    "validate",
+    "--label",
+    "pectoral-validate20261125b"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T18:25:27.986Z",
+  "finishedAt": "2026-11-24T18:25:36.151Z",
+  "durationMs": 8133.717124999999
+}

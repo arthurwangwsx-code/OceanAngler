@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "9b500d7c-2db9-4603-8cd0-9ee485b1f3fc",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "d10d16915dfda8fce7d60fb782f71172fabdb47bcc673274d279f8a2a2eb85cb",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-24T14:09:55.724Z",
+    "finishedAt": "2026-11-24T14:09:55.841Z",
+    "durationMs": 68.16983300000004,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/rig-detail-qa/verify-native.py",
+      "rig20261124phone1"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/rig-detail-qa/verify-native.py",
+    "rig20261124phone1"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-24T14:09:55.724Z",
+  "finishedAt": "2026-11-24T14:09:55.841Z",
+  "durationMs": 68.16983300000004
+}

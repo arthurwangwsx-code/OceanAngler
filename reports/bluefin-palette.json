@@ -1,0 +1,283 @@
+{
+  "date": "2026-11-24",
+  "sourceBaseCommit": "b029758ddce09446e880d3a69ff4104b2d2c1cd3",
+  "testedSourceDigest": "be58252cf57ddc26619e9c8ef16988a0dce51e6561ca52adaeb15c8591540e0e",
+  "implementation": "IMPLEMENTED",
+  "overallProductAcceptance": "PARTIAL",
+  "artAcceptance": "PARTIAL",
+  "scientificReview": "PENDING",
+  "userReview": "PENDING",
+  "scope": "One existing bluefin candidate palette/fin proportions and foreground shadow configuration; no other species completed",
+  "sourceGeometry": {
+    "scope": "saved-blend-engineering",
+    "visualAcceptance": "NOT_ACCEPTED",
+    "lods": {
+      "Bluefin_LOD0": {
+        "triangles": 24284,
+        "invalidWeightVertices": 0,
+        "invalidUVLoops": 0
+      },
+      "Bluefin_LOD1": {
+        "triangles": 9712,
+        "invalidWeightVertices": 0,
+        "invalidUVLoops": 0
+      },
+      "Bluefin_LOD2": {
+        "triangles": 3642,
+        "invalidWeightVertices": 0,
+        "invalidUVLoops": 0
+      }
+    },
+    "motion": {
+      "idle": {
+        "tailRotationRange": 0.06613948801532388,
+        "jawRotationRange": 0.004999999888241291,
+        "maximumGillDistanceToBody": 0.002394790994003415
+      },
+      "swim": {
+        "tailRotationRange": 0.0346224419772625,
+        "jawRotationRange": 2.449293581093244e-18,
+        "maximumGillDistanceToBody": 0.002394977258518338
+      },
+      "turn": {
+        "tailRotationRange": 0.20888365246355534,
+        "jawRotationRange": 0.004999999888241291,
+        "maximumGillDistanceToBody": 0.0023983691353350878
+      },
+      "burst": {
+        "tailRotationRange": 0.27558119781315327,
+        "jawRotationRange": 0.004999999888241291,
+        "maximumGillDistanceToBody": 0.0023953935597091913
+      },
+      "bite": {
+        "tailRotationRange": 0.11023248359560966,
+        "jawRotationRange": 0.3199999928474426,
+        "maximumGillDistanceToBody": 0.0023949150927364826
+      },
+      "hooked": {
+        "tailRotationRange": 0.3306974433362484,
+        "jawRotationRange": 0.3199999928474426,
+        "maximumGillDistanceToBody": 0.0023955644574016333
+      },
+      "release": {
+        "tailRotationRange": 0.038950249552726746,
+        "jawRotationRange": 2.449293581093244e-18,
+        "maximumGillDistanceToBody": 0.002395031275227666
+      }
+    },
+    "failures": [],
+    "mouth": {
+      "lowerLipVertices": 10,
+      "meanJawWeight": 1.0,
+      "liningDepth": 0.22400003671646118,
+      "throatNormalX": -1.0,
+      "farWallRayDistance": 0.05151721090078354,
+      "farWallNormalY": -0.9500250816345215,
+      "biteLipDisplacement": 0.061317427353846966,
+      "biteLipVerticalDisplacement": -0.06072927359491587,
+      "biteLipSidewaysDrift": 6.332993685020938e-09
+    },
+    "finUvStripFaces": 1284,
+    "finPalette": {
+      "faces": {
+        "blue": 2262,
+        "pale": 1862
+      },
+      "anatomySamples": {
+        "firstDorsal": 186,
+        "paired": 804,
+        "secondDorsal": 288,
+        "caudal": 527
+      },
+      "materialSlots": 6
+    },
+    "maximumBackUvSpan": 0.03450150787830353,
+    "status": "ENGINEERING_CHECKS_PASS"
+  },
+  "sourceValidationMeasurement": "8a0718aa-28bd-4e4b-8f42-5825aed656dd",
+  "sourceBuildMeasurement": "c41c63fa-62e6-4414-9d42-ae65965eabb2",
+  "unityImportMeasurement": "bc87b109-b111-4b7a-b514-ddf024795e2b",
+  "scenePreparationMeasurement": "1dbdef29-eeb5-4b82-bf90-8c64dcb5d65e",
+  "editorTests": {
+    "result": "Passed",
+    "total": "41",
+    "passed": "41",
+    "failed": "0",
+    "end-time": "2026-11-23 22:26:44Z"
+  },
+  "editorMeasurement": "1e401ba4-bf99-4282-82c9-e5f8425cb2e0",
+  "playModeTests": {
+    "result": "Passed",
+    "total": "8",
+    "passed": "8",
+    "failed": "0",
+    "end-time": "2026-11-23 22:28:04Z"
+  },
+  "playModeMeasurement": "d148bde7-1a5c-481f-9b1d-5335f156a157",
+  "macCompilation": {
+    "status": "PASS",
+    "measurement": "aefe4fa6-a3d7-4c86-b22a-fd1d1c501a57"
+  },
+  "fishGpu": {
+    "status": "PASS",
+    "scope": "isolated imported-fish Editor GPU fixture; no player UI/device acceptance",
+    "graphics": "Metal",
+    "initialPassScope": "Production material initialization; first/repeated isolated draw checked; no player-startup claim",
+    "width": 1440,
+    "height": 960,
+    "images": 6,
+    "initialPassImages": 2,
+    "importedJawAngle": 18.036840438842773,
+    "idleInitialDifference": 0.0,
+    "biteInitialDifference": 0.0,
+    "singleSidedLining": true,
+    "firstDrawStable": true
+  },
+  "fishGpuMeasurement": "668cbb52-719c-4496-b848-430c303f3261",
+  "encounterGpu": {
+    "status": "PASS",
+    "scope": "isolated Editor Metal phase samples; no player UI, continuous runtime or device qualification",
+    "graphics": "Metal",
+    "images": 8,
+    "inspectionImages": 4,
+    "diagnosticImages": 9,
+    "width": 1440,
+    "height": 900,
+    "maximumLineError": 6.39883012354403e-07,
+    "maximumLureError": 6.531061558234796e-07,
+    "approachDistance": 4.148493766784668
+  },
+  "encounterGpuMeasurement": "501badba-91be-4feb-bd9a-c0c28a4d7756",
+  "fieldGpu": {
+    "status": "PASS",
+    "scope": "isolated Editor Metal scene with sampled swim poses; no player/UI/device qualification",
+    "graphics": "Metal",
+    "members": 3,
+    "images": 7,
+    "width": 1440,
+    "height": 900,
+    "visibleDifference": 1.070463167707203e-05,
+    "minimumMovement": 2.6971774101257324
+  },
+  "fieldGpuMeasurement": "37bedfec-1474-4c61-8a52-47f88e6b7639",
+  "studio": {
+    "status": "SIX_VIEWS_INSPECTED",
+    "measurement": "eb3ed480-1e27-451d-a4e2-9741ea121760"
+  },
+  "turntable": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 960,
+        "height": 640,
+        "avg_frame_rate": "12/1",
+        "nb_read_frames": "36"
+      }
+    ],
+    "format": {
+      "duration": "3.000000"
+    },
+    "status": "PASS",
+    "scope": "36 decoded source-review frames, not runtime FPS"
+  },
+  "turntableRenderMeasurement": "d7294966-e543-4a21-84e2-d893aaf65ec0",
+  "turntableVideoMeasurement": "a2a67d08-139a-470c-a3bb-a44a124961cc",
+  "review": {
+    "studio": "6 full images",
+    "importedFish": "6 unique views and 2 pixel-identical initial draws",
+    "bay": "8 phase and 4 inspection-position samples",
+    "field": "7 images",
+    "video": "All 36 frames decoded; contact sheet inspected; not HD motion/device acceptance"
+  },
+  "shadow": {
+    "resolution": 1024,
+    "cascades": 1,
+    "distance": 24,
+    "depthBias": 2,
+    "normalBias": 0,
+    "filter": "URP Low soft shadows, 4 PCF samples",
+    "casts": true,
+    "receives": true,
+    "performance": "NOT_RUN_PHYSICAL_DEVICES",
+    "normalisedBootstrapSceneChange": "Sun Hard to Soft; other component data unchanged"
+  },
+  "finAtlas": {
+    "before": [
+      512,
+      512
+    ],
+    "after": [
+      1024,
+      512
+    ],
+    "sourceMaterialSlots": 6,
+    "opaqueMembranes": true
+  },
+  "schoolMaximumSwimBodyRadius": 0.397106,
+  "retainedVisualRejections": [
+    {
+      "run": "palette1",
+      "reason": "First palette too dark, despite anchor-render infrastructure PASS"
+    },
+    {
+      "run": "paletteshadow3",
+      "reason": "Resolution/softness alone did not remove body self-shadow blocks"
+    },
+    {
+      "run": "paletteshadow4",
+      "reason": "Some bias combinations worsened shadow bands; not selected"
+    }
+  ],
+  "retainedCommandFailure": {
+    "measurement": "6b7a980d-9138-46f8-bd5c-9c97cb9d6317",
+    "reason": "Review label contained hyphen; entry point rejected before Unity launch"
+  },
+  "nativeWindow": {
+    "status": "NOT_RUN_CURRENT_SOURCE",
+    "lastObservedDesktop": "MAC_LOCKED_IN_PREVIOUS_TURN",
+    "thisTurnCua": "Institutional reference image in in-app browser only"
+  },
+  "testFlight": {
+    "build": "3",
+    "sourceCommit": "05c8cc7cd5abf747e6a174cc154e4f575e35e422",
+    "includesThisChange": false,
+    "installation": "NOT_RUN"
+  },
+  "knownOpen": [
+    "Scientific proportions, eye/mouth detail, scale regularity, opaque fin approximation and user art approval",
+    "Actual player UI, phone/tablet aspect and controls",
+    "Low soft-shadow/filter and larger fin atlas device cost, far-shadow fade and SRP Batcher exclusion",
+    "Full other species, protected encounters, gear and two habitats",
+    "Child/parent playtests and iPhone/iPad 20-minute performance/recovery"
+  ],
+  "metrics": {
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "binding": "VERIFIED",
+    "independentReceiptAudit": "INCOMPLETE",
+    "verifiedMeasurements": [
+      "c41c63fa-62e6-4414-9d42-ae65965eabb2",
+      "8a0718aa-28bd-4e4b-8f42-5825aed656dd",
+      "bc87b109-b111-4b7a-b514-ddf024795e2b",
+      "1dbdef29-eeb5-4b82-bf90-8c64dcb5d65e",
+      "1e401ba4-bf99-4282-82c9-e5f8425cb2e0",
+      "d148bde7-1a5c-481f-9b1d-5335f156a157",
+      "aefe4fa6-a3d7-4c86-b22a-fd1d1c501a57",
+      "668cbb52-719c-4496-b848-430c303f3261",
+      "501badba-91be-4feb-bd9a-c0c28a4d7756",
+      "37bedfec-1474-4c61-8a52-47f88e6b7639",
+      "eb3ed480-1e27-451d-a4e2-9741ea121760",
+      "d7294966-e543-4a21-84e2-d893aaf65ec0",
+      "a2a67d08-139a-470c-a3bb-a44a124961cc",
+      "7b19c2e5-8627-46f3-a350-80fcc8c2af7c",
+      "6b9ce572-9e9c-4eea-bc92-b2df555b6c2b",
+      "81a5a1e4-e776-4d70-b3a3-bcc9efeb3cee"
+    ]
+  },
+  "sourceChecks": {
+    "status": "PASS",
+    "requirements": 12,
+    "tasks": 14,
+    "publicationFiles": 567
+  }
+}

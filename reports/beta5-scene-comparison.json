@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "scope": "Generated scene semantic comparison; game object names, component class/script identity and internal references normalized; all other serialized values compared",
+  "baseCommit": "fd14dbb2ffe6ed455e2ec5f3dbf1edf74e654ccd",
+  "blocks": 20,
+  "changedSemanticObjects": [],
+  "canonicalSha256": "053ede9f9dc4b5125737c7376200291c15baf2a13f04f05e7670c04c27408c1a"
+}

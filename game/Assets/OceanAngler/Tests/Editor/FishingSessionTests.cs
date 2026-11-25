@@ -27,11 +27,25 @@ namespace OceanAngler.Tests
         {
             var f=catalog.Fish(fish);return new CatchRecord { catchId=id??Guid.NewGuid().ToString(),fishId=f.id,habitatId=f.habitatId,weight=(f.minWeight+f.maxWeight)/2,length=(f.minLength+f.maxLength)/2,skillPoints=30,mode="assisted" };
         }
-        [Test] public void CompleteCatalogHasStarterLoadoutAndEighteenReachableTasks()
+        [Test] public void CompleteCatalogHasStarterLoadoutAndEighteenTasks()
         {
             Assert.AreEqual(12,catalog.fish.Length);Assert.AreEqual(3,catalog.habitats.Length);Assert.AreEqual(18,catalog.tasks.Length);
+            Assert.AreEqual(3,catalog.observations.Length);
             foreach(var pair in new[]{("rod",6),("reel",4),("line",4),("lure",6)})Assert.AreEqual(pair.Item2,catalog.gear.Count(g=>g.category==pair.Item1));
             new ProgressData().Validate(catalog);
+        }
+        [Test] public void ObservationSpeciesCannotBeHookedOrAwardedPoints()
+        {
+            var service=Service();
+            foreach(var observed in catalog.observations)
+            {
+                var session=new FishingSession();var data=new ProgressData{habitatId=observed.habitatId};
+                Assert.Throws<ArgumentException>(()=>session.Cast(new FishDefinition{id=observed.id,habitatId=observed.habitatId},data,catalog,new System.Random(1)));
+                Assert.That(session.Phase,Is.EqualTo(FishingPhase.Ready));Assert.That(session.Catch,Is.Null);
+                var record=Record();record.fishId=observed.id;record.habitatId=observed.habitatId;
+                Assert.Throws<ArgumentException>(()=>service.Settle(record));
+            }
+            Assert.That(Service().Data.totalPoints,Is.Zero);Assert.That(Service().Data.catches,Is.Empty);
         }
         [Test] public void MissedStandardBiteCanRetryWithoutLosingPoints()
         {
@@ -42,6 +56,42 @@ namespace OceanAngler.Tests
         [Test] public void PauseFreezesAndBlocksInput()
         {
             var s=Fighting();s.Paused=true;Advance(s,200,true);s.Strike();Assert.AreEqual(0,s.Progress);Assert.AreEqual(0,s.Tension);
+        }
+        [Test] public void EncounterClockUsesPausedSimulationAndConfiguredBiteDelay()
+        {
+            var s=Cast();Advance(s,8);Assert.That(s.PhaseProgress,Is.EqualTo(.5f).Within(.001f));
+            s.Paused=true;Advance(s,20);Assert.That(s.PhaseProgress,Is.EqualTo(.5f).Within(.001f));
+            s.Paused=false;while(s.Phase==FishingPhase.Casting)s.Tick(.05f,false);
+            Advance(s,15);Assert.That(s.Phase,Is.EqualTo(FishingPhase.Waiting));Assert.That(s.PhaseProgress,Is.EqualTo(.25f).Within(.001f));
+            s.Paused=true;Advance(s,100);Assert.That(s.PhaseProgress,Is.EqualTo(.25f).Within(.001f));
+        }
+        [Test] public void EncounterStageBoundariesMeetAndMouthReachesLure()
+        {
+            foreach(float power in new[]{.3f,.6f,1f})foreach(float lane in new[]{-1.3f,0,1.3f})
+            {
+                var hook=new Vector3(-1.1f,.04f,0);var launch=new Vector3(1,1.6f,.3f);
+                FishingEncounter.Pose Pose(FishingPhase phase,float progress)=>FishingEncounter.Evaluate(phase,progress,power,hook,launch,lane,3,false);
+                var cast=Pose(FishingPhase.Casting,1);var wait=Pose(FishingPhase.Waiting,0);var approach=Pose(FishingPhase.Waiting,1);var bite=Pose(FishingPhase.Bite,0);var fight=Pose(FishingPhase.Fighting,0);var end=Pose(FishingPhase.Fighting,1);var landed=Pose(FishingPhase.Landed,1);
+                Assert.That(Vector3.Distance(cast.fishPosition,wait.fishPosition),Is.LessThan(.00001f));Assert.That(Quaternion.Angle(cast.fishRotation,wait.fishRotation),Is.LessThan(.01f));
+                Assert.That(Vector3.Distance(cast.lurePosition,wait.lurePosition),Is.LessThan(.00001f));
+                Assert.That(Vector3.Distance(approach.fishPosition,bite.fishPosition),Is.LessThan(.00001f));Assert.That(Quaternion.Angle(approach.fishRotation,bite.fishRotation),Is.LessThan(.01f));
+                Assert.That(Vector3.Distance(bite.fishPosition+bite.fishRotation*hook,bite.lurePosition),Is.LessThan(.00001f));
+                Assert.That(Vector3.Distance(bite.fishPosition,fight.fishPosition),Is.LessThan(.00001f));
+                Assert.That(Vector3.Distance(end.fishPosition,landed.fishPosition),Is.LessThan(.00001f));Assert.That(Quaternion.Angle(end.fishRotation,landed.fishRotation),Is.LessThan(.01f));
+                Assert.That(Vector3.Distance(Pose(FishingPhase.Casting,0).lurePosition,Pose(FishingPhase.Ready,0).lurePosition),Is.LessThan(.00001f));
+                Assert.That(Vector3.Distance(wait.fishPosition,approach.fishPosition),Is.GreaterThan(4));
+            }
+        }
+        [Test] public void ReducedEncounterKeepsOneStaticFishPoseWithoutCastArc()
+        {
+            var home=new Vector3(-1.3f,.3f,1.2f);Quaternion? rotation=null;
+            foreach(FishingPhase phase in Enum.GetValues(typeof(FishingPhase)))foreach(float progress in new[]{0f,.25f,.5f,1f})
+            {
+                var pose=FishingEncounter.Evaluate(phase,progress,.6f,Vector3.left,Vector3.up*2,-1.3f,progress*100,true);
+                Assert.That(pose.fishPosition,Is.EqualTo(home));
+                if(rotation.HasValue)Assert.That(Quaternion.Angle(rotation.Value,pose.fishRotation),Is.LessThan(.001f));rotation=pose.fishRotation;
+                Assert.That(Vector3.Distance(pose.lurePosition,new Vector3(-1.4f,.2f,2.16f)),Is.LessThan(.00001f));
+            }
         }
         [Test] public void StandardOverloadEscapes() { var s=Fighting(true);Advance(s,200,true);Assert.AreEqual(FishingPhase.Escaped,s.Phase); }
         [Test] public void AssistedModeRescuesHeldReelAndLands() { var s=Fighting();Advance(s,1000,true);Assert.AreEqual(FishingPhase.Landed,s.Phase);Assert.Greater(s.Rescues,0); }
@@ -72,6 +122,7 @@ namespace OceanAngler.Tests
                 }
                 Assert.AreEqual(FishingPhase.Landed,s.Phase);maxSeconds=Math.Max(maxSeconds,s.Elapsed);
                 Assert.Greater(service.Settle(s.Catch),0);s.FinishRelease();Assert.AreEqual(FishingPhase.Ready,s.Phase);
+                Assert.AreEqual(0,s.Tension);Assert.AreEqual(0,s.Progress);Assert.IsNull(s.Catch);
                 Assert.AreEqual(i+1,Service().Data.catches.Count);
             }
             Assert.Less(maxSeconds,180);Assert.AreEqual(20,Service().Data.catches.Count);Assert.GreaterOrEqual(Service().Data.totalPoints,1800);
@@ -112,8 +163,14 @@ namespace OceanAngler.Tests
         }
         [Test] public void SettingsLoadoutAndRecordsSurviveRestart()
         {
-            var s=Service();s.Settle(Record());s.Settle(Record());s.SelectGear("rod-2");s.Configure(x=>{x.leftHanded=true;x.reducedMotion=true;x.assisted=false;});
-            var p=Service().Data;Assert.IsTrue(p.settings.leftHanded);Assert.IsTrue(p.settings.reducedMotion);Assert.IsFalse(p.settings.assisted);Assert.AreEqual("rod-2",p.rodId);Assert.AreEqual(2,p.catches.Count);
+            var s=Service();s.Settle(Record());s.Settle(Record());s.SelectGear("rod-2");s.Configure(x=>{x.leftHanded=true;x.reducedMotion=true;x.assisted=false;x.music=true;});
+            var p=Service().Data;Assert.IsTrue(p.settings.leftHanded);Assert.IsTrue(p.settings.reducedMotion);Assert.IsFalse(p.settings.assisted);Assert.IsTrue(p.settings.music);Assert.AreEqual("rod-2",p.rodId);Assert.AreEqual(2,p.catches.Count);
+        }
+        [Test] public void MusicDefaultsOffForNewAndLegacySettings()
+        {
+            Assert.That(new GameSettings().music,Is.False);
+            var legacy=JsonUtility.FromJson<GameSettings>("{\"assisted\":true,\"sound\":true,\"haptics\":true,\"leftHanded\":true}");
+            Assert.That(legacy.music,Is.False);Assert.That(legacy.leftHanded&&legacy.sound&&legacy.haptics,Is.True);
         }
         [Test] public void FailedTaskIsNotMarkedCompleteByUnrelatedCatch()
         {

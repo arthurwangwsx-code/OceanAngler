@@ -1,0 +1,1416 @@
+{
+  "status": "PASS_TARGETED_LIGHTING_NATIVE_AND_PRESERVATION",
+  "source": {
+    "sourceCommit": "6caaed6450815a5ec7a1efe919fdea75e2cb1548",
+    "sourceDigest": "556d58ad72594bc745937b44c1cc1291ed6ba1cc26a8bcd45ae62ef8e660c000",
+    "projectSettingsSha256": "bea92e9b5c8b678dd130d48c1f43acaf939b56cacce33928a5a45af6da0a4585"
+  },
+  "appDigest": "b0e38658f2679c2d7f1ffc11f1e05e4e1cc61eb4b881ee639e1ff57061a1d800",
+  "editor": 6,
+  "play": 8,
+  "metalImages": 28,
+  "modelsTexturesOtherRuntimeIdentical": 430,
+  "normalNativeRuns": 21,
+  "nativePng": 453,
+  "reopen": [
+    {
+      "status": "PASS_NEW_PROCESS_JOURNAL_REOPEN",
+      "label": "deeplightreopentablet",
+      "device": "tablet",
+      "sourceCase": "deeplighttablet07",
+      "sourceCommit": "6caaed6450815a5ec7a1efe919fdea75e2cb1548",
+      "appDigest": "b0e38658f2679c2d7f1ffc11f1e05e4e1cc61eb4b881ee639e1ff57061a1d800",
+      "catches": 21,
+      "points": 3868,
+      "capturedFrames": 6,
+      "ledgerSettingsAndObservationsPreserved": true,
+      "scope": "Actual new process, byte-identical copy of genuine newly caught halibut save; no OS touch, child, physical or final art qualification"
+    },
+    {
+      "status": "PASS_NEW_PROCESS_JOURNAL_REOPEN",
+      "label": "deeplightreopenphone",
+      "device": "phone",
+      "sourceCase": "deeplightphone14",
+      "sourceCommit": "6caaed6450815a5ec7a1efe919fdea75e2cb1548",
+      "appDigest": "b0e38658f2679c2d7f1ffc11f1e05e4e1cc61eb4b881ee639e1ff57061a1d800",
+      "catches": 26,
+      "points": 4570,
+      "capturedFrames": 6,
+      "ledgerSettingsAndObservationsPreserved": true,
+      "scope": "Actual new process, byte-identical copy of genuine newly caught halibut save; no OS touch, child, physical or final art qualification"
+    }
+  ],
+  "oldFilesByteIdentical": 133,
+  "clips": [
+    {
+      "device": "tablet",
+      "label": "deeplighttablet07",
+      "startSecondsFromRecordingRequest": 12.38112406730652,
+      "endSecondsFromRecordingRequest": 25.62966389656067,
+      "rawDuration": 28.555,
+      "clipSeconds": 13.248539829254149,
+      "path": "art/previews/deep-water-lighting-native/tablet-fight-release.mp4",
+      "note": "Bounded game-only fight/release; no home screen, audio, exposure or color adjustment. Resize and 30fps sampling only, not runtime FPS."
+    },
+    {
+      "device": "phone",
+      "label": "deeplightphone14",
+      "startSecondsFromRecordingRequest": 12.053201484680176,
+      "endSecondsFromRecordingRequest": 25.333606910705566,
+      "rawDuration": 28.703333,
+      "clipSeconds": 13.28040542602539,
+      "path": "art/previews/deep-water-lighting-native/phone-fight-release.mp4",
+      "note": "Bounded game-only fight/release; no home screen, audio, exposure or color adjustment. Resize and 30fps sampling only, not runtime FPS."
+    }
+  ],
+  "scope": "Local owned iPhone/iPad Simulators, genuine saves and normal production RNG; targeted UI/world rendering and bookkeeping only",
+  "lighting": "IMPLEMENTED_VISUAL_IMPROVEMENT_CANDIDATE",
+  "remaining": "Natural fin movement, finished models/gear, science/user A1-A3, child first catch and icon understanding, OS physical touch, dual physical 20-minute reliability and current-source TestFlight install NOT_ACCEPTED",
+  "historicalAudit": "INCOMPLETE retained",
+  "normalNativeCases": [
+    {
+      "status": "PASS_NATIVE_NORMAL_RANDOM_ENCOUNTER",
+      "scope": "Same existing Simulator binary and real controller RNG/EventSystem. Genuine isolated progress copy; one new catch. Not OS touch, child play, physical performance, twenty continuous rounds or final art acceptance",
+      "label": "deeplightphone01",
+      "device": "phone",
+      "source": {
+        "sourceCommit": "6caaed6450815a5ec7a1efe919fdea75e2cb1548",
+        "sourceDigest": "556d58ad72594bc745937b44c1cc1291ed6ba1cc26a8bcd45ae62ef8e660c000",
+        "projectSettingsSha256": "bea92e9b5c8b678dd130d48c1f43acaf939b56cacce33928a5a45af6da0a4585"
+      },
+      "appDigest": "b0e38658f2679c2d7f1ffc11f1e05e4e1cc61eb4b881ee639e1ff57061a1d800",
+      "newFishId": "cod",
+      "newWeight": 6.835223197937012,
+      "newLength": 71.8284912109375,
+      "newMode": "standard",
+      "newSkillPoints": 30,
+      "newAwardedPoints": 171,
+      "pointsBefore": 4455,
+      "pointsAfter": 4626,
+      "catchesBefore": 25,
+      "catchesAfter": 26,
+      "saveSha256": "80b0695958b3a6eb79d3c0e60cf6324eeb54d7cb3591ed2b97d893a978229566",
+      "rawExistingPrefixPreserved": true,
+      "otherProgressAndSettingsSemanticsPreserved": true,
+      "onlyAddedSetting": "underwaterOnly=false",
+      "capturedFrames": 21,
+      "hud": [
+        {
+          "phase": "Ready",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.049358975142240524
+        },
+        {
+          "phase": "Bite",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0890224352478981
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.12034111469984055
+        }
+      ],
+      "maxHudRatio": 0.12034111469984055,
+      "nativeElapsedSeconds": 27.26534080505371,
+      "recordingFinalized": true
+    },
+    {
+      "status": "PASS_NATIVE_NORMAL_RANDOM_ENCOUNTER",
+      "scope": "Same existing Simulator binary and real controller RNG/EventSystem. Genuine isolated progress copy; one new catch. Not OS touch, child play, physical performance, twenty continuous rounds or final art acceptance",
+      "label": "deeplightphone02",
+      "device": "phone",
+      "source": {
+        "sourceCommit": "6caaed6450815a5ec7a1efe919fdea75e2cb1548",
+        "sourceDigest": "556d58ad72594bc745937b44c1cc1291ed6ba1cc26a8bcd45ae62ef8e660c000",
+        "projectSettingsSha256": "bea92e9b5c8b678dd130d48c1f43acaf939b56cacce33928a5a45af6da0a4585"
+      },
+      "appDigest": "b0e38658f2679c2d7f1ffc11f1e05e4e1cc61eb4b881ee639e1ff57061a1d800",
+      "newFishId": "bigeye",
+      "newWeight": 11.132116317749023,
+      "newLength": 88.58917236328125,
+      "newMode": "standard",
+      "newSkillPoints": 30,
+      "newAwardedPoints": 150,
+      "pointsBefore": 4455,
+      "pointsAfter": 4605,
+      "catchesBefore": 25,
+      "catchesAfter": 26,
+      "saveSha256": "4c48cf6f575ba60f059db909f725c0e91354b32fa35318354b9032cd2c9e6743",
+      "rawExistingPrefixPreserved": true,
+      "otherProgressAndSettingsSemanticsPreserved": true,
+      "onlyAddedSetting": "underwaterOnly=false",
+      "capturedFrames": 21,
+      "hud": [
+        {
+          "phase": "Ready",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.049358975142240524
+        },
+        {
+          "phase": "Bite",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0890224352478981
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.12034111469984055
+        }
+      ],
+      "maxHudRatio": 0.12034111469984055,
+      "nativeElapsedSeconds": 29.59634780883789,
+      "recordingFinalized": true
+    },
+    {
+      "status": "PASS_NATIVE_NORMAL_RANDOM_ENCOUNTER",
+      "scope": "Same existing Simulator binary and real controller RNG/EventSystem. Genuine isolated progress copy; one new catch. Not OS touch, child play, physical performance, twenty continuous rounds or final art acceptance",
+      "label": "deeplightphone03",
+      "device": "phone",
+      "source": {
+        "sourceCommit": "6caaed6450815a5ec7a1efe919fdea75e2cb1548",
+        "sourceDigest": "556d58ad72594bc745937b44c1cc1291ed6ba1cc26a8bcd45ae62ef8e660c000",
+        "projectSettingsSha256": "bea92e9b5c8b678dd130d48c1f43acaf939b56cacce33928a5a45af6da0a4585"
+      },
+      "appDigest": "b0e38658f2679c2d7f1ffc11f1e05e4e1cc61eb4b881ee639e1ff57061a1d800",
+      "newFishId": "alfonsino",
+      "newWeight": 0.842084527015686,
+      "newLength": 26.89925765991211,
+      "newMode": "standard",
+      "newSkillPoints": 30,
+      "newAwardedPoints": 110,
+      "pointsBefore": 4455,
+      "pointsAfter": 4565,
+      "catchesBefore": 25,
+      "catchesAfter": 26,
+      "saveSha256": "7737fc52ce2e280d983eee51b38d70e7be32655f31f15eabcaf64d4e4cd06cef",
+      "rawExistingPrefixPreserved": true,
+      "otherProgressAndSettingsSemanticsPreserved": true,
+      "onlyAddedSetting": "underwaterOnly=false",
+      "capturedFrames": 21,
+      "hud": [
+        {
+          "phase": "Ready",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.049358975142240524
+        },
+        {
+          "phase": "Bite",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0890224352478981
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.12034111469984055
+        }
+      ],
+      "maxHudRatio": 0.12034111469984055,
+      "nativeElapsedSeconds": 26.330644607543945,
+      "recordingFinalized": true
+    },
+    {
+      "status": "PASS_NATIVE_NORMAL_RANDOM_ENCOUNTER",
+      "scope": "Same existing Simulator binary and real controller RNG/EventSystem. Genuine isolated progress copy; one new catch. Not OS touch, child play, physical performance, twenty continuous rounds or final art acceptance",
+      "label": "deeplightphone04",
+      "device": "phone",
+      "source": {
+        "sourceCommit": "6caaed6450815a5ec7a1efe919fdea75e2cb1548",
+        "sourceDigest": "556d58ad72594bc745937b44c1cc1291ed6ba1cc26a8bcd45ae62ef8e660c000",
+        "projectSettingsSha256": "bea92e9b5c8b678dd130d48c1f43acaf939b56cacce33928a5a45af6da0a4585"
+      },
+      "appDigest": "b0e38658f2679c2d7f1ffc11f1e05e4e1cc61eb4b881ee639e1ff57061a1d800",
+      "newFishId": "bigeye",
+      "newWeight": 19.0643310546875,
+      "newLength": 121.35266876220703,
+      "newMode": "standard",
+      "newSkillPoints": 30,
+      "newAwardedPoints": 221,
+      "pointsBefore": 4455,
+      "pointsAfter": 4676,
+      "catchesBefore": 25,
+      "catchesAfter": 26,
+      "saveSha256": "ede63745404823325177fe0f3095d4fce78661419f6eea5231aad82c5488793b",
+      "rawExistingPrefixPreserved": true,
+      "otherProgressAndSettingsSemanticsPreserved": true,
+      "onlyAddedSetting": "underwaterOnly=false",
+      "capturedFrames": 21,
+      "hud": [
+        {
+          "phase": "Ready",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.049358975142240524
+        },
+        {
+          "phase": "Bite",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0890224352478981
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.12034111469984055
+        }
+      ],
+      "maxHudRatio": 0.12034111469984055,
+      "nativeElapsedSeconds": 29.297077178955078,
+      "recordingFinalized": true
+    },
+    {
+      "status": "PASS_NATIVE_NORMAL_RANDOM_ENCOUNTER",
+      "scope": "Same existing Simulator binary and real controller RNG/EventSystem. Genuine isolated progress copy; one new catch. Not OS touch, child play, physical performance, twenty continuous rounds or final art acceptance",
+      "label": "deeplightphone05",
+      "device": "phone",
+      "source": {
+        "sourceCommit": "6caaed6450815a5ec7a1efe919fdea75e2cb1548",
+        "sourceDigest": "556d58ad72594bc745937b44c1cc1291ed6ba1cc26a8bcd45ae62ef8e660c000",
+        "projectSettingsSha256": "bea92e9b5c8b678dd130d48c1f43acaf939b56cacce33928a5a45af6da0a4585"
+      },
+      "appDigest": "b0e38658f2679c2d7f1ffc11f1e05e4e1cc61eb4b881ee639e1ff57061a1d800",
+      "newFishId": "cod",
+      "newWeight": 11.190021514892578,
+      "newLength": 95.58193969726562,
+      "newMode": "standard",
+      "newSkillPoints": 30,
+      "newAwardedPoints": 248,
+      "pointsBefore": 4455,
+      "pointsAfter": 4703,
+      "catchesBefore": 25,
+      "catchesAfter": 26,
+      "saveSha256": "d245cee5e1d28021d414277971ed5ae7dc667bef3ad3f29c7423ee2d4d0a881e",
+      "rawExistingPrefixPreserved": true,
+      "otherProgressAndSettingsSemanticsPreserved": true,
+      "onlyAddedSetting": "underwaterOnly=false",
+      "capturedFrames": 21,
+      "hud": [
+        {
+          "phase": "Ready",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.049358975142240524
+        },
+        {
+          "phase": "Bite",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0890224352478981
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.12034111469984055
+        }
+      ],
+      "maxHudRatio": 0.12034111469984055,
+      "nativeElapsedSeconds": 27.029848098754883,
+      "recordingFinalized": true
+    },
+    {
+      "status": "PASS_NATIVE_NORMAL_RANDOM_ENCOUNTER",
+      "scope": "Same existing Simulator binary and real controller RNG/EventSystem. Genuine isolated progress copy; one new catch. Not OS touch, child play, physical performance, twenty continuous rounds or final art acceptance",
+      "label": "deeplightphone06",
+      "device": "phone",
+      "source": {
+        "sourceCommit": "6caaed6450815a5ec7a1efe919fdea75e2cb1548",
+        "sourceDigest": "556d58ad72594bc745937b44c1cc1291ed6ba1cc26a8bcd45ae62ef8e660c000",
+        "projectSettingsSha256": "bea92e9b5c8b678dd130d48c1f43acaf939b56cacce33928a5a45af6da0a4585"
+      },
+      "appDigest": "b0e38658f2679c2d7f1ffc11f1e05e4e1cc61eb4b881ee639e1ff57061a1d800",
+      "newFishId": "alfonsino",
+      "newWeight": 0.7876730561256409,
+      "newLength": 26.20674705505371,
+      "newMode": "standard",
+      "newSkillPoints": 30,
+      "newAwardedPoints": 106,
+      "pointsBefore": 4455,
+      "pointsAfter": 4561,
+      "catchesBefore": 25,
+      "catchesAfter": 26,
+      "saveSha256": "1b9754d199441752ded3ac3a1e0ff76d0c9a38505b37da202d5012be79f15098",
+      "rawExistingPrefixPreserved": true,
+      "otherProgressAndSettingsSemanticsPreserved": true,
+      "onlyAddedSetting": "underwaterOnly=false",
+      "capturedFrames": 21,
+      "hud": [
+        {
+          "phase": "Ready",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.049358975142240524
+        },
+        {
+          "phase": "Bite",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0890224352478981
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.12034111469984055
+        }
+      ],
+      "maxHudRatio": 0.12034111469984055,
+      "nativeElapsedSeconds": 26.262895584106445,
+      "recordingFinalized": true
+    },
+    {
+      "status": "PASS_NATIVE_NORMAL_RANDOM_ENCOUNTER",
+      "scope": "Same existing Simulator binary and real controller RNG/EventSystem. Genuine isolated progress copy; one new catch. Not OS touch, child play, physical performance, twenty continuous rounds or final art acceptance",
+      "label": "deeplightphone07",
+      "device": "phone",
+      "source": {
+        "sourceCommit": "6caaed6450815a5ec7a1efe919fdea75e2cb1548",
+        "sourceDigest": "556d58ad72594bc745937b44c1cc1291ed6ba1cc26a8bcd45ae62ef8e660c000",
+        "projectSettingsSha256": "bea92e9b5c8b678dd130d48c1f43acaf939b56cacce33928a5a45af6da0a4585"
+      },
+      "appDigest": "b0e38658f2679c2d7f1ffc11f1e05e4e1cc61eb4b881ee639e1ff57061a1d800",
+      "newFishId": "cod",
+      "newWeight": 7.897482395172119,
+      "newLength": 77.62263488769531,
+      "newMode": "standard",
+      "newSkillPoints": 30,
+      "newAwardedPoints": 190,
+      "pointsBefore": 4455,
+      "pointsAfter": 4645,
+      "catchesBefore": 25,
+      "catchesAfter": 26,
+      "saveSha256": "b8fb1155d84779bf79594556cb58611b96866a807583f318d29aebd36ee9d032",
+      "rawExistingPrefixPreserved": true,
+      "otherProgressAndSettingsSemanticsPreserved": true,
+      "onlyAddedSetting": "underwaterOnly=false",
+      "capturedFrames": 21,
+      "hud": [
+        {
+          "phase": "Ready",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.049358975142240524
+        },
+        {
+          "phase": "Bite",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0890224352478981
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.12034111469984055
+        }
+      ],
+      "maxHudRatio": 0.12034111469984055,
+      "nativeElapsedSeconds": 27.230920791625977,
+      "recordingFinalized": true
+    },
+    {
+      "status": "PASS_NATIVE_NORMAL_RANDOM_ENCOUNTER",
+      "scope": "Same existing Simulator binary and real controller RNG/EventSystem. Genuine isolated progress copy; one new catch. Not OS touch, child play, physical performance, twenty continuous rounds or final art acceptance",
+      "label": "deeplightphone08",
+      "device": "phone",
+      "source": {
+        "sourceCommit": "6caaed6450815a5ec7a1efe919fdea75e2cb1548",
+        "sourceDigest": "556d58ad72594bc745937b44c1cc1291ed6ba1cc26a8bcd45ae62ef8e660c000",
+        "projectSettingsSha256": "bea92e9b5c8b678dd130d48c1f43acaf939b56cacce33928a5a45af6da0a4585"
+      },
+      "appDigest": "b0e38658f2679c2d7f1ffc11f1e05e4e1cc61eb4b881ee639e1ff57061a1d800",
+      "newFishId": "cod",
+      "newWeight": 2.858268976211548,
+      "newLength": 50.13601303100586,
+      "newMode": "standard",
+      "newSkillPoints": 30,
+      "newAwardedPoints": 108,
+      "pointsBefore": 4455,
+      "pointsAfter": 4563,
+      "catchesBefore": 25,
+      "catchesAfter": 26,
+      "saveSha256": "663307e71b5c7af3f1ffeffb6cacb9d2a761c6f3a2158aabf00218b1a2f38d14",
+      "rawExistingPrefixPreserved": true,
+      "otherProgressAndSettingsSemanticsPreserved": true,
+      "onlyAddedSetting": "underwaterOnly=false",
+      "capturedFrames": 21,
+      "hud": [
+        {
+          "phase": "Ready",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.049358975142240524
+        },
+        {
+          "phase": "Bite",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0890224352478981
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.12034111469984055
+        }
+      ],
+      "maxHudRatio": 0.12034111469984055,
+      "nativeElapsedSeconds": 27.114343643188477,
+      "recordingFinalized": true
+    },
+    {
+      "status": "PASS_NATIVE_NORMAL_RANDOM_ENCOUNTER",
+      "scope": "Same existing Simulator binary and real controller RNG/EventSystem. Genuine isolated progress copy; one new catch. Not OS touch, child play, physical performance, twenty continuous rounds or final art acceptance",
+      "label": "deeplightphone09",
+      "device": "phone",
+      "source": {
+        "sourceCommit": "6caaed6450815a5ec7a1efe919fdea75e2cb1548",
+        "sourceDigest": "556d58ad72594bc745937b44c1cc1291ed6ba1cc26a8bcd45ae62ef8e660c000",
+        "projectSettingsSha256": "bea92e9b5c8b678dd130d48c1f43acaf939b56cacce33928a5a45af6da0a4585"
+      },
+      "appDigest": "b0e38658f2679c2d7f1ffc11f1e05e4e1cc61eb4b881ee639e1ff57061a1d800",
+      "newFishId": "cod",
+      "newWeight": 6.785705089569092,
+      "newLength": 71.55839538574219,
+      "newMode": "standard",
+      "newSkillPoints": 30,
+      "newAwardedPoints": 170,
+      "pointsBefore": 4455,
+      "pointsAfter": 4625,
+      "catchesBefore": 25,
+      "catchesAfter": 26,
+      "saveSha256": "78858f44ca72e9601886f79f7c7d95fdf0c7bae4a43a2dc3c32fb76d01b9263c",
+      "rawExistingPrefixPreserved": true,
+      "otherProgressAndSettingsSemanticsPreserved": true,
+      "onlyAddedSetting": "underwaterOnly=false",
+      "capturedFrames": 21,
+      "hud": [
+        {
+          "phase": "Ready",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.049358975142240524
+        },
+        {
+          "phase": "Bite",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0890224352478981
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.12034111469984055
+        }
+      ],
+      "maxHudRatio": 0.12034111469984055,
+      "nativeElapsedSeconds": 27.41051483154297,
+      "recordingFinalized": true
+    },
+    {
+      "status": "PASS_NATIVE_NORMAL_RANDOM_ENCOUNTER",
+      "scope": "Same existing Simulator binary and real controller RNG/EventSystem. Genuine isolated progress copy; one new catch. Not OS touch, child play, physical performance, twenty continuous rounds or final art acceptance",
+      "label": "deeplightphone10",
+      "device": "phone",
+      "source": {
+        "sourceCommit": "6caaed6450815a5ec7a1efe919fdea75e2cb1548",
+        "sourceDigest": "556d58ad72594bc745937b44c1cc1291ed6ba1cc26a8bcd45ae62ef8e660c000",
+        "projectSettingsSha256": "bea92e9b5c8b678dd130d48c1f43acaf939b56cacce33928a5a45af6da0a4585"
+      },
+      "appDigest": "b0e38658f2679c2d7f1ffc11f1e05e4e1cc61eb4b881ee639e1ff57061a1d800",
+      "newFishId": "bigeye",
+      "newWeight": 8.648541450500488,
+      "newLength": 78.3309326171875,
+      "newMode": "standard",
+      "newSkillPoints": 30,
+      "newAwardedPoints": 128,
+      "pointsBefore": 4455,
+      "pointsAfter": 4583,
+      "catchesBefore": 25,
+      "catchesAfter": 26,
+      "saveSha256": "9faabe5e57610e7b28aaa5810385c73bebbf9629b2b425721b71ae93c1f8e97a",
+      "rawExistingPrefixPreserved": true,
+      "otherProgressAndSettingsSemanticsPreserved": true,
+      "onlyAddedSetting": "underwaterOnly=false",
+      "capturedFrames": 21,
+      "hud": [
+        {
+          "phase": "Ready",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.049358975142240524
+        },
+        {
+          "phase": "Bite",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0890224352478981
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.12034111469984055
+        }
+      ],
+      "maxHudRatio": 0.12034111469984055,
+      "nativeElapsedSeconds": 29.11432456970215,
+      "recordingFinalized": true
+    },
+    {
+      "status": "PASS_NATIVE_NORMAL_RANDOM_ENCOUNTER",
+      "scope": "Same existing Simulator binary and real controller RNG/EventSystem. Genuine isolated progress copy; one new catch. Not OS touch, child play, physical performance, twenty continuous rounds or final art acceptance",
+      "label": "deeplightphone11",
+      "device": "phone",
+      "source": {
+        "sourceCommit": "6caaed6450815a5ec7a1efe919fdea75e2cb1548",
+        "sourceDigest": "556d58ad72594bc745937b44c1cc1291ed6ba1cc26a8bcd45ae62ef8e660c000",
+        "projectSettingsSha256": "bea92e9b5c8b678dd130d48c1f43acaf939b56cacce33928a5a45af6da0a4585"
+      },
+      "appDigest": "b0e38658f2679c2d7f1ffc11f1e05e4e1cc61eb4b881ee639e1ff57061a1d800",
+      "newFishId": "bigeye",
+      "newWeight": 12.869511604309082,
+      "newLength": 95.765380859375,
+      "newMode": "standard",
+      "newSkillPoints": 30,
+      "newAwardedPoints": 165,
+      "pointsBefore": 4455,
+      "pointsAfter": 4620,
+      "catchesBefore": 25,
+      "catchesAfter": 26,
+      "saveSha256": "7fb05d2c9ccfae907602ce74288aafc1c742d8ea918fdcfe917dbfe6c42c0ab0",
+      "rawExistingPrefixPreserved": true,
+      "otherProgressAndSettingsSemanticsPreserved": true,
+      "onlyAddedSetting": "underwaterOnly=false",
+      "capturedFrames": 21,
+      "hud": [
+        {
+          "phase": "Ready",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.049358975142240524
+        },
+        {
+          "phase": "Bite",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0890224352478981
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.12034111469984055
+        }
+      ],
+      "maxHudRatio": 0.12034111469984055,
+      "nativeElapsedSeconds": 29.162229537963867,
+      "recordingFinalized": true
+    },
+    {
+      "status": "PASS_NATIVE_NORMAL_RANDOM_ENCOUNTER",
+      "scope": "Same existing Simulator binary and real controller RNG/EventSystem. Genuine isolated progress copy; one new catch. Not OS touch, child play, physical performance, twenty continuous rounds or final art acceptance",
+      "label": "deeplightphone12",
+      "device": "phone",
+      "source": {
+        "sourceCommit": "6caaed6450815a5ec7a1efe919fdea75e2cb1548",
+        "sourceDigest": "556d58ad72594bc745937b44c1cc1291ed6ba1cc26a8bcd45ae62ef8e660c000",
+        "projectSettingsSha256": "bea92e9b5c8b678dd130d48c1f43acaf939b56cacce33928a5a45af6da0a4585"
+      },
+      "appDigest": "b0e38658f2679c2d7f1ffc11f1e05e4e1cc61eb4b881ee639e1ff57061a1d800",
+      "newFishId": "cod",
+      "newWeight": 6.099200248718262,
+      "newLength": 67.8138198852539,
+      "newMode": "standard",
+      "newSkillPoints": 30,
+      "newAwardedPoints": 158,
+      "pointsBefore": 4455,
+      "pointsAfter": 4613,
+      "catchesBefore": 25,
+      "catchesAfter": 26,
+      "saveSha256": "4f44ecf3a75711c86b3ba95d6da285425a1632e00e30507377adc53ed2012253",
+      "rawExistingPrefixPreserved": true,
+      "otherProgressAndSettingsSemanticsPreserved": true,
+      "onlyAddedSetting": "underwaterOnly=false",
+      "capturedFrames": 21,
+      "hud": [
+        {
+          "phase": "Ready",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.049358975142240524
+        },
+        {
+          "phase": "Bite",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0890224352478981
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.12034111469984055
+        }
+      ],
+      "maxHudRatio": 0.12034111469984055,
+      "nativeElapsedSeconds": 27.364124298095703,
+      "recordingFinalized": true
+    },
+    {
+      "status": "PASS_NATIVE_NORMAL_RANDOM_ENCOUNTER",
+      "scope": "Same existing Simulator binary and real controller RNG/EventSystem. Genuine isolated progress copy; one new catch. Not OS touch, child play, physical performance, twenty continuous rounds or final art acceptance",
+      "label": "deeplighttablet01",
+      "device": "tablet",
+      "source": {
+        "sourceCommit": "6caaed6450815a5ec7a1efe919fdea75e2cb1548",
+        "sourceDigest": "556d58ad72594bc745937b44c1cc1291ed6ba1cc26a8bcd45ae62ef8e660c000",
+        "projectSettingsSha256": "bea92e9b5c8b678dd130d48c1f43acaf939b56cacce33928a5a45af6da0a4585"
+      },
+      "appDigest": "b0e38658f2679c2d7f1ffc11f1e05e4e1cc61eb4b881ee639e1ff57061a1d800",
+      "newFishId": "alfonsino",
+      "newWeight": 0.6870996356010437,
+      "newLength": 24.92672348022461,
+      "newMode": "standard",
+      "newSkillPoints": 30,
+      "newAwardedPoints": 100,
+      "pointsBefore": 3703,
+      "pointsAfter": 3803,
+      "catchesBefore": 20,
+      "catchesAfter": 21,
+      "saveSha256": "9af45773c1f54551c21fc7ce91d33f58c50c4c140e0cf78e4e5cba98afc79d41",
+      "rawExistingPrefixPreserved": true,
+      "otherProgressAndSettingsSemanticsPreserved": true,
+      "onlyAddedSetting": "underwaterOnly=false",
+      "capturedFrames": 21,
+      "hud": [
+        {
+          "phase": "Ready",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0182711873203516
+        },
+        {
+          "phase": "Bite",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.03295338898897171
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.04454661160707474
+        }
+      ],
+      "maxHudRatio": 0.04454661160707474,
+      "nativeElapsedSeconds": 26.929704666137695,
+      "recordingFinalized": true
+    },
+    {
+      "status": "PASS_NATIVE_NORMAL_RANDOM_ENCOUNTER",
+      "scope": "Same existing Simulator binary and real controller RNG/EventSystem. Genuine isolated progress copy; one new catch. Not OS touch, child play, physical performance, twenty continuous rounds or final art acceptance",
+      "label": "deeplighttablet02",
+      "device": "tablet",
+      "source": {
+        "sourceCommit": "6caaed6450815a5ec7a1efe919fdea75e2cb1548",
+        "sourceDigest": "556d58ad72594bc745937b44c1cc1291ed6ba1cc26a8bcd45ae62ef8e660c000",
+        "projectSettingsSha256": "bea92e9b5c8b678dd130d48c1f43acaf939b56cacce33928a5a45af6da0a4585"
+      },
+      "appDigest": "b0e38658f2679c2d7f1ffc11f1e05e4e1cc61eb4b881ee639e1ff57061a1d800",
+      "newFishId": "bigeye",
+      "newWeight": 14.330586433410645,
+      "newLength": 101.80024719238281,
+      "newMode": "standard",
+      "newSkillPoints": 30,
+      "newAwardedPoints": 178,
+      "pointsBefore": 3703,
+      "pointsAfter": 3881,
+      "catchesBefore": 20,
+      "catchesAfter": 21,
+      "saveSha256": "34cf880d19938b71f6a43e8b153ea46efdd02eeab3a00ec735481144b1503f86",
+      "rawExistingPrefixPreserved": true,
+      "otherProgressAndSettingsSemanticsPreserved": true,
+      "onlyAddedSetting": "underwaterOnly=false",
+      "capturedFrames": 21,
+      "hud": [
+        {
+          "phase": "Ready",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0182711873203516
+        },
+        {
+          "phase": "Bite",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.03295338898897171
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.04454661160707474
+        }
+      ],
+      "maxHudRatio": 0.04454661160707474,
+      "nativeElapsedSeconds": 29.39695930480957,
+      "recordingFinalized": true
+    },
+    {
+      "status": "PASS_NATIVE_NORMAL_RANDOM_ENCOUNTER",
+      "scope": "Same existing Simulator binary and real controller RNG/EventSystem. Genuine isolated progress copy; one new catch. Not OS touch, child play, physical performance, twenty continuous rounds or final art acceptance",
+      "label": "deeplighttablet03",
+      "device": "tablet",
+      "source": {
+        "sourceCommit": "6caaed6450815a5ec7a1efe919fdea75e2cb1548",
+        "sourceDigest": "556d58ad72594bc745937b44c1cc1291ed6ba1cc26a8bcd45ae62ef8e660c000",
+        "projectSettingsSha256": "bea92e9b5c8b678dd130d48c1f43acaf939b56cacce33928a5a45af6da0a4585"
+      },
+      "appDigest": "b0e38658f2679c2d7f1ffc11f1e05e4e1cc61eb4b881ee639e1ff57061a1d800",
+      "newFishId": "cod",
+      "newWeight": 7.12394380569458,
+      "newLength": 73.40332794189453,
+      "newMode": "standard",
+      "newSkillPoints": 30,
+      "newAwardedPoints": 176,
+      "pointsBefore": 3703,
+      "pointsAfter": 3879,
+      "catchesBefore": 20,
+      "catchesAfter": 21,
+      "saveSha256": "7906658a93e9886ac18e59f726cf103ac8445e8d846e58e5a75876e6433ce7c0",
+      "rawExistingPrefixPreserved": true,
+      "otherProgressAndSettingsSemanticsPreserved": true,
+      "onlyAddedSetting": "underwaterOnly=false",
+      "capturedFrames": 21,
+      "hud": [
+        {
+          "phase": "Ready",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0182711873203516
+        },
+        {
+          "phase": "Bite",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.03295338898897171
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.04454661160707474
+        }
+      ],
+      "maxHudRatio": 0.04454661160707474,
+      "nativeElapsedSeconds": 27.446788787841797,
+      "recordingFinalized": true
+    },
+    {
+      "status": "PASS_NATIVE_NORMAL_RANDOM_ENCOUNTER",
+      "scope": "Same existing Simulator binary and real controller RNG/EventSystem. Genuine isolated progress copy; one new catch. Not OS touch, child play, physical performance, twenty continuous rounds or final art acceptance",
+      "label": "deeplighttablet04",
+      "device": "tablet",
+      "source": {
+        "sourceCommit": "6caaed6450815a5ec7a1efe919fdea75e2cb1548",
+        "sourceDigest": "556d58ad72594bc745937b44c1cc1291ed6ba1cc26a8bcd45ae62ef8e660c000",
+        "projectSettingsSha256": "bea92e9b5c8b678dd130d48c1f43acaf939b56cacce33928a5a45af6da0a4585"
+      },
+      "appDigest": "b0e38658f2679c2d7f1ffc11f1e05e4e1cc61eb4b881ee639e1ff57061a1d800",
+      "newFishId": "alfonsino",
+      "newWeight": 2.218843460083008,
+      "newLength": 44.4216423034668,
+      "newMode": "standard",
+      "newSkillPoints": 30,
+      "newAwardedPoints": 208,
+      "pointsBefore": 3703,
+      "pointsAfter": 3911,
+      "catchesBefore": 20,
+      "catchesAfter": 21,
+      "saveSha256": "b71e914f804615a98ca1003b8549f140add6fc580207cf9dc27415e800244331",
+      "rawExistingPrefixPreserved": true,
+      "otherProgressAndSettingsSemanticsPreserved": true,
+      "onlyAddedSetting": "underwaterOnly=false",
+      "capturedFrames": 21,
+      "hud": [
+        {
+          "phase": "Ready",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0182711873203516
+        },
+        {
+          "phase": "Bite",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.03295338898897171
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.04454661160707474
+        }
+      ],
+      "maxHudRatio": 0.04454661160707474,
+      "nativeElapsedSeconds": 26.579994201660156,
+      "recordingFinalized": true
+    },
+    {
+      "status": "PASS_NATIVE_NORMAL_RANDOM_ENCOUNTER",
+      "scope": "Same existing Simulator binary and real controller RNG/EventSystem. Genuine isolated progress copy; one new catch. Not OS touch, child play, physical performance, twenty continuous rounds or final art acceptance",
+      "label": "deeplighttablet05",
+      "device": "tablet",
+      "source": {
+        "sourceCommit": "6caaed6450815a5ec7a1efe919fdea75e2cb1548",
+        "sourceDigest": "556d58ad72594bc745937b44c1cc1291ed6ba1cc26a8bcd45ae62ef8e660c000",
+        "projectSettingsSha256": "bea92e9b5c8b678dd130d48c1f43acaf939b56cacce33928a5a45af6da0a4585"
+      },
+      "appDigest": "b0e38658f2679c2d7f1ffc11f1e05e4e1cc61eb4b881ee639e1ff57061a1d800",
+      "newFishId": "bigeye",
+      "newWeight": 24.614639282226562,
+      "newLength": 144.27786254882812,
+      "newMode": "standard",
+      "newSkillPoints": 30,
+      "newAwardedPoints": 271,
+      "pointsBefore": 3703,
+      "pointsAfter": 3974,
+      "catchesBefore": 20,
+      "catchesAfter": 21,
+      "saveSha256": "1c69ae7e7941e75351cd06b2d8da8e1dac5bd736b1cecb15cb55006c4c7a76e6",
+      "rawExistingPrefixPreserved": true,
+      "otherProgressAndSettingsSemanticsPreserved": true,
+      "onlyAddedSetting": "underwaterOnly=false",
+      "capturedFrames": 21,
+      "hud": [
+        {
+          "phase": "Ready",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0182711873203516
+        },
+        {
+          "phase": "Bite",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.03295338898897171
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.04454661160707474
+        }
+      ],
+      "maxHudRatio": 0.04454661160707474,
+      "nativeElapsedSeconds": 29.612585067749023,
+      "recordingFinalized": true
+    },
+    {
+      "status": "PASS_NATIVE_NORMAL_RANDOM_ENCOUNTER",
+      "scope": "Same existing Simulator binary and real controller RNG/EventSystem. Genuine isolated progress copy; one new catch. Not OS touch, child play, physical performance, twenty continuous rounds or final art acceptance",
+      "label": "deeplighttablet06",
+      "device": "tablet",
+      "source": {
+        "sourceCommit": "6caaed6450815a5ec7a1efe919fdea75e2cb1548",
+        "sourceDigest": "556d58ad72594bc745937b44c1cc1291ed6ba1cc26a8bcd45ae62ef8e660c000",
+        "projectSettingsSha256": "bea92e9b5c8b678dd130d48c1f43acaf939b56cacce33928a5a45af6da0a4585"
+      },
+      "appDigest": "b0e38658f2679c2d7f1ffc11f1e05e4e1cc61eb4b881ee639e1ff57061a1d800",
+      "newFishId": "cod",
+      "newWeight": 3.7096590995788574,
+      "newLength": 54.77996063232422,
+      "newMode": "standard",
+      "newSkillPoints": 30,
+      "newAwardedPoints": 116,
+      "pointsBefore": 3703,
+      "pointsAfter": 3819,
+      "catchesBefore": 20,
+      "catchesAfter": 21,
+      "saveSha256": "730b83cbaac8681cb950bf287134eb194eb6523a77c339b7442b0a25769907e6",
+      "rawExistingPrefixPreserved": true,
+      "otherProgressAndSettingsSemanticsPreserved": true,
+      "onlyAddedSetting": "underwaterOnly=false",
+      "capturedFrames": 21,
+      "hud": [
+        {
+          "phase": "Ready",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0182711873203516
+        },
+        {
+          "phase": "Bite",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.03295338898897171
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.04454661160707474
+        }
+      ],
+      "maxHudRatio": 0.04454661160707474,
+      "nativeElapsedSeconds": 27.429901123046875,
+      "recordingFinalized": true
+    },
+    {
+      "status": "PASS_NATIVE_NORMAL_RANDOM_ENCOUNTER",
+      "scope": "Same existing Simulator binary and real controller RNG/EventSystem. Genuine isolated progress copy; one new catch. Not OS touch, child play, physical performance, twenty continuous rounds or final art acceptance",
+      "label": "deeplighttablet07",
+      "device": "tablet",
+      "source": {
+        "sourceCommit": "6caaed6450815a5ec7a1efe919fdea75e2cb1548",
+        "sourceDigest": "556d58ad72594bc745937b44c1cc1291ed6ba1cc26a8bcd45ae62ef8e660c000",
+        "projectSettingsSha256": "bea92e9b5c8b678dd130d48c1f43acaf939b56cacce33928a5a45af6da0a4585"
+      },
+      "appDigest": "b0e38658f2679c2d7f1ffc11f1e05e4e1cc61eb4b881ee639e1ff57061a1d800",
+      "newFishId": "halibut",
+      "newWeight": 11.929642677307129,
+      "newLength": 87.87800598144531,
+      "newMode": "standard",
+      "newSkillPoints": 30,
+      "newAwardedPoints": 165,
+      "pointsBefore": 3703,
+      "pointsAfter": 3868,
+      "catchesBefore": 20,
+      "catchesAfter": 21,
+      "saveSha256": "ea9f6af36aea1254cf0dde45a18535ada6a9cd29777c936a4703404ebd65985c",
+      "rawExistingPrefixPreserved": true,
+      "otherProgressAndSettingsSemanticsPreserved": true,
+      "onlyAddedSetting": "underwaterOnly=false",
+      "capturedFrames": 21,
+      "hud": [
+        {
+          "phase": "Ready",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0182711873203516
+        },
+        {
+          "phase": "Bite",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.03295338898897171
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.04454661160707474
+        }
+      ],
+      "maxHudRatio": 0.04454661160707474,
+      "nativeElapsedSeconds": 28.630258560180664,
+      "recordingFinalized": true
+    },
+    {
+      "status": "PASS_NATIVE_NORMAL_RANDOM_ENCOUNTER",
+      "scope": "Same existing Simulator binary and real controller RNG/EventSystem. Genuine isolated progress copy; one new catch. Not OS touch, child play, physical performance, twenty continuous rounds or final art acceptance",
+      "label": "deeplightphone13",
+      "device": "phone",
+      "source": {
+        "sourceCommit": "6caaed6450815a5ec7a1efe919fdea75e2cb1548",
+        "sourceDigest": "556d58ad72594bc745937b44c1cc1291ed6ba1cc26a8bcd45ae62ef8e660c000",
+        "projectSettingsSha256": "bea92e9b5c8b678dd130d48c1f43acaf939b56cacce33928a5a45af6da0a4585"
+      },
+      "appDigest": "b0e38658f2679c2d7f1ffc11f1e05e4e1cc61eb4b881ee639e1ff57061a1d800",
+      "newFishId": "alfonsino",
+      "newWeight": 0.810228705406189,
+      "newLength": 26.493820190429688,
+      "newMode": "standard",
+      "newSkillPoints": 30,
+      "newAwardedPoints": 108,
+      "pointsBefore": 4455,
+      "pointsAfter": 4563,
+      "catchesBefore": 25,
+      "catchesAfter": 26,
+      "saveSha256": "9c72c57b642e04d01668f7faf2d2ab00f0800c583e86c17298bd54ca52348a14",
+      "rawExistingPrefixPreserved": true,
+      "otherProgressAndSettingsSemanticsPreserved": true,
+      "onlyAddedSetting": "underwaterOnly=false",
+      "capturedFrames": 21,
+      "hud": [
+        {
+          "phase": "Ready",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.049358975142240524
+        },
+        {
+          "phase": "Bite",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0890224352478981
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.12034111469984055
+        }
+      ],
+      "maxHudRatio": 0.12034111469984055,
+      "nativeElapsedSeconds": 26.864675521850586,
+      "recordingFinalized": true
+    },
+    {
+      "status": "PASS_NATIVE_NORMAL_RANDOM_ENCOUNTER",
+      "scope": "Same existing Simulator binary and real controller RNG/EventSystem. Genuine isolated progress copy; one new catch. Not OS touch, child play, physical performance, twenty continuous rounds or final art acceptance",
+      "label": "deeplightphone14",
+      "device": "phone",
+      "source": {
+        "sourceCommit": "6caaed6450815a5ec7a1efe919fdea75e2cb1548",
+        "sourceDigest": "556d58ad72594bc745937b44c1cc1291ed6ba1cc26a8bcd45ae62ef8e660c000",
+        "projectSettingsSha256": "bea92e9b5c8b678dd130d48c1f43acaf939b56cacce33928a5a45af6da0a4585"
+      },
+      "appDigest": "b0e38658f2679c2d7f1ffc11f1e05e4e1cc61eb4b881ee639e1ff57061a1d800",
+      "newFishId": "halibut",
+      "newWeight": 6.794510841369629,
+      "newLength": 65.70356750488281,
+      "newMode": "standard",
+      "newSkillPoints": 30,
+      "newAwardedPoints": 115,
+      "pointsBefore": 4455,
+      "pointsAfter": 4570,
+      "catchesBefore": 25,
+      "catchesAfter": 26,
+      "saveSha256": "fd3180fa1e95f94899488bcb2c106e86bef9783f1739ef04cfad77ae6b7de191",
+      "rawExistingPrefixPreserved": true,
+      "otherProgressAndSettingsSemanticsPreserved": true,
+      "onlyAddedSetting": "underwaterOnly=false",
+      "capturedFrames": 21,
+      "hud": [
+        {
+          "phase": "Ready",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.049358975142240524
+        },
+        {
+          "phase": "Bite",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.0890224352478981
+        },
+        {
+          "phase": "Fighting",
+          "leftHanded": false,
+          "centralClear": true,
+          "buttons": 2,
+          "occupiedRatio": 0.12034111469984055
+        }
+      ],
+      "maxHudRatio": 0.12034111469984055,
+      "nativeElapsedSeconds": 28.497936248779297,
+      "recordingFinalized": true
+    }
+  ],
+  "selectedHalibut": {
+    "tablet": "deeplighttablet07",
+    "phone": "deeplightphone14"
+  },
+  "metal": {
+    "status": "PASS",
+    "graphics": "Metal",
+    "scope": "Isolated same-pose Editor GPU old/new research lamp; not native UI, scientific or final art acceptance",
+    "images": 28,
+    "samples": 4,
+    "views": [
+      {
+        "name": "halibut-fight-20",
+        "oldRepeatPixels": 0,
+        "newRepeatPixels": 0,
+        "changedPixels": 414948,
+        "camera": {
+          "x": 0.7870955467224121,
+          "y": 2.960986852645874,
+          "z": -1.3889319896697998
+        },
+        "subject": {
+          "x": 0.7870955467224121,
+          "y": 0.1609870046377182,
+          "z": 2.4110679626464844
+        },
+        "oldLamp": {
+          "x": 0.0,
+          "y": 2.0,
+          "z": -6.0
+        },
+        "newLamp": {
+          "x": 1.487095594406128,
+          "y": 3.5245258808135986,
+          "z": -0.9736926555633545
+        },
+        "fov": 42.0
+      },
+      {
+        "name": "halibut-fight-80",
+        "oldRepeatPixels": 0,
+        "newRepeatPixels": 0,
+        "changedPixels": 453671,
+        "camera": {
+          "x": 0.09135927259922028,
+          "y": 3.083864450454712,
+          "z": -2.4594295024871826
+        },
+        "subject": {
+          "x": 0.09135927259922028,
+          "y": 0.2838645875453949,
+          "z": 1.3405704498291016
+        },
+        "oldLamp": {
+          "x": 0.0,
+          "y": 2.0,
+          "z": -6.0
+        },
+        "newLamp": {
+          "x": 0.7913592457771301,
+          "y": 3.6474034786224365,
+          "z": -2.0441901683807373
+        },
+        "fov": 42.0
+      },
+      {
+        "name": "halibut-landed",
+        "oldRepeatPixels": 0,
+        "newRepeatPixels": 0,
+        "changedPixels": 458829,
+        "camera": {
+          "x": 0.0,
+          "y": 3.0999999046325684,
+          "z": -2.5999999046325684
+        },
+        "subject": {
+          "x": 0.0,
+          "y": 0.30000001192092896,
+          "z": 1.2000000476837158
+        },
+        "oldLamp": {
+          "x": 0.0,
+          "y": 2.0,
+          "z": -6.0
+        },
+        "newLamp": {
+          "x": 0.699999988079071,
+          "y": 3.663538932800293,
+          "z": -2.184760570526123
+        },
+        "fov": 42.0
+      },
+      {
+        "name": "halibut-journal",
+        "oldRepeatPixels": 0,
+        "newRepeatPixels": 0,
+        "changedPixels": 105777,
+        "camera": {
+          "x": 0.0,
+          "y": 1.2500001192092896,
+          "z": -6.499999523162842
+        },
+        "subject": {
+          "x": 2.3499999046325684,
+          "y": 1.350000023841858,
+          "z": 1.2000000476837158
+        },
+        "oldLamp": {
+          "x": 0.0,
+          "y": 2.0,
+          "z": -6.0
+        },
+        "newLamp": {
+          "x": 0.699999988079071,
+          "y": 1.9465261697769165,
+          "z": -6.430346965789795
+        },
+        "fov": 42.0
+      },
+      {
+        "name": "bigeye-fight-20",
+        "oldRepeatPixels": 0,
+        "newRepeatPixels": 0,
+        "changedPixels": 96468,
+        "camera": {
+          "x": 0.0,
+          "y": 1.2500001192092896,
+          "z": -6.499999523162842
+        },
+        "subject": {
+          "x": 0.7213388681411743,
+          "y": 0.16350698471069336,
+          "z": 2.438307046890259
+        },
+        "oldLamp": {
+          "x": 0.0,
+          "y": 2.0,
+          "z": -6.0
+        },
+        "newLamp": {
+          "x": 0.699999988079071,
+          "y": 1.9465261697769165,
+          "z": -6.430346965789795
+        },
+        "fov": 42.0
+      },
+      {
+        "name": "alfonsino-fight-20",
+        "oldRepeatPixels": 0,
+        "newRepeatPixels": 0,
+        "changedPixels": 101826,
+        "camera": {
+          "x": 0.0,
+          "y": 1.2500001192092896,
+          "z": -6.499999523162842
+        },
+        "subject": {
+          "x": 0.7213388681411743,
+          "y": 0.16350698471069336,
+          "z": 2.438307046890259
+        },
+        "oldLamp": {
+          "x": 0.0,
+          "y": 2.0,
+          "z": -6.0
+        },
+        "newLamp": {
+          "x": 0.699999988079071,
+          "y": 1.9465261697769165,
+          "z": -6.430346965789795
+        },
+        "fov": 42.0
+      },
+      {
+        "name": "cod-fight-20",
+        "oldRepeatPixels": 0,
+        "newRepeatPixels": 0,
+        "changedPixels": 98043,
+        "camera": {
+          "x": 0.0,
+          "y": 1.2500001192092896,
+          "z": -6.499999523162842
+        },
+        "subject": {
+          "x": 0.7213388681411743,
+          "y": 0.16350698471069336,
+          "z": 2.438307046890259
+        },
+        "oldLamp": {
+          "x": 0.0,
+          "y": 2.0,
+          "z": -6.0
+        },
+        "newLamp": {
+          "x": 0.699999988079071,
+          "y": 1.9465261697769165,
+          "z": -6.430346965789795
+        },
+        "fov": 42.0
+      }
+    ]
+  },
+  "visualReview": {
+    "status": "PARTIAL_FINAL_ART",
+    "reviewed": "Both native fight/landed/release originals, both reopened journal originals, Metal old/new contact and selected full originals, twelve clip samples",
+    "finding": "Eyed side, pattern and fin margins read more clearly while deep blue background remains. Hard rim/specular, eye treatment and fin motion remain candidate quality."
+  },
+  "ciSourceFailure": {
+    "commit": "6caaed6",
+    "run": 45548743605,
+    "reason": "Authored prefab changed but the prior asset-manifest hash was stale; failure retained"
+  },
+  "ciManifestFix": {
+    "conclusion": "success",
+    "headSha": "69fe46c9ccb17d8322339b81864cacde7adf918a",
+    "status": "completed",
+    "url": "https://github.com/arthurwangwsx-code/OceanAngler/actions/runs/45550035582"
+  },
+  "distribution": "LOCAL_SIMULATOR_ONLY; not uploaded to TestFlight; local version0.1.0(8) is different from Apple old frozen build8",
+  "recordIntegrity": {
+    "status": "PASS_CURRENT_INCREMENT_EXCLUDING_RUNNING_SELF",
+    "historicalOverall": "INCOMPLETE",
+    "newCompleted": 27,
+    "newStarts": 28,
+    "oldObjectsUnchanged": true,
+    "receiptsAndBindingsVerified": true,
+    "completedIntervalsDisjoint": true,
+    "onlyRunningSelfPending": true,
+    "failuresRetained": [],
+    "scope": "Own local state/receipt integrity; not formal independent CLI audit or product acceptance"
+  }
+}

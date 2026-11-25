@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "15dad6a5-bc96-4538-b92d-18b3c50d6950",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "b6a11230c802a497fd33a4006059b7ae10795e864a7275e81a4640c7c59d2915",
+    "category": "lint",
+    "executable": "python3",
+    "startedAt": "2026-11-25T11:07:34.817Z",
+    "finishedAt": "2026-11-25T11:07:36.781Z",
+    "durationMs": 1934.5862499999998,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/immersive-pages-qa/lint-repair.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/immersive-pages-qa/lint-repair.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T11:07:34.817Z",
+  "finishedAt": "2026-11-25T11:07:36.781Z",
+  "durationMs": 1934.5862499999998
+}

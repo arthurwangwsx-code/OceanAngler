@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "f56544f4-f594-4803-9499-10778838bdcb",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "d972d77888a69ea88b62d2bd47e7b718e974e9c00736450ecc897edbec471d00",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-25T12:53:01.993Z",
+    "finishedAt": "2026-11-25T12:53:09.412Z",
+    "durationMs": 7389.987249999999,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/bluefin-gill-gpu-qa/unity-step.py",
+      "binding-green",
+      "tests",
+      "--test-filter",
+      "BluefinMaterialBindingTests"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/bluefin-gill-gpu-qa/unity-step.py",
+    "binding-green",
+    "tests",
+    "--test-filter",
+    "BluefinMaterialBindingTests"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T12:53:01.993Z",
+  "finishedAt": "2026-11-25T12:53:09.412Z",
+  "durationMs": 7389.987249999999
+}

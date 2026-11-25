@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "01226c3f-b764-4f06-992a-f96715284444",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "ccdfb6739466b3036c8ee53a8bdc0a7fd8dd41addd72bbb1bfae5fba62d865f9",
+    "category": "e2e",
+    "executable": "python3",
+    "startedAt": "2026-11-25T14:34:15.542Z",
+    "finishedAt": "2026-11-25T14:43:08.102Z",
+    "durationMs": 532513.656125,
+    "exitCode": 1,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "args": [
+      ".local/bluefin-flex-qa/content-run-native.py",
+      "content",
+      "normal9phone20261125a",
+      "--device",
+      "phone"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    ".local/bluefin-flex-qa/content-run-native.py",
+    "content",
+    "normal9phone20261125a",
+    "--device",
+    "phone"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 1,
+  "startedAt": "2026-11-25T14:34:15.542Z",
+  "finishedAt": "2026-11-25T14:43:08.102Z",
+  "durationMs": 532513.656125
+}

@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "1d68e62f-aefd-4eb6-84b4-59c7f59435f8",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "bec4b60eee5fe7480a4d8d1aee7a05ff604ea07dca92e11c1ae2722117deaf0a",
+    "category": "lint",
+    "executable": "python3",
+    "startedAt": "2026-11-25T18:10:13.323Z",
+    "finishedAt": "2026-11-25T18:10:15.969Z",
+    "durationMs": 2610.8175,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "args": [
+      "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b/.local/hero-surface-qa/final-checks-b.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b/.local/hero-surface-qa/final-checks-b.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T18:10:13.323Z",
+  "finishedAt": "2026-11-25T18:10:15.969Z",
+  "durationMs": 2610.8175
+}

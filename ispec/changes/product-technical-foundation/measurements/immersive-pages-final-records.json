@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "8830ca2b-7c2e-4128-9d00-ec3d253ed6ec",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "aadd899082a89f63f1d2e6ac14e764114ed6a3c62fcb87db1c64264f08c060bc",
+    "category": "e2e",
+    "executable": "python3",
+    "startedAt": "2026-11-25T11:28:42.160Z",
+    "finishedAt": "2026-11-25T11:28:42.266Z",
+    "durationMs": 75.81408399999998,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/immersive-pages-qa/audit-records.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/immersive-pages-qa/audit-records.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T11:28:42.160Z",
+  "finishedAt": "2026-11-25T11:28:42.266Z",
+  "durationMs": 75.81408399999998
+}

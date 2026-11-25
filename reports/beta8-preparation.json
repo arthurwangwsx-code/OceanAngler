@@ -1,0 +1,87 @@
+{
+  "status": "PREPARATION_PASS_RELEASE_READBACK_PASS",
+  "preparedAt": "2026-11-24T20:58:16.115779+00:00",
+  "version": "0.1.0",
+  "build": "8",
+  "baseCommit": "d5f0cb74b6dae6cea2e0e1385f283a3d2b05988e",
+  "editorTests": {
+    "result": "Passed",
+    "total": "60",
+    "passed": "60",
+    "failed": "0",
+    "end-time": "2026-11-24 20:40:09Z"
+  },
+  "headlessPlayModeTests": {
+    "result": "Passed",
+    "total": "21",
+    "passed": "21",
+    "failed": "0",
+    "end-time": "2026-11-24 20:57:22Z"
+  },
+  "releaseGuardTests": 12,
+  "sceneSemanticComparison": {
+    "status": "PASS",
+    "scope": "Generated scene semantic comparison; game object names, component class/script identity and internal references normalized; all other serialized values compared",
+    "baseCommit": "d5f0cb74b6dae6cea2e0e1385f283a3d2b05988e",
+    "blocks": 20,
+    "changedSemanticObjects": [],
+    "canonicalSha256": "053ede9f9dc4b5125737c7376200291c15baf2a13f04f05e7670c04c27408c1a"
+  },
+  "previousSimulatorEvidence": "reports/bluefin-neutral-albedo.json",
+  "scope": "Cumulative first-hero and HUD improvements; no new runtime UI or gameplay implementation this release increment",
+  "freeze": "PASS",
+  "archive": "PASS",
+  "upload": "PASS",
+  "actualInstallation": "NOT_RUN",
+  "actualSystemTouch": "NOT_RUN",
+  "artAcceptance": "PARTIAL",
+  "wholeProduct": "PARTIAL",
+  "historicalIndependentAudit": "INCOMPLETE",
+  "cacheMaintenance": {
+    "completedIntermediateCaches": 6,
+    "allProductsUnchanged": true,
+    "removedIntermediateKilobytes": 7569600,
+    "scope": "Only six completed OceanAngler Simulator intermediate caches; all original products, exports, source, logs, receipts and saves retained"
+  },
+  "journeys": {
+    "content-journey": {
+      "status": "PASS",
+      "rounds": 30,
+      "points": 5547,
+      "catches": 30,
+      "duplicateReleaseTaps": 30,
+      "inspectedSpecies": 12,
+      "equippedGear": 20,
+      "sceneRestart": {
+        "status": "PASS",
+        "scope": "headless scene/controller reload, not OS process restart",
+        "points": 5547,
+        "catches": 30,
+        "observations": 3
+      },
+      "scope": "headless PlayMode EventSystem journey; no rendered-frame/device acceptance"
+    },
+    "continuous-journey": {
+      "status": "PASS",
+      "rounds": 20,
+      "points": 3767,
+      "catches": 20,
+      "duplicateReleaseTaps": 0,
+      "inspectedSpecies": 0,
+      "equippedGear": 0,
+      "sceneRestart": {
+        "status": "PASS",
+        "scope": "headless scene/controller reload, not OS process restart",
+        "points": 3767,
+        "catches": 20,
+        "observations": 3
+      },
+      "scope": "headless PlayMode EventSystem journey; no rendered-frame/device acceptance"
+    }
+  },
+  "releaseReport": "reports/testflight-0.1.0-8.json",
+  "frozenSource": "1bdfa785237701ab2c7675031142d526f66c0e28",
+  "sourceDigest": "32c455de065963cf5d659193ba860809444de9ffcb7f5fefa36202619aa781cd",
+  "appleProcessing": "VALID",
+  "internalGroup": "VERIFIED"
+}

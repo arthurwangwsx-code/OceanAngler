@@ -1,9 +1,15 @@
-import hashlib,importlib.util,json,plistlib,sys,tempfile,unittest,zipfile
+import hashlib,importlib.util,json,plistlib,subprocess,sys,tempfile,unittest,zipfile
 from pathlib import Path
 from unittest.mock import patch
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 import beta
 class DeliveryGuards(unittest.TestCase):
+    def test_direct_entrypoint_can_preview_without_credentials(self):
+        result=subprocess.run([sys.executable,str(Path(beta.__file__).resolve()),'native'],capture_output=True,text=True,timeout=20)
+        self.assertEqual(0,result.returncode,result.stderr)
+        preview=json.loads(result.stdout)
+        self.assertEqual('PREVIEW',preview['status'])
+        self.assertEqual('native',preview['action'])
     def setUp(self):
         self.temp=tempfile.TemporaryDirectory();self.root=Path(self.temp.name);self.local=self.root/'.local/beta';self.local.mkdir(parents=True)
         self.patches=[patch.object(beta,'ROOT',self.root),patch.object(beta,'LOCAL',self.local)]

@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "6074a34e-1237-499c-93d5-61ead8edc17c",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "4db57c63bd5ca7ab835f28d557ef15f99c268e841641f7669fda4dc3668ee250",
+    "category": "e2e",
+    "executable": "python3",
+    "startedAt": "2026-11-25T10:47:54.844Z",
+    "finishedAt": "2026-11-25T10:48:43.820Z",
+    "durationMs": 48919.544167,
+    "exitCode": 1,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/immersive-pages-qa/record-and-run.py",
+      "immersivepagestableta",
+      "--device",
+      "tablet"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/immersive-pages-qa/record-and-run.py",
+    "immersivepagestableta",
+    "--device",
+    "tablet"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 1,
+  "startedAt": "2026-11-25T10:47:54.844Z",
+  "finishedAt": "2026-11-25T10:48:43.820Z",
+  "durationMs": 48919.544167
+}
