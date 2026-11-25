@@ -621,6 +621,14 @@
       "checkedAt": "2026-11-25T11:33:28.384Z",
       "durationMs": 148.700583,
       "outcome": "accepted"
+    },
+    {
+      "stageId": "apply",
+      "runId": null,
+      "operation": "start",
+      "checkedAt": "2026-11-25T12:48:20.415Z",
+      "durationMs": 156.65758299999993,
+      "outcome": "accepted"
     }
   ],
   "measurementJournal": {
@@ -18309,6 +18317,226 @@
       "executable": "python3",
       "commandDigest": "3909552ec95e7af31d9e6be1668cf1284a573597a4321b4911429c355673d5b9",
       "receiptPath": "measurements/developer-mode-final-records.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "3800d40b-f2d5-4528-842c-1f4c0923346d",
+      "startedAt": "2026-11-25T12:48:59.422Z",
+      "executable": "python3",
+      "commandDigest": "af37fd0ece7b9283b687dc1f3218146aed94367d2ff691173b71a17ccbb6a069",
+      "receiptPath": "measurements/bluefin-gill-imported-gpu-a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "a7b603d9-dfc7-49f0-b118-30c4f68b234e",
+      "startedAt": "2026-11-25T12:50:33.912Z",
+      "executable": "python3",
+      "commandDigest": "5da90f7d0ec89451518b6b2d465b8293caea71b6c5e30a7c7131f57b91c965ff",
+      "receiptPath": "measurements/bluefin-gill-binding-red.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "51c389eb-5790-4ddd-bd2f-66b77c8a6fcc",
+      "startedAt": "2026-11-25T12:51:43.316Z",
+      "executable": "python3",
+      "commandDigest": "aeabd1a202d6813139cab110dd1443c5d7ac367f73243cc34bc00b25fe30a043",
+      "receiptPath": "measurements/bluefin-gill-rebind-import.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "aba7e840-eaf2-4322-af91-1fc1b9847b9e",
+      "startedAt": "2026-11-25T12:52:12.074Z",
+      "executable": "python3",
+      "commandDigest": "953781d5c7d30223b139898fe485673e8d6b3ed8719b628b5af58e4eed168a9a",
+      "receiptPath": "measurements/bluefin-gill-rebind-import-b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "f56544f4-f594-4803-9499-10778838bdcb",
+      "startedAt": "2026-11-25T12:53:01.993Z",
+      "executable": "python3",
+      "commandDigest": "d972d77888a69ea88b62d2bd47e7b718e974e9c00736450ecc897edbec471d00",
+      "receiptPath": "measurements/bluefin-gill-binding-green.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "ef2626b3-c123-455e-b4a1-e612dd05d6a8",
+      "startedAt": "2026-11-25T12:54:53.457Z",
+      "executable": "python3",
+      "commandDigest": "bbf8a11271be417bfdf82d287d8753c3b202761fbcbe68e69297611e00a864d0",
+      "receiptPath": "measurements/bluefin-gill-imported-gpu-b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "b3987425-5954-4345-88a3-bf3c7c1caf1e",
+      "startedAt": "2026-11-25T12:56:23.280Z",
+      "executable": "python3",
+      "commandDigest": "f9d8db2de9df713c43cf54654a1d219ce2d77dd756dbe4be2a5f93567e74b62e",
+      "receiptPath": "measurements/bluefin-gill-seven-motion-gpu-a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "10c0b299-2a1f-45b7-95c1-b866b59e2bd2",
+      "startedAt": "2026-11-25T12:58:40.958Z",
+      "executable": "python3",
+      "commandDigest": "18eae3f8d16f9ba68bee2a8ea14fa37c375083ec04b585f4997687bf689b6795",
+      "receiptPath": "measurements/bluefin-gill-binding-envelopes.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "b9a953d1-7953-4fe6-a8ee-0cec74fd6e08",
+      "startedAt": "2026-11-25T12:59:21.608Z",
+      "executable": "python3",
+      "commandDigest": "645c2e3cfe973a9b76f7423acac2de83ac7d1b60bb8ce079318dc5ca82451ac0",
+      "receiptPath": "measurements/bluefin-gill-contact-sheets.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "4a8e96a3-e718-42ac-abda-a9301892b68c",
+      "startedAt": "2026-11-25T12:59:59.740Z",
+      "executable": "python3",
+      "commandDigest": "84f86dc34b0ffe2c1126c364158cbf788ebc52860b72cb7b1ee7d2d5781def4a",
+      "receiptPath": "measurements/bluefin-gill-binding-editor-full.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "7428d911-87cf-450c-a815-584a5c2d3c01",
+      "startedAt": "2026-11-25T13:04:03.351Z",
+      "executable": "python3",
+      "commandDigest": "3fb877a41377fbfbe62ea895497a5ca0b2d39cf6f0ad6bbced09c1a0fe54a2ab",
+      "receiptPath": "measurements/bluefin-gill-current-developer-play.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "25152e6b-65f5-49dc-982d-590ebcdef7d3",
+      "startedAt": "2026-11-25T13:06:46.359Z",
+      "executable": "python3",
+      "commandDigest": "4ad2b34b30d0619e60508607f01cd29ee9dc803ad4679f7773c4d44acc2123d7",
+      "receiptPath": "measurements/bluefin-gill-current-world-play.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "91dca223-2254-46e9-b1d4-bcba113f5adb",
+      "startedAt": "2026-11-25T13:08:32.611Z",
+      "executable": "python3",
+      "commandDigest": "d1f9d0e72dd2112db63077d62428399e7464588315304b085174e0fcccad25df",
+      "receiptPath": "measurements/bluefin-gill-developer-capture-labels.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "d4519219-ebb3-4bfc-b6f7-c20220534e34",
+      "startedAt": "2026-11-25T13:09:38.525Z",
+      "executable": "python3",
+      "commandDigest": "d4b172953302ca8a8147fc0b76a608da5cdaa94c5c8d664492018756e3f84f0e",
+      "receiptPath": "measurements/bluefin-gill-publish-own-previews.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "7e7fd300-7527-4c4a-8f07-f058e40ccd46",
+      "startedAt": "2026-11-25T13:10:17.211Z",
+      "executable": "python3",
+      "commandDigest": "8a3b74f178f107cafa49a5dda197a08b5e67b6b6bf5c5dcc3c61ff39e0d359b3",
+      "receiptPath": "measurements/bluefin-gill-source-protection.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "lint",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "0516807a-e2b3-4ba9-94e8-5b718bddaec6",
+      "startedAt": "2026-11-25T13:12:03.617Z",
+      "executable": "python3",
+      "commandDigest": "0e14b8091df90c87fa02a4c18f04af6aa0dc8c8c14341cde5644c861bd4b3816",
+      "receiptPath": "measurements/bluefin-gill-pre-native-checks.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "5838e5ef-8f96-44d7-95ec-f88936dbeef8",
+      "startedAt": "2026-11-25T13:13:31.801Z",
+      "executable": "python3",
+      "commandDigest": "657128627309466d3c77f4984a9248e757dfe0bd3cabb54c2fce43fe7e888a03",
+      "receiptPath": "measurements/developer-mode-back-route-red.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "aea15b7b-0c50-4dc4-adfd-3e4acd5a7f31",
+      "startedAt": "2026-11-25T13:15:00.907Z",
+      "executable": "python3",
+      "commandDigest": "d421cf76f3cc5c07792bb73d57d286ed532057dd7f7888b7257ce309678b70c5",
+      "receiptPath": "measurements/developer-mode-back-route-green.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "b42a7b20-009b-4e05-89e9-367aa8f0f59a",
+      "startedAt": "2026-11-25T13:16:19.129Z",
+      "executable": "python3",
+      "commandDigest": "2b81e5c09738b16e5745090eb69d419e5ebad0064e1d75ad91e72fd31786bcec",
+      "receiptPath": "measurements/bluefin-gill-source-protection-b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "lint",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "5b1c8556-7792-4e62-a9b6-eb9d863119c8",
+      "startedAt": "2026-11-25T13:17:49.507Z",
+      "executable": "python3",
+      "commandDigest": "f6496f6dca5626140e1b2f597d5f55739c0828034bed787d6a3fd563ae814ed0",
+      "receiptPath": "measurements/bluefin-gill-pre-native-checks-b.json"
     }
   ],
   "runMeasurements": [
@@ -47073,6 +47301,386 @@
       "receipt": {
         "path": "measurements/developer-mode-final-records.json",
         "sha256": "730e2df5b6623972cbd36585ec12ca40dae9a033065d33ed45e437e93ac9718c"
+      }
+    },
+    {
+      "id": "3800d40b-f2d5-4528-842c-1f4c0923346d",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "af37fd0ece7b9283b687dc1f3218146aed94367d2ff691173b71a17ccbb6a069",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T12:48:59.422Z",
+      "finishedAt": "2026-11-25T12:49:09.953Z",
+      "durationMs": 10495.910375,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-gill-imported-gpu-a.json",
+        "sha256": "fa4a5e252e627165f2bbbe6053b26570119c2cfa024aa3730783d626a7bfb978"
+      }
+    },
+    {
+      "id": "a7b603d9-dfc7-49f0-b118-30c4f68b234e",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "5da90f7d0ec89451518b6b2d465b8293caea71b6c5e30a7c7131f57b91c965ff",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T12:50:33.912Z",
+      "finishedAt": "2026-11-25T12:50:44.752Z",
+      "durationMs": 10799.039291000001,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-gill-binding-red.json",
+        "sha256": "f03674e7b65474ff3518424abf8d71cd52f2e6621e08092d2517eacc26eb0c48"
+      }
+    },
+    {
+      "id": "51c389eb-5790-4ddd-bd2f-66b77c8a6fcc",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "aeabd1a202d6813139cab110dd1443c5d7ac367f73243cc34bc00b25fe30a043",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T12:51:43.316Z",
+      "finishedAt": "2026-11-25T12:51:48.395Z",
+      "durationMs": 5040.155334,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-gill-rebind-import.json",
+        "sha256": "29c706317b73aef1ce19e15091398bdbca3e54a04602523be540522518c358d7"
+      }
+    },
+    {
+      "id": "aba7e840-eaf2-4322-af91-1fc1b9847b9e",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "953781d5c7d30223b139898fe485673e8d6b3ed8719b628b5af58e4eed168a9a",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T12:52:12.074Z",
+      "finishedAt": "2026-11-25T12:52:23.932Z",
+      "durationMs": 11819.885,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-gill-rebind-import-b.json",
+        "sha256": "43bd08b685780c543e7c12fec67554e3607ac7bdcdec5d45a717b0da2a2475d0"
+      }
+    },
+    {
+      "id": "f56544f4-f594-4803-9499-10778838bdcb",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d972d77888a69ea88b62d2bd47e7b718e974e9c00736450ecc897edbec471d00",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T12:53:01.993Z",
+      "finishedAt": "2026-11-25T12:53:09.412Z",
+      "durationMs": 7389.987249999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-gill-binding-green.json",
+        "sha256": "c160503e1242fe59edab9a8650ea73ee5ff15a250425629c4c64cc942dddf31e"
+      }
+    },
+    {
+      "id": "ef2626b3-c123-455e-b4a1-e612dd05d6a8",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "bbf8a11271be417bfdf82d287d8753c3b202761fbcbe68e69297611e00a864d0",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T12:54:53.457Z",
+      "finishedAt": "2026-11-25T12:55:02.399Z",
+      "durationMs": 8904.599791999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-gill-imported-gpu-b.json",
+        "sha256": "20d43949194b0dd9a8eca2ed8b6532656f09d2823177dc5c4c6553dd17df6930"
+      }
+    },
+    {
+      "id": "b3987425-5954-4345-88a3-bf3c7c1caf1e",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "f9d8db2de9df713c43cf54654a1d219ce2d77dd756dbe4be2a5f93567e74b62e",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T12:56:23.280Z",
+      "finishedAt": "2026-11-25T12:56:49.653Z",
+      "durationMs": 26335.893957999997,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-gill-seven-motion-gpu-a.json",
+        "sha256": "5c38d3fa614040eabae2e078cbabf8ffcb2d396ffd5a77bf2d6c461e765942bb"
+      }
+    },
+    {
+      "id": "10c0b299-2a1f-45b7-95c1-b866b59e2bd2",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "18eae3f8d16f9ba68bee2a8ea14fa37c375083ec04b585f4997687bf689b6795",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T12:58:40.958Z",
+      "finishedAt": "2026-11-25T12:58:51.765Z",
+      "durationMs": 10768.147792,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-gill-binding-envelopes.json",
+        "sha256": "535068dd73039bda7ff13d01f9d1a01df4f8b7f2a66b49b4146bfd902c9f5c2f"
+      }
+    },
+    {
+      "id": "b9a953d1-7953-4fe6-a8ee-0cec74fd6e08",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "645c2e3cfe973a9b76f7423acac2de83ac7d1b60bb8ce079318dc5ca82451ac0",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T12:59:21.608Z",
+      "finishedAt": "2026-11-25T12:59:24.988Z",
+      "durationMs": 3335.086334,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-gill-contact-sheets.json",
+        "sha256": "ff307b6e2e98969d46dfbaafb9eba888a4547a13dcbc3508a239fe47d7e37025"
+      }
+    },
+    {
+      "id": "4a8e96a3-e718-42ac-abda-a9301892b68c",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "84f86dc34b0ffe2c1126c364158cbf788ebc52860b72cb7b1ee7d2d5781def4a",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T12:59:59.740Z",
+      "finishedAt": "2026-11-25T13:02:05.382Z",
+      "durationMs": 125599.91600000001,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-gill-binding-editor-full.json",
+        "sha256": "128c68ea8d268df6109216d3adb90fffcaadfa31cfa9474edccb555bdde5f4fe"
+      }
+    },
+    {
+      "id": "7428d911-87cf-450c-a815-584a5c2d3c01",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "3fb877a41377fbfbe62ea895497a5ca0b2d39cf6f0ad6bbced09c1a0fe54a2ab",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T13:04:03.351Z",
+      "finishedAt": "2026-11-25T13:04:42.219Z",
+      "durationMs": 38821.9465,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-gill-current-developer-play.json",
+        "sha256": "c2e40365592ce01449add1d5e3e71d9632172c1496ea1322cee000087f387089"
+      }
+    },
+    {
+      "id": "25152e6b-65f5-49dc-982d-590ebcdef7d3",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "4ad2b34b30d0619e60508607f01cd29ee9dc803ad4679f7773c4d44acc2123d7",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T13:06:46.359Z",
+      "finishedAt": "2026-11-25T13:07:19.497Z",
+      "durationMs": 33090.681625000005,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-gill-current-world-play.json",
+        "sha256": "4d646455378d54e8b3bce0e41b1476788a00fa831fcb8f7f307f24ab29b1b89f"
+      }
+    },
+    {
+      "id": "91dca223-2254-46e9-b1d4-bcba113f5adb",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d1f9d0e72dd2112db63077d62428399e7464588315304b085174e0fcccad25df",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T13:08:32.611Z",
+      "finishedAt": "2026-11-25T13:09:15.244Z",
+      "durationMs": 42597.179291,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-gill-developer-capture-labels.json",
+        "sha256": "bf7fb35d7741b87602845361032641627e56a41b1a892d65dd24d76d7a90904f"
+      }
+    },
+    {
+      "id": "d4519219-ebb3-4bfc-b6f7-c20220534e34",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d4b172953302ca8a8147fc0b76a608da5cdaa94c5c8d664492018756e3f84f0e",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T13:09:38.525Z",
+      "finishedAt": "2026-11-25T13:09:38.942Z",
+      "durationMs": 394.49825,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-gill-publish-own-previews.json",
+        "sha256": "c9f36150a56d5c487e30efa1f48126206871a137ed80750edd48d714dd1ead81"
+      }
+    },
+    {
+      "id": "7e7fd300-7527-4c4a-8f07-f058e40ccd46",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "8a3b74f178f107cafa49a5dda197a08b5e67b6b6bf5c5dcc3c61ff39e0d359b3",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T13:10:17.211Z",
+      "finishedAt": "2026-11-25T13:10:18.169Z",
+      "durationMs": 932.954958,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-gill-source-protection.json",
+        "sha256": "0f721a4d594805aabf4fc73a4d6ecc2ca414ca34019f282899db4f52eebc146e"
+      }
+    },
+    {
+      "id": "0516807a-e2b3-4ba9-94e8-5b718bddaec6",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "0e14b8091df90c87fa02a4c18f04af6aa0dc8c8c14341cde5644c861bd4b3816",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-25T13:12:03.617Z",
+      "finishedAt": "2026-11-25T13:12:05.802Z",
+      "durationMs": 2146.7618749999997,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-gill-pre-native-checks.json",
+        "sha256": "cc42dffbc3e600bb3acd9b34e99b102c27956d7aa380c5bd3238c9a2cc9adb92"
+      }
+    },
+    {
+      "id": "5838e5ef-8f96-44d7-95ec-f88936dbeef8",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "657128627309466d3c77f4984a9248e757dfe0bd3cabb54c2fce43fe7e888a03",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T13:13:31.801Z",
+      "finishedAt": "2026-11-25T13:13:44.505Z",
+      "durationMs": 12668.52825,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/developer-mode-back-route-red.json",
+        "sha256": "1433581033d13e11b99df450ad383788b3fc76d17bd6cf1e6b604b1718e41396"
+      }
+    },
+    {
+      "id": "aea15b7b-0c50-4dc4-adfd-3e4acd5a7f31",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d421cf76f3cc5c07792bb73d57d286ed532057dd7f7888b7257ce309678b70c5",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T13:15:00.907Z",
+      "finishedAt": "2026-11-25T13:15:39.402Z",
+      "durationMs": 38447.49425,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/developer-mode-back-route-green.json",
+        "sha256": "189b54f15114584e94b55b1b23199334179d1133aa1bb0a8bfa17f2f538ea5ef"
+      }
+    },
+    {
+      "id": "b42a7b20-009b-4e05-89e9-367aa8f0f59a",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "2b81e5c09738b16e5745090eb69d419e5ebad0064e1d75ad91e72fd31786bcec",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T13:16:19.129Z",
+      "finishedAt": "2026-11-25T13:16:20.674Z",
+      "durationMs": 1497.079,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-gill-source-protection-b.json",
+        "sha256": "00e5e93c416ab23179bb87b0727380d7609ebb6ae223f88c7a91801ca0dff620"
+      }
+    },
+    {
+      "id": "5b1c8556-7792-4e62-a9b6-eb9d863119c8",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "f6496f6dca5626140e1b2f597d5f55739c0828034bed787d6a3fd563ae814ed0",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-25T13:17:49.507Z",
+      "finishedAt": "2026-11-25T13:17:52.459Z",
+      "durationMs": 2918.2996669999998,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-gill-pre-native-checks-b.json",
+        "sha256": "0e1f1dd86e587125c3ccf41dae54717a5c5d1434a4ed648afa8b795646f66edb"
       }
     }
   ]

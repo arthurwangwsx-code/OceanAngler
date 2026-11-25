@@ -25,7 +25,7 @@ namespace OceanAngler
             Button(panel,rebuild?"确认重建测试进度":developerTarget?"确认开启开发者模式":"确认关闭开发者模式",28,244,-56,54,()=>
             {
                 bool changed=rebuild?game.RebuildDeveloperProgress():game.SwitchDeveloperMode(developerTarget);
-                if(changed){pageTrail.Clear();Navigate("准备");}
+                if(changed){pageTrail.Clear();OpenPage("准备",false);}
             },Teal);
             Button(panel,"取消，保持当前模式",28,312,-56,54,GoBack,Navy);
             Label(panel,game.Notice??"",17,Muted,28,386,-56,64);

@@ -147,7 +147,7 @@
         },
         {
           "path": "game/Assets/OceanAngler/Resources/Models/Bluefin.prefab",
-          "sha256": "9a6ddc2d9943fd45aaf6d235510183cfb42138cfcb95690ea7de3339c233b935"
+          "sha256": "bad9771284e7a949f70344de31b0c73595d8b441a146486a0c783dc08de13e53"
         },
         {
           "path": "art/source/bluefin/build-report.json",
@@ -3630,7 +3630,7 @@
       "artifacts": [
         {
           "path": "game/Assets/OceanAngler/Resources/JournalEnvelopes.json",
-          "sha256": "923c9a635e33046249d04df99e8e4ab05e3996217bf87e68f6f967e154583a1c"
+          "sha256": "79e696761a7f774a999c9e3218baaa46c9c694923027d1d91d85e3bcfd92ebd0"
         },
         {
           "path": "game/Assets/OceanAngler/Editor/JournalEnvelopeBuilder.cs",
@@ -3962,6 +3962,89 @@
         }
       ],
       "note": "18 exact current PNGs, six page/fishing overview sheets, two old/current comparisons, two bounded recordings and two six-sample recording sheets. No personal media, device logs or home screen. Model/scenery art remains prototype."
+    },
+    {
+      "id": "bluefin-gill-import-review",
+      "author": "OceanAngler contributors",
+      "source": "Actual imported prefab URP/Metal review and contact sheets from own runtime clips",
+      "license": "MIT",
+      "redistribution": true,
+      "status": "EDITOR_GPU_ENGINEERING_PASS_ART_REVIEW_PENDING",
+      "note": "Binding correction restores intended iris, mouth and fins without geometry/texture changes. Editor iOS target, discrete forced-LOD head views, not native Simulator or final natural-motion/art acceptance. Originals retained privately; comparison resizes/captions only, no retouching or grading.",
+      "artifacts": [
+        {
+          "path": "art/previews/bluefin-gill-import/after-bite-mouth.png",
+          "sha256": "f46e7a7959d624af515bebeba5d5bf7cf7ac7cae7f879e75d0bf4febc42d07a9"
+        },
+        {
+          "path": "art/previews/bluefin-gill-import/after-bite-side.png",
+          "sha256": "a10e5e5a8848ca2ee580f384d7a0a72d0a47068b398fec70c8d75a8c71156027"
+        },
+        {
+          "path": "art/previews/bluefin-gill-import/after-gill-near.png",
+          "sha256": "b610539b79f44d6883f29938d1fa5ac6edcb84880390428dca9bf80db6bb120e"
+        },
+        {
+          "path": "art/previews/bluefin-gill-import/after-gill-opposite.png",
+          "sha256": "dea59c3947b65707e7b6dea8ec383d6202f4159b9336d153e9fb19b32d2b051b"
+        },
+        {
+          "path": "art/previews/bluefin-gill-import/after-idle-eye.png",
+          "sha256": "3ad40ce0a6f3c6c5514d8be6b9b44ed4b5d78a67b3a93098158cc89c8c9551fe"
+        },
+        {
+          "path": "art/previews/bluefin-gill-import/after-idle-side.png",
+          "sha256": "7c349e187960b46ee972be2f0ad07cee512e7392707c23f9944d05ee60cd2676"
+        },
+        {
+          "path": "art/previews/bluefin-gill-import/before-bite-mouth.png",
+          "sha256": "f3bae156eaf48612834dea10ea037dc0c84872674013f986cf2eedad647e6602"
+        },
+        {
+          "path": "art/previews/bluefin-gill-import/before-bite-side.png",
+          "sha256": "f3463247fecda346de94b21ce490bbcbcdb44f12e217b7725872fa0b5d6d373f"
+        },
+        {
+          "path": "art/previews/bluefin-gill-import/before-idle-eye.png",
+          "sha256": "83795523c30ec3f4d5df941a4c159fa78224803eb43ad00d7fdeef7dade27db1"
+        },
+        {
+          "path": "art/previews/bluefin-gill-import/before-idle-side.png",
+          "sha256": "8fb89dc5aea327cda6ddb43e27c3b0f4491d319ebfd5cf5c44e05e4ad8720228"
+        },
+        {
+          "path": "art/previews/bluefin-gill-import/bite-mouth-before-after.jpg",
+          "sha256": "b5f326f6df2f744d9b1a84e98af68f690298e42b8a8e3bd8d0dfcde4dd5b5cc3"
+        },
+        {
+          "path": "art/previews/bluefin-gill-import/idle-eye-before-after.jpg",
+          "sha256": "3f497d9822dc30d0252f94470e49cf0fb8a474798f0132df19ae07224c7c6e41"
+        },
+        {
+          "path": "art/previews/bluefin-gill-import/lod0-near.jpg",
+          "sha256": "9b1f309ea186a95fe6c7725b2be4d7d1f48e1d5d1d7e5d6e2ae73d6387acc523"
+        },
+        {
+          "path": "art/previews/bluefin-gill-import/lod0-opposite.jpg",
+          "sha256": "762ae68a961f409b6314971b911b469449955eca4287bd389738474b08dcf666"
+        },
+        {
+          "path": "art/previews/bluefin-gill-import/lod1-near.jpg",
+          "sha256": "12cf48b3b08c83979184cdec4f1863cce0aded3c2f84fab758b6be0d7a1a0480"
+        },
+        {
+          "path": "art/previews/bluefin-gill-import/lod1-opposite.jpg",
+          "sha256": "c9c9d6e434b3550976107d38ec59925be12db6f5f2adfd0241eb8c048f5ebc34"
+        },
+        {
+          "path": "art/previews/bluefin-gill-import/lod2-near.jpg",
+          "sha256": "47c4641a66402f77bccce35ff3f66d09779d6814219376a5f4ba2fbe4d0e2312"
+        },
+        {
+          "path": "art/previews/bluefin-gill-import/lod2-opposite.jpg",
+          "sha256": "008efca61d4525d8cbcb287d61043f634bc69e66959c44b8e4e349f81c97e1c3"
+        }
+      ]
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."

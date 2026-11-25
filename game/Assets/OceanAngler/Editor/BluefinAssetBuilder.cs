@@ -56,6 +56,26 @@ namespace OceanAngler.Editor
                 if(skins.Length!=3||skins.Any(r=>!meshes.Contains(r.sharedMesh)))throw new InvalidOperationException("Existing prefab must reference the current imported three LOD meshes");
                 var motions=existing.GetComponentInChildren<Animator>().runtimeAnimatorController.animationClips;
                 if(!Semantics.OrderBy(s=>s).SequenceEqual(motions.Select(c=>c.name).OrderBy(s=>s))||motions.Any(c=>!AssetDatabase.GetAssetPath(c).StartsWith(Folder+"/Motions/")))throw new InvalidOperationException("Existing reviewed seven runtime clips required");
+                // A new FBX can reorder its submeshes while preserving mesh
+                // fileIDs. The saved prefab does not automatically reorder its
+                // material array: an iris can then receive the dark material.
+                // Copy the current imported bindings, retaining the reviewed
+                // transforms, runtime clips and every other prefab property.
+                var importedRenderers=AssetDatabase.LoadAssetAtPath<GameObject>(Folder+"/Bluefin.fbx").GetComponentsInChildren<SkinnedMeshRenderer>(true);
+                string prefabPath=AssetDatabase.GetAssetPath(existing);
+                var contents=PrefabUtility.LoadPrefabContents(prefabPath);
+                try
+                {
+                    foreach(var renderer in contents.GetComponentsInChildren<SkinnedMeshRenderer>(true))
+                    {
+                        var importedRenderer=importedRenderers.Single(r=>r.name==renderer.name&&r.sharedMesh==renderer.sharedMesh);
+                        var materials=importedRenderer.sharedMaterials;
+                        if(materials.Length!=renderer.sharedMesh.subMeshCount||materials.Any(m=>m==null||m.shader.name!="Universal Render Pipeline/Lit"))throw new InvalidOperationException("Current imported material bindings required");
+                        renderer.sharedMaterials=materials;
+                    }
+                    PrefabUtility.SaveAsPrefabAsset(contents,prefabPath);
+                }
+                finally{PrefabUtility.UnloadPrefabContents(contents);}
                 AssetDatabase.SaveAssets();Debug.Log("BLUEFIN_HEAD_SURFACE_IMPORTED_EXISTING_PRESENTATION_PRESERVED");return;
             }
             string controllerPath=Folder+"/Bluefin.controller";

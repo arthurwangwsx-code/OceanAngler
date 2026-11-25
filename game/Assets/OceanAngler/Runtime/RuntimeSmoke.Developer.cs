@@ -34,9 +34,9 @@ namespace OceanAngler
             yield return PageTap("家长区与隐私","家长验证");
             string question=FindObjectsByType<Text>(FindObjectsSortMode.None).Single(t=>t.text.StartsWith("9 + ")).text;
             yield return PageTap((9+int.Parse(question.Split(' ')[2])).ToString(),"家长区");
-            yield return PageFrame("developer-parent");
+            yield return PageFrame("developer-parent-"+(game.DeveloperMode?"test":"normal"));
             yield return PageTap(game.DeveloperMode?"开发者模式 · 已开启":"开发者模式","开发者模式");
-            yield return PageFrame("developer-settings");
+            yield return PageFrame("developer-settings-"+(game.DeveloperMode?"test":"normal"));
         }
         void DeveloperNormalUnchanged(string root)
         {
@@ -57,6 +57,7 @@ namespace OceanAngler
                 yield return PageTap("取消，保持当前模式","开发者模式");JourneyRequire(!game.DeveloperMode&&!File.Exists(test),"developer-cancel-no-mode-or-file-change");
                 yield return PageTap("开启开发者模式","切换模式确认");yield return PageTap("确认开启开发者模式","准备");yield return PageFrame("developer-unlocked-preparation");
                 JourneyRequire(game.DeveloperMode&&game.Progress.DeveloperSelected&&game.Progress.Data.totalPoints==0&&game.Progress.Data.catches.Count==0,"developer-enabled-without-invented-progress");
+                yield return PageTap("上一级","首页");yield return PageTap("海域与装备","准备");
                 foreach(var habitat in game.Content.habitats){yield return PageTap(habitat.name,"准备");JourneyRequire(game.Progress.Data.habitatId==habitat.id,"developer-zero-point-habitat-"+habitat.id);yield return PageFrame("developer-sea-"+habitat.id);}
                 yield return PageTap("更换钓具","钓具");
                 string[] categories={"rod","reel","line","lure"},labels={"鱼竿","卷线器","鱼线","拟饵"};
@@ -122,6 +123,7 @@ namespace OceanAngler
                 yield return PageTap("确认关闭开发者模式","准备");yield return PageFrame("developer-normal-restored");
                 JourneyRequire(!game.DeveloperMode&&!game.Reeling&&game.Session.Phase==FishingPhase.Ready&&game.Progress.Data.totalPoints==0&&game.Progress.Data.catches.Count==0&&game.Progress.Data.observations.Count==0,"developer-normal-progress-restored");
                 JourneyRequire(game.Content.habitats.Any(h=>!game.Progress.IsUnlocked(h.unlockPoints))&&game.Content.gear.Any(g=>!game.Progress.IsUnlocked(g.unlockPoints)),"developer-normal-point-gates-restored");
+                yield return PageTap("上一级","首页");yield return PageTap("海域与装备","准备");
             }
             else if(phase=="normal-restart")
             {

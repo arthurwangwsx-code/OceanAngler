@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "7428d911-87cf-450c-a815-584a5c2d3c01",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "3fb877a41377fbfbe62ea895497a5ca0b2d39cf6f0ad6bbced09c1a0fe54a2ab",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-25T13:04:03.351Z",
+    "finishedAt": "2026-11-25T13:04:42.219Z",
+    "durationMs": 38821.9465,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/bluefin-gill-gpu-qa/unity-step.py",
+      "developer-play",
+      "tests",
+      "--test-platform",
+      "PlayMode",
+      "--test-filter",
+      "DeveloperModeTests",
+      "--label",
+      "gilldeveloper20261125a"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/bluefin-gill-gpu-qa/unity-step.py",
+    "developer-play",
+    "tests",
+    "--test-platform",
+    "PlayMode",
+    "--test-filter",
+    "DeveloperModeTests",
+    "--label",
+    "gilldeveloper20261125a"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T13:04:03.351Z",
+  "finishedAt": "2026-11-25T13:04:42.219Z",
+  "durationMs": 38821.9465
+}

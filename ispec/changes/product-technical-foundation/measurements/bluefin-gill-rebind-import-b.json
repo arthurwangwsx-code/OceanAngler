@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "aba7e840-eaf2-4322-af91-1fc1b9847b9e",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "953781d5c7d30223b139898fe485673e8d6b3ed8719b628b5af58e4eed168a9a",
+    "category": "compile",
+    "executable": "python3",
+    "startedAt": "2026-11-25T12:52:12.074Z",
+    "finishedAt": "2026-11-25T12:52:23.932Z",
+    "durationMs": 11819.885,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/bluefin-gill-gpu-qa/unity-step.py",
+      "rebind-import-b",
+      "bluefin-head"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/bluefin-gill-gpu-qa/unity-step.py",
+    "rebind-import-b",
+    "bluefin-head"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T12:52:12.074Z",
+  "finishedAt": "2026-11-25T12:52:23.932Z",
+  "durationMs": 11819.885
+}
