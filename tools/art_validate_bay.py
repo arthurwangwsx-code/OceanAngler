@@ -59,6 +59,20 @@ for level in range(3):
   check(samples[0] is not None and samples[0]>4.7 and samples[-1] is not None and samples[-1]<4.0,'西侧陆地连接水下浅滩 '+label)
   check(crossings==1,'岸线剖面仅穿越一次水位 '+label)
 water=bpy.data.objects['Water_LOD0'];check(all(abs((water.matrix_world@v.co).z-4.5)<.001 for v in water.data.vertices),'水面标高4.5米')
+# Read actual saved leaf roots and the triangulated terrain, not the generator's
+# analytic height function. Keep the center clear at leaf tips as well as roots.
+grass=bpy.data.objects['Seagrass_LOD0'];layer=grass.data.uv_layers.active.data
+roots={loop.vertex_index:grass.matrix_world@grass.data.vertices[loop.vertex_index].co for loop in grass.data.loops if abs(layer[loop.index].uv.y)<.000001}
+terrain=bpy.data.objects['Terrain_LOD0'];bvh=BVHTree.FromObject(terrain,bpy.context.evaluated_depsgraph_get());inverse=terrain.matrix_world.inverted();offsets=[]
+for root in roots.values():
+ start=inverse@Vector((root.x,root.y,20));end=inverse@Vector((root.x,root.y,-40));ray=end-start;hit,_,_,_=bvh.ray_cast(start,ray.normalized(),ray.length)
+ if hit is not None:offsets.append(root.z-(terrain.matrix_world@hit).z)
+check(len(roots)>0 and len(offsets)==len(roots),'全部草根覆盖实际海床')
+check(len(roots)==manifest.get('seagrassBlades',-1)*2,'保存的独立叶根与构建数量一致')
+check(bool(offsets) and min(offsets)>-.25 and max(offsets)<.015,'草根埋入海床且无明显悬空')
+check(all(abs((grass.matrix_world@v.co).x)>=2 for v in grass.data.vertices),'整片海草叶保留中央四米通道')
+check(triangles['Seagrass_LOD0']<=18390,'海草未增加既有近景面数预算')
+seagrass_report=dict(rootEdgeVertices=len(roots),bedOffsets=[min(offsets),max(offsets)] if offsets else [],minimumCenterClearance=min(abs((grass.matrix_world@v.co).x) for v in grass.data.vertices))
 check(bpy.data.objects['UnderwaterCamera'].location.z<4.5<bpy.data.objects['SurfaceCamera'].location.z,'水上水下镜头分层')
 camera=bpy.context.scene.camera
 for name in ['StudioWaterVolume','StudioInfiniteWater']:
@@ -67,6 +81,6 @@ for name in ['StudioWaterVolume','StudioInfiniteWater']:
 check(sum(v for k,v in triangles.items() if k.endswith('LOD0'))<500000,'首景候选LOD0总面数预算')
 for image in bpy.data.images:
  if image.source=='FILE':check(Path(bpy.path.abspath(image.filepath)).is_file(),'原始贴图可解析 '+image.name)
-report=dict(scope='saved-coral-bay-engineering',status='FAIL' if failures else 'ENGINEERING_CHECKS_PASS',checks=checks,failures=failures,triangles=triangles,solids=solid_report,shoreProfiles=shore_profiles,visualAcceptance='NOT_ACCEPTED',scientificReview='PENDING',deviceAcceptance='NOT_RUN')
+report=dict(scope='saved-coral-bay-engineering',status='FAIL' if failures else 'ENGINEERING_CHECKS_PASS',checks=checks,failures=failures,triangles=triangles,solids=solid_report,shoreProfiles=shore_profiles,seagrass=seagrass_report,visualAcceptance='NOT_ACCEPTED',scientificReview='PENDING',deviceAcceptance='NOT_RUN')
 out=ROOT/'.local/art/coral-bay/validation.json';out.parent.mkdir(parents=True,exist_ok=True);out.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n');print(json.dumps(report,ensure_ascii=False))
 if failures:raise RuntimeError('Coral Bay source checks failed')

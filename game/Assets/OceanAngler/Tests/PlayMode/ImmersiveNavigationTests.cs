@@ -45,7 +45,8 @@ namespace OceanAngler.Tests
                         progress.SetValue(game.Session,value/100f);tension.SetValue(game.Session,value/100f);ui.SendMessage("Update");Canvas.ForceUpdateCanvases();
                         foreach(string field in new[]{"tensionText","progressText"})
                         {
-                            var text=(Text)typeof(GameUI).GetField(field,flags).GetValue(ui);Assert.That(text,Is.Not.Null);string label=field+" value="+value+" left="+left;
+                            var text=(Text)typeof(GameUI).GetField(field,flags).GetValue(ui);string label=field+" value="+value+" left="+left;
+                            Assert.That(text,Is.Not.Null,label+" phase="+game.Session.Phase+" paused="+game.Session.Paused+" page="+ui.PageName);
                             Assert.That(text.fontSize,Is.EqualTo(17),label);Assert.That(text.preferredWidth,Is.LessThanOrEqualTo(text.rectTransform.rect.width+.1f),label+" "+text.text);
                             Assert.That(text.preferredHeight,Is.LessThanOrEqualTo(text.rectTransform.rect.height+.1f),label);Assert.That(text.rectTransform.parent.GetComponent<RectTransform>().rect.size,Is.EqualTo(new Vector2(228,48)));
                         }

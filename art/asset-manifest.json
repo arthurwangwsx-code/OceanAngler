@@ -596,15 +596,15 @@
       "acquiredAt": "2026-11-24",
       "status": "ART_REVIEW_PENDING",
       "path": "art/source/coral-bay/CoralBay.blend",
-      "sha256": "8feee230592e3f6954b641081abf674b5387650f25032862c5582e1a7a9afc46",
+      "sha256": "646a0c54a19788d1cf9c21fc16a7998a3463d3155009ab5383cea15b7e7c42a9",
       "artifacts": [
         {
           "path": "art/source/coral-bay/CoralBay.blend",
-          "sha256": "8feee230592e3f6954b641081abf674b5387650f25032862c5582e1a7a9afc46"
+          "sha256": "646a0c54a19788d1cf9c21fc16a7998a3463d3155009ab5383cea15b7e7c42a9"
         },
         {
           "path": "game/Assets/OceanAngler/Art/CoralBay/CoralBay.fbx",
-          "sha256": "1a74f965d9bbbdec784f29df7616efd71c19575ef4e25f0ad1041e4bbfa4e7fc"
+          "sha256": "f17b52cd9b7835e5a5004cd7cb84716174618d7300785f9c52819bdb140ad147"
         },
         {
           "path": "game/Assets/OceanAngler/Art/CoralBay/Bay_BranchCoral.png",
@@ -725,9 +725,13 @@
         {
           "path": "art/previews/coral-bay/underwater.png",
           "sha256": "b5b1b370ce0682ce40acf0db1a0a56180d744d4063f122ea4b43f727f66ed85d"
+        },
+        {
+          "path": "art/source/coral-bay/build-report.json",
+          "sha256": "13ebaeabcfd42414a3676f6d3b20db384ddb9906b464cba6badf647280e9b84d"
         }
       ],
-      "note": "Original continuous terrain, reef, generic coral forms, seagrass, pier and dinghy. Eight static assemblies with three LODs plus a separate water mesh. Studio lighting is an approximation; runtime visual, ecological, user and device acceptance remains open. Current source has a continuous western shore and separated sand colour/normal detail. Earlier coral-bay previews are historical; current source and GPU views are registered as bay-shoreline-previews. Art/science/device acceptance remains pending.",
+      "note": "Original continuous terrain, reef, generic coral forms, seagrass, pier and dinghy. Eight static assemblies with three LODs plus a separate water mesh. Studio lighting is an approximation; runtime visual, ecological, user and device acceptance remains open. Current source has a continuous western shore and separated sand colour/normal detail. Earlier coral-bay previews are historical; current source and GPU views are registered as bay-shoreline-previews. Art/science/device acceptance remains pending. Current meadow uses13 occupied patches/260 shoots/1026 curved leaves, LOD14364/7182/2872. Non-seagrass saved source geometry and original PNGs unchanged; visual/science/device qualification pending. Earlier previews retain historical scope.",
       "modifications": "Reef/mound faces oriented outward; welded UV-seam/pole geometry before decimation; mounds have a buried closed base; source and runtime previews regenerated."
     },
     {
@@ -2887,6 +2891,32 @@
         {
           "path": "art/previews/content-current/phone-prototype-halibut.png",
           "sha256": "2d0eaca9b131d364d1f385a68b3425aa857533a74d5692396c98f96437459f69"
+        }
+      ]
+    },
+    {
+      "id": "seagrass-meadow-comparison",
+      "author": "OceanAngler contributors",
+      "license": "MIT",
+      "redistribution": true,
+      "sourceRedistribution": true,
+      "canModify": true,
+      "acquiredAt": "2026-11-25",
+      "source": "Own actual Unity Metal imported scene renders; no reference-photo pixels or private media",
+      "status": "EDITOR_CANDIDATE_NOT_FINAL_ART",
+      "note": "Source29 other objects identical; generic plants, not named-species/science acceptance. Before source45b04aa, after current meadow candidate. No native or physical qualification from these frames.",
+      "artifacts": [
+        {
+          "path": "art/previews/seagrass-meadow/after-underwater.png",
+          "sha256": "1b337bbc0d6be6a55817284eff85a89b624f4a4b8cf9eb70a9cb2c7e3be90a11"
+        },
+        {
+          "path": "art/previews/seagrass-meadow/before-underwater.png",
+          "sha256": "c08c8bd0f5775420b076105541314f250a9bc157105700a1adfdb8a4453dfd59"
+        },
+        {
+          "path": "art/previews/seagrass-meadow/same-camera-contact.png",
+          "sha256": "89ed6641ccc2ff9da739272f7c646facba4fda22be69ffa9d9b0ada3e878faee"
         }
       ]
     }

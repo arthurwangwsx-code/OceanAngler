@@ -178,16 +178,44 @@ for i,(a,b,z,s) in enumerate(rock_positions):
   faces.append(tuple(rings*(segments+1)+k for k in range(segments,-1,-1)))
   weld_solid(mesh('MoundedCoral',vs,faces,'DomeCoral','DomeCoral',uv))
 
-# Curved, tapered ribbons rather than cylinders; split clumps leave the play corridor open.
-vs=[];faces=[];uv=[]
-for clump in range(260):
- a=rand.choice([-1,1])*rand.uniform(2.5,22);b=rand.uniform(-1,35);z=seabed(a,b)
- for blade in range(rand.randint(5,9)):
-  angle=rand.random()*math.tau;length=rand.uniform(.22,.65);lean=rand.uniform(.08,.30);width=rand.uniform(.018,.035);base=len(vs)
-  for k in range(6):
-   t=k/5;center=Vector((a+math.cos(angle)*lean*t*t,b+math.sin(angle)*lean*t*t,z+length*t));side=Vector((-math.sin(angle),math.cos(angle),0))*width*(1-t*.94)
+# Separate shoots form irregular patches. Each has fewer, longer curved leaves,
+# displaced roots and a shared local bend instead of repeated radial starbursts.
+# This is a generic visual candidate, not a scientifically accepted named species.
+# An independent RNG leaves the authored reef/corals/boat sequence untouched.
+grass_rand=random.Random(91473)
+grass_patches=[(-4.8,0,1.4),(4.2,.2,1.3),(-7,5.5,1.6),(6,3,1.5),
+ (9,8,1.8),(-8,12,1.7),(10,15,1.9),(-11,20,2.0),(6,23,1.7),
+ (13,27,2.3),(-14,28,2.2),(16,15,2.0),(-16,9,1.8),(18,30,2.0)]
+grass_shoots=[];attempts=0
+while len(grass_shoots)<260:
+ attempts+=1
+ if attempts>12000:raise RuntimeError('Seagrass patch placement exhausted')
+ # Advance even after a rejected point: one rock-covered patch must not stall
+ # every later patch or force the clearance constraints to be relaxed.
+ patch=(attempts-1)%len(grass_patches);cx,cy,radius=grass_patches[patch]
+ angle=grass_rand.random()*math.tau;distance=radius*math.sqrt(grass_rand.random())
+ a=cx+math.cos(angle)*distance;b=cy+math.sin(angle)*distance*.68;z=seabed(a,b)
+ if abs(a)<2.55 or z>3.4:continue
+ # Keep shoots out of the authored limestone footprint and leave bare sand gaps.
+ if any(((a-rx)/(rs*1.32+.16))**2+((b-ry)/(rs*1.04+.16))**2<1 for rx,ry,rz,rs in rock_positions):continue
+ if any((a-x)**2+(b-y)**2<.10**2 for x,y,_,_ in grass_shoots):continue
+ grass_shoots.append((a,b,z,patch))
+vs=[];faces=[];uv=[];grass_blades=0
+for a,b,z,patch in grass_shoots:
+ flow=.45+.28*math.sin(patch*1.7);shoot_length=grass_rand.uniform(.32,.78)
+ for blade in range(grass_rand.randint(3,5)):
+  grass_blades+=1;angle=flow+grass_rand.uniform(-.75,.75)
+  length=shoot_length*grass_rand.uniform(.72,1.17);lean=length*grass_rand.uniform(.26,.54)
+  width=grass_rand.uniform(.013,.026);twist=grass_rand.uniform(-.48,.48)
+  root=Vector((a+grass_rand.uniform(-.025,.025),b+grass_rand.uniform(-.025,.025),0))
+  root.z=seabed(root.x,root.y)-.09;base=len(vs)
+  for k in range(8):
+   t=k/7;bend=lean*t*t
+   center=root+Vector((math.cos(angle)*bend,math.sin(angle)*bend,length*(t-.13*t*t*t)))
+   turn=angle+twist*t;edge_width=width*(.04+(1-t)**.6*(.55+.45*math.sin(math.pi*t)))
+   side=Vector((-math.sin(turn),math.cos(turn),.12*math.sin(t*math.pi)))*edge_width
    for sign in [-1,1]:vs.append(tuple(center+side*sign));uv.append(((sign+1)/2,t))
-  for k in range(5):q=base+k*2;faces.append((q,q+1,q+3,q+2))
+  for k in range(7):q=base+k*2;faces.append((q,q+1,q+3,q+2))
 mesh('SeagrassMeadow',vs,faces,'Seagrass','Seagrass',uv)
 
 # Full pier supports, beams, individual planks, posts, rope rails and fasteners.
@@ -263,5 +291,5 @@ d=bpy.data.cameras.new('ReviewCamera');cam=bpy.data.objects.new('ReviewCamera',d
 for im in bpy.data.images:
  if im.source=='FILE':im.filepath=bpy.path.relpath(im.filepath,start=str(OUT))
 bpy.ops.wm.save_as_mainfile(filepath=str(OUT/'CoralBay.blend'))
-report=dict(status='CANDIDATE',units='metres',waterLevel=4.5,lods=lod_report,rockPatches=len(rock_positions),seagrassClumps=260,coralForms=['branching','plate','mound'],artAcceptance='NOT_ACCEPTED',scientificReview='PENDING',source='tools/art_bay.py')
+report=dict(status='CANDIDATE',units='metres',waterLevel=4.5,lods=lod_report,rockPatches=len(rock_positions),seagrassClumps=len(grass_shoots),seagrassPatchAnchors=len(grass_patches),seagrassPatches=len({p for a,b,z,p in grass_shoots}),seagrassBlades=grass_blades,coralForms=['branching','plate','mound'],artAcceptance='NOT_ACCEPTED',scientificReview='PENDING',source='tools/art_bay.py')
 (OUT/'build-report.json').write_text(json.dumps(report,indent=2)+'\n');print('CORAL_BAY_BUILD_OK '+json.dumps(report))

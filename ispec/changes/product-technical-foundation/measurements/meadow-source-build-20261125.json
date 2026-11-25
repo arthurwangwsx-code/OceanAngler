@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "97ef5f5b-2d9f-4f8f-9995-bf2fc52422af",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "0a9d1b47ac431abda8ef62d12efa176ea50720539810299cedf3beceb6f930c2",
+    "category": "compile",
+    "executable": "python3",
+    "startedAt": "2026-11-25T02:02:47.660Z",
+    "finishedAt": "2026-11-25T02:02:55.340Z",
+    "durationMs": 7631.0195,
+    "exitCode": 1,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      "tools/art.py",
+      "build",
+      "--asset",
+      "coral-bay",
+      "--label",
+      "meadow20261125a",
+      "--no-preview"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    "tools/art.py",
+    "build",
+    "--asset",
+    "coral-bay",
+    "--label",
+    "meadow20261125a",
+    "--no-preview"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 1,
+  "startedAt": "2026-11-25T02:02:47.660Z",
+  "finishedAt": "2026-11-25T02:02:55.340Z",
+  "durationMs": 7631.0195
+}

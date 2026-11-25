@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "2c6fb668-c584-4eaf-9fac-3e3b959d3174",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "4c7abd023f4be4b8d7ee24b9baf01847fa937b198f989bde27ab756a2fb78220",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-25T02:12:04.038Z",
+    "finishedAt": "2026-11-25T02:12:23.598Z",
+    "durationMs": 19517.477333000003,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      "tools/game.py",
+      "tests",
+      "--test-platform",
+      "PlayMode",
+      "--test-filter",
+      "^OceanAngler.Tests.ImmersiveNavigationTests.EveryMeterValueFitsTheUnchangedHudRegion$",
+      "--label",
+      "meadowmeterdiagnostic20261125"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    "tools/game.py",
+    "tests",
+    "--test-platform",
+    "PlayMode",
+    "--test-filter",
+    "^OceanAngler.Tests.ImmersiveNavigationTests.EveryMeterValueFitsTheUnchangedHudRegion$",
+    "--label",
+    "meadowmeterdiagnostic20261125"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T02:12:04.038Z",
+  "finishedAt": "2026-11-25T02:12:23.598Z",
+  "durationMs": 19517.477333000003
+}
