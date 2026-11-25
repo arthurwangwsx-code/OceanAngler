@@ -5,18 +5,18 @@
   "blender": "5.3.0",
   "lods": {
     "Bluefin_LOD0": {
-      "triangles": 24028,
-      "vertices": 12449,
+      "triangles": 24748,
+      "vertices": 12875,
       "uvLayers": 1
     },
     "Bluefin_LOD1": {
-      "triangles": 9728,
-      "vertices": 5095,
+      "triangles": 10688,
+      "vertices": 5759,
       "uvLayers": 1
     },
     "Bluefin_LOD2": {
-      "triangles": 3948,
-      "vertices": 2195,
+      "triangles": 4908,
+      "vertices": 3044,
       "uvLayers": 1
     }
   },
@@ -41,7 +41,11 @@
     "pelvicR",
     "jaw",
     "pectoralL",
-    "pectoralR"
+    "pectoralLMid",
+    "pectoralLTip",
+    "pectoralR",
+    "pectoralRMid",
+    "pectoralRTip"
   ],
   "maps": {
     "Bluefin_Iris.png": "920e67001c9b4c9d7413cf956a17bd7a23447481636c6df99455f1f80052c279",
@@ -459,5 +463,68 @@
       "subdividedOriginalSkinFaces": 66,
       "stitchedJunctions": 88
     }
+  },
+  "pectoralFlex": {
+    "recipe": "paired-distal-curl-v3",
+    "motionPeakRadians": {
+      "idle": 0.00675,
+      "swim": 0.01275,
+      "turn": 0.018,
+      "burst": 0.01425,
+      "bite": 0.00975,
+      "hooked": 0.0165,
+      "release": 0.015
+    },
+    "membraneRefinement": {
+      "Bluefin_LOD0": {
+        "splitFaces": 0,
+        "newVertices": 0
+      },
+      "Bluefin_LOD1": {
+        "splitFaces": 0,
+        "newVertices": 0
+      },
+      "Bluefin_LOD2": {
+        "splitFaces": 0,
+        "newVertices": 0
+      }
+    },
+    "additionalBones": 4,
+    "totalBones": 16,
+    "rootFractionUnchanged": 0.25,
+    "maximumWeightsPerFinVertex": 2,
+    "components": {
+      "Bluefin_LOD0": {
+        "pectoralL": {
+          "vertices": 799,
+          "rootQuarterUnchanged": 304
+        },
+        "pectoralR": {
+          "vertices": 797,
+          "rootQuarterUnchanged": 302
+        }
+      },
+      "Bluefin_LOD1": {
+        "pectoralL": {
+          "vertices": 501,
+          "rootQuarterUnchanged": 110
+        },
+        "pectoralR": {
+          "vertices": 503,
+          "rootQuarterUnchanged": 110
+        }
+      },
+      "Bluefin_LOD2": {
+        "pectoralL": {
+          "vertices": 534,
+          "rootQuarterUnchanged": 110
+        },
+        "pectoralR": {
+          "vertices": 535,
+          "rootQuarterUnchanged": 110
+        }
+      }
+    },
+    "scope": "Authored flexible paired-fin animation; only coplanar paired-fin membrane refinement; original vertices, maps, body, rays and original bones/curves retained, not measured Caranx biomechanics or final art acceptance"
   }
 }

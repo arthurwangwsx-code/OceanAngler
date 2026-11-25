@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "0809969d-3a77-40d9-9de5-8e2dfba4276a",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "b0c051b7d7ccc4e81010c0c56bcfad3dd5c3d5f4d3506a1c0c881055464fd771",
+    "category": "e2e",
+    "executable": "python3",
+    "startedAt": "2026-11-25T14:34:14.127Z",
+    "finishedAt": "2026-11-25T14:34:15.141Z",
+    "durationMs": 970.296042,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "args": [
+      ".local/bluefin-flex-qa/save-protect.py",
+      "before"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    ".local/bluefin-flex-qa/save-protect.py",
+    "before"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T14:34:14.127Z",
+  "finishedAt": "2026-11-25T14:34:15.141Z",
+  "durationMs": 970.296042
+}

@@ -4,6 +4,8 @@ from pathlib import Path
 from mathutils import Vector
 from mathutils.bvhtree import BVHTree
 p=argparse.ArgumentParser();p.add_argument('--baseline');p.add_argument('--baseline-output');p.add_argument('--output',required=True);p.add_argument('--require-continuous',action='store_true');p.add_argument('--rest-only',action='store_true');a=p.parse_args(sys.argv[sys.argv.index('--')+1:])
+sys.path.insert(0,str(Path(__file__).resolve().parent))
+from bluefin_rig_contract import known_rig
 checks=[];failures=[]
 def check(ok,text):(checks if ok else failures).append(text)
 def digest(v):return hashlib.sha256(json.dumps(v,sort_keys=True,separators=(',',':')).encode()).hexdigest()
@@ -66,7 +68,7 @@ if a.baseline:
     check(old.get('version')==2,'Original pre-update source with body interpolation data')
     for key in ['meshes','rest','actions','maps']:check(snapshot[key]==old[key],key+' unchanged outside local skin patch')
     surface_results={obj.name:verify_surface(obj,old['bodySurface'][obj.name]) for obj in lods}
-check(len(rig.data.bones)==12 and len(bpy.data.actions)==7,'12 original bones and seven actions')
+check(known_rig(rig) and len(bpy.data.actions)==7,'known exact source rig version and seven actions')
 surface_results=locals().get('surface_results',{});previous=10**9
 for obj in lods:
     data=obj.data;data.calc_loop_triangles();count=len(data.loop_triangles);check(count<previous and count<=25000,obj.name+' decreasing original budget');previous=count

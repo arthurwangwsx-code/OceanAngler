@@ -468,6 +468,8 @@ sys.path.insert(0,str(ROOT/'tools'))
 from art_bluefin_motions import write_motions
 from art_bluefin_gill import replace_rims,RECIPE as GILL_RECIPE
 gill_update=replace_rims(lods)
+from art_bluefin_pectoral_motion import configure_fin_rig
+pectoral_flex=configure_fin_rig(rig,lods)
 write_motions(rig)
 rig.animation_data.action=bpy.data.actions.get('idle');scene.frame_start=1;scene.frame_end=61;scene.frame_set(1)
 
@@ -475,7 +477,7 @@ rig.animation_data.action=bpy.data.actions.get('idle');scene.frame_start=1;scene
 bpy.ops.object.select_all(action='DESELECT');rig.select_set(True)
 for o in lods:o.hide_set(False);o.select_set(True)
 bpy.context.view_layer.objects.active=rig
-bpy.ops.export_scene.fbx(filepath=str(GAME/'Bluefin.fbx'),use_selection=True,object_types={'ARMATURE','MESH'},add_leaf_bones=False,axis_forward='-Z',axis_up='Y',apply_unit_scale=True,use_triangles=True,bake_anim=True,bake_anim_use_all_actions=True,bake_anim_use_nla_strips=False,bake_anim_simplify_factor=.5,path_mode='RELATIVE')
+bpy.ops.export_scene.fbx(filepath=str(GAME/'Bluefin.fbx'),use_selection=True,object_types={'ARMATURE','MESH'},add_leaf_bones=False,axis_forward='-Z',axis_up='Y',apply_unit_scale=True,use_triangles=True,bake_anim=True,bake_anim_use_all_actions=True,bake_anim_use_nla_strips=False,bake_anim_simplify_factor=0,path_mode='RELATIVE')
 for o in lods:o.hide_set(o!=body)
 
 def area(name,loc,power,color,size,target=(.1,0,0)):
@@ -497,7 +499,7 @@ bpy.ops.wm.save_as_mainfile(filepath=str(OUT/'Bluefin.blend'))
 report={'status':'CANDIDATE','species':'Caranx melampygus','source':'tools/art_bluefin.py','blender':bpy.app.version_string,'lods':{},'actions':[a.name for a in bpy.data.actions],'bones':[b.name for b in rig.data.bones],'maps':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in GAME.glob('*.png')},'artAcceptance':'NOT_ACCEPTED','finTissueSamples':fin_samples,'finTissue':dict(membraneMaterial='Bluefin_Fins',rayMaterial='Bluefin_Rays',nominalRootThickness=.0018,nominalTipThickness=.00045,opacity='authored pigment alpha, not measured biological transmission',shadow='opaque geometric rays; runtime transparent membrane shadow disabled'),'note':'Original authoring candidate; scientific, runtime, deformation, LOD and human visual gates remain separate.'}
 for o in lods:
     o.data.calc_loop_triangles();report['lods'][o.name]={'triangles':len(o.data.loop_triangles),'vertices':len(o.data.vertices),'uvLayers':len(o.data.uv_layers)}
-report['gillRecipe']=GILL_RECIPE;report['gillUpdate']=gill_update
+report['gillRecipe']=GILL_RECIPE;report['gillUpdate']=gill_update;report['pectoralFlex']=pectoral_flex
 (OUT/'build-report.json').write_text(json.dumps(report,indent=2)+'\n')
 if '--no-preview' not in sys.argv:
     scene.render.filepath=str(PREVIEW/'three-quarter.png')

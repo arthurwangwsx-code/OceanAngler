@@ -11,13 +11,13 @@ namespace OceanAngler
     public sealed partial class RuntimeSmoke
     {
         [Serializable] sealed class GearCheck { public string id,notice;public float scrollBefore,scrollAfter;public bool selectedVisible,topHitMatches; }
-        bool medianFinReview;
+        bool medianFinReview,pectoralFlexReview;
         bool journalFramingReview;bool pageReview;
-        public IEnumerator RunGearReview(string outputFolder,bool captureFrames,bool quitProcess=false,bool reviewMedianFins=false,bool reviewJournalFraming=false,bool reviewPages=false)
+        public IEnumerator RunGearReview(string outputFolder,bool captureFrames,bool quitProcess=false,bool reviewMedianFins=false,bool reviewJournalFraming=false,bool reviewPages=false,bool reviewPectoralFlex=false)
         {
             folder=Path.GetFullPath(outputFolder);Directory.CreateDirectory(folder);
             if(File.Exists(Path.Combine(folder,"receipt.json")))throw new InvalidOperationException("Use a new review folder");
-            game=GetComponent<GameController>();began=Time.realtimeSinceStartup;finished=false;journeyMode=gearReviewMode=true;journeyQuit=quitProcess;completeContent=false;medianFinReview=reviewMedianFins;
+            game=GetComponent<GameController>();began=Time.realtimeSinceStartup;finished=false;journeyMode=gearReviewMode=true;journeyQuit=quitProcess;completeContent=false;medianFinReview=reviewMedianFins;pectoralFlexReview=reviewPectoralFlex;
             receipt=new Receipt{captureEnabled=captureFrames,scope=captureFrames?"native focused gear/model-status UI review from a genuine isolated save copy; not fresh progression or OS touch":"headless focused gear/model-status UI review; logical fixture, no rendered acceptance"};
             pageReview=reviewPages;journalFramingReview=reviewJournalFraming;journalFramingSamples.Clear();
             var stack=new Stack<IEnumerator>();stack.Push(GearReview());
@@ -77,6 +77,7 @@ namespace OceanAngler
                 JourneyRequire(!status.canvasRenderer.cull&&corners[0].x>=safe.xMin&&corners[0].y>=safe.yMin&&corners[2].x<=safe.xMax&&corners[2].y<=safe.yMax,"prototype-status-in-safe-area-"+fish.id);
                 receipt.modelStatuses.Add(fish.id);
                 if(fish.id=="trevally"||fish.id=="halibut")yield return JourneyFrame("prototype-"+fish.id);
+                if(fish.id=="trevally"&&pectoralFlexReview)yield return ReviewPectoralFlex(saveFile);
                 if(fish.id=="halibut"&&medianFinReview)
                 {
                     JourneyRequire(Debug.isDebugBuild&&before.catches.Any(c=>c.fishId=="halibut")&&!before.settings.reducedMotion,"fin-review-development-build-and-discovered-moving-halibut");

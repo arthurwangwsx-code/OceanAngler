@@ -41,6 +41,8 @@ def write_motions(rig):
                 key.handle_left=(frame-1,key.co.y-derivative);key.handle_right=(frame+1,key.co.y+derivative)
             curve.update()
         action['semantic']=name;action['motionRecipe']='periodic-analytic-tangents-v1'
+    from art_bluefin_pectoral_motion import write_fin_motions
+    write_fin_motions(rig)
     rig.animation_data.action=bpy.data.actions['idle'];bpy.context.scene.frame_set(1)
 
 def update_existing():
@@ -50,7 +52,7 @@ def update_existing():
     bpy.ops.object.select_all(action='DESELECT');rig.select_set(True)
     for obj in lods:obj.hide_set(False);obj.select_set(True)
     bpy.context.view_layer.objects.active=rig
-    bpy.ops.export_scene.fbx(filepath=str(ROOT/'game/Assets/OceanAngler/Art/Bluefin/Bluefin.fbx'),use_selection=True,object_types={'ARMATURE','MESH'},add_leaf_bones=False,axis_forward='-Z',axis_up='Y',apply_unit_scale=True,bake_anim=True,bake_anim_use_all_actions=True,bake_anim_use_nla_strips=False,bake_anim_simplify_factor=.5,path_mode='RELATIVE')
+    bpy.ops.export_scene.fbx(filepath=str(ROOT/'game/Assets/OceanAngler/Art/Bluefin/Bluefin.fbx'),use_selection=True,object_types={'ARMATURE','MESH'},add_leaf_bones=False,axis_forward='-Z',axis_up='Y',apply_unit_scale=True,bake_anim=True,bake_anim_use_all_actions=True,bake_anim_use_nla_strips=False,bake_anim_simplify_factor=0,path_mode='RELATIVE')
     for obj in lods:obj.hide_set(obj.name!='Bluefin_LOD0')
     bpy.ops.wm.save_as_mainfile(filepath=str(source))
     report=ROOT/'art/source/bluefin/build-report.json';data=json.loads(report.read_text());data['motionRecipe']='periodic-analytic-tangents-v1';data['motionUpdateScope']='Saved actions and FBX update only; no geometry, UV, weights, rig rest structure or texture regeneration';report.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')

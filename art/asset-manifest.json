@@ -50,11 +50,11 @@
       "acquiredAt": "2026-11-23",
       "status": "ART_REVIEW_PENDING",
       "path": "art/source/bluefin/Bluefin.blend",
-      "sha256": "1fed220c13e3aac36b95db52f54e565c581e7cfba48aa839c0fe7e9390e328ee",
+      "sha256": "dba5bb2ea468746104f05130a65db821b44e0603c09853554737a0b4cfdc46ca",
       "artifacts": [
         {
           "path": "art/source/bluefin/Bluefin.blend",
-          "sha256": "1fed220c13e3aac36b95db52f54e565c581e7cfba48aa839c0fe7e9390e328ee"
+          "sha256": "dba5bb2ea468746104f05130a65db821b44e0603c09853554737a0b4cfdc46ca"
         },
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin_BaseColor.png",
@@ -78,7 +78,7 @@
         },
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin.fbx",
-          "sha256": "c96469187a9485525344d2199a4d0578dadda13caf15a7693c41dcfba38c274c"
+          "sha256": "3e722fd16fb6107a5c42f60911bc8f80f5837c7dfe46b3e5f4e4e9ddb171e3bc"
         },
         {
           "path": "art/previews/bluefin/bite.png",
@@ -147,11 +147,11 @@
         },
         {
           "path": "game/Assets/OceanAngler/Resources/Models/Bluefin.prefab",
-          "sha256": "bad9771284e7a949f70344de31b0c73595d8b441a146486a0c783dc08de13e53"
+          "sha256": "70ff9e18fed6d5f2d16457a66ca6b98a60325105c82db3533913dd664bb13711"
         },
         {
           "path": "art/source/bluefin/build-report.json",
-          "sha256": "7383cb90e5d21945a52dcd7d7a046cba18b100c44dd920f9a0cab8ef5b1512e8"
+          "sha256": "805970e486bd1865eed78a5a46bb289a4dfa2cca29a074506a0840c1ef69463d"
         },
         {
           "path": "art/previews/bluefin-fin-tissue/first-native-phone-exit.png",
@@ -2558,37 +2558,37 @@
       "artifacts": [
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Motions/release.anim",
-          "sha256": "5a22c2ae155800f0b5ee369f1412c1efc592a109dd5f2c0455177c8bb24f8dba",
+          "sha256": "0f5e5b5b65bdbf59dd0f29c8a4564de3ed66a254f94268fc877d77720f51cc79",
           "bytes": 58075
         },
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Motions/turn.anim",
-          "sha256": "e59f6821341e48c294b7edc9f05dfce99a1b66fda665a2c4b94307181eaa8556",
+          "sha256": "5ca0d01fb7611aebea6c0ee5f865006d5d434fb81e5653b125221e6137b00eb5",
           "bytes": 190180
         },
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Motions/bite.anim",
-          "sha256": "3a17b016957c32c01a3b7806cd109dba793964f827c9df02888792cce12c4c1a",
+          "sha256": "99eddb4368b1ffda802d8f242983d71b9b9a5cb3f3020b74a39b9a52a7695cc3",
           "bytes": 194837
         },
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Motions/hooked.anim",
-          "sha256": "044af84ecc10a7df0b4f9ccf7ac645f38553e0b77e21e396d9da1a41fb927161",
+          "sha256": "36fa316f1a86d7e48c745c108fa3210b981d462008be43957596e5f98d4cf7de",
           "bytes": 309391
         },
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Motions/burst.anim",
-          "sha256": "97b16b45ee05a4ebd4965db4ab61a33288de220b3255091dde1148307f8c0781",
+          "sha256": "38ebd8c9a8e3f4239b616704f0435b5fa00bfe8c1303d76e862393d1f8f9906a",
           "bytes": 262981
         },
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Motions/swim.anim",
-          "sha256": "ad69509d50a9b6068b714874780d2d77b6a816e737314dddcc017fc3ad13bc99",
+          "sha256": "897480fc66fb0a5d6a335f1fc82fced3413a13c10454b82be4c1114ebd06553b",
           "bytes": 217551
         },
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Motions/idle.anim",
-          "sha256": "dcca07a53dbfb92e1b7611d5abef36e3fe7f12a1da30ece8c2cdaa9fb460a4d1",
+          "sha256": "769cffec82911f99c92218c359cbb97f2df6220fc0a450a642abd24b08a8f36b",
           "bytes": 183577
         }
       ],
@@ -3630,7 +3630,7 @@
       "artifacts": [
         {
           "path": "game/Assets/OceanAngler/Resources/JournalEnvelopes.json",
-          "sha256": "79e696761a7f774a999c9e3218baaa46c9c694923027d1d91d85e3bcfd92ebd0"
+          "sha256": "32557743abdeaced438d4e7380a12e1d3f0a033dd5e980213a6b001605a08ecd"
         },
         {
           "path": "game/Assets/OceanAngler/Editor/JournalEnvelopeBuilder.cs",
@@ -3784,7 +3784,7 @@
         },
         {
           "path": "tools/art_validate_bluefin_eye.py",
-          "sha256": "ec9b0fea3d4ec84f7f49e5e88fb71db8d2b84764832edc2be35689f20ce3dce9"
+          "sha256": "ab1df7f32c753699366cf7d33798d6cfd8975ae4c6b3c0371f8bc5914644b861"
         }
       ],
       "note": "Original continuous opaque iris/pupil surface and original pigmentation update; no imported reference pixels, added materials or baked highlight. Existing other mesh/UV/weights/rest/actions independently protected. Finite source/Editor checks do not qualify final art/science/child/physical."
@@ -4118,6 +4118,83 @@
         {
           "path": "art/previews/developer-mode/tablet-write-failure.png",
           "sha256": "68eb48f0b22cdfe63bba5c7bbc98b7ba9fca650ee3c4eaeb7b91eafe8f7aa2a6"
+        }
+      ]
+    },
+    {
+      "id": "bluefin-pectoral-flex-source-and-review",
+      "author": "OceanAngler contributors",
+      "source": "Original paired-fin controls, local membrane refinement, independent original-source comparisons and actual imported Editor Metal render ablation",
+      "license": "MIT",
+      "redistribution": true,
+      "sourceRedistribution": true,
+      "canModify": true,
+      "status": "ENGINEERING_PASS_FINAL_ART_PENDING",
+      "note": "Original vertices/body/rays/maps and twelve original bone/animation curves retained; membrane-only subdivisions and four controls. Six labelled/resized contact sheets and four raw rendered originals, no retouching. Editor iOS target, forced LOD discrete poses; not native, scientific, user or final natural-art acceptance. All models remain prototype.",
+      "artifacts": [
+        {
+          "path": "art/previews/bluefin-pectoral-flex/lod0-idle-25-near-active-first.png",
+          "sha256": "6bddc8ea431b232e6044f4b2575f7c0b57d8e934daa04a0417d03af143f7d616"
+        },
+        {
+          "path": "art/previews/bluefin-pectoral-flex/lod0-idle-25-opposite-active-first.png",
+          "sha256": "522dad50c45293d3c5f45b15222405d02658634658b797d464d3fe2879359282"
+        },
+        {
+          "path": "art/previews/bluefin-pectoral-flex/lod0-near.jpg",
+          "sha256": "8c020c095295ebf20ec5e6ca9a0955026949eed11f92ac39257d69ba56a83723"
+        },
+        {
+          "path": "art/previews/bluefin-pectoral-flex/lod0-opposite.jpg",
+          "sha256": "2fcab00fb0190b04124b14b6f0a47d4f9b324cf6c75ba391781315fc4131d619"
+        },
+        {
+          "path": "art/previews/bluefin-pectoral-flex/lod0-turn-75-near-active-first.png",
+          "sha256": "bad19f0ccc7f5bb414e422a60c077974169614b99ba15da6c675419611226216"
+        },
+        {
+          "path": "art/previews/bluefin-pectoral-flex/lod0-turn-75-near-held-first.png",
+          "sha256": "d4e65d240c9318f948800cdccbe56bd98cd6745bb207f3bdb3ede93bc5cd8242"
+        },
+        {
+          "path": "art/previews/bluefin-pectoral-flex/lod1-near.jpg",
+          "sha256": "592282d157af7e32de1cabe519010103d720f3c682f7dce68f2d413bb56686dd"
+        },
+        {
+          "path": "art/previews/bluefin-pectoral-flex/lod1-opposite.jpg",
+          "sha256": "1f87e50f68575adadfb4dbf828300aef58ae691663b7f6e7582c8a23b9217f09"
+        },
+        {
+          "path": "art/previews/bluefin-pectoral-flex/lod2-near.jpg",
+          "sha256": "22db7c2c20cf58c552c0df352c72a54be221a6d2317cf06ddb7cc566b91519cd"
+        },
+        {
+          "path": "art/previews/bluefin-pectoral-flex/lod2-opposite.jpg",
+          "sha256": "4c0dc29e799a1b25e4da03234355353ebe6c3ab72dcf924904d97effec0502ef"
+        },
+        {
+          "path": "tools/art_bluefin_pectoral_motion.py",
+          "sha256": "97c5928b177e8b9f457a37533c7a278478325b47683c11208d6409429af0d8e4"
+        },
+        {
+          "path": "tools/art_bluefin_pectoral_surface.py",
+          "sha256": "4723f512b8fb95345a7adcfc1cf9de03b2a10fe630ee2298c72220a4f00bd1ac"
+        },
+        {
+          "path": "tools/art_validate_bluefin_pectoral_cohesion.py",
+          "sha256": "0823dc62beff826c1ddbe2a18534547a6800110e6d07f5de3db185217b4f528e"
+        },
+        {
+          "path": "tools/art_validate_bluefin_pectoral_motion.py",
+          "sha256": "bd82ec39a0271fd1ac7e2b613ed831eadb94b62cf5138b798bc49565154fc6b1"
+        },
+        {
+          "path": "tools/art_validate_bluefin_pectoral_surface.py",
+          "sha256": "fa52dc677393a89de2c6b855eb7043b9dafa577fe630ed0fcda619ceffe8302d"
+        },
+        {
+          "path": "tools/bluefin_rig_contract.py",
+          "sha256": "78303e605dbc23ffc262e570f627d846b5d46b45aa0ab0fa988a1f5a638033c4"
         }
       ]
     }

@@ -5,7 +5,9 @@ import numpy as np
 from mathutils import Vector
 from mathutils.bvhtree import BVHTree
 p=argparse.ArgumentParser();p.add_argument('--baseline');p.add_argument('--baseline-output');p.add_argument('--output',required=True);a=p.parse_args(sys.argv[sys.argv.index('--')+1:])
-ROOT=Path(__file__).resolve().parents[1];checks=[];failures=[]
+ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(Path(__file__).resolve().parent))
+from bluefin_rig_contract import known_rig
+checks=[];failures=[]
 def check(ok,label):(checks if ok else failures).append(label)
 def digest(value):return hashlib.sha256(json.dumps(value,sort_keys=True,separators=(',',':')).encode()).hexdigest()
 def islands(mesh,material):
@@ -87,7 +89,7 @@ if a.baseline:
                 if len(values)!=len(new[key]):same=False;continue
                 maximum=max(maximum,max((Vector(p)-Vector(q)).length for p,q in zip(values,new[key])))
         check(same and maximum<.000001,obj.name+'眼表实际径向轮廓/UV/头骨权重保持')
-check(len(rig.data.bones)==12 and len(bpy.data.actions)==7,'12骨七动作不增减')
+check(known_rig(rig) and len(bpy.data.actions)==7,'已知精确骨架版本与七动作保持')
 iris=bpy.data.images['Bluefin_Iris'];pixels=np.asarray(iris.pixels[:]).reshape(iris.size[1],iris.size[0],4);check(tuple(iris.size)==(256,256),'实际256虹膜贴图')
 check(iris.colorspace_settings.name=='sRGB','虹膜色图sRGB')
 check(float(pixels[128,128,:3].max())<.12,'瞳孔颜料在连续眼表色图内')

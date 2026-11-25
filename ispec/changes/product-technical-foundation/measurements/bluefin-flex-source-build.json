@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "21084926-3014-4c85-b465-452c5fb14abe",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "d8539cd5967369a560f2e706965cb88c94ae1c8cec6b9c40ca2c872003184b2b",
+    "category": "compile",
+    "executable": "python3",
+    "startedAt": "2026-11-25T14:49:40.241Z",
+    "finishedAt": "2026-11-25T14:49:44.978Z",
+    "durationMs": 4693.797084,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "args": [
+      "tools/art.py",
+      "build",
+      "--asset",
+      "bluefin",
+      "--pectoral-flex-only",
+      "--label",
+      "bluefinflex20261125a",
+      "--no-preview"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "tools/art.py",
+    "build",
+    "--asset",
+    "bluefin",
+    "--pectoral-flex-only",
+    "--label",
+    "bluefinflex20261125a",
+    "--no-preview"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T14:49:40.241Z",
+  "finishedAt": "2026-11-25T14:49:44.978Z",
+  "durationMs": 4693.797084
+}

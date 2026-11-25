@@ -38,6 +38,8 @@ namespace OceanAngler.Editor
             foreach(var material in new[]{skin,fins,rays,gill,oral,iris,dark})EditorUtility.SetDirty(material);
             var model=(ModelImporter)AssetImporter.GetAtPath(Folder+"/Bluefin.fbx");
             model.animationType=ModelImporterAnimationType.Generic;model.avatarSetup=ModelImporterAvatarSetup.CreateFromThisModel;
+            // Preserve the small, authored paired-fin motion through FBX import.
+            model.animationCompression=ModelImporterAnimationCompression.Off;
             model.importAnimation=true;model.importVisibility=false;model.importBlendShapes=false;
             model.materialImportMode=ModelImporterMaterialImportMode.ImportStandard;
             foreach(var material in new[]{skin,fins,rays,gill,oral,iris,dark})model.AddRemap(new AssetImporter.SourceAssetIdentifier(typeof(Material),material.name),material);

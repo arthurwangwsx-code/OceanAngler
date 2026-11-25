@@ -28,7 +28,7 @@ def entry(command, root, expected_gib=20):
 def storage_command(command, root, expected_gib=20):
     values = list(map(str, command))
     executable = Path(values[0]).name if values else ""
-    expensive = executable in {"Unity", "xcodebuild"} or (executable == "xcrun" and len(values) > 1 and values[1] == "xcodebuild")
+    expensive = executable in {"Unity", "xcodebuild", "Blender"} or (executable == "xcrun" and len(values) > 1 and values[1] == "xcodebuild")
     return entry(values, root, expected_gib) if expensive else values
 
 
