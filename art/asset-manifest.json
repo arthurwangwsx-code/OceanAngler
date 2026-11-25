@@ -2949,6 +2949,117 @@
           "sha256": "0487b61ed5ab44b8ff0c44e261e61030f8c6decce9a1f14246e1022d3af5e4b4"
         }
       ]
+    },
+    {
+      "id": "atlantic-halibut-anatomical-candidate",
+      "author": "OceanAngler contributors",
+      "source": "tools/art_halibut.py",
+      "license": "MIT",
+      "redistribution": true,
+      "sourceRedistribution": true,
+      "canModify": true,
+      "acquiredAt": "2026-11-25",
+      "status": "ART_REVIEW_PENDING",
+      "path": "art/source/halibut/Halibut.blend",
+      "sha256": "bda33d70f23650259dbd309d6457c126f112e621d277275e8c22ae065ac2aeeb",
+      "artifacts": [
+        {
+          "path": "art/source/halibut/Halibut.blend",
+          "sha256": "bda33d70f23650259dbd309d6457c126f112e621d277275e8c22ae065ac2aeeb"
+        },
+        {
+          "path": "art/source/halibut/build-report.json",
+          "sha256": "4043de1e3e117aedfc056fa94cb76055ccc10de0dfb83c732425d275201a6ae1"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/Halibut/Halibut.fbx",
+          "sha256": "bf74e3407e9536d00962156db93c1df9ebb0b6a9538b1d8dfdadd53fe10dae2c"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/Halibut/Halibut_BaseColor.png",
+          "sha256": "248eddc89212dfe074adc2f588f99dac4d800c2fbd7442fb5c7ea1735607820f"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/Halibut/Halibut_Fin.png",
+          "sha256": "e643d8a781fca92a832195c971e9bb8fb36ee3aed852ca88e13772e2eb32d5f0"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/Halibut/Halibut_Fin_MetallicSmoothness.png",
+          "sha256": "bdf3bf83a083029e66274ae6266a790a429a5c29323ed1c3399bc356954d06f5"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/Halibut/Halibut_Fin_Normal.png",
+          "sha256": "d9751a0376bc00bdf90f7053b762de7b1d0799560889b19bf246712df40254a4"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/Halibut/Halibut_Iris.png",
+          "sha256": "9215cb3b6eb97f0de4fc4d4915949f8acaf948f96c605d60a3933960f7873a21"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/Halibut/Halibut_MetallicSmoothness.png",
+          "sha256": "11d384f525be7d39b9dfd810e848d7ed6ab9c9cecdd884ecebd7cb9eec4f360d"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/Halibut/Halibut_Normal.png",
+          "sha256": "07d25425bf6f391586170b14d2e6f44c53878863e73dac51533cae1cbe72c9d3"
+        },
+        {
+          "path": "game/Assets/OceanAngler/Art/Halibut/Halibut_Roughness.png",
+          "sha256": "56c89c3f5cb201376b136b6b489708215b84c9496b024f345851ff0c6c46603f"
+        }
+      ],
+      "note": "Independent anatomical correction candidate only. Original geometry, UV, procedural PBR maps, rig and seven actions; scientific reference photos excluded. No user/science/A1-A3/Player/device acceptance. Not integrated into encounter or journal selection yet."
+    },
+    {
+      "id": "atlantic-halibut-anatomy-review",
+      "author": "OceanAngler contributors",
+      "source": "tools/art_review_halibut.py and HalibutRenderReview.cs",
+      "license": "MIT",
+      "redistribution": true,
+      "status": "ART_REVIEW_PENDING",
+      "artifacts": [
+        {
+          "path": "art/previews/halibut-anatomy/metal-contact.jpg",
+          "sha256": "1607b0f935d0d379e1dbd1b89b9939abbb95655b2ae9e34eb9b40a1ce62ff35e"
+        },
+        {
+          "path": "art/previews/halibut-anatomy/source-blind.png",
+          "sha256": "d6985f8443a201c4183e00452ee132be0ef05db4e4ce2b528f659776169eace9"
+        },
+        {
+          "path": "art/previews/halibut-anatomy/source-eyed.png",
+          "sha256": "80f77cdec80745836905181cf04eded67265a0eb3ee0ca284af3519e584c9a84"
+        },
+        {
+          "path": "art/previews/halibut-anatomy/source-three-quarter.png",
+          "sha256": "f29a6b937d60c660f937836b366506b2a6b9d8b973df11b557647bbe4e5e78b8"
+        },
+        {
+          "path": "art/previews/halibut-anatomy/source-turntable-contact.jpg",
+          "sha256": "2823246070ac70cf9e404346cdfbed134dd44793385c415eaf2e3e55944a67e1"
+        },
+        {
+          "path": "art/previews/halibut-anatomy/source-turntable.mp4",
+          "sha256": "6276629f0c92915985521348364f137425fdb1044b22e1bdacb4db0b3716c5c0"
+        },
+        {
+          "path": "art/previews/halibut-anatomy/unity-bite-mouth.png",
+          "sha256": "30ac6c7f3c1682fbca0bc95786c411d737a5b3d5734b9030e55102b1a42ff04c"
+        },
+        {
+          "path": "art/previews/halibut-anatomy/unity-eyes.png",
+          "sha256": "4f7eec505d677357d16f6d722883c4fd90aac5dc3cabfd048ca83274488947d2"
+        },
+        {
+          "path": "art/previews/halibut-anatomy/unity-lod0-blind.png",
+          "sha256": "e9153b35fd7a842a3da099a547eb5ceaa059dc1e64d4e1eb272d6628783c1b25"
+        },
+        {
+          "path": "art/previews/halibut-anatomy/unity-lod0-eyed.png",
+          "sha256": "071d6a39f0856e2018863273de026a1c8ae9cf1bbc6f99cf3f4ec134e6022582"
+        }
+      ],
+      "note": "Original source-studio and isolated Unity Metal images and 36-frame source turntable. Includes unfinished mouth evidence. Not Player screenshots, science approval, device performance or finished art."
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."

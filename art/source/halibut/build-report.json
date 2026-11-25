@@ -1,0 +1,149 @@
+{
+  "status": "ANATOMICAL_CANDIDATE_NOT_ART_ACCEPTED",
+  "species": "Hippoglossus hippoglossus",
+  "coordinateConvention": "X longitudinal, Y body width, +Z eyed side up; blind side faces seabed",
+  "lods": {
+    "Halibut_LOD0": {
+      "vertices": 10362,
+      "triangles": 20336
+    },
+    "Halibut_LOD1": {
+      "vertices": 4257,
+      "triangles": 8134
+    },
+    "Halibut_LOD2": {
+      "vertices": 1678,
+      "triangles": 3049
+    }
+  },
+  "distanceUVReduction": [
+    {
+      "lod": 1,
+      "beforeMin": -0.009893481619656086,
+      "beforeMax": 1.0032761096954346,
+      "clampedCoordinates": 376
+    },
+    {
+      "lod": 2,
+      "beforeMin": -0.017021046951413155,
+      "beforeMax": 1.010401725769043,
+      "clampedCoordinates": 275
+    }
+  ],
+  "bones": [
+    "root",
+    "head",
+    "spine1",
+    "spine2",
+    "spine3",
+    "peduncle",
+    "tail",
+    "jaw"
+  ],
+  "motions": [
+    "idle",
+    "swim",
+    "turn",
+    "burst",
+    "bite",
+    "hooked",
+    "release"
+  ],
+  "anatomy": {
+    "mouth": {
+      "opening": [
+        -1.045,
+        0.048,
+        0.021
+      ],
+      "throatX": -0.855,
+      "jawHinge": [
+        -0.81,
+        0.065,
+        0
+      ]
+    },
+    "Dorsal": {
+      "rays": 65,
+      "fromX": -0.96,
+      "toX": 0.89
+    },
+    "Anal": {
+      "rays": 65,
+      "fromX": -0.68,
+      "toX": 0.89
+    },
+    "caudal": {
+      "centerX": 1.245,
+      "outerX": 1.425,
+      "halfSpan": 0.28
+    },
+    "eye0": {
+      "center": [
+        -0.787,
+        -0.064,
+        0.06101946978358292
+      ],
+      "side": "eyed-positive-Z"
+    },
+    "eye1": {
+      "center": [
+        -0.691,
+        -0.185,
+        0.05883541890628551
+      ],
+      "side": "eyed-positive-Z"
+    }
+  },
+  "maps": {
+    "BaseColor": {
+      "path": "game/Assets/OceanAngler/Art/Halibut/Halibut_BaseColor.png",
+      "width": 1024,
+      "height": 1024,
+      "sha256": "248eddc89212dfe074adc2f588f99dac4d800c2fbd7442fb5c7ea1735607820f"
+    },
+    "Normal": {
+      "path": "game/Assets/OceanAngler/Art/Halibut/Halibut_Normal.png",
+      "width": 1024,
+      "height": 1024,
+      "sha256": "07d25425bf6f391586170b14d2e6f44c53878863e73dac51533cae1cbe72c9d3"
+    },
+    "Roughness": {
+      "path": "game/Assets/OceanAngler/Art/Halibut/Halibut_Roughness.png",
+      "width": 1024,
+      "height": 1024,
+      "sha256": "56c89c3f5cb201376b136b6b489708215b84c9496b024f345851ff0c6c46603f"
+    },
+    "MetallicSmoothness": {
+      "path": "game/Assets/OceanAngler/Art/Halibut/Halibut_MetallicSmoothness.png",
+      "width": 1024,
+      "height": 1024,
+      "sha256": "11d384f525be7d39b9dfd810e848d7ed6ab9c9cecdd884ecebd7cb9eec4f360d"
+    },
+    "Fin": {
+      "path": "game/Assets/OceanAngler/Art/Halibut/Halibut_Fin.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "e643d8a781fca92a832195c971e9bb8fb36ee3aed852ca88e13772e2eb32d5f0"
+    },
+    "Fin_Normal": {
+      "path": "game/Assets/OceanAngler/Art/Halibut/Halibut_Fin_Normal.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "d9751a0376bc00bdf90f7053b762de7b1d0799560889b19bf246712df40254a4"
+    },
+    "Fin_MetallicSmoothness": {
+      "path": "game/Assets/OceanAngler/Art/Halibut/Halibut_Fin_MetallicSmoothness.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "bdf3bf83a083029e66274ae6266a790a429a5c29323ed1c3399bc356954d06f5"
+    },
+    "Iris": {
+      "path": "game/Assets/OceanAngler/Art/Halibut/Halibut_Iris.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "9215cb3b6eb97f0de4fc4d4915949f8acaf948f96c605d60a3933960f7873a21"
+    }
+  },
+  "license": "MIT; all geometry, UV, maps and keyframes original; reference photos excluded"
+}

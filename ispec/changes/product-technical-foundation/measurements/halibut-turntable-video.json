@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "4ebd1d57-39f1-4397-ad1d-6ab4e6a9e12f",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "cd0fb76136556189ea96134809e1b91c8b4b1d64c718ec47df795f87c7cf9992",
+    "category": "compile",
+    "executable": "ffmpeg",
+    "startedAt": "2026-11-25T03:11:48.626Z",
+    "finishedAt": "2026-11-25T03:11:49.162Z",
+    "durationMs": 494.071542,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "ffmpeg",
+    "args": [
+      "-hide_banner",
+      "-loglevel",
+      "error",
+      "-framerate",
+      "12",
+      "-i",
+      ".local/art-runs/halibut-turntable-c/turn-%03d.png",
+      "-c:v",
+      "libx264",
+      "-pix_fmt",
+      "yuv420p",
+      "-movflags",
+      "+faststart",
+      "-n",
+      "art/previews/halibut-anatomy/source-turntable.mp4"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "ffmpeg",
+    "-hide_banner",
+    "-loglevel",
+    "error",
+    "-framerate",
+    "12",
+    "-i",
+    ".local/art-runs/halibut-turntable-c/turn-%03d.png",
+    "-c:v",
+    "libx264",
+    "-pix_fmt",
+    "yuv420p",
+    "-movflags",
+    "+faststart",
+    "-n",
+    "art/previews/halibut-anatomy/source-turntable.mp4"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T03:11:48.626Z",
+  "finishedAt": "2026-11-25T03:11:49.162Z",
+  "durationMs": 494.071542
+}

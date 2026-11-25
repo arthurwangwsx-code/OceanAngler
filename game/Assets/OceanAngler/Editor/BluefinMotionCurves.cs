@@ -8,9 +8,9 @@ namespace OceanAngler.Editor
     // survive as native animation assets rather than being reduced by FBX import.
     public static class BluefinMotionCurves
     {
-        public static AnimationClip Build(AnimationClip source,string semantic)
+        public static AnimationClip Build(AnimationClip source,string semantic,string parent="Assets/OceanAngler/Art/Bluefin")
         {
-            const string parent="Assets/OceanAngler/Art/Bluefin",folder=parent+"/Motions";
+            string folder=parent+"/Motions";
             if(!AssetDatabase.IsValidFolder(folder))AssetDatabase.CreateFolder(parent,"Motions");
             string path=folder+"/"+semantic+".anim";var clip=AssetDatabase.LoadAssetAtPath<AnimationClip>(path);
             if(clip==null){clip=new AnimationClip();AssetDatabase.CreateAsset(clip,path);}

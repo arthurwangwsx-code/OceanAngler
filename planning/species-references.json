@@ -219,7 +219,8 @@
         "NOAA页面的资源评估针对特定美国种群，不能当作全球保育等级；最终可钓呈现需复核。"
       ],
       "sources": [
-        "https://www.fisheries.noaa.gov/species/atlantic-halibut"
+        "https://www.fisheries.noaa.gov/species/atlantic-halibut",
+        "https://www.dfo-mpo.gc.ca/species-especes/profiles-profils/atl-halibut-fletan-atl-eng.html"
       ],
       "expertReview": "PENDING"
     },
