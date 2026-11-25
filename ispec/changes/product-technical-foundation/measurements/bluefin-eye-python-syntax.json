@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "b0d5d79e-2f71-472e-99e2-989da30f81bb",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "e42f664a4538e3eb36c1865f7995f9133e61061733210d8f0e73ff20cc45a2a8",
+    "category": "lint",
+    "executable": "python3",
+    "startedAt": "2026-11-25T08:59:55.349Z",
+    "finishedAt": "2026-11-25T08:59:55.433Z",
+    "durationMs": 59.00108399999999,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      "-m",
+      "py_compile",
+      "tools/art.py",
+      "tools/art_bluefin.py",
+      "tools/game.py",
+      "tools/bluefin_eye_recipe.py",
+      "tools/art_bluefin_eye_map.py",
+      "tools/art_bluefin_head_surface.py",
+      "tools/art_validate_bluefin_eye.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    "-m",
+    "py_compile",
+    "tools/art.py",
+    "tools/art_bluefin.py",
+    "tools/game.py",
+    "tools/bluefin_eye_recipe.py",
+    "tools/art_bluefin_eye_map.py",
+    "tools/art_bluefin_head_surface.py",
+    "tools/art_validate_bluefin_eye.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T08:59:55.349Z",
+  "finishedAt": "2026-11-25T08:59:55.433Z",
+  "durationMs": 59.00108399999999
+}

@@ -5,18 +5,18 @@
   "blender": "5.3.0",
   "lods": {
     "Bluefin_LOD0": {
-      "triangles": 24664,
-      "vertices": 12775,
+      "triangles": 23320,
+      "vertices": 12099,
       "uvLayers": 1
     },
     "Bluefin_LOD1": {
-      "triangles": 9864,
-      "vertices": 5171,
+      "triangles": 9450,
+      "vertices": 4960,
       "uvLayers": 1
     },
     "Bluefin_LOD2": {
-      "triangles": 3698,
-      "vertices": 2078,
+      "triangles": 3598,
+      "vertices": 2024,
       "uvLayers": 1
     }
   },
@@ -44,7 +44,7 @@
     "pectoralR"
   ],
   "maps": {
-    "Bluefin_Iris.png": "5a514c9eb1cabe880c1ad2e001fa2ca87616b3c117f1da3d9ae62f36bab4d247",
+    "Bluefin_Iris.png": "920e67001c9b4c9d7413cf956a17bd7a23447481636c6df99455f1f80052c279",
     "Bluefin_Fin_Roughness.png": "2d142ea0a0708ee8855c44ec0d135e067abe524c624da414bc68ef947dd1e89e",
     "Bluefin_Fin.png": "455e948892fce6278a7b5fbd1a8a20352272c6e4d6f4454f77eeb909790a5fa8",
     "Bluefin_Fin_Normal.png": "0484cee7df56545813b2635ec14ae9e5a6fae5d1203d36452ede2d44cbc1ab30",
@@ -404,5 +404,30 @@
   "note": "Original authoring candidate; scientific, runtime, deformation, LOD and human visual gates remain separate.",
   "mapUpdateMode": "Existing blend image datablocks only; geometry,rig,UV,actions and external-texture FBX retained",
   "motionRecipe": "periodic-analytic-tangents-v1",
-  "motionUpdateScope": "Saved actions and FBX update only; no geometry, UV, weights, rig rest structure or texture regeneration"
+  "motionUpdateScope": "Saved actions and FBX update only; no geometry, UV, weights, rig rest structure or texture regeneration",
+  "headSurfaceRecipe": "continuous-eye-v1",
+  "headSurfaceUpdate": {
+    "Bluefin_LOD0": {
+      "oldVertices": 12775,
+      "removedPupilVertices": 676,
+      "curvedIrisVertices": 386,
+      "vertices": 12099,
+      "triangles": 23320
+    },
+    "Bluefin_LOD1": {
+      "oldVertices": 5171,
+      "removedPupilVertices": 211,
+      "curvedIrisVertices": 184,
+      "vertices": 4960,
+      "triangles": 9450
+    },
+    "Bluefin_LOD2": {
+      "oldVertices": 2078,
+      "removedPupilVertices": 54,
+      "curvedIrisVertices": 67,
+      "vertices": 2024,
+      "triangles": 3598
+    }
+  },
+  "headSurfaceSource": "tools/art_bluefin_head_surface.py"
 }

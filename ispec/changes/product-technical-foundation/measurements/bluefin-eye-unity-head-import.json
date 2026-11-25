@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "4e4cbbd2-9628-4948-abf0-51ad891e52d8",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "7e4d6e582526a617f7823c887bde4bb9bd5253912f98de7ef4c8dc1f4763b1a2",
+    "category": "compile",
+    "executable": "python3",
+    "startedAt": "2026-11-25T08:50:36.332Z",
+    "finishedAt": "2026-11-25T08:50:45.904Z",
+    "durationMs": 9541.379125,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      "tools/game.py",
+      "bluefin-head"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    "tools/game.py",
+    "bluefin-head"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T08:50:36.332Z",
+  "finishedAt": "2026-11-25T08:50:45.904Z",
+  "durationMs": 9541.379125
+}

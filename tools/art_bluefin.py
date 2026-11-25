@@ -9,6 +9,8 @@ import numpy as np
 from mathutils import Vector
 
 ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'tools'))
+from bluefin_eye_recipe import EYE_RADIUS,PUPIL_RATIO,PUPIL_COLOR,IRIS_ROUGHNESS,GILL_COLOR,RECIPE,surface_height
 OUT=ROOT/'art/source/bluefin';GAME=ROOT/'game/Assets/OceanAngler/Art/Bluefin'
 PREVIEW=ROOT/'.local/art/bluefin';OUT.mkdir(parents=True,exist_ok=True);GAME.mkdir(parents=True,exist_ok=True);PREVIEW.mkdir(parents=True,exist_ok=True)
 MAPS_ONLY='--maps-only' in sys.argv
@@ -99,6 +101,8 @@ def make_maps():
     iris_color+=np.sin(theta*5+radius*9)[:,:,None]*np.array([.018,.012,-.004])
     edge=np.clip((radius-.78)/.20,0,1);edge=edge*edge*(3-2*edge)
     iris_color=iris_color*(1-edge[:,:,None])+np.array([.14,.19,.18])*edge[:,:,None]
+    pupil=np.clip((PUPIL_RATIO+.006-radius)/.012,0,1);pupil=pupil*pupil*(3-2*pupil)
+    iris_color=iris_color*(1-pupil[:,:,None])+np.array(PUPIL_COLOR)*pupil[:,:,None]
     iris_map=image('Bluefin_Iris',iris_color)
     return base,normal,rough,fin,iris_map,fin_normal,fin_rough
 
@@ -135,9 +139,9 @@ for im,prop in [(finrough,'Roughness')]:
  t=finmat.node_tree.nodes.new('ShaderNodeTexImage');t.image=im;finmat.node_tree.links.new(t.outputs['Color'],p.inputs[prop])
 t=finmat.node_tree.nodes.new('ShaderNodeTexImage');t.image=finnormal;n=finmat.node_tree.nodes.new('ShaderNodeNormalMap');n.inputs['Strength'].default_value=.6;finmat.node_tree.links.new(t.outputs['Color'],n.inputs['Color']);finmat.node_tree.links.new(n.outputs['Normal'],p.inputs['Normal'])
 finray=material('Bluefin_Rays',(.04,.3,.58),.48,finmap);finray.node_tree.nodes['Principled BSDF'].inputs['Coat Weight'].default_value=.08
-gill=material('Bluefin_Gill',(.10,.18,.17),.58);gill.node_tree.nodes.get('Principled BSDF').inputs['Coat Weight'].default_value=0
+gill=material('Bluefin_Gill',GILL_COLOR,.58);gill.node_tree.nodes.get('Principled BSDF').inputs['Coat Weight'].default_value=0
 oral=material('Bluefin_Oral',(.065,.043,.037),.78);oral.node_tree.nodes.get('Principled BSDF').inputs['Coat Weight'].default_value=0
-iris=material('Bluefin_Iris',(1,1,1),.40,irismap);iris.node_tree.nodes.get('Principled BSDF').inputs['Coat Weight'].default_value=.05
+iris=material('Bluefin_Iris',(1,1,1),IRIS_ROUGHNESS,irismap);iris.node_tree.nodes.get('Principled BSDF').inputs['Coat Weight'].default_value=.05
 dark=material('Bluefin_Dark',(.009,.023,.029),.23)
 
 # Profile is purpose-shaped, not an ellipsoid.
@@ -336,7 +340,7 @@ for sign,label in [(1,'L'),(-1,'R')]:
     dx=(cheek_y(ex+.001,ez)-cheek_y(ex-.001,ez))/.002
     dz=(cheek_y(ex,ez+.001)-cheek_y(ex,ez-.001))/.002
     eye_orientation=Vector((0,sign,0)).rotation_difference(Vector((-dx,sign,-dz)).normalized())
-    for name,offset,scale,mat in [('Eye',0,(.043,.016,.043),iris),('Pupil',.0128,(.032,.004,.032),dark)]:
+    for name,offset,scale,mat in [('Eye',0,(EYE_RADIUS,.016,EYE_RADIUS),iris)]:
         # Put the sphere's polar axis along the shallow eye depth. Spend edges
         # on the visible circular silhouette rather than hidden axial rings.
         bpy.ops.mesh.primitive_uv_sphere_add(segments=48,ring_count=8,rotation=(math.pi/2,0,0),location=pos+Vector((0,sign*offset,0)))
@@ -350,6 +354,9 @@ for sign,label in [(1,'L'),(-1,'R')]:
             for loop in obj.data.loops:
                 point=obj.data.vertices[loop.vertex_index].co-pos
                 layer.data[loop.index].uv=(.5+point.x/(2*scale[0]),.5+point.z/(2*scale[2]))
+            for vertex in obj.data.vertices:
+                point=vertex.co-pos
+                if sign*point.y>=-.0000001:point.y=sign*surface_height(min(EYE_RADIUS,math.hypot(point.x,point.z)));vertex.co=pos+point
         # Align both iris and pupil to the actual cheek normal. A flat side-axis
         # lens clips into the widening rear cheek when its depth is reduced.
         for vertex in obj.data.vertices:vertex.co=pos+eye_orientation@(vertex.co-pos)
@@ -483,6 +490,7 @@ def view(loc,target=(.15,0,0)):
 view((-1.2,-5,1.05));scene.render.filepath='//previews/three-quarter.png'
 for im in bpy.data.images:
     if im.filepath and (GAME/Path(im.filepath).name).is_file():im.filepath=bpy.path.relpath(im.filepath,start=str(OUT))
+scene['bluefinHeadSurfaceRecipe']=RECIPE
 bpy.ops.wm.save_as_mainfile(filepath=str(OUT/'Bluefin.blend'))
 report={'status':'CANDIDATE','species':'Caranx melampygus','source':'tools/art_bluefin.py','blender':bpy.app.version_string,'lods':{},'actions':[a.name for a in bpy.data.actions],'bones':[b.name for b in rig.data.bones],'maps':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in GAME.glob('*.png')},'artAcceptance':'NOT_ACCEPTED','finTissueSamples':fin_samples,'finTissue':dict(membraneMaterial='Bluefin_Fins',rayMaterial='Bluefin_Rays',nominalRootThickness=.0018,nominalTipThickness=.00045,opacity='authored pigment alpha, not measured biological transmission',shadow='opaque geometric rays; runtime transparent membrane shadow disabled'),'note':'Original authoring candidate; scientific, runtime, deformation, LOD and human visual gates remain separate.'}
 for o in lods:

@@ -10,7 +10,9 @@ namespace OceanAngler.Editor
     {
         const string Folder="Assets/OceanAngler/Art/Bluefin";
         static readonly string[] Semantics={"idle","swim","turn","burst","bite","hooked","release"};
-        public static void Prepare()
+        public static void Prepare()=>Prepare(false);
+        public static void PrepareHeadSurface()=>Prepare(true);
+        static void Prepare(bool preservePresentation)
         {
             AssetDatabase.Refresh();
             foreach(string file in Directory.GetFiles(Folder,"*.png"))
@@ -29,9 +31,9 @@ namespace OceanAngler.Editor
             fins.SetTexture("_BumpMap",Texture("Bluefin_Fin_Normal"));fins.SetFloat("_BumpScale",.6f);fins.EnableKeyword("_NORMALMAP");fins.SetTexture("_MetallicGlossMap",Texture("Bluefin_Fin_MetallicSmoothness"));fins.SetFloat("_Smoothness",1);fins.EnableKeyword("_METALLICSPECGLOSSMAP");
             fins.SetFloat("_Surface",1);fins.SetFloat("_Blend",0);fins.SetFloat("_BlendModePreserveSpecular",1);fins.SetFloat("_AlphaClip",0);BaseShaderGUI.SetupMaterialBlendMode(fins);fins.SetShaderPassEnabled("ShadowCaster",false);fins.SetShaderPassEnabled("DepthOnly",false);
             var rays=CreateMaterial("Bluefin_Rays",Color.white,.52f);rays.SetTexture("_BaseMap",Texture("Bluefin_Fin"));rays.SetFloat("_Surface",0);rays.SetFloat("_AlphaClip",0);BaseShaderGUI.SetupMaterialBlendMode(rays);rays.SetShaderPassEnabled("ShadowCaster",true);rays.SetShaderPassEnabled("DepthOnly",true);
-            var gill=CreateMaterial("Bluefin_Gill",new Color(.10f,.18f,.17f),.42f);
+            var gill=CreateMaterial("Bluefin_Gill",new Color(.21f,.25f,.24f),.42f);
             var oral=CreateMaterial("Bluefin_Oral",new Color(.065f,.043f,.037f),.22f);
-            var iris=CreateMaterial("Bluefin_Iris",Color.white,.60f);iris.SetTexture("_BaseMap",Texture("Bluefin_Iris"));
+            var iris=CreateMaterial("Bluefin_Iris",Color.white,.88f);iris.SetTexture("_BaseMap",Texture("Bluefin_Iris"));
             var dark=CreateMaterial("Bluefin_Dark",new Color(.009f,.023f,.029f),.77f);
             foreach(var material in new[]{skin,fins,rays,gill,oral,iris,dark})EditorUtility.SetDirty(material);
             var model=(ModelImporter)AssetImporter.GetAtPath(Folder+"/Bluefin.fbx");
@@ -44,6 +46,18 @@ namespace OceanAngler.Editor
             foreach(var clip in definitions)clip.loopTime=clip.name!="release"&&!clip.name.EndsWith("|release");
             model.clipAnimations=definitions;model.SaveAndReimport();
             var clips=AssetDatabase.LoadAllAssetsAtPath(Folder+"/Bluefin.fbx").OfType<AnimationClip>().Where(c=>!c.name.StartsWith("__preview__")).ToArray();
+            if(preservePresentation)
+            {
+                // This authoring path changes eye geometry/materials only.
+                // Keep the reviewed runtime curves and prefab transforms;
+                // re-exported FBX conversion can otherwise rewrite low bits.
+                var existing=Resources.Load<GameObject>("Models/Bluefin");if(existing==null)throw new InvalidOperationException("Existing reviewed Bluefin prefab required");
+                var meshes=AssetDatabase.LoadAllAssetsAtPath(Folder+"/Bluefin.fbx").OfType<Mesh>().ToArray();var skins=existing.GetComponentsInChildren<SkinnedMeshRenderer>(true);
+                if(skins.Length!=3||skins.Any(r=>!meshes.Contains(r.sharedMesh)))throw new InvalidOperationException("Existing prefab must reference the current imported three LOD meshes");
+                var motions=existing.GetComponentInChildren<Animator>().runtimeAnimatorController.animationClips;
+                if(!Semantics.OrderBy(s=>s).SequenceEqual(motions.Select(c=>c.name).OrderBy(s=>s))||motions.Any(c=>!AssetDatabase.GetAssetPath(c).StartsWith(Folder+"/Motions/")))throw new InvalidOperationException("Existing reviewed seven runtime clips required");
+                AssetDatabase.SaveAssets();Debug.Log("BLUEFIN_HEAD_SURFACE_IMPORTED_EXISTING_PRESENTATION_PRESERVED");return;
+            }
             string controllerPath=Folder+"/Bluefin.controller";
             var controller=AssetDatabase.LoadAssetAtPath<AnimatorController>(controllerPath);
             if(controller==null)controller=AnimatorController.CreateAnimatorControllerAtPath(controllerPath);

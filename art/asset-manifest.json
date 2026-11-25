@@ -50,11 +50,11 @@
       "acquiredAt": "2026-11-23",
       "status": "ART_REVIEW_PENDING",
       "path": "art/source/bluefin/Bluefin.blend",
-      "sha256": "fe9945e630bd9c9764d4c436a5e2911eaea851333462057add1461d614908bc5",
+      "sha256": "d43876becf7fdbb744362ee212791df0fe5abc7b7713c5d473104ade1948a3d0",
       "artifacts": [
         {
           "path": "art/source/bluefin/Bluefin.blend",
-          "sha256": "fe9945e630bd9c9764d4c436a5e2911eaea851333462057add1461d614908bc5"
+          "sha256": "d43876becf7fdbb744362ee212791df0fe5abc7b7713c5d473104ade1948a3d0"
         },
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin_BaseColor.png",
@@ -78,7 +78,7 @@
         },
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin.fbx",
-          "sha256": "582891ce6aee35690b5d07f3b829b44c4cb368276f79a4f5e6a93adb87f173e0"
+          "sha256": "7f931a325ca85f5f7abb5ef85878ec0e928b7c06659d95cc829bf164f2bae701"
         },
         {
           "path": "art/previews/bluefin/bite.png",
@@ -111,7 +111,7 @@
         },
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin_Gill.mat",
-          "sha256": "c99fa991fb1cb255780108d9920ebf6ee49f80a915989db5ff56eb8da5c69f27"
+          "sha256": "df64f00420c5a883cdc9d2b8acc290edbd0c3fa5fb5a26ddfb05b72ab0604f8e"
         },
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin_Oral.mat",
@@ -119,11 +119,11 @@
         },
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin_Iris.png",
-          "sha256": "5a514c9eb1cabe880c1ad2e001fa2ca87616b3c117f1da3d9ae62f36bab4d247"
+          "sha256": "920e67001c9b4c9d7413cf956a17bd7a23447481636c6df99455f1f80052c279"
         },
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin_Iris.mat",
-          "sha256": "bfcb92708ddc8ec368b6c82129b3da321f197bc0629cd380fbca0bb82514ec57"
+          "sha256": "390923c70228fed2988af6cefd3cfc70e4bc6700e4b912de553aaf05caa78455"
         },
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin_Fin_Normal.png",
@@ -151,7 +151,7 @@
         },
         {
           "path": "art/source/bluefin/build-report.json",
-          "sha256": "101f927d9c71151da0c52d49639a3c951c782690b4bf9738ac3b4b4baae020aa"
+          "sha256": "b1c5b812ab765c8da36007b97ddd0a76545ecf90aeb0332b18442df43530eee8"
         },
         {
           "path": "art/previews/bluefin-fin-tissue/first-native-phone-exit.png",
@@ -3614,7 +3614,7 @@
       "artifacts": [
         {
           "path": "game/Assets/OceanAngler/Resources/JournalEnvelopes.json",
-          "sha256": "f8d4a140afcfdd68d7c95bd6d7fcba7aa1778fe16c1308b359d9fc4e89ed9344"
+          "sha256": "9589e834a571156cd8a9d3bd18186d282301fd39e0d80b2d7ae8f02dd1ba76f9"
         },
         {
           "path": "game/Assets/OceanAngler/Editor/JournalEnvelopeBuilder.cs",
@@ -3745,6 +3745,33 @@
         }
       ],
       "note": "Own game media only. Both actual recordings sampled evenly across each clip, plus actual max front/return PNG and same1.3x comparison reviewed. Models larger with complete control clearance; existing A0 art and full product still open. No personal media/audio/color/exposure edits; output30fps is not runtimeFPS."
+    },
+    {
+      "id": "bluefin-continuous-eye-source",
+      "author": "OceanAngler contributors",
+      "source": "tools/art_bluefin_head_surface.py",
+      "license": "MIT",
+      "redistribution": true,
+      "status": "ART_REVIEW_PENDING",
+      "artifacts": [
+        {
+          "path": "tools/bluefin_eye_recipe.py",
+          "sha256": "3a2169eb05e8dda3103224398147b98730c7311fda39ac11dba44572b323803e"
+        },
+        {
+          "path": "tools/art_bluefin_eye_map.py",
+          "sha256": "8a44affa0d848cfca451fd9435bd0687c7c8df5c12346dc3f474506fd91dc4e1"
+        },
+        {
+          "path": "tools/art_bluefin_head_surface.py",
+          "sha256": "939e99ea4468666b8737645cc045bd8ecac323a139be7853a237b82ed875b7d4"
+        },
+        {
+          "path": "tools/art_validate_bluefin_eye.py",
+          "sha256": "ec9b0fea3d4ec84f7f49e5e88fb71db8d2b84764832edc2be35689f20ce3dce9"
+        }
+      ],
+      "note": "Original continuous opaque iris/pupil surface and original pigmentation update; no imported reference pixels, added materials or baked highlight. Existing other mesh/UV/weights/rest/actions independently protected. Finite source/Editor checks do not qualify final art/science/child/physical."
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."
