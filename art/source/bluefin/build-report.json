@@ -5,18 +5,18 @@
   "blender": "5.3.0",
   "lods": {
     "Bluefin_LOD0": {
-      "triangles": 23320,
-      "vertices": 12099,
+      "triangles": 24028,
+      "vertices": 12449,
       "uvLayers": 1
     },
     "Bluefin_LOD1": {
-      "triangles": 9450,
-      "vertices": 4960,
+      "triangles": 9728,
+      "vertices": 5095,
       "uvLayers": 1
     },
     "Bluefin_LOD2": {
-      "triangles": 3598,
-      "vertices": 2024,
+      "triangles": 3948,
+      "vertices": 2195,
       "uvLayers": 1
     }
   },
@@ -429,5 +429,35 @@
       "triangles": 3598
     }
   },
-  "headSurfaceSource": "tools/art_bluefin_head_surface.py"
+  "headSurfaceSource": "tools/art_bluefin_head_surface.py",
+  "gillRecipe": "triangle-integrated-opercular-rim-v4",
+  "gillUpdate": {
+    "Bluefin_LOD0": {
+      "vertices": 12449,
+      "triangles": 24028,
+      "lift": 0,
+      "halfWidth": 0.0009,
+      "segments": 32,
+      "subdividedOriginalSkinFaces": 52,
+      "stitchedJunctions": 379
+    },
+    "Bluefin_LOD1": {
+      "vertices": 5095,
+      "triangles": 9728,
+      "lift": 0,
+      "halfWidth": 0.001,
+      "segments": 16,
+      "subdividedOriginalSkinFaces": 66,
+      "stitchedJunctions": 188
+    },
+    "Bluefin_LOD2": {
+      "vertices": 2195,
+      "triangles": 3948,
+      "lift": 0,
+      "halfWidth": 0.0012,
+      "segments": 6,
+      "subdividedOriginalSkinFaces": 66,
+      "stitchedJunctions": 88
+    }
+  }
 }

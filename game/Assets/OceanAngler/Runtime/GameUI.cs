@@ -127,6 +127,9 @@ namespace OceanAngler
                 case "观察资料": BuildObservationReading(); break;
                 case "家长验证": BuildParentGate(); break;
                 case "家长区": BuildParent(); break;
+                case "开发者模式": BuildDeveloperMode(); break;
+                case "切换模式确认": BuildDeveloperConfirmation(false); break;
+                case "重建测试确认": BuildDeveloperConfirmation(true); break;
                 case "隐私许可": BuildLegal(); break;
             }
             if(gearScroll!=null)
@@ -197,7 +200,7 @@ namespace OceanAngler
             var items=game.Content.gear.Where(g=>g.category==gearTab).ToArray();
             for(int i=0;i<items.Length;i++)
             {
-                var g=items[i];bool unlocked=game.Progress.Data.totalPoints>=g.unlockPoints;
+                var g=items[i];bool unlocked=game.Progress.IsUnlocked(g.unlockPoints);
                 bool equipped=new[]{game.Progress.Data.rodId,game.Progress.Data.reelId,game.Progress.Data.lineId,game.Progress.Data.lureId}.Contains(g.id);
                 var b=Button(panel,g.name+(equipped?"  已装备":unlocked?"  装备":"  "+g.unlockPoints+"分解锁")+"\n"+g.description,22,142+i*72,-44,64,()=>game.SelectGear(g.id),equipped?Teal:Navy);
                 b.interactable=unlocked&&game.Session.Phase==FishingPhase.Ready;b.GetComponentInChildren<Text>().fontSize=19;
@@ -274,13 +277,14 @@ namespace OceanAngler
         }
         void BuildParent()
         {
-            var p=PagePanel("Parents",new Vector2(.06f,.16f),new Vector2(.94f,.81f),570);
+            var p=PagePanel("Parents",new Vector2(.06f,.16f),new Vector2(.94f,.81f),640);
             Label(p,"家长区",30,Color.white,28,18,-56,46);
             Label(p,"游戏进度仅保存在此设备，无账号、广告、内购或第三方分析。\n技术支持、反馈与隐私请求：arthur.wang.wsx@gmail.com\n模型和科普内容仍在制作审核，当前为开发测试版本。\n字体：Noto Sans SC（SIL Open Font License 1.1）。",Compact?17:23,Muted,28,90,-56,160);
-            Button(p,"查看隐私与字体许可",28,270,-56,54,()=>Navigate("隐私许可"),Navy);
-            Button(p,"联系技术支持",28,334,-56,54,()=>Application.OpenURL("mailto:arthur.wang.wsx@gmail.com?subject=OceanAngler%20Feedback"),Navy);
-            Button(p,resetConfirm?"再次确认：建立新进度（保留原文件）":"清除游戏进度",28,410,-56,56,()=>{if(resetConfirm){game.ResetProgress();resetConfirm=false;page="出海";}else resetConfirm=true;dirty=true;},resetConfirm?new Color(.45f,.21f,.16f):Navy);
-            Button(p,"取消并返回设置",28,490,-56,52,()=>{resetConfirm=false;GoBack();},Navy);
+            Button(p,game.DeveloperMode?"开发者模式 · 已开启":"开发者模式",28,270,-56,54,()=>{game.ClearNotice();Navigate("开发者模式");},game.DeveloperMode?Teal:Navy);
+            Button(p,"查看隐私与字体许可",28,334,-56,54,()=>Navigate("隐私许可"),Navy);
+            Button(p,"联系技术支持",28,398,-56,54,()=>Application.OpenURL("mailto:arthur.wang.wsx@gmail.com?subject=OceanAngler%20Feedback"),Navy);
+            Button(p,resetConfirm?"再次确认：建立新进度（保留原文件）":game.DeveloperMode?"清除测试进度":"清除游戏进度",28,474,-56,56,()=>{if(resetConfirm){game.ResetProgress();resetConfirm=false;page="出海";}else resetConfirm=true;dirty=true;},resetConfirm?new Color(.45f,.21f,.16f):Navy);
+            Button(p,"取消并返回设置",28,554,-56,52,()=>{resetConfirm=false;GoBack();},Navy);
         }
         void BuildLegal()
         {

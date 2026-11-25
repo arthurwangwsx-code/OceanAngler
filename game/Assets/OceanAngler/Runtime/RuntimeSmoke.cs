@@ -17,7 +17,9 @@ namespace OceanAngler
         GameController game;string folder;Receipt receipt;bool finished,journeyMode,journeyQuit,completeContent,gearReviewMode;float began;
         IEnumerator Start()
         {
-            var args=LaunchArguments.Get();int rigDetail=Array.IndexOf(args,"--ocean-rig-detail-review");
+            var args=LaunchArguments.Get();int developer=Array.IndexOf(args,"--ocean-developer-review");
+            if(developer>=0&&developer+2<args.Length){yield return RunDeveloperReview(args[developer+1],args[developer+2],true,true);yield break;}
+            int rigDetail=Array.IndexOf(args,"--ocean-rig-detail-review");
             if(rigDetail>=0&&rigDetail+1<args.Length){yield return RunRigDetailReview(args[rigDetail+1],true,true);yield break;}
             int slope=Array.IndexOf(args,"--ocean-slope-review");
             if(slope>=0&&slope+1<args.Length){yield return RunSlopeReview(args[slope+1],true,true);yield break;}

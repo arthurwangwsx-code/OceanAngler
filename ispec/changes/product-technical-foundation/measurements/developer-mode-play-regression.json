@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "f7698a99-4c05-493f-bc45-ce575256d033",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "fc8ac08fb9ab797d7ee3d93c2b164b178aa5ed71a87bb03d4ad8924cb1f8dff7",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-25T12:31:39.252Z",
+    "finishedAt": "2026-11-25T12:33:26.331Z",
+    "durationMs": 107053.25712499999,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/developer-mode-qa/unity-step.py",
+      "play-regression",
+      "tests",
+      "--test-platform",
+      "PlayMode",
+      "--label",
+      "developerregression20261125a",
+      "--test-filter",
+      "ImmersiveNavigationTests;CompactPreparationTests;GearFeedbackTests;JournalFramingTests;IntegratedWorldTests;ObservationVisitTests;ChannelVisitTests;HalibutWorldTests;RigDetailReviewTests"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/developer-mode-qa/unity-step.py",
+    "play-regression",
+    "tests",
+    "--test-platform",
+    "PlayMode",
+    "--label",
+    "developerregression20261125a",
+    "--test-filter",
+    "ImmersiveNavigationTests;CompactPreparationTests;GearFeedbackTests;JournalFramingTests;IntegratedWorldTests;ObservationVisitTests;ChannelVisitTests;HalibutWorldTests;RigDetailReviewTests"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T12:31:39.252Z",
+  "finishedAt": "2026-11-25T12:33:26.331Z",
+  "durationMs": 107053.25712499999
+}

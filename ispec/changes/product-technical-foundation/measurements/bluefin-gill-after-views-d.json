@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "f821bd3b-6a13-4927-b687-8a7def557b91",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "eb788772386e39178372e0a4b4e6f849744f9e073fbfc176d939e530d9deb1e9",
+    "category": "e2e",
+    "executable": "Blender",
+    "startedAt": "2026-11-25T11:56:52.838Z",
+    "finishedAt": "2026-11-25T11:58:15.482Z",
+    "durationMs": 82609.396417,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "/Applications/Blender.app/Contents/MacOS/Blender",
+    "args": [
+      "--background",
+      "art/source/bluefin/Bluefin.blend",
+      "--threads",
+      "4",
+      "--python-exit-code",
+      "1",
+      "--python",
+      ".local/bluefin-gill-qa/review-head.py",
+      "--",
+      ".local/bluefin-gill-qa/after-d"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "/Applications/Blender.app/Contents/MacOS/Blender",
+    "--background",
+    "art/source/bluefin/Bluefin.blend",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "1",
+    "--python",
+    ".local/bluefin-gill-qa/review-head.py",
+    "--",
+    ".local/bluefin-gill-qa/after-d"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T11:56:52.838Z",
+  "finishedAt": "2026-11-25T11:58:15.482Z",
+  "durationMs": 82609.396417
+}

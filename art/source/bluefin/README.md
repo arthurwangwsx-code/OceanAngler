@@ -1,5 +1,7 @@
 # 蓝鳍鲹英雄鱼候选
 
+鳃盖后缘当前为原创共面窄带候选D，三档24028/9728/3948面；七动作、12骨与九PNG保留，仍为prototype。仅更新保存源鳃缘可用 `python3 tools/art.py build --asset bluefin --opercular-only --label uniqueopercular --no-preview`，重复配方不会再次切分；完整生成入口也接入同一配方。导入保持运行时曲线与prefab，使用 `python3 tools/game.py bluefin-head` 后 `python3 tools/game.py journal-envelope`。源身份/动作射线243项通过不等于原生或最终美术通过，详见[鳃缘方案与范围](../../../docs/44-bluefin-opercular-rim.md)。
+
 物种：蓝鳍鲹，Caranx melampygus。用于首条英雄鱼的独立美术制作与审阅；当前为候选，不能视为A1–A3通过。其余11物种尚未按此质量生产。
 
 ## 科学参考与权利边界

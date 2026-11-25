@@ -8,8 +8,10 @@ def main():
     p.add_argument('--motions-only',action='store_true')
     p.add_argument('--fin-motion-only',action='store_true')
     p.add_argument('--head-surface-only',action='store_true')
+    p.add_argument('--opercular-only',action='store_true')
     # Parse the extra opt-in before validating mutually exclusive update modes.
     a=p.parse_args()
+    if a.opercular_only and (a.action!='build' or a.asset!='bluefin' or any((a.maps_only,a.motions_only,a.fin_motion_only,a.head_surface_only))):raise RuntimeError('Opercular update requires only the existing bluefin source')
     if (a.maps_only or a.motions_only) and (a.action!='build' or a.asset!='bluefin' or a.maps_only and a.motions_only):raise RuntimeError('Use one update mode for an existing bluefin build')
     if a.fin_motion_only and (a.action!='build' or a.asset!='halibut' or a.maps_only or a.motions_only):raise RuntimeError('Fin motion update requires the existing halibut source')
     if a.head_surface_only and (a.action!='build' or a.asset!='bluefin' or a.maps_only or a.motions_only or a.fin_motion_only):raise RuntimeError('Head surface update requires the existing bluefin source')
@@ -23,7 +25,7 @@ def main():
     args=[str(blender),'--background','--factory-startup','--threads','8','--python-exit-code','1']
     name,stem={'halibut':('Halibut','halibut'),'bluefin':('Bluefin','bluefin'),'spinning-rig':('SpinningRig','spinning_rig'),'coral-bay':('CoralBay','bay'),'nearshore-channel':('NearshoreChannel','channel'),'continental-slope':('ContinentalSlope','slope')}[a.asset]
     if a.action!='build':args+=[str(ROOT/'art/source'/a.asset/(name+'.blend'))]
-    args+=['--python',str(ROOT/'tools'/('art_bluefin_head_surface.py' if a.head_surface_only else 'art_halibut_fin_motion.py' if a.fin_motion_only else 'art_bluefin_motions.py' if a.motions_only else 'art_'+stem+'.py' if a.action=='build' else 'art_validate_'+stem+'.py' if a.action=='validate' else 'art_review_'+stem+'.py'))]
+    args+=['--python',str(ROOT/'tools'/('art_bluefin_gill.py' if a.opercular_only else 'art_bluefin_head_surface.py' if a.head_surface_only else 'art_halibut_fin_motion.py' if a.fin_motion_only else 'art_bluefin_motions.py' if a.motions_only else 'art_'+stem+'.py' if a.action=='build' else 'art_validate_'+stem+'.py' if a.action=='validate' else 'art_review_'+stem+'.py'))]
     if a.motions_only:args+=['--','--update-existing']
     elif a.action=='build' and (a.no_preview or a.maps_only):args+=['--']+(['--no-preview'] if a.no_preview else [])+(['--maps-only'] if a.maps_only else [])
     if a.action=='review':args+=['--','--output',str(folder),'--motion',a.motion,'--frame',str(a.frame)]+(['--turntable'] if a.turntable else [])+(['--eyes-only'] if a.eyes_only else [])+(['--mouth-only'] if a.mouth_only else [])

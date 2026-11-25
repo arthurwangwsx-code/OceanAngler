@@ -8,7 +8,7 @@
       "license": "SIL Open Font License 1.1",
       "redistribution": true,
       "status": "LICENSE_VERIFIED",
-      "sha256": "0978e118b340c676c83d76bb88bcd18d446a88fc49f15bd35d00b792153dae59",
+      "sha256": "c7b0c6411d45070a236e2ff06bf111976ecaebfc4af44544557a7ef56c2b38a1",
       "path": "game/Assets/OceanAngler/Resources/UIFont.ttf"
     },
     {
@@ -50,11 +50,11 @@
       "acquiredAt": "2026-11-23",
       "status": "ART_REVIEW_PENDING",
       "path": "art/source/bluefin/Bluefin.blend",
-      "sha256": "d43876becf7fdbb744362ee212791df0fe5abc7b7713c5d473104ade1948a3d0",
+      "sha256": "1fed220c13e3aac36b95db52f54e565c581e7cfba48aa839c0fe7e9390e328ee",
       "artifacts": [
         {
           "path": "art/source/bluefin/Bluefin.blend",
-          "sha256": "d43876becf7fdbb744362ee212791df0fe5abc7b7713c5d473104ade1948a3d0"
+          "sha256": "1fed220c13e3aac36b95db52f54e565c581e7cfba48aa839c0fe7e9390e328ee"
         },
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin_BaseColor.png",
@@ -78,7 +78,7 @@
         },
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin.fbx",
-          "sha256": "7f931a325ca85f5f7abb5ef85878ec0e928b7c06659d95cc829bf164f2bae701"
+          "sha256": "c96469187a9485525344d2199a4d0578dadda13caf15a7693c41dcfba38c274c"
         },
         {
           "path": "art/previews/bluefin/bite.png",
@@ -151,7 +151,7 @@
         },
         {
           "path": "art/source/bluefin/build-report.json",
-          "sha256": "b1c5b812ab765c8da36007b97ddd0a76545ecf90aeb0332b18442df43530eee8"
+          "sha256": "7383cb90e5d21945a52dcd7d7a046cba18b100c44dd920f9a0cab8ef5b1512e8"
         },
         {
           "path": "art/previews/bluefin-fin-tissue/first-native-phone-exit.png",
@@ -287,7 +287,23 @@
           "path": "art/source/bluefin/build-report.json",
           "sha256": "ec31a76b35372af412786fa42d0311cd5bdd5445dd0dcd6d50d15e48c95c1ce7"
         }
-      ]
+      ],
+      "opercularRimFollowup": {
+        "status": "SOURCE_ENGINEERING_PASS_ART_REVIEW_PENDING",
+        "recipe": "triangle-integrated-opercular-rim-v4",
+        "triangles": [
+          24028,
+          9728,
+          3948
+        ],
+        "sourceChecks": 243,
+        "poseSideLodSamples": 210,
+        "minimumCoverage": 1.0,
+        "unchangedMaps": 9,
+        "protectedFaces": 16670,
+        "scope": "Original integrated skin rim; source-surface/UV/weights and rest/actions checks only. Actual Unity import and general Editor regression pass. No third-party media, final art, scientific or physical acceptance.",
+        "documentation": "docs/44-bluefin-opercular-rim.md"
+      }
     },
     {
       "id": "complete-spinning-rig-candidate",
@@ -3614,7 +3630,7 @@
       "artifacts": [
         {
           "path": "game/Assets/OceanAngler/Resources/JournalEnvelopes.json",
-          "sha256": "9589e834a571156cd8a9d3bd18186d282301fd39e0d80b2d7ae8f02dd1ba76f9"
+          "sha256": "923c9a635e33046249d04df99e8e4ab05e3996217bf87e68f6f967e154583a1c"
         },
         {
           "path": "game/Assets/OceanAngler/Editor/JournalEnvelopeBuilder.cs",

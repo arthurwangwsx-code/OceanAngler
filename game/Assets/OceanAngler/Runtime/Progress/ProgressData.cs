@@ -25,14 +25,17 @@ namespace OceanAngler
         public GameSettings settings = new GameSettings();
         public List<string> observations = new List<string>();
         public ProgressData Clone() => JsonUtility.FromJson<ProgressData>(JsonUtility.ToJson(this));
-        public void Validate(ContentCatalog catalog)
+        public void Validate(ContentCatalog catalog, bool developerSandbox = false)
         {
             if (schemaVersion != 1 && schemaVersion != 2) throw new InvalidOperationException("Unsupported save version");
             if (settings == null || catches == null || observations == null || totalPoints < 0) throw new InvalidOperationException("Invalid save");
             if(schemaVersion==1&&observations.Count!=0)throw new InvalidOperationException("Observation records require save version 2");
             if(observations.Distinct().Count()!=observations.Count)throw new InvalidOperationException("Duplicate observation");
             foreach(var id in observations)
-                if(catalog.Habitat(catalog.Observation(id).habitatId).unlockPoints>totalPoints)throw new InvalidOperationException("Locked observation");
+            {
+                var habitat=catalog.Habitat(catalog.Observation(id).habitatId);
+                if(!developerSandbox&&habitat.unlockPoints>totalPoints)throw new InvalidOperationException("Locked observation");
+            }
             long expected = 0; var ids = new HashSet<string>();
             foreach (var c in catches)
             {
@@ -41,11 +44,12 @@ namespace OceanAngler
                 expected += c.awardedPoints;
             }
             if (expected != totalPoints) throw new InvalidOperationException("Point ledger mismatch");
-            if (catalog.Habitat(habitatId).unlockPoints > totalPoints) throw new InvalidOperationException("Locked habitat in save");
+            var selectedHabitat=catalog.Habitat(habitatId);
+            if (!developerSandbox&&selectedHabitat.unlockPoints > totalPoints) throw new InvalidOperationException("Locked habitat in save");
             foreach (var pair in new[] { (rodId,"rod"), (reelId,"reel"), (lineId,"line"), (lureId,"lure") })
             {
                 var g = catalog.Gear(pair.Item1);
-                if (g.category != pair.Item2 || g.unlockPoints > totalPoints) throw new InvalidOperationException("Invalid loadout");
+                if (g.category != pair.Item2 || !developerSandbox&&g.unlockPoints > totalPoints) throw new InvalidOperationException("Invalid loadout");
             }
         }
         public static void ValidateCatch(CatchRecord c, ContentCatalog catalog)

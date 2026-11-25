@@ -18,12 +18,19 @@ namespace OceanAngler
         Vector3 releaseStart,releaseHeading;
         bool awaitingNextFish;
         const float ReleaseDuration=2.4f;
+        public void ResetProfilePresentation()
+        {
+            releasing=null;awaitingNextFish=false;releaseTime=0;visualTime=0;
+            cameraInitialized=false;splashBegan=float.NegativeInfinity;
+        }
         void Start()
         {
             game=GetComponent<GameController>();ui=GetComponent<GameUI>();view=Camera.main;
             RenderSettings.ambientLight=new Color(.2f,.32f,.38f);
             Observations=gameObject.AddComponent<ObservationEncounter>();
-            SwitchHabitat(game.Progress.Data.habitatId);MakeGear();SelectFish(game.Content.fish[0].id);game.Released+=BeginRelease;
+            game.Released+=BeginRelease;
+            if(game.Progress.RequiresRecovery)return;
+            SwitchHabitat(game.Progress.Data.habitatId);MakeGear();SelectFish(game.Content.fish[0].id);
         }
         void SwitchHabitat(string id)
         {
@@ -79,6 +86,7 @@ namespace OceanAngler
             var data=game.Progress.Data;bool reduced=data.settings.reducedMotion;
             bool habitatChanged=habitat!=data.habitatId;
             if(habitatChanged){SwitchHabitat(data.habitatId);cameraInitialized=false;splashBegan=float.NegativeInfinity;}
+            if(gear==null)MakeGear();
             if(game.Session.Phase!=FishingPhase.Ready||habitatChanged){releasing=null;awaitingNextFish=false;}
             if(ui.FocusedFish!=null||ui.InspectingGear||ui.InspectingHabitat||ui.InspectingObservation||reduced)releasing=null;
             string desired=ui.FocusedFish??releasing?.fishId??game.Session.Catch?.fishId??(awaitingNextFish?fishId:System.Array.Find(game.Content.fish,f=>f.habitatId==data.habitatId).id);
@@ -94,7 +102,7 @@ namespace OceanAngler
             fishRoot.localScale=Vector3.one*(journal?ui.ModelZoom:1);
             fishRoot.rotation=journal?JournalRotation():pose.fishRotation;
             if(releasing!=null)PresentRelease(game.Session.Paused);
-            bool discovered=game.Progress.Data.catches.Exists(c=>c.fishId==fishId);fish.SetSilhouette(journal&&!discovered);
+            bool discovered=game.Progress.Data.catches.Exists(c=>c.fishId==fishId);fish.SetSilhouette(journal&&!discovered&&!game.DeveloperMode);
             float t=game.Session.Tension;
             if(ui.InspectingGear)
             {

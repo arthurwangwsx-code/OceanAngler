@@ -11,18 +11,26 @@ namespace OceanAngler
         public bool Reeling { get; private set; }
         public string Notice { get; private set; }
         public bool RestReminder { get; private set; }
+        public bool DeveloperMode => Progress!=null&&Progress.DeveloperMode;
+        public bool DeveloperProfileNeedsAttention { get; private set; }
         public event Action Changed;
         public event Action<CatchRecord> Released;
         readonly System.Random random = new System.Random();
         float accumulator, activeTime;
+        SaveStore normalStore,developerStore;
         void Awake()
         {
             Application.targetFrameRate = 60;
             Content = ContentCatalog.Load(); Session = new FishingSession();
             var args=LaunchArguments.Get();int preview=Array.IndexOf(args,"--ocean-save-root");
             string saveRoot=preview>=0&&preview+1<args.Length?args[preview+1]:Application.persistentDataPath;
-            Progress = new ProgressService(Content, new SaveStore(Path.Combine(saveRoot, "ocean-progress.json"), Content));
-            Notice = Progress.LoadMessage;
+            normalStore=new SaveStore(Path.Combine(saveRoot,"ocean-progress.json"),Content);
+            developerStore=new SaveStore(Path.Combine(saveRoot,"ocean-developer-progress.json"),Content,true);
+            var developer=developerStore.HasExisting?new ProgressService(Content,developerStore):null;
+            DeveloperProfileNeedsAttention=developer!=null&&(developer.RequiresRecovery||developer.RecoveredBackup);
+            bool selected=developer!=null&&!developer.RequiresRecovery&&!developer.RecoveredBackup&&developer.DeveloperSelected;
+            Progress=selected?developer:new ProgressService(Content,normalStore);
+            Notice=DeveloperProfileNeedsAttention?"开发者测试存档需要确认，正常进度保留。请在家长区重新开启或重建测试进度。":Progress.LoadMessage;
         }
         void Update()
         {
@@ -66,6 +74,30 @@ namespace OceanAngler
                 Try(()=>{Progress.SelectGear(id);Notice="已装备"+Content.Gear(id).name+"，研究积分未扣除。";},"暂时无法保存装备，请重试。");
         }
         public void Configure(Action<GameSettings> action) { Try(() => Progress.Configure(action)); }
+        public bool SwitchDeveloperMode(bool enabled) => ChangeDeveloperProfile(enabled,false);
+        public bool RebuildDeveloperProgress() => ChangeDeveloperProfile(true,true);
+        bool ChangeDeveloperProfile(bool enabled,bool rebuild)
+        {
+            if(!Session.Paused){Notice="请先暂停，再切换测试模式。";Changed?.Invoke();return false;}
+            if(!rebuild&&DeveloperMode==enabled)return true;
+            return Try(()=>
+            {
+                bool fresh=!developerStore.HasExisting;
+                var next=new ProgressService(Content,enabled?developerStore:normalStore);
+                if(enabled)
+                {
+                    if(rebuild)next.Reset(true);
+                    else next.SelectDeveloperProfile(true,fresh?Progress.Data?.settings:null);
+                }
+                else Progress.SelectDeveloperProfile(false);
+                // Only publish the selected profile and cancel the old hold
+                // after its mode choice has reached the isolated test file.
+                Progress=next;Session.Cancel();Pause(true);activeTime=0;RestReminder=false;
+                DeveloperProfileNeedsAttention=false;
+                GetComponent<OceanWorld>()?.ResetProfilePresentation();
+                Notice=next.RequiresRecovery?next.LoadMessage:enabled?"开发者模式已开启，全部内容可体验。":"已回到正常进度，开发者测试记录单独保留。";
+            },"暂时无法切换。当前模式和正常进度保留；可重试或重建测试进度。");
+        }
         public void ResetProgress() { if (Try(() => Progress.Reset())) { Session.Cancel(); Reeling = false; Notice = "已建立新存档，原始文件已保留。"; } }
         public void DismissRest() { RestReminder = false; activeTime = 0; }
         public void ClearNotice() { Notice = null; }

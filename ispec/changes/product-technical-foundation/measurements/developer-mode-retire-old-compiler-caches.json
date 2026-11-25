@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "c70a4ad7-828d-4d17-aad1-0994e2f591ea",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "db4b9956db80615bcb17b10c57454816b6cf844df5d1a652f658e7ecb1590940",
+    "category": "e2e",
+    "executable": "python3",
+    "startedAt": "2026-11-25T12:34:15.318Z",
+    "finishedAt": "2026-11-25T12:35:11.866Z",
+    "durationMs": 56522.427417000006,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/developer-mode-qa/retire-obsolete-compiler-cache.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/developer-mode-qa/retire-obsolete-compiler-cache.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T12:34:15.318Z",
+  "finishedAt": "2026-11-25T12:35:11.866Z",
+  "durationMs": 56522.427417000006
+}

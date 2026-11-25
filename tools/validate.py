@@ -8,7 +8,7 @@ def check(ok,why):
 b=json.loads((r/'planning/baseline.json').read_text());rows=list(csv.DictReader((r/'planning/backlog.csv').open()))
 ids=[t['id'] for t in rows];check(len(ids)==len(set(ids)),'duplicate task IDs')
 reqs=set(re.findall(r'### Requirement: (REQ-\d+)',(r/'ispec/specs/fishing-game/spec.md').read_text()))
-check(len(reqs)==12,'requirement count drift');check(reqs=={t['requirement'] for t in rows},'uncovered or unknown requirement')
+check(reqs=={'REQ-'+str(i).zfill(2) for i in range(1,14)},'requirement set drift');check(reqs=={t['requirement'] for t in rows},'uncovered or unknown requirement')
 graph={t['id']:list(filter(None,t['dependencies'].split(';'))) for t in rows}
 for t in rows:
  check(t['stage'] in ('F0','P0','P1','P2'),'unknown stage')

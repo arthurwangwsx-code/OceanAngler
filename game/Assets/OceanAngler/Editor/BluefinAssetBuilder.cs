@@ -48,7 +48,7 @@ namespace OceanAngler.Editor
             var clips=AssetDatabase.LoadAllAssetsAtPath(Folder+"/Bluefin.fbx").OfType<AnimationClip>().Where(c=>!c.name.StartsWith("__preview__")).ToArray();
             if(preservePresentation)
             {
-                // This authoring path changes eye geometry/materials only.
+                // This authoring path changes head surface geometry/materials only.
                 // Keep the reviewed runtime curves and prefab transforms;
                 // re-exported FBX conversion can otherwise rewrite low bits.
                 var existing=Resources.Load<GameObject>("Models/Bluefin");if(existing==null)throw new InvalidOperationException("Existing reviewed Bluefin prefab required");

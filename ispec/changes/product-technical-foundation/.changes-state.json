@@ -613,6 +613,14 @@
       "checkedAt": "2026-11-25T08:23:51.068Z",
       "durationMs": 169.623541,
       "outcome": "accepted"
+    },
+    {
+      "stageId": "apply",
+      "runId": null,
+      "operation": "start",
+      "checkedAt": "2026-11-25T11:33:28.384Z",
+      "durationMs": 148.700583,
+      "outcome": "accepted"
     }
   ],
   "measurementJournal": {
@@ -17938,6 +17946,314 @@
       "executable": "python3",
       "commandDigest": "6ec1932e1aa3c039877d7e26771bdcd7cc07f316c5940a051d0611472de4b37d",
       "receiptPath": "measurements/immersive-pages-final-records-b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "219bae09-5372-458a-8750-ea9c0839a8bc",
+      "startedAt": "2026-11-25T11:37:57.095Z",
+      "executable": "Blender",
+      "commandDigest": "172850d9e2d5542957f40ea4e1372345e620062f3a0d7c86be3a63510a62ed2e",
+      "receiptPath": "measurements/bluefin-gill-source-red.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "78546487-e23c-462f-a54e-8d21faeafb87",
+      "startedAt": "2026-11-25T11:38:40.041Z",
+      "executable": "Blender",
+      "commandDigest": "2594e6804c6ea86d2bac8ea9fa9f91017b160800b6ad745093c85cbddc766855",
+      "receiptPath": "measurements/bluefin-gill-before-views.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "828999de-a818-427d-882b-63bf5dabc524",
+      "startedAt": "2026-11-25T11:41:15.596Z",
+      "executable": "python3",
+      "commandDigest": "b3e462558609db24a8546847def02208ad06035b48181ef114f1d4a194f40843",
+      "receiptPath": "measurements/bluefin-gill-build-a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "746abffe-569b-49b5-8705-a6223aed9ba8",
+      "startedAt": "2026-11-25T11:41:46.107Z",
+      "executable": "Blender",
+      "commandDigest": "50e99b32e2f2641f37bda8be61907161b9c62e90eed902029c2aef62eb632203",
+      "receiptPath": "measurements/bluefin-gill-source-a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "9b998129-0c6f-49a4-b874-cb0383e802f5",
+      "startedAt": "2026-11-25T11:47:22.532Z",
+      "executable": "python3",
+      "commandDigest": "991529b81df0e4045059eb7fb5b75846e557e8c6ee4b43baff3c033c264d69d7",
+      "receiptPath": "measurements/bluefin-gill-build-b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "da0a20c9-4c90-4f62-8c47-49cc6446d79f",
+      "startedAt": "2026-11-25T11:48:54.313Z",
+      "executable": "Blender",
+      "commandDigest": "9af3c331969cd542bba55a048087d96376e68f9e6d895a2e03cefc07ad70a5d8",
+      "receiptPath": "measurements/bluefin-gill-integrated-original-red.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "01537392-33e3-4f2a-8954-60bf8a9f9a8a",
+      "startedAt": "2026-11-25T11:49:50.481Z",
+      "executable": "Blender",
+      "commandDigest": "0b2470b28cfc02c75fe19099381c89733893e0b8a49b19bf4fa8ed335c58d88a",
+      "receiptPath": "measurements/bluefin-gill-source-b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "b1dc39fd-05ac-463a-9fdb-fd5582dc932e",
+      "startedAt": "2026-11-25T11:51:19.626Z",
+      "executable": "Blender",
+      "commandDigest": "9567378f5bff7f37c8a89aacd917a65db0ff2bac1c9407972f99ca4cc550e47a",
+      "receiptPath": "measurements/bluefin-gill-topology-diagnostic-b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "0352ed17-cbba-4e22-ab2f-d51874e679fb",
+      "startedAt": "2026-11-25T11:52:21.029Z",
+      "executable": "python3",
+      "commandDigest": "d619134f460688d2cbb79200e69247f3e5ffdbeb1236ec0dab5d1d0a38fe8082",
+      "receiptPath": "measurements/bluefin-gill-build-c.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "c88cf415-bbc4-4a93-879c-20d1246fa823",
+      "startedAt": "2026-11-25T11:52:51.387Z",
+      "executable": "Blender",
+      "commandDigest": "29986afbd21b94882e887f33783a2b9b4e9a085cf061ffa538678a69aa75745a",
+      "receiptPath": "measurements/bluefin-gill-source-c.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "9cd8db94-56aa-4f32-a10f-17b9709fd34b",
+      "startedAt": "2026-11-25T11:54:15.485Z",
+      "executable": "Blender",
+      "commandDigest": "76abd59810a9e5edb53a130cb615084d72e3c8f8a0467ab2c406859b5ddf4992",
+      "receiptPath": "measurements/bluefin-gill-topology-diagnostic-c.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "3c8e769d-4fb3-48e5-abcf-97fe0dbf0854",
+      "startedAt": "2026-11-25T11:55:17.377Z",
+      "executable": "python3",
+      "commandDigest": "1bf3e13a8ff8580b0d615d6f787440b195544df80fc62530e9d2d2d15a6b9442",
+      "receiptPath": "measurements/bluefin-gill-build-d.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "8e38d477-4a64-4474-a2e8-863a112fbe8e",
+      "startedAt": "2026-11-25T11:55:54.462Z",
+      "executable": "Blender",
+      "commandDigest": "d27a9a73c229bcd343d02a596c7102c718a5a16785a449b5507a148662d3c3cd",
+      "receiptPath": "measurements/bluefin-gill-source-d.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "f821bd3b-6a13-4927-b687-8a7def557b91",
+      "startedAt": "2026-11-25T11:56:52.838Z",
+      "executable": "Blender",
+      "commandDigest": "eb788772386e39178372e0a4b4e6f849744f9e073fbfc176d939e530d9deb1e9",
+      "receiptPath": "measurements/bluefin-gill-after-views-d.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "b03ed4c9-8d2c-4ed8-b0d1-361774471487",
+      "startedAt": "2026-11-25T11:58:21.926Z",
+      "executable": "python3",
+      "commandDigest": "73b19b7437c40a3e56d8ab74ccd40fe00fa2b4151ed088de803abd8fdb36be8e",
+      "receiptPath": "measurements/bluefin-gill-whole-source-d.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "7603af63-aecd-47b7-8bd9-7ec7a41bcec1",
+      "startedAt": "2026-11-25T12:19:34.940Z",
+      "executable": "python3",
+      "commandDigest": "664ab55f1da6992a5fb092d1a54107cd78478ba57f6cc3e1f7a5e89b60e435d9",
+      "receiptPath": "measurements/developer-mode-restore-library.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "3db51806-548c-4402-b7b2-23fe66d5d64c",
+      "startedAt": "2026-11-25T12:26:30.376Z",
+      "executable": "python3",
+      "commandDigest": "20485823268158eb18699bca73564bd8c7ef88ec0c29af538a816eecf4b00517",
+      "receiptPath": "measurements/developer-mode-font.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "1e5ac489-ba08-48c4-862a-6b7819323898",
+      "startedAt": "2026-11-25T12:26:57.307Z",
+      "executable": "python3",
+      "commandDigest": "7f708b303fbdadd63daae806de5eac22b6713e17e34f121e37e7e5da00e20928",
+      "receiptPath": "measurements/developer-mode-import-a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "1d50c3c7-d5e7-401b-8488-177634f5414c",
+      "startedAt": "2026-11-25T12:27:14.839Z",
+      "executable": "python3",
+      "commandDigest": "665db1d8d64c0591f0a22ec9d1c30ac24f21a826e109869f5bd0dd9aed9ea43a",
+      "receiptPath": "measurements/developer-mode-editor-a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "f7713094-c5db-49ee-b7bb-8e83499f7055",
+      "startedAt": "2026-11-25T12:27:36.470Z",
+      "executable": "python3",
+      "commandDigest": "ebaf82c18e23746a62aa97f8c6d07427fd7b756c5bf9a6a0c93123e1b3ee184d",
+      "receiptPath": "measurements/developer-mode-envelopes-a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "f982d2ff-2fed-4d04-88e5-60be466e859a",
+      "startedAt": "2026-11-25T12:28:03.477Z",
+      "executable": "python3",
+      "commandDigest": "618d6d8345f6db6bdd19c0dab7319d7b184f54dc103c163a3fe0d4ee9cc65ebd",
+      "receiptPath": "measurements/developer-mode-play-a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "5dd91a1e-93bf-48f5-9b4c-efdbeba23117",
+      "startedAt": "2026-11-25T12:28:44.636Z",
+      "executable": "python3",
+      "commandDigest": "9cabb711cce79fce8ccaeb96faf83cf85d3be2c01886266c0e13a1f7f39cbe4e",
+      "receiptPath": "measurements/developer-mode-play-b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "75e077bc-337b-4372-8616-7b09fa1cd69a",
+      "startedAt": "2026-11-25T12:29:29.289Z",
+      "executable": "python3",
+      "commandDigest": "e0d04c9224a75556a2386ae3dee4a54405ec6d835c3e7fd6b81578c45438e51c",
+      "receiptPath": "measurements/developer-mode-editor-full.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "f7698a99-4c05-493f-bc45-ce575256d033",
+      "startedAt": "2026-11-25T12:31:39.252Z",
+      "executable": "python3",
+      "commandDigest": "fc8ac08fb9ab797d7ee3d93c2b164b178aa5ed71a87bb03d4ad8924cb1f8dff7",
+      "receiptPath": "measurements/developer-mode-play-regression.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "c70a4ad7-828d-4d17-aad1-0994e2f591ea",
+      "startedAt": "2026-11-25T12:34:15.318Z",
+      "executable": "python3",
+      "commandDigest": "db4b9956db80615bcb17b10c57454816b6cf844df5d1a652f658e7ecb1590940",
+      "receiptPath": "measurements/developer-mode-retire-old-compiler-caches.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "f4a06746-242a-4d02-8301-12fc0b3ead05",
+      "startedAt": "2026-11-25T12:35:23.250Z",
+      "executable": "python3",
+      "commandDigest": "97f00c9ec41ee9d51883fde38968a812ca49d075157eefb48c7927f4dcb6d604",
+      "receiptPath": "measurements/developer-mode-archive-old-exports.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "1ec23757-1a6a-4255-90dd-c7ae47a64198",
+      "startedAt": "2026-11-25T12:37:01.223Z",
+      "executable": "python3",
+      "commandDigest": "eb629dd343202f17eb5400f13b1c8007922fd3cccf4e493e9e97e9e785616d2b",
+      "receiptPath": "measurements/bluefin-gill-idempotent-cli.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "lint",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "d80a0aa8-73ac-497b-97fa-e4a158bf9ac6",
+      "startedAt": "2026-11-25T12:38:12.367Z",
+      "executable": "python3",
+      "commandDigest": "85cd9cdc2d0e90e39ee0ddabce79fdf3bae2b03b919d9c0f24c85d42f9e10f14",
+      "receiptPath": "measurements/developer-mode-static-a.json"
     }
   ],
   "runMeasurements": [
@@ -46075,6 +46391,538 @@
       "receipt": {
         "path": "measurements/immersive-pages-final-records-b.json",
         "sha256": "41ebb8b5bd7448af90697a0fee17fd2800848986cf26fe25c581366da4dae4bb"
+      }
+    },
+    {
+      "id": "219bae09-5372-458a-8750-ea9c0839a8bc",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "172850d9e2d5542957f40ea4e1372345e620062f3a0d7c86be3a63510a62ed2e",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-25T11:37:57.095Z",
+      "finishedAt": "2026-11-25T11:38:01.431Z",
+      "durationMs": 4296.502709,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-gill-source-red.json",
+        "sha256": "022a6c8c1ffe2a67392d8b049adbf2d137eae2e341118bd2eb4ba3d1264576e0"
+      }
+    },
+    {
+      "id": "78546487-e23c-462f-a54e-8d21faeafb87",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "2594e6804c6ea86d2bac8ea9fa9f91017b160800b6ad745093c85cbddc766855",
+      "category": "e2e",
+      "executable": "Blender",
+      "startedAt": "2026-11-25T11:38:40.041Z",
+      "finishedAt": "2026-11-25T11:39:53.737Z",
+      "durationMs": 73652.31937499999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-gill-before-views.json",
+        "sha256": "dcb42f88b31a7dd0ec672e6d5e8b06480e737b48f9b5e22a2023559b32e637e8"
+      }
+    },
+    {
+      "id": "828999de-a818-427d-882b-63bf5dabc524",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "b3e462558609db24a8546847def02208ad06035b48181ef114f1d4a194f40843",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T11:41:15.596Z",
+      "finishedAt": "2026-11-25T11:41:17.749Z",
+      "durationMs": 2111.8281669999997,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-gill-build-a.json",
+        "sha256": "dd9fc564dd047eeb9c073cec2f954e444381a5cb17dba52fe621587a5be97160"
+      }
+    },
+    {
+      "id": "746abffe-569b-49b5-8705-a6223aed9ba8",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "50e99b32e2f2641f37bda8be61907161b9c62e90eed902029c2aef62eb632203",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-25T11:41:46.107Z",
+      "finishedAt": "2026-11-25T11:41:54.182Z",
+      "durationMs": 8031.5875,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-gill-source-a.json",
+        "sha256": "f6fa11b718ae48ca2895e66abc8c8c8e6f910df6d009c2894b8250cbe1a48be8"
+      }
+    },
+    {
+      "id": "9b998129-0c6f-49a4-b874-cb0383e802f5",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "991529b81df0e4045059eb7fb5b75846e557e8c6ee4b43baff3c033c264d69d7",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T11:47:22.532Z",
+      "finishedAt": "2026-11-25T11:47:27.352Z",
+      "durationMs": 4786.569374999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-gill-build-b.json",
+        "sha256": "5ccab9a8e67b0bc2837a10751c2984311d6ece6db27df61e508661b82fa7a0ca"
+      }
+    },
+    {
+      "id": "da0a20c9-4c90-4f62-8c47-49cc6446d79f",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "9af3c331969cd542bba55a048087d96376e68f9e6d895a2e03cefc07ad70a5d8",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-25T11:48:54.313Z",
+      "finishedAt": "2026-11-25T11:48:58.827Z",
+      "durationMs": 4485.508374999999,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-gill-integrated-original-red.json",
+        "sha256": "f5fcc5db642b58ac96a4d0a79bcad5f619d0d0d0f806b3ed7b2c5f6f54201d94"
+      }
+    },
+    {
+      "id": "01537392-33e3-4f2a-8954-60bf8a9f9a8a",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "0b2470b28cfc02c75fe19099381c89733893e0b8a49b19bf4fa8ed335c58d88a",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-25T11:49:50.481Z",
+      "finishedAt": "2026-11-25T11:50:00.789Z",
+      "durationMs": 10269.36375,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-gill-source-b.json",
+        "sha256": "eb7912083e6947aaa97014de953c9af62158c7411d616e6aed80b5f863d2d955"
+      }
+    },
+    {
+      "id": "b1dc39fd-05ac-463a-9fdb-fd5582dc932e",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "9567378f5bff7f37c8a89aacd917a65db0ff2bac1c9407972f99ca4cc550e47a",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-25T11:51:19.626Z",
+      "finishedAt": "2026-11-25T11:51:21.458Z",
+      "durationMs": 1794.4475,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-gill-topology-diagnostic-b.json",
+        "sha256": "86f9e253a66850ab4e357eb83b1107111c179bfa001c8fa6bd26e70d397eb24a"
+      }
+    },
+    {
+      "id": "0352ed17-cbba-4e22-ab2f-d51874e679fb",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d619134f460688d2cbb79200e69247f3e5ffdbeb1236ec0dab5d1d0a38fe8082",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T11:52:21.029Z",
+      "finishedAt": "2026-11-25T11:52:26.142Z",
+      "durationMs": 5088.324875,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-gill-build-c.json",
+        "sha256": "dc2d63fa8795a0542958ce9b720e702095766d457d19204aa3401dafaf245417"
+      }
+    },
+    {
+      "id": "c88cf415-bbc4-4a93-879c-20d1246fa823",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "29986afbd21b94882e887f33783a2b9b4e9a085cf061ffa538678a69aa75745a",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-25T11:52:51.387Z",
+      "finishedAt": "2026-11-25T11:53:00.944Z",
+      "durationMs": 9531.241791,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-gill-source-c.json",
+        "sha256": "6e45d165c67befd97f7ed4ae41b0424d7067d204998ebb8617f266029c1ccf10"
+      }
+    },
+    {
+      "id": "9cd8db94-56aa-4f32-a10f-17b9709fd34b",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "76abd59810a9e5edb53a130cb615084d72e3c8f8a0467ab2c406859b5ddf4992",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-25T11:54:15.485Z",
+      "finishedAt": "2026-11-25T11:54:16.657Z",
+      "durationMs": 1142.251583,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-gill-topology-diagnostic-c.json",
+        "sha256": "01b55ed022e5688b26c2ccc3339c8ee0fad3fb736fcbfc38579a80633bcaf28c"
+      }
+    },
+    {
+      "id": "3c8e769d-4fb3-48e5-abcf-97fe0dbf0854",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "1bf3e13a8ff8580b0d615d6f787440b195544df80fc62530e9d2d2d15a6b9442",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T11:55:17.377Z",
+      "finishedAt": "2026-11-25T11:55:22.371Z",
+      "durationMs": 4956.848083,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-gill-build-d.json",
+        "sha256": "a421b168d6db8ca1ee798ac6483a7f51242c90629563a738e4ac7c9bbd65bbb3"
+      }
+    },
+    {
+      "id": "8e38d477-4a64-4474-a2e8-863a112fbe8e",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d27a9a73c229bcd343d02a596c7102c718a5a16785a449b5507a148662d3c3cd",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-25T11:55:54.462Z",
+      "finishedAt": "2026-11-25T11:56:04.155Z",
+      "durationMs": 9649.409292,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-gill-source-d.json",
+        "sha256": "10e1f8b26939caeba9bc83a70c9fc8be131f74eb1f61fcd7638dc789748c5432"
+      }
+    },
+    {
+      "id": "f821bd3b-6a13-4927-b687-8a7def557b91",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "eb788772386e39178372e0a4b4e6f849744f9e073fbfc176d939e530d9deb1e9",
+      "category": "e2e",
+      "executable": "Blender",
+      "startedAt": "2026-11-25T11:56:52.838Z",
+      "finishedAt": "2026-11-25T11:58:15.482Z",
+      "durationMs": 82609.396417,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-gill-after-views-d.json",
+        "sha256": "b7784dd76445b8fe43cd24890529b39f31572f3c9b0ebd5d761d9f1293d36abb"
+      }
+    },
+    {
+      "id": "b03ed4c9-8d2c-4ed8-b0d1-361774471487",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "73b19b7437c40a3e56d8ab74ccd40fe00fa2b4151ed088de803abd8fdb36be8e",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T11:58:21.926Z",
+      "finishedAt": "2026-11-25T11:58:24.425Z",
+      "durationMs": 2471.8386250000003,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-gill-whole-source-d.json",
+        "sha256": "14928ba7b8fc6734cbf2f6eb26346e568395a3e7d00964459f535efa9a2d2ec8"
+      }
+    },
+    {
+      "id": "7603af63-aecd-47b7-8bd9-7ec7a41bcec1",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "664ab55f1da6992a5fb092d1a54107cd78478ba57f6cc3e1f7a5e89b60e435d9",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T12:19:34.940Z",
+      "finishedAt": "2026-11-25T12:20:19.824Z",
+      "durationMs": 44849.624833,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/developer-mode-restore-library.json",
+        "sha256": "0cee41db512e2e9dc85a093c8317afeca7abcead51a1f1470338171565756f8c"
+      }
+    },
+    {
+      "id": "3db51806-548c-4402-b7b2-23fe66d5d64c",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "20485823268158eb18699bca73564bd8c7ef88ec0c29af538a816eecf4b00517",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T12:26:30.376Z",
+      "finishedAt": "2026-11-25T12:26:41.016Z",
+      "durationMs": 10598.005834,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/developer-mode-font.json",
+        "sha256": "47e1cb7c5d2f79ec82636166bc50814ef4a83615746fd4bfffdddc15fe251a4f"
+      }
+    },
+    {
+      "id": "1e5ac489-ba08-48c4-862a-6b7819323898",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "7f708b303fbdadd63daae806de5eac22b6713e17e34f121e37e7e5da00e20928",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T12:26:57.307Z",
+      "finishedAt": "2026-11-25T12:27:09.858Z",
+      "durationMs": 12526.351458,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/developer-mode-import-a.json",
+        "sha256": "2f0f27f6da316fece7bc9a9717187aef895fdf84ae9d682db9eee33bb1dd112e"
+      }
+    },
+    {
+      "id": "1d50c3c7-d5e7-401b-8488-177634f5414c",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "665db1d8d64c0591f0a22ec9d1c30ac24f21a826e109869f5bd0dd9aed9ea43a",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T12:27:14.839Z",
+      "finishedAt": "2026-11-25T12:27:26.254Z",
+      "durationMs": 11378.310958,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/developer-mode-editor-a.json",
+        "sha256": "3409134dd2d99abe8be0dbaa688e61669641741dc6aa9abafdef8cd4b74518b2"
+      }
+    },
+    {
+      "id": "f7713094-c5db-49ee-b7bb-8e83499f7055",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "ebaf82c18e23746a62aa97f8c6d07427fd7b756c5bf9a6a0c93123e1b3ee184d",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T12:27:36.470Z",
+      "finishedAt": "2026-11-25T12:27:44.959Z",
+      "durationMs": 8464.270333999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/developer-mode-envelopes-a.json",
+        "sha256": "60e4018d86bfe34b918c849f49a919d5016a1a256a75a40f56a0a8f0815b52da"
+      }
+    },
+    {
+      "id": "f982d2ff-2fed-4d04-88e5-60be466e859a",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "618d6d8345f6db6bdd19c0dab7319d7b184f54dc103c163a3fe0d4ee9cc65ebd",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T12:28:03.477Z",
+      "finishedAt": "2026-11-25T12:28:26.401Z",
+      "durationMs": 22896.374625,
+      "exitCode": 2,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/developer-mode-play-a.json",
+        "sha256": "3b898df478fa9eb0775be63929932be63299ccd1038bfa6aa84a9dbc76570162"
+      }
+    },
+    {
+      "id": "5dd91a1e-93bf-48f5-9b4c-efdbeba23117",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "9cabb711cce79fce8ccaeb96faf83cf85d3be2c01886266c0e13a1f7f39cbe4e",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T12:28:44.636Z",
+      "finishedAt": "2026-11-25T12:29:23.318Z",
+      "durationMs": 38659.608958,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/developer-mode-play-b.json",
+        "sha256": "6caa42583d9ca7334fde0c66e67fdd09446a14ef5e661ed00a631602bff19628"
+      }
+    },
+    {
+      "id": "75e077bc-337b-4372-8616-7b09fa1cd69a",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "e0d04c9224a75556a2386ae3dee4a54405ec6d835c3e7fd6b81578c45438e51c",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T12:29:29.289Z",
+      "finishedAt": "2026-11-25T12:31:23.172Z",
+      "durationMs": 113858.469333,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/developer-mode-editor-full.json",
+        "sha256": "1d82f6bdc19efe207798fb51a8b17c2bd800e25395110fbd91b59f49d2f02cea"
+      }
+    },
+    {
+      "id": "f7698a99-4c05-493f-bc45-ce575256d033",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "fc8ac08fb9ab797d7ee3d93c2b164b178aa5ed71a87bb03d4ad8924cb1f8dff7",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T12:31:39.252Z",
+      "finishedAt": "2026-11-25T12:33:26.331Z",
+      "durationMs": 107053.25712499999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/developer-mode-play-regression.json",
+        "sha256": "89e1e6f2f3206e62092cc8cf82287307fbca44968a86db716ee7b00b0dd8c914"
+      }
+    },
+    {
+      "id": "c70a4ad7-828d-4d17-aad1-0994e2f591ea",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "db4b9956db80615bcb17b10c57454816b6cf844df5d1a652f658e7ecb1590940",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T12:34:15.318Z",
+      "finishedAt": "2026-11-25T12:35:11.866Z",
+      "durationMs": 56522.427417000006,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/developer-mode-retire-old-compiler-caches.json",
+        "sha256": "bad5640bf513c252ca2b3d7fb16d63221b4923baf5bf1f27026009f4621ba297"
+      }
+    },
+    {
+      "id": "f4a06746-242a-4d02-8301-12fc0b3ead05",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "97f00c9ec41ee9d51883fde38968a812ca49d075157eefb48c7927f4dcb6d604",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T12:35:23.250Z",
+      "finishedAt": "2026-11-25T12:36:18.842Z",
+      "durationMs": 55566.198208,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/developer-mode-archive-old-exports.json",
+        "sha256": "72ae9dd1444df66fa28d43d65a20a45d9d83d3d29194cc9cafd7da38bc2f348d"
+      }
+    },
+    {
+      "id": "1ec23757-1a6a-4255-90dd-c7ae47a64198",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "eb629dd343202f17eb5400f13b1c8007922fd3cccf4e493e9e97e9e785616d2b",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T12:37:01.223Z",
+      "finishedAt": "2026-11-25T12:37:03.818Z",
+      "durationMs": 2569.608209,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-gill-idempotent-cli.json",
+        "sha256": "83cb755000ca88d8b22b39eace28e04995c98d47a00b42fdd47f07225d0bc040"
+      }
+    },
+    {
+      "id": "d80a0aa8-73ac-497b-97fa-e4a158bf9ac6",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "85cd9cdc2d0e90e39ee0ddabce79fdf3bae2b03b919d9c0f24c85d42f9e10f14",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-25T12:38:12.367Z",
+      "finishedAt": "2026-11-25T12:38:14.267Z",
+      "durationMs": 1864.8935,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/developer-mode-static-a.json",
+        "sha256": "2b99e28edaf49a19b0b00b1b607abca1b1529f502df4d3ab6c01b8c84bdfb793"
       }
     }
   ]

@@ -22,7 +22,7 @@ namespace OceanAngler
             for(int i=0;i<game.Content.observations.Length;i++)
             {
                 var species=game.Content.observations[i];float y=110+i*140;
-                bool known=game.Progress.Data.observations.Contains(species.id),unlocked=game.Progress.Data.totalPoints>=game.Content.Habitat(species.habitatId).unlockPoints;
+                bool known=game.Progress.Data.observations.Contains(species.id),unlocked=game.Progress.IsUnlocked(game.Content.Habitat(species.habitatId).unlockPoints);
                 Label(panel,species.name+(known?" · 已观察":" · 未观察"),22,known?Gold:Color.white,22,y,-44,32);
                 Label(panel,species.scientificName+"\n"+game.Content.Habitat(species.habitatId).name+" · "+species.note,17,Muted,22,y+34,-44,58);
                 bool travel=species.habitatId!=game.Progress.Data.habitatId;

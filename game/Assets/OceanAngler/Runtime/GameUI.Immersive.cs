@@ -86,7 +86,7 @@ namespace OceanAngler
             float w=Mathf.Min(660,Width-24),h=Mathf.Min(334,Height-24),x=(Width-w)/2,y=(Height-h)/2;
             var panel=FixedBox(pageRoot,home?"HomeMenu":"PauseMenu",Panel,x,y,w,h);
             Label(panel,home?"海洋小钓手":"探索已暂停",26,Color.white,20,12,-40,40);
-            Label(panel,game.Content.Habitat(game.Progress.Data.habitatId).name+" · 研究积分 "+game.Progress.Data.totalPoints,17,Muted,20,53,-40,28);
+            Label(panel,game.DeveloperMode?"开发者模式 · 全部内容已开放":game.Content.Habitat(game.Progress.Data.habitatId).name+" · 研究积分 "+game.Progress.Data.totalPoints,17,game.DeveloperMode?Gold:Muted,20,53,-40,28);
             float half=(w-52)/2;bool shortMenu=h<324;float primary=shortMenu?76:88,links=shortMenu?130:146,ending=shortMenu?212:240,note=shortMenu?264:294;
             Button(panel,game.RestReminder?"休息好了，继续":"继续探索",20,primary,half,46,()=>{if(game.RestReminder)game.DismissRest();page="出海";focusedFish=null;game.Pause(false);dirty=false;Rebuild();},Teal);
             Button(panel,"海域与装备",32+half,primary,half,46,()=>Navigate("准备"),Navy);
@@ -94,7 +94,7 @@ namespace OceanAngler
             for(int i=0;i<names.Length;i++){string target=names[i];IconButton(panel,target,icons[i],16+i*cell,links,cell,shortMenu?76:82,()=>Navigate(target),shortMenu?42:48);}
             Button(panel,"结束本次 · 返回准备",20,ending,half,44,()=>Navigate("退出确认"),Navy).GetComponentInChildren<Text>().fontSize=17;
             Button(panel,home?"返回暂停":"返回首页",32+half,ending,half,44,()=>Navigate(home?"出海":"首页"),Navy).GetComponentInChildren<Text>().fontSize=17;
-            Label(panel,game.RestReminder?"和家人休息一下，准备好再继续。":"当前探索会保留，点继续才恢复。",17,Muted,20,note,-40,28);
+            Label(panel,game.DeveloperProfileNeedsAttention?"测试存档待确认，请在家长区处理。":game.RestReminder?"和家人休息一下，准备好再继续。":"当前探索会保留，点继续才恢复。",17,Muted,20,note,-40,28);
         }
         void BuildExitConfirmation()
         {
@@ -117,11 +117,11 @@ namespace OceanAngler
                 var content=new GameObject("ScrollableContent",typeof(RectTransform)).GetComponent<RectTransform>();content.SetParent(viewport,false);content.anchorMin=new Vector2(0,1);content.anchorMax=Vector2.one;content.pivot=new Vector2(.5f,1);content.sizeDelta=new Vector2(0,202);
                 scroll=viewport.gameObject.AddComponent<ScrollRect>();scroll.viewport=viewport;scroll.content=content;scroll.horizontal=false;scroll.movementType=ScrollRect.MovementType.Clamped;p=content;
             }
-            Label(p,"选择海域",22,Color.white,22,8,column,32);
+            Label(p,game.DeveloperMode?"选择海域 · 全部开放":"选择海域",22,Color.white,22,8,column,32);
             bool ready=game.Session.Phase==FishingPhase.Ready;
             for(int i=0;i<game.Content.habitats.Length;i++)
             {
-                var habitat=game.Content.habitats[i];bool unlocked=game.Progress.Data.totalPoints>=habitat.unlockPoints;
+                var habitat=game.Content.habitats[i];bool unlocked=game.Progress.IsUnlocked(habitat.unlockPoints);
                 var b=Button(p,habitat.name+(unlocked?"":" · "+habitat.unlockPoints+"分"),22,48+i*50,column,44,()=>game.SelectHabitat(habitat.id),habitat.id==game.Progress.Data.habitatId?Teal:Navy);b.GetComponentInChildren<Text>().fontSize=18;b.interactable=ready&&unlocked;
             }
             float x=split?34+column:22,y=split?8:214,w=split?PageWidth-x-22:PageWidth-44;
