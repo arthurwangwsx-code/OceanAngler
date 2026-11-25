@@ -146,5 +146,65 @@
     "headSha": "c5bdaa558d85dada16ffcecfe9f4cd8b65da7356",
     "status": "completed",
     "url": "https://github.com/arthurwangwsx-code/OceanAngler/actions/runs/45559760884"
+  },
+  "measurements": {
+    "status": "PASS_CURRENT_INCREMENT_EXCLUDING_RUNNING_SELF",
+    "historicalOverall": "INCOMPLETE",
+    "newCompleted": 52,
+    "newStarts": 53,
+    "oldObjectsUnchanged": true,
+    "receiptsAndBindingsVerified": true,
+    "completedIntervalsDisjoint": true,
+    "onlyRunningSelfPending": true,
+    "failuresRetained": [
+      {
+        "receipt": "measurements/halibut-fin-controlled-red.json",
+        "exitCode": 1
+      },
+      {
+        "receipt": "measurements/halibut-fin-source-a.json",
+        "exitCode": 1
+      },
+      {
+        "receipt": "measurements/halibut-fin-play-a.json",
+        "exitCode": 2
+      },
+      {
+        "receipt": "measurements/halibut-fin-metal-a-independent.json",
+        "exitCode": 1
+      },
+      {
+        "receipt": "measurements/halibut-fin-metal-b.json",
+        "exitCode": 1
+      },
+      {
+        "receipt": "measurements/halibut-fin-metal-b-independent.json",
+        "exitCode": 1
+      },
+      {
+        "receipt": "measurements/halibut-fin-reference-v2.json",
+        "exitCode": null
+      },
+      {
+        "receipt": "measurements/halibut-fin-body-controlled-red.json",
+        "exitCode": 1
+      },
+      {
+        "receipt": "measurements/halibut-fin-metal-d.json",
+        "exitCode": 1
+      },
+      {
+        "receipt": "measurements/halibut-fin-metal-e.json",
+        "exitCode": 1
+      },
+      {
+        "receipt": "measurements/halibut-fin-metal-e-independent.json",
+        "exitCode": 1
+      }
+    ],
+    "scope": "Own local state/receipt integrity; not formal independent CLI audit or product acceptance",
+    "selfReceiptObservedComplete": true,
+    "selfReceiptSha256": "5eeb428ce1e87803026677fccdb48ca4b9f3d605e560a53fccfdce5c178cbe75",
+    "totalCurrentCompleted": 53
   }
 }

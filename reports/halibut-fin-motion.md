@@ -17,3 +17,5 @@ GPU E保留473张Metal HDR、4×MSAA原图：七动作各61姿态，每段60对�
 未生成新捕获、未重跑完整成长或七套原生动作；真机、OS触控与成品美术独立开放。平板放大后下侧长鳍靠近模型控件、眼部和材质仍需后续打磨。不操作个人iPhone，不上传TestFlight；Apple旧build8不等于本轮本地0.1.0(8)。源/预览均为自有资产，研究论文及设备原始日志只留私下目录。设计与参考适用范围见[方案](../docs/39-halibut-fin-motion.md)，原任务4.11不勾选。
 
 审阅：[手机实际录屏](../art/previews/halibut-fin-motion-native/phone-journal-swim.mp4)、[平板实际录屏](../art/previews/halibut-fin-motion-native/tablet-journal-swim.mp4)、[七动作联系图](../art/previews/halibut-fin-motion/cycles-contact.jpg)、[固定鱼身的鳍控制对照](../art/previews/halibut-fin-motion/ablation-contact.jpg)。源码提交c5bdaa5对应[CI已通过](https://github.com/arthurwangwsx-code/OceanAngler/actions/runs/45559760884)，代码仍在integration候选分支，master保持原基线。
+
+测量完整性：本轮52条已结束记录与开始项、当前apply attempt、回执SHA及串行区间核对，旧对象未改；检查自身另有完成回执，新增总计53条且无悬挂开始项。保留11条失败/终止，其中参考捕获SIGTERM不当成功；历史独立审计仍INCOMPLETE，完整产品与apply继续开放。
