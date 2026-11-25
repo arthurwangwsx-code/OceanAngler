@@ -16830,6 +16830,83 @@
       "executable": "python3",
       "commandDigest": "bb3e200a23938a66a270ca9fca0a9d93ea978412dff25bb8aa3369bc936c82fa",
       "receiptPath": "measurements/journal-envelope-source-check-b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "39e29ecd-0180-4737-ab65-c85f06036d56",
+      "startedAt": "2026-11-25T07:59:02.332Z",
+      "executable": "python3",
+      "commandDigest": "2e1d41f926a7024f6d3a25d2d302a28042e9ce447dce134fb5695a4378e606ff",
+      "receiptPath": "measurements/journal-envelope-simulator-build-b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "8a55f8dd-6e0c-4167-bbce-c4515cf8e001",
+      "startedAt": "2026-11-25T08:02:52.626Z",
+      "executable": "python3",
+      "commandDigest": "93a7149e9f1e4d3b861dfccdcf0828e6ea649bbb74319430a940c2e5aad3c83d",
+      "receiptPath": "measurements/journal-envelope-native-phone-b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "b619a700-573d-49ff-8bbe-5102dc96b28b",
+      "startedAt": "2026-11-25T08:03:38.124Z",
+      "executable": "python3",
+      "commandDigest": "f578308fd59ddcc65b3fb40e7f9fa758c891c4af93ff54afe767a41a02ab2487",
+      "receiptPath": "measurements/journal-envelope-phone-check-b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "698f3ad2-61f6-445b-a379-0d3c56a42856",
+      "startedAt": "2026-11-25T08:03:51.707Z",
+      "executable": "python3",
+      "commandDigest": "133ebe483836ffa05550e8f8c72c814ecbd2257c0b229d979815c434a1c6acc5",
+      "receiptPath": "measurements/journal-envelope-native-tablet-b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "ef2fcb3a-3eed-4ab2-9fd7-c203cb91f071",
+      "startedAt": "2026-11-25T08:04:56.236Z",
+      "executable": "python3",
+      "commandDigest": "8e72d5a615153de9e397a5124436df9d2169f2fba4ee2f546f7786e194bf63e4",
+      "receiptPath": "measurements/journal-envelope-tablet-check-b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "7b856f55-fa13-4376-9608-e739871595d0",
+      "startedAt": "2026-11-25T08:06:23.650Z",
+      "executable": "python3",
+      "commandDigest": "895d6ad0c382fcb2fe3af302eeea5ea1507f9319a0d3a9b8581d0f52f60d518b",
+      "receiptPath": "measurements/journal-envelope-play-regression-c.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "d22db7c8-63ea-4c90-9d77-8b7ba408fcdc",
+      "startedAt": "2026-11-25T08:08:03.253Z",
+      "executable": "python3",
+      "commandDigest": "a1a0a49e282b4b494134e8498faa3388d30c7a8ee00df37092dfafc5c3a7f4f6",
+      "receiptPath": "measurements/journal-envelope-source-check-c.json"
     }
   ],
   "runMeasurements": [
@@ -43067,6 +43144,139 @@
       "receipt": {
         "path": "measurements/journal-envelope-source-check-b.json",
         "sha256": "f225a1e6ef2b10f5243502ea16ee3b8cfd6b4e1bd45c718a5248d29d4bde40ac"
+      }
+    },
+    {
+      "id": "39e29ecd-0180-4737-ab65-c85f06036d56",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "2e1d41f926a7024f6d3a25d2d302a28042e9ce447dce134fb5695a4378e606ff",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T07:59:02.332Z",
+      "finishedAt": "2026-11-25T08:02:38.367Z",
+      "durationMs": 215984.467958,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/journal-envelope-simulator-build-b.json",
+        "sha256": "3074b6185a6146641bcf4c0042fd13a3e5fafdad2c347989d626b453c64473c3"
+      }
+    },
+    {
+      "id": "8a55f8dd-6e0c-4167-bbce-c4515cf8e001",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "93a7149e9f1e4d3b861dfccdcf0828e6ea649bbb74319430a940c2e5aad3c83d",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T08:02:52.626Z",
+      "finishedAt": "2026-11-25T08:03:31.174Z",
+      "durationMs": 38506.895042000004,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/journal-envelope-native-phone-b.json",
+        "sha256": "736bc49d6455e7fdac84f01ce540969acf0b68d5ffa9c094b84a99a1d96273cc"
+      }
+    },
+    {
+      "id": "b619a700-573d-49ff-8bbe-5102dc96b28b",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "f578308fd59ddcc65b3fb40e7f9fa758c891c4af93ff54afe767a41a02ab2487",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T08:03:38.124Z",
+      "finishedAt": "2026-11-25T08:03:39.149Z",
+      "durationMs": 991.083791,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/journal-envelope-phone-check-b.json",
+        "sha256": "09f880fc333e0d746b73f6fe79ab204706646ca13dc9dcadb42efb04cf0623bb"
+      }
+    },
+    {
+      "id": "698f3ad2-61f6-445b-a379-0d3c56a42856",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "133ebe483836ffa05550e8f8c72c814ecbd2257c0b229d979815c434a1c6acc5",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T08:03:51.707Z",
+      "finishedAt": "2026-11-25T08:04:48.838Z",
+      "durationMs": 57063.679959,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/journal-envelope-native-tablet-b.json",
+        "sha256": "248c956bd2eb82816ecfc6fd1d20d1e829acdb4335c7713c44a20dd955f7dbb5"
+      }
+    },
+    {
+      "id": "ef2fcb3a-3eed-4ab2-9fd7-c203cb91f071",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "8e72d5a615153de9e397a5124436df9d2169f2fba4ee2f546f7786e194bf63e4",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T08:04:56.236Z",
+      "finishedAt": "2026-11-25T08:04:56.377Z",
+      "durationMs": 113.94654100000002,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/journal-envelope-tablet-check-b.json",
+        "sha256": "f7065fa25ec8cf30038c30f3775b5f7f65edad67e8e6ac1c43480bb48af1f53c"
+      }
+    },
+    {
+      "id": "7b856f55-fa13-4376-9608-e739871595d0",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "895d6ad0c382fcb2fe3af302eeea5ea1507f9319a0d3a9b8581d0f52f60d518b",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T08:06:23.650Z",
+      "finishedAt": "2026-11-25T08:07:49.822Z",
+      "durationMs": 86126.39325000001,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/journal-envelope-play-regression-c.json",
+        "sha256": "e86cae1d6980dab01a16024368d076f32dbc3b2d4a683a2962186eed8829c0b3"
+      }
+    },
+    {
+      "id": "d22db7c8-63ea-4c90-9d77-8b7ba408fcdc",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "a1a0a49e282b4b494134e8498faa3388d30c7a8ee00df37092dfafc5c3a7f4f6",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T08:08:03.253Z",
+      "finishedAt": "2026-11-25T08:08:03.966Z",
+      "durationMs": 654.3584170000001,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/journal-envelope-source-check-c.json",
+        "sha256": "2a86f98a8ca4d8b1b99c891f38fd8f0743faafcba3c86cc0be55a1f9293a32e1"
       }
     }
   ]
