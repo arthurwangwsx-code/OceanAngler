@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "fc6b9ff2-76a0-4774-9314-7d4566f7ddb2",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "1cc7c1b428860dbc9ff8517d064650aaf3b4fb83c9569674c3335d7a53ec4f1d",
+    "category": "verification",
+    "executable": "python3",
+    "startedAt": "2026-11-25T02:28:15.046Z",
+    "finishedAt": "2026-11-25T02:28:15.159Z",
+    "durationMs": 85.56929200000002,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/meadow-qa/verify-native.py",
+      "meadow20261125pad1",
+      "meadow-native-tablet-20261125.json"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/meadow-qa/verify-native.py",
+    "meadow20261125pad1",
+    "meadow-native-tablet-20261125.json"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T02:28:15.046Z",
+  "finishedAt": "2026-11-25T02:28:15.159Z",
+  "durationMs": 85.56929200000002
+}

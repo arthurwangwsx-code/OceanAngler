@@ -2919,6 +2919,36 @@
           "sha256": "89ed6641ccc2ff9da739272f7c646facba4fda22be69ffa9d9b0ada3e878faee"
         }
       ]
+    },
+    {
+      "id": "seagrass-meadow-native-evidence",
+      "author": "OceanAngler contributors; embedded Noto glyphs separately registered OFL",
+      "license": "MIT; embedded Noto UI glyphs SIL OFL 1.1",
+      "redistribution": true,
+      "sourceRedistribution": true,
+      "canModify": true,
+      "acquiredAt": "2026-11-25",
+      "source": "Own native Unity Simulator scene renders and contact sheets; no private media or device logs",
+      "status": "NATIVE_TARGETED_PASS_FULL_ART_PENDING",
+      "note": "New meadow source0d143e0; each19-frame contact and selected originals reviewed. Generic vegetation not named-species/science or natural motion qualification. Other fish/gear art and physical devices remain pending.",
+      "artifacts": [
+        {
+          "path": "art/previews/seagrass-meadow-native/phone-contact.png",
+          "sha256": "3b268299e9987eb6c862bd53c5f0deb8ef3aca8434bc01d43afd31e851170802"
+        },
+        {
+          "path": "art/previews/seagrass-meadow-native/phone-fighting.png",
+          "sha256": "e3c255869675e6d30a20192168b8da1edcd9d3ce66bb4db0d16ae117313fa871"
+        },
+        {
+          "path": "art/previews/seagrass-meadow-native/tablet-contact.png",
+          "sha256": "049ffdb3d3363be7b150802e5a5e9f9d1e30bbc437cc113848fb280712863c2c"
+        },
+        {
+          "path": "art/previews/seagrass-meadow-native/tablet-landed.png",
+          "sha256": "0487b61ed5ab44b8ff0c44e261e61030f8c6decce9a1f14246e1022d3af5e4b4"
+        }
+      ]
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."

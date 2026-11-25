@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "47ea57fc-c321-470d-82ec-c0e2854b7ae9",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "d6ab6c9ebf8c1a23998f71bb26561a45d6c69ffa41812e12d7fa3f8473ec6060",
+    "category": "verification",
+    "executable": "python3",
+    "startedAt": "2026-11-25T02:30:32.715Z",
+    "finishedAt": "2026-11-25T02:30:32.931Z",
+    "durationMs": 171.82166600000005,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/meadow-qa/audit-records.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/meadow-qa/audit-records.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T02:30:32.715Z",
+  "finishedAt": "2026-11-25T02:30:32.931Z",
+  "durationMs": 171.82166600000005
+}

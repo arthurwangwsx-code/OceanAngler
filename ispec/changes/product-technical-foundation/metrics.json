@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-25T01:56:54.454Z",
+  "generatedAt": "2026-11-25T02:31:13.229Z",
   "source": {
     "change": "product-technical-foundation",
     "cliVersion": "1.0.20",
@@ -26,16 +26,16 @@
     "firstAttemptPassedCount": 1,
     "firstAttemptEvaluatedCount": 1,
     "firstAttemptPassRate": 1,
-    "elapsedMs": 167378500,
-    "observedStepWallMs": 133776946,
+    "elapsedMs": 169437156,
+    "observedStepWallMs": 135835602,
     "unattributedMs": 33601554,
-    "unattributedRate": 0.200751912581365,
-    "commandMeasurementCount": 1314,
-    "commandSucceededCount": 1167,
-    "commandFailedCount": 147,
-    "commandSuccessRate": 0.8881278538812786,
-    "commandDurationMs": 49396666.61095202,
-    "gateCheckCount": 60,
+    "unattributedRate": 0.19831278329530036,
+    "commandMeasurementCount": 1339,
+    "commandSucceededCount": 1190,
+    "commandFailedCount": 149,
+    "commandSuccessRate": 0.888722927557879,
+    "commandDurationMs": 50315184.25299203,
+    "gateCheckCount": 61,
     "repairCount": 0,
     "targetMs": 3600000,
     "targetMet": null,
@@ -52,7 +52,7 @@
     },
     "entryChecks": {
       "status": "complete",
-      "recorded": 60,
+      "recorded": 61,
       "expectedAtLeast": 2
     },
     "runAttribution": {
@@ -62,7 +62,7 @@
     },
     "commandMeasurements": {
       "status": "partial",
-      "recorded": 1314
+      "recorded": 1339
     },
     "waitingTime": {
       "status": "unavailable"
@@ -78,14 +78,14 @@
   "runs": [],
   "runMetrics": {
     "version": 1,
-    "generatedAt": "2026-11-25T01:56:54.454Z",
+    "generatedAt": "2026-11-25T02:31:13.229Z",
     "runs": [],
     "unattributed": {
       "unboundAttempts": 2,
       "unknownRunAttempts": 0,
-      "unboundCommands": 1314,
+      "unboundCommands": 1339,
       "unknownRunCommands": 0,
-      "unboundGateChecks": 60,
+      "unboundGateChecks": 61,
       "unknownRunGateChecks": 0,
       "repairsWithoutRunBinding": 0,
       "unknownRunRepairs": 0
@@ -21805,6 +21805,481 @@
         "path": "measurements/content-current-final-records-20261125.json",
         "sha256": "055a36d57ad7a145d41e1ce74db9be0a19f1fad837dfb3ae28b26fb3b457674b"
       }
+    },
+    {
+      "id": "0d9c9a91-da20-42f6-8691-1288f7257321",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "56be5a3c5650ff606430eab00cfb502ea7bd06372ea1259bd6552c4eece3b75e",
+      "category": "verification",
+      "executable": "Blender",
+      "startedAt": "2026-11-25T02:02:02.283Z",
+      "finishedAt": "2026-11-25T02:02:04.497Z",
+      "durationMs": 2182.8737499999997,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/meadow-source-before-20261125.json",
+        "sha256": "74e68bb260beb01ddd9c6174f27bd91814c2dcf6befec2c1a721815c15394f64"
+      }
+    },
+    {
+      "id": "97ef5f5b-2d9f-4f8f-9995-bf2fc52422af",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "0a9d1b47ac431abda8ef62d12efa176ea50720539810299cedf3beceb6f930c2",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T02:02:47.660Z",
+      "finishedAt": "2026-11-25T02:02:55.340Z",
+      "durationMs": 7631.0195,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/meadow-source-build-20261125.json",
+        "sha256": "18fa79a110b1b0b9805ea49116e65e70a9017a1c0851b96f9bc87543321b11d9"
+      }
+    },
+    {
+      "id": "2b9b31dc-efd6-42ab-8c52-ea927cd41fb8",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "0a339426335614025525f54a99f93e60a6f04bb4c2bcc8949bc25bde8ef9b917",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T02:04:15.827Z",
+      "finishedAt": "2026-11-25T02:04:57.492Z",
+      "durationMs": 41598.351625,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/meadow-source-build-b-20261125.json",
+        "sha256": "4ba927dd143e900e447b0270c3ee28c805a80faa93d2c0e696ad2c9e568c327e"
+      }
+    },
+    {
+      "id": "b7502370-a0fe-42b5-a2d1-7a36f46d610f",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "e2ead7070bce0fce09662b078498e49054f73b431ef521adbb433ad2c4e81fc7",
+      "category": "verification",
+      "executable": "Blender",
+      "startedAt": "2026-11-25T02:05:14.396Z",
+      "finishedAt": "2026-11-25T02:05:25.692Z",
+      "durationMs": 11218.824625000001,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/meadow-source-identity-20261125.json",
+        "sha256": "ab5195c3d77eb3ce5cf29a417983cbb0558dd90ebecd57f426918e0dd6d475c9"
+      }
+    },
+    {
+      "id": "c3b0fe2b-a085-4b60-a095-cd7948a7116f",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "e247c624607f1cc55b7a766694c6ae6995dd875ae669285da7bd66fcf5490fde",
+      "category": "verification",
+      "executable": "python3",
+      "startedAt": "2026-11-25T02:06:31.048Z",
+      "finishedAt": "2026-11-25T02:06:37.795Z",
+      "durationMs": 6706.035459,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/meadow-source-validate-20261125.json",
+        "sha256": "31dcb9a54faf80b499a09faf10a921c082a8916313b14d8b0bc9ac01cfcbc36d"
+      }
+    },
+    {
+      "id": "3caf6075-df22-4f4b-87fd-5fa9ace6164d",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "a982dc378f667db8ed778d4e1a2c8d2a8e47a3341213115d1de118e50f45b62e",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T02:06:53.465Z",
+      "finishedAt": "2026-11-25T02:07:14.678Z",
+      "durationMs": 21139.061458,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/meadow-unity-import-20261125.json",
+        "sha256": "ba3425775dbe2069905e7bb762eca7970981c10f2270e936f6130841463d4d0e"
+      }
+    },
+    {
+      "id": "911d8f6a-9651-4714-bbf6-04beebe0dcf3",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "c27697d5289dfa789008d4211306b50742d047b5d831d6c9b756b20af93fb24f",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T02:07:37.189Z",
+      "finishedAt": "2026-11-25T02:07:52.806Z",
+      "durationMs": 15550.091833,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/meadow-editor-20261125.json",
+        "sha256": "8d5547eb9184716373f78f9c0b740520408127b783dcbde870791fa3479421f7"
+      }
+    },
+    {
+      "id": "c10eca04-3cdd-47ce-8fd0-912930fad469",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "10dd1d9a634dc1381d405dcd4f4af937df81ffa33b1aaf000fc94bf8d9885bfd",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T02:08:17.932Z",
+      "finishedAt": "2026-11-25T02:08:57.480Z",
+      "durationMs": 39316.344458,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/meadow-waterline-gpu-20261125.json",
+        "sha256": "3655e6b8997fee489aba76268cc47c7f824b6b48f593c696c32e992771d8b5be"
+      }
+    },
+    {
+      "id": "72b097d7-8b1b-42bc-b2d9-1875e459a233",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "20b0c496f70c8718d78fc8bc73c8230a358c94e3e3700c386e152d2c37a64aaf",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T02:09:05.718Z",
+      "finishedAt": "2026-11-25T02:10:04.558Z",
+      "durationMs": 58808.260417000005,
+      "exitCode": 2,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/meadow-play-20261125.json",
+        "sha256": "39b2bee3e543c9505872fec49ac5d1ff6b0dbaa95e5e40dfd13ebc3526068fbd"
+      }
+    },
+    {
+      "id": "2c6fb668-c584-4eaf-9fac-3e3b959d3174",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "4c7abd023f4be4b8d7ee24b9baf01847fa937b198f989bde27ab756a2fb78220",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T02:12:04.038Z",
+      "finishedAt": "2026-11-25T02:12:23.598Z",
+      "durationMs": 19517.477333000003,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/meadow-meter-diagnostic-20261125.json",
+        "sha256": "1a28d5b8aeb55ea683ac27ee3b4dee03c6216e45cfa4b771606ad7483045e865"
+      }
+    },
+    {
+      "id": "a83a957e-1afc-4ad2-84f3-c59c21fa277b",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "b5d0d0b7259865180b2cbeae3f4b0a4e97125d66fb8f1090c820e3c34cf6154a",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T02:13:08.224Z",
+      "finishedAt": "2026-11-25T02:14:55.297Z",
+      "durationMs": 106967.889625,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/meadow-play-b-20261125.json",
+        "sha256": "09745bab3b1447942dc0b6202fb002d4b6f2ea34126652880515e6d8f1e5fe99"
+      }
+    },
+    {
+      "id": "c33dda07-1518-4c94-853d-5de4d843465c",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "ffc472356dafff7d9ea4f44552817abd431220e4f5caaafaf758fbaadb93e2f6",
+      "category": "verification",
+      "executable": "python3",
+      "startedAt": "2026-11-25T02:16:10.338Z",
+      "finishedAt": "2026-11-25T02:16:12.116Z",
+      "durationMs": 1728.179416,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/meadow-source-preparation-20261125.json",
+        "sha256": "4e3a43721f45ff5b819b85008b7b9809eef8e33ae6269ca8c9ca9d0a5340ba5c"
+      }
+    },
+    {
+      "id": "85b06d6c-a93a-488f-a0cb-f2772bdcc549",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "1b9b750d007c851f920bb86ccb95b6c8d0649e1d11d26d4708a2736b0478955e",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-25T02:16:43.982Z",
+      "finishedAt": "2026-11-25T02:16:46.292Z",
+      "durationMs": 2257.4269999999997,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/meadow-source-public-validate-20261125.json",
+        "sha256": "6d7bd52aebeb9528fb652b0be976bc18e493d4a5e41a5120386d094fb263da34"
+      }
+    },
+    {
+      "id": "621f6838-8e6d-4f36-8748-8221e41fda6f",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d89602c770c16a35b6c5da9a9da4ae967807390aa462f4349604d0463de12f51",
+      "category": "publication-audit",
+      "executable": "python3",
+      "startedAt": "2026-11-25T02:16:47.169Z",
+      "finishedAt": "2026-11-25T02:16:48.532Z",
+      "durationMs": 1331.1522909999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/meadow-source-public-audit-20261125.json",
+        "sha256": "1c0fb71eda9c750ff1a6d8a3c8b98b83bf7ebdee8d55e3937f30b2fa3744f02b"
+      }
+    },
+    {
+      "id": "8552b29c-091d-40e9-9e5b-8d1307aa5675",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d5478df1a03597a31d8804db771f45116f941ef99a117a3b6f7bc1b87b535b01",
+      "category": "verification",
+      "executable": "python3",
+      "startedAt": "2026-11-25T02:17:13.435Z",
+      "finishedAt": "2026-11-25T02:17:14.797Z",
+      "durationMs": 1291.6442499999998,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/meadow-saves-before-20261125.json",
+        "sha256": "14d1d2bec957e060930a267bf4a03ffddca6a745545f750c4310d006db518ac1"
+      }
+    },
+    {
+      "id": "99b3a927-3c05-4739-8c32-81a5cb045475",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "72c0c1782a1a0792a3ea06eda79ca039ef71fc7f6024fb15e993f6ae60f3b466",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T02:17:28.745Z",
+      "finishedAt": "2026-11-25T02:23:01.010Z",
+      "durationMs": 332214.44612499996,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/meadow-native-build-20261125.json",
+        "sha256": "bf413ef8101132ccb3bcba23a408ea829a4e7503ce352920299fcfaa7bbfb56e"
+      }
+    },
+    {
+      "id": "459c4493-be03-4765-a68d-e5d86851309f",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "a1bc8a69e05ce8701d5601b7bca2169ccf3d1ba6cc69a8507c7519a9a39d561f",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T02:23:43.298Z",
+      "finishedAt": "2026-11-25T02:26:39.865Z",
+      "durationMs": 176469.186583,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/meadow-native-phone-20261125.json",
+        "sha256": "3812af270a64c8f1a9c55ad13298e8c60139c91f5df59b7614ccfa179cde19e2"
+      }
+    },
+    {
+      "id": "c33efe5a-92d1-45d1-8950-2675427b52e1",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "bdc8db2b3fb4d30389564aaabefac6c4f32f6be82eb3f1c20b64ff3d0062566d",
+      "category": "verification",
+      "executable": "python3",
+      "startedAt": "2026-11-25T02:26:49.692Z",
+      "finishedAt": "2026-11-25T02:26:49.769Z",
+      "durationMs": 55.32054199999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/meadow-native-phone-proof-20261125.json",
+        "sha256": "5dedc9c914b52504a7a4b33e0d1471454e1b2b1fd883066b90b0dc7b75e4c28e"
+      }
+    },
+    {
+      "id": "d90bf340-ee55-412c-b476-2e222c9a770b",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "96c420391bd2fd30591f00e18c16d970670c14f7b4d272d3761209656ad4f76e",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T02:27:00.320Z",
+      "finishedAt": "2026-11-25T02:28:06.786Z",
+      "durationMs": 66437.650167,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/meadow-native-tablet-20261125.json",
+        "sha256": "4d4b96fb08a3b2510700bee0c57d575b97e181429a0b3434d6dca12b33b021af"
+      }
+    },
+    {
+      "id": "fc6b9ff2-76a0-4774-9314-7d4566f7ddb2",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "1cc7c1b428860dbc9ff8517d064650aaf3b4fb83c9569674c3335d7a53ec4f1d",
+      "category": "verification",
+      "executable": "python3",
+      "startedAt": "2026-11-25T02:28:15.046Z",
+      "finishedAt": "2026-11-25T02:28:15.159Z",
+      "durationMs": 85.56929200000002,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/meadow-native-tablet-proof-20261125.json",
+        "sha256": "a7ab938e65484bd00687a4598e7bf080af147364c638b87b7f5dea59824a5b1c"
+      }
+    },
+    {
+      "id": "aca1fa8f-ed95-4213-abcf-5ecf0e994086",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "5fbea3a6a852d24a9f040c0fca48cb516bbed9585ca1d8f58797f0b4639b0f14",
+      "category": "verification",
+      "executable": "python3",
+      "startedAt": "2026-11-25T02:28:15.769Z",
+      "finishedAt": "2026-11-25T02:28:17.029Z",
+      "durationMs": 1235.6127499999998,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/meadow-saves-final-20261125.json",
+        "sha256": "9d19c0295d91b790891f87529db164128e2c6b9d86bbb8a57ed61dfcb7ca1d10"
+      }
+    },
+    {
+      "id": "b3edb10d-53c5-40be-9a70-a8173d1623bb",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "1b9b750d007c851f920bb86ccb95b6c8d0649e1d11d26d4708a2736b0478955e",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-25T02:30:05.319Z",
+      "finishedAt": "2026-11-25T02:30:06.726Z",
+      "durationMs": 1349.5028750000001,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/meadow-final-public-validate-20261125.json",
+        "sha256": "8450fc638bd105ae439efe0fb552efd0bd7fdcc7e6e0b72c6522be4e411572d8"
+      }
+    },
+    {
+      "id": "367d5f0d-5e4a-4a41-8ca8-62d4a3c215a4",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d89602c770c16a35b6c5da9a9da4ae967807390aa462f4349604d0463de12f51",
+      "category": "publication-audit",
+      "executable": "python3",
+      "startedAt": "2026-11-25T02:30:08.261Z",
+      "finishedAt": "2026-11-25T02:30:09.770Z",
+      "durationMs": 1448.736916,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/meadow-final-public-audit-20261125.json",
+        "sha256": "10e14f2131c99727e9ded162da2072030c47b9a5b180654f6171d5f55ba64ee7"
+      }
+    },
+    {
+      "id": "d12ebc0f-efcf-4637-9de8-ccf0294dd690",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "cdb082d13c1066a5760852616715d0fad0e5ec9cde54907cb3777cdf098df4e7",
+      "category": "verification",
+      "executable": "python3",
+      "startedAt": "2026-11-25T02:30:29.558Z",
+      "finishedAt": "2026-11-25T02:30:31.456Z",
+      "durationMs": 1805.162084,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/meadow-final-binding-20261125.json",
+        "sha256": "692480ce655620c609e8948aaa12c6e7154972c90c3c020e9d5e1e03a2db6874"
+      }
+    },
+    {
+      "id": "47ea57fc-c321-470d-82ec-c0e2854b7ae9",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d6ab6c9ebf8c1a23998f71bb26561a45d6c69ffa41812e12d7fa3f8473ec6060",
+      "category": "verification",
+      "executable": "python3",
+      "startedAt": "2026-11-25T02:30:32.715Z",
+      "finishedAt": "2026-11-25T02:30:32.931Z",
+      "durationMs": 171.82166600000005,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/meadow-final-records-20261125.json",
+        "sha256": "b077db98fac81639f68fb3730a78f38c40500f4f13b7518b4f97f636417019e5"
+      }
     }
   ],
   "measurementAudit": {
@@ -21812,8 +22287,8 @@
     "scope": "declared-command-receipts-only",
     "runId": null,
     "complete": false,
-    "registered": 1310,
-    "completed": 1314,
+    "registered": 1335,
+    "completed": 1339,
     "unfinishedIds": [
       "539d2470-da3f-4a9d-941c-e4c4a34b48da"
     ],
@@ -25112,35 +25587,35 @@
   "commands": [
     {
       "category": "test",
-      "count": 535,
-      "succeededCount": 453,
-      "failedCount": 82,
-      "successRate": 0.8467289719626169,
-      "durationMs": 16945835.028242
+      "count": 539,
+      "succeededCount": 456,
+      "failedCount": 83,
+      "successRate": 0.8460111317254174,
+      "durationMs": 17146678.74745
     },
     {
       "category": "compile",
-      "count": 289,
-      "succeededCount": 277,
-      "failedCount": 12,
-      "successRate": 0.9584775086505191,
-      "durationMs": 12978376.990297
+      "count": 293,
+      "succeededCount": 280,
+      "failedCount": 13,
+      "successRate": 0.9556313993174061,
+      "durationMs": 13380959.869005002
     },
     {
       "category": "e2e",
-      "count": 281,
-      "succeededCount": 233,
+      "count": 284,
+      "succeededCount": 236,
       "failedCount": 48,
-      "successRate": 0.8291814946619217,
-      "durationMs": 19216730.12033701
+      "successRate": 0.8309859154929577,
+      "durationMs": 19498953.30154501
     },
     {
       "category": "lint",
-      "count": 174,
-      "succeededCount": 173,
+      "count": 176,
+      "succeededCount": 175,
       "failedCount": 1,
-      "successRate": 0.9942528735632183,
-      "durationMs": 73851.75403699998
+      "successRate": 0.9943181818181818,
+      "durationMs": 77458.68391199998
     },
     {
       "category": "validation",
@@ -25152,11 +25627,11 @@
     },
     {
       "category": "publication-audit",
-      "count": 6,
-      "succeededCount": 6,
+      "count": 8,
+      "succeededCount": 8,
       "failedCount": 0,
       "successRate": 1,
-      "durationMs": 5172.381334
+      "durationMs": 7952.270541
     },
     {
       "category": "gpu-regression",
@@ -25184,11 +25659,11 @@
     },
     {
       "category": "verification",
-      "count": 14,
-      "succeededCount": 14,
+      "count": 24,
+      "succeededCount": 24,
       "failedCount": 0,
       "successRate": 1,
-      "durationMs": 28941.780915999996
+      "durationMs": 55422.82475
     }
   ],
   "gateChecks": [
@@ -25671,6 +26146,14 @@
       "checkedAt": "2026-11-25T01:33:56.836Z",
       "durationMs": 139.75662499999999,
       "outcome": "accepted"
+    },
+    {
+      "stageId": "apply",
+      "runId": null,
+      "operation": "start",
+      "checkedAt": "2026-11-25T01:59:50.850Z",
+      "durationMs": 142.27020900000002,
+      "outcome": "accepted"
     }
   ],
   "timing": {
@@ -25678,8 +26161,8 @@
     "finishedAt": null,
     "status": "in_progress",
     "measurementBasis": "before-first-entry-gate",
-    "elapsedMs": 167378500,
-    "observedStepWallMs": 133776946,
+    "elapsedMs": 169437156,
+    "observedStepWallMs": 135835602,
     "unattributedMs": 33601554,
     "waitingMs": null,
     "retryAttemptMs": 0,

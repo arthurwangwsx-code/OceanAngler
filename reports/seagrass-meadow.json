@@ -1,0 +1,371 @@
+{
+  "status": "PARTIAL",
+  "implementation": "IMPLEMENTED_CANDIDATE",
+  "artAcceptance": "PARTIAL",
+  "scienceAcceptance": "NOT_RUN",
+  "source": {
+    "sourceCommit": "0d143e006d5b272f89426e508752e7cb0ff26783",
+    "sourceDigest": "234555190fc7fd8990365d85c275222730b692d79effbde2658419bb2a53d077",
+    "projectSettingsSha256": "bea92e9b5c8b678dd130d48c1f43acaf939b56cacce33928a5a45af6da0a4585"
+  },
+  "appDigest": "70218eb51543d4542eeffdf1f4d512e53f0b3cc0cc96ae36e00c92869be0aa43",
+  "distribution": "LOCAL_SIMULATOR_ONLY_NOT_TESTFLIGHT",
+  "plants": {
+    "seagrassClumps": 260,
+    "seagrassPatchAnchors": 14,
+    "seagrassPatches": 13,
+    "seagrassBlades": 1026
+  },
+  "lodTriangles": {
+    "Seagrass_LOD0": 14364,
+    "Seagrass_LOD1": 7182,
+    "Seagrass_LOD2": 2872
+  },
+  "priorLodTriangles": [
+    18390,
+    9195,
+    3678
+  ],
+  "sourceChecks": 194,
+  "seagrassGeometry": {
+    "rootEdgeVertices": 2052,
+    "bedOffsets": [
+      -0.12090027332305908,
+      -0.058373093605041504
+    ],
+    "minimumCenterClearance": 2.9100306034088135
+  },
+  "nonGrassSourceObjectsIdentical": 29,
+  "otherExistingAssetFilesByteIdentical": 265,
+  "editorPassed": 11,
+  "playPassed": 5,
+  "staticGpu": {
+    "images": 48,
+    "pairs": 24,
+    "allPairsRgbZero": true,
+    "scope": "This real Metal Medium HDR4MSAA static fixture only, not motion or physical performance"
+  },
+  "native": {
+    "phone": {
+      "status": "PASS",
+      "source": {
+        "sourceCommit": "0d143e006d5b272f89426e508752e7cb0ff26783",
+        "sourceDigest": "234555190fc7fd8990365d85c275222730b692d79effbde2658419bb2a53d077",
+        "projectSettingsSha256": "bea92e9b5c8b678dd130d48c1f43acaf939b56cacce33928a5a45af6da0a4585"
+      },
+      "appDigest": "70218eb51543d4542eeffdf1f4d512e53f0b3cc0cc96ae36e00c92869be0aa43",
+      "catches": 1,
+      "points": 180,
+      "capturedFrames": 19,
+      "maxHudRatio": 0.12227564305067062,
+      "reflectionProof": {
+        "status": "PASS",
+        "stationary": [
+          {
+            "leftHanded": false,
+            "renders": 1,
+            "sha256": "fe89cd913667cf745e1ccbce68a4b1e070c6d15f88b9316d1997799b67c64bdf",
+            "identicalAfterWait": true
+          },
+          {
+            "leftHanded": true,
+            "renders": 32,
+            "sha256": "fe89cd913667cf745e1ccbce68a4b1e070c6d15f88b9316d1997799b67c64bdf",
+            "identicalAfterWait": true
+          }
+        ],
+        "castingRenders": 2,
+        "impactRenders": 22,
+        "castingSha256": "fe89cd913667cf745e1ccbce68a4b1e070c6d15f88b9316d1997799b67c64bdf",
+        "impactSha256": "957a8309b58eb31a4f08fea94d81aa555878f25a64a3b7d2423fc6d42d58e606",
+        "castTextureChanged": true,
+        "underwaterInactive": true,
+        "scope": "Actual native Metal reflection texture readback and cache counts; no diagnostic marker, first-draw pass, physical performance or child qualification"
+      }
+    },
+    "tablet": {
+      "status": "PASS",
+      "source": {
+        "sourceCommit": "0d143e006d5b272f89426e508752e7cb0ff26783",
+        "sourceDigest": "234555190fc7fd8990365d85c275222730b692d79effbde2658419bb2a53d077",
+        "projectSettingsSha256": "bea92e9b5c8b678dd130d48c1f43acaf939b56cacce33928a5a45af6da0a4585"
+      },
+      "appDigest": "70218eb51543d4542eeffdf1f4d512e53f0b3cc0cc96ae36e00c92869be0aa43",
+      "catches": 1,
+      "points": 187,
+      "capturedFrames": 19,
+      "maxHudRatio": 0.045262712985277176,
+      "reflectionProof": {
+        "status": "PASS",
+        "stationary": [
+          {
+            "leftHanded": false,
+            "renders": 1,
+            "sha256": "0493f6a20b080ba7ee0c31268eb697750c996a9bdded1584115b9fb7542b23db",
+            "identicalAfterWait": true
+          },
+          {
+            "leftHanded": true,
+            "renders": 32,
+            "sha256": "0493f6a20b080ba7ee0c31268eb697750c996a9bdded1584115b9fb7542b23db",
+            "identicalAfterWait": true
+          }
+        ],
+        "castingRenders": 2,
+        "impactRenders": 22,
+        "castingSha256": "0493f6a20b080ba7ee0c31268eb697750c996a9bdded1584115b9fb7542b23db",
+        "impactSha256": "b921f554ad6e73277719d20f7ebb8b3d1d51c83b77ecd6a014b0bdc638b95399",
+        "castTextureChanged": true,
+        "underwaterInactive": true,
+        "scope": "Actual native Metal reflection texture readback and cache counts; no diagnostic marker, first-draw pass, physical performance or child qualification"
+      }
+    }
+  },
+  "existingSaves": {
+    "status": "PASS",
+    "files": 109,
+    "primary": 57,
+    "byteIdentical": true
+  },
+  "sourcePreparation": {
+    "status": "SOURCE_EDITOR_CANDIDATE_NATIVE_PENDING",
+    "sourceBase": "7dd22e2836e6459a3d638d3ede9beb60cb8b7887",
+    "sourceDigest": "234555190fc7fd8990365d85c275222730b692d79effbde2658419bb2a53d077",
+    "sourceChecks": 194,
+    "nonVegetationSourceObjectsIdentical": 29,
+    "existingAssetFilesUnchanged": 265,
+    "changedAssetFiles": [
+      "game/Assets/OceanAngler/Art/CoralBay/CoralBay.fbx",
+      "game/Assets/OceanAngler/Art/CoralBay/Bay_Water.mat",
+      "art/source/coral-bay/CoralBay.blend",
+      "art/source/coral-bay/build-report.json"
+    ],
+    "editorPassed": 11,
+    "playPassed": 5,
+    "gpuImages": 48,
+    "gpuPairs": 24,
+    "allPairsRgbZero": true,
+    "initialBuildFailureRetained": true,
+    "priorMeterNullFailureRetained": true,
+    "meterNullRootCause": "UNCONFIRMED_NOT_REPRODUCED_IN_DIAGNOSTIC_AND_FULL_RERUN",
+    "artAcceptance": "PARTIAL"
+  },
+  "retainedFailures": [
+    "First patch placement loop exhausted; advanced patch after rejected candidate without relaxing clearance",
+    "Initial5 PlayMode had4pass1meter-text-null failure; assertion state context added; diagnostic1 and full5 rerun passed; initial null root cause UNCONFIRMED"
+  ],
+  "serializedDefaults": [
+    "Bay water disabled FishingSplash default made explicit",
+    "Bay prefab existing MarineHabitat default colors/densities/null lighting made explicit",
+    "Seagrass LOD bounds recalculated from actual new mesh"
+  ],
+  "review": {
+    "sourceContact": true,
+    "beforeAfterUnderwaterOriginals": true,
+    "nativeContacts": 2,
+    "selectedNativeOriginals": 2,
+    "scope": "Selected static frames and contact sheets; not all full-size originals or natural-motion acceptance"
+  },
+  "artifacts": [
+    {
+      "path": "art/previews/seagrass-meadow-native/phone-contact.png",
+      "sha256": "3b268299e9987eb6c862bd53c5f0deb8ef3aca8434bc01d43afd31e851170802"
+    },
+    {
+      "path": "art/previews/seagrass-meadow-native/phone-fighting.png",
+      "sha256": "e3c255869675e6d30a20192168b8da1edcd9d3ce66bb4db0d16ae117313fa871"
+    },
+    {
+      "path": "art/previews/seagrass-meadow-native/tablet-contact.png",
+      "sha256": "049ffdb3d3363be7b150802e5a5e9f9d1e30bbc437cc113848fb280712863c2c"
+    },
+    {
+      "path": "art/previews/seagrass-meadow-native/tablet-landed.png",
+      "sha256": "0487b61ed5ab44b8ff0c44e261e61030f8c6decce9a1f14246e1022d3af5e4b4"
+    }
+  ],
+  "historicalRecordAudit": "INCOMPLETE",
+  "personalPhoneUntouched": true,
+  "testflightUnchanged": true,
+  "fullProgressionRerun": false,
+  "pending": [
+    "First-set user art direction and all finished12-fish/observation/gear models",
+    "Natural foliage motion and full visual/science/child review",
+    "Initial meter fixture null root cause remains unconfirmed",
+    "OS touch, physical20-minute device performance/recovery, actual TestFlight installation"
+  ],
+  "incrementRecordAudit": {
+    "status": "PASS_CURRENT_INCREMENT_25_COMPLETED_25_STARTED",
+    "historicalOverall": "INCOMPLETE",
+    "newCompleted": 25,
+    "newStarts": 25,
+    "oldObjectsUnchanged": true,
+    "receiptsAndBindingsVerified": true,
+    "completedIntervalsDisjoint": true,
+    "onlyRunningSelfPending": false,
+    "failuresRetained": [
+      {
+        "receipt": "measurements/meadow-source-build-20261125.json",
+        "exitCode": 1
+      },
+      {
+        "receipt": "measurements/meadow-play-20261125.json",
+        "exitCode": 2
+      }
+    ],
+    "scope": "Own actual local state/receipt integrity, not formal independent CLI audit or product acceptance",
+    "selfReceiptVerified": true
+  },
+  "measurements": [
+    {
+      "id": "0d9c9a91-da20-42f6-8691-1288f7257321",
+      "receipt": "measurements/meadow-source-before-20261125.json",
+      "exitCode": 0,
+      "durationMs": 2182.8737499999997
+    },
+    {
+      "id": "97ef5f5b-2d9f-4f8f-9995-bf2fc52422af",
+      "receipt": "measurements/meadow-source-build-20261125.json",
+      "exitCode": 1,
+      "durationMs": 7631.0195
+    },
+    {
+      "id": "2b9b31dc-efd6-42ab-8c52-ea927cd41fb8",
+      "receipt": "measurements/meadow-source-build-b-20261125.json",
+      "exitCode": 0,
+      "durationMs": 41598.351625
+    },
+    {
+      "id": "b7502370-a0fe-42b5-a2d1-7a36f46d610f",
+      "receipt": "measurements/meadow-source-identity-20261125.json",
+      "exitCode": 0,
+      "durationMs": 11218.824625000001
+    },
+    {
+      "id": "c3b0fe2b-a085-4b60-a095-cd7948a7116f",
+      "receipt": "measurements/meadow-source-validate-20261125.json",
+      "exitCode": 0,
+      "durationMs": 6706.035459
+    },
+    {
+      "id": "3caf6075-df22-4f4b-87fd-5fa9ace6164d",
+      "receipt": "measurements/meadow-unity-import-20261125.json",
+      "exitCode": 0,
+      "durationMs": 21139.061458
+    },
+    {
+      "id": "911d8f6a-9651-4714-bbf6-04beebe0dcf3",
+      "receipt": "measurements/meadow-editor-20261125.json",
+      "exitCode": 0,
+      "durationMs": 15550.091833
+    },
+    {
+      "id": "c10eca04-3cdd-47ce-8fd0-912930fad469",
+      "receipt": "measurements/meadow-waterline-gpu-20261125.json",
+      "exitCode": 0,
+      "durationMs": 39316.344458
+    },
+    {
+      "id": "72b097d7-8b1b-42bc-b2d9-1875e459a233",
+      "receipt": "measurements/meadow-play-20261125.json",
+      "exitCode": 2,
+      "durationMs": 58808.260417000005
+    },
+    {
+      "id": "2c6fb668-c584-4eaf-9fac-3e3b959d3174",
+      "receipt": "measurements/meadow-meter-diagnostic-20261125.json",
+      "exitCode": 0,
+      "durationMs": 19517.477333000003
+    },
+    {
+      "id": "a83a957e-1afc-4ad2-84f3-c59c21fa277b",
+      "receipt": "measurements/meadow-play-b-20261125.json",
+      "exitCode": 0,
+      "durationMs": 106967.889625
+    },
+    {
+      "id": "c33dda07-1518-4c94-853d-5de4d843465c",
+      "receipt": "measurements/meadow-source-preparation-20261125.json",
+      "exitCode": 0,
+      "durationMs": 1728.179416
+    },
+    {
+      "id": "85b06d6c-a93a-488f-a0cb-f2772bdcc549",
+      "receipt": "measurements/meadow-source-public-validate-20261125.json",
+      "exitCode": 0,
+      "durationMs": 2257.4269999999997
+    },
+    {
+      "id": "621f6838-8e6d-4f36-8748-8221e41fda6f",
+      "receipt": "measurements/meadow-source-public-audit-20261125.json",
+      "exitCode": 0,
+      "durationMs": 1331.1522909999999
+    },
+    {
+      "id": "8552b29c-091d-40e9-9e5b-8d1307aa5675",
+      "receipt": "measurements/meadow-saves-before-20261125.json",
+      "exitCode": 0,
+      "durationMs": 1291.6442499999998
+    },
+    {
+      "id": "99b3a927-3c05-4739-8c32-81a5cb045475",
+      "receipt": "measurements/meadow-native-build-20261125.json",
+      "exitCode": 0,
+      "durationMs": 332214.44612499996
+    },
+    {
+      "id": "459c4493-be03-4765-a68d-e5d86851309f",
+      "receipt": "measurements/meadow-native-phone-20261125.json",
+      "exitCode": 0,
+      "durationMs": 176469.186583
+    },
+    {
+      "id": "c33efe5a-92d1-45d1-8950-2675427b52e1",
+      "receipt": "measurements/meadow-native-phone-proof-20261125.json",
+      "exitCode": 0,
+      "durationMs": 55.32054199999999
+    },
+    {
+      "id": "d90bf340-ee55-412c-b476-2e222c9a770b",
+      "receipt": "measurements/meadow-native-tablet-20261125.json",
+      "exitCode": 0,
+      "durationMs": 66437.650167
+    },
+    {
+      "id": "fc6b9ff2-76a0-4774-9314-7d4566f7ddb2",
+      "receipt": "measurements/meadow-native-tablet-proof-20261125.json",
+      "exitCode": 0,
+      "durationMs": 85.56929200000002
+    },
+    {
+      "id": "aca1fa8f-ed95-4213-abcf-5ecf0e994086",
+      "receipt": "measurements/meadow-saves-final-20261125.json",
+      "exitCode": 0,
+      "durationMs": 1235.6127499999998
+    },
+    {
+      "id": "b3edb10d-53c5-40be-9a70-a8173d1623bb",
+      "receipt": "measurements/meadow-final-public-validate-20261125.json",
+      "exitCode": 0,
+      "durationMs": 1349.5028750000001
+    },
+    {
+      "id": "367d5f0d-5e4a-4a41-8ca8-62d4a3c215a4",
+      "receipt": "measurements/meadow-final-public-audit-20261125.json",
+      "exitCode": 0,
+      "durationMs": 1448.736916
+    },
+    {
+      "id": "d12ebc0f-efcf-4637-9de8-ccf0294dd690",
+      "receipt": "measurements/meadow-final-binding-20261125.json",
+      "exitCode": 0,
+      "durationMs": 1805.162084
+    },
+    {
+      "id": "47ea57fc-c321-470d-82ec-c0e2854b7ae9",
+      "receipt": "measurements/meadow-final-records-20261125.json",
+      "exitCode": 0,
+      "durationMs": 171.82166600000005
+    }
+  ]
+}
