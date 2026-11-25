@@ -13791,6 +13791,171 @@
       "executable": "python3",
       "commandDigest": "d89602c770c16a35b6c5da9a9da4ae967807390aa462f4349604d0463de12f51",
       "receiptPath": "measurements/reflection-precision-publication-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "fef21e0e-b430-4458-a552-70064f64cfff",
+      "startedAt": "2026-11-25T00:52:05.949Z",
+      "executable": "python3",
+      "commandDigest": "d2dbf7a16e13d2cbf27c93dd6a47e3fee7359682587c42ceec183dd15e8aacc8",
+      "receiptPath": "measurements/reflection-native-build-b-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "1f73f602-606a-43da-a14d-bdca318fd2e5",
+      "startedAt": "2026-11-25T00:56:58.628Z",
+      "executable": "python3",
+      "commandDigest": "789db6cef03ea61cf76d1cef4e65774808a94267e2f519b2dd15da8b4d7d19de",
+      "receiptPath": "measurements/reflection-native-phone-b-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "verification",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "027319b9-0b1b-4f1d-b9ca-a322a1131386",
+      "startedAt": "2026-11-25T01:00:57.034Z",
+      "executable": "python3",
+      "commandDigest": "4a87aa2ea18e10e4b5fce6d71276188d1296fc2b4e36995c11e3aaaa8f2cb6b8",
+      "receiptPath": "measurements/reflection-native-phone-b-proof-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "24a7800e-47fc-4816-abd4-8b778cfdee39",
+      "startedAt": "2026-11-25T01:02:48.360Z",
+      "executable": "python3",
+      "commandDigest": "aea19687115a941385a2ae2c037ffc272ae2ea2835758343dfd3ae36fe91ad85",
+      "receiptPath": "measurements/reflection-native-tablet-b-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "verification",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "ffb5df1b-77b4-4496-8ff2-1af1d00ea47d",
+      "startedAt": "2026-11-25T01:05:03.186Z",
+      "executable": "python3",
+      "commandDigest": "5ac4d7fbffb2c655849eeeaa5905e89f7e2d729fff6a16309d8e0b67b4dbc253",
+      "receiptPath": "measurements/reflection-native-tablet-b-proof-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "data-retention",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "57c36699-ca7b-4e27-9366-fd44af699faf",
+      "startedAt": "2026-11-25T01:06:48.331Z",
+      "executable": "python3",
+      "commandDigest": "50ff3aaf4afed039f0cc23b66d5eab7123230564dd39f6187c028611968127fa",
+      "receiptPath": "measurements/reflection-native-saves-after-b-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "50acba16-7b7d-4c41-8fc6-b04681c7089e",
+      "startedAt": "2026-11-25T01:06:57.856Z",
+      "executable": "python3",
+      "commandDigest": "f0cd589bf62a5895ba96ff7b2de850aec2cbd0f405b9fc9150cb4d955366a8e3",
+      "receiptPath": "measurements/reflection-native-phone20-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "verification",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "616955a4-1ba9-47a6-b527-62fadff7405a",
+      "startedAt": "2026-11-25T01:21:15.469Z",
+      "executable": "python3",
+      "commandDigest": "e076b38d2ff67fa1c6c0737045220651851d25d0107906ba8f28686cea1f2156",
+      "receiptPath": "measurements/reflection-native-phone20-proof-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "4a564c49-4f1e-4d58-9d91-ccf5facf6616",
+      "startedAt": "2026-11-25T01:23:10.392Z",
+      "executable": "python3",
+      "commandDigest": "7df1fea970fecc2cd2608c4117a1501a7aaa1c41bb0e396b17cdfb6f57328e52",
+      "receiptPath": "measurements/reflection-native-restart20-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "7c9c3720-12c2-49fa-ab56-906fc2c4441d",
+      "startedAt": "2026-11-25T01:28:41.883Z",
+      "executable": "python3",
+      "commandDigest": "6ba0376ee65fd58b166fa0765b8ea55129967162d0bc5e21abaca0b9772e77ad",
+      "receiptPath": "measurements/reflection-native-restart20-proof-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "cecf8d86-9954-4fe8-9691-8d316f979061",
+      "startedAt": "2026-11-25T01:28:51.681Z",
+      "executable": "python3",
+      "commandDigest": "aa62a3ca429cd0ac6d9cba76567d28ee55bd9dc546264b21c7ff42f8d2fc30a5",
+      "receiptPath": "measurements/reflection-native-saves-final-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "lint",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "5b7b2fc5-9cc4-47ad-a78b-8da681c16f69",
+      "startedAt": "2026-11-25T01:30:45.696Z",
+      "executable": "python3",
+      "commandDigest": "1b9b750d007c851f920bb86ccb95b6c8d0649e1d11d26d4708a2736b0478955e",
+      "receiptPath": "measurements/reflection-native-final-validate-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "publication-audit",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "861ad0c4-1577-47e2-b9b0-204014f3c4cd",
+      "startedAt": "2026-11-25T01:30:46.719Z",
+      "executable": "python3",
+      "commandDigest": "d89602c770c16a35b6c5da9a9da4ae967807390aa462f4349604d0463de12f51",
+      "receiptPath": "measurements/reflection-native-final-publication-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "verification",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "4ff66315-a1b8-4a59-a661-94873bc77f1e",
+      "startedAt": "2026-11-25T01:31:21.827Z",
+      "executable": "python3",
+      "commandDigest": "2dabcbeea88322f3206390d72b2768e299a0de06147a349f21ee47af1cc7bd49",
+      "receiptPath": "measurements/reflection-native-final-binding-20261125.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "verification",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "3003a4a2-766e-4da7-966f-b4783839e4e0",
+      "startedAt": "2026-11-25T01:31:23.121Z",
+      "executable": "python3",
+      "commandDigest": "42e0913f7d5aa42101cca1ab3d937b846564a9414547908dcc0490d0350665b7",
+      "receiptPath": "measurements/reflection-native-final-records-20261125.json"
     }
   ],
   "runMeasurements": [
@@ -34917,6 +35082,291 @@
       "receipt": {
         "path": "measurements/reflection-precision-publication-20261125.json",
         "sha256": "bd588b03a20f200d147398030f661212761f94843847710ff0e061b21719dc66"
+      }
+    },
+    {
+      "id": "fef21e0e-b430-4458-a552-70064f64cfff",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d2dbf7a16e13d2cbf27c93dd6a47e3fee7359682587c42ceec183dd15e8aacc8",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T00:52:05.949Z",
+      "finishedAt": "2026-11-25T00:54:36.778Z",
+      "durationMs": 150799.192416,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/reflection-native-build-b-20261125.json",
+        "sha256": "5ef6ebae2f7a354a16bbed6e5cb37e971fb8f993f0fe9e93ff203957a1192063"
+      }
+    },
+    {
+      "id": "1f73f602-606a-43da-a14d-bdca318fd2e5",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "789db6cef03ea61cf76d1cef4e65774808a94267e2f519b2dd15da8b4d7d19de",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T00:56:58.628Z",
+      "finishedAt": "2026-11-25T00:57:49.258Z",
+      "durationMs": 50602.779334,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/reflection-native-phone-b-20261125.json",
+        "sha256": "ac2b4c0817791aa68129f63f1f72e07079ec4e074d8dff7aef7ce81756ef6188"
+      }
+    },
+    {
+      "id": "027319b9-0b1b-4f1d-b9ca-a322a1131386",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "4a87aa2ea18e10e4b5fce6d71276188d1296fc2b4e36995c11e3aaaa8f2cb6b8",
+      "category": "verification",
+      "executable": "python3",
+      "startedAt": "2026-11-25T01:00:57.034Z",
+      "finishedAt": "2026-11-25T01:00:57.125Z",
+      "durationMs": 64.61454199999997,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/reflection-native-phone-b-proof-20261125.json",
+        "sha256": "c5425acfd14399e20909843d1ea24df8b3ee6ffdcd09c427e05daa00d2a4c6fd"
+      }
+    },
+    {
+      "id": "24a7800e-47fc-4816-abd4-8b778cfdee39",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "aea19687115a941385a2ae2c037ffc272ae2ea2835758343dfd3ae36fe91ad85",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T01:02:48.360Z",
+      "finishedAt": "2026-11-25T01:03:33.700Z",
+      "durationMs": 45313.290499999996,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/reflection-native-tablet-b-20261125.json",
+        "sha256": "014ef29bdd9e1578b8184b404ad691115c4eaf3fcc227d4059e8e6d1d2877410"
+      }
+    },
+    {
+      "id": "ffb5df1b-77b4-4496-8ff2-1af1d00ea47d",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "5ac4d7fbffb2c655849eeeaa5905e89f7e2d729fff6a16309d8e0b67b4dbc253",
+      "category": "verification",
+      "executable": "python3",
+      "startedAt": "2026-11-25T01:05:03.186Z",
+      "finishedAt": "2026-11-25T01:05:03.266Z",
+      "durationMs": 56.66508299999998,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/reflection-native-tablet-b-proof-20261125.json",
+        "sha256": "d42ce1873af0d375753b344b7fcd54a807b181b2f466fcc74a988156d76f2c1d"
+      }
+    },
+    {
+      "id": "57c36699-ca7b-4e27-9366-fd44af699faf",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "50ff3aaf4afed039f0cc23b66d5eab7123230564dd39f6187c028611968127fa",
+      "category": "data-retention",
+      "executable": "python3",
+      "startedAt": "2026-11-25T01:06:48.331Z",
+      "finishedAt": "2026-11-25T01:06:48.860Z",
+      "durationMs": 492.978125,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/reflection-native-saves-after-b-20261125.json",
+        "sha256": "c9919a1a258ab29de7226e53d07348d56bb9e256c9b203bf3e01a11fac0d2620"
+      }
+    },
+    {
+      "id": "50acba16-7b7d-4c41-8fc6-b04681c7089e",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "f0cd589bf62a5895ba96ff7b2de850aec2cbd0f405b9fc9150cb4d955366a8e3",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T01:06:57.856Z",
+      "finishedAt": "2026-11-25T01:13:35.636Z",
+      "durationMs": 397743.3045,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/reflection-native-phone20-20261125.json",
+        "sha256": "321fbe2b3750f4e0da7490afcbd931110b764ec58223f1c7b31f75ffc3326786"
+      }
+    },
+    {
+      "id": "616955a4-1ba9-47a6-b527-62fadff7405a",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "e076b38d2ff67fa1c6c0737045220651851d25d0107906ba8f28686cea1f2156",
+      "category": "verification",
+      "executable": "python3",
+      "startedAt": "2026-11-25T01:21:15.469Z",
+      "finishedAt": "2026-11-25T01:21:16.201Z",
+      "durationMs": 685.7251249999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/reflection-native-phone20-proof-20261125.json",
+        "sha256": "bf3a3ef3a49f1623bb4b9e95e5ca6882d805b32d37ae3c05a41dd9de1557c15d"
+      }
+    },
+    {
+      "id": "4a564c49-4f1e-4d58-9d91-ccf5facf6616",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "7df1fea970fecc2cd2608c4117a1501a7aaa1c41bb0e396b17cdfb6f57328e52",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T01:23:10.392Z",
+      "finishedAt": "2026-11-25T01:23:23.982Z",
+      "durationMs": 13563.614459,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/reflection-native-restart20-20261125.json",
+        "sha256": "897ee1b203353928fd2875934cdaa635559fafa320340eab56b83a17be3be663"
+      }
+    },
+    {
+      "id": "7c9c3720-12c2-49fa-ab56-906fc2c4441d",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "6ba0376ee65fd58b166fa0765b8ea55129967162d0bc5e21abaca0b9772e77ad",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T01:28:41.883Z",
+      "finishedAt": "2026-11-25T01:28:41.979Z",
+      "durationMs": 61.469125000000076,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/reflection-native-restart20-proof-20261125.json",
+        "sha256": "6857440e1f8ffce8c4c6b0af1a8df7d729a8f01c36ac5acf426da97984d6d94d"
+      }
+    },
+    {
+      "id": "cecf8d86-9954-4fe8-9691-8d316f979061",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "aa62a3ca429cd0ac6d9cba76567d28ee55bd9dc546264b21c7ff42f8d2fc30a5",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T01:28:51.681Z",
+      "finishedAt": "2026-11-25T01:28:52.529Z",
+      "durationMs": 819.903083,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/reflection-native-saves-final-20261125.json",
+        "sha256": "24ab0ad8cf65f1997956734adf2d4014b538a880d7479850223ec6f183e5261f"
+      }
+    },
+    {
+      "id": "5b7b2fc5-9cc4-47ad-a78b-8da681c16f69",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "1b9b750d007c851f920bb86ccb95b6c8d0649e1d11d26d4708a2736b0478955e",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-25T01:30:45.696Z",
+      "finishedAt": "2026-11-25T01:30:46.334Z",
+      "durationMs": 610.963375,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/reflection-native-final-validate-20261125.json",
+        "sha256": "10869bc5b51dceccbbd4e454ef21537571cbe17632c72ab8f78940b5724c214f"
+      }
+    },
+    {
+      "id": "861ad0c4-1577-47e2-b9b0-204014f3c4cd",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d89602c770c16a35b6c5da9a9da4ae967807390aa462f4349604d0463de12f51",
+      "category": "publication-audit",
+      "executable": "python3",
+      "startedAt": "2026-11-25T01:30:46.719Z",
+      "finishedAt": "2026-11-25T01:30:47.278Z",
+      "durationMs": 536.1944169999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/reflection-native-final-publication-20261125.json",
+        "sha256": "ae532c99c9a5efb1f124843ad043830b7b1962792c10ba99d92461f8dca82c96"
+      }
+    },
+    {
+      "id": "4ff66315-a1b8-4a59-a661-94873bc77f1e",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "2dabcbeea88322f3206390d72b2768e299a0de06147a349f21ee47af1cc7bd49",
+      "category": "verification",
+      "executable": "python3",
+      "startedAt": "2026-11-25T01:31:21.827Z",
+      "finishedAt": "2026-11-25T01:31:22.672Z",
+      "durationMs": 812.616916,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/reflection-native-final-binding-20261125.json",
+        "sha256": "680a3fb8e9b4d41210622beb94c91c7f37174d97aba6b4be2e61f6d719434ac5"
+      }
+    },
+    {
+      "id": "3003a4a2-766e-4da7-966f-b4783839e4e0",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "42e0913f7d5aa42101cca1ab3d937b846564a9414547908dcc0490d0350665b7",
+      "category": "verification",
+      "executable": "python3",
+      "startedAt": "2026-11-25T01:31:23.121Z",
+      "finishedAt": "2026-11-25T01:31:23.218Z",
+      "durationMs": 70.40608400000002,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/reflection-native-final-records-20261125.json",
+        "sha256": "ff9173044ba82c697d20b58df20bea6d5e6f78372a9d7a0ae6f4944482ae5593"
       }
     }
   ]

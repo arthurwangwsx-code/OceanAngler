@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "7c9c3720-12c2-49fa-ab56-906fc2c4441d",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "6ba0376ee65fd58b166fa0765b8ea55129967162d0bc5e21abaca0b9772e77ad",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-25T01:28:41.883Z",
+    "finishedAt": "2026-11-25T01:28:41.979Z",
+    "durationMs": 61.469125000000076,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/reflection-native-qa/check-restart.py",
+      "reflection20261125restart20",
+      "--viewed-score",
+      "3431"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/reflection-native-qa/check-restart.py",
+    "reflection20261125restart20",
+    "--viewed-score",
+    "3431"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T01:28:41.883Z",
+  "finishedAt": "2026-11-25T01:28:41.979Z",
+  "durationMs": 61.469125000000076
+}

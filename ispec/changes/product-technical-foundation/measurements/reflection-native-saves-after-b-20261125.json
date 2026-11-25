@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "57c36699-ca7b-4e27-9366-fd44af699faf",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "50ff3aaf4afed039f0cc23b66d5eab7123230564dd39f6187c028611968127fa",
+    "category": "data-retention",
+    "executable": "python3",
+    "startedAt": "2026-11-25T01:06:48.331Z",
+    "finishedAt": "2026-11-25T01:06:48.860Z",
+    "durationMs": 492.978125,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/reflection-native-qa/retain-saves.py",
+      "after",
+      "b"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/reflection-native-qa/retain-saves.py",
+    "after",
+    "b"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T01:06:48.331Z",
+  "finishedAt": "2026-11-25T01:06:48.860Z",
+  "durationMs": 492.978125
+}

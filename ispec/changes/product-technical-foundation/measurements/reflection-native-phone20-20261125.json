@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "50acba16-7b7d-4c41-8fc6-b04681c7089e",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "f0cd589bf62a5895ba96ff7b2de850aec2cbd0f405b9fc9150cb4d955366a8e3",
+    "category": "e2e",
+    "executable": "python3",
+    "startedAt": "2026-11-25T01:06:57.856Z",
+    "finishedAt": "2026-11-25T01:13:35.636Z",
+    "durationMs": 397743.3045,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/reflection-native-qa/run-native.py",
+      "journey20",
+      "reflection20261125phone20",
+      "--device",
+      "phone"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/reflection-native-qa/run-native.py",
+    "journey20",
+    "reflection20261125phone20",
+    "--device",
+    "phone"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T01:06:57.856Z",
+  "finishedAt": "2026-11-25T01:13:35.636Z",
+  "durationMs": 397743.3045
+}

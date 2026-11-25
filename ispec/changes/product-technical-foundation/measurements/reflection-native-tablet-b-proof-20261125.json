@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "ffb5df1b-77b4-4496-8ff2-1af1d00ea47d",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "5ac4d7fbffb2c655849eeeaa5905e89f7e2d729fff6a16309d8e0b67b4dbc253",
+    "category": "verification",
+    "executable": "python3",
+    "startedAt": "2026-11-25T01:05:03.186Z",
+    "finishedAt": "2026-11-25T01:05:03.266Z",
+    "durationMs": 56.66508299999998,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/reflection-native-qa/verify-native.py",
+      "reflection20261125pad1",
+      "reflection-native-tablet-b-20261125.json"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/reflection-native-qa/verify-native.py",
+    "reflection20261125pad1",
+    "reflection-native-tablet-b-20261125.json"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T01:05:03.186Z",
+  "finishedAt": "2026-11-25T01:05:03.266Z",
+  "durationMs": 56.66508299999998
+}

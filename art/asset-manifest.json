@@ -2781,6 +2781,56 @@
           "sha256": "f887bbadce1d12b7a7374b1d3d6bf3853bf7055b39323db5dd43ae3349a2c96a"
         }
       ]
+    },
+    {
+      "id": "reflection-native-cache-and-immersive-evidence",
+      "author": "OceanAngler contributors; embedded Noto glyphs separately registered under OFL",
+      "license": "MIT; embedded Noto UI glyphs SIL OFL 1.1",
+      "redistribution": true,
+      "sourceRedistribution": true,
+      "canModify": true,
+      "acquiredAt": "2026-11-25",
+      "source": "Own Unity native Simulator scene renders and contact sheets; no private media or runtime device logs",
+      "status": "NATIVE_SIMULATOR_TARGETED_PASS_ART_AND_PHYSICAL_PENDING",
+      "note": "Source45b04aa, selected original frames and three contact sheets reviewed; rejected c1e idle frame retained. Contact-sheet inspection does not mean every full-size original was reviewed. Other fish and observation creatures retain prototype shapes. Not full product or art acceptance.",
+      "artifacts": [
+        {
+          "path": "art/previews/reflection-native/phone-contact.png",
+          "sha256": "e2d38a921fa5e2638e97446ee5e4b991fc398cadf8601e9b1e5bce545b17e5a8"
+        },
+        {
+          "path": "art/previews/reflection-native/tablet-contact.png",
+          "sha256": "41b5d25a7b40f6fc55bba324135e5f8fa2608cce19159c8717dbdf7c71899e28"
+        },
+        {
+          "path": "art/previews/reflection-native/journey20-contact.png",
+          "sha256": "f89b059deddb6d9d255a440e8defca0f4ad4b214b18675238c6def44ef5b5c9e"
+        },
+        {
+          "path": "art/previews/reflection-native/phone-ready.png",
+          "sha256": "89e3e91411b4fe067cb865f9311d1ffd4d2f921a004527f8743c69a04b40ae19"
+        },
+        {
+          "path": "art/previews/reflection-native/tablet-fighting.png",
+          "sha256": "dc4acf2e74ac823414c6d370980cfc95bb8783931d5bc9b095019af894d3ee98"
+        },
+        {
+          "path": "art/previews/reflection-native/tablet-landed.png",
+          "sha256": "e0b99e2842ae088e6d69da7ccff44c54c6a3b450398a26739d0d51edeaff1542"
+        },
+        {
+          "path": "art/previews/reflection-native/journey20-landed.png",
+          "sha256": "62ce2ba099c3d2da11d15c1cc65105581a9c3e42648487704a8912fdbbd2c631"
+        },
+        {
+          "path": "art/previews/reflection-native/restart20-main.png",
+          "sha256": "5de3ccd55e29a6e517fb9e4a6cbc8a4c164f08f1e184f378ca2d3dc64901fddf"
+        },
+        {
+          "path": "art/previews/reflection-native/rejected-idle-recapture.png",
+          "sha256": "4dcde9782fc7069acc7be50f8aa6156cecd944d86cffa384645585767b84792a"
+        }
+      ]
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."

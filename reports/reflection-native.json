@@ -1,0 +1,421 @@
+{
+  "status": "PARTIAL",
+  "implementation": "IMPLEMENTED_TARGETED_FIX",
+  "productAcceptance": "PARTIAL",
+  "distribution": "LOCAL_SIMULATOR_ONLY_NOT_TESTFLIGHT",
+  "source": {
+    "sourceCommit": "45b04aa7081f12c8dd4e4a3aeb32e1b7754aa51c",
+    "sourceDigest": "545ceab933ee4a3504f4147933f81d594af01e9ebe7a5fc9e90b939de625b03a",
+    "projectSettingsSha256": "bea92e9b5c8b678dd130d48c1f43acaf939b56cacce33928a5a45af6da0a4585"
+  },
+  "appDigest": "8f8d883bc70bdd8299893c521a0438d4a7e10a80bfe9799d1a77e9b0355f169f",
+  "editor": {
+    "passed": 8,
+    "scope": "WaterlinePresentation targeted Editor"
+  },
+  "play": {
+    "passed": 10,
+    "scope": "Targeted PlayMode; includes synthetic unlock and accelerated fixtures, not all natural play"
+  },
+  "staticGpu": {
+    "status": "PASS",
+    "images": 48,
+    "views": 24,
+    "bad": [],
+    "minMechanismMargin": 0.19949808716773987
+  },
+  "native": {
+    "phone": {
+      "status": "PASS",
+      "source": {
+        "sourceCommit": "45b04aa7081f12c8dd4e4a3aeb32e1b7754aa51c",
+        "sourceDigest": "545ceab933ee4a3504f4147933f81d594af01e9ebe7a5fc9e90b939de625b03a",
+        "projectSettingsSha256": "bea92e9b5c8b678dd130d48c1f43acaf939b56cacce33928a5a45af6da0a4585"
+      },
+      "appDigest": "8f8d883bc70bdd8299893c521a0438d4a7e10a80bfe9799d1a77e9b0355f169f",
+      "catches": 1,
+      "points": 180,
+      "maxHudRatio": 0.12227564305067062,
+      "capturedFrames": 19,
+      "reflectionProof": {
+        "status": "PASS",
+        "stationary": [
+          {
+            "leftHanded": false,
+            "renders": 1,
+            "sha256": "fe89cd913667cf745e1ccbce68a4b1e070c6d15f88b9316d1997799b67c64bdf",
+            "identicalAfterWait": true
+          },
+          {
+            "leftHanded": true,
+            "renders": 32,
+            "sha256": "fe89cd913667cf745e1ccbce68a4b1e070c6d15f88b9316d1997799b67c64bdf",
+            "identicalAfterWait": true
+          }
+        ],
+        "castingRenders": 2,
+        "impactRenders": 22,
+        "castingSha256": "fe89cd913667cf745e1ccbce68a4b1e070c6d15f88b9316d1997799b67c64bdf",
+        "impactSha256": "957a8309b58eb31a4f08fea94d81aa555878f25a64a3b7d2423fc6d42d58e606",
+        "castTextureChanged": true,
+        "underwaterInactive": true,
+        "scope": "Actual native Metal reflection texture readback and cache counts; no diagnostic marker, first-draw pass, physical performance or child qualification"
+      }
+    },
+    "tablet": {
+      "status": "PASS",
+      "source": {
+        "sourceCommit": "45b04aa7081f12c8dd4e4a3aeb32e1b7754aa51c",
+        "sourceDigest": "545ceab933ee4a3504f4147933f81d594af01e9ebe7a5fc9e90b939de625b03a",
+        "projectSettingsSha256": "bea92e9b5c8b678dd130d48c1f43acaf939b56cacce33928a5a45af6da0a4585"
+      },
+      "appDigest": "8f8d883bc70bdd8299893c521a0438d4a7e10a80bfe9799d1a77e9b0355f169f",
+      "catches": 1,
+      "points": 225,
+      "maxHudRatio": 0.045262712985277176,
+      "capturedFrames": 19,
+      "reflectionProof": {
+        "status": "PASS",
+        "stationary": [
+          {
+            "leftHanded": false,
+            "renders": 1,
+            "sha256": "0493f6a20b080ba7ee0c31268eb697750c996a9bdded1584115b9fb7542b23db",
+            "identicalAfterWait": true
+          },
+          {
+            "leftHanded": true,
+            "renders": 32,
+            "sha256": "0493f6a20b080ba7ee0c31268eb697750c996a9bdded1584115b9fb7542b23db",
+            "identicalAfterWait": true
+          }
+        ],
+        "castingRenders": 2,
+        "impactRenders": 22,
+        "castingSha256": "0493f6a20b080ba7ee0c31268eb697750c996a9bdded1584115b9fb7542b23db",
+        "impactSha256": "b921f554ad6e73277719d20f7ebb8b3d1d51c83b77ecd6a014b0bdc638b95399",
+        "castTextureChanged": true,
+        "underwaterInactive": true,
+        "scope": "Actual native Metal reflection texture readback and cache counts; no diagnostic marker, first-draw pass, physical performance or child qualification"
+      }
+    }
+  },
+  "journey": {
+    "status": "PASS",
+    "scope": "Actual native Simulator EventSystem twenty natural UI catches, two control modes, three habitat unlocks and protected observations with per-round disk reload; not full12-species/18-task art, child, OS touch or physical20-minute qualification",
+    "source": {
+      "sourceCommit": "45b04aa7081f12c8dd4e4a3aeb32e1b7754aa51c",
+      "sourceDigest": "545ceab933ee4a3504f4147933f81d594af01e9ebe7a5fc9e90b939de625b03a",
+      "projectSettingsSha256": "bea92e9b5c8b678dd130d48c1f43acaf939b56cacce33928a5a45af6da0a4585"
+    },
+    "appDigest": "8f8d883bc70bdd8299893c521a0438d4a7e10a80bfe9799d1a77e9b0355f169f",
+    "rounds": 20,
+    "points": 3431,
+    "observations": [
+      "green-turtle",
+      "bottlenose-dolphin",
+      "whale-shark"
+    ],
+    "habitats": [
+      "bay",
+      "channel",
+      "slope"
+    ],
+    "modes": [
+      "assisted",
+      "standard"
+    ],
+    "species": 8,
+    "frames": 12,
+    "saveSha256": "66c4627bbf687bac82ec6f460161c3e1163a2e664f8dbe36271f0dd42cf35663",
+    "perRoundDiskLedgerVerified": true,
+    "elapsedSeconds": 389.2273254394531
+  },
+  "restart": {
+    "status": "PASS",
+    "scope": "Actual native Simulator process restart with same isolated UI-produced progress and viewed own frame; not personal device",
+    "newProcessObserved": true,
+    "catches": 20,
+    "observations": 3,
+    "points": 3431,
+    "checksumValid": true,
+    "saveBytesUnchanged": true,
+    "saveSha256": "66c4627bbf687bac82ec6f460161c3e1163a2e664f8dbe36271f0dd42cf35663",
+    "mainFrameViewed": true,
+    "visibleScoreMatches": true
+  },
+  "existingSaves": {
+    "status": "PASS",
+    "files": 99,
+    "primary": 52,
+    "byteIdentical": true,
+    "scope": "Own existing Simulator progress files including backups/temp/corrupt corpus; not personal phone"
+  },
+  "historicalRecordAudit": "INCOMPLETE",
+  "newFailureCount": 4,
+  "failuresRetained": [
+    "Archive restoration compatibility failure after verified archive and expanded-export removal",
+    "Native c1e stationary ready recaptured5 to12 in0.12s although actual texture SHA unchanged",
+    "Exact Editor unchanged ready pose red: lure drift",
+    "First fix candidate rejected: Spool_LOD0 matrix drift after drag"
+  ],
+  "archive": {
+    "status": "VERIFIED_ARCHIVE_AND_RESTORE",
+    "expandedExport": "build/ios-simulator-sim1",
+    "archiveBytes": 238592132,
+    "originalFileBytes": 950953596,
+    "members": 3255,
+    "sha256": "c0f5f1fd37b482fd35b005457acc4f3d370ee714a622392fcb971cca803c66d5",
+    "scope": "Only this old generated export removed after verification; source/models/saves/apps/releases preserved. OS provenance retained in archive, assigned by OS on restored files. Global free-space increase includes external host activity, not attributed to this archive."
+  },
+  "review": {
+    "contactSheets": 3,
+    "selectedFullSizeFrames": 6,
+    "scope": "Two19-frame immersion contacts, one12-frame journey contact, phone ready, tablet fighting/landed, current20th landed, restart and rejected idle original"
+  },
+  "artifacts": [
+    {
+      "path": "art/previews/reflection-native/phone-contact.png",
+      "sha256": "e2d38a921fa5e2638e97446ee5e4b991fc398cadf8601e9b1e5bce545b17e5a8"
+    },
+    {
+      "path": "art/previews/reflection-native/tablet-contact.png",
+      "sha256": "41b5d25a7b40f6fc55bba324135e5f8fa2608cce19159c8717dbdf7c71899e28"
+    },
+    {
+      "path": "art/previews/reflection-native/journey20-contact.png",
+      "sha256": "f89b059deddb6d9d255a440e8defca0f4ad4b214b18675238c6def44ef5b5c9e"
+    },
+    {
+      "path": "art/previews/reflection-native/phone-ready.png",
+      "sha256": "89e3e91411b4fe067cb865f9311d1ffd4d2f921a004527f8743c69a04b40ae19"
+    },
+    {
+      "path": "art/previews/reflection-native/tablet-fighting.png",
+      "sha256": "dc4acf2e74ac823414c6d370980cfc95bb8783931d5bc9b095019af894d3ee98"
+    },
+    {
+      "path": "art/previews/reflection-native/tablet-landed.png",
+      "sha256": "e0b99e2842ae088e6d69da7ccff44c54c6a3b450398a26739d0d51edeaff1542"
+    },
+    {
+      "path": "art/previews/reflection-native/journey20-landed.png",
+      "sha256": "62ce2ba099c3d2da11d15c1cc65105581a9c3e42648487704a8912fdbbd2c631"
+    },
+    {
+      "path": "art/previews/reflection-native/restart20-main.png",
+      "sha256": "5de3ccd55e29a6e517fb9e4a6cbc8a4c164f08f1e184f378ca2d3dc64901fddf"
+    },
+    {
+      "path": "art/previews/reflection-native/rejected-idle-recapture.png",
+      "sha256": "4dcde9782fc7069acc7be50f8aa6156cecd944d86cffa384645585767b84792a"
+    }
+  ],
+  "pending": [
+    "User art direction review before remaining11 finished fish",
+    "Full realistic art and natural motion, science and child review",
+    "Current full12 species18tasks natural content qualification",
+    "OS touch and iPhone/iPad physical20-minute performance/recovery",
+    "Actual installation from TestFlight; current local changes not uploaded"
+  ],
+  "incrementRecordAudit": {
+    "status": "PASS_32_COMPLETED_32_STARTED",
+    "selfReceiptVerified": true,
+    "historicalOverall": "INCOMPLETE",
+    "scope": "Own current increment integrity only"
+  },
+  "measurements": [
+    {
+      "id": "fe801bcb-69f5-4518-aee1-d908572dbd09",
+      "receipt": "measurements/reflection-native-export-retention-20261125.json",
+      "exitCode": 1,
+      "durationMs": 15645.9115
+    },
+    {
+      "id": "50215167-bca1-4b39-9637-470472614566",
+      "receipt": "measurements/reflection-native-retention-restore-20261125.json",
+      "exitCode": 0,
+      "durationMs": 6274.524332999999
+    },
+    {
+      "id": "ab30575f-1bc9-4fac-8697-d7b0d5a0f151",
+      "receipt": "measurements/reflection-native-trace-play-20261125.json",
+      "exitCode": 0,
+      "durationMs": 56969.132125000004
+    },
+    {
+      "id": "df658914-044f-4f1b-8aa6-22a561d5aba0",
+      "receipt": "measurements/reflection-native-trace-validation-20261125.json",
+      "exitCode": 0,
+      "durationMs": 770.4082909999998
+    },
+    {
+      "id": "79428842-3766-4c99-92f3-ccbf9a0253b6",
+      "receipt": "measurements/reflection-native-trace-publication-20261125.json",
+      "exitCode": 0,
+      "durationMs": 597.656375
+    },
+    {
+      "id": "00f80f9c-b43d-49d3-9c10-9189c1610807",
+      "receipt": "measurements/reflection-native-build-a-20261125.json",
+      "exitCode": 0,
+      "durationMs": 212036.858875
+    },
+    {
+      "id": "de06bca1-b617-4137-9317-642dcb34399c",
+      "receipt": "measurements/reflection-native-saves-before-20261125.json",
+      "exitCode": 0,
+      "durationMs": 3492.5930829999998
+    },
+    {
+      "id": "64a9dce3-ce3a-44bf-add5-155beee81f41",
+      "receipt": "measurements/reflection-native-phone-a-20261125.json",
+      "exitCode": 1,
+      "durationMs": 44156.124790999995
+    },
+    {
+      "id": "559396ec-2297-4e4e-9794-338f94606bda",
+      "receipt": "measurements/reflection-native-saves-after-a-20261125.json",
+      "exitCode": 0,
+      "durationMs": 1176.7047499999999
+    },
+    {
+      "id": "39a238a4-24e9-49d6-b20a-2b982f5c9e3b",
+      "receipt": "measurements/reflection-ready-pose-red-20261125.json",
+      "exitCode": 2,
+      "durationMs": 16642.695666
+    },
+    {
+      "id": "a16d24b9-a24a-48dd-ac3a-47953ef671c9",
+      "receipt": "measurements/reflection-ready-pose-candidate-20261125.json",
+      "exitCode": 2,
+      "durationMs": 23220.68275
+    },
+    {
+      "id": "0f97a3df-7c31-418e-950f-d21f2cb4c723",
+      "receipt": "measurements/reflection-ready-pose-green-20261125.json",
+      "exitCode": 0,
+      "durationMs": 41880.269541999995
+    },
+    {
+      "id": "1d0f06bd-4cbe-4c71-a942-9b119502acb4",
+      "receipt": "measurements/reflection-precision-editor-20261125.json",
+      "exitCode": 0,
+      "durationMs": 14412.844207999999
+    },
+    {
+      "id": "b96829f4-0a10-4638-95bb-8d83568c540b",
+      "receipt": "measurements/reflection-precision-play-20261125.json",
+      "exitCode": 0,
+      "durationMs": 77242.609834
+    },
+    {
+      "id": "50b4c25a-496c-4dd3-8c14-aefc9dd852fd",
+      "receipt": "measurements/reflection-precision-waterline-20261125.json",
+      "exitCode": 0,
+      "durationMs": 37582.905416999994
+    },
+    {
+      "id": "2e0e5114-a94e-4a98-a74b-c228dbb4f78f",
+      "receipt": "measurements/reflection-precision-validation-20261125.json",
+      "exitCode": 0,
+      "durationMs": 777.4744579999999
+    },
+    {
+      "id": "4bcd11fe-a5fe-4812-8edb-5b1caa37334c",
+      "receipt": "measurements/reflection-precision-publication-20261125.json",
+      "exitCode": 0,
+      "durationMs": 1499.380209
+    },
+    {
+      "id": "fef21e0e-b430-4458-a552-70064f64cfff",
+      "receipt": "measurements/reflection-native-build-b-20261125.json",
+      "exitCode": 0,
+      "durationMs": 150799.192416
+    },
+    {
+      "id": "1f73f602-606a-43da-a14d-bdca318fd2e5",
+      "receipt": "measurements/reflection-native-phone-b-20261125.json",
+      "exitCode": 0,
+      "durationMs": 50602.779334
+    },
+    {
+      "id": "027319b9-0b1b-4f1d-b9ca-a322a1131386",
+      "receipt": "measurements/reflection-native-phone-b-proof-20261125.json",
+      "exitCode": 0,
+      "durationMs": 64.61454199999997
+    },
+    {
+      "id": "24a7800e-47fc-4816-abd4-8b778cfdee39",
+      "receipt": "measurements/reflection-native-tablet-b-20261125.json",
+      "exitCode": 0,
+      "durationMs": 45313.290499999996
+    },
+    {
+      "id": "ffb5df1b-77b4-4496-8ff2-1af1d00ea47d",
+      "receipt": "measurements/reflection-native-tablet-b-proof-20261125.json",
+      "exitCode": 0,
+      "durationMs": 56.66508299999998
+    },
+    {
+      "id": "57c36699-ca7b-4e27-9366-fd44af699faf",
+      "receipt": "measurements/reflection-native-saves-after-b-20261125.json",
+      "exitCode": 0,
+      "durationMs": 492.978125
+    },
+    {
+      "id": "50acba16-7b7d-4c41-8fc6-b04681c7089e",
+      "receipt": "measurements/reflection-native-phone20-20261125.json",
+      "exitCode": 0,
+      "durationMs": 397743.3045
+    },
+    {
+      "id": "616955a4-1ba9-47a6-b527-62fadff7405a",
+      "receipt": "measurements/reflection-native-phone20-proof-20261125.json",
+      "exitCode": 0,
+      "durationMs": 685.7251249999999
+    },
+    {
+      "id": "4a564c49-4f1e-4d58-9d91-ccf5facf6616",
+      "receipt": "measurements/reflection-native-restart20-20261125.json",
+      "exitCode": 0,
+      "durationMs": 13563.614459
+    },
+    {
+      "id": "7c9c3720-12c2-49fa-ab56-906fc2c4441d",
+      "receipt": "measurements/reflection-native-restart20-proof-20261125.json",
+      "exitCode": 0,
+      "durationMs": 61.469125000000076
+    },
+    {
+      "id": "cecf8d86-9954-4fe8-9691-8d316f979061",
+      "receipt": "measurements/reflection-native-saves-final-20261125.json",
+      "exitCode": 0,
+      "durationMs": 819.903083
+    },
+    {
+      "id": "5b7b2fc5-9cc4-47ad-a78b-8da681c16f69",
+      "receipt": "measurements/reflection-native-final-validate-20261125.json",
+      "exitCode": 0,
+      "durationMs": 610.963375
+    },
+    {
+      "id": "861ad0c4-1577-47e2-b9b0-204014f3c4cd",
+      "receipt": "measurements/reflection-native-final-publication-20261125.json",
+      "exitCode": 0,
+      "durationMs": 536.1944169999999
+    },
+    {
+      "id": "4ff66315-a1b8-4a59-a661-94873bc77f1e",
+      "receipt": "measurements/reflection-native-final-binding-20261125.json",
+      "exitCode": 0,
+      "durationMs": 812.616916
+    },
+    {
+      "id": "3003a4a2-766e-4da7-966f-b4783839e4e0",
+      "receipt": "measurements/reflection-native-final-records-20261125.json",
+      "exitCode": 0,
+      "durationMs": 70.40608400000002
+    }
+  ]
+}
