@@ -2831,6 +2831,64 @@
           "sha256": "4dcde9782fc7069acc7be50f8aa6156cecd944d86cffa384645585767b84792a"
         }
       ]
+    },
+    {
+      "id": "current-native-full-content-functional-evidence",
+      "author": "OceanAngler contributors; embedded Noto font separately registered OFL",
+      "license": "MIT; embedded Noto UI glyphs SIL OFL 1.1",
+      "source": "Own native Simulator renders of current full-content EventSystem journeys; no private media or device logs",
+      "acquiredAt": "2026-11-25",
+      "redistribution": true,
+      "sourceRedistribution": true,
+      "canModify": true,
+      "status": "FUNCTIONAL_CONTENT_PASS_NOT_COMPLETE_ART_OR_CHILD_ACCEPTANCE",
+      "note": "Four contact sheets and selected originals reviewed. Twelve collected records do not mean twelve finished realistic models. Halibut placeholder is explicitly unqualified for shape/science. No source/model/gameplay change for this verification.",
+      "artifacts": [
+        {
+          "path": "art/previews/content-current/phone-contact-1.png",
+          "sha256": "a2154be6e927f0fdcb75d29f73187e0d424836bc306cabcd28cf400aa4267c24"
+        },
+        {
+          "path": "art/previews/content-current/phone-contact-2.png",
+          "sha256": "ad3ed24fa0e407da8deb6216b1210673bb7ad5a8647a5c4f1969f528d092fb74"
+        },
+        {
+          "path": "art/previews/content-current/phone-content-tasks-header.png",
+          "sha256": "42ede9496aeaa75420d82299407aaada4bdb5fb3b50ef7ab9f84e82544c26b6a"
+        },
+        {
+          "path": "art/previews/content-current/phone-content-tasks-row-09.png",
+          "sha256": "9fb4e3096750df0114511d60faba34e6c1ac48acd6630730d3e0c24705352fcf"
+        },
+        {
+          "path": "art/previews/content-current/phone-restart-main.png",
+          "sha256": "4d68ac84d3aa933943079ec093f6fa1914f6bbde7b5714bb1a57d7518c313669"
+        },
+        {
+          "path": "art/previews/content-current/tablet-contact-1.png",
+          "sha256": "5e3d30786722ab0a0e0a445c99c780fc523a484acc950bc13d33fe6261fc2330"
+        },
+        {
+          "path": "art/previews/content-current/tablet-contact-2.png",
+          "sha256": "f3f7b96675967965b3ad9e989ca192986ff3945959054fb8e3c1e608612f3c72"
+        },
+        {
+          "path": "art/previews/content-current/tablet-content-tasks-header.png",
+          "sha256": "530fb8ad5bda6340f1cacec6453f5c99640710c9ba25ec47293c43aa63f9799c"
+        },
+        {
+          "path": "art/previews/content-current/tablet-content-tasks-row-09.png",
+          "sha256": "c394db0a707a5661efa4e0c8e85b5ff34c1fd1bab8f89a01d256f6aa7502e11d"
+        },
+        {
+          "path": "art/previews/content-current/tablet-restart-main.png",
+          "sha256": "6298a004094d738a13f544096d39c4d6cbb52baacf4848b691c7a815f99c6e4f"
+        },
+        {
+          "path": "art/previews/content-current/phone-prototype-halibut.png",
+          "sha256": "2d0eaca9b131d364d1f385a68b3425aa857533a74d5692396c98f96437459f69"
+        }
+      ]
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."
