@@ -565,6 +565,14 @@
       "checkedAt": "2026-11-25T03:21:07.127Z",
       "durationMs": 222.97533399999998,
       "outcome": "accepted"
+    },
+    {
+      "stageId": "apply",
+      "runId": null,
+      "operation": "start",
+      "checkedAt": "2026-11-25T03:52:57.651Z",
+      "durationMs": 188.204833,
+      "outcome": "accepted"
     }
   ],
   "measurementJournal": {
@@ -15063,6 +15071,149 @@
       "executable": "python3",
       "commandDigest": "93691f4c74c6be8f51a64b81101d0ee0535b778755f64842f28971b597ec6522",
       "receiptPath": "measurements/halibut-mouth-final-records.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "d7459c87-fae5-4361-b4c1-e248943ed2b6",
+      "startedAt": "2026-11-25T03:54:04.360Z",
+      "executable": "python3",
+      "commandDigest": "6de69e33a4e30f5dfefa7bf410f5b3ea769980828ac385faf31b2d148106230c",
+      "receiptPath": "measurements/halibut-encounter-saves-before.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "5f889921-be7c-41c3-826c-ee68ca176f54",
+      "startedAt": "2026-11-25T03:54:38.989Z",
+      "executable": "python3",
+      "commandDigest": "6c5d646ccb84627282c02a188d846fc1bef00563a29d263c9c6d323b27f29d5a",
+      "receiptPath": "measurements/halibut-encounter-phone-01.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "01921467-7a74-4119-98e8-513a00d5eb84",
+      "startedAt": "2026-11-25T03:55:45.070Z",
+      "executable": "python3",
+      "commandDigest": "f30be9ef4c14d1d121b5ce6551e24daf3dac885875d5fea22bac1131184f1a8d",
+      "receiptPath": "measurements/halibut-encounter-phone-02.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "82ff1edc-611c-4ae6-8974-b2bdf7c98371",
+      "startedAt": "2026-11-25T03:57:05.538Z",
+      "executable": "python3",
+      "commandDigest": "bb37077a5f2f2f14b38bf3769a47d97f61f86d9218444a536050b9f98c4b2109",
+      "receiptPath": "measurements/halibut-encounter-phone-03.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "fe75d680-113e-4b10-8b09-be703022349a",
+      "startedAt": "2026-11-25T03:58:05.991Z",
+      "executable": "python3",
+      "commandDigest": "24811a1cbefbc5704a87ec86e8b765bfa3906c57b87f2e543590917d9826a50a",
+      "receiptPath": "measurements/halibut-encounter-phone-verify-03.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "41a0fbf1-69c3-46a6-9e13-b6b24f8ff40a",
+      "startedAt": "2026-11-25T04:01:56.753Z",
+      "executable": "python3",
+      "commandDigest": "abdc80667bb4680bda30e7e01caea4fd6c8acfc040327578306d5d026cc75664",
+      "receiptPath": "measurements/halibut-framing-controlled-red.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "b512c6be-d59a-4e04-b0a6-f33b2bd001ab",
+      "startedAt": "2026-11-25T04:03:55.132Z",
+      "executable": "python3",
+      "commandDigest": "65f89c1affc195937a33278a6f0cbab54ab68c0215ac7cbf1f0a75c46f955d8c",
+      "receiptPath": "measurements/halibut-framing-play-a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "f7c7e1ab-594f-4107-8d1b-2ec24c494606",
+      "startedAt": "2026-11-25T04:05:39.458Z",
+      "executable": "python3",
+      "commandDigest": "e55a718d26ae2828c93a064d2609ba2eba6bbbe872ed62f678526695e000bfe9",
+      "receiptPath": "measurements/halibut-framing-play-b.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "36ce2a88-e498-4cf2-9e3a-298cc60c134a",
+      "startedAt": "2026-11-25T04:09:43.329Z",
+      "executable": "python3",
+      "commandDigest": "c008d0d40dc14bdee2691fa65e7016dd49619274791e31c39d4e485095fb455f",
+      "receiptPath": "measurements/halibut-framing-play-c.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "c9d530ed-546a-4fae-ae86-29b86346cf03",
+      "startedAt": "2026-11-25T04:11:08.814Z",
+      "executable": "python3",
+      "commandDigest": "5b947fe8005ffa003fbe82d0b08b3bf22677d153c9b2f90971802b433cdea900",
+      "receiptPath": "measurements/halibut-encounter-saves-phase1-after.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "lint",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "cc392964-5142-440c-8149-79e8d31c3d97",
+      "startedAt": "2026-11-25T04:11:48.496Z",
+      "executable": "python3",
+      "commandDigest": "1b9b750d007c851f920bb86ccb95b6c8d0649e1d11d26d4708a2736b0478955e",
+      "receiptPath": "measurements/halibut-framing-source-validation.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "lint",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "880e2984-7803-4762-83b5-b62792cbdac5",
+      "startedAt": "2026-11-25T04:12:15.652Z",
+      "executable": "python3",
+      "commandDigest": "d89602c770c16a35b6c5da9a9da4ae967807390aa462f4349604d0463de12f51",
+      "receiptPath": "measurements/halibut-framing-source-publication.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "lint",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "996f1a1c-3428-430c-b2c3-5fc2a3dc7cbc",
+      "startedAt": "2026-11-25T04:12:44.533Z",
+      "executable": "git",
+      "commandDigest": "649f53e7041a0b5c99ff047535ad9586b7fba05cfe2a0f1e912953eca74dd065",
+      "receiptPath": "measurements/halibut-framing-source-diff.json"
     }
   ],
   "runMeasurements": [
@@ -38317,6 +38468,253 @@
       "receipt": {
         "path": "measurements/halibut-mouth-final-records.json",
         "sha256": "6f1ed62e3a0b79d9af265e900466448be2bc93635f1a421296c2e3a553593bae"
+      }
+    },
+    {
+      "id": "d7459c87-fae5-4361-b4c1-e248943ed2b6",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "6de69e33a4e30f5dfefa7bf410f5b3ea769980828ac385faf31b2d148106230c",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T03:54:04.360Z",
+      "finishedAt": "2026-11-25T03:54:05.940Z",
+      "durationMs": 1531.848333,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-encounter-saves-before.json",
+        "sha256": "8a213ccbb4a8e21f6836b0d2633667c9933138cb096f409fc6d204da8e7c5126"
+      }
+    },
+    {
+      "id": "5f889921-be7c-41c3-826c-ee68ca176f54",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "6c5d646ccb84627282c02a188d846fc1bef00563a29d263c9c6d323b27f29d5a",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T03:54:38.989Z",
+      "finishedAt": "2026-11-25T03:55:19.456Z",
+      "durationMs": 40409.619083,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-encounter-phone-01.json",
+        "sha256": "d9eaab6cf3b3bab2c60cdcae7d7d65cace695f6ed991a481b5cf1e7ec2073dab"
+      }
+    },
+    {
+      "id": "01921467-7a74-4119-98e8-513a00d5eb84",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "f30be9ef4c14d1d121b5ce6551e24daf3dac885875d5fea22bac1131184f1a8d",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T03:55:45.070Z",
+      "finishedAt": "2026-11-25T03:56:24.460Z",
+      "durationMs": 39348.922916999996,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-encounter-phone-02.json",
+        "sha256": "e8dc26a8bff08fae9b099d82878cbe4c2af580aee2e45705b49f38507cf152eb"
+      }
+    },
+    {
+      "id": "82ff1edc-611c-4ae6-8974-b2bdf7c98371",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "bb37077a5f2f2f14b38bf3769a47d97f61f86d9218444a536050b9f98c4b2109",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T03:57:05.538Z",
+      "finishedAt": "2026-11-25T03:57:43.116Z",
+      "durationMs": 37540.997125,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-encounter-phone-03.json",
+        "sha256": "080187866567b54a60602eef4ac3ad280720e96e0fea5ae25a066fa7d95d2475"
+      }
+    },
+    {
+      "id": "fe75d680-113e-4b10-8b09-be703022349a",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "24811a1cbefbc5704a87ec86e8b765bfa3906c57b87f2e543590917d9826a50a",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T03:58:05.991Z",
+      "finishedAt": "2026-11-25T03:58:13.277Z",
+      "durationMs": 7230.023583,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-encounter-phone-verify-03.json",
+        "sha256": "3d9c81d0c80ededc66ba5ef07cefdade1025137ad26154d136a77b9c203e5838"
+      }
+    },
+    {
+      "id": "41a0fbf1-69c3-46a6-9e13-b6b24f8ff40a",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "abdc80667bb4680bda30e7e01caea4fd6c8acfc040327578306d5d026cc75664",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T04:01:56.753Z",
+      "finishedAt": "2026-11-25T04:02:08.789Z",
+      "durationMs": 11974.999167,
+      "exitCode": 2,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-framing-controlled-red.json",
+        "sha256": "87bb166c2fbc69b84ff918fc1269b500a2aa99f769b8f0851eb3766eb8516cae"
+      }
+    },
+    {
+      "id": "b512c6be-d59a-4e04-b0a6-f33b2bd001ab",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "65f89c1affc195937a33278a6f0cbab54ab68c0215ac7cbf1f0a75c46f955d8c",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T04:03:55.132Z",
+      "finishedAt": "2026-11-25T04:04:54.778Z",
+      "durationMs": 59609.760125,
+      "exitCode": 2,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-framing-play-a.json",
+        "sha256": "2fbdf6cedc1af1ec395b009419c3e9a407971a8cebba037c84daed36082c5b9a"
+      }
+    },
+    {
+      "id": "f7c7e1ab-594f-4107-8d1b-2ec24c494606",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "e55a718d26ae2828c93a064d2609ba2eba6bbbe872ed62f678526695e000bfe9",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T04:05:39.458Z",
+      "finishedAt": "2026-11-25T04:06:34.538Z",
+      "durationMs": 55046.426374999995,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-framing-play-b.json",
+        "sha256": "39c9358ed3d0e3fdd3ab43183d768c52412c4314ab8b765c9336b31298053a5e"
+      }
+    },
+    {
+      "id": "36ce2a88-e498-4cf2-9e3a-298cc60c134a",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "c008d0d40dc14bdee2691fa65e7016dd49619274791e31c39d4e485095fb455f",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T04:09:43.329Z",
+      "finishedAt": "2026-11-25T04:10:36.669Z",
+      "durationMs": 53313.067,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-framing-play-c.json",
+        "sha256": "56641f6e221bf37074e1bf7d29088192b016f4b1bbd73487c1acc8a5fe0a590e"
+      }
+    },
+    {
+      "id": "c9d530ed-546a-4fae-ae86-29b86346cf03",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "5b947fe8005ffa003fbe82d0b08b3bf22677d153c9b2f90971802b433cdea900",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T04:11:08.814Z",
+      "finishedAt": "2026-11-25T04:11:09.352Z",
+      "durationMs": 512.609375,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-encounter-saves-phase1-after.json",
+        "sha256": "af4fb1ad376a0eabb97a7fe082e1fd0d000292a4e84a30354a03bb5a3399baab"
+      }
+    },
+    {
+      "id": "cc392964-5142-440c-8149-79e8d31c3d97",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "1b9b750d007c851f920bb86ccb95b6c8d0649e1d11d26d4708a2736b0478955e",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-25T04:11:48.496Z",
+      "finishedAt": "2026-11-25T04:11:49.175Z",
+      "durationMs": 650.58575,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-framing-source-validation.json",
+        "sha256": "386c5928ca5e68bdb45f61814cdbdf68e57fd09501af02a9078a8fcfdae2f6e3"
+      }
+    },
+    {
+      "id": "880e2984-7803-4762-83b5-b62792cbdac5",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d89602c770c16a35b6c5da9a9da4ae967807390aa462f4349604d0463de12f51",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-25T04:12:15.652Z",
+      "finishedAt": "2026-11-25T04:12:16.287Z",
+      "durationMs": 607.3842080000001,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-framing-source-publication.json",
+        "sha256": "879cd3c0078428722cd14327974d9c8d669ccf550291ffd787b0568d42a43df2"
+      }
+    },
+    {
+      "id": "996f1a1c-3428-430c-b2c3-5fc2a3dc7cbc",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "649f53e7041a0b5c99ff047535ad9586b7fba05cfe2a0f1e912953eca74dd065",
+      "category": "lint",
+      "executable": "git",
+      "startedAt": "2026-11-25T04:12:44.533Z",
+      "finishedAt": "2026-11-25T04:12:44.590Z",
+      "durationMs": 30.08812499999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/halibut-framing-source-diff.json",
+        "sha256": "a47a5833ac15753825ab342ef602925361532903987161437409c6f1c32b0730"
       }
     }
   ]

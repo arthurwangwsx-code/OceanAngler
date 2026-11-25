@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "5f889921-be7c-41c3-826c-ee68ca176f54",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "6c5d646ccb84627282c02a188d846fc1bef00563a29d263c9c6d323b27f29d5a",
+    "category": "e2e",
+    "executable": "python3",
+    "startedAt": "2026-11-25T03:54:38.989Z",
+    "finishedAt": "2026-11-25T03:55:19.456Z",
+    "durationMs": 40409.619083,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/halibut-encounter-qa/record-and-run.py",
+      "halibutencphone01",
+      "--device",
+      "phone"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/halibut-encounter-qa/record-and-run.py",
+    "halibutencphone01",
+    "--device",
+    "phone"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T03:54:38.989Z",
+  "finishedAt": "2026-11-25T03:55:19.456Z",
+  "durationMs": 40409.619083
+}

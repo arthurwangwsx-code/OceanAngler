@@ -3130,6 +3130,29 @@
         }
       ],
       "note": "Own game UI/rendered assets and project QA game progress only. Same new app on both owned Simulators; not personal media, new growth, native halibut catch, OS touch, physical or A1-A3 acceptance."
+    },
+    {
+      "id": "halibut-framing-before-native",
+      "author": "OceanAngler contributors",
+      "source": "Own native Simulator app 88c6879 / 7dc15a24; normal RNG halibutencphone03",
+      "license": "MIT",
+      "redistribution": true,
+      "status": "VISUAL_REJECTED_FRAMING",
+      "artifacts": [
+        {
+          "path": "art/previews/halibut-framing-before/phone-slope-fighting.png",
+          "sha256": "4a9d9923911e422792b08632b22f4a51699fc4a36aaf77ad85ae8026f3d6c506"
+        },
+        {
+          "path": "art/previews/halibut-framing-before/phone-slope-landed.png",
+          "sha256": "dd3ef205d55404dd216061176a1a0602a5e22f29f6c8be9035f8ec2fc083abfe"
+        },
+        {
+          "path": "art/previews/halibut-framing-before/phone-slope-release.png",
+          "sha256": "dbeb65cfbc6df53a80ad678125fa763b1ccb93a25ef7dfb01b1aeea254dcb4bd"
+        }
+      ],
+      "note": "Own project gameplay frames, no personal media. Captured normal halibut encounter; distant eye-level view obscures flatfish silhouette. Retained as failed visual baseline, not art acceptance."
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."

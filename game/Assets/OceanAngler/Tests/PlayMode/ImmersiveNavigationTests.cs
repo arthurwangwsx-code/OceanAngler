@@ -11,8 +11,30 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 namespace OceanAngler.Tests
 {
+    public sealed class UiUpdateDispatchProbe : MonoBehaviour
+    {
+        public int updates;
+        void Update(){updates++;}
+    }
     public sealed class ImmersiveNavigationTests
     {
+        static void UpdateUiOnly(GameUI ui)
+        {
+            // Component.SendMessage broadcasts to every behaviour on the same
+            // object, including a disabled controller. Invoke just this UI.
+            typeof(GameUI).GetMethod("Update",System.Reflection.BindingFlags.Instance|System.Reflection.BindingFlags.NonPublic).Invoke(ui,null);
+        }
+        [Test] public void UiRefreshAvoidsSendMessageBroadcastToDisabledBehaviours()
+        {
+            var root=new GameObject("UiDispatchFixture");
+            try
+            {
+                var ui=root.AddComponent<GameUI>();var probe=root.AddComponent<UiUpdateDispatchProbe>();probe.enabled=false;
+                ui.SendMessage("Update");Assert.That(probe.updates,Is.EqualTo(1),"A disabled sibling still receives SendMessage");
+                UpdateUiOnly(ui);Assert.That(probe.updates,Is.EqualTo(1),"Targeted UI update must not broadcast");
+            }
+            finally{UnityEngine.Object.DestroyImmediate(root);}
+        }
         [Serializable] sealed class Result { public string status;public string[] failures;public int catchesBefore,catchesAfter;public bool unfinishedExitPreservedLedger,settingsRestored; }
         [Serializable] sealed class MeterResult { public string status,scope;public bool injectedFocusLoss,saveBytesUnchanged;public int hands,valuesPerHand,labelChecks,focusPauses,explicitResumes; }
         Scene scene;GameController game;string root,archive;readonly Dictionary<string,string> originals=new Dictionary<string,string>();
@@ -52,7 +74,7 @@ namespace OceanAngler.Tests
                     if(injectFocusLoss)
                     {
                         game.HoldReel(true);Assert.That(game.Reeling,Is.True);
-                        game.SendMessage("OnApplicationFocus",false);ui.SendMessage("Update");
+                        game.SendMessage("OnApplicationFocus",false);UpdateUiOnly(ui);
                         Assert.That(game.Session.Paused,Is.True);Assert.That(game.Reeling||ui.Playing,Is.False);
                         Assert.That(UnityEngine.Object.FindObjectsByType<HudFootprint>(FindObjectsSortMode.None).Any(m=>m.name=="FightHUD"),Is.False,"Paused menus must not leave a live fighting meter");
                         yield return null;yield return null;
@@ -60,7 +82,7 @@ namespace OceanAngler.Tests
                     }
                     if(game.Session.Paused)
                     {
-                        ui.SendMessage("Update");yield return RestTap("继续探索");result.explicitResumes++;
+                        UpdateUiOnly(ui);yield return RestTap("继续探索");result.explicitResumes++;
                     }
                     Assert.That(game.Session.Phase,Is.EqualTo(FishingPhase.Fighting));Assert.That(ui.Playing,Is.True,"Use the real visible continue action before checking live meters");
                     Assert.That(game.Session.Paused||game.Reeling,Is.False,"Continue must require a fresh reel press instead of replaying the old hold");
@@ -70,7 +92,7 @@ namespace OceanAngler.Tests
                         // fishing model or save synthetic progress/tension values.
                         for(int value=0;value<=100;value++)
                         {
-                            progress.SetValue(game.Session,value/100f);tension.SetValue(game.Session,value/100f);ui.SendMessage("Update");Canvas.ForceUpdateCanvases();
+                            progress.SetValue(game.Session,value/100f);tension.SetValue(game.Session,value/100f);UpdateUiOnly(ui);Canvas.ForceUpdateCanvases();
                             foreach(string field in new[]{"tensionText","progressText"})
                             {
                                 var text=(Text)typeof(GameUI).GetField(field,flags).GetValue(ui);string label=field+" value="+value+" left="+left;
@@ -80,11 +102,11 @@ namespace OceanAngler.Tests
                             }
                         }
                     }
-                    finally{progress.SetValue(game.Session,originalProgress);tension.SetValue(game.Session,originalTension);ui.SendMessage("Update");}
+                    finally{progress.SetValue(game.Session,originalProgress);tension.SetValue(game.Session,originalTension);UpdateUiOnly(ui);}
                     CollectionAssert.AreEqual(saved,File.ReadAllBytes(Path.Combine(root,"ocean-progress.json")),"Focus/resume and boundary values must not rewrite the save");result.hands++;
                 }
             }
-            finally{progress.SetValue(game.Session,originalProgress);tension.SetValue(game.Session,originalTension);game.enabled=enabled;ui.SendMessage("Update");}
+            finally{progress.SetValue(game.Session,originalProgress);tension.SetValue(game.Session,originalTension);game.enabled=enabled;UpdateUiOnly(ui);}
             result.status="PASS";result.saveBytesUnchanged=true;File.WriteAllText(Path.Combine(archive,"meter-values.json"),JsonUtility.ToJson(result,true));
         }
         [UnityTest,Timeout(240000)] public IEnumerator MinimalHudAndHierarchicalMenusPreserveFishingAndPersistOnlyRecordedFish()
