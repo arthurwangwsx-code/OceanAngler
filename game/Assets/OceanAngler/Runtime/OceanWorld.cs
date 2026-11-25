@@ -51,6 +51,7 @@ namespace OceanAngler
             else{fishRoot=new GameObject("Fish-"+id).transform;var prototype=fishRoot.gameObject.AddComponent<FishModel>();prototype.Initialize(game.Content.Fish(id));fish=prototype;}
             fishId=id;
             fishHookLocal=fishRoot.InverseTransformPoint(fish.HookPosition);
+            CacheJournalGeometryBounds();
         }
         void BeginRelease(CatchRecord caught)
         {
@@ -90,6 +91,7 @@ namespace OceanAngler
             if(!ui.InspectingGear)PoseFishingGear(data.settings.leftHanded);
             var pose=FishingEncounter.Evaluate(game.Session.Phase,game.Session.PhaseProgress,game.Session.CastPower,fishHookLocal,gear.CastOrigin,ui.Compact?(data.settings.leftHanded?1.3f:-1.3f):0,time,reduced,activeHabitat.SeaLevel);
             fishRoot.position=journal?new Vector3(ui.CompactViewer?-1.3f:2.35f,ui.CompactViewer?.7f:1.35f,1.2f):pose.fishPosition;
+            if(journal)journalReferencePosition=fishRoot.position;
             fishRoot.localScale=Vector3.one*(journal?ui.ModelZoom:1);
             fishRoot.rotation=journal?Quaternion.Euler(0,-25+ui.ModelYaw,-3):pose.fishRotation;
             // Turn the flatfish toward the journal viewer. Existing yaw controls

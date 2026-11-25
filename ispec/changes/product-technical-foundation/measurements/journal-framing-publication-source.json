@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "c7f830b1-3a7c-4a7c-bea5-b4042cc6c54e",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "d89602c770c16a35b6c5da9a9da4ae967807390aa462f4349604d0463de12f51",
+    "category": "lint",
+    "executable": "python3",
+    "startedAt": "2026-11-25T06:49:34.747Z",
+    "finishedAt": "2026-11-25T06:49:35.422Z",
+    "durationMs": 645.9430830000001,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      "tools/publication_audit.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    "tools/publication_audit.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T06:49:34.747Z",
+  "finishedAt": "2026-11-25T06:49:35.422Z",
+  "durationMs": 645.9430830000001
+}

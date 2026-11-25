@@ -6,6 +6,20 @@ namespace OceanAngler
 {
     public sealed partial class GameUI
     {
+        RectTransform journalModelViewport;
+        readonly Vector3[] journalCorners=new Vector3[4];
+        void BuildJournalModelViewport(float left,float top,float width,float bottom)
+        {
+            journalModelViewport=FixedBox(pageRoot,"JournalModelViewport",Color.clear,left,top,width,Mathf.Max(0,bottom-top));
+        }
+        public bool TryJournalModelRect(out Rect pixels)
+        {
+            pixels=default;
+            if(journalModelViewport==null||!journalModelViewport.gameObject.activeInHierarchy)return false;
+            journalModelViewport.GetWorldCorners(journalCorners);
+            var min=RectTransformUtility.WorldToScreenPoint(null,journalCorners[0]);var max=RectTransformUtility.WorldToScreenPoint(null,journalCorners[2]);
+            pixels=Rect.MinMaxRect(min.x,min.y,max.x,max.y);return pixels.width>0&&pixels.height>0;
+        }
         void BuildFishDetails(RectTransform panel,FishDefinition target)
         {
             var viewport=Box(panel,"SpeciesViewport",Color.clear,Vector2.zero,Vector2.one,new Vector2(0,30),Vector2.zero);

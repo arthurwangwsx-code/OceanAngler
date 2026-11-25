@@ -1,0 +1,31 @@
+{
+  "implementation": "IN_PROGRESS",
+  "acceptance": "PARTIAL_NATIVE_NOT_RUN",
+  "source": {
+    "status": "PASS_TARGETED_HEADLESS_UI_AND_GEOMETRY",
+    "oldHead": "29300aab628ea063574c1641e664a85b5af52a1c",
+    "otherOldSourceFilesExact": 605,
+    "allSourceArtModelsMapsAnimationsAndOtherRuntimePreserved": true,
+    "play": 10,
+    "actualSamples": 1728,
+    "species": 12,
+    "zooms": [
+      0.7,
+      1,
+      1.5
+    ],
+    "rotations": 12,
+    "controlledSwimPhases": 4,
+    "oldFailureVertices": 23,
+    "cacheAndRootStable": true,
+    "zoomActuallyChangesScreenSize": true,
+    "saveByteExact": true,
+    "scope": "Headless explicit presentation-phase and controlled mesh samples, not native/OS touch/science/final art/physical qualification"
+  },
+  "native": {
+    "status": "NOT_RUN"
+  },
+  "fullProduct": "PARTIAL_NOT_COMPLETE",
+  "scienceUserChildPhysicalFinalArt": "NOT_QUALIFIED",
+  "testflight": "NOT_CHANGED_THIS_TURN"
+}

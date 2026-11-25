@@ -185,6 +185,7 @@ namespace OceanAngler
             ObservationEntry(panel,72);
             BuildFishCards(panel,Width*.58f,2,126);
             BuildJournalControls(Width*.63f,Height*.52f-50,Width*.35f);
+            BuildJournalModelViewport(Width*.63f,154,Width*.35f,Height*.52f-62);
             var detail=Box(pageRoot,"FishDetails",Panel,new Vector2(.63f,.12f),new Vector2(.98f,.48f),Vector2.zero,Vector2.zero);
             BuildFishDetails(detail,game.Content.Fish(selectedFish??game.Content.fish[0].id));
         }

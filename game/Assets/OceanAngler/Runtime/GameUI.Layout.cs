@@ -72,6 +72,7 @@ namespace OceanAngler
             var detail=Box(pageRoot,"Details",Panel,new Vector2(1,0),Vector2.one,new Vector2(-width-12,36),new Vector2(-12,-102));
             BuildFishDetails(detail,target);
             BuildJournalControls(12,Height-86,Width-width-42);
+            BuildJournalModelViewport(12,158,Width-width-42,Height-98);
         }
     }
 }

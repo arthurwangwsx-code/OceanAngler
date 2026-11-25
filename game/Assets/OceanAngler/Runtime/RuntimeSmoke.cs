@@ -24,7 +24,7 @@ namespace OceanAngler
             int immersive=Array.IndexOf(args,"--ocean-immersive-review");
             if(immersive>=0&&immersive+1<args.Length){yield return RunImmersiveReview(args[immersive+1],true,true);yield break;}
             int gearReview=Array.IndexOf(args,"--ocean-gear-review");
-            if(gearReview>=0&&gearReview+1<args.Length){yield return RunGearReview(args[gearReview+1],true,true,Array.IndexOf(args,"--ocean-fin-motion-review")>=0);yield break;}
+            if(gearReview>=0&&gearReview+1<args.Length){yield return RunGearReview(args[gearReview+1],true,true,Array.IndexOf(args,"--ocean-fin-motion-review")>=0,Array.IndexOf(args,"--ocean-journal-framing-review")>=0);yield break;}
             int content=Array.IndexOf(args,"--ocean-content-journey");
             if(content>=0&&content+1<args.Length){yield return RunJourney20(args[content+1],true,true,true);yield break;}
             int journey=Array.IndexOf(args,"--ocean-journey20");
