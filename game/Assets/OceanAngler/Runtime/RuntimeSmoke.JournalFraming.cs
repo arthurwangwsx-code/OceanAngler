@@ -17,9 +17,17 @@ namespace OceanAngler
         [Serializable] sealed class JournalFramingResult
         {
             public string status="PASS",scope="Actual native journal UI/model geometric clearance at 12 species, zoom limits and quarter rotations; two authored fish have extra natural motion samples. Not OS touch, all animation actions, art/science or physical qualification";
-            public bool modelControlsPreserveSave;public List<JournalFrameSample> samples;
+            public bool modelControlsPreserveSave,returnedToFishing;public Vector3 returnedScale;public bool returnedSurfaceCamera,returnedHudCentralClear;public int returnedHudButtons;public float returnedHudRatio;public List<JournalFrameSample> samples;
         }
         readonly List<JournalFrameSample> journalFramingSamples=new List<JournalFrameSample>();
+        [Serializable] public sealed class JournalStabilitySample
+        {
+            public int countBefore,countAfter;public Vector3 positionBefore,positionAfter,scaleBefore,scaleAfter;
+            public OceanWorld.JournalFitState inputsBefore,inputsAfter;
+        }
+        public static JournalStabilitySample BeginJournalStability(OceanWorld world)=>new JournalStabilitySample{countBefore=world.JournalFitCalculations,positionBefore=world.TargetFish.transform.position,scaleBefore=world.TargetFish.transform.localScale,inputsBefore=world.CurrentJournalFit};
+        public static void EndJournalStability(OceanWorld world,JournalStabilitySample sample)
+        {sample.countAfter=world.JournalFitCalculations;sample.positionAfter=world.TargetFish.transform.position;sample.scaleAfter=world.TargetFish.transform.localScale;sample.inputsAfter=world.CurrentJournalFit;}
         IEnumerator ReviewJournalFraming(string fishId,string saveFile)
         {
             JourneyRequire(Debug.isDebugBuild,"framing-review-development-only");
@@ -35,11 +43,12 @@ namespace OceanAngler
                     JourneyRequire(sample.outside==0&&sample.behindCamera==0&&sample.vertices>100,"journal-framing-clear-"+fishId+"-"+zoom+"-"+turn);
                     if(authored)
                     {
-                        int count=world.JournalFitCalculations;var position=world.TargetFish.transform.position;var scale=world.TargetFish.transform.localScale;
+                        var stability=BeginJournalStability(world);
                         yield return new WaitForSecondsRealtime(.16f);if(receipt.captureEnabled)yield return new WaitForEndOfFrame();else world.SendMessage("LateUpdate",SendMessageOptions.DontRequireReceiver);
                         sample=ProbeJournalFrame(ui,world.TargetFish,Camera.main);journalFramingSamples.Add(sample);
+                        EndJournalStability(world,stability);File.WriteAllText(Path.Combine(folder,"journal-stability-last.json"),JsonUtility.ToJson(stability,true));
                         JourneyRequire(sample.outside==0&&sample.behindCamera==0,"journal-framing-moving-clear-"+fishId);
-                        JourneyRequire(world.JournalFitCalculations==count&&Vector3.Distance(position,world.TargetFish.transform.position)<.00001f&&Vector3.Distance(scale,world.TargetFish.transform.localScale)<.00001f,"journal-framing-stable-during-motion-"+fishId);
+                        JourneyRequire(stability.countAfter==stability.countBefore&&Vector3.Distance(stability.positionBefore,stability.positionAfter)<.00001f&&Vector3.Distance(stability.scaleBefore,stability.scaleAfter)<.00001f,"journal-framing-stable-during-motion-"+fishId);
                         if(turn==0||turn==1&&zoom>1.4f)yield return JourneyFrame("journal-"+fishId+"-zoom"+Mathf.RoundToInt(zoom*100)+"-turn"+turn);
                     }
                     for(int i=0;i<3;i++)yield return JourneyClick("旋转");
@@ -47,6 +56,16 @@ namespace OceanAngler
             }
             yield return JourneyClick("重置");JourneyRequire(before.SequenceEqual(File.ReadAllBytes(saveFile)),"journal-framing-controls-preserve-save-"+fishId);
             File.WriteAllText(Path.Combine(folder,"journal-framing.json"),JsonUtility.ToJson(new JournalFramingResult{modelControlsPreserveSave=true,samples=journalFramingSamples},true));
+        }
+        IEnumerator ReviewJournalReturn()
+        {
+            var ui=GetComponent<GameUI>();var world=GetComponent<OceanWorld>();yield return JourneyClick("出海",true);yield return null;yield return null;
+            JourneyRequire(game.Session.Paused&&!ui.Playing,"journal-return-keeps-explicit-pause");yield return JourneyClick("继续探索",true);yield return null;yield return null;
+            bool surface=!game.Progress.Data.settings.underwaterOnly&&!game.Progress.Data.settings.reducedMotion;
+            JourneyRequire(ui.FocusedFish==null&&ui.Playing&&!game.Reeling&&game.Session.Phase==FishingPhase.Ready&&Vector3.Distance(world.TargetFish.transform.localScale,Vector3.one)<.00001f,"journal-return-normal-playing-scale-and-fresh-input");
+            JourneyRequire(world.FishingSurfaceView==surface&&(surface?Camera.main.transform.position.y>world.ActiveHabitat.SeaLevel:Camera.main.transform.position.y<world.ActiveHabitat.SeaLevel),"journal-return-actual-fishing-camera");
+            CheckImmersiveHud();yield return JourneyFrame("journal-back-to-fishing");
+            var hud=hudSamples.Last();File.WriteAllText(Path.Combine(folder,"journal-framing.json"),JsonUtility.ToJson(new JournalFramingResult{modelControlsPreserveSave=true,returnedToFishing=true,returnedScale=world.TargetFish.transform.localScale,returnedSurfaceCamera=world.FishingSurfaceView,returnedHudCentralClear=hud.centralClear,returnedHudButtons=hud.buttons,returnedHudRatio=hud.occupiedRatio,samples=journalFramingSamples},true));game.Pause(true);
         }
         // Deliberately derives the empty region from real controls, not the
         // production preview marker or its framing solver. QA only.

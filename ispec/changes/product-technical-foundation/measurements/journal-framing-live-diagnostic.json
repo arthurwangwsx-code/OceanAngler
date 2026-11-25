@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "974e221c-84e6-4f84-a0da-104bb327cefb",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "409d4e3866da85b11b9cedd19e43f42de539cab66fc9b82884cf5626d74d5199",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-25T06:56:36.186Z",
+    "finishedAt": "2026-11-25T06:56:53.762Z",
+    "durationMs": 17536.529708000002,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      "tools/game.py",
+      "tests",
+      "--test-platform",
+      "PlayMode",
+      "--test-filter",
+      "JournalFramingTests",
+      "--label",
+      "journalframinglive"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    "tools/game.py",
+    "tests",
+    "--test-platform",
+    "PlayMode",
+    "--test-filter",
+    "JournalFramingTests",
+    "--label",
+    "journalframinglive"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T06:56:36.186Z",
+  "finishedAt": "2026-11-25T06:56:53.762Z",
+  "durationMs": 17536.529708000002
+}

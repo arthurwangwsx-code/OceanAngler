@@ -83,6 +83,7 @@ namespace OceanAngler
                 }
                 if(journalFramingReview)yield return ReviewJournalFraming(fish.id,saveFile);
             }
+            if(journalFramingReview)yield return ReviewJournalReturn();
             var after=game.Progress.Data;
             JourneyRequire(after.totalPoints==before.totalPoints&&after.catches.Select(JsonUtility.ToJson).SequenceEqual(before.catches.Select(JsonUtility.ToJson))&&after.observations.SequenceEqual(before.observations)&&after.habitatId==before.habitatId&&after.tutorialComplete==before.tutorialComplete&&JsonUtility.ToJson(after.settings)==JsonUtility.ToJson(before.settings),"gear-review-preserves-progress-and-settings");
             receipt.pixelsPerPoint=DisplayMetrics.PixelsPerPoint;receipt.safeWidthPoints=DisplayMetrics.SafeArea.width/DisplayMetrics.PixelsPerPoint;receipt.safeHeightPoints=DisplayMetrics.SafeArea.height/DisplayMetrics.PixelsPerPoint;

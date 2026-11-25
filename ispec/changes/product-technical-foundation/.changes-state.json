@@ -16404,6 +16404,61 @@
       "executable": "python3",
       "commandDigest": "d89602c770c16a35b6c5da9a9da4ae967807390aa462f4349604d0463de12f51",
       "receiptPath": "measurements/journal-framing-publication-source.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "1010657c-a560-40fa-989d-a282fddbf33b",
+      "startedAt": "2026-11-25T06:50:00.259Z",
+      "executable": "python3",
+      "commandDigest": "fc98ff9d6899ba419b9199979c4042ca485067f49e9c068da12fdad8663ebf4b",
+      "receiptPath": "measurements/journal-framing-saves-before.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "3e1c8c71-1bd4-4502-a568-42634806d663",
+      "startedAt": "2026-11-25T06:50:08.956Z",
+      "executable": "python3",
+      "commandDigest": "170126ce90732677de702ccf3c0f88eeff1c3221d996067d3b1008b184735eb0",
+      "receiptPath": "measurements/journal-framing-native-build.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "e4be7781-99d1-4285-82eb-8b620f91da70",
+      "startedAt": "2026-11-25T06:52:28.916Z",
+      "executable": "python3",
+      "commandDigest": "a2c89a70829a7d6c3b8f2ca4e6c0e145ff63949a9e9261ceae8b7a36fe8329a6",
+      "receiptPath": "measurements/journal-framing-native-phone.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "974e221c-84e6-4f84-a0da-104bb327cefb",
+      "startedAt": "2026-11-25T06:56:36.186Z",
+      "executable": "python3",
+      "commandDigest": "409d4e3866da85b11b9cedd19e43f42de539cab66fc9b82884cf5626d74d5199",
+      "receiptPath": "measurements/journal-framing-live-diagnostic.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "cc561793-95e0-4af7-955f-573d20e97290",
+      "startedAt": "2026-11-25T06:59:25.973Z",
+      "executable": "python3",
+      "commandDigest": "82c1216912c31b96ee3dc6422c0f1f5670a3b248c892b952340f06cabdb449ea",
+      "receiptPath": "measurements/journal-framing-telemetry-compile.json"
     }
   ],
   "runMeasurements": [
@@ -41919,6 +41974,101 @@
       "receipt": {
         "path": "measurements/journal-framing-publication-source.json",
         "sha256": "b33da3fceb43c477af5a4d489ce2c5d6014d8de61ae3a8a3a11046766d5f0a80"
+      }
+    },
+    {
+      "id": "1010657c-a560-40fa-989d-a282fddbf33b",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "fc98ff9d6899ba419b9199979c4042ca485067f49e9c068da12fdad8663ebf4b",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T06:50:00.259Z",
+      "finishedAt": "2026-11-25T06:50:00.884Z",
+      "durationMs": 592.93975,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/journal-framing-saves-before.json",
+        "sha256": "cb47a881a4fdd4c33f85d78142ea323c317161c33789ca286988716cbd50c6aa"
+      }
+    },
+    {
+      "id": "3e1c8c71-1bd4-4502-a568-42634806d663",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "170126ce90732677de702ccf3c0f88eeff1c3221d996067d3b1008b184735eb0",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T06:50:08.956Z",
+      "finishedAt": "2026-11-25T06:51:45.155Z",
+      "durationMs": 96172.719792,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/journal-framing-native-build.json",
+        "sha256": "6509fd6e8c484c29e366cd2b48cdddecce5d3bae0ae7620f7b0b599533a9447e"
+      }
+    },
+    {
+      "id": "e4be7781-99d1-4285-82eb-8b620f91da70",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "a2c89a70829a7d6c3b8f2ca4e6c0e145ff63949a9e9261ceae8b7a36fe8329a6",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T06:52:28.916Z",
+      "finishedAt": "2026-11-25T06:52:44.894Z",
+      "durationMs": 15955.308125000001,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/journal-framing-native-phone.json",
+        "sha256": "ed32638658574911ba4bb8ec8b17aa393935893cfcf886722c60d32c66ff643c"
+      }
+    },
+    {
+      "id": "974e221c-84e6-4f84-a0da-104bb327cefb",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "409d4e3866da85b11b9cedd19e43f42de539cab66fc9b82884cf5626d74d5199",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T06:56:36.186Z",
+      "finishedAt": "2026-11-25T06:56:53.762Z",
+      "durationMs": 17536.529708000002,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/journal-framing-live-diagnostic.json",
+        "sha256": "3396bdc732f0cd487c6b5acab372096875a7061ea6fc0912e5abc6e8b53be7a0"
+      }
+    },
+    {
+      "id": "cc561793-95e0-4af7-955f-573d20e97290",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "82c1216912c31b96ee3dc6422c0f1f5670a3b248c892b952340f06cabdb449ea",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T06:59:25.973Z",
+      "finishedAt": "2026-11-25T06:59:43.123Z",
+      "durationMs": 17097.164125,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/journal-framing-telemetry-compile.json",
+        "sha256": "13df64a6adb0e32d6398173137ba428f671df3ad7307ef331b8fddac7853fce9"
       }
     }
   ]

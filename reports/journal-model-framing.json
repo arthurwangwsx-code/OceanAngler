@@ -23,7 +23,11 @@
     "scope": "Headless explicit presentation-phase and controlled mesh samples, not native/OS touch/science/final art/physical qualification"
   },
   "native": {
-    "status": "NOT_RUN"
+    "status": "FAIL_PHONE_A_CACHE_STABILITY",
+    "sourceCommit": "7244c45fc95dd2bb14854af8bbf6f819824040ef",
+    "appDigest": "118bd18488ffc26baa4ca90f08c8f933fee32ebe4e4979c1f982c859d2383ed7",
+    "checksReached": "trevally .7 zoom; mesh clearance passed, cache/root stability failed; more input telemetry added before retry",
+    "capturedFrames": 6
   },
   "fullProduct": "PARTIAL_NOT_COMPLETE",
   "scienceUserChildPhysicalFinalArt": "NOT_QUALIFIED",

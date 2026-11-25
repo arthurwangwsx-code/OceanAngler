@@ -10,6 +10,9 @@ namespace OceanAngler
         float journalLastZoom,journalLastDepth,journalFitScale;Vector3 journalFitPosition;
         Vector3 journalReferencePosition;
         public int JournalFitCalculations {get;private set;}
+        [System.Serializable] public struct JournalFitState
+        {public Matrix4x4 camera;public Rect area;public Quaternion rotation;public float zoom,depth;}
+        public JournalFitState CurrentJournalFit=>new JournalFitState{camera=journalLastCamera,area=journalLastRect,rotation=journalLastRotation,zoom=journalLastZoom,depth=journalLastDepth};
         void CacheJournalGeometryBounds()
         {
             bool first=true;

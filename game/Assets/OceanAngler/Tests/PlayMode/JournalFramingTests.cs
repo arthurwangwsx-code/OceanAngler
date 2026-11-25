@@ -69,6 +69,17 @@ namespace OceanAngler.Tests
                     var samples=result.samples.Where(s=>s.fishId==id).ToArray();float Width(float zoom)=>samples.First(s=>Mathf.Abs(s.zoom-zoom)<.01f&&Mathf.Repeat(s.yaw,360)<.01f).projected.width;
                     Assert.That(Width(1.5f),Is.GreaterThan(Width(1)*1.3f),id+" zoom must actually enlarge the model");Assert.That(Width(.7f),Is.LessThan(Width(1)*.8f));
                 }
+                yield return Tap("图鉴");yield return Tap("未发现 · "+game.Content.Fish("trevally").name);yield return Tap("重置");yield return Tap("缩小");yield return Tap("缩小");
+                var live=world.TargetFish.GetComponentInChildren<Animator>();var priorCulling=live.cullingMode;var skins=world.TargetFish.GetComponentsInChildren<SkinnedMeshRenderer>();var priorOffscreen=skins.Select(r=>r.updateWhenOffscreen).ToArray();
+                // Explicit no-graphics live-Animator fixture. Native runs keep
+                // production culling and observe the real rendered frame end.
+                live.cullingMode=AnimatorCullingMode.AlwaysAnimate;foreach(var skin in skins)skin.updateWhenOffscreen=true;
+                try
+                {
+                    yield return null;yield return null;world.SendMessage("LateUpdate");var stability=RuntimeSmoke.BeginJournalStability(world);yield return new WaitForSecondsRealtime(.16f);world.SendMessage("LateUpdate");RuntimeSmoke.EndJournalStability(world,stability);
+                    File.WriteAllText(Path.Combine(root,"journal-live-stability.json"),JsonUtility.ToJson(stability,true));Assert.That(stability.countAfter,Is.EqualTo(stability.countBefore),"Live Animator must reuse framing too");Assert.That(Vector3.Distance(stability.positionAfter,stability.positionBefore),Is.LessThan(.00001f));Assert.That(Vector3.Distance(stability.scaleAfter,stability.scaleBefore),Is.LessThan(.00001f));
+                }
+                finally{live.cullingMode=priorCulling;for(int i=0;i<skins.Length;i++)skins[i].updateWhenOffscreen=priorOffscreen[i];}
                 CollectionAssert.AreEqual(saved,File.ReadAllBytes(Path.Combine(root,"ocean-progress.json")));result.status="PASS";
             }
             finally{if(result.status=="RUNNING")result.status="FAIL";File.WriteAllText(Path.Combine(root,"journal-framing.json"),JsonUtility.ToJson(result,true));}
