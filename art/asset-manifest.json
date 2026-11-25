@@ -4130,7 +4130,7 @@
       "sourceRedistribution": true,
       "canModify": true,
       "status": "ENGINEERING_PASS_FINAL_ART_PENDING",
-      "note": "Original vertices/body/rays/maps and twelve original bone/animation curves retained; membrane-only subdivisions and four controls. Six labelled/resized contact sheets and four raw rendered originals, no retouching. Editor iOS target, forced LOD discrete poses; not native, scientific, user or final natural-art acceptance. All models remain prototype.",
+      "note": "Original vertices/body/rays/maps and twelve original bone/animation curves retained; membrane-only subdivisions and four controls. Six labelled/resized contact sheets and four raw rendered originals, no retouching. Editor iOS target, forced LOD discrete poses; not native, scientific, user or final natural-art acceptance. All models remain prototype. Current frozen2f10c4f native Simulator both production-culling journal swim/pause/resume and separate fresh normal full-content journeys/restarts verified; actual images reviewed. These are own isolated game captures, not physical-device, OS touch or final natural-art qualification.",
       "artifacts": [
         {
           "path": "art/previews/bluefin-pectoral-flex/lod0-idle-25-near-active-first.png",
@@ -4195,6 +4195,102 @@
         {
           "path": "tools/bluefin_rig_contract.py",
           "sha256": "78303e605dbc23ffc262e570f627d846b5d46b45aa0ab0fa988a1f5a638033c4"
+        },
+        {
+          "path": "art/previews/bluefin-pectoral-flex/native-flexphone20261125a-1.jpg",
+          "sha256": "a22d61d990cfc6932049a4245c6ad9dd943e456c930483f12873d73115c61d07"
+        },
+        {
+          "path": "art/previews/bluefin-pectoral-flex/native-flextablet20261125a-1.jpg",
+          "sha256": "a52c0415ca821dbe48b7f35739c2a897b1c56057abd17dd712bedbea64b24301"
+        },
+        {
+          "path": "art/previews/bluefin-pectoral-flex/native-normalflexphone20261125a-1.jpg",
+          "sha256": "a5529e1b674bd42172276b08102ca23eee8b142f7b08ede4b43a098839f7e3e8"
+        },
+        {
+          "path": "art/previews/bluefin-pectoral-flex/native-normalflexphone20261125a-2.jpg",
+          "sha256": "6adb414242f2034f707bdba3db161a2297adb4cdfeb7997e6643e4b6a0f0801d"
+        },
+        {
+          "path": "art/previews/bluefin-pectoral-flex/native-normalflexphone20261125a-3.jpg",
+          "sha256": "a93c58bae48d19cb7c5ccfd8b32d6fd712b0745562713bdfee387b2573df16a3"
+        },
+        {
+          "path": "art/previews/bluefin-pectoral-flex/native-normalflexphone20261125a-4.jpg",
+          "sha256": "78d707e04bb7e426b1719b1fcd05879ea18f286be7511393116ef4bc0b611cd9"
+        },
+        {
+          "path": "art/previews/bluefin-pectoral-flex/native-normalflexphone20261125arestart-1.jpg",
+          "sha256": "63da601efa93b455ba1a5914d44667624d2a4ce90e75a2e4a44fbf3fa1d2b25f"
+        },
+        {
+          "path": "art/previews/bluefin-pectoral-flex/native-normalflextablet20261125a-1.jpg",
+          "sha256": "98a46ea107c7b02b102b598993c39fe100ed6e8e98fe21a43ad6e580076fa08c"
+        },
+        {
+          "path": "art/previews/bluefin-pectoral-flex/native-normalflextablet20261125a-2.jpg",
+          "sha256": "96070a849e5bcf7938358dd170dd12e263ab2769e6dab7a322bb43a9a4347225"
+        },
+        {
+          "path": "art/previews/bluefin-pectoral-flex/native-normalflextablet20261125a-3.jpg",
+          "sha256": "c5d1d1966ecfc1d1e956f5a13f827ee50b2ceb7a74fcf5139943e67d6df347fe"
+        },
+        {
+          "path": "art/previews/bluefin-pectoral-flex/native-normalflextablet20261125a-4.jpg",
+          "sha256": "5baf9da0f8ef575157188665def2004452cf56b7c3b73068b64d5ea0af8d14eb"
+        },
+        {
+          "path": "art/previews/bluefin-pectoral-flex/native-normalflextablet20261125arestart-1.jpg",
+          "sha256": "b564547a4f73d0e6d8bab150056f99f57e66b613db5fafe88d4019f23e6595f1"
+        },
+        {
+          "path": "art/previews/bluefin-pectoral-flex/native-phone-end.png",
+          "sha256": "981a67729f05e9950a7a8d92a5f9b829f1fca21a88ecf5bb6c9592a832ed03e5"
+        },
+        {
+          "path": "art/previews/bluefin-pectoral-flex/native-phone-paused.png",
+          "sha256": "cf380f866cbb1b1bc471ecd86965ed138701a51d31f41b2986d875f8f405bca0"
+        },
+        {
+          "path": "art/previews/bluefin-pectoral-flex/native-phone-resumed.png",
+          "sha256": "98f9dc00c2d76e94110597786affb553dbbff3bc6fc0d6a0e157e34ad006e2ab"
+        },
+        {
+          "path": "art/previews/bluefin-pectoral-flex/native-phone-start.png",
+          "sha256": "a596fac2b66ee0d66652a37021448e29775f755735eef3a7b845c54a3cafb233"
+        },
+        {
+          "path": "art/previews/bluefin-pectoral-flex/native-tablet-end.png",
+          "sha256": "24c004ceaf0f08a965dfbab3d83d64f121fee9827d1f3e46c14f07552b23d7a8"
+        },
+        {
+          "path": "art/previews/bluefin-pectoral-flex/native-tablet-paused.png",
+          "sha256": "66daf6679f633c342f397643e199b9828ead8ab3429b8c46cb0178ed849d833c"
+        },
+        {
+          "path": "art/previews/bluefin-pectoral-flex/native-tablet-resumed.png",
+          "sha256": "a0fd4a4678826cf2253fe2d36b40355fe962d3d61d20dd931c084477cc2bc57d"
+        },
+        {
+          "path": "art/previews/bluefin-pectoral-flex/native-tablet-start.png",
+          "sha256": "0be96e82fcf805e90f104a71e75abaec01edd7293d55165ad55850aae096fac4"
+        },
+        {
+          "path": "art/previews/bluefin-pectoral-flex/native-phone-round20.png",
+          "sha256": "38cf0d89c98d1b7f2f7443c221611b28a969d06a65bfa7811fd22ec865193fda"
+        },
+        {
+          "path": "art/previews/bluefin-pectoral-flex/native-tablet-tasks.png",
+          "sha256": "82f8f6f0f783ec8147546936085a92985a5445263064fdf4d1192091bfaa1959"
+        },
+        {
+          "path": "art/previews/bluefin-pectoral-flex/native-phone-normal-restart.png",
+          "sha256": "bd572dc3e72e0948cc36687ff70fb32ae69f031bb0b614b62d397253ea93943b"
+        },
+        {
+          "path": "art/previews/bluefin-pectoral-flex/native-tablet-normal-restart.png",
+          "sha256": "4e65df482168ca00312f804963cc5fd91c90bf051f0bd86eb6aa674234eed5c8"
         }
       ]
     }
