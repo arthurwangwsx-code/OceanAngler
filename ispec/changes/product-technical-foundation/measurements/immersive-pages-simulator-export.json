@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "91ad128d-26ff-4c9a-9931-d67e485d9552",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "965718873203605361fa4f656bb7b6d4dc62b99af1a141443fb6f7cac7a275c7",
+    "category": "compile",
+    "executable": "python3",
+    "startedAt": "2026-11-25T10:07:50.328Z",
+    "finishedAt": "2026-11-25T10:08:24.345Z",
+    "durationMs": 33977.610666,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/immersive-pages-qa/export.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/immersive-pages-qa/export.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T10:07:50.328Z",
+  "finishedAt": "2026-11-25T10:08:24.345Z",
+  "durationMs": 33977.610666
+}

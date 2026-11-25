@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-25T08:18:23.950Z",
+  "generatedAt": "2026-11-25T11:30:20.100Z",
   "source": {
     "change": "product-technical-foundation",
     "cliVersion": "1.0.20",
@@ -26,16 +26,16 @@
     "firstAttemptPassedCount": 1,
     "firstAttemptEvaluatedCount": 1,
     "firstAttemptPassRate": 1,
-    "elapsedMs": 190267823,
-    "observedStepWallMs": 156666269,
+    "elapsedMs": 201784240,
+    "observedStepWallMs": 168182686,
     "unattributedMs": 33601554,
-    "unattributedRate": 0.1766013478800354,
-    "commandMeasurementCount": 1570,
-    "commandSucceededCount": 1389,
-    "commandFailedCount": 181,
-    "commandSuccessRate": 0.8847133757961784,
-    "commandDurationMs": 55993272.55974403,
-    "gateCheckCount": 69,
+    "unattributedRate": 0.16652219221877784,
+    "commandMeasurementCount": 1652,
+    "commandSucceededCount": 1454,
+    "commandFailedCount": 198,
+    "commandSuccessRate": 0.8801452784503632,
+    "commandDurationMs": 59926904.69032803,
+    "gateCheckCount": 70,
     "repairCount": 0,
     "targetMs": 3600000,
     "targetMet": null,
@@ -52,7 +52,7 @@
     },
     "entryChecks": {
       "status": "complete",
-      "recorded": 69,
+      "recorded": 70,
       "expectedAtLeast": 2
     },
     "runAttribution": {
@@ -62,7 +62,7 @@
     },
     "commandMeasurements": {
       "status": "partial",
-      "recorded": 1570
+      "recorded": 1652
     },
     "waitingTime": {
       "status": "unavailable"
@@ -78,14 +78,14 @@
   "runs": [],
   "runMetrics": {
     "version": 1,
-    "generatedAt": "2026-11-25T08:18:23.950Z",
+    "generatedAt": "2026-11-25T11:30:20.100Z",
     "runs": [],
     "unattributed": {
       "unboundAttempts": 2,
       "unknownRunAttempts": 0,
-      "unboundCommands": 1570,
+      "unboundCommands": 1652,
       "unknownRunCommands": 0,
-      "unboundGateChecks": 69,
+      "unboundGateChecks": 70,
       "unknownRunGateChecks": 0,
       "repairsWithoutRunBinding": 0,
       "unknownRunRepairs": 0
@@ -26669,6 +26669,1564 @@
         "path": "measurements/journal-envelope-final-records.json",
         "sha256": "cf852da163376c4755f5f802d77bdf238100cc829aa02511a9c401308841747d"
       }
+    },
+    {
+      "id": "ad4b547e-cf42-4c0f-8d45-a9d775f5e253",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "28456c6dbd0d414f7941e7be2abb8d074d46a715d4004c854e6d3fd3595b0f91",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T08:26:04.211Z",
+      "finishedAt": "2026-11-25T08:27:07.918Z",
+      "durationMs": 63670.540333000004,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-eye-before-studio.json",
+        "sha256": "2d6122cb5d3358db23d2bbfcde5d6d335d711a35792723a08c472a19dbbf7d08"
+      }
+    },
+    {
+      "id": "09d5ed2f-9719-4346-bca6-e78fcf971266",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "c953ae34f571e8477e4952175d4170764bdc219755eafbda56be044ba69a0b8e",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-25T08:37:06.974Z",
+      "finishedAt": "2026-11-25T08:37:09.886Z",
+      "durationMs": 2883.261584,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-eye-source-red.json",
+        "sha256": "961de0cdf65cd926368580601b1febe62021f27fda4e06e74714eb3ba63d1604"
+      }
+    },
+    {
+      "id": "b59bf75b-f3a9-4113-8b64-907f809a0de5",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "32618472504d7b1f99015f1d89d59617e6c0977fb742ac9c34afeaba4271fb7a",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T08:38:16.930Z",
+      "finishedAt": "2026-11-25T08:38:17.014Z",
+      "durationMs": 57.22941599999996,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-eye-build-a.json",
+        "sha256": "1ad48ba06aff236261c60d289c46a32946e0d23d32ea63496d355f0a21335b21"
+      }
+    },
+    {
+      "id": "72e89d45-5540-41f4-9f6c-b7e04743fbd9",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "3b07794c7b6296a84f15889f2df8f6bf92261713eba40076b43e8150f1a6731a",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T08:38:28.467Z",
+      "finishedAt": "2026-11-25T08:38:30.472Z",
+      "durationMs": 1981.684083,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-eye-build-b.json",
+        "sha256": "be4a2d47073cbbae7668e7079c68c33ffe838129e7112254fc8d97d6442fd4ed"
+      }
+    },
+    {
+      "id": "da7607d0-5a5e-41c4-8c8e-7c8ea54676d9",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "31e3dad66cea090cacd5d6f8f1e75773fc999e49b248f76332f039bc4c060c1a",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-25T08:39:44.068Z",
+      "finishedAt": "2026-11-25T08:39:45.434Z",
+      "durationMs": 1336.115042,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-eye-footprint-diagnostic.json",
+        "sha256": "4d3365ea444d9668a9d9b656f16a93c791282baf9a618e15404d942afda39928"
+      }
+    },
+    {
+      "id": "8f4dc480-11c5-4e88-af3e-ff5b0b7eba20",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "95b2b2fb4feba3e61eb8ce705968eedc07259dc77e2da9049aa495cb338feaba",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T08:40:23.233Z",
+      "finishedAt": "2026-11-25T08:40:24.981Z",
+      "durationMs": 1724.6376250000003,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-eye-build-c.json",
+        "sha256": "b3f02b63a0f2b990ba7ac92bd535ec7aceedf01d08d5a396050ad6a3de89a4c0"
+      }
+    },
+    {
+      "id": "26f40973-82e9-43bc-871b-0738634b069a",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "05d14c761e8e6b6db1dd81b0a8e9e0bd561ebfcf236180b2faface7f97cd2798",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T08:41:56.408Z",
+      "finishedAt": "2026-11-25T08:42:47.027Z",
+      "durationMs": 50582.824833,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-eye-after-studio-a.json",
+        "sha256": "fd5a962614465aa95dc230506e7973c0ea7ea1b68fc5143ddd69dcff76368d8c"
+      }
+    },
+    {
+      "id": "ca1bd065-5c40-4146-a182-7a8cc8910e47",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "0dd7c85828d97f06211c9feaa4bbb39a4f981fcf3404b2f2edf8c1dda7db92bb",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-25T08:43:03.696Z",
+      "finishedAt": "2026-11-25T08:43:06.240Z",
+      "durationMs": 2518.49775,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-eye-source-red-extended.json",
+        "sha256": "1338b1458f92284271fe4d35451ef02973a225b9cc0d798a32d81c09879a9e3f"
+      }
+    },
+    {
+      "id": "ce0b0bc9-5112-4a38-8512-decf865e9664",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d81271da28c816fa181559b6fb954120ac07e56996ab8dbdb73f26577205a867",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-25T08:43:35.516Z",
+      "finishedAt": "2026-11-25T08:43:37.957Z",
+      "durationMs": 2402.276417,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-eye-source-a.json",
+        "sha256": "299156604b4a737be08f08bea202c3ebb803dd64c4ecaf23b017d4516583b16e"
+      }
+    },
+    {
+      "id": "eb9ff29a-0fd1-4536-ab45-b59e274052a6",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "7ba0a8227ee19a956d9136841b567f760aa132f62bce690cf1c01cca70f70099",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T08:46:20.853Z",
+      "finishedAt": "2026-11-25T08:46:23.730Z",
+      "durationMs": 2843.496959,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-eye-existing-source.json",
+        "sha256": "e94cb13a559550c4304f4dbc85f33f720f10c5c68857c4d69861b9e7f224338c"
+      }
+    },
+    {
+      "id": "b8019da8-8e5c-4f34-8ca1-362ec9b32de7",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "87e1cc647b44dedcc77d35816c92b4d177a8a85601692f71804609ec40c1dd4f",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T08:47:06.573Z",
+      "finishedAt": "2026-11-25T08:47:06.941Z",
+      "durationMs": 329.62137499999994,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-eye-map-check.json",
+        "sha256": "48a6b9aa1881f19f0bcbd52743624af7c09b12c688976d200aafe572a934c2b3"
+      }
+    },
+    {
+      "id": "efd77c77-5708-4432-a446-32dfb5d4649c",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "1bcf850a8da57724302cbb03c3e95dd16457633d2c57458e2ec0056a293daf5d",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T08:47:18.962Z",
+      "finishedAt": "2026-11-25T08:47:29.286Z",
+      "durationMs": 10288.592125,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-eye-unity-import.json",
+        "sha256": "818103d8902b9cd52869920045152576064cf1e747a317f1e2a083f61a16abf9"
+      }
+    },
+    {
+      "id": "b3405d06-5a2f-45b0-a4d9-67ecb1460efc",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "76e4f08c5ad5eb107f1c66a1eecff6b6ef2d79f0c51d4a73a2e40b80a11aa1c0",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T08:48:44.723Z",
+      "finishedAt": "2026-11-25T08:48:54.552Z",
+      "durationMs": 9774.516083999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-eye-envelope-bake.json",
+        "sha256": "ce1c5a42e5c390b01d6d174d203724fdc7d05c465c871dfb323ee2449c32389d"
+      }
+    },
+    {
+      "id": "4e4cbbd2-9628-4948-abf0-51ad891e52d8",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "7e4d6e582526a617f7823c887bde4bb9bd5253912f98de7ef4c8dc1f4763b1a2",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T08:50:36.332Z",
+      "finishedAt": "2026-11-25T08:50:45.904Z",
+      "durationMs": 9541.379125,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-eye-unity-head-import.json",
+        "sha256": "75b1bfbb654ce425fd241827686872b7eff4a749d42ce8ef36e71c0f0e70cb5b"
+      }
+    },
+    {
+      "id": "01f51fa5-d0c8-4334-b0f0-78a9fa54fbe7",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "76e4f08c5ad5eb107f1c66a1eecff6b6ef2d79f0c51d4a73a2e40b80a11aa1c0",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T08:52:19.363Z",
+      "finishedAt": "2026-11-25T08:52:28.949Z",
+      "durationMs": 9562.301209000001,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-eye-envelope-final.json",
+        "sha256": "a9a7d83d3efb65930e08780f1de821531e8b6f0ee862326af02460cd1c6bb3a4"
+      }
+    },
+    {
+      "id": "de551545-c8d6-4cf2-af05-270ba4fc479f",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "66528cb0c09cc150af43d10dbf21d4b5a97d9e6527f8983a1a0b43ebaf2f8298",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T08:53:24.473Z",
+      "finishedAt": "2026-11-25T08:55:15.266Z",
+      "durationMs": 110757.10395799999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-eye-editor-tests.json",
+        "sha256": "f93261b43d1aca6379c80e73f007cf482562e11be703440488bad4991e259eb1"
+      }
+    },
+    {
+      "id": "8e5d0bf8-23b0-49ca-a365-ac1347c18899",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d3649ae94e12690cfa216eec395228f2c608336d40ff1cdcf4cf38a1ef642d35",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T08:55:41.521Z",
+      "finishedAt": "2026-11-25T08:55:50.712Z",
+      "durationMs": 9166.037167,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-eye-imported-gpu.json",
+        "sha256": "35796465282d2318e6953e31727bab105d966e9191313a503ddd07893915719e"
+      }
+    },
+    {
+      "id": "3d63f3b7-d18e-4ad7-b804-3abe0cd96be5",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "a4cca7e6497eda56b01e50d3cbacc51ef17fca3362c34bfa19dfcbadf5e25c8e",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T08:56:45.166Z",
+      "finishedAt": "2026-11-25T08:57:59.868Z",
+      "durationMs": 74679.770834,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-eye-play-regression.json",
+        "sha256": "06572d375745839070d32785df0f44fca7b07d1e901f30019fc90f686844add5"
+      }
+    },
+    {
+      "id": "a3a5c73b-76ad-426a-8fae-9c6d9aae3a4b",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "175c5b1ce9f8be3ffda86a60df81721cdbf193b4cd658ab44134142e1dc88935",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T08:58:46.419Z",
+      "finishedAt": "2026-11-25T08:58:46.731Z",
+      "durationMs": 269.006583,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-eye-source-final-check.json",
+        "sha256": "927045bb3d060cdeeeb969e850df53343543193f0028c119014652664ea4fa68"
+      }
+    },
+    {
+      "id": "b0d5d79e-2f71-472e-99e2-989da30f81bb",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "e42f664a4538e3eb36c1865f7995f9133e61061733210d8f0e73ff20cc45a2a8",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-25T08:59:55.349Z",
+      "finishedAt": "2026-11-25T08:59:55.433Z",
+      "durationMs": 59.00108399999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-eye-python-syntax.json",
+        "sha256": "84387ae57a8f5213f65e74ba80ba4abda976c3cb5d52ab4c32ce30db4d014755"
+      }
+    },
+    {
+      "id": "b161a62e-1628-488a-b8e7-0748b3c2ca04",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "1b9b750d007c851f920bb86ccb95b6c8d0649e1d11d26d4708a2736b0478955e",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-25T09:00:49.771Z",
+      "finishedAt": "2026-11-25T09:00:50.481Z",
+      "durationMs": 686.5979159999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-eye-validation-source.json",
+        "sha256": "70cf56a7eab42ba2e4a31c371f58a3358b1d0a39afbf7620bc2184ebcbd0d745"
+      }
+    },
+    {
+      "id": "dd3e5cdb-9621-4382-a3cf-b3727acc7f63",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d89602c770c16a35b6c5da9a9da4ae967807390aa462f4349604d0463de12f51",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-25T09:00:50.865Z",
+      "finishedAt": "2026-11-25T09:00:51.576Z",
+      "durationMs": 687.8865,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-eye-publication-source.json",
+        "sha256": "c07bdb662392d693adea1b8a45b40536d9f3d691204b262203e5900ddc45f788"
+      }
+    },
+    {
+      "id": "1506cc99-431e-427c-a607-b370dbe0758b",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "23d1911ddb69e67a9a8025a38ae45956720fb3b2dbf863e025af68d666b937dd",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T09:01:35.461Z",
+      "finishedAt": "2026-11-25T09:02:43.102Z",
+      "durationMs": 67606.771209,
+      "exitCode": 3,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-eye-simulator-build.json",
+        "sha256": "511d534c7559333a373c8dc78322841998621b789d620329e8ad0bc7d57a26fe"
+      }
+    },
+    {
+      "id": "c672d042-f2e9-432e-b0d8-98664f5a996f",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "6e7c438b122660d12fb3dbe0864a3f94861223865f8672879896b7ffccc3856b",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T09:17:48.670Z",
+      "finishedAt": "2026-11-25T09:33:04.903Z",
+      "durationMs": 916187.930792,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/bluefin-eye-verified-old-build-archives.json",
+        "sha256": "bcacf391471b7345bf2989768409086f9e8983fa37a477a89db0f764f8f4d403"
+      }
+    },
+    {
+      "id": "52e54df6-c646-438c-96af-a27b4219988e",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "5f049fb6c545b54fa0de1247430f9ddcb14c52db16cb99cc14fe3cd0b59d8f44",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T09:38:03.044Z",
+      "finishedAt": "2026-11-25T09:39:56.478Z",
+      "durationMs": 113394.54654200001,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-editor-a.json",
+        "sha256": "72ffc50480970044cffd3a6fbc0d38f9f8b91a13c9676ee2b00b783eca5a1654"
+      }
+    },
+    {
+      "id": "8e02749e-a794-4c00-9089-85c7571fa85f",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "20485823268158eb18699bca73564bd8c7ef88ec0c29af538a816eecf4b00517",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T09:41:31.144Z",
+      "finishedAt": "2026-11-25T09:41:42.029Z",
+      "durationMs": 10849.983083000001,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-font-a.json",
+        "sha256": "1ad6cf4748f93bf0d573d3f3f42adcd92038ef39c5a8a56d46d592d42be2c3fe"
+      }
+    },
+    {
+      "id": "f675f9ac-072e-4f96-a1a4-dafc0a769b66",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "78dacedcd6c837d8ba064dc6dba3b82da0abe64cbe309211d895f628f1ea4f1c",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T09:41:59.612Z",
+      "finishedAt": "2026-11-25T09:45:10.931Z",
+      "durationMs": 191294.76875,
+      "exitCode": 254,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-play-a.json",
+        "sha256": "502647fe740b53db43b5bbda7dec0f61c6d2acddccf3b0a3dfe7b4717706358d"
+      }
+    },
+    {
+      "id": "a17db815-5b8e-4613-89d4-9ceed0c0df98",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "f3e59b41ef0baadb7ba16950822c9a12105558002a8475e6df0afd32ab396c85",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T09:45:23.973Z",
+      "finishedAt": "2026-11-25T09:45:24.732Z",
+      "durationMs": 733.81,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-saves-before.json",
+        "sha256": "216b6b633ac45381e6f475650caa8f37b566b217bd17131a08643e3b5225c64a"
+      }
+    },
+    {
+      "id": "4bf6bf74-c45f-45ce-af17-8b1ac77d2df8",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "5bf983a1c06840516cce224ef208038b8d7b405b15006cadf3af72af6713a838",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T09:45:44.710Z",
+      "finishedAt": "2026-11-25T09:45:45.745Z",
+      "durationMs": 1004.827166,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-shared-media-blocks.json",
+        "sha256": "f70a39f85d12613af0dd633b408b0568c0bc130199191d35a3d56ef4b0a0f35b"
+      }
+    },
+    {
+      "id": "dd2d13ff-1ce4-4dab-a1f2-dd574dd4e750",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "5bf983a1c06840516cce224ef208038b8d7b405b15006cadf3af72af6713a838",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T09:46:44.286Z",
+      "finishedAt": "2026-11-25T09:47:31.721Z",
+      "durationMs": 47409.25816600001,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-shared-media-blocks-b.json",
+        "sha256": "4bb6b6e02e03d459c3cccb19e70516c4caa1208e0b7dbfc420b0146dff3eb94d"
+      }
+    },
+    {
+      "id": "07561166-74e5-4797-bb3f-0c1f2289a80a",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "fb41217afb9c1a93e9d3a4bdbe99ba0efa40fc7ad1ee700960159a170a1b2c7a",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T09:47:32.275Z",
+      "finishedAt": "2026-11-25T09:47:55.536Z",
+      "durationMs": 23236.765667,
+      "exitCode": 254,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-play-b.json",
+        "sha256": "67d6fe8bf0d525cda787e497ca04655414e3a37038ca964e14ffc8a28bf31e09"
+      }
+    },
+    {
+      "id": "42c753d9-8f2c-491f-a908-b0c5e9618ae4",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "689a970d8a3cb33c84464ee0d960bc7c104b08f889bffe3110de82b71b2417ac",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T09:48:11.111Z",
+      "finishedAt": "2026-11-25T09:49:35.758Z",
+      "durationMs": 84620.773041,
+      "exitCode": 2,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-play-c.json",
+        "sha256": "630af8820e904b1cb4f03a2a104acb3ced40426ede048e3d43fcd96a494b5176"
+      }
+    },
+    {
+      "id": "4c839e59-854b-4fe1-8a06-7c1616d4032b",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "c076c9f9354c55a7fd291ec6841f5111acc510cbaed430f03aea390c2fd80cfb",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T09:51:03.468Z",
+      "finishedAt": "2026-11-25T09:52:30.777Z",
+      "durationMs": 87258.930209,
+      "exitCode": 2,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-play-d.json",
+        "sha256": "e9ff14da1e4e4e04a18fb90089255d29b88acac915fb2b731d02a7104e8a615b"
+      }
+    },
+    {
+      "id": "fba53d1e-e529-41c2-bc09-d818976e309e",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "7b686121f0016cc60b73f644925ca1606276185d787361764fc71f02221c73a7",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T09:53:53.792Z",
+      "finishedAt": "2026-11-25T09:55:36.953Z",
+      "durationMs": 103123.897583,
+      "exitCode": 2,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-play-e.json",
+        "sha256": "49484021e5d3452d228c4d3ca5c1bcddb9a577724e1cbe7a8ce0228a7dac0735"
+      }
+    },
+    {
+      "id": "43c39d8b-7f8f-4e19-9798-6f5c67b4ee5e",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "e84ba6a06c572b561d17e6611a8475e53e8b2e6b2e9e543f5503f4082b62d059",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T09:58:02.666Z",
+      "finishedAt": "2026-11-25T09:59:52.301Z",
+      "durationMs": 109597.381667,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-play-f.json",
+        "sha256": "d3b0e88af38e8458bcb6b4d3644771dc8b348779cce37f13b8f97596a4ab6628"
+      }
+    },
+    {
+      "id": "c97a2503-3800-4a41-96a4-bfded4a5e2be",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "54784639f6be24aec98b409d842da179ca9b16c4bb1c06704af0b2a33dde3fdb",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T10:00:59.029Z",
+      "finishedAt": "2026-11-25T10:01:28.046Z",
+      "durationMs": 28990.10775,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-play-g.json",
+        "sha256": "cccdbf6b4e4e02192eafb2f781cfc23c8c7e4060c8427e65ef0070e1c522b9ff"
+      }
+    },
+    {
+      "id": "5e9ca3e6-c89b-42b1-af1c-0aecc559fe76",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "5f049fb6c545b54fa0de1247430f9ddcb14c52db16cb99cc14fe3cd0b59d8f44",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T10:02:16.369Z",
+      "finishedAt": "2026-11-25T10:04:03.516Z",
+      "durationMs": 107116.435625,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-editor-final.json",
+        "sha256": "4cbe9dcb83b00a15d77e50ab16c9f4ecda7257c60237f22ee12b48df5cc10db4"
+      }
+    },
+    {
+      "id": "d633e9fc-eb72-4738-ba7d-949441306474",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "49b978df2fc9e37f8144ce2b1c619c61410d0ef52e49d84957662f594cdb1e94",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-25T10:05:23.595Z",
+      "finishedAt": "2026-11-25T10:05:23.939Z",
+      "durationMs": 307.64229100000006,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-font-verify.json",
+        "sha256": "3e8a2fc0ec63c7486cb1e4d77d99e9076b5bc1895a38998c421640b32b77567d"
+      }
+    },
+    {
+      "id": "d423214d-ec6b-4709-8203-c62f517aadc4",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "1b9b750d007c851f920bb86ccb95b6c8d0649e1d11d26d4708a2736b0478955e",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-25T10:06:03.563Z",
+      "finishedAt": "2026-11-25T10:06:04.280Z",
+      "durationMs": 690.8819579999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-validation-source.json",
+        "sha256": "59992c2a98fc7af575b6b5a73f4ebce5ddc430cc39d16f0c17dfbe2146921090"
+      }
+    },
+    {
+      "id": "2341d81b-cf62-4776-aaed-b56ece36aee7",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "2db5a4cf3d954a7f72a4d63380b9aa143c4b8fb9963d8a249333d5a6cb9fc463",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T10:06:40.038Z",
+      "finishedAt": "2026-11-25T10:06:40.177Z",
+      "durationMs": 113.22300000000001,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-source-verification.json",
+        "sha256": "e69602c431142205d1f0d0e94001d81056ca4261f50a22c0d230474f380212cb"
+      }
+    },
+    {
+      "id": "3d42172d-dcd2-4ad6-ba4c-322c2cf60aea",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d89602c770c16a35b6c5da9a9da4ae967807390aa462f4349604d0463de12f51",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-25T10:07:10.779Z",
+      "finishedAt": "2026-11-25T10:07:11.479Z",
+      "durationMs": 677.462792,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-publication-source.json",
+        "sha256": "69955411f414ea6b82e9494bc73ea9caad746a74c69c9cf57195d7bbb846a83f"
+      }
+    },
+    {
+      "id": "91ad128d-26ff-4c9a-9931-d67e485d9552",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "965718873203605361fa4f656bb7b6d4dc62b99af1a141443fb6f7cac7a275c7",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T10:07:50.328Z",
+      "finishedAt": "2026-11-25T10:08:24.345Z",
+      "durationMs": 33977.610666,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-simulator-export.json",
+        "sha256": "f8fc7f07b8bb2687f659f4ec3995f225688048f8479d5ad69d56d02ef4e1aa55"
+      }
+    },
+    {
+      "id": "aabcfca4-2f80-4759-8ee1-4b51ab92a5e1",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "e3d8ec5e788a89ff477a3b641c9c51747b56176846dbc97823132e60278f29ba",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T10:08:59.963Z",
+      "finishedAt": "2026-11-25T10:11:29.887Z",
+      "durationMs": 149892.989833,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-verified-cache-archives.json",
+        "sha256": "560526814684c4b2ef67153ddb791176c9ed50a9360dfcc80b2e340d0163ec95"
+      }
+    },
+    {
+      "id": "9b8583f3-788a-4c0c-9932-4d1204b864e0",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "9e92ac678276f7215bfc26001870f0bab41ef392efb7521275bb8190973235af",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T10:18:27.909Z",
+      "finishedAt": "2026-11-25T10:18:35.071Z",
+      "durationMs": 7131.389,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-transparent-artifacts.json",
+        "sha256": "0de4e682f9f7d350d18f897e49983370fbc40e48950d3c9b4a599400d88f9e32"
+      }
+    },
+    {
+      "id": "e91039c0-bf67-497e-8bf4-f422f77f83c1",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "1070521dd19b9ed2a6764ac91e7f418bc1955acbce222cc7ffd7438b1e0f0776",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T10:19:33.428Z",
+      "finishedAt": "2026-11-25T10:19:38.533Z",
+      "durationMs": 5060.142875,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-shared-own-apps.json",
+        "sha256": "0bedcca0c771de577ebe5e9aaabeaafe34d66c4d138c7322e697d172b5e070cd"
+      }
+    },
+    {
+      "id": "1f98fa8a-555e-45d2-837d-d46118528bc8",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "9e92ac678276f7215bfc26001870f0bab41ef392efb7521275bb8190973235af",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T10:20:54.625Z",
+      "finishedAt": "2026-11-25T10:21:14.142Z",
+      "durationMs": 19482.445291,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-transparent-artifacts-b.json",
+        "sha256": "7b0da16af565efc0ba90a040a0ebbcc86c79ef6f91442ef8ead18305b1a1d461"
+      }
+    },
+    {
+      "id": "7dfb4b63-49f8-4021-b324-704f9a48c1e9",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "1070521dd19b9ed2a6764ac91e7f418bc1955acbce222cc7ffd7438b1e0f0776",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T10:22:45.436Z",
+      "finishedAt": "2026-11-25T10:22:50.086Z",
+      "durationMs": 4624.76875,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-shared-own-apps-b.json",
+        "sha256": "79f03a7734a9c47e137b2f9f81f093e4df2417af15b51156496d6bc1a0320a45"
+      }
+    },
+    {
+      "id": "7a4e3921-772b-4a23-b330-becbef23be4f",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "4644e0ca5ea8a088262b6b3ea71f812b81489f9ef020739fd2b294f9aaf6d427",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T10:25:59.626Z",
+      "finishedAt": "2026-11-25T10:26:00.880Z",
+      "durationMs": 1219.8731670000002,
+      "exitCode": 3,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-simulator-native-a.json",
+        "sha256": "9a94d9c0b448cc3509fcc9f81e58c5bbe80530941aa7b8805b3b3129e493c3b6"
+      }
+    },
+    {
+      "id": "4b1ca519-7790-4e42-a1a3-e74cbd0e12c4",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "1a8a6f51fb69b653b3190974f39586d80f19764194758bdfb091055cc65e5371",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T10:33:14.904Z",
+      "finishedAt": "2026-11-25T10:34:10.691Z",
+      "durationMs": 55752.795875,
+      "exitCode": 65,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-simulator-native-release-b.json",
+        "sha256": "d27b4340664cba70d438e99708c5f70832002d70c47e25c84a9854aaa153f5fc"
+      }
+    },
+    {
+      "id": "5338f8b5-160f-49fa-a8e6-9cf3d183fe6b",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "8d512ab47ce34de53c4d4b109d66a9cd67eee58b772589541bc0282ed77828c5",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T10:35:23.991Z",
+      "finishedAt": "2026-11-25T10:35:25.028Z",
+      "durationMs": 1012.063667,
+      "exitCode": 3,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-simulator-native-release-c.json",
+        "sha256": "18d7fe061da678a8ce967bedfaa98010df72897286f5953fb8982c87e4ef417a"
+      }
+    },
+    {
+      "id": "ba5b69e8-3d31-45df-9dd6-1b174817c181",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "154fda8d34c875379b5367c356b15d8c3d9f8f2ec58a68e17e486378ecaecb37",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T10:37:04.863Z",
+      "finishedAt": "2026-11-25T10:40:25.206Z",
+      "durationMs": 200308.562833,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-simulator-native-release-d.json",
+        "sha256": "7b00e354e074f192c4c04c9dea357685bff3e2b347a447ded1be15551d03273d"
+      }
+    },
+    {
+      "id": "2e278b70-bca7-43b0-9c44-514bcd018599",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "9f1dae8b32870a3e07ea70195afeb65a1632517470d15552face093a57c821b6",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T10:42:25.173Z",
+      "finishedAt": "2026-11-25T10:43:14.456Z",
+      "durationMs": 49247.792292,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-phone-a.json",
+        "sha256": "31e32488177faa04c91663f2dca6dad621cdaebb0143cfd13f20282fdc024b73"
+      }
+    },
+    {
+      "id": "47fbd64b-6323-407b-9f0a-403ce897ae5e",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "e9ef97cb947c8e198b55d16c4d4132e20101a6b411323514e611dfa54389d8dd",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T10:44:06.379Z",
+      "finishedAt": "2026-11-25T10:44:08.236Z",
+      "durationMs": 1834.907416,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-phone-proof-a.json",
+        "sha256": "e9ec2502e387635d667bddb143295c66f6cfccbb1342a4cff95a2b20274a26ad"
+      }
+    },
+    {
+      "id": "6074a34e-1237-499c-93d5-61ead8edc17c",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "4db57c63bd5ca7ab835f28d557ef15f99c268e841641f7669fda4dc3668ee250",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T10:47:54.844Z",
+      "finishedAt": "2026-11-25T10:48:43.820Z",
+      "durationMs": 48919.544167,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-tablet-a.json",
+        "sha256": "8415917390532cb5b42a01c3069b5e6ebca56fd063a50a289437fafd22ff7d64"
+      }
+    },
+    {
+      "id": "962e8bb7-fbeb-4326-b3d9-74ac7393dfad",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "c62fad24fad260d74bcea542b2cd8aac6cf4680482fc385ad8a644d6ae6ce321",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T10:52:08.147Z",
+      "finishedAt": "2026-11-25T10:52:36.599Z",
+      "durationMs": 28414.365375,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-current-cache-archive.json",
+        "sha256": "cb7742c49a9c6e990a6cc3b9073f8c6ec8ec02c947383ac485d01257ac2ec86b"
+      }
+    },
+    {
+      "id": "96bcc16f-2c13-4120-92db-f9be8a7b83e3",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "28a31daa28ac1862cbd00aebfebcb737dbb048d78a8167f61b7ae3e4524573ab",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T10:55:38.955Z",
+      "finishedAt": "2026-11-25T10:56:13.134Z",
+      "durationMs": 34147.8415,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-restore-library.json",
+        "sha256": "33c9f173961499c05696febed44f6c33ed0d841d88274793430c98b5e8bc16dc"
+      }
+    },
+    {
+      "id": "68998dbe-2982-4b27-8573-9a13e9c00948",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "dd9a3a4629b9181cccdaf1c6811f686adbc50ed3847656e18f59c52ffb5163ca",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T10:56:30.585Z",
+      "finishedAt": "2026-11-25T10:57:11.864Z",
+      "durationMs": 41251.968666999994,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-restore-library-b.json",
+        "sha256": "1bae4cbb37fb158ae9a5d54e5ed42f336cea07c23a3efbd0f01ec23d206fa540"
+      }
+    },
+    {
+      "id": "0956e15d-fe59-4a9f-a060-1f43c17c8faf",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "66528cb0c09cc150af43d10dbf21d4b5a97d9e6527f8983a1a0b43ebaf2f8298",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T10:57:41.137Z",
+      "finishedAt": "2026-11-25T10:59:44.374Z",
+      "durationMs": 123204.688209,
+      "exitCode": 2,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-editor-h.json",
+        "sha256": "65254fd615038f6faa15738a40814185ead9ddf8a01906f7fabb7fb121ad8b8f"
+      }
+    },
+    {
+      "id": "cf1611dc-fa9b-4043-91b3-860d311fcb1b",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "9f50d9f8653a6579f30056e5b97e57f212e0d29bf25ba75d8505a3d237479ea6",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T11:00:29.685Z",
+      "finishedAt": "2026-11-25T11:01:00.672Z",
+      "durationMs": 30957.438958,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-play-h.json",
+        "sha256": "b99448f8dce5526d11989a5d754faab6638dfb983ae8f5e859aeb0509f002fa0"
+      }
+    },
+    {
+      "id": "e6865be5-149c-4f42-93f5-76e1b2a07efc",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "66528cb0c09cc150af43d10dbf21d4b5a97d9e6527f8983a1a0b43ebaf2f8298",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T11:01:44.717Z",
+      "finishedAt": "2026-11-25T11:03:44.116Z",
+      "durationMs": 119355.482375,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-editor-i.json",
+        "sha256": "0746fb922bc31fa35afb1defeb5a8c977d155b58ccdd1e103c6d526de5e31208"
+      }
+    },
+    {
+      "id": "c2a698ed-eafe-4564-aee5-31e2d5cefa48",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "5eb7277f104efc3f4e003ee8cd4477f9edf7bb5018c4043b75fecfbf65927c61",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T11:04:11.429Z",
+      "finishedAt": "2026-11-25T11:06:01.605Z",
+      "durationMs": 110149.513958,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-play-i.json",
+        "sha256": "4d0af991b54eefcfc830369fadd6eec95b09e5730ba2e89b0459c82ffb9e679f"
+      }
+    },
+    {
+      "id": "47cb09a6-e143-4a20-86cf-869120802f5a",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "92a5535af495adc587a618aa406998bfc33bfd908e8ca7e1c87584bfff9129f0",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T11:06:08.729Z",
+      "finishedAt": "2026-11-25T11:06:19.300Z",
+      "durationMs": 10544.324250000001,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-cache-compression.json",
+        "sha256": "e13c13a7903b95a26776302086cf71ded0ad886a3f2693d5f96bb194cd64c639"
+      }
+    },
+    {
+      "id": "15dad6a5-bc96-4538-b92d-18b3c50d6950",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "b6a11230c802a497fd33a4006059b7ae10795e864a7275e81a4640c7c59d2915",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-25T11:07:34.817Z",
+      "finishedAt": "2026-11-25T11:07:36.781Z",
+      "durationMs": 1934.5862499999998,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-repair-source-lint.json",
+        "sha256": "be903f1553cdb1464df9696592ebf8495c7d9cb4a4cecb658b25b1da6b84691d"
+      }
+    },
+    {
+      "id": "f6da7952-6833-43c5-8d04-f03f88e45f9a",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "a378d8c637dea5fc5198e5889b04600c147d89bc454e82ceff514ac6a7959578",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T11:08:03.622Z",
+      "finishedAt": "2026-11-25T11:08:46.323Z",
+      "durationMs": 42667.693583,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-simulator-export-b.json",
+        "sha256": "d9c28b2a29319a609c0c49422cbd6a2b32f62c18d7ff99a15704290def2598e7"
+      }
+    },
+    {
+      "id": "cbd900e9-bd5a-43a3-8608-54402fd81d93",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "b60782a548b8624025a84ed3a535d4dbf3dcb7ab8d2ace7185583681708c58be",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T11:08:58.183Z",
+      "finishedAt": "2026-11-25T11:09:14.460Z",
+      "durationMs": 16243.317250000002,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-reclaim-archived-cache.json",
+        "sha256": "f3de9c7d320cc29b150857f70d2fa66136668fa31b02a1ebcccaf5b04fcfaeb1"
+      }
+    },
+    {
+      "id": "17af879c-9858-4342-9797-463c46432060",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "99acb69d63bb1d0ef3c9814b2de22422dca73cc5ac7e66cdd57abd1e05ad112b",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T11:10:10.512Z",
+      "finishedAt": "2026-11-25T11:10:13.783Z",
+      "durationMs": 3230.4447090000003,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-obsolete-compiler-discard.json",
+        "sha256": "d3d153896fc2a3c8e16fa0f3f5dfd22406514a25e675d5e1d3fd7e09239a2432"
+      }
+    },
+    {
+      "id": "a6610dea-4f6a-41ed-853e-bdb3e39a513a",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "dcb396aa3ff1cae3dec824b0cb6049092a3f7a213b7b3edc8e57b466e25f2f05",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T11:10:54.833Z",
+      "finishedAt": "2026-11-25T11:10:57.080Z",
+      "durationMs": 2222.20875,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-discard-residual-library.json",
+        "sha256": "3c2d8882592e4ffa48dae59f458faf7c2390dbc4d4aa735e49fdc8707e182bf7"
+      }
+    },
+    {
+      "id": "c0910d05-6403-49a1-8825-6eb1a3c13146",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "90a3379cac1bc6fc31eec7553f5d1c7ade3034e7a610fbc8064a29dea228bbf4",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T11:11:05.640Z",
+      "finishedAt": "2026-11-25T11:16:57.942Z",
+      "durationMs": 352272.815334,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-simulator-native-release-e.json",
+        "sha256": "728867606f5432e0d85625302a9c2b1f5a79b0f9708488086949c3264a69ed95"
+      }
+    },
+    {
+      "id": "ae0113ed-6ad7-4b03-8eca-337fbabcd08b",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "cbe6786954cc9d9b43abd2fcd352d14859bd49239fe0cf9cc2e31821efcfa480",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T11:17:09.863Z",
+      "finishedAt": "2026-11-25T11:17:49.079Z",
+      "durationMs": 39191.346167,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-phone-b.json",
+        "sha256": "9b25143089d6457fa9daed4c53966e4c59aaafbd17b414648ea222e13cbbeb3f"
+      }
+    },
+    {
+      "id": "353f9ba7-6bab-418b-87ba-e60b6cc27cda",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "ec49e706ade88f53afbf244565f1ca75c6319237be3bfe6b72714ac184aa5b0e",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T11:18:02.595Z",
+      "finishedAt": "2026-11-25T11:18:04.434Z",
+      "durationMs": 1813.828,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-phone-proof-b.json",
+        "sha256": "b66599c3432ae19e0f140d3d08587b370402b325938977bc4ea1cb4918663d1e"
+      }
+    },
+    {
+      "id": "65f694b5-894a-4ba8-bf79-68d991045365",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "5a855fa1c7cac03061ae7aabff6dd0b0097680f35bbe1948327f5fcbdf4c0f8b",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T11:18:16.684Z",
+      "finishedAt": "2026-11-25T11:18:54.176Z",
+      "durationMs": 37465.900542,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-tablet-b.json",
+        "sha256": "a6d23f0449648d3749f58e80df3ae6014188eefce2eb4762c75ca313ff9bda2d"
+      }
+    },
+    {
+      "id": "87bd5356-36c0-4cb4-93ca-0b639faa0148",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "23d8ccbb06cf99ef7daaa9e04bd844273087255a6b9120b12069155c870a8ee6",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T11:19:08.872Z",
+      "finishedAt": "2026-11-25T11:19:10.687Z",
+      "durationMs": 1792.560125,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-tablet-proof-b.json",
+        "sha256": "3e77fa16fc7c31233840c53b43fb8594bbe07c0eff658aa56ec446041bb55e34"
+      }
+    },
+    {
+      "id": "dfe0cc20-f205-4a0f-a04e-c7f0b9a38b41",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "97e1a9e8fe97799e3416ee8b2c7325f342514dd1fda7a5520fc2c654813bea39",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T11:19:26.084Z",
+      "finishedAt": "2026-11-25T11:20:06.177Z",
+      "durationMs": 40067.169875,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-fishing-phone-b.json",
+        "sha256": "ded64837bbffb736d77ca678ca4a1bbc7779f07539a37b2ebe448ebdbd2516b5"
+      }
+    },
+    {
+      "id": "53d6f5ca-47f1-4c12-b6f0-f5ed15b72744",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "b8e2a51fe728bfcfd644f5c88d27756c42a8093502fbd79422c15c5b1f899061",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T11:20:12.769Z",
+      "finishedAt": "2026-11-25T11:20:13.708Z",
+      "durationMs": 906.429167,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-fishing-phone-proof-b.json",
+        "sha256": "d6219017a229368134c2b569e3df3a3bd67ebf283d0224b9b725d2714dc25375"
+      }
+    },
+    {
+      "id": "3f478afd-355e-4779-92d3-23aeb5e2fe01",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "fda51abbaca3be902381c16a77923d9420a78cda55f4c09db8e2c4fb1203cd71",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T11:20:37.884Z",
+      "finishedAt": "2026-11-25T11:21:19.746Z",
+      "durationMs": 41838.224665999995,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-fishing-tablet-b.json",
+        "sha256": "812bf7ceaeddf59964b2b26ca0ed94883b4c37b664cbb8478fd64b11047e640d"
+      }
+    },
+    {
+      "id": "8e96c94c-c3fa-412d-8526-c5339ecdc4cd",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "580cb6a5e3cbdd1c6099d6d53ce78b667a3696e8f87dc125d680ab66f3bb9a50",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T11:21:42.214Z",
+      "finishedAt": "2026-11-25T11:21:43.170Z",
+      "durationMs": 927.723875,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-fishing-tablet-proof-b.json",
+        "sha256": "44e6c332c1e1f593a98da8e3c7e9babce04a3cbfd479515e6b18d4f60893c083"
+      }
+    },
+    {
+      "id": "c4043667-dad9-4c21-b70e-8d85ca92c2e4",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "8a89cb19432a3b6ff16487f6efb2cf4dbb7711f43940f9cb580966f8a8afbadd",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T11:21:56.097Z",
+      "finishedAt": "2026-11-25T11:21:56.636Z",
+      "durationMs": 512.735583,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-preserved-saves.json",
+        "sha256": "dcae551515d485e8de3b8a791b83c76ea4c93928e74463b6602ae81fcfc51062"
+      }
+    },
+    {
+      "id": "50431538-36c8-447f-8509-85c2b46f30e1",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "09bb06ea5d4768225a2248da0f6612c1bda7f89466f46cc090ebb225fb9588cc",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T11:22:01.337Z",
+      "finishedAt": "2026-11-25T11:22:12.184Z",
+      "durationMs": 10823.649208,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-media.json",
+        "sha256": "1229189f3c5abbcda2249e495763554d8b5723a1be4bde86d8a5ae167399bd18"
+      }
+    },
+    {
+      "id": "7012c854-5555-4135-a880-1b24950d354e",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "3e2845cca041f566bbbd0206ceb26ab9d931fdcaef236de3a1a4fcb38ce4af3c",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-25T11:27:56.403Z",
+      "finishedAt": "2026-11-25T11:27:58.980Z",
+      "durationMs": 2537.1829159999998,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-final-lint.json",
+        "sha256": "759f84cb5d8d21bfd9bce4f57e439b5aee9f8059a9c188534aea65526a629edc"
+      }
+    },
+    {
+      "id": "8830ca2b-7c2e-4128-9d00-ec3d253ed6ec",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "aadd899082a89f63f1d2e6ac14e764114ed6a3c62fcb87db1c64264f08c060bc",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T11:28:42.160Z",
+      "finishedAt": "2026-11-25T11:28:42.266Z",
+      "durationMs": 75.81408399999998,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-final-records.json",
+        "sha256": "f8bfc3329a3e077945be3d5f5c6a3140cc2be90785a632c41a0579f7952a2a90"
+      }
+    },
+    {
+      "id": "977ac151-3181-4a71-b998-4227c87fe7e9",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d89602c770c16a35b6c5da9a9da4ae967807390aa462f4349604d0463de12f51",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-25T11:29:39.867Z",
+      "finishedAt": "2026-11-25T11:29:40.439Z",
+      "durationMs": 541.4749999999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-publication-final.json",
+        "sha256": "6e0952c8e857ca8aeec009defc75d613c37560f9b8bcc47582e4d0a3066b9adc"
+      }
+    },
+    {
+      "id": "2877eab8-40b0-4dbc-9065-26bb45633d19",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "6ec1932e1aa3c039877d7e26771bdcd7cc07f316c5940a051d0611472de4b37d",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T11:29:58.605Z",
+      "finishedAt": "2026-11-25T11:29:58.690Z",
+      "durationMs": 58.741083,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/immersive-pages-final-records-b.json",
+        "sha256": "41ebb8b5bd7448af90697a0fee17fd2800848986cf26fe25c581366da4dae4bb"
+      }
     }
   ],
   "measurementAudit": {
@@ -26676,8 +28234,8 @@
     "scope": "declared-command-receipts-only",
     "runId": null,
     "complete": false,
-    "registered": 1566,
-    "completed": 1570,
+    "registered": 1648,
+    "completed": 1652,
     "unfinishedIds": [
       "539d2470-da3f-4a9d-941c-e4c4a34b48da"
     ],
@@ -29976,35 +31534,35 @@
   "commands": [
     {
       "category": "test",
-      "count": 648,
-      "succeededCount": 541,
-      "failedCount": 107,
-      "successRate": 0.8348765432098766,
-      "durationMs": 18863260.207201008
+      "count": 673,
+      "succeededCount": 558,
+      "failedCount": 115,
+      "successRate": 0.8291233283803864,
+      "durationMs": 20296262.028453004
     },
     {
       "category": "compile",
-      "count": 325,
-      "succeededCount": 311,
-      "failedCount": 14,
-      "successRate": 0.9569230769230769,
-      "durationMs": 15295244.595590001
+      "count": 341,
+      "succeededCount": 321,
+      "failedCount": 20,
+      "successRate": 0.9413489736070382,
+      "durationMs": 16103843.104674002
     },
     {
       "category": "e2e",
-      "count": 336,
-      "succeededCount": 282,
-      "failedCount": 54,
-      "successRate": 0.8392857142857143,
-      "durationMs": 21508572.999167994
+      "count": 368,
+      "succeededCount": 311,
+      "failedCount": 57,
+      "successRate": 0.845108695652174,
+      "durationMs": 23192482.082708992
     },
     {
       "category": "lint",
-      "count": 210,
-      "succeededCount": 208,
+      "count": 219,
+      "succeededCount": 217,
       "failedCount": 2,
-      "successRate": 0.9904761904761905,
-      "durationMs": 112525.56532999995
+      "successRate": 0.9908675799086758,
+      "durationMs": 120648.28203699995
     },
     {
       "category": "validation",
@@ -30607,6 +32165,14 @@
       "checkedAt": "2026-11-25T07:33:18.797Z",
       "durationMs": 201.46691700000008,
       "outcome": "accepted"
+    },
+    {
+      "stageId": "apply",
+      "runId": null,
+      "operation": "start",
+      "checkedAt": "2026-11-25T08:23:51.068Z",
+      "durationMs": 169.623541,
+      "outcome": "accepted"
     }
   ],
   "timing": {
@@ -30614,8 +32180,8 @@
     "finishedAt": null,
     "status": "in_progress",
     "measurementBasis": "before-first-entry-gate",
-    "elapsedMs": 190267823,
-    "observedStepWallMs": 156666269,
+    "elapsedMs": 201784240,
+    "observedStepWallMs": 168182686,
     "unattributedMs": 33601554,
     "waitingMs": null,
     "retryAttemptMs": 0,

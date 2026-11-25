@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "47cb09a6-e143-4a20-86cf-869120802f5a",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "92a5535af495adc587a618aa406998bfc33bfd908e8ca7e1c87584bfff9129f0",
+    "category": "e2e",
+    "executable": "python3",
+    "startedAt": "2026-11-25T11:06:08.729Z",
+    "finishedAt": "2026-11-25T11:06:19.300Z",
+    "durationMs": 10544.324250000001,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/immersive-pages-qa/compress-caches.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/immersive-pages-qa/compress-caches.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T11:06:08.729Z",
+  "finishedAt": "2026-11-25T11:06:19.300Z",
+  "durationMs": 10544.324250000001
+}

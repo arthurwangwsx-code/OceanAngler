@@ -1,0 +1,395 @@
+{
+  "status": "PASS_LOCAL_IMMERSIVE_PAGE_INCREMENT",
+  "wholeProduct": "PARTIAL",
+  "source": {
+    "sourceCommit": "79692d81d4abc9bae2c41f604cbd847cb3e4fafa",
+    "sourceDigest": "2b4c36be6fc955cdb749bf9a0444b0c52a6f467c93a2beee7bd4d8277d673455",
+    "projectSettingsSha256": "bea92e9b5c8b678dd130d48c1f43acaf939b56cacce33928a5a45af6da0a4585"
+  },
+  "appDigest": "96568e87cd7e6519828166ceff3b082b31c4d378e64611775f2fe61955e06856",
+  "nativeConfiguration": "ReleaseForRunning, Unity developer build, supported IL2CPP --compiler-flags=-g0 --bee-jobs=2; simulator only",
+  "tests": {
+    "editor": 77,
+    "targetedPlay": 14,
+    "realMeshPoseSamples": 3456
+  },
+  "devices": [
+    {
+      "device": "phone",
+      "pageFrames": 40,
+      "fishingFrames": 19,
+      "modelSamples": 104,
+      "species": 12,
+      "maximumFrontFillRatio": {
+        "trevally": 0.8333713592044891,
+        "alfonsino": 0.9092843191964286,
+        "snapper": 0.9092893247251157,
+        "halibut": 0.8583559712404927,
+        "redsnapper": 0.9092891632564484,
+        "grouper": 0.8705415271577381,
+        "skipjack": 0.8717323585792824,
+        "bigeye": 0.8717187952112269,
+        "mahi": 0.8903778722046545,
+        "yellowfin": 0.871724769551918,
+        "mackerel": 0.8719208732483879,
+        "cod": 0.8705351491453787
+      },
+      "modelControlsPreserveSave": true,
+      "otherProgressSettingsExact": true,
+      "normalCatch": {
+        "species": "mackerel",
+        "award": 148,
+        "catchesBefore": 26,
+        "catchesAfter": 27,
+        "pointsBefore": 4570,
+        "pointsAfter": 4718
+      },
+      "maxHudRatio": 0.12227564305067062,
+      "centralPlayAreaClear": true,
+      "activeButtons": 2,
+      "unfinishedExitPreservedLedger": true,
+      "waterlineAndSettings": "PASS",
+      "scope": "Owned native Simulator + EventSystem input; not OS touch, full20rounds or physical qualification"
+    },
+    {
+      "device": "tablet",
+      "pageFrames": 40,
+      "fishingFrames": 19,
+      "modelSamples": 104,
+      "species": 12,
+      "maximumFrontFillRatio": {
+        "redsnapper": 0.9242062146150614,
+        "alfonsino": 0.9242093050027196,
+        "cod": 0.7557251082159656,
+        "bigeye": 0.7562618057620567,
+        "mackerel": 0.7586666225974535,
+        "snapper": 0.9242202179341377,
+        "halibut": 0.938469909879163,
+        "trevally": 0.8716686209180363,
+        "grouper": 0.7557506627277519,
+        "yellowfin": 0.7563440659466911,
+        "mahi": 0.7724570745154272,
+        "skipjack": 0.756234508897194
+      },
+      "modelControlsPreserveSave": true,
+      "otherProgressSettingsExact": true,
+      "normalCatch": {
+        "species": "mahi",
+        "award": 221,
+        "catchesBefore": 21,
+        "catchesAfter": 22,
+        "pointsBefore": 3868,
+        "pointsAfter": 4089
+      },
+      "maxHudRatio": 0.045262712985277176,
+      "centralPlayAreaClear": true,
+      "activeButtons": 2,
+      "unfinishedExitPreservedLedger": true,
+      "waterlineAndSettings": "PASS",
+      "scope": "Owned native Simulator + EventSystem input; not OS touch, full20rounds or physical qualification"
+    }
+  ],
+  "oldSaveFilesByteExact": 202,
+  "oldPrimarySaveFilesByteExact": 104,
+  "unchangedSourceAndModelAssets": 319,
+  "changedAssetsScope": "Navigation/presentation/QA/tests/font only; no rule/economy/random/save changes. Earlier continuous eye work retains its own source scope.",
+  "firstNativeTabletFailure": {
+    "sourceCommit": "498315f28ac5f4ac58384a2340b6d4d9e87abc02",
+    "clippedTextFailures": 37,
+    "retained": true,
+    "repairedWithOriginalFontSize": true,
+    "finalNativeFailureCount": 0
+  },
+  "visualReview": {
+    "status": "PASS_LOCAL_PAGE_VISUAL_REVIEW_ART_PARTIAL",
+    "sourceCommit": "79692d81d4abc9bae2c41f604cbd847cb3e4fafa",
+    "appDigest": "96568e87cd7e6519828166ceff3b082b31c4d378e64611775f2fe61955e06856",
+    "nativeCapturesReviewedViaSixOverviewSheets": 118,
+    "fullSizeCurrentScreensReviewed": 7,
+    "beforeAfterComparisonsReviewed": 2,
+    "uniformVideoSamplesReviewed": 12,
+    "observed": "Dedicated page routing, no repeated global tabs/banner or permanent reading panels; fixed preparation departure, visible tablet titles, unobstructed model controls and central play area. Long reading/gear/parent lists scroll. Whole rod stays slender and has a separate reel close-up. Boat scenery returns during real play, and all models/worlds remain prototype art.",
+    "scope": "Local visual review, not child/user/science/final art/physical or OS touch qualification"
+  },
+  "media": {
+    "files": 30,
+    "clips": [
+      {
+        "device": "phone",
+        "path": "art/previews/immersive-pages/phone-model-controls.mp4",
+        "start": 24.266117000579833,
+        "stop": 28.62996039390564,
+        "duration": 4.3638433933258085,
+        "rawDuration": 29.538333,
+        "visualSamples": 6,
+        "visualSampleTimes": [
+          0.1,
+          0.9227686786651617,
+          1.7455373573303234,
+          2.568306035995485,
+          3.391074714660647,
+          4.213843393325808
+        ],
+        "noAudio": true,
+        "colorExposureEdits": false,
+        "note": "Owned Simulator game display; only bounded trim/resize/30fps output sampling, not runtime FPS or OS touch."
+      },
+      {
+        "device": "tablet",
+        "path": "art/previews/immersive-pages/tablet-model-controls.mp4",
+        "start": 24.329613590240477,
+        "stop": 28.754651403427125,
+        "duration": 4.425037813186648,
+        "rawDuration": 29.73,
+        "visualSamples": 6,
+        "visualSampleTimes": [
+          0.1,
+          0.9350075626373296,
+          1.7700151252746594,
+          2.605022687911989,
+          3.4400302505493188,
+          4.275037813186648
+        ],
+        "noAudio": true,
+        "colorExposureEdits": false,
+        "note": "Owned Simulator game display; only bounded trim/resize/30fps output sampling, not runtime FPS or OS touch."
+      }
+    ],
+    "artifacts": [
+      {
+        "path": "art/previews/immersive-pages/phone-all-pages-1.jpg",
+        "sha256": "93f5ce520f3d58191f2c28a3cba17205965a8c7ab7e54199350f84ea05588735"
+      },
+      {
+        "path": "art/previews/immersive-pages/phone-all-pages-2.jpg",
+        "sha256": "a43a6ae60d31c4c6c3b30a380f254fe7464cbce282b283bb69c794d40babbd77"
+      },
+      {
+        "path": "art/previews/immersive-pages/phone-before-after.jpg",
+        "sha256": "aae4a4fa5a9af78ed31778ccec993453cec735b452374bedbd2e4afe14976d7e"
+      },
+      {
+        "path": "art/previews/immersive-pages/phone-fighting.png",
+        "sha256": "06500d9f88831d7238c468f3cc66a6b583b7f2e486223064f7bdceb072dfe71f"
+      },
+      {
+        "path": "art/previews/immersive-pages/phone-fishing-contact.jpg",
+        "sha256": "c04fd1e416cde2b9e6380ca99922461d0722f214c8dc14eaa8ff63e165348d47"
+      },
+      {
+        "path": "art/previews/immersive-pages/phone-landed.png",
+        "sha256": "4350661721483fa169386f968a7f5a3eef00bb292359d3dd2a59df2b79362ebc"
+      },
+      {
+        "path": "art/previews/immersive-pages/phone-model-controls.mp4",
+        "sha256": "3a81c8d83a6aec324b1bcd4159790fba5772e72da32bfd6e3a2547ff7a2a62c3"
+      },
+      {
+        "path": "art/previews/immersive-pages/phone-pages-exit.png",
+        "sha256": "02e6398b046ec2b359011adb0f44b7e2325c7d95aefbe5be4e679a39cbd05b9e"
+      },
+      {
+        "path": "art/previews/immersive-pages/phone-pages-fish-reading.png",
+        "sha256": "d9f962b80fde73c75531e75256b172ee827a9ddfbdf313deaf43f8747f56dd56"
+      },
+      {
+        "path": "art/previews/immersive-pages/phone-pages-fish.png",
+        "sha256": "4b75fd53d479df8ac2dda9279d4c8ee82fbba3af87b76df39b8f329e8c4cd550"
+      },
+      {
+        "path": "art/previews/immersive-pages/phone-pages-home.png",
+        "sha256": "0e563fe14bb0cc7cd1c26ff3333493d59e6e631c7df90d5f6168178a2a9f7d77"
+      },
+      {
+        "path": "art/previews/immersive-pages/phone-pages-preparation.png",
+        "sha256": "d1905b8e30a73499cdceccf33c4caa8e592d1318b0d89905acb8ec5478a15d3a"
+      },
+      {
+        "path": "art/previews/immersive-pages/phone-pages-settings.png",
+        "sha256": "bc80abe0d7d71eccb3bfea5765760d8a26c95a761edf4085a655411a537f9f66"
+      },
+      {
+        "path": "art/previews/immersive-pages/phone-ready.png",
+        "sha256": "bc647cc06c23fc4bf720c17289fd2600cd683b85d3b93df1ff696d57a57e3b97"
+      },
+      {
+        "path": "art/previews/immersive-pages/phone-recording-contact.jpg",
+        "sha256": "46ba890acf68caafcf343ee73c8319b38b094a09f244897135c841c4bc066960"
+      },
+      {
+        "path": "art/previews/immersive-pages/tablet-all-pages-1.jpg",
+        "sha256": "88d1afb94c9fd3b8bbeae1aedace5dc0a6f1738d696c9ab3d871ea2fec1dad21"
+      },
+      {
+        "path": "art/previews/immersive-pages/tablet-all-pages-2.jpg",
+        "sha256": "ae38a1823c03c9df50fb5f9524c54abecf3793facf5c501f6cd633b19f2f49af"
+      },
+      {
+        "path": "art/previews/immersive-pages/tablet-before-after.jpg",
+        "sha256": "fcf4a0a389d24dc06892ec8c6c6c7042cc38621727bdac3daf0660c9d24cfde9"
+      },
+      {
+        "path": "art/previews/immersive-pages/tablet-fighting.png",
+        "sha256": "d7c68398121f8459211e8e2a86839030bed27ee740f4ee8a94abbe82bef473ee"
+      },
+      {
+        "path": "art/previews/immersive-pages/tablet-fishing-contact.jpg",
+        "sha256": "451dd119e5c2c7417ff447d68a693dca05824dfdb865e53350fe0171dab4b934"
+      },
+      {
+        "path": "art/previews/immersive-pages/tablet-landed.png",
+        "sha256": "2b6e189ca54b1f0794d3c1aa7b9efaf659a76a05ca066f12b626d81e8d8d949d"
+      },
+      {
+        "path": "art/previews/immersive-pages/tablet-model-controls.mp4",
+        "sha256": "a644124ed7f24fd71f38eed8f9275d64a54dcd5b9ad576b878d92a0e725707e0"
+      },
+      {
+        "path": "art/previews/immersive-pages/tablet-pages-exit.png",
+        "sha256": "a96627e2e0806447ecd3a9ca6cae7774484a53322457c7af23371c966145b195"
+      },
+      {
+        "path": "art/previews/immersive-pages/tablet-pages-fish-reading.png",
+        "sha256": "d5303bf8c0a7ca3be104d375899a34a87bf91057d99a25986fe3e0ec04a13a1e"
+      },
+      {
+        "path": "art/previews/immersive-pages/tablet-pages-fish.png",
+        "sha256": "59dff0ea73519970ce683362b10d5a4780f8f765fff0e5b19ae55589a489c419"
+      },
+      {
+        "path": "art/previews/immersive-pages/tablet-pages-home.png",
+        "sha256": "19d33f694cbe8eb1752eb6d39763c3b21500e91ea552467d27ec41021075848d"
+      },
+      {
+        "path": "art/previews/immersive-pages/tablet-pages-preparation.png",
+        "sha256": "242b596e52b0821308085b194784e8620e8e7386fb0bacdf0f06ec470a8adeab"
+      },
+      {
+        "path": "art/previews/immersive-pages/tablet-pages-settings.png",
+        "sha256": "7ebac253fe4f9b3f31a1eadadaf1cbdd0e7cdd7591641e789c7f3f63eab7242c"
+      },
+      {
+        "path": "art/previews/immersive-pages/tablet-ready.png",
+        "sha256": "15737e149ab55019b5e92c87e0014fb1226a08a890e18d8cabbe45f166291877"
+      },
+      {
+        "path": "art/previews/immersive-pages/tablet-recording-contact.jpg",
+        "sha256": "d2fc82daa97a3154120e3d9d665510f92b13e23a205f61611372ce1abf37880b"
+      }
+    ]
+  },
+  "storage": {
+    "sharedHardStopGiB": 120,
+    "policyChanged": false,
+    "expectedGrowthGiB": 1,
+    "observedMachineFreeDeltaGiB": 1.3258590698242188,
+    "freeBeforeGiB": 121.04817199707031,
+    "freeAfterGiB": 119.7223129272461,
+    "interpretation": "Guard applied admission policy. One GiB no-debug estimate was low; observed free delta includes concurrent activity. Use at least two GiB for future builds. Intermediate/static compiler caches were intentionally discarded; full original Unity cache ZIP, source, runtime rollback apps, release artifacts, saves and QA records/media retained. No other project cleanup."
+  },
+  "historicalIndependentAudit": "INCOMPLETE",
+  "distribution": "LOCAL_SIMULATOR_ONLY; no personal phone or TestFlight change",
+  "remaining": [
+    "Final realistic art and all finished species/gear/scenery",
+    "User/science/child review and first fish experience",
+    "OS touch, minimum OS/performance and dual physical 20-minute qualification",
+    "Current-source TestFlight installation and complete product/apply acceptance"
+  ],
+  "currentIncrementRecordIntegrity": {
+    "status": "PASS_CURRENT_INCREMENT_EXCLUDING_RUNNING_SELF",
+    "historicalOverall": "INCOMPLETE",
+    "newCompleted": 81,
+    "newStarts": 82,
+    "oldObjectsUnchanged": true,
+    "receiptsAndBindingsVerified": true,
+    "completedIntervalsDisjoint": true,
+    "onlyRunningSelfPending": true,
+    "failuresRetained": [
+      {
+        "receipt": "measurements/bluefin-eye-source-red.json",
+        "exitCode": 1
+      },
+      {
+        "receipt": "measurements/bluefin-eye-build-a.json",
+        "exitCode": 1
+      },
+      {
+        "receipt": "measurements/bluefin-eye-build-b.json",
+        "exitCode": 1
+      },
+      {
+        "receipt": "measurements/bluefin-eye-source-red-extended.json",
+        "exitCode": 1
+      },
+      {
+        "receipt": "measurements/bluefin-eye-simulator-build.json",
+        "exitCode": 3
+      },
+      {
+        "receipt": "measurements/immersive-pages-play-a.json",
+        "exitCode": 254
+      },
+      {
+        "receipt": "measurements/immersive-pages-shared-media-blocks.json",
+        "exitCode": 1
+      },
+      {
+        "receipt": "measurements/immersive-pages-play-b.json",
+        "exitCode": 254
+      },
+      {
+        "receipt": "measurements/immersive-pages-play-c.json",
+        "exitCode": 2
+      },
+      {
+        "receipt": "measurements/immersive-pages-play-d.json",
+        "exitCode": 2
+      },
+      {
+        "receipt": "measurements/immersive-pages-play-e.json",
+        "exitCode": 2
+      },
+      {
+        "receipt": "measurements/immersive-pages-simulator-native-a.json",
+        "exitCode": 3
+      },
+      {
+        "receipt": "measurements/immersive-pages-simulator-native-release-b.json",
+        "exitCode": 65
+      },
+      {
+        "receipt": "measurements/immersive-pages-simulator-native-release-c.json",
+        "exitCode": 3
+      },
+      {
+        "receipt": "measurements/immersive-pages-tablet-a.json",
+        "exitCode": 1
+      },
+      {
+        "receipt": "measurements/immersive-pages-restore-library.json",
+        "exitCode": 1
+      },
+      {
+        "receipt": "measurements/immersive-pages-editor-h.json",
+        "exitCode": 2
+      }
+    ],
+    "scope": "Own local state/receipt integrity; not formal independent CLI audit or product acceptance",
+    "selfCompletionReceipt": {
+      "id": "2877eab8-40b0-4dbc-9065-26bb45633d19",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "6ec1932e1aa3c039877d7e26771bdcd7cc07f316c5940a051d0611472de4b37d",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T11:29:58.605Z",
+      "finishedAt": "2026-11-25T11:29:58.690Z",
+      "durationMs": 58.741083,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null
+    },
+    "completedIncludingSelf": 82
+  }
+}

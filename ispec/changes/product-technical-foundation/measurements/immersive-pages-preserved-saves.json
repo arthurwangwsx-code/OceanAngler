@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "c4043667-dad9-4c21-b70e-8d85ca92c2e4",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "8a89cb19432a3b6ff16487f6efb2cf4dbb7711f43940f9cb580966f8a8afbadd",
+    "category": "e2e",
+    "executable": "python3",
+    "startedAt": "2026-11-25T11:21:56.097Z",
+    "finishedAt": "2026-11-25T11:21:56.636Z",
+    "durationMs": 512.735583,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/immersive-pages-qa/retain-saves.py",
+      "after"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/immersive-pages-qa/retain-saves.py",
+    "after"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T11:21:56.097Z",
+  "finishedAt": "2026-11-25T11:21:56.636Z",
+  "durationMs": 512.735583
+}

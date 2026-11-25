@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "8e96c94c-c3fa-412d-8526-c5339ecdc4cd",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "580cb6a5e3cbdd1c6099d6d53ce78b667a3696e8f87dc125d680ab66f3bb9a50",
+    "category": "e2e",
+    "executable": "python3",
+    "startedAt": "2026-11-25T11:21:42.214Z",
+    "finishedAt": "2026-11-25T11:21:43.170Z",
+    "durationMs": 927.723875,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "python3",
+    "args": [
+      ".local/immersive-pages-qa/verify-fishing-native.py",
+      "immersivefishingtabletb"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "python3",
+    ".local/immersive-pages-qa/verify-fishing-native.py",
+    "immersivefishingtabletb"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T11:21:42.214Z",
+  "finishedAt": "2026-11-25T11:21:43.170Z",
+  "durationMs": 927.723875
+}

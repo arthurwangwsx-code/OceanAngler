@@ -3815,6 +3815,137 @@
         }
       ],
       "note": "Four source before/after close-ups and four selected imported Metal images reviewed. AgX studio and Unity Gamma are separate scopes. Removed raised independent pupil rim; gill stipple, anatomy/fin/material realism, final art/science/user/child and physical device qualification remain open. Not native player screenshots."
+    },
+    {
+      "id": "immersive-dedicated-pages-native",
+      "author": "OceanAngler contributors",
+      "source": "Own native Simulator game captures from frozen source 79692d81d4abc9bae2c41f604cbd847cb3e4fafa",
+      "license": "MIT",
+      "redistribution": true,
+      "status": "LOCAL_UI_PASS_ART_PARTIAL",
+      "artifacts": [
+        {
+          "path": "art/previews/immersive-pages/phone-all-pages-1.jpg",
+          "sha256": "93f5ce520f3d58191f2c28a3cba17205965a8c7ab7e54199350f84ea05588735"
+        },
+        {
+          "path": "art/previews/immersive-pages/phone-all-pages-2.jpg",
+          "sha256": "a43a6ae60d31c4c6c3b30a380f254fe7464cbce282b283bb69c794d40babbd77"
+        },
+        {
+          "path": "art/previews/immersive-pages/phone-before-after.jpg",
+          "sha256": "aae4a4fa5a9af78ed31778ccec993453cec735b452374bedbd2e4afe14976d7e"
+        },
+        {
+          "path": "art/previews/immersive-pages/phone-fighting.png",
+          "sha256": "06500d9f88831d7238c468f3cc66a6b583b7f2e486223064f7bdceb072dfe71f"
+        },
+        {
+          "path": "art/previews/immersive-pages/phone-fishing-contact.jpg",
+          "sha256": "c04fd1e416cde2b9e6380ca99922461d0722f214c8dc14eaa8ff63e165348d47"
+        },
+        {
+          "path": "art/previews/immersive-pages/phone-landed.png",
+          "sha256": "4350661721483fa169386f968a7f5a3eef00bb292359d3dd2a59df2b79362ebc"
+        },
+        {
+          "path": "art/previews/immersive-pages/phone-model-controls.mp4",
+          "sha256": "3a81c8d83a6aec324b1bcd4159790fba5772e72da32bfd6e3a2547ff7a2a62c3"
+        },
+        {
+          "path": "art/previews/immersive-pages/phone-pages-exit.png",
+          "sha256": "02e6398b046ec2b359011adb0f44b7e2325c7d95aefbe5be4e679a39cbd05b9e"
+        },
+        {
+          "path": "art/previews/immersive-pages/phone-pages-fish-reading.png",
+          "sha256": "d9f962b80fde73c75531e75256b172ee827a9ddfbdf313deaf43f8747f56dd56"
+        },
+        {
+          "path": "art/previews/immersive-pages/phone-pages-fish.png",
+          "sha256": "4b75fd53d479df8ac2dda9279d4c8ee82fbba3af87b76df39b8f329e8c4cd550"
+        },
+        {
+          "path": "art/previews/immersive-pages/phone-pages-home.png",
+          "sha256": "0e563fe14bb0cc7cd1c26ff3333493d59e6e631c7df90d5f6168178a2a9f7d77"
+        },
+        {
+          "path": "art/previews/immersive-pages/phone-pages-preparation.png",
+          "sha256": "d1905b8e30a73499cdceccf33c4caa8e592d1318b0d89905acb8ec5478a15d3a"
+        },
+        {
+          "path": "art/previews/immersive-pages/phone-pages-settings.png",
+          "sha256": "bc80abe0d7d71eccb3bfea5765760d8a26c95a761edf4085a655411a537f9f66"
+        },
+        {
+          "path": "art/previews/immersive-pages/phone-ready.png",
+          "sha256": "bc647cc06c23fc4bf720c17289fd2600cd683b85d3b93df1ff696d57a57e3b97"
+        },
+        {
+          "path": "art/previews/immersive-pages/phone-recording-contact.jpg",
+          "sha256": "46ba890acf68caafcf343ee73c8319b38b094a09f244897135c841c4bc066960"
+        },
+        {
+          "path": "art/previews/immersive-pages/tablet-all-pages-1.jpg",
+          "sha256": "88d1afb94c9fd3b8bbeae1aedace5dc0a6f1738d696c9ab3d871ea2fec1dad21"
+        },
+        {
+          "path": "art/previews/immersive-pages/tablet-all-pages-2.jpg",
+          "sha256": "ae38a1823c03c9df50fb5f9524c54abecf3793facf5c501f6cd633b19f2f49af"
+        },
+        {
+          "path": "art/previews/immersive-pages/tablet-before-after.jpg",
+          "sha256": "fcf4a0a389d24dc06892ec8c6c6c7042cc38621727bdac3daf0660c9d24cfde9"
+        },
+        {
+          "path": "art/previews/immersive-pages/tablet-fighting.png",
+          "sha256": "d7c68398121f8459211e8e2a86839030bed27ee740f4ee8a94abbe82bef473ee"
+        },
+        {
+          "path": "art/previews/immersive-pages/tablet-fishing-contact.jpg",
+          "sha256": "451dd119e5c2c7417ff447d68a693dca05824dfdb865e53350fe0171dab4b934"
+        },
+        {
+          "path": "art/previews/immersive-pages/tablet-landed.png",
+          "sha256": "2b6e189ca54b1f0794d3c1aa7b9efaf659a76a05ca066f12b626d81e8d8d949d"
+        },
+        {
+          "path": "art/previews/immersive-pages/tablet-model-controls.mp4",
+          "sha256": "a644124ed7f24fd71f38eed8f9275d64a54dcd5b9ad576b878d92a0e725707e0"
+        },
+        {
+          "path": "art/previews/immersive-pages/tablet-pages-exit.png",
+          "sha256": "a96627e2e0806447ecd3a9ca6cae7774484a53322457c7af23371c966145b195"
+        },
+        {
+          "path": "art/previews/immersive-pages/tablet-pages-fish-reading.png",
+          "sha256": "d5303bf8c0a7ca3be104d375899a34a87bf91057d99a25986fe3e0ec04a13a1e"
+        },
+        {
+          "path": "art/previews/immersive-pages/tablet-pages-fish.png",
+          "sha256": "59dff0ea73519970ce683362b10d5a4780f8f765fff0e5b19ae55589a489c419"
+        },
+        {
+          "path": "art/previews/immersive-pages/tablet-pages-home.png",
+          "sha256": "19d33f694cbe8eb1752eb6d39763c3b21500e91ea552467d27ec41021075848d"
+        },
+        {
+          "path": "art/previews/immersive-pages/tablet-pages-preparation.png",
+          "sha256": "242b596e52b0821308085b194784e8620e8e7386fb0bacdf0f06ec470a8adeab"
+        },
+        {
+          "path": "art/previews/immersive-pages/tablet-pages-settings.png",
+          "sha256": "7ebac253fe4f9b3f31a1eadadaf1cbdd0e7cdd7591641e789c7f3f63eab7242c"
+        },
+        {
+          "path": "art/previews/immersive-pages/tablet-ready.png",
+          "sha256": "15737e149ab55019b5e92c87e0014fb1226a08a890e18d8cabbe45f166291877"
+        },
+        {
+          "path": "art/previews/immersive-pages/tablet-recording-contact.jpg",
+          "sha256": "d2fc82daa97a3154120e3d9d665510f92b13e23a205f61611372ce1abf37880b"
+        }
+      ],
+      "note": "18 exact current PNGs, six page/fishing overview sheets, two old/current comparisons, two bounded recordings and two six-sample recording sheets. No personal media, device logs or home screen. Model/scenery art remains prototype."
     }
   ],
   "note": "Licensed font plus original candidate assets. Candidate assets are not production art acceptance."
