@@ -50,11 +50,11 @@
       "acquiredAt": "2026-11-23",
       "status": "ART_REVIEW_PENDING",
       "path": "art/source/bluefin/Bluefin.blend",
-      "sha256": "dba5bb2ea468746104f05130a65db821b44e0603c09853554737a0b4cfdc46ca",
+      "sha256": "ea83aaad66c826efe0e5e826d655eaa339d20b3c5f4b373705f2257e16a333a9",
       "artifacts": [
         {
           "path": "art/source/bluefin/Bluefin.blend",
-          "sha256": "dba5bb2ea468746104f05130a65db821b44e0603c09853554737a0b4cfdc46ca"
+          "sha256": "ea83aaad66c826efe0e5e826d655eaa339d20b3c5f4b373705f2257e16a333a9"
         },
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin_BaseColor.png",
@@ -78,7 +78,7 @@
         },
         {
           "path": "game/Assets/OceanAngler/Art/Bluefin/Bluefin.fbx",
-          "sha256": "3e722fd16fb6107a5c42f60911bc8f80f5837c7dfe46b3e5f4e4e9ddb171e3bc"
+          "sha256": "b2785628cc5404fd9f84c75c49be407a4204771b18a2443f251f8b0a37a84966"
         },
         {
           "path": "art/previews/bluefin/bite.png",
@@ -147,11 +147,11 @@
         },
         {
           "path": "game/Assets/OceanAngler/Resources/Models/Bluefin.prefab",
-          "sha256": "70ff9e18fed6d5f2d16457a66ca6b98a60325105c82db3533913dd664bb13711"
+          "sha256": "416aa0eb2177492a7e9b0971cf32a029e0365d643617b22ed770a208d09e4d0d"
         },
         {
           "path": "art/source/bluefin/build-report.json",
-          "sha256": "805970e486bd1865eed78a5a46bb289a4dfa2cca29a074506a0840c1ef69463d"
+          "sha256": "d7bb01d0935bb4175a99e6c5c805e03a69000e31b0cf8c6bc4130d6302f4c6b3"
         },
         {
           "path": "art/previews/bluefin-fin-tissue/first-native-phone-exit.png",
@@ -265,7 +265,7 @@
         }
       ],
       "note": "Original bluefin trevally mesh, UV, PBR maps, 12-bone rig, seven animation clips and three LODs. Scientific/visual/user/device acceptance remains open. No third-party photographs or models included.",
-      "modifiedAt": "2026-11-25",
+      "modifiedAt": "2026-11-26",
       "modifications": "Fin membranes rebuilt with tapered closed shells in all three LODs; original RGBA, normal, roughness and packed maps; separate opaque rays. Material slots6->7 explicitly; triangles24664/9864/3699 within unchanged25000 LOD0 budget,12bones/7motions retained. Actual source checks and isolated HDR Metal controls pass; source/Player visual, scientific, user and device gates remain separate. Pectoral trailing-edge curve candidate B after visibly rejecting A; existing maps unchanged, LOD0 non-pectoral geometry/UV/weights/material roles normalized-identical. Art/science/user/Player qualification pending. Distance fin meshes retain16 complete opaque outline-ray components, closed tapered membrane and original PBR. Entire nearLOD0 geometry/UV/weights unchanged at six-decimal canonical identity; all original PNG bytes unchanged. LOD budgets24664/9864/3698 unchanged. Screen-size thresholds revised;58 Metal diagnostic frames and auto-vs-forced selected LOD pixel identity checked. Art/science/user/native followup pending. Neutral silver/grey-brass body albedo; actual saved allLOD geometry,UV,weights and material roles retained; FBX and eight other PNG bytes unchanged. maps-only entry preserves existing authored/reduced meshes. Local128 reflection probe remains an unadopted Editor diagnostic; no production reflection asset. Source189 checks,linked image pixels and three-view stable controls qualified; full art/science/user/native followup pending. Periodic motion update: saved source geometry/UV/weights/rest rig and nine PNGs independently retained; source actions and re-exported FBX updated. Native controller uses seven own editable derived clips, six periodic endpoint tangents and non-loop release. Source and Editor scoped checks pass; Player and full natural/scientific/user/physical art qualification separate.",
       "nativeFollowup": "reports/bluefin-distance-fins.json; d50f1c3 scoped dual15-frame flow; selected visuals reviewed; full art remains partial",
       "neutralAlbedoNativeFollowup": "reports/bluefin-neutral-albedo.json; source-specific scoped dual15-frame flow and selected originals; full art remains partial",
@@ -303,6 +303,22 @@
         "protectedFaces": 16670,
         "scope": "Original integrated skin rim; source-surface/UV/weights and rest/actions checks only. Actual Unity import and general Editor regression pass. No third-party media, final art, scientific or physical acceptance.",
         "documentation": "docs/44-bluefin-opercular-rim.md"
+      },
+      "mouthSurfaceFollowup": {
+        "status": "SOURCE_AND_EDITOR_PASS_ART_PARTIAL",
+        "recipe": "separate-internal-mouth-roof-v1",
+        "source": "tools/art_bluefin_mouth_surface.py",
+        "documentation": "docs/50-bluefin-mouth-surface.md",
+        "triangles": [
+          24739,
+          10679,
+          4899
+        ],
+        "retainedFaceGeometryUvWeightsExact": true,
+        "unchangedBones": 16,
+        "unchangedActions": 7,
+        "unchangedMaps": 9,
+        "scope": "Remove five hidden roof faces per LOD; split remaining internal-roof normals from outer cheek. High LOD crease improves; lower LOD shading, gill depth, complete art/science/user/native remain open."
       }
     },
     {
@@ -3630,7 +3646,7 @@
       "artifacts": [
         {
           "path": "game/Assets/OceanAngler/Resources/JournalEnvelopes.json",
-          "sha256": "32557743abdeaced438d4e7380a12e1d3f0a033dd5e980213a6b001605a08ecd"
+          "sha256": "4781ecd88e3cb3a127440b5ff61f69acd521bd26abdfc5ba85ea739e8d46cae0"
         },
         {
           "path": "game/Assets/OceanAngler/Editor/JournalEnvelopeBuilder.cs",

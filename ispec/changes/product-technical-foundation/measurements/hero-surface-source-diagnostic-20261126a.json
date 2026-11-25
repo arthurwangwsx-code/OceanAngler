@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "d7a5ef2e-2f02-4481-916d-b4d6a5f45cdb",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "d6c85eb0981ef072c0cae27376ebbf20e0f4a5315ae7ac6c881e1117148f512b",
+    "category": "test",
+    "executable": "Blender",
+    "startedAt": "2026-11-25T17:38:10.616Z",
+    "finishedAt": "2026-11-25T17:38:12.730Z",
+    "durationMs": 2076.296125,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "/Applications/Blender.app/Contents/MacOS/Blender",
+    "args": [
+      "--background",
+      "art/source/bluefin/Bluefin.blend",
+      "--threads",
+      "4",
+      "--python-exit-code",
+      "1",
+      "--python",
+      "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b/.local/hero-surface-qa/source-diagnostic.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "/Applications/Blender.app/Contents/MacOS/Blender",
+    "--background",
+    "art/source/bluefin/Bluefin.blend",
+    "--threads",
+    "4",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b/.local/hero-surface-qa/source-diagnostic.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T17:38:10.616Z",
+  "finishedAt": "2026-11-25T17:38:12.730Z",
+  "durationMs": 2076.296125
+}

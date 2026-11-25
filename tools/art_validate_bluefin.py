@@ -140,6 +140,7 @@ if rig and all(lods):
         corner_drift=max(((p-corner_positions[0][i]).length for pose in corner_positions for i,p in enumerate(pose)),default=float('inf'))
         check(corner_drift<.001,'动作中实际嘴角皮肤无明显漂移：'+name)
         report['motion'][name]={'tailRotationRange':spread,'jawRotationRange':jaw_spread,'maximumGillDistanceToBody':max(gill_clearance),'maximumMouthCornerDrift':corner_drift}
+mouth_path=ROOT/'tools/art_validate_mouth_surface.py';scope={'__file__':str(mouth_path),'__name__':'mouth_surface_validation'};exec(compile(mouth_path.read_text(),str(mouth_path),'exec'),scope);report['mouthTopology']=scope['inspect']();check(report['mouthTopology']['status']=='PASS','内部口腔盖面不共享外部面颊平滑拓扑')
 tissue_path=ROOT/'tools/art_validate_fin_tissue.py';scope={'__file__':str(tissue_path),'__name__':'fin_tissue_validation'};exec(compile(tissue_path.read_text(),str(tissue_path),'exec'),scope);report['finTissue']=scope['inspect']();checks.extend(report['finTissue']['checks']);failures.extend(report['finTissue']['failures'])
 report['status']='FAIL' if failures else 'ENGINEERING_CHECKS_PASS'
 path=ROOT/'.local/art/bluefin/validation.json';path.parent.mkdir(parents=True,exist_ok=True);path.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')

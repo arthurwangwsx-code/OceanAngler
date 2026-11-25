@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "7e7a49ad-eab5-47ac-a74a-ca0d95e9fd48",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "fc422582d99ef8fad5014a9220cc97c6c56b313035f2ab45931065bd882a1001",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-25T17:51:27.085Z",
+    "finishedAt": "2026-11-25T17:51:32.910Z",
+    "durationMs": 5785.755292,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "args": [
+      "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b/.local/hero-surface-qa/invariant-checks.py"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b/.local/hero-surface-qa/invariant-checks.py"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T17:51:27.085Z",
+  "finishedAt": "2026-11-25T17:51:32.910Z",
+  "durationMs": 5785.755292
+}

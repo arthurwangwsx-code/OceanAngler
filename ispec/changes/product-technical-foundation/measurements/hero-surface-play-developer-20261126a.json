@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "kind": "run-measurement",
+  "measurement": {
+    "id": "3bcd9d03-9865-4a73-9441-84a5a5195cb5",
+    "runId": null,
+    "stageId": "apply",
+    "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+    "commandDigest": "dcc03eb9abffb355c986d9ce5531b27caea6abd1dabdc724ce356cfe9073e27d",
+    "category": "test",
+    "executable": "python3",
+    "startedAt": "2026-11-25T17:51:33.320Z",
+    "finishedAt": "2026-11-25T17:52:13.855Z",
+    "durationMs": 40506.058,
+    "exitCode": 0,
+    "signal": null,
+    "errorCode": null
+  },
+  "invocation": {
+    "executable": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "args": [
+      "tools/game.py",
+      "tests",
+      "--test-platform",
+      "PlayMode",
+      "--test-filter",
+      "DeveloperModeTests",
+      "--label",
+      "headsurfaceplaydeveloper20261126a"
+    ],
+    "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b"
+  },
+  "argv": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "tools/game.py",
+    "tests",
+    "--test-platform",
+    "PlayMode",
+    "--test-filter",
+    "DeveloperModeTests",
+    "--label",
+    "headsurfaceplaydeveloper20261126a"
+  ],
+  "cwd": "/Users/ai/Documents/Codex/2026-11-23/1-3d-2-3-a-b",
+  "exitCode": 0,
+  "startedAt": "2026-11-25T17:51:33.320Z",
+  "finishedAt": "2026-11-25T17:52:13.855Z",
+  "durationMs": 40506.058
+}

@@ -14,6 +14,8 @@ REQ-13初次交付记录（5e4／TestFlight9）IMPLEMENTED、当时双端原生�
 
 ## 2. 工程基础
 
+- [ ] 2.10 首条英雄鱼嘴角近景：检查保存网格内部盖面／法线与实际运行时两侧、三LOD和咬钩动作；用独立材质消融定位白色折痕，只做有证据支持的局部修正。保留九贴图、原七动作及非头部几何；源／导入／Metal／模拟器和完整美术分别验收。局部内部盖面修正IMPLEMENTED，190源／88Editor／5独立Play与两套12视角Metal通过；低LOD外观、原生和完整美术仍PARTIAL，整体IN_PROGRESS，科学和用户审阅仍开放。见docs/50-bluefin-mouth-surface.md。
+
 - [ ] 2.9 首条英雄鱼近景鳍缘诊断：针对原生图鉴背鳍上方细线，先测量全部鳍条与实际变形鳍膜，再以生产材质／独立不透明／双面／无鳍条对照查证导入渲染。仅修复证据支持的原因，保留原候选与失败记录；源码、Metal、原生及美术分别验收。水下排序已IMPLEMENTED／双端模拟器PASS，场景首绘111像素和完整美术PARTIAL，整体仍IN_PROGRESS；见docs/49-underwater-fin-contour.md与reports/underwater-fin-contour.md。
 
 - [x] 2.8 首条蓝鳍鲹胸鳍柔性工程：保留原顶点／胸鳍外几何／UV／九贴图、原12骨与七动作原曲线，只沿原面细分胸鳍膜，每侧增加两段弯曲控制；源／导入以移动鳍根坐标及开关新增控制的实际网格消融核验，保持根部贴合、四权重／25000面预算。GPU及双端实际播放／暂停另验，用户／科学／A1–A3不以工程通过替代。实现IMPLEMENTED、有限工程/当前双端模拟器PASS，完整拟真美术PARTIAL；309源/42贴合、85 Editor/5定向Play、84 Metal视角及同包正常20/26轮完整成长/恢复与232份旧文件保持通过。见docs/48-bluefin-pectoral-flex.md和reports/bluefin-pectoral-flex.md；本项只勾选柔性工程，原2.4/真机/美术/apply不完成，先完成首套方向审阅再批量制作其余物种。

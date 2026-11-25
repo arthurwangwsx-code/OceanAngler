@@ -5,18 +5,18 @@
   "blender": "5.3.0",
   "lods": {
     "Bluefin_LOD0": {
-      "triangles": 24748,
-      "vertices": 12875,
+      "triangles": 24739,
+      "vertices": 12885,
       "uvLayers": 1
     },
     "Bluefin_LOD1": {
-      "triangles": 10688,
-      "vertices": 5759,
+      "triangles": 10679,
+      "vertices": 5765,
       "uvLayers": 1
     },
     "Bluefin_LOD2": {
-      "triangles": 4908,
-      "vertices": 3044,
+      "triangles": 4899,
+      "vertices": 3048,
       "uvLayers": 1
     }
   },
@@ -526,5 +526,38 @@
       }
     },
     "scope": "Authored flexible paired-fin animation; only coplanar paired-fin membrane refinement; original vertices, maps, body, rays and original bones/curves retained, not measured Caranx biomechanics or final art acceptance"
+  },
+  "mouthSurface": {
+    "recipe": "separate-internal-mouth-roof-v1",
+    "lods": {
+      "Bluefin_LOD0": {
+        "removedHiddenRoofFaces": 5,
+        "splitBoundaryEdges": 10,
+        "retainedFaces": 12509,
+        "retainedFaceDigest": "ad57f41a9a9bcf63ba910e0557191a30cea24f5343cc332999dadd702397581c",
+        "allRetainedFaceGeometryWindingUvWeightsExact": true,
+        "triangles": 24739,
+        "vertices": 12885
+      },
+      "Bluefin_LOD1": {
+        "removedHiddenRoofFaces": 5,
+        "splitBoundaryEdges": 6,
+        "retainedFaces": 6227,
+        "retainedFaceDigest": "f46eca241526af76a14b86d84d3cd267e9d0830064baf175896be9d5214afbe1",
+        "allRetainedFaceGeometryWindingUvWeightsExact": true,
+        "triangles": 10679,
+        "vertices": 5765
+      },
+      "Bluefin_LOD2": {
+        "removedHiddenRoofFaces": 5,
+        "splitBoundaryEdges": 4,
+        "retainedFaces": 2997,
+        "retainedFaceDigest": "33f5e80d5243caceabeba8defe1638fa570682bb8e619da03a5972da33218949",
+        "allRetainedFaceGeometryWindingUvWeightsExact": true,
+        "triangles": 4899,
+        "vertices": 3048
+      }
+    },
+    "scope": "Hidden jaw roof and normal separation only; not complete mouth anatomy/art acceptance"
   }
 }

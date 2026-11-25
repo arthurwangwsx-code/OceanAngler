@@ -653,6 +653,22 @@
       "checkedAt": "2026-11-25T16:30:53.473Z",
       "durationMs": 167.176333,
       "outcome": "accepted"
+    },
+    {
+      "stageId": "apply",
+      "runId": null,
+      "operation": "start",
+      "checkedAt": "2026-11-25T17:32:01.291Z",
+      "durationMs": 205.91483300000004,
+      "outcome": "accepted"
+    },
+    {
+      "stageId": "apply",
+      "runId": null,
+      "operation": "start",
+      "checkedAt": "2026-11-25T17:34:40.714Z",
+      "durationMs": 217.89937499999996,
+      "outcome": "accepted"
     }
   ],
   "measurementJournal": {
@@ -19892,6 +19908,248 @@
       "executable": "python3",
       "commandDigest": "ea0b0e4c9d2e0e5ae67a53f626567f2110d5054932b0d27164c97c2b9c74c60d",
       "receiptPath": "measurements/fin-contour-record-integrity-20261126.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "d7a5ef2e-2f02-4481-916d-b4d6a5f45cdb",
+      "startedAt": "2026-11-25T17:38:10.616Z",
+      "executable": "Blender",
+      "commandDigest": "d6c85eb0981ef072c0cae27376ebbf20e0f4a5315ae7ac6c881e1117148f512b",
+      "receiptPath": "measurements/hero-surface-source-diagnostic-20261126a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "a9e99162-e883-4689-987c-92531121db29",
+      "startedAt": "2026-11-25T17:38:13.122Z",
+      "executable": "python3",
+      "commandDigest": "41018871d42cd97349a0a6ef2b9564299e58aa7fde392cdda0458746cccac3ad",
+      "receiptPath": "measurements/hero-surface-gpu-before-20261126a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "eca37f7c-9d88-45c8-9c3d-a99456fc6f08",
+      "startedAt": "2026-11-25T17:42:32.771Z",
+      "executable": "Blender",
+      "commandDigest": "3dbad5c8422865ba38b330e11d41b017f8fc9d5dc46af55c75adecca97c12239",
+      "receiptPath": "measurements/hero-surface-mouth-red-20261126a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "845f8433-d02b-4e0b-a2c7-c132221dc146",
+      "startedAt": "2026-11-25T17:42:35.338Z",
+      "executable": "Blender",
+      "commandDigest": "d4ddc1d9a5bd060799ef7ad9054c25ed9d8cc2b12e3bbf7285019b7a87b43847",
+      "receiptPath": "measurements/hero-surface-invariants-before-20261126a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "9d1c403c-5206-4d29-937c-b4595d805e8a",
+      "startedAt": "2026-11-25T17:42:36.877Z",
+      "executable": "Blender",
+      "commandDigest": "de85d09dab6336867ba89fa6d4849cc5212914adf981ab224e971df4fc851c42",
+      "receiptPath": "measurements/hero-surface-repair-20261126a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "35f6166a-30ee-4c72-8276-0e5071bd9f3c",
+      "startedAt": "2026-11-25T17:42:40.833Z",
+      "executable": "Blender",
+      "commandDigest": "3dbad5c8422865ba38b330e11d41b017f8fc9d5dc46af55c75adecca97c12239",
+      "receiptPath": "measurements/hero-surface-mouth-green-20261126a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "b83e76a3-8c11-4b3c-b9fa-2853a13e540f",
+      "startedAt": "2026-11-25T17:42:42.443Z",
+      "executable": "Blender",
+      "commandDigest": "3ae0599c4ef56aaca49467b3dfdc70468c09a839cfea7b5f0fd80a9b4b10964e",
+      "receiptPath": "measurements/hero-surface-invariants-after-20261126a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "c5c174af-2c79-4bfc-a41e-c80e06b0b371",
+      "startedAt": "2026-11-25T17:42:43.973Z",
+      "executable": "Blender",
+      "commandDigest": "230caf483c3242cb059a8002b6407e0a589ef2cccfff26fbbde7d4bd6d1553e2",
+      "receiptPath": "measurements/hero-surface-source-validation-20261126a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "8fce3323-3914-431c-8c32-61a11d487bd2",
+      "startedAt": "2026-11-25T17:42:46.860Z",
+      "executable": "python3",
+      "commandDigest": "2ad64e011f1f235358552982cfd511ff622ea32200546f09e2eb3465190c866f",
+      "receiptPath": "measurements/hero-surface-import-20261126a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "293169a7-831d-4392-9693-212a37b29db9",
+      "startedAt": "2026-11-25T17:42:58.075Z",
+      "executable": "python3",
+      "commandDigest": "c9e3466f0f963cee4388d27e61a128d5a57ba4fc342243854e69afde647f958e",
+      "receiptPath": "measurements/hero-surface-gpu-after-20261126a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "9b0b55ef-805c-4d24-b812-71fe63bacdc9",
+      "startedAt": "2026-11-25T17:43:10.386Z",
+      "executable": "python3",
+      "commandDigest": "c6e619de0d21d04d1a22f414b7f15793f51ab5f63a00397735b805715ec2de14",
+      "receiptPath": "measurements/hero-surface-editor-20261126a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "5da15770-6398-4ea2-931e-52e450b0afe1",
+      "startedAt": "2026-11-25T17:47:24.960Z",
+      "executable": "Blender",
+      "commandDigest": "230caf483c3242cb059a8002b6407e0a589ef2cccfff26fbbde7d4bd6d1553e2",
+      "receiptPath": "measurements/hero-surface-source-final-20261126a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "a13e2657-415b-4a52-82be-b56e1bbff939",
+      "startedAt": "2026-11-25T17:47:29.411Z",
+      "executable": "Blender",
+      "commandDigest": "cad4920636bd7a2927e8559560336a7233812889136f3ce15c4faa4577442fb0",
+      "receiptPath": "measurements/hero-surface-post-diagnostic-20261126a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "e2e",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "8abed4cd-d560-4ead-a43c-0210be64fe38",
+      "startedAt": "2026-11-25T17:47:30.908Z",
+      "executable": "python3",
+      "commandDigest": "62f29ba3f343c12eaf540c9ad75cbd05039373352893011770166f57c1590fd4",
+      "receiptPath": "measurements/hero-surface-contacts-20261126a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "compile",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "d75db93e-433f-44be-81f4-5b0b439bfb47",
+      "startedAt": "2026-11-25T17:47:33.084Z",
+      "executable": "python3",
+      "commandDigest": "0b1639107893a029947f41b1cac74bd83dbfd4edf1fba6c01fe266c1b6cdc470",
+      "receiptPath": "measurements/hero-surface-envelopes-20261126a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "43d1a1ee-2282-44f1-9d83-6bfd978a15c1",
+      "startedAt": "2026-11-25T17:47:45.356Z",
+      "executable": "python3",
+      "commandDigest": "c6e619de0d21d04d1a22f414b7f15793f51ab5f63a00397735b805715ec2de14",
+      "receiptPath": "measurements/hero-surface-editor-final-20261126a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "7e7a49ad-eab5-47ac-a74a-ca0d95e9fd48",
+      "startedAt": "2026-11-25T17:51:27.085Z",
+      "executable": "python3",
+      "commandDigest": "fc422582d99ef8fad5014a9220cc97c6c56b313035f2ab45931065bd882a1001",
+      "receiptPath": "measurements/hero-surface-art-invariants-20261126a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "3bcd9d03-9865-4a73-9441-84a5a5195cb5",
+      "startedAt": "2026-11-25T17:51:33.320Z",
+      "executable": "python3",
+      "commandDigest": "dcc03eb9abffb355c986d9ce5531b27caea6abd1dabdc724ce356cfe9073e27d",
+      "receiptPath": "measurements/hero-surface-play-developer-20261126a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "49322fe8-1915-4c77-9d40-cf3d4138dd38",
+      "startedAt": "2026-11-25T17:52:14.461Z",
+      "executable": "python3",
+      "commandDigest": "3dfe49eedabfaa8a1aad4876f254d9ae7633128a7c95346d8f6183237f80e76d",
+      "receiptPath": "measurements/hero-surface-play-world-20261126a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "test",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "c944a96e-3143-4b14-af24-e3864b56ec75",
+      "startedAt": "2026-11-25T17:52:31.958Z",
+      "executable": "python3",
+      "commandDigest": "cf86da4e7f0f5bc96688e9c933d1fd69de012070b87409562e93b91a3e03c18b",
+      "receiptPath": "measurements/hero-surface-play-framing-20261126a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "lint",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "511ea206-23a5-4409-bee8-8a446198ccbd",
+      "startedAt": "2026-11-25T17:54:34.298Z",
+      "executable": "python3",
+      "commandDigest": "9cb4f115f36cbc45940114c296bdce39d6c63022fba6b632dcea4614f2d2be71",
+      "receiptPath": "measurements/hero-surface-source-checks-20261126a.json"
+    },
+    {
+      "runId": null,
+      "stageId": "apply",
+      "category": "lint",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "id": "48812aa2-0be6-4f26-a794-ec2fa3b7d2d8",
+      "startedAt": "2026-11-25T17:57:02.520Z",
+      "executable": "python3",
+      "commandDigest": "d32242e9f40128f08fbe6c209cd2ecb0a4973a3f286dff2922fd4d362990fa67",
+      "receiptPath": "measurements/hero-surface-source-check-b-20261126a.json"
     }
   ],
   "runMeasurements": [
@@ -51335,6 +51593,424 @@
       "receipt": {
         "path": "measurements/fin-contour-record-integrity-20261126.json",
         "sha256": "990579361727dea6163f1f669dc4f58bbe411f59cd2927e70281f2502a380290"
+      }
+    },
+    {
+      "id": "d7a5ef2e-2f02-4481-916d-b4d6a5f45cdb",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d6c85eb0981ef072c0cae27376ebbf20e0f4a5315ae7ac6c881e1117148f512b",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-25T17:38:10.616Z",
+      "finishedAt": "2026-11-25T17:38:12.730Z",
+      "durationMs": 2076.296125,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hero-surface-source-diagnostic-20261126a.json",
+        "sha256": "f5fb0e0ea77b84699b03f9a3b1dd5259a79684a63fe7a9997192bf081417bc31"
+      }
+    },
+    {
+      "id": "a9e99162-e883-4689-987c-92531121db29",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "41018871d42cd97349a0a6ef2b9564299e58aa7fde392cdda0458746cccac3ad",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T17:38:13.122Z",
+      "finishedAt": "2026-11-25T17:38:29.788Z",
+      "durationMs": 16637.38675,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hero-surface-gpu-before-20261126a.json",
+        "sha256": "ff416234c2567b8c9e0abd3538b9d426198334618bad5adc1718dc712eaf9a5c"
+      }
+    },
+    {
+      "id": "eca37f7c-9d88-45c8-9c3d-a99456fc6f08",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "3dbad5c8422865ba38b330e11d41b017f8fc9d5dc46af55c75adecca97c12239",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-25T17:42:32.771Z",
+      "finishedAt": "2026-11-25T17:42:34.919Z",
+      "durationMs": 2106.7180839999996,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hero-surface-mouth-red-20261126a.json",
+        "sha256": "1dcb656a4aa88328b736d88cd42c1a31fb790b3bcd7a195954886e0408b23310"
+      }
+    },
+    {
+      "id": "845f8433-d02b-4e0b-a2c7-c132221dc146",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d4ddc1d9a5bd060799ef7ad9054c25ed9d8cc2b12e3bbf7285019b7a87b43847",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-25T17:42:35.338Z",
+      "finishedAt": "2026-11-25T17:42:36.451Z",
+      "durationMs": 1081.876166,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hero-surface-invariants-before-20261126a.json",
+        "sha256": "f71a5413013d40efa4e408c5269450cdeff2c0563577240f0769baf4f5cf15e6"
+      }
+    },
+    {
+      "id": "9d1c403c-5206-4d29-937c-b4595d805e8a",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "de85d09dab6336867ba89fa6d4849cc5212914adf981ab224e971df4fc851c42",
+      "category": "compile",
+      "executable": "Blender",
+      "startedAt": "2026-11-25T17:42:36.877Z",
+      "finishedAt": "2026-11-25T17:42:40.206Z",
+      "durationMs": 3301.440041,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hero-surface-repair-20261126a.json",
+        "sha256": "8b7c6f9eec9ab852aeef0855a9be8e76f411077b9eb46b8822734ce7db915087"
+      }
+    },
+    {
+      "id": "35f6166a-30ee-4c72-8276-0e5071bd9f3c",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "3dbad5c8422865ba38b330e11d41b017f8fc9d5dc46af55c75adecca97c12239",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-25T17:42:40.833Z",
+      "finishedAt": "2026-11-25T17:42:42.032Z",
+      "durationMs": 1167.583917,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hero-surface-mouth-green-20261126a.json",
+        "sha256": "00b4151c46c87a831eea2adc36d0a22dd563f98c8e71fd2f1dda13d1295d35db"
+      }
+    },
+    {
+      "id": "b83e76a3-8c11-4b3c-b9fa-2853a13e540f",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "3ae0599c4ef56aaca49467b3dfdc70468c09a839cfea7b5f0fd80a9b4b10964e",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-25T17:42:42.443Z",
+      "finishedAt": "2026-11-25T17:42:43.554Z",
+      "durationMs": 1084.959041,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hero-surface-invariants-after-20261126a.json",
+        "sha256": "9202d295d0f6e8fd6e9fdc7d6369b7e1f7dfc7f20da6f8871fcebed3d0d8624a"
+      }
+    },
+    {
+      "id": "c5c174af-2c79-4bfc-a41e-c80e06b0b371",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "230caf483c3242cb059a8002b6407e0a589ef2cccfff26fbbde7d4bd6d1553e2",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-25T17:42:43.973Z",
+      "finishedAt": "2026-11-25T17:42:46.444Z",
+      "durationMs": 2443.846834,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hero-surface-source-validation-20261126a.json",
+        "sha256": "b03376a9a16aaea24fc9c8c32c55644c4d901bbfb0331fb0107c8482127decfe"
+      }
+    },
+    {
+      "id": "8fce3323-3914-431c-8c32-61a11d487bd2",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "2ad64e011f1f235358552982cfd511ff622ea32200546f09e2eb3465190c866f",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T17:42:46.860Z",
+      "finishedAt": "2026-11-25T17:42:57.319Z",
+      "durationMs": 10430.376332999998,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hero-surface-import-20261126a.json",
+        "sha256": "93a1079414803cf3ae684107378b006726d6d025fe2fef2bb38374aaf329e461"
+      }
+    },
+    {
+      "id": "293169a7-831d-4392-9693-212a37b29db9",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "c9e3466f0f963cee4388d27e61a128d5a57ba4fc342243854e69afde647f958e",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T17:42:58.075Z",
+      "finishedAt": "2026-11-25T17:43:09.776Z",
+      "durationMs": 11658.815292,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hero-surface-gpu-after-20261126a.json",
+        "sha256": "86e0e338ce504ba202e949293d0638530a5314c5b2616a3447079e4636fc0b4a"
+      }
+    },
+    {
+      "id": "9b0b55ef-805c-4d24-b812-71fe63bacdc9",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "c6e619de0d21d04d1a22f414b7f15793f51ab5f63a00397735b805715ec2de14",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T17:43:10.386Z",
+      "finishedAt": "2026-11-25T17:45:17.668Z",
+      "durationMs": 127245.34595799999,
+      "exitCode": 2,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hero-surface-editor-20261126a.json",
+        "sha256": "50cf29e8b761ec7a858aea37666ccfee014ca44c839450a9d03853f9862f666d"
+      }
+    },
+    {
+      "id": "5da15770-6398-4ea2-931e-52e450b0afe1",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "230caf483c3242cb059a8002b6407e0a589ef2cccfff26fbbde7d4bd6d1553e2",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-25T17:47:24.960Z",
+      "finishedAt": "2026-11-25T17:47:28.976Z",
+      "durationMs": 3958.4712910000003,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hero-surface-source-final-20261126a.json",
+        "sha256": "5552592c11bb3d04f1642f7b43f2dc496cb1b7341cb71b9043bb9b9923b55b2a"
+      }
+    },
+    {
+      "id": "a13e2657-415b-4a52-82be-b56e1bbff939",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "cad4920636bd7a2927e8559560336a7233812889136f3ce15c4faa4577442fb0",
+      "category": "test",
+      "executable": "Blender",
+      "startedAt": "2026-11-25T17:47:29.411Z",
+      "finishedAt": "2026-11-25T17:47:30.510Z",
+      "durationMs": 1069.5300419999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hero-surface-post-diagnostic-20261126a.json",
+        "sha256": "79d1f2a854760b983cb7d7468cdf2d00db6904bd706fc9aa16aa621e1a772a84"
+      }
+    },
+    {
+      "id": "8abed4cd-d560-4ead-a43c-0210be64fe38",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "62f29ba3f343c12eaf540c9ad75cbd05039373352893011770166f57c1590fd4",
+      "category": "e2e",
+      "executable": "python3",
+      "startedAt": "2026-11-25T17:47:30.908Z",
+      "finishedAt": "2026-11-25T17:47:32.673Z",
+      "durationMs": 1737.6615410000002,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hero-surface-contacts-20261126a.json",
+        "sha256": "32e2e6ac7195e51530a1d84d8f15036e4adbc20e71eea2bd9bc8e1f963098cdb"
+      }
+    },
+    {
+      "id": "d75db93e-433f-44be-81f4-5b0b439bfb47",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "0b1639107893a029947f41b1cac74bd83dbfd4edf1fba6c01fe266c1b6cdc470",
+      "category": "compile",
+      "executable": "python3",
+      "startedAt": "2026-11-25T17:47:33.084Z",
+      "finishedAt": "2026-11-25T17:47:44.950Z",
+      "durationMs": 11818.794041000001,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hero-surface-envelopes-20261126a.json",
+        "sha256": "ee094476f4cdf0eae320f712525f29f05bdf2d5729bdf95076675bf2f3f238e9"
+      }
+    },
+    {
+      "id": "43d1a1ee-2282-44f1-9d83-6bfd978a15c1",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "c6e619de0d21d04d1a22f414b7f15793f51ab5f63a00397735b805715ec2de14",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T17:47:45.356Z",
+      "finishedAt": "2026-11-25T17:49:43.843Z",
+      "durationMs": 118450.480833,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hero-surface-editor-final-20261126a.json",
+        "sha256": "0a70252ff5568dec47e8f1801681903c0c308ea1f1b87279ed67608caed38fe3"
+      }
+    },
+    {
+      "id": "7e7a49ad-eab5-47ac-a74a-ca0d95e9fd48",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "fc422582d99ef8fad5014a9220cc97c6c56b313035f2ab45931065bd882a1001",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T17:51:27.085Z",
+      "finishedAt": "2026-11-25T17:51:32.910Z",
+      "durationMs": 5785.755292,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hero-surface-art-invariants-20261126a.json",
+        "sha256": "4692134dcf84e49ecd5a1e80522333b297a51bd5ef580416186cef1ced98c817"
+      }
+    },
+    {
+      "id": "3bcd9d03-9865-4a73-9441-84a5a5195cb5",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "dcc03eb9abffb355c986d9ce5531b27caea6abd1dabdc724ce356cfe9073e27d",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T17:51:33.320Z",
+      "finishedAt": "2026-11-25T17:52:13.855Z",
+      "durationMs": 40506.058,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hero-surface-play-developer-20261126a.json",
+        "sha256": "4e9664c53a2fba0e8d35fc2cfbfd760b55f41c4fbcf082a551ac3845c079aa8d"
+      }
+    },
+    {
+      "id": "49322fe8-1915-4c77-9d40-cf3d4138dd38",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "3dfe49eedabfaa8a1aad4876f254d9ae7633128a7c95346d8f6183237f80e76d",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T17:52:14.461Z",
+      "finishedAt": "2026-11-25T17:52:31.383Z",
+      "durationMs": 16893.309792,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hero-surface-play-world-20261126a.json",
+        "sha256": "ca18ad9718dd9f296943cd5730c868df4605a6e4ebc5cb01390f5375ae1848ec"
+      }
+    },
+    {
+      "id": "c944a96e-3143-4b14-af24-e3864b56ec75",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "cf86da4e7f0f5bc96688e9c933d1fd69de012070b87409562e93b91a3e03c18b",
+      "category": "test",
+      "executable": "python3",
+      "startedAt": "2026-11-25T17:52:31.958Z",
+      "finishedAt": "2026-11-25T17:53:22.786Z",
+      "durationMs": 50801.288458,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hero-surface-play-framing-20261126a.json",
+        "sha256": "f17649233b98509535ae44d4377e7d289a8ec26796ca74669bc381855d7eba9c"
+      }
+    },
+    {
+      "id": "511ea206-23a5-4409-bee8-8a446198ccbd",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "9cb4f115f36cbc45940114c296bdce39d6c63022fba6b632dcea4614f2d2be71",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-25T17:54:34.298Z",
+      "finishedAt": "2026-11-25T17:54:37.141Z",
+      "durationMs": 2790.36625,
+      "exitCode": 1,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hero-surface-source-checks-20261126a.json",
+        "sha256": "a9dff85840ba57c95d2fab6e5fbb9f4ecd9140d6478000c62e94c40b559477d0"
+      }
+    },
+    {
+      "id": "48812aa2-0be6-4f26-a794-ec2fa3b7d2d8",
+      "runId": null,
+      "stageId": "apply",
+      "attemptId": "5b0af9e2-93c8-4a75-8ad7-98e2230be970",
+      "commandDigest": "d32242e9f40128f08fbe6c209cd2ecb0a4973a3f286dff2922fd4d362990fa67",
+      "category": "lint",
+      "executable": "python3",
+      "startedAt": "2026-11-25T17:57:02.520Z",
+      "finishedAt": "2026-11-25T17:57:04.799Z",
+      "durationMs": 2239.241417,
+      "exitCode": 0,
+      "signal": null,
+      "errorCode": null,
+      "receipt": {
+        "path": "measurements/hero-surface-source-check-b-20261126a.json",
+        "sha256": "a03f27783ad939d0ed604fac9dc824a4cf2acfc52cc74e50a602639e53a00166"
       }
     }
   ]
